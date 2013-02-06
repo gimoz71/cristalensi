@@ -1,0 +1,115 @@
+@charset "UTF-8";
+body {
+	font-size: 1em; /* 32px/16px */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #ccc;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.float-left  {
+	float: left;
+}
+
+.float-right  {
+	float: right;
+}
+
+#wrap {
+    width: 100%;
+	margin: 0 auto;
+}
+
+
+@media screen and (min-width: 60em) {
+  	#wrap {
+    	width: 960px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 60em) {
+  	.float-left, .float-right {
+		float: none;
+	}
+}
+ 
+#header {
+    width: 100%; /* 960px/960 */
+	background: #c00;
+	
+}
+ 
+#title-area {
+    width: 41.666666666667% /* 400px/960 */;
+	background: #0c0;
+}
+ 
+#header .widget-area {
+    width: 56.25% /* 540px/960 */;
+	background: #00c;
+}
+ 
+#inner {
+    width: 100% /* 960px/960 */;
+}
+ 
+#content-sidebar-wrap {
+    width: 82.291667% /* 790px/960 */;
+}
+ 
+#content {
+    width: 59.493670886076% /* 470px/960 */;
+}
+ 
+#sidebar {
+    width: 37.974683544304% /* 300px/960 */;
+}
+ 
+#sidebar-alt {
+    width: 15.625% /* 150px/960 */;
+}
+
+ 
+.widget-area ul {
+    margin: 0 0 0 16.666667%;
+	background: #cc0;
+}
+
+.enews p {
+    padding: 5px 10px 0;
+}
+ 
+.enews p {
+    padding: 5px 3.33333% 0;
+}
