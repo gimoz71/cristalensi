@@ -1,18 +1,215 @@
-@mixin breakpoint($point) {
-  @if $point == papa-bear {
-    @media (max-width: 1600px) { @content; }
-  }
-  @else if $point == mama-bear {
-    @media (max-width: 1250px) { @content; }
-  }
-  @else if $point == baby-bear {
-    @media (max-width: 650px)  { @content; }
+@import "base";
+@import "recipes/shadow";
+/* questa è la base per gestire il tutto */
+html, body {
+    background: #ccc;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+
+@for $level from 0 to 5 {
+  h#{$level + 1} {
+    font-size: 1.875em - ($level * .35em);
+      border-bottom: dashed 1px #000;
+      font-weight: bold;
   }
 }
 
-.page-wrap {
-  width: 75%;
-  @include breakpoint(papa-bear) { width: 60%; }
-  @include breakpoint(mama-bear) { width: 80%; }
-  @include breakpoint(baby-bear) { width: 95%; }
+p {
+    @extend %font-base;
+    margin: 10px 0;
+}
+label {
+    @extend %font-base;
+    font-weight: bold;
+}
+
+#wrap {
+    @include clearfix;
+    @include drop-shadow-raised;
+    background: white;
+    position: relative;
+    width: 95%;
+    margin: 1em auto;
+    @media screen and (min-width: $wide-screens) {
+        width: $wide-screens;
+    }
+    @media screen and (max-width: $handheld) {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+#header, #main-content, img{
+    width: 100%;
+    float: left;
+}
+
+input, button {
+    &[type=submit] {
+        cursor: pointer;
+        width: 100%;
+        @media screen and (max-width: $medium-screens) {
+            padding: 10px 0;
+            font-size: 1em;
+        }
+    }
+    &[type=text] {
+        width: 97%;
+        border: solid 1px darken($yellow, 15);
+        @media screen and (max-width: $medium-screens) {
+            width: 99%;
+            padding: 5px 0;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+#language, #logo {
+    width: calc-em(170, 980);
+    background: $yellow;
+    float: left;
+}
+#menu, #widget-area{
+    width: calc-em(810, 980);
+    background: #0cc;
+    float: right;
+}
+#responsive-menu {
+    display: none;
+}
+#language, #menu {
+    height: 1.50em;
+}
+#language, #menu, #logo {
+    display: block;
+    @media screen and (max-width: $medium-screens) {
+        display: none;
+    }
+}
+#menu {
+    ul {
+        display: table;
+        width: 100%;
+        //@include display-box;
+        //@include box-orient(horizontal);
+        //@include box-align(stretch);
+        li{
+            display: table-cell;
+            //@include box-flex(1);
+            a{
+                display: block;
+                padding: 0.5em 0;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+                @extend %font-base;
+                text-decoration: none;
+                &:hover {
+                    background: #ff0;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+/* Button Responsive Menu*/
+#btn-responsive-menu{
+    display: none;
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    cursor:pointer;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    @include single-text-shadow;
+    background:#333;
+    @include border-radius(4px);
+    @include box-shadow(rgba(black, 0.25) 0 0 0 5px);
+}
+.icon-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin:5px;
+    background-color: #f5f5f5;
+    @include border-radius(1px);
+    @include box-shadow(rgba(black, 0.25) 0 0 1px 0);
+}
+.show{
+    display:block!important;
+}
+
+#btn-responsive-menu, #logo-handheld {
+    display: none;
+    @media screen and (max-width: $medium-screens) {
+        display: block;
+    }
+}
+
+
+#responsive-menu {
+    ul {
+        margin: 0;
+        float:left;
+        width:100%;
+        list-style: none;
+        li {
+            float: left;
+            margin: 0;
+            position: relative;
+        }
+    }
+    a {
+        color: #ccc;
+        display: block;
+        padding: 0.5em;
+        &:hover {
+            background:#666;
+        }
+    }
+    @media screen and (max-width: $medium-screens) {
+        display: none;
+        ul li {
+            float: none;
+        }
+    }
+} 
+
+
+
+
+#content-sidebar-wrap{
+    width: calc-em(810, 980);
+    background: #0cc;
+    float: right;
+    
+}
+#content{
+    width: calc-em(510, 810);
+    background: #0c0;
+    float: left;
+}
+#sidebar{
+    width: calc-em(300, 810);
+    background: #c00;
+    float: right;
+}
+#sidebar-alt{
+    width: calc-em(170, 980);
+    font-size: 90%;
+    background: $yellow;
+    float: left;
+    > div {
+        padding: calc-em(5, 170);
+    }
+}
+#language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt{
+    @media screen and (max-width: $medium-screens) {
+        width: 100%;
+        float: none;
+    }
 }

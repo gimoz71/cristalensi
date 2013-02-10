@@ -1,0 +1,37 @@
+@import "compass/reset";
+@import "compass/support";
+@import "compass/css3";
+@import "compass/utilities";
+
+
+
+%font-base {
+    font-size: 0.75em;
+    
+}
+
+$legacy-support-for-ie: true;
+
+$yellow: #FFD31C;
+
+
+
+$handheld: 30.000em; // equivalente a 480px
+$medium-screens: 40.625em; // equivalente a 650px
+$wide-screens: 61.250em; // equivalente a 980px
+
+@mixin respond-to($media) {
+    @if $media == handhelds {
+        @media only screen and (max-width: $handheld) { @content; }
+    }
+    @else if $media == medium-screens {
+        @media only screen and (max-width: $medium-screens) { @content; }
+    }
+    @else if $media == wide-screens {
+        @media only screen and (max-width: $wide-screens) { @content; }
+    }
+}
+
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 100%;
+}

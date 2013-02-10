@@ -4,35 +4,84 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi</title>
-        <link rel="stylesheet" type="text/css" href="css/cristalensi.css" media="screen, handheld" />
         <!--[if (lt IE 9)&(!IEMobile)]>
         <link rel="stylesheet" type="text/css" href="enhanced.css" />
         <![endif]-->
-        <link href="css/cristalensi.css" rel="stylesheet" type="text/css">
+        <link href="css/css.css" rel="stylesheet" type="text/css">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script>
+            $(document).ready(function(){   
+    
+                //When btn is clicked
+                $("#btn-responsive-menu").click(function() {
+                    $("#responsive-menu").toggleClass("show");
+		
+                });
+    
+            });
+        </script>
     </head>
     <body>
         <div id="wrap">
             <div id="header">
-                <div id="title-area" >title area</div>
-                <div class="widget-area">
-                    widget-area
-                    <uL>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                    </uL>
+                <div id="language" ></div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">home page</a></li>
+                        <li><a href="#">chi siamo</a></li>
+                        <li><a href="#">contatti</a></li>
+                        <li><a href="#">prodotti</a></li>
+                        <li><a href="#">offerte</a></li>
+                        <li><a href="#">carrello</a></li>
+                        <li><a href="#">condizioni di vendita</a></li>
+                    </ul>
                 </div>
+                <div id="logo"><img src="images/logo.png"></div>
+                <div id="logo-handheld"><img src="images/logo_320.png"></div>
+                <div id="btn-responsive-menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <div id="responsive-menu">
+                    <ul>
+                        <li><a href="#">home page</a></li>
+                        <li><a href="#">chi siamo</a></li>
+                        <li><a href="#">contatti</a></li>
+                        <li><a href="#">prodotti</a></li>
+                        <li><a href="#">offerte</a></li>
+                        <li><a href="#">carrello</a></li>
+                        <li><a href="#">condizioni di vendita</a></li>
+                    </ul>
+                </div>
+                <div id="widget-area"><img src="images/gallery.png"></div>
             </div>
-            <div id="inner">
+            <div id="main-content">
+                <div id="sidebar-alt" >
+                    <div>
+                        <h3>Area clienti</h3>
+                        <p>Acquista i prodotti scelti, consulta lo stato dell'ordine, stampa il resoconto</p>
+                        <form>
+                            <label for="username">Nome utente</label>
+                            <input type="text">
+                            <label for="password">Password</label>
+                            <input type="text">
+                            <button type="submit">Invio</button>
+                        </form>
+                        <p><a href="#">Non ricordi i tuoi dati?</a></p>
+                        <p>Se non lo hai ancora fatto registrati sul nostro sito, potrai acquistare i nostri prodotti e usufruire delle nostre offerte.<br>
+                            Il catalogo è comunque consultabile senza essere iscritti.</p>
+                        <h3>Contattaci!</h3>
+                        <p>Il nostro personale sarà a tua disposizione per qualsiasi chiarimento e informazione su tutto l'assortimento di articoli per l'illuminazione per la casa e per il giardino.</p>
+                    </div>
+                </div>
                 <div id="content-sidebar-wrap" >
                     <div id="content">content</div>
                     <div id="sidebar">sidebar</div>
                 </div>
-                <div id="sidebar-alt" >sidebar-alt</div>
             </div>
         </div>
     </body>
