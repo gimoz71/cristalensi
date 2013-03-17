@@ -1,12 +1,30 @@
 @import "base";
-@import "recipes/shadow";
 /* questa è la base per gestire il tutto */
 html, body {
     background: #ccc;
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
 
 @for $level from 0 to 5 {
   h#{$level + 1} {
@@ -14,6 +32,13 @@ html, body {
       border-bottom: dashed 1px #000;
       font-weight: bold;
   }
+}
+
+a:link, a:visited {
+    color: #333;
+}
+a:hover, a:active {
+    color: #600;
 }
 
 p {
@@ -184,14 +209,96 @@ input, button {
 
 #content-sidebar-wrap{
     width: calc-em(810, 980);
-    background: #0cc;
+    //background: #0cc;
     float: right;
     
 }
 #content{
-    width: calc-em(510, 810);
-    background: #0c0;
+    width: calc-em(810, 810);
+    background: #fff;
     float: left;
+    .incipit {
+        font-size: 1em;
+        margin-top: 20px;
+    }
+    .slogan {
+        @include effect-glass($border-radius: .3em);
+        @include single-box-shadow;
+        background: #900;
+        @include background-image(linear-gradient(#c00, #900)); 
+        text-align: center;
+        padding: calc-em(10, 810);
+        font-size: 90%;
+            * {
+                color: #fff;
+                border: none;
+            }
+        margin: calc-em(20, 810) 0; 
+    }
+    .area {
+        border: none;
+        background-color: $yellow;
+        padding: calc-em(10, 810);
+        margin: calc-em(20, 810) 0; 
+    }
+    .negozio {
+        width: calc-em(212, 810);
+        border: solid 6px #ccc;
+        margin-right: calc-em(10, 810);
+        float: left;
+    }
+    .anni {
+        float: right;
+        width: calc-em(100, 810);
+    }
+    > div {
+        padding: calc-em(20, 810);
+    }
+    @media screen and (max-width: $medium-screens) {
+        width: 100%;
+        float: none;
+        .negozio {
+            display: none;
+        }
+    }
+}
+.listino, .catalogo {
+    width: 100%;
+    font-size: 90%;
+    li {
+        width: calc-em(193, 810);
+        padding: calc-em(5, 810);
+        float: left;
+        a {
+            @extend %font-base;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .price {
+            margin-top: .4em;
+            span {
+                text-decoration: line-through;
+            }
+        }
+        .cristalprice {
+            color: #c00;
+            font-weight: bold;
+        }
+        .scheda {
+            background: url('/images/dett_prodotto.jpg') no-repeat left center;
+            padding-left: 25px;
+        }
+        @media screen and (max-width: $medium-screens) {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+.catalogo {
+    text-align: center;
+    li {
+        min-height: 180px;
+    }
 }
 #sidebar{
     width: calc-em(300, 810);

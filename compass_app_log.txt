@@ -496,3 +496,126 @@ Load paths:
 2013-02-10 20:04:10 overwrite css/css.css 
 2013-02-10 20:05:33 overwrite css/css.css 
 2013-02-10 20:05:45 overwrite css/css.css 
+2013-03-17 16:47:12 overwrite css/css.css 
+2013-03-17 16:47:25 overwrite css/css.css 
+2013-03-17 16:57:28 overwrite css/css.css 
+2013-03-17 17:00:27 overwrite css/css.css 
+2013-03-17 17:01:18 overwrite css/css.css 
+2013-03-17 17:02:10 overwrite css/css.css 
+2013-03-17 17:02:16 overwrite css/css.css 
+2013-03-17 17:02:37 overwrite css/css.css 
+2013-03-17 17:05:56 overwrite css/css.css 
+2013-03-17 17:06:27 overwrite css/css.css 
+2013-03-17 17:07:26 overwrite css/css.css 
+2013-03-17 17:08:15 overwrite css/css.css 
+2013-03-17 17:14:02 overwrite css/css.css 
+2013-03-17 17:15:51 overwrite css/css.css 
+2013-03-17 17:18:34 overwrite css/css.css 
+2013-03-17 17:18:47 overwrite css/css.css 
+2013-03-17 17:21:17 overwrite css/css.css 
+2013-03-17 17:21:34 overwrite css/css.css 
+2013-03-17 17:22:09 overwrite css/css.css 
+2013-03-17 17:22:21 overwrite css/css.css 
+2013-03-17 17:22:31 overwrite css/css.css 
+2013-03-17 17:23:46 overwrite css/css.css 
+2013-03-17 17:25:22 overwrite css/css.css 
+2013-03-17 17:27:50 overwrite css/css.css 
+2013-03-17 17:34:43 overwrite css/css.css 
+2013-03-17 17:35:08 overwrite css/css.css 
+2013-03-17 17:35:18 overwrite css/css.css 
+2013-03-17 17:38:28 overwrite css/css.css 
+2013-03-17 17:39:59 overwrite css/css.css 
+2013-03-17 17:40:20 overwrite css/css.css 
+2013-03-17 17:40:40 overwrite css/css.css 
+2013-03-17 17:41:00 overwrite css/css.css 
+2013-03-17 18:04:10 overwrite css/css.css 
+2013-03-17 18:04:36 overwrite css/css.css 
+2013-03-17 18:05:27 overwrite css/css.css 
+2013-03-17 18:05:46 overwrite css/css.css 
+2013-03-17 18:05:50     error sass/css.scss (Line 238: Invalid CSS after "    @": expected identifier, was " import clearfix")
+2013-03-17 18:05:50 overwrite css/css.css 
+2013-03-17 18:05:54     error sass/css.scss (Line 238: Invalid CSS after "    @import ": expected file to import (string or url()), was "clearfix")
+2013-03-17 18:05:55 overwrite css/css.css 
+2013-03-17 18:05:56     error sass/css.scss (Line 238: Invalid CSS after "    @import ": expected file to import (string or url()), was "clearfix;")
+2013-03-17 18:05:56 overwrite css/css.css 
+2013-03-17 18:06:11     error sass/css.scss (Line 238: Invalid CSS after "    @import ": expected file to import (string or url()), was "clearfix;")
+2013-03-17 18:06:11 identical css/css.css 
+2013-03-17 18:10:06     error sass/css.scss (Line 238: Invalid CSS after "    @import ": expected file to import (string or url()), was "clearfix;")
+2013-03-17 18:10:06 identical css/css.css 
+2013-03-17 18:12:21 overwrite css/css.css 
+2013-03-17 18:13:32 overwrite css/css.css 
+2013-03-17 18:15:52 overwrite css/css.css 
+2013-03-17 18:20:09 overwrite css/css.css 
+2013-03-17 18:20:37 overwrite css/css.css 
+2013-03-17 18:20:48 overwrite css/css.css 
+2013-03-17 18:21:21 overwrite css/css.css 
+2013-03-17 18:21:28 overwrite css/css.css 
+2013-03-17 18:21:35 overwrite css/css.css 
+2013-03-17 18:21:45 overwrite css/css.css 
+2013-03-17 18:23:47     error sass/css.scss (Line 4 of sass/_base.scss: File to import not found or unreadable: compass/recipes.
+Load paths:
+  /Volumes/LaCie HD 1Tb/lavori/luca/iury/cristalensi/sito/sass
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  /Users/Gianluca/.compass/extensions/compass-recipes/stylesheets
+  /Users/Gianluca/.compass/extensions/sassy-buttons/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-2.2.2.0/vendor/assets/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/susy-1.0.4/sass
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_common/sassy-math-1.2/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_common/modular-scale-1.0.2/stylesheets
+  /Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-3.2.2/scss
+  Compass::SpriteImporter)
+2013-03-17 18:23:47 overwrite css/css.css 
+2013-03-17 18:24:04 overwrite css/css.css 
+2013-03-17 18:25:21     error sass/css.scss (Line 263: Invalid CSS after "...       @import ": expected file to import (string or url()), was "glass;")
+2013-03-17 18:25:22 overwrite css/css.css 
+2013-03-17 18:27:00 overwrite css/css.css 
+2013-03-17 18:27:46 overwrite css/css.css 
+2013-03-17 18:27:58 overwrite css/css.css 
+2013-03-17 18:28:21 overwrite css/css.css 
+2013-03-17 18:29:47 overwrite css/css.css 
+2013-03-17 18:32:42 overwrite css/css.css 
+2013-03-17 18:33:35 overwrite css/css.css 
+2013-03-17 18:33:55 overwrite css/css.css 
+2013-03-17 18:51:40     error sass/css.scss (Line 263: Illegal nesting: Only properties may be nested beneath properties.)
+2013-03-17 18:51:40 overwrite css/css.css 
+2013-03-17 18:51:47 overwrite css/css.css 
+2013-03-17 18:51:57 overwrite css/css.css 
+2013-03-17 18:54:26 overwrite css/css.css 
+2013-03-17 18:55:11 overwrite css/css.css 
+2013-03-17 18:55:46 overwrite css/css.css 
+2013-03-17 18:55:52 overwrite css/css.css 
+2013-03-17 18:56:01 overwrite css/css.css 
+2013-03-17 18:57:44 overwrite css/css.css 
+2013-03-17 18:58:23 overwrite css/css.css 
+2013-03-17 18:59:12 overwrite css/css.css 
+2013-03-17 18:59:26 overwrite css/css.css 
+2013-03-17 18:59:34 overwrite css/css.css 
+2013-03-17 19:00:21 overwrite css/css.css 
+2013-03-17 19:01:31 overwrite css/css.css 
+2013-03-17 19:01:48 overwrite css/css.css 
+2013-03-17 19:03:14 overwrite css/css.css 
+2013-03-17 19:03:52 identical css/css.css 
+2013-03-17 19:04:00 overwrite css/css.css 
+2013-03-17 19:05:21 overwrite css/css.css 
+2013-03-17 19:06:29 overwrite css/css.css 
+2013-03-17 19:09:19 overwrite css/css.css 
+2013-03-17 19:09:32 overwrite css/css.css 
+2013-03-17 19:10:06 overwrite css/css.css 
+2013-03-17 19:11:29 overwrite css/css.css 
+2013-03-17 19:13:30 overwrite css/css.css 
+2013-03-17 19:13:36 overwrite css/css.css 
+2013-03-17 19:13:49 overwrite css/css.css 
+2013-03-17 19:13:58 overwrite css/css.css 
+2013-03-17 19:15:06 overwrite css/css.css 
+2013-03-17 19:15:24 overwrite css/css.css 
+2013-03-17 19:15:40 overwrite css/css.css 
+2013-03-17 19:16:24 overwrite css/css.css 
+2013-03-17 19:16:43     error sass/css.scss (Line 226: Undefined mixin 'shadow'.)
+2013-03-17 19:16:43 overwrite css/css.css 
+2013-03-17 19:17:24 overwrite css/css.css 
+2013-03-17 19:17:40 overwrite css/css.css 
+2013-03-17 19:27:23 overwrite css/css.css 
