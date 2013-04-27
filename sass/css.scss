@@ -5,19 +5,6 @@ html, body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
- 
-.clearfix {
-	display: inline-block;
-}
- 
 html[xmlns] .clearfix {
 	display: block;
 }
@@ -57,6 +44,11 @@ label {
     font-weight: bold;
 }
 
+
+
+
+
+
 #wrap {
     @include clearfix;
     @include drop-shadow-raised;
@@ -64,10 +56,10 @@ label {
     position: relative;
     width: 95%;
     margin: 1em auto;
-    @media screen and (min-width: $wide-screens) {
+    @include respond-to('wide-screens-min'){
         width: $wide-screens;
     }
-    @media screen and (max-width: $handheld) {
+    @include respond-to('medium-screens'){
         width: 100%;
         margin: 0 auto;
     }
@@ -82,7 +74,7 @@ input, button {
     &[type=submit] {
         cursor: pointer;
         width: 100%;
-        @media screen and (max-width: $medium-screens) {
+        @include respond-to('medium-screens'){
             padding: 10px 0;
             font-size: 1em;
         }
@@ -90,7 +82,7 @@ input, button {
     &[type=text] {
         width: 97%;
         border: solid 1px darken($yellow, 15);
-        @media screen and (max-width: $medium-screens) {
+        @include respond-to('medium-screens'){
             width: 99%;
             padding: 5px 0;
             font-size: 1em;
@@ -133,7 +125,7 @@ input, button {
 }
 #language, #menu, #logo {
     display: block;
-    @media screen and (max-width: $medium-screens) {
+    @include respond-to('medium-screens'){
         display: none;
     }
 }
@@ -193,7 +185,7 @@ input, button {
 
 #btn-responsive-menu, #logo-handheld {
     display: none;
-    @media screen and (max-width: $medium-screens) {
+    @include respond-to('medium-screens'){
         display: block;
     }
 }
@@ -219,7 +211,7 @@ input, button {
             background:#666;
         }
     }
-    @media screen and (max-width: $medium-screens) {
+    @include respond-to('medium-screens'){
         display: none;
         ul li {
             float: none;
@@ -262,7 +254,10 @@ input, button {
         border: none;
         background-color: $yellow;
         padding: calc-em(10, 810);
-        margin: calc-em(20, 810) 0; 
+        margin: calc-em(20, 810) 0;
+        @include respond-to('medium-screens'){
+            text-align: center;
+        }
     }
     .negozio {
         width: calc-em(212, 810);
@@ -277,7 +272,7 @@ input, button {
     > div {
         padding: calc-em(20, 810);
     }
-    @media screen and (max-width: $medium-screens) {
+    @include respond-to('medium-screens'){
         width: 100%;
         float: none;
         .negozio {
@@ -289,13 +284,20 @@ input, button {
     width: 100%;
     font-size: 90%;
     li {
-        width: calc-em(193, 810);
+        width: calc-em(192, 810);
         padding: calc-em(5, 810);
         float: left;
+        position: relative;
         a {
             @extend %font-base;
             margin-top: 5px;
             font-weight: bold;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                img {
+                    margin-bottom: 5px;
+                }
+            }
         }
         .price {
             margin-top: .4em;
@@ -310,11 +312,21 @@ input, button {
         .scheda {
             background: url('/images/dett_prodotto.jpg') no-repeat left center;
             padding-left: 25px;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                width: 50%;
+            }
         }
-        @media screen and (max-width: $medium-screens) {
+        @include respond-to('medium-screens'){
             width: 100%;
             float: none;
+            border-bottom: dotted 1px #ccc;
         }
+    }
+}
+.listino {
+    @include respond-to('medium-screens'){
+        text-align: center;
     }
 }
 .catalogo {
@@ -338,7 +350,7 @@ input, button {
     }
 }
 #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt{
-    @media screen and (max-width: $medium-screens) {
+    @include respond-to('medium-screens'){
         width: 100%;
         float: none;
     }

@@ -11,6 +11,9 @@
     
 }
 
+
+
+
 $legacy-support-for-ie: true;
 
 $yellow: #FFD31C;
@@ -25,13 +28,33 @@ $wide-screens: 61.250em; // equivalente a 980px
     @if $media == handhelds {
         @media only screen and (max-width: $handheld) { @content; }
     }
+    @else if $media == medium-screens-min {
+        @media only screen and (min-width: $medium-screens) { @content; }
+    }
     @else if $media == medium-screens {
         @media only screen and (max-width: $medium-screens) { @content; }
+    }
+    @else if $media == wide-screens-min {
+        @media only screen and (min-width: $wide-screens) { @content; }
     }
     @else if $media == wide-screens {
         @media only screen and (max-width: $wide-screens) { @content; }
     }
 }
+
+ @mixin buttonmobile {
+    @include effect-glass($border-radius: .3em);
+    @include background(linear-gradient(lighten(#999, 20), darken(#999, 10)));
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    @include text-shadow(rgba(black, 0.4) 0px -1px 0);
+    @include box-shadow(rgba(black, 0.15) 0 2px 2px);
+    padding: 10px;
+    @include border-radius(2px);
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+
 
 @function calc-em($target-px, $context) {
   @return ($target-px / $context) * 100%;
