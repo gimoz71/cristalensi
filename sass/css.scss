@@ -129,6 +129,9 @@ input, button {
         display: none;
     }
 }
+
+$array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
+
 #menu {
     ul {
         display: table;
@@ -136,20 +139,23 @@ input, button {
         //@include display-box;
         //@include box-orient(horizontal);
         //@include box-align(stretch);
-        li{
-            display: table-cell;
-            //@include box-flex(1);
-            a{
-                display: block;
-                padding: 0.5em 0;
-                text-align: center;
-                color: white;
-                font-weight: bold;
-                @extend %font-base;
-                text-decoration: none;
-                &:hover {
-                    background: #ff0;
-                    color: #000;
+        @each $section in $array-filtri  {
+            li{
+                display: table-cell;
+                //@include box-flex(1);
+                a.#{$section} {
+                    display: block;
+                    padding: 0.5em 0;
+                    text-align: center;
+                    color: white;
+                    font-weight: bold;
+                    @extend %font-base;
+                    text-decoration: none;
+                    background: #{$section};
+                    &:hover {
+                        background: darken(black, 10);
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -324,6 +330,7 @@ input, button {
         }
     }
 }
+
 .listino {
     @include respond-to('medium-screens'){
         text-align: center;

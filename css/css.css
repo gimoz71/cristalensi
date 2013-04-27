@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 9, ../sass/_base.scss */
-p, label, #menu ul li a, .listino li a, .catalogo li a {
+p, label, #menu ul li a.green, #menu ul li a.darkorange, #menu ul li a.skyblue, #menu ul li a.red, #menu ul li a.blue, #menu ul li a.yellowgreen, #menu ul li a.magenta, .listino li a, .catalogo li a {
   font-size: 0.75em;
 }
 
@@ -258,32 +258,147 @@ input[type=text], button[type=text] {
   }
 }
 
-/* line 133, ../sass/css.scss */
+/* line 136, ../sass/css.scss */
 #menu ul {
   display: table;
   width: 100%;
 }
-/* line 139, ../sass/css.scss */
+/* line 143, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 142, ../sass/css.scss */
-#menu ul li a {
+/* line 146, ../sass/css.scss */
+#menu ul li a.green {
   display: block;
   padding: 0.5em 0;
   text-align: center;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  background: green;
 }
-/* line 150, ../sass/css.scss */
-#menu ul li a:hover {
-  background: #ff0;
-  color: #000;
+/* line 155, ../sass/css.scss */
+#menu ul li a.green:hover {
+  background: black;
+  color: #fff;
+}
+/* line 143, ../sass/css.scss */
+#menu ul li {
+  display: table-cell;
+}
+/* line 146, ../sass/css.scss */
+#menu ul li a.darkorange {
+  display: block;
+  padding: 0.5em 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background: darkorange;
+}
+/* line 155, ../sass/css.scss */
+#menu ul li a.darkorange:hover {
+  background: black;
+  color: #fff;
+}
+/* line 143, ../sass/css.scss */
+#menu ul li {
+  display: table-cell;
+}
+/* line 146, ../sass/css.scss */
+#menu ul li a.skyblue {
+  display: block;
+  padding: 0.5em 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background: skyblue;
+}
+/* line 155, ../sass/css.scss */
+#menu ul li a.skyblue:hover {
+  background: black;
+  color: #fff;
+}
+/* line 143, ../sass/css.scss */
+#menu ul li {
+  display: table-cell;
+}
+/* line 146, ../sass/css.scss */
+#menu ul li a.red {
+  display: block;
+  padding: 0.5em 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background: red;
+}
+/* line 155, ../sass/css.scss */
+#menu ul li a.red:hover {
+  background: black;
+  color: #fff;
+}
+/* line 143, ../sass/css.scss */
+#menu ul li {
+  display: table-cell;
+}
+/* line 146, ../sass/css.scss */
+#menu ul li a.blue {
+  display: block;
+  padding: 0.5em 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background: blue;
+}
+/* line 155, ../sass/css.scss */
+#menu ul li a.blue:hover {
+  background: black;
+  color: #fff;
+}
+/* line 143, ../sass/css.scss */
+#menu ul li {
+  display: table-cell;
+}
+/* line 146, ../sass/css.scss */
+#menu ul li a.yellowgreen {
+  display: block;
+  padding: 0.5em 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background: yellowgreen;
+}
+/* line 155, ../sass/css.scss */
+#menu ul li a.yellowgreen:hover {
+  background: black;
+  color: #fff;
+}
+/* line 143, ../sass/css.scss */
+#menu ul li {
+  display: table-cell;
+}
+/* line 146, ../sass/css.scss */
+#menu ul li a.magenta {
+  display: block;
+  padding: 0.5em 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background: magenta;
+}
+/* line 155, ../sass/css.scss */
+#menu ul li a.magenta:hover {
+  background: black;
+  color: #fff;
 }
 
 /* Button Responsive Menu*/
-/* line 159, ../sass/css.scss */
+/* line 165, ../sass/css.scss */
 #btn-responsive-menu {
   display: none;
   position: absolute;
@@ -305,7 +420,7 @@ input[type=text], button[type=text] {
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 0 5px;
 }
 
-/* line 173, ../sass/css.scss */
+/* line 179, ../sass/css.scss */
 .icon-bar {
   display: block;
   width: 18px;
@@ -322,74 +437,74 @@ input[type=text], button[type=text] {
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 1px 0;
 }
 
-/* line 182, ../sass/css.scss */
+/* line 188, ../sass/css.scss */
 .show {
   display: block!important;
 }
 
-/* line 186, ../sass/css.scss */
+/* line 192, ../sass/css.scss */
 #btn-responsive-menu, #logo-handheld {
   display: none;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 186, ../sass/css.scss */
+  /* line 192, ../sass/css.scss */
   #btn-responsive-menu, #logo-handheld {
     display: block;
   }
 }
 
-/* line 195, ../sass/css.scss */
+/* line 201, ../sass/css.scss */
 #responsive-menu ul {
   margin: 0;
   float: left;
   width: 100%;
   list-style: none;
 }
-/* line 200, ../sass/css.scss */
+/* line 206, ../sass/css.scss */
 #responsive-menu ul li {
   float: left;
   margin: 0;
   position: relative;
 }
-/* line 206, ../sass/css.scss */
+/* line 212, ../sass/css.scss */
 #responsive-menu a {
   color: #ccc;
   display: block;
   padding: 0.5em;
 }
-/* line 210, ../sass/css.scss */
+/* line 216, ../sass/css.scss */
 #responsive-menu a:hover {
   background: #666;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 194, ../sass/css.scss */
+  /* line 200, ../sass/css.scss */
   #responsive-menu {
     display: none;
   }
-  /* line 216, ../sass/css.scss */
+  /* line 222, ../sass/css.scss */
   #responsive-menu ul li {
     float: none;
   }
 }
 
-/* line 225, ../sass/css.scss */
+/* line 231, ../sass/css.scss */
 #content-sidebar-wrap {
   width: 82.65306%;
   float: right;
 }
 
-/* line 231, ../sass/css.scss */
+/* line 237, ../sass/css.scss */
 #content {
   width: 100%;
   background: #fff;
   float: left;
 }
-/* line 235, ../sass/css.scss */
+/* line 241, ../sass/css.scss */
 #content .incipit {
   font-size: 1em;
   margin-top: 20px;
 }
-/* line 239, ../sass/css.scss */
+/* line 245, ../sass/css.scss */
 #content .slogan {
   position: relative;
   -webkit-border-radius: 0.3em;
@@ -436,12 +551,12 @@ input[type=text], button[type=text] {
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 247, ../sass/css.scss */
+/* line 253, ../sass/css.scss */
 #content .slogan * {
   color: #fff;
   border: none;
 }
-/* line 253, ../sass/css.scss */
+/* line 259, ../sass/css.scss */
 #content .area {
   border: none;
   background-color: #ffd31c;
@@ -449,58 +564,58 @@ input[type=text], button[type=text] {
   margin: 2.46914% 0;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 253, ../sass/css.scss */
+  /* line 259, ../sass/css.scss */
   #content .area {
     text-align: center;
   }
 }
-/* line 262, ../sass/css.scss */
+/* line 268, ../sass/css.scss */
 #content .negozio {
   width: 26.17284%;
   border: solid 6px #cccccc;
   margin-right: 1.23457%;
   float: left;
 }
-/* line 268, ../sass/css.scss */
+/* line 274, ../sass/css.scss */
 #content .anni {
   float: right;
   width: 12.34568%;
 }
-/* line 272, ../sass/css.scss */
+/* line 278, ../sass/css.scss */
 #content > div {
   padding: 2.46914%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 231, ../sass/css.scss */
+  /* line 237, ../sass/css.scss */
   #content {
     width: 100%;
     float: none;
   }
-  /* line 278, ../sass/css.scss */
+  /* line 284, ../sass/css.scss */
   #content .negozio {
     display: none;
   }
 }
 
-/* line 283, ../sass/css.scss */
+/* line 289, ../sass/css.scss */
 .listino, .catalogo {
   width: 100%;
   font-size: 90%;
 }
-/* line 286, ../sass/css.scss */
+/* line 292, ../sass/css.scss */
 .listino li, .catalogo li {
   width: 23.7037%;
   padding: 0.61728%;
   float: left;
   position: relative;
 }
-/* line 291, ../sass/css.scss */
+/* line 297, ../sass/css.scss */
 .listino li a, .catalogo li a {
   margin-top: 5px;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 291, ../sass/css.scss */
+  /* line 297, ../sass/css.scss */
   .listino li a, .catalogo li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -553,31 +668,31 @@ input[type=text], button[type=text] {
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 297, ../sass/css.scss */
+  /* line 303, ../sass/css.scss */
   .listino li a img, .catalogo li a img {
     margin-bottom: 5px;
   }
 }
-/* line 302, ../sass/css.scss */
+/* line 308, ../sass/css.scss */
 .listino li .price, .catalogo li .price {
   margin-top: .4em;
 }
-/* line 304, ../sass/css.scss */
+/* line 310, ../sass/css.scss */
 .listino li .price span, .catalogo li .price span {
   text-decoration: line-through;
 }
-/* line 308, ../sass/css.scss */
+/* line 314, ../sass/css.scss */
 .listino li .cristalprice, .catalogo li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
-/* line 312, ../sass/css.scss */
+/* line 318, ../sass/css.scss */
 .listino li .scheda, .catalogo li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 312, ../sass/css.scss */
+  /* line 318, ../sass/css.scss */
   .listino li .scheda, .catalogo li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -633,7 +748,7 @@ input[type=text], button[type=text] {
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 286, ../sass/css.scss */
+  /* line 292, ../sass/css.scss */
   .listino li, .catalogo li {
     width: 100%;
     float: none;
@@ -642,42 +757,42 @@ input[type=text], button[type=text] {
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 327, ../sass/css.scss */
+  /* line 334, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 332, ../sass/css.scss */
+/* line 339, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 334, ../sass/css.scss */
+/* line 341, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 338, ../sass/css.scss */
+/* line 345, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 343, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 348, ../sass/css.scss */
+/* line 355, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 352, ../sass/css.scss */
+  /* line 359, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;

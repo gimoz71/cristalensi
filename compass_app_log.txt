@@ -718,3 +718,19 @@ Load paths:
 2013-04-27 19:12:36 overwrite css/css.css 
 2013-04-27 19:29:16 overwrite css/css.css 
 2013-04-27 19:29:45 overwrite css/css.css 
+2013-04-27 19:54:21     error sass/css.scss (Line 163: "green" is not a color for `darken')
+2013-04-27 19:54:21 overwrite css/css.css 
+2013-04-27 19:54:45     error sass/css.scss (Line 163: "green" is not a color for `darken')
+2013-04-27 19:54:45 identical css/css.css 
+2013-04-27 19:55:10     error sass/css.scss (Line 163: "green" is not a color for `darken')
+2013-04-27 19:55:10 identical css/css.css 
+2013-04-27 19:55:25     error sass/css.scss (Line 163: "green" is not a color for `darken')
+2013-04-27 19:55:25 identical css/css.css 
+2013-04-27 19:56:27 overwrite css/css.css 
+2013-04-27 19:56:36 overwrite css/css.css 
+2013-04-27 19:56:50 overwrite css/css.css 
+2013-04-27 19:57:00     error sass/css.scss (Line 156: "green" is not a color for `darken')
+2013-04-27 19:57:00 overwrite css/css.css 
+2013-04-27 19:57:17 overwrite css/css.css 
+2013-04-27 19:58:32 identical css/css.css 
+2013-04-27 19:59:49 overwrite css/css.css 
