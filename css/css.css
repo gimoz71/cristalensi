@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 9, ../sass/_base.scss */
-p, label, #menu ul li a.green, #menu ul li a.darkorange, #menu ul li a.skyblue, #menu ul li a.red, #menu ul li a.blue, #menu ul li a.yellowgreen, #menu ul li a.magenta, .listino li a, .catalogo li a {
+p, label, #menu ul li a.green, #menu ul li a.darkorange, #menu ul li a.skyblue, #menu ul li a.red, #menu ul li a.blue, #menu ul li a.yellowgreen, #menu ul li a.magenta, .listino li a, .catalogo li a, .prodotti li .thumb {
   font-size: 0.75em;
 }
 
@@ -756,43 +756,208 @@ input[type=text], button[type=text] {
   }
 }
 
+/* line 333, ../sass/css.scss */
+.prodotti {
+  width: 100%;
+  font-size: 90%;
+}
+/* line 336, ../sass/css.scss */
+.prodotti li {
+  width: 100%;
+  padding: 10px 0.61728%;
+  position: relative;
+  border-top: dotted 1px #999999;
+}
+/* line 341, ../sass/css.scss */
+.prodotti li .thumb {
+  width: 200px;
+  margin-right: 0.61728%;
+  font-weight: bold;
+  float: left;
+}
 @media only screen and (max-width: 40.625em) {
-  /* line 334, ../sass/css.scss */
+  /* line 341, ../sass/css.scss */
+  .prodotti li .thumb {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .prodotti li .thumb:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+  /* line 349, ../sass/css.scss */
+  .prodotti li .thumb img {
+    margin-bottom: 5px;
+  }
+}
+/* line 354, ../sass/css.scss */
+.prodotti li .price {
+  margin-top: .4em;
+}
+/* line 356, ../sass/css.scss */
+.prodotti li .price span {
+  text-decoration: line-through;
+}
+/* line 360, ../sass/css.scss */
+.prodotti li .cristalprice {
+  color: #c00;
+  font-weight: bold;
+}
+/* line 364, ../sass/css.scss */
+.prodotti li .scheda {
+  background: url("/images/dett_prodotto.jpg") no-repeat left center;
+  padding-left: 25px;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 364, ../sass/css.scss */
+  .prodotti li .scheda {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    width: 50%;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .prodotti li .scheda:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 336, ../sass/css.scss */
+  .prodotti li {
+    width: 100%;
+    float: none;
+    border-bottom: dotted 1px #cccccc;
+  }
+}
+/* line 377, ../sass/css.scss */
+.prodotti li:last-child {
+  border-bottom: dotted 1px #999999;
+}
+
+@media only screen and (max-width: 40.625em) {
+  /* line 383, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 339, ../sass/css.scss */
+/* line 388, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 341, ../sass/css.scss */
+/* line 390, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 345, ../sass/css.scss */
+/* line 394, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 350, ../sass/css.scss */
+/* line 399, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 355, ../sass/css.scss */
+/* line 404, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 359, ../sass/css.scss */
+  /* line 408, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;

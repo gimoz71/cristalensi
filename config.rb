@@ -4,4 +4,4 @@ css_dir = "css"
 sass_dir = "sass"
 
 
-output_style = :expanded # by Compass.app 
+output_style = :expanded
