@@ -90,6 +90,20 @@ input, button {
         }
     }
 }
+#footer {
+    @include clearfix;
+    position: relative;
+    width: 95%;
+    margin: 1em auto;
+    text-align: center;
+    @include respond-to('wide-screens-min'){
+        width: $wide-screens;
+    }
+    @include respond-to('medium-screens'){
+        width: 100%;
+        margin: 0 auto;
+    }
+}
 
 .password-recover {
     display: inline-block;
@@ -571,5 +585,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
     @include respond-to('medium-screens'){
         width: 100%;
         float: none;
+    }
+}
+
+#footer {
+    .credits{
+        padding: 10px;
     }
 }

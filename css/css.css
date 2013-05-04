@@ -207,7 +207,30 @@ input[type=text], button[type=text] {
   }
 }
 
-/* line 94, ../sass/css.scss */
+/* line 93, ../sass/css.scss */
+#footer {
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
+  width: 95%;
+  margin: 1em auto;
+  text-align: center;
+}
+@media only screen and (min-width: 61.25em) {
+  /* line 93, ../sass/css.scss */
+  #footer {
+    width: 61.25em;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 93, ../sass/css.scss */
+  #footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* line 108, ../sass/css.scss */
 .password-recover {
   display: inline-block;
   height: 16px;
@@ -215,7 +238,7 @@ input[type=text], button[type=text] {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACuklEQVR4Xm2PUWibZRSGn/P9f0yhm3O6NW1dW8GRsbKS1YSy6axVHE4xgvZSL7zwRi8FK7NN1awiA69244X3E6yiMjIyQWudlQnZVpnKLA5dmdsw7iKrLLH5/+/VBIqM9jnfyzkfvOccjn01M8pGCIeXLyqmAEb7GThnR8zZtJkB4NgAScTN6Oo9XZsKB57ZzcHnMxx8YS+jzw6yrffOgo91TRIAocQ64kjFbb1beoYfS+NjT+1GnUs//IEzRzq3A7Du6tVaMQhsOsRr3XYfRYXBB3cSe4c5x6/nr5B7+WQO4PwH+cqeA2m+nq0U5JgOE8nbr5AAPMmOBHEcYGZIUJ7a9ycy5EXY4VAUg4NQMtYQgISXwWoTS3QgRDq3k6XKL8sOz65sP9xaIY7qmEtg5cN7MQvADOccHoia0pPPDcHdA8hHOIsg9TBszgCC+goXv5glCANzZsaaaAmQ95DspHH5Z7R6E7aO8NOlTt5971PefGeWo+9/yZlq14mLq7twYKwhD3HT/37v/V0oTOA6kjSWFiGZ5qNShd19m3n7pf30be/kcrWeryxdx/3fLJpRtNwzsHVgaH8/8eoK4aYkf2kLtRsx1ZtNelOpKx8f/7A4MVkcqzUCXrzjLezUGw8Ajjj2y6m+u/oy+3bg5Qmco3T8Ai4wBvdsV/3aOcMcQRAAIAwRQvnwMKWJ4eXKsVE1vhtXY2Fcn72aUen1rMqTIwKy38/0yM+PSt+O6dAQ0sKj8t88ojMz/eLkxPD1c8ce0q35vP6ee1qN03n9N7Dd2NLCkW7mplKSpuXnx/TK47Ry+z831S0rvZbRE+P3ETU9GJw9XaVWa7ZOMJdIYvESzaZ0KD8EApwD3/ZSPnGB0FrF7G8Ia4cL4amji7lTkyP8U/8RCNr+zz9ZRIg12t7AMCDLes5yO1k2hn8BuShDVyJWwu4AAAAASUVORK5CYII=") no-repeat left center;
 }
 
-/* line 101, ../sass/css.scss */
+/* line 115, ../sass/css.scss */
 .info {
   display: inline-block;
   height: 16px;
@@ -223,51 +246,51 @@ input[type=text], button[type=text] {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC5ElEQVQ4y6WS20+SYRzHrbYu3LyqrbnW3+CNF2l5FmfNeaEieAjRxMRjaWqibhjDTDBEU9F5IE8VeAYNFdFANDUmOk+pKR6mN21uXbRi4LeHt4md1k3f7bM9z/M+v8/z/J69LgBc/oc/FupGWwL4fYrxhCa9Naxq5iRUYjyJqtVY87tk4+U9goB/CsRDHSKGbNqeJjdDPmFBr3GfolW7g6T6dwgW9tvzWwWivwpE6nZRuHQO4sEP0JgO0TxqQe3wFtondyHTbEGp30VZ7zJuZiuRU10s+kVQPdzoR6812BzFqrlDlLxexcD8IU7z5ZsNHXoL2sY/QthtRmCW3JYnzvJzCoq7u3SpTSao54/A61zG055V/J5Pn7+i4IUJnZM7iKsYQWIhT+cU0GVaa6vWghrVJvLkCxAql4nsgEJh3HVK0mVT5Nsi6kfXQUuUWJ2CgPK36J89AK/djAfN75HROEMxMHtWPGLaQ+pzPTJlBiiNO7geLYVTcKN0DH0z+8hvMyO9wYi0+imKtf1jqtiwcgSORIdkArdaB8U0EUQ++yFw5HZFt7VJu0l6X0GGbAbcWgNF58QmJXmiWMBd0ndShQaPmo2o0SwhMPax1SnIbhDrWNIJvCIvnVFnBFeqpzjN2t4xWEI1QYWGoWVEF/WCkZqmcwoE8jy/4Fy5rZSc1KbdQIpUhyTxKCbMe5SgZciMeEE/KhUmFHZOwyeab0vMjPE7FZwjnH9YmS/2jm1Eyct5tI6to6DJQK48DHaZGjl1OtSrFlHQboRXBB/x3ISzH4nkIsGV4JbGS28MYEnsDP4gat6soMuwSdhAlXoJETwlfOgl9tiUeJmHh8eFnwVurq6uV8LCwnIZDAb/XgZbzr6fuR10R2jzihLCK1KAwJhiGzOFs83mxMmZTCY/PDy8iOy/fCq4RLjm7u7u4enpecvX1zfO39+fFRQUlBwaGppNyKLRaBwyjwkJCaGTsTfhqqN1h+A779Ce7Xuwu4IAAAAASUVORK5CYII=") no-repeat left center;
 }
 
-/* line 110, ../sass/css.scss */
+/* line 124, ../sass/css.scss */
 #language, #logo {
   width: 17.34694%;
   background: #ffd31c;
   float: left;
 }
 
-/* line 115, ../sass/css.scss */
+/* line 129, ../sass/css.scss */
 #menu, #widget-area {
   width: 82.65306%;
   background: #0cc;
   float: right;
 }
 
-/* line 120, ../sass/css.scss */
+/* line 134, ../sass/css.scss */
 #responsive-menu {
   display: none;
 }
 
-/* line 123, ../sass/css.scss */
+/* line 137, ../sass/css.scss */
 #language, #menu {
   height: 1.50em;
 }
 
-/* line 126, ../sass/css.scss */
+/* line 140, ../sass/css.scss */
 #language, #menu, #logo {
   display: block;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 126, ../sass/css.scss */
+  /* line 140, ../sass/css.scss */
   #language, #menu, #logo {
     display: none;
   }
 }
 
-/* line 136, ../sass/css.scss */
+/* line 150, ../sass/css.scss */
 #menu ul {
   display: table;
   width: 100%;
 }
-/* line 143, ../sass/css.scss */
+/* line 157, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 146, ../sass/css.scss */
+/* line 160, ../sass/css.scss */
 #menu ul li a.green {
   display: block;
   padding: 0.5em 0;
@@ -277,16 +300,16 @@ input[type=text], button[type=text] {
   text-decoration: none;
   background: green;
 }
-/* line 155, ../sass/css.scss */
+/* line 169, ../sass/css.scss */
 #menu ul li a.green:hover {
   background: black;
   color: #fff;
 }
-/* line 143, ../sass/css.scss */
+/* line 157, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 146, ../sass/css.scss */
+/* line 160, ../sass/css.scss */
 #menu ul li a.darkorange {
   display: block;
   padding: 0.5em 0;
@@ -296,16 +319,16 @@ input[type=text], button[type=text] {
   text-decoration: none;
   background: darkorange;
 }
-/* line 155, ../sass/css.scss */
+/* line 169, ../sass/css.scss */
 #menu ul li a.darkorange:hover {
   background: black;
   color: #fff;
 }
-/* line 143, ../sass/css.scss */
+/* line 157, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 146, ../sass/css.scss */
+/* line 160, ../sass/css.scss */
 #menu ul li a.skyblue {
   display: block;
   padding: 0.5em 0;
@@ -315,16 +338,16 @@ input[type=text], button[type=text] {
   text-decoration: none;
   background: skyblue;
 }
-/* line 155, ../sass/css.scss */
+/* line 169, ../sass/css.scss */
 #menu ul li a.skyblue:hover {
   background: black;
   color: #fff;
 }
-/* line 143, ../sass/css.scss */
+/* line 157, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 146, ../sass/css.scss */
+/* line 160, ../sass/css.scss */
 #menu ul li a.red {
   display: block;
   padding: 0.5em 0;
@@ -334,16 +357,16 @@ input[type=text], button[type=text] {
   text-decoration: none;
   background: red;
 }
-/* line 155, ../sass/css.scss */
+/* line 169, ../sass/css.scss */
 #menu ul li a.red:hover {
   background: black;
   color: #fff;
 }
-/* line 143, ../sass/css.scss */
+/* line 157, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 146, ../sass/css.scss */
+/* line 160, ../sass/css.scss */
 #menu ul li a.blue {
   display: block;
   padding: 0.5em 0;
@@ -353,16 +376,16 @@ input[type=text], button[type=text] {
   text-decoration: none;
   background: blue;
 }
-/* line 155, ../sass/css.scss */
+/* line 169, ../sass/css.scss */
 #menu ul li a.blue:hover {
   background: black;
   color: #fff;
 }
-/* line 143, ../sass/css.scss */
+/* line 157, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 146, ../sass/css.scss */
+/* line 160, ../sass/css.scss */
 #menu ul li a.yellowgreen {
   display: block;
   padding: 0.5em 0;
@@ -372,16 +395,16 @@ input[type=text], button[type=text] {
   text-decoration: none;
   background: yellowgreen;
 }
-/* line 155, ../sass/css.scss */
+/* line 169, ../sass/css.scss */
 #menu ul li a.yellowgreen:hover {
   background: black;
   color: #fff;
 }
-/* line 143, ../sass/css.scss */
+/* line 157, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 146, ../sass/css.scss */
+/* line 160, ../sass/css.scss */
 #menu ul li a.magenta {
   display: block;
   padding: 0.5em 0;
@@ -391,14 +414,14 @@ input[type=text], button[type=text] {
   text-decoration: none;
   background: magenta;
 }
-/* line 155, ../sass/css.scss */
+/* line 169, ../sass/css.scss */
 #menu ul li a.magenta:hover {
   background: black;
   color: #fff;
 }
 
 /* Button Responsive Menu*/
-/* line 165, ../sass/css.scss */
+/* line 179, ../sass/css.scss */
 #btn-responsive-menu {
   display: none;
   position: absolute;
@@ -420,7 +443,7 @@ input[type=text], button[type=text] {
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 0 5px;
 }
 
-/* line 179, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 .icon-bar {
   display: block;
   width: 18px;
@@ -437,74 +460,74 @@ input[type=text], button[type=text] {
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 1px 0;
 }
 
-/* line 188, ../sass/css.scss */
+/* line 202, ../sass/css.scss */
 .show {
   display: block!important;
 }
 
-/* line 192, ../sass/css.scss */
+/* line 206, ../sass/css.scss */
 #btn-responsive-menu, #logo-handheld {
   display: none;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 192, ../sass/css.scss */
+  /* line 206, ../sass/css.scss */
   #btn-responsive-menu, #logo-handheld {
     display: block;
   }
 }
 
-/* line 201, ../sass/css.scss */
+/* line 215, ../sass/css.scss */
 #responsive-menu ul {
   margin: 0;
   float: left;
   width: 100%;
   list-style: none;
 }
-/* line 206, ../sass/css.scss */
+/* line 220, ../sass/css.scss */
 #responsive-menu ul li {
   float: left;
   margin: 0;
   position: relative;
 }
-/* line 212, ../sass/css.scss */
+/* line 226, ../sass/css.scss */
 #responsive-menu a {
   color: #ccc;
   display: block;
   padding: 0.5em;
 }
-/* line 216, ../sass/css.scss */
+/* line 230, ../sass/css.scss */
 #responsive-menu a:hover {
   background: #666;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 200, ../sass/css.scss */
+  /* line 214, ../sass/css.scss */
   #responsive-menu {
     display: none;
   }
-  /* line 222, ../sass/css.scss */
+  /* line 236, ../sass/css.scss */
   #responsive-menu ul li {
     float: none;
   }
 }
 
-/* line 231, ../sass/css.scss */
+/* line 245, ../sass/css.scss */
 #content-sidebar-wrap {
   width: 82.65306%;
   float: right;
 }
 
-/* line 237, ../sass/css.scss */
+/* line 251, ../sass/css.scss */
 #content {
   width: 100%;
   background: #fff;
   float: left;
 }
-/* line 241, ../sass/css.scss */
+/* line 255, ../sass/css.scss */
 #content .incipit {
   font-size: 1em;
   margin-top: 20px;
 }
-/* line 245, ../sass/css.scss */
+/* line 259, ../sass/css.scss */
 #content .slogan {
   position: relative;
   -webkit-border-radius: 0.3em;
@@ -551,12 +574,12 @@ input[type=text], button[type=text] {
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 253, ../sass/css.scss */
+/* line 267, ../sass/css.scss */
 #content .slogan * {
   color: #fff;
   border: none;
 }
-/* line 259, ../sass/css.scss */
+/* line 273, ../sass/css.scss */
 #content .area {
   border: none;
   background-color: #ffd31c;
@@ -564,64 +587,64 @@ input[type=text], button[type=text] {
   margin: 2.46914% 0;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 259, ../sass/css.scss */
+  /* line 273, ../sass/css.scss */
   #content .area {
     text-align: center;
   }
 }
-/* line 268, ../sass/css.scss */
+/* line 282, ../sass/css.scss */
 #content .negozio {
   width: 26.17284%;
   border: solid 6px #cccccc;
   margin-right: 1.23457%;
   float: left;
 }
-/* line 274, ../sass/css.scss */
+/* line 288, ../sass/css.scss */
 #content .anni {
   float: right;
   width: 12.34568%;
 }
-/* line 278, ../sass/css.scss */
+/* line 292, ../sass/css.scss */
 #content .facebook {
   float: right;
   margin-left: 1.23457%;
   width: 18.51852%;
 }
-/* line 283, ../sass/css.scss */
+/* line 297, ../sass/css.scss */
 #content > div {
   padding: 2.46914%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 237, ../sass/css.scss */
+  /* line 251, ../sass/css.scss */
   #content {
     width: 100%;
     float: none;
   }
-  /* line 289, ../sass/css.scss */
+  /* line 303, ../sass/css.scss */
   #content .negozio {
     display: none;
   }
 }
 
-/* line 294, ../sass/css.scss */
+/* line 308, ../sass/css.scss */
 .listino, .catalogo {
   width: 100%;
   font-size: 90%;
 }
-/* line 297, ../sass/css.scss */
+/* line 311, ../sass/css.scss */
 .listino li, .catalogo li {
   width: 23.7037%;
   padding: 0.61728%;
   float: left;
   position: relative;
 }
-/* line 302, ../sass/css.scss */
+/* line 316, ../sass/css.scss */
 .listino li a, .catalogo li a {
   margin-top: 5px;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 302, ../sass/css.scss */
+  /* line 316, ../sass/css.scss */
   .listino li a, .catalogo li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -674,31 +697,31 @@ input[type=text], button[type=text] {
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 308, ../sass/css.scss */
+  /* line 322, ../sass/css.scss */
   .listino li a img, .catalogo li a img {
     margin-bottom: 5px;
   }
 }
-/* line 313, ../sass/css.scss */
+/* line 327, ../sass/css.scss */
 .listino li .price, .catalogo li .price {
   margin-top: .4em;
 }
-/* line 315, ../sass/css.scss */
+/* line 329, ../sass/css.scss */
 .listino li .price span, .catalogo li .price span {
   text-decoration: line-through;
 }
-/* line 319, ../sass/css.scss */
+/* line 333, ../sass/css.scss */
 .listino li .cristalprice, .catalogo li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
-/* line 323, ../sass/css.scss */
+/* line 337, ../sass/css.scss */
 .listino li .scheda, .catalogo li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 323, ../sass/css.scss */
+  /* line 337, ../sass/css.scss */
   .listino li .scheda, .catalogo li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -754,7 +777,7 @@ input[type=text], button[type=text] {
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 297, ../sass/css.scss */
+  /* line 311, ../sass/css.scss */
   .listino li, .catalogo li {
     width: 100%;
     float: none;
@@ -763,24 +786,24 @@ input[type=text], button[type=text] {
   }
 }
 
-/* line 339, ../sass/css.scss */
+/* line 353, ../sass/css.scss */
 .prodotti {
   width: 100%;
   font-size: 90%;
 }
-/* line 342, ../sass/css.scss */
+/* line 356, ../sass/css.scss */
 .prodotti li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   border-top: dotted 1px #999999;
 }
-/* line 348, ../sass/css.scss */
+/* line 362, ../sass/css.scss */
 .prodotti li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 348, ../sass/css.scss */
+  /* line 362, ../sass/css.scss */
   .prodotti li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -834,46 +857,46 @@ input[type=text], button[type=text] {
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 354, ../sass/css.scss */
+  /* line 368, ../sass/css.scss */
   .prodotti li a img {
     margin-bottom: 5px;
   }
 }
-/* line 359, ../sass/css.scss */
+/* line 373, ../sass/css.scss */
 .prodotti li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 359, ../sass/css.scss */
+  /* line 373, ../sass/css.scss */
   .prodotti li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 368, ../sass/css.scss */
+/* line 382, ../sass/css.scss */
 .prodotti li .data {
   float: left;
   width: 72.83951%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 368, ../sass/css.scss */
+  /* line 382, ../sass/css.scss */
   .prodotti li .data {
     float: none;
     width: 100%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 368, ../sass/css.scss */
+  /* line 382, ../sass/css.scss */
   .prodotti li .data {
     margin-top: 10px;
   }
-  /* line 377, ../sass/css.scss */
+  /* line 391, ../sass/css.scss */
   .prodotti li .data .scheda {
     text-align: center;
   }
-  /* line 380, ../sass/css.scss */
+  /* line 394, ../sass/css.scss */
   .prodotti li .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -927,57 +950,57 @@ input[type=text], button[type=text] {
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 386, ../sass/css.scss */
+/* line 400, ../sass/css.scss */
 .prodotti li .price {
   margin-top: .4em;
 }
-/* line 388, ../sass/css.scss */
+/* line 402, ../sass/css.scss */
 .prodotti li .price span {
   text-decoration: line-through;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 386, ../sass/css.scss */
+  /* line 400, ../sass/css.scss */
   .prodotti li .price {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 397, ../sass/css.scss */
+/* line 411, ../sass/css.scss */
 .prodotti li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 397, ../sass/css.scss */
+  /* line 411, ../sass/css.scss */
   .prodotti li .cristalprice {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 405, ../sass/css.scss */
+/* line 419, ../sass/css.scss */
 .prodotti li .produttore, .prodotti li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 409, ../sass/css.scss */
+/* line 423, ../sass/css.scss */
 .prodotti li .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 415, ../sass/css.scss */
+/* line 429, ../sass/css.scss */
 .prodotti li .cart-link {
   padding-right: 25px;
   background: url("/images/carrello-bianco.gif") no-repeat right center;
 }
-/* line 420, ../sass/css.scss */
+/* line 434, ../sass/css.scss */
 .prodotti li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 420, ../sass/css.scss */
+  /* line 434, ../sass/css.scss */
   .prodotti li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1033,36 +1056,36 @@ input[type=text], button[type=text] {
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 342, ../sass/css.scss */
+  /* line 356, ../sass/css.scss */
   .prodotti li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #cccccc;
   }
 }
-/* line 433, ../sass/css.scss */
+/* line 447, ../sass/css.scss */
 .prodotti li:last-child {
   border-bottom: dotted 1px #999999;
 }
 
-/* line 439, ../sass/css.scss */
+/* line 453, ../sass/css.scss */
 .scheda-prodotto {
   width: 100%;
   font-size: 90%;
 }
-/* line 442, ../sass/css.scss */
+/* line 456, ../sass/css.scss */
 .scheda-prodotto li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   border-top: dotted 1px #999999;
 }
-/* line 447, ../sass/css.scss */
+/* line 461, ../sass/css.scss */
 .scheda-prodotto li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 447, ../sass/css.scss */
+  /* line 461, ../sass/css.scss */
   .scheda-prodotto li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1116,39 +1139,39 @@ input[type=text], button[type=text] {
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 453, ../sass/css.scss */
+  /* line 467, ../sass/css.scss */
   .scheda-prodotto li a img {
     margin-bottom: 5px;
   }
 }
-/* line 458, ../sass/css.scss */
+/* line 472, ../sass/css.scss */
 .scheda-prodotto li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 458, ../sass/css.scss */
+  /* line 472, ../sass/css.scss */
   .scheda-prodotto li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 467, ../sass/css.scss */
+/* line 481, ../sass/css.scss */
 .scheda-prodotto li .data {
   float: left;
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 467, ../sass/css.scss */
+  /* line 481, ../sass/css.scss */
   .scheda-prodotto li .data {
     margin-top: 10px;
   }
-  /* line 472, ../sass/css.scss */
+  /* line 486, ../sass/css.scss */
   .scheda-prodotto li .data .scheda {
     text-align: center;
   }
-  /* line 475, ../sass/css.scss */
+  /* line 489, ../sass/css.scss */
   .scheda-prodotto li .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1202,57 +1225,57 @@ input[type=text], button[type=text] {
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 481, ../sass/css.scss */
+/* line 495, ../sass/css.scss */
 .scheda-prodotto li .price {
   margin-top: .4em;
 }
-/* line 483, ../sass/css.scss */
+/* line 497, ../sass/css.scss */
 .scheda-prodotto li .price span {
   text-decoration: line-through;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 481, ../sass/css.scss */
+  /* line 495, ../sass/css.scss */
   .scheda-prodotto li .price {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 492, ../sass/css.scss */
+/* line 506, ../sass/css.scss */
 .scheda-prodotto li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 492, ../sass/css.scss */
+  /* line 506, ../sass/css.scss */
   .scheda-prodotto li .cristalprice {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 500, ../sass/css.scss */
+/* line 514, ../sass/css.scss */
 .scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 504, ../sass/css.scss */
+/* line 518, ../sass/css.scss */
 .scheda-prodotto li .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 510, ../sass/css.scss */
+/* line 524, ../sass/css.scss */
 .scheda-prodotto li .cart-link {
   padding-right: 25px;
   background: url("/images/carrello-bianco.gif") no-repeat right center;
 }
-/* line 515, ../sass/css.scss */
+/* line 529, ../sass/css.scss */
 .scheda-prodotto li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 515, ../sass/css.scss */
+  /* line 529, ../sass/css.scss */
   .scheda-prodotto li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1307,13 +1330,13 @@ input[type=text], button[type=text] {
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 523, ../sass/css.scss */
+/* line 537, ../sass/css.scss */
 .scheda-prodotto li .facebook {
   float: left !important;
   margin-right: 1.23457%;
   width: 18.51852%;
 }
-/* line 528, ../sass/css.scss */
+/* line 542, ../sass/css.scss */
 .scheda-prodotto li .fb-slogan {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1321,57 +1344,62 @@ input[type=text], button[type=text] {
   line-height: 160%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 442, ../sass/css.scss */
+  /* line 456, ../sass/css.scss */
   .scheda-prodotto li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #cccccc;
   }
 }
-/* line 539, ../sass/css.scss */
+/* line 553, ../sass/css.scss */
 .scheda-prodotto li:last-child {
   border-bottom: dotted 1px #999999;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 545, ../sass/css.scss */
+  /* line 559, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 550, ../sass/css.scss */
+/* line 564, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 552, ../sass/css.scss */
+/* line 566, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 556, ../sass/css.scss */
+/* line 570, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 561, ../sass/css.scss */
+/* line 575, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 566, ../sass/css.scss */
+/* line 580, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 570, ../sass/css.scss */
+  /* line 584, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
   }
+}
+
+/* line 592, ../sass/css.scss */
+#footer .credits {
+  padding: 10px;
 }
