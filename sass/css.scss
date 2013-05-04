@@ -275,6 +275,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
         float: right;
         width: calc-em(100, 810);
     }
+    .facebook {
+        float: right;
+        margin-left: calc-em(10, 810);
+        width: calc-em(150, 810);
+    }
     > div {
         padding: calc-em(20, 810);
     }
@@ -326,6 +331,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
         @include respond-to('medium-screens'){
             width: 100%;
             float: none;
+            padding-bottom: 10px;
             border-bottom: dotted 1px #ccc;
         }
     }
@@ -338,28 +344,78 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
         padding: 10px calc-em(5, 810);
         position: relative;
         border-top: dotted 1px #999;
-        .thumb {
-            width: 200px;
-            @extend %font-base;
-            margin-right: calc-em(5, 810);
-            font-weight: bold;
-            float: left;
-            @include respond-to('medium-screens'){
-                @include buttonmobile;
-                img {
-                    margin-bottom: 5px;
+        
+            a {
+                @extend %font-base;
+                font-weight: bold;
+                @include respond-to('medium-screens'){
+                    @include buttonmobile;
+                    width: auto;
+                    img {
+                        margin-bottom: 5px;
+                    }
                 }
             }
+        .thumb {
+            width: calc-em(200, 810);
+            float: left;
+            margin-right: calc-em(10, 810);
+            @include respond-to('medium-screens'){
+                float: none;
+                width: 100%;
+            }
+        }
+        .data {
+            float: left;
+            width: calc-em(590, 810);
+            @include respond-to('medium-screens'){
+                float: none;
+                width: 100%;
+            }
+            @include respond-to('medium-screens'){
+                margin-top: 10px;
+                .scheda {
+                    text-align: center;
+                }
+                a {
+                  @include buttonmobile;  
+                }
+            }
+
         }
         .price {
             margin-top: .4em;
             span {
                 text-decoration: line-through;
             }
+            @include respond-to('medium-screens'){
+                padding-top: 5px;
+                display: inline-block;
+            }
+            
         }
         .cristalprice {
             color: #c00;
             font-weight: bold;
+            @include respond-to('medium-screens'){
+                padding-top: 5px;
+                display: inline-block;
+            }
+        }
+        .produttore, .cart-link {
+            float: right;
+            font-size: 10px;
+        }
+        .cart {
+            border: none;
+            background-color: $yellow;
+            padding: calc-em(10, 810);
+            margin: calc-em(20, 810) 0;
+        }
+        .cart-link {
+            padding-right: 25px;
+            background: url('/images/carrello-bianco.gif') no-repeat right center;
+            
         }
         .scheda {
             background: url('/images/dett_prodotto.jpg') no-repeat left center;
@@ -368,6 +424,111 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
                 @include buttonmobile;
                 width: 50%;
             }
+        }
+        @include respond-to('medium-screens'){
+            width: 100%;
+            float: none;
+            border-bottom: dotted 1px #ccc;
+        }
+        &:last-child {
+            border-bottom: dotted 1px #999;
+        }
+    }
+}
+.scheda-prodotto {
+    width: 100%;
+    font-size: 90%;
+    li {
+        width: 100%;
+        padding: 10px calc-em(5, 810);
+        position: relative;
+        border-top: dotted 1px #999;
+        a {
+            @extend %font-base;
+            font-weight: bold;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                width: auto;
+                img {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .thumb {
+            width: calc-em(200, 810);
+            float: left;
+            margin-right: calc-em(10, 810);
+            @include respond-to('medium-screens'){
+                float: none;
+                width: 100%;
+            }
+        }
+        .data {
+            float: left;
+            width: 100%;
+            @include respond-to('medium-screens'){
+                margin-top: 10px;
+                .scheda {
+                    text-align: center;
+                }
+                a {
+                  @include buttonmobile;  
+                }
+            }
+
+        }
+        .price {
+            margin-top: .4em;
+            span {
+                text-decoration: line-through;
+            }
+            @include respond-to('medium-screens'){
+                padding-top: 5px;
+                display: inline-block;
+            }
+            
+        }
+        .cristalprice {
+            color: #c00;
+            font-weight: bold;
+            @include respond-to('medium-screens'){
+                padding-top: 5px;
+                display: inline-block;
+            }
+        }
+        .produttore, .cart-link {
+            float: right;
+            font-size: 10px;
+        }
+        .cart {
+            border: none;
+            background-color: $yellow;
+            padding: calc-em(10, 810);
+            margin: calc-em(20, 810) 0;
+        }
+        .cart-link {
+            padding-right: 25px;
+            background: url('/images/carrello-bianco.gif') no-repeat right center;
+            
+        }
+        .scheda {
+            background: url('/images/dett_prodotto.jpg') no-repeat left center;
+            padding-left: 25px;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                width: 50%;
+            }
+        }
+        .facebook {
+            float: left !important;
+            margin-right: calc-em(10, 810);
+            width: calc-em(150, 810);
+        }
+        .fb-slogan {
+            padding-top:10px;
+            padding-bottom: 10px;
+            font-size: 14px;
+            line-height: 160%;
         }
         @include respond-to('medium-screens'){
             width: 100%;

@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 9, ../sass/_base.scss */
-p, label, #menu ul li a.green, #menu ul li a.darkorange, #menu ul li a.skyblue, #menu ul li a.red, #menu ul li a.blue, #menu ul li a.yellowgreen, #menu ul li a.magenta, .listino li a, .catalogo li a, .prodotti li .thumb {
+p, label, #menu ul li a.green, #menu ul li a.darkorange, #menu ul li a.skyblue, #menu ul li a.red, #menu ul li a.blue, #menu ul li a.yellowgreen, #menu ul li a.magenta, .listino li a, .catalogo li a, .prodotti li a, .scheda-prodotto li a {
   font-size: 0.75em;
 }
 
@@ -582,6 +582,12 @@ input[type=text], button[type=text] {
   width: 12.34568%;
 }
 /* line 278, ../sass/css.scss */
+#content .facebook {
+  float: right;
+  margin-left: 1.23457%;
+  width: 18.51852%;
+}
+/* line 283, ../sass/css.scss */
 #content > div {
   padding: 2.46914%;
 }
@@ -591,31 +597,31 @@ input[type=text], button[type=text] {
     width: 100%;
     float: none;
   }
-  /* line 284, ../sass/css.scss */
+  /* line 289, ../sass/css.scss */
   #content .negozio {
     display: none;
   }
 }
 
-/* line 289, ../sass/css.scss */
+/* line 294, ../sass/css.scss */
 .listino, .catalogo {
   width: 100%;
   font-size: 90%;
 }
-/* line 292, ../sass/css.scss */
+/* line 297, ../sass/css.scss */
 .listino li, .catalogo li {
   width: 23.7037%;
   padding: 0.61728%;
   float: left;
   position: relative;
 }
-/* line 297, ../sass/css.scss */
+/* line 302, ../sass/css.scss */
 .listino li a, .catalogo li a {
   margin-top: 5px;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 297, ../sass/css.scss */
+  /* line 302, ../sass/css.scss */
   .listino li a, .catalogo li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -668,31 +674,31 @@ input[type=text], button[type=text] {
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 303, ../sass/css.scss */
+  /* line 308, ../sass/css.scss */
   .listino li a img, .catalogo li a img {
     margin-bottom: 5px;
   }
 }
-/* line 308, ../sass/css.scss */
+/* line 313, ../sass/css.scss */
 .listino li .price, .catalogo li .price {
   margin-top: .4em;
 }
-/* line 310, ../sass/css.scss */
+/* line 315, ../sass/css.scss */
 .listino li .price span, .catalogo li .price span {
   text-decoration: line-through;
 }
-/* line 314, ../sass/css.scss */
+/* line 319, ../sass/css.scss */
 .listino li .cristalprice, .catalogo li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
-/* line 318, ../sass/css.scss */
+/* line 323, ../sass/css.scss */
 .listino li .scheda, .catalogo li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 318, ../sass/css.scss */
+  /* line 323, ../sass/css.scss */
   .listino li .scheda, .catalogo li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -748,36 +754,127 @@ input[type=text], button[type=text] {
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 292, ../sass/css.scss */
+  /* line 297, ../sass/css.scss */
   .listino li, .catalogo li {
     width: 100%;
     float: none;
+    padding-bottom: 10px;
     border-bottom: dotted 1px #cccccc;
   }
 }
 
-/* line 333, ../sass/css.scss */
+/* line 339, ../sass/css.scss */
 .prodotti {
   width: 100%;
   font-size: 90%;
 }
-/* line 336, ../sass/css.scss */
+/* line 342, ../sass/css.scss */
 .prodotti li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   border-top: dotted 1px #999999;
 }
-/* line 341, ../sass/css.scss */
-.prodotti li .thumb {
-  width: 200px;
-  margin-right: 0.61728%;
+/* line 348, ../sass/css.scss */
+.prodotti li a {
   font-weight: bold;
-  float: left;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 341, ../sass/css.scss */
+  /* line 348, ../sass/css.scss */
+  .prodotti li a {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    width: auto;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .prodotti li a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+  /* line 354, ../sass/css.scss */
+  .prodotti li a img {
+    margin-bottom: 5px;
+  }
+}
+/* line 359, ../sass/css.scss */
+.prodotti li .thumb {
+  width: 24.69136%;
+  float: left;
+  margin-right: 1.23457%;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 359, ../sass/css.scss */
   .prodotti li .thumb {
+    float: none;
+    width: 100%;
+  }
+}
+/* line 368, ../sass/css.scss */
+.prodotti li .data {
+  float: left;
+  width: 72.83951%;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 368, ../sass/css.scss */
+  .prodotti li .data {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 368, ../sass/css.scss */
+  .prodotti li .data {
+    margin-top: 10px;
+  }
+  /* line 377, ../sass/css.scss */
+  .prodotti li .data .scheda {
+    text-align: center;
+  }
+  /* line 380, ../sass/css.scss */
+  .prodotti li .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
     -moz-border-radius: 0.3em;
@@ -805,7 +902,7 @@ input[type=text], button[type=text] {
     text-decoration: none;
   }
   /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
-  .prodotti li .thumb:after {
+  .prodotti li .data a:after {
     content: "";
     position: absolute;
     display: block;
@@ -829,31 +926,58 @@ input[type=text], button[type=text] {
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 349, ../sass/css.scss */
-  .prodotti li .thumb img {
-    margin-bottom: 5px;
-  }
 }
-/* line 354, ../sass/css.scss */
+/* line 386, ../sass/css.scss */
 .prodotti li .price {
   margin-top: .4em;
 }
-/* line 356, ../sass/css.scss */
+/* line 388, ../sass/css.scss */
 .prodotti li .price span {
   text-decoration: line-through;
 }
-/* line 360, ../sass/css.scss */
+@media only screen and (max-width: 40.625em) {
+  /* line 386, ../sass/css.scss */
+  .prodotti li .price {
+    padding-top: 5px;
+    display: inline-block;
+  }
+}
+/* line 397, ../sass/css.scss */
 .prodotti li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
-/* line 364, ../sass/css.scss */
+@media only screen and (max-width: 40.625em) {
+  /* line 397, ../sass/css.scss */
+  .prodotti li .cristalprice {
+    padding-top: 5px;
+    display: inline-block;
+  }
+}
+/* line 405, ../sass/css.scss */
+.prodotti li .produttore, .prodotti li .cart-link {
+  float: right;
+  font-size: 10px;
+}
+/* line 409, ../sass/css.scss */
+.prodotti li .cart {
+  border: none;
+  background-color: #ffd31c;
+  padding: 1.23457%;
+  margin: 2.46914% 0;
+}
+/* line 415, ../sass/css.scss */
+.prodotti li .cart-link {
+  padding-right: 25px;
+  background: url("/images/carrello-bianco.gif") no-repeat right center;
+}
+/* line 420, ../sass/css.scss */
 .prodotti li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 364, ../sass/css.scss */
+  /* line 420, ../sass/css.scss */
   .prodotti li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -909,55 +1033,343 @@ input[type=text], button[type=text] {
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 336, ../sass/css.scss */
+  /* line 342, ../sass/css.scss */
   .prodotti li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #cccccc;
   }
 }
-/* line 377, ../sass/css.scss */
+/* line 433, ../sass/css.scss */
 .prodotti li:last-child {
   border-bottom: dotted 1px #999999;
 }
 
+/* line 438, ../sass/css.scss */
+.scheda-prodotto {
+  width: 100%;
+  font-size: 90%;
+}
+/* line 441, ../sass/css.scss */
+.scheda-prodotto li {
+  width: 100%;
+  padding: 10px 0.61728%;
+  position: relative;
+  border-top: dotted 1px #999999;
+}
+/* line 446, ../sass/css.scss */
+.scheda-prodotto li a {
+  font-weight: bold;
+}
 @media only screen and (max-width: 40.625em) {
-  /* line 383, ../sass/css.scss */
+  /* line 446, ../sass/css.scss */
+  .scheda-prodotto li a {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    width: auto;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .scheda-prodotto li a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+  /* line 452, ../sass/css.scss */
+  .scheda-prodotto li a img {
+    margin-bottom: 5px;
+  }
+}
+/* line 457, ../sass/css.scss */
+.scheda-prodotto li .thumb {
+  width: 24.69136%;
+  float: left;
+  margin-right: 1.23457%;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 457, ../sass/css.scss */
+  .scheda-prodotto li .thumb {
+    float: none;
+    width: 100%;
+  }
+}
+/* line 466, ../sass/css.scss */
+.scheda-prodotto li .data {
+  float: left;
+  width: 100%;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 466, ../sass/css.scss */
+  .scheda-prodotto li .data {
+    margin-top: 10px;
+  }
+  /* line 471, ../sass/css.scss */
+  .scheda-prodotto li .data .scheda {
+    text-align: center;
+  }
+  /* line 474, ../sass/css.scss */
+  .scheda-prodotto li .data a {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .scheda-prodotto li .data a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+}
+/* line 480, ../sass/css.scss */
+.scheda-prodotto li .price {
+  margin-top: .4em;
+}
+/* line 482, ../sass/css.scss */
+.scheda-prodotto li .price span {
+  text-decoration: line-through;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 480, ../sass/css.scss */
+  .scheda-prodotto li .price {
+    padding-top: 5px;
+    display: inline-block;
+  }
+}
+/* line 491, ../sass/css.scss */
+.scheda-prodotto li .cristalprice {
+  color: #c00;
+  font-weight: bold;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 491, ../sass/css.scss */
+  .scheda-prodotto li .cristalprice {
+    padding-top: 5px;
+    display: inline-block;
+  }
+}
+/* line 499, ../sass/css.scss */
+.scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
+  float: right;
+  font-size: 10px;
+}
+/* line 503, ../sass/css.scss */
+.scheda-prodotto li .cart {
+  border: none;
+  background-color: #ffd31c;
+  padding: 1.23457%;
+  margin: 2.46914% 0;
+}
+/* line 509, ../sass/css.scss */
+.scheda-prodotto li .cart-link {
+  padding-right: 25px;
+  background: url("/images/carrello-bianco.gif") no-repeat right center;
+}
+/* line 514, ../sass/css.scss */
+.scheda-prodotto li .scheda {
+  background: url("/images/dett_prodotto.jpg") no-repeat left center;
+  padding-left: 25px;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 514, ../sass/css.scss */
+  .scheda-prodotto li .scheda {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    width: 50%;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .scheda-prodotto li .scheda:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+}
+/* line 522, ../sass/css.scss */
+.scheda-prodotto li .facebook {
+  float: left !important;
+  margin-right: 1.23457%;
+  width: 18.51852%;
+}
+/* line 527, ../sass/css.scss */
+.scheda-prodotto li .fb-slogan {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 160%;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 441, ../sass/css.scss */
+  .scheda-prodotto li {
+    width: 100%;
+    float: none;
+    border-bottom: dotted 1px #cccccc;
+  }
+}
+/* line 538, ../sass/css.scss */
+.scheda-prodotto li:last-child {
+  border-bottom: dotted 1px #999999;
+}
+
+@media only screen and (max-width: 40.625em) {
+  /* line 544, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 388, ../sass/css.scss */
+/* line 549, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 390, ../sass/css.scss */
+/* line 551, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 394, ../sass/css.scss */
+/* line 555, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 399, ../sass/css.scss */
+/* line 560, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 404, ../sass/css.scss */
+/* line 565, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 408, ../sass/css.scss */
+  /* line 569, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
