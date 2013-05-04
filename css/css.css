@@ -1045,24 +1045,24 @@ input[type=text], button[type=text] {
   border-bottom: dotted 1px #999999;
 }
 
-/* line 438, ../sass/css.scss */
+/* line 439, ../sass/css.scss */
 .scheda-prodotto {
   width: 100%;
   font-size: 90%;
 }
-/* line 441, ../sass/css.scss */
+/* line 442, ../sass/css.scss */
 .scheda-prodotto li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   border-top: dotted 1px #999999;
 }
-/* line 446, ../sass/css.scss */
+/* line 447, ../sass/css.scss */
 .scheda-prodotto li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 446, ../sass/css.scss */
+  /* line 447, ../sass/css.scss */
   .scheda-prodotto li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1116,39 +1116,39 @@ input[type=text], button[type=text] {
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 452, ../sass/css.scss */
+  /* line 453, ../sass/css.scss */
   .scheda-prodotto li a img {
     margin-bottom: 5px;
   }
 }
-/* line 457, ../sass/css.scss */
+/* line 458, ../sass/css.scss */
 .scheda-prodotto li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 457, ../sass/css.scss */
+  /* line 458, ../sass/css.scss */
   .scheda-prodotto li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 466, ../sass/css.scss */
+/* line 467, ../sass/css.scss */
 .scheda-prodotto li .data {
   float: left;
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 466, ../sass/css.scss */
+  /* line 467, ../sass/css.scss */
   .scheda-prodotto li .data {
     margin-top: 10px;
   }
-  /* line 471, ../sass/css.scss */
+  /* line 472, ../sass/css.scss */
   .scheda-prodotto li .data .scheda {
     text-align: center;
   }
-  /* line 474, ../sass/css.scss */
+  /* line 475, ../sass/css.scss */
   .scheda-prodotto li .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1202,57 +1202,57 @@ input[type=text], button[type=text] {
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 480, ../sass/css.scss */
+/* line 481, ../sass/css.scss */
 .scheda-prodotto li .price {
   margin-top: .4em;
 }
-/* line 482, ../sass/css.scss */
+/* line 483, ../sass/css.scss */
 .scheda-prodotto li .price span {
   text-decoration: line-through;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 480, ../sass/css.scss */
+  /* line 481, ../sass/css.scss */
   .scheda-prodotto li .price {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 491, ../sass/css.scss */
+/* line 492, ../sass/css.scss */
 .scheda-prodotto li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 491, ../sass/css.scss */
+  /* line 492, ../sass/css.scss */
   .scheda-prodotto li .cristalprice {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 499, ../sass/css.scss */
+/* line 500, ../sass/css.scss */
 .scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 503, ../sass/css.scss */
+/* line 504, ../sass/css.scss */
 .scheda-prodotto li .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 509, ../sass/css.scss */
+/* line 510, ../sass/css.scss */
 .scheda-prodotto li .cart-link {
   padding-right: 25px;
   background: url("/images/carrello-bianco.gif") no-repeat right center;
 }
-/* line 514, ../sass/css.scss */
+/* line 515, ../sass/css.scss */
 .scheda-prodotto li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 514, ../sass/css.scss */
+  /* line 515, ../sass/css.scss */
   .scheda-prodotto li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1307,13 +1307,13 @@ input[type=text], button[type=text] {
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 522, ../sass/css.scss */
+/* line 523, ../sass/css.scss */
 .scheda-prodotto li .facebook {
   float: left !important;
   margin-right: 1.23457%;
   width: 18.51852%;
 }
-/* line 527, ../sass/css.scss */
+/* line 528, ../sass/css.scss */
 .scheda-prodotto li .fb-slogan {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1321,55 +1321,55 @@ input[type=text], button[type=text] {
   line-height: 160%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 441, ../sass/css.scss */
+  /* line 442, ../sass/css.scss */
   .scheda-prodotto li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #cccccc;
   }
 }
-/* line 538, ../sass/css.scss */
+/* line 539, ../sass/css.scss */
 .scheda-prodotto li:last-child {
   border-bottom: dotted 1px #999999;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 544, ../sass/css.scss */
+  /* line 545, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 549, ../sass/css.scss */
+/* line 550, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 551, ../sass/css.scss */
+/* line 552, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 555, ../sass/css.scss */
+/* line 556, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 560, ../sass/css.scss */
+/* line 561, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 565, ../sass/css.scss */
+/* line 566, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 569, ../sass/css.scss */
+  /* line 570, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
