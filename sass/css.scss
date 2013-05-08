@@ -15,7 +15,7 @@ html[xmlns] .clearfix {
 
 @for $level from 0 to 5 {
   h#{$level + 1} {
-    font-size: 1.875em - ($level * .35em);
+    font-size: 1.750em - ($level * .35em);
       border-bottom: dashed 1px #000;
       font-weight: bold;
   }
@@ -44,8 +44,20 @@ label {
     font-weight: bold;
 }
 
+.spacer {
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+    margin-bottom: 10px;
+}
 
-
+select {
+    background-color: #FFFFFF;
+    border: 1px solid #333333;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #333333;
+}
 
 
 
@@ -167,11 +179,39 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
                     text-decoration: none;
                     background: #{$section};
                     &:hover {
-                        background: darken(black, 10);
-                        color: #fff;
+                        background: #ffd31c;
+                        color: #000;
                     }
                 }
             }
+        }
+    }
+}
+
+.product-menu {
+    @extend %font-base;
+    margin: 10px 0 20px 0;
+    list-style: none;
+    li {
+        padding: 0;
+        position: relative;
+        border-bottom: dotted 1px #999;
+        a {
+            display: inline-block;
+            padding: 0.75em 0;
+            width: 100%;
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+                background:#fff;
+            }
+        }
+    }
+   
+    @include respond-to('medium-screens'){
+        display: none;
+        ul li {
+            float: none;
         }
     }
 }
@@ -580,11 +620,20 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
     > div {
         padding: calc-em(5, 170);
     }
+    h3 {
+        margin-top: 30px;
+        clear: both;
+    }
 }
 #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt{
     @include respond-to('medium-screens'){
         width: 100%;
         float: none;
+    }
+}
+#widget-area{
+    @include respond-to('medium-screens'){
+       display:none;
     }
 }
 
