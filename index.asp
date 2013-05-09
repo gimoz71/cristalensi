@@ -1,3 +1,5 @@
+<!--#include file="inc_strConn.asp"-->
+<!--#include file="inc_clsImageSize.asp"-->
 <!doctype html>
 <html>
     <head>
@@ -26,45 +28,8 @@
     </head>
     <body>
         <div id="wrap">
-            <header id="header">
-                <div id="language">
-                    <a href="#" style="float: left;width: 50%; margin: 0; text-align: center;"><img class="flag" style="width: 30px; float: none;" src="images/flag_it.png"></a>
-                    <a href="#" style="float: left;width: 50%; margin: 0; text-align: center;"><img class="flag" style="width: 30px; float: none;" src="images/flag_en.png"></a>
-                </div>
-                <div id="menu">
-                    <ul>
-                        <li><a class="green" href="#">home page</a></li>
-                        <li><a class="darkorange" href="#">chi siamo</a></li>
-                        <li><a class="skyblue" href="#">contatti</a></li>
-                        <li><a class="" href="#">cosa dicono di noi</a></li>
-                        <li><a class="red" href="products.html">prodotti</a></li>
-                        <li><a class="blue" href="#">offerte</a></li>
-                        <li><a class="yellowgreen" href="#">carrello</a></li>
-                        <li><a class="magenta" href="#">condizioni di vendita</a></li>
-                    </ul>
-                </div>
-                <div id="logo"><img src="images/logo.png"></div>
-                <div id="logo-handheld"><img src="images/logo_320.png"></div>
-                <div id="btn-responsive-menu">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </div>
-                <div id="responsive-menu">
-                    <ul>
-                        <li><a href="#">home page</a></li>
-                        <li><a href="#">chi siamo</a></li>
-                        <li><a href="#">contatti</a></li>
-                        <li><a href="#">prodotti</a></li>
-                        <li><a href="#">offerte</a></li>
-                        <li><a href="#">carrello</a></li>
-                        <li><a href="#">condizioni di vendita</a></li>
-                    </ul>
-                </div>
-                <div id="widget-area"><img src="images/gallery.png"></div>
-            </header>
+            <!--#include file="inc_header.asp"-->
             <div id="main-content">
-                
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
@@ -289,47 +254,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="sidebar-alt" >
-                    <div>
-                        <div>
-                            <a href="#" style="float: left;width: 50%; margin: 0; text-align: center;"><img class="flag" style="width: 30px; float: none;" src="images/flag_it.png"></a>
-                            <a href="#" style="float: left;width: 50%; margin: 0; text-align: center;"><img class="flag" style="width: 30px; float: none;" src="images/flag_en.png"></a>
-                        </div>
-                        <h3>Area clienti</h3>
-                        <p>Per consultare il catalogo non &egrave; necessario iscriversi</p>
-                        <form>
-                            <label for="username">Nome utente</label>
-                            <input type="text">
-                            <label for="password">Password</label>
-                            <input type="text">
-                            <button type="submit">Entra</button>
-                        </form>
-                        <p><a href="#" class="password-recover">Recupera password</a></p>
-                        <p class="cleafix"><button type="submit">Registrati</button></p>
-                        <p><a href="#" class="info">Maggiori informazioni</a></p>
-                        <h3>Pagamenti</h3>
-                        <p class="note">Gli ordini potranno esser pagati in Contrassegno o con Bonifico Bancario oppure online grazie al sistema sicuro di PayPal con Carte di Credito e Prepagate. </p>
-                        <img class="negozio" src="images/cartedicredito.jpg">
-                        <p><a href="#">Condizioni di vendita</a></p>
-                        <br>
-                        <h3>Contattaci!</h3>
-                        <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione:</p>
-                        <p><strong>Cristalensi Snc</strong><br>
-                            Di Lensi Massimiliano & C.<br>
-                            C.F. e Iscr. Reg. Impr. di Firenze 05305820481<br>
-                            R.E.A. Firenze 536760<br>
-
-                            50056 Montelupo F.no (FI)<br>
-                            Via arti e mestieri, 1<br>
-                            Tel. e Fax: 0571 911163<br>
-                            e-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
-                        </p>
-                    </div>
-                </div>
+                <!--#include file="inc_sx.asp"-->
             </div>
         </div>
-        <footer id="footer">
-            <p class="credits">tutti diritti sono riservati, è vietata la riproduzione anche parziale - [realizzazione sito internet] - [web marketing]</p>
-        </footer>
+        <!--#include file="inc_footer.asp"-->
     </body>
 </html>
+<!--#include file="inc_strClose.asp"-->
