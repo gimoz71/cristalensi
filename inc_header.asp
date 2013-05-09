@@ -5,7 +5,7 @@
                 </div>
                 <div id="menu">
                     <ul>
-                        <li><a class="green" href="#">home page</a></li>
+                        <li><a class="green" href="index.asp">home page</a></li>
                         <li><a class="darkorange" href="#">chi siamo</a></li>
                         <li><a class="skyblue" href="#">contatti</a></li>
                         <li><a class="" href="#">cosa dicono di noi</a></li>
@@ -24,9 +24,10 @@
                 </div>
                 <div id="responsive-menu">
                     <ul>
-                        <li><a href="#">home page</a></li>
+                        <li><a href="index.asp">home page</a></li>
                         <li><a href="#">chi siamo</a></li>
                         <li><a href="#">contatti</a></li>
+                        <li><a href="#">cosa dicono di noi</a></li>
                         <li><a href="#">prodotti</a></li>
                         <li><a href="#">offerte</a></li>
                         <li><a href="#">carrello</a></li>
