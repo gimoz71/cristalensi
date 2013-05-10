@@ -595,6 +595,88 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red,Blue, YellowGreen, Magenta;
         }
     }
 }
+.carrello {
+    width: 100%;
+    font-size: 90%;
+    li {
+        width: 100%;
+        position: relative;
+        border-top: dotted 1px #999;
+        a {
+            font-weight: bold;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                width: auto;
+                img {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .colonna {
+            display: inline-block;
+            text-align: right;
+        }
+        .riga {
+            padding: 5px calc-em(10, 810);
+            border-bottom: dashed 1px #ccc;
+            margin: 0 !important;
+        }
+        .articolo{
+            width: calc-em(390, 810);
+            text-align: left;
+        }
+        .quantita {
+            width: calc-em(100, 810);
+        }
+        .prezzo_unitario {
+            width: calc-em(125, 810);
+        }
+        .prezzo_totale {
+            width: calc-em(125, 810);
+        }
+        .elimina {
+            width: calc-em(60, 810);
+        }
+        .data {
+            width: 100%;
+            @include respond-to('medium-screens'){
+                margin-top: 10px;
+                .scheda {
+                    text-align: center;
+                }
+                a {
+                  @include buttonmobile;  
+                }
+            }
+
+        }
+        .cart {
+            border: none;
+            background-color: $yellow;
+            padding: calc-em(10, 810);
+            margin: calc-em(20, 810) 0;
+        }
+        .cart .total_price {
+            float: right;
+            font-size: 10px;
+        }
+        .scheda {
+            background: url('/images/dett_prodotto.jpg') no-repeat left center;
+            padding-left: 25px;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                width: 50%;
+            }
+        }
+        
+        @include respond-to('medium-screens'){
+            width: 100%;
+            float: none;
+            border-bottom: dotted 1px #ccc;
+        }
+       
+    }
+}
 
 .listino {
     @include respond-to('medium-screens'){

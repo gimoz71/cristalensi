@@ -1407,48 +1407,304 @@ input[type=text], button[type=text] {
   border-bottom: dotted 1px #999999;
 }
 
+/* line 598, ../sass/css.scss */
+.carrello {
+  width: 100%;
+  font-size: 90%;
+}
+/* line 601, ../sass/css.scss */
+.carrello li {
+  width: 100%;
+  position: relative;
+  border-top: dotted 1px #999999;
+}
+/* line 605, ../sass/css.scss */
+.carrello li a {
+  font-weight: bold;
+}
 @media only screen and (max-width: 40.625em) {
-  /* line 599, ../sass/css.scss */
+  /* line 605, ../sass/css.scss */
+  .carrello li a {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    width: auto;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .carrello li a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+  /* line 610, ../sass/css.scss */
+  .carrello li a img {
+    margin-bottom: 5px;
+  }
+}
+/* line 615, ../sass/css.scss */
+.carrello li .colonna {
+  display: inline-block;
+  text-align: right;
+}
+/* line 619, ../sass/css.scss */
+.carrello li .riga {
+  padding: 5px 1.23457%;
+  border-bottom: dashed 1px #cccccc;
+  margin: 0 !important;
+}
+/* line 624, ../sass/css.scss */
+.carrello li .articolo {
+  width: 48.14815%;
+  text-align: left;
+}
+/* line 628, ../sass/css.scss */
+.carrello li .quantita {
+  width: 12.34568%;
+}
+/* line 631, ../sass/css.scss */
+.carrello li .prezzo_unitario {
+  width: 15.4321%;
+}
+/* line 634, ../sass/css.scss */
+.carrello li .prezzo_totale {
+  width: 15.4321%;
+}
+/* line 637, ../sass/css.scss */
+.carrello li .elimina {
+  width: 7.40741%;
+}
+/* line 640, ../sass/css.scss */
+.carrello li .data {
+  width: 100%;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 640, ../sass/css.scss */
+  .carrello li .data {
+    margin-top: 10px;
+  }
+  /* line 644, ../sass/css.scss */
+  .carrello li .data .scheda {
+    text-align: center;
+  }
+  /* line 647, ../sass/css.scss */
+  .carrello li .data a {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .carrello li .data a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+}
+/* line 653, ../sass/css.scss */
+.carrello li .cart {
+  border: none;
+  background-color: #ffd31c;
+  padding: 1.23457%;
+  margin: 2.46914% 0;
+}
+/* line 659, ../sass/css.scss */
+.carrello li .cart .total_price {
+  float: right;
+  font-size: 10px;
+}
+/* line 663, ../sass/css.scss */
+.carrello li .scheda {
+  background: url("/images/dett_prodotto.jpg") no-repeat left center;
+  padding-left: 25px;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 663, ../sass/css.scss */
+  .carrello li .scheda {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    width: 50%;
+  }
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .carrello li .scheda:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 601, ../sass/css.scss */
+  .carrello li {
+    width: 100%;
+    float: none;
+    border-bottom: dotted 1px #cccccc;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  /* line 681, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 604, ../sass/css.scss */
+/* line 686, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 606, ../sass/css.scss */
+/* line 688, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 610, ../sass/css.scss */
+/* line 692, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 615, ../sass/css.scss */
+/* line 697, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 620, ../sass/css.scss */
+/* line 702, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 623, ../sass/css.scss */
+/* line 705, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 628, ../sass/css.scss */
+  /* line 710, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
@@ -1456,13 +1712,13 @@ input[type=text], button[type=text] {
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 634, ../sass/css.scss */
+  /* line 716, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
 
-/* line 641, ../sass/css.scss */
+/* line 723, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }
