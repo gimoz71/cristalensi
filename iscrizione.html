@@ -71,23 +71,18 @@
                         	<h3 style="font-size: 14px; display: inline; border: none;">Autenticazione cliente</h3>
                             <p>Se sei già iscritto, e quindi hai già Login e Password, non è necessario che ti iscriva nuovamente, è sufficiente inserire i dati di accesso qui sotto: Login (email) e Password</p>
 							<div class="iscrizione clearfix">
-                            	<div class="table" style="width: 50%; margin: 0 auto; text-align: center;">
+                            	<div class="table">
                                     <div class="tr">
                                         <div class="td">
                                             login <input name="nominativo" type="text" class="form" id="nominativo" size="30" maxlength="50" value="">
                                         </div>
-                                    </div>
-                                    <div class="tr">
                                         <div class="td">
-                                            password <input name="Rag_Soc" type="text" class="form" id="Rag_Soc" size="30" maxlength="50" value="">
+                                            password <input name="Rag_Soc" type="text" class="form" id="Rag_Soc" size="30" maxlength="50" value=""><input type="submit" value="accedi">
+                                            <p style="text-align: center"><a href="#">Clicca quì per recuperare la password</a></p>
                                         </div>
+                                       
                                     </div>
-                                    <div class="tr">
-                                        <div class="td">
-                                            <a href="#">Clicca quì per recuperare la password</a>
-                                        </div>
-                                    </div>
-	                        	</div>
+                                </div>
                             </div>
                             <hr>
                             <h3 style="font-size: 14px; display: inline; border: none;">Registrazione cliente</h3>
@@ -101,50 +96,42 @@
                                     <form method="post" action="iscrizione.asp?mode=1&amp;pkid=0" name="newsform" onSubmit="return verifica();">
                                     </form>
                                     <div class="tr">
-                                        <div class="td">Nome e Cognome (*)</div>
-                                        <div class="td">Ragione sociale ( nel caso in cui si tratti di un'Azienda ) </div>
-                                    </div>
-                                    <div class="tr">
                                         <div class="td">
+	                                        Nome e Cognome (*)<br>
                                             <input name="nominativo" type="text" class="form" id="nominativo" size="30" maxlength="50" value="">
                                         </div>
                                         <div class="td">
+                                        	Ragione sociale ( nel caso in cui si tratti di un'Azienda )<br>
                                             <input name="Rag_Soc" type="text" class="form" id="Rag_Soc" size="30" maxlength="50" value="">
                                         </div>
                                     </div>
                                     <div class="tr">
-                                        <div class="td">Codice Fiscale</div>
-                                        <div class="td">Partita IVA ( nel caso in cui si tratti di un'Azienda ) </div>
-                                    </div>
-                                    <div class="tr">
                                         <div class="td">
+                                        Codice Fiscale<br>
                                             <input name="cod_fisc" type="text" class="form" id="cod_fisc" size="20" maxlength="16" value="">
                                         </div>
                                         <div class="td">
+                                        Partita IVA ( nel caso in cui si tratti di un'Azienda )<br>
                                             <input name="PartitaIVA" type="text" class="form" id="PartitaIVA" size="20" maxlength="11" value="">
                                         </div>
                                     </div>
                                     <div class="tr">
-                                        <div class="td">Indirizzo (*)</div>
-                                        <div class="td">Cap</div>
-                                    </div>
-                                    <div class="tr">
                                         <div class="td">
+                                        	Indirizzo (*)<br>
                                             <input name="indirizzo" type="text" class="form" id="indirizzo" size="30" maxlength="100" value="">
                                         </div>
                                         <div class="td">
+                                        	CAP<br>
                                             <input name="cap" type="text" class="form" id="cap" size="7" maxlength="5" value="">
                                         </div>
                                     </div>
                                     <div class="tr">
-                                        <div class="td">Città (*)</div>
-                                        <div class="td">Provincia</div>
-                                    </div>
-                                    <div class="tr">
                                         <div class="td">
+	                                        Città (*)<br>
                                             <input name="citta" type="text" class="form" id="citta" size="30" maxlength="50" value="">
                                         </div>
                                         <div class="td">
+	                                        Provincia<br>
                                             <input type="text" name="provincia" id="provincia" value="" size="3" maxlength="2" class="form">
                                         </div>
                                     </div>
@@ -152,35 +139,31 @@
                                         <div>Nazione</div>
                                     </div>
                                     <div class="tr">
-                                        <div>Italia:&nbsp;&nbsp;Si&nbsp;
+                                        Italia:&nbsp;&nbsp;Si&nbsp;
                                             <input type="radio" name="italia" value="Sì" checked="">
                                             &nbsp;&nbsp;No&nbsp;
                                             <input type="radio" name="italia" value="No">
                                             &nbsp;Altra nazione
                                             <input name="nazionediversa" type="text" class="form" id="nazionediversa" size="30" maxlength="50" value="">
-                                        </div>
-                                    </div>
-                                    <div class="tr">
-                                        <div class="td">Telefono (*)</div>
-                                        <div class="td">Fax</div>
+                                        
                                     </div>
                                     <div class="tr">
                                         <div class="td">
+                                        Telefono (*)<br>
                                             <input name="telefono" type="text" class="form" id="telefono" size="30" maxlength="50" value="">
                                         </div>
                                         <div class="td">
+	                                        Fax<br>
                                             <input name="fax" type="text" class="form" id="fax" size="30" maxlength="50" value="">
                                         </div>
                                     </div>
                                     <div class="tr">
-                                        <div class="td"><strong>E-mail</strong> (*) - Verrà usata come <strong>Login</strong> per i futuri ordini </div>
-                                        <div class="td"><strong>Password</strong> (*)</div>
-                                    </div>
-                                    <div class="tr">
                                         <div class="td">
+                                        	<strong>E-mail</strong> (*) - Verrà usata come <strong>Login</strong> per i futuri ordini<br>
                                             <input name="email" type="text" class="form" id="email" size="30" maxlength="100" value="">
                                         </div>
                                         <div class="td">
+                                        <strong>Password</strong> (*)<br>
                                             <input name="password" type="password" class="form" id="pw" size="30" maxlength="50" value="">
                                         </div>
                                     </div>
@@ -192,7 +175,8 @@
                                             <input type="radio" name="aut_email" value="True" checked="">
                                             &nbsp;Si&nbsp;&nbsp;
                                             <input type="radio" name="aut_email" value="False">
-                                            &nbsp;No </div>
+                                            &nbsp;No
+                                        </div>
                                     </div>
                                     <div class="tr">
                                         <div>&nbsp;</div>

@@ -638,15 +638,21 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 		.tr {
 			text-align: left;
 			width: 100%;
-			
-			.td {
-				padding: 3px 0;
-				float: left;
-				width: 50%;
-				input[type=text], input[type=password]{
-					width: 50%;
-				}
+		}
+		.td {
+			padding: 3px 0;
+			float: left;
+			width: 50%;
+		}
+		input[type=text], input[type=password]{
+			width: 50%;
+		}
+		@include respond-to('medium-screens'){
+			.tr, .td, input[type=text], input[type=password], input[type=submit] , input[type=reset] {
+				width: 100% !important;
+				float: none !important;
 			}
+			
 		}
 	}
 	.colonna {
