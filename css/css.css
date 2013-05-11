@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 9, ../sass/_base.scss */
-p, label, #menu ul li a.green, #menu ul li a.darkorange, #menu ul li a.skyblue, #menu ul li a.red, #menu ul li a.blue, #menu ul li a.yellowgreen, #menu ul li a.magenta, .product-menu, .listino li a, .catalogo li a, .prodotti li a, .scheda-prodotto li a {
+p, label, #menu ul li a.green, #menu ul li a.darkorange, #menu ul li a.skyblue, #menu ul li a.red, #menu ul li a.brown, #menu ul li a.blue, #menu ul li a.yellowgreen, #menu ul li a.magenta, .product-menu, .listino li a, .catalogo li a, .prodotti li a, .scheda-prodotto li a {
   font-size: 0.75em;
 }
 
@@ -376,6 +376,25 @@ input[type=text], button[type=text] {
 }
 /* line 181, ../sass/css.scss */
 #menu ul li a.red:hover {
+  background: #ffd31c;
+  color: #000;
+}
+/* line 169, ../sass/css.scss */
+#menu ul li {
+  display: table-cell;
+}
+/* line 172, ../sass/css.scss */
+#menu ul li a.brown {
+  display: block;
+  padding: 0.5em 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background: brown;
+}
+/* line 181, ../sass/css.scss */
+#menu ul li a.brown:hover {
   background: #ffd31c;
   color: #000;
 }
