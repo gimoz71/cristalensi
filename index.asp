@@ -44,102 +44,147 @@
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
                                 <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
-                            <h4 class="area">OFFERTE: NON PERDERE L'OCCASIONE!</h4>
-                            <p>Le nostre offerte in vetrina a prezzi scontati. Consulta tutte le offerte nell'apposita sezione "Prodotti in offerta"<br>Non perdere l'occasione!!!</p>
+                            <!--prodotti in offerta-->
+                            <h4 class="area">OFFERTE: non perdere l'occasione!<a href="offerte.asp" style="float: right;">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
+                            <%
+							'random prodotti in offerta
+							Set prod_rs = Server.CreateObject("ADODB.Recordset")
+							sql = "SELECT pkid,codicearticolo,titolo,prezzoprodotto,prezzolistino,nomepagina,offerta FROM Prodotti WHERE Offerta=1 OR Offerta=2 ORDER BY Titolo ASC"
+							prod_rs.open sql,conn, 1, 1
+							
+							Randomize()
+							constnum = 4
+				
+							if prod_rs.recordcount>0 then
+								IF NOT prod_rs.EOF THEN
+								rndArray = prod_rs.GetRows()
+								prod_rs.Close
+							%>
                             <ul class="listino clearfix">
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
-                                    <p class="price">Prezzo listino: <span>155€</span></p>
-                                    <p class="cristalprice">Prezzo listino: 155€</p>
-                                    <a class="scheda" href="#">Scheda prodotto</a>
+							<%	
+								Lenarray =  UBOUND( rndArray, 2 ) + 1
+								skip =  Lenarray  / constnum 
+								IF Lenarray <= constnum THEN skip = 1
+								FOR i = 0 TO Lenarray - 1 STEP skip
+									numero = RND * ( skip - 1 )
+									id = rndArray( 0, i + numero )
+									codicearticolo = rndArray( 1, i + numero )
+									titolo_prodotto = rndArray( 2, i + numero )
+									prezzoarticolo = rndArray( 3, i + numero )
+									prezzolistino = rndArray( 4, i+ numero )
+									
+									NomePagina = rndArray( 5, i+ numero )
+									if NomePagina="" then NomePagina="#"
+									'if NomePagina<>"#" then NomePagina="public/pagine/"&NomePagina
+									if NomePagina<>"#" then NomePagina="scheda_prodotto.asp?pkid="&id
+									
+									
+									'recupero l'immagine
+									Set img_rs = Server.CreateObject("ADODB.Recordset")
+									sql = "SELECT * FROM Immagini WHERE Record="&id&" AND Tabella='Prodotti'"
+									img_rs.open sql,conn, 1, 1
+									if img_rs.recordcount>0 then
+										tot_img=img_rs.recordcount
+										titolo_img=img_rs("titolo")
+										file_img=img_rs("file")
+										if file_img<>"" then
+										
+										'calcolo misure immagini
+										Set objImageSize = New ImageSize
+										With objImageSize
+										   '.ImageFile = server.mappath("public/"&file_img&"")
+										  .ImageFile = path_img&file_img
+										  
+										  If .IsImage Then
+											W=.ImageWidth
+											H=.ImageHeight
+										  End If 
+										  
+										End With
+										Set objImageSize = Nothing
+							%>
+                            	<li>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>
+										<%else%>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>	
+                                    <%
+                                        end if
+                                    else
+                                        tot_img=0
+                                        titolo_img=""
+                                        file_img=""
+                                    %>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>
+                                    <%	
+                                    end if
+                                    img_rs.close
+                                    %>
+                                    <%if prezzolistino<>"" then%><p class="price">Prezzo listino: <span><%=prezzolistino%>€</span></p><%end if%>
+                                    <%if prezzoarticolo<>"" then%><p class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</p><%end if%>
+                                    <a class="scheda" href="<%=NomePagina%>" title="Scheda del prodotto <%=titolo_prodotto%>">Scheda prodotto</a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
-                                    <p class="price">Prezzo listino: <span>155€</span></p>
-                                    <p class="cristalprice">Prezzo listino: 155€</p>
-                                    <a class="scheda" href="#">Scheda prodotto</a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
-                                    <p class="price">Prezzo listino: <span>155€</span></p>
-                                    <p class="cristalprice">Prezzo listino: 155€</p>
-                                    <a class="scheda" href="#">Scheda prodotto</a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
-                                    <p class="price">Prezzo listino: <span>155€</span></p>
-                                    <p class="cristalprice">Prezzo listino: 155€</p>
-                                    <a class="scheda" href="#">Scheda prodotto</a>
-                                </li>
+                                <%
+									NEXT
+									end if
+								%>
                             </ul>
-                            <h4 class="area">Catalogo prodotti <a href="#" style="float: right;">Ricerca avanzata &raquo;</a></h4>
-                            <p>Ricerca il prodotto desiderato usando la divisione in categorie con cui è stato organizzato il nostro catalogo oppure sfrutta la ricerca avanzata che ti permette di inserire e selezionare più caratteristiche per ottenere un elenco di articoli su misura per le tue esigenze: <button>RICERCA AVANZATA</button>
+                            <%
+							else
+								prod_rs.close
+							end if
+							%>
+                            <!--elenco categorie-->
+                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right;">RICERCA AVANZATA &raquo;</a></h4>
+                            <p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>
                             </p>
                             <ul class="catalogo clearfix">
+                            <%
+							'elenco categorie
+							Set prod_rs = Server.CreateObject("ADODB.Recordset")
+							sql = "SELECT * FROM Categorie1 ORDER BY Posizione"
+							prod_rs.open sql,conn, 1, 1
+							if prod_rs.recordcount>0 then
+								conta=0
+								Do while not prod_rs.EOF
+								
+								cat=prod_rs("PkId")
+								titolo_cat=prod_rs("Titolo")
+								nomepagina_categorie=prod_rs("NomePagina")
+								if nomepagina_categorie="" then nomepagina_categorie="#"
+								'if nomepagina_categorie<>"#" then nomepagina_categorie="public/pagine/"&nomepagina_categorie
+								if nomepagina_categorie<>"#" then nomepagina_categorie="categorie.asp?pkid="&cat
+							%>    
                                 <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
+                                    <%
+									file_img=""
+									Set cat_rs = Server.CreateObject("ADODB.Recordset")
+									sql = "SELECT * FROM Categorie2 WHERE FkCategoria1="&cat&" AND Logo<>'' ORDER BY Posizione"
+									cat_rs.open sql,conn, 1, 1
+									if cat_rs.recordcount>0 then
+									file_img=cat_rs("logo")
+									end if
+									cat_rs.close
+									
+									if file_img<>"" then
+									%>
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><%=titolo_cat%></a>
+										<%else%>
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="immagini/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><%=titolo_cat%></a>	
+									<%	
+										end if
+									%>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano sdcdscds  asd fdsfasd asf as
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano asdfdsfa dsfsf as dfad af as dfsa
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano sd d sfds sa fdsafdsa fadsf asd asf asd
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/example.jpg">
-                                        Applique di vetro murano
-                                    </a>
-                                </li>
+                            <%
+								prod_rs.movenext
+								loop	
+							end if
+							prod_rs.close
+							%>
+                            
                             </ul>
                             <!--elenco produttori: select con js-->
-                            <h4 class="area">Produttori</h4>
-                            <p>Sei interessato ad una specifica marca? Ricerca il tuo prodotto tramite la nostra selezione di produttori
+                            <h4 class="area">PRODUTTORI<a href="produttori.asp" style="float: right;" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
+                            <p>Se conosci la marca del prodotto la puoi selezionare qui sotto oppure andando all'elenco completo dei produttori.
                             </p>
                             <%
 							Set cs=Server.CreateObject("ADODB.Recordset")
@@ -166,11 +211,11 @@
                             loop
                             %>
                             </select>
-                            <p>Oppure consulta direttamente la pagina con <a href="#">l'elenco completo dei produttori</a></p>
                             </form>
 							<%end if%>
 							<%cs.close%>
                             <!--fine elenco produttori-->
+                            <p>&nbsp;</p>
                         </div>
                     </div>
                 </div>

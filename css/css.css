@@ -101,14 +101,15 @@ h2 {
 
 /* line 17, ../sass/css.scss */
 h3 {
-  font-size: 1.05em;
-  border-bottom: dashed 1px black;
-  font-weight: bold;
+	font-size: 1.05em;
+	border-bottom: dashed 1px black;
+	font-weight: bold;
+	font-style: italic;
 }
 
 /* line 17, ../sass/css.scss */
 h4 {
-  font-size: 0.7em;
+  font-size: 0.8em;
   border-bottom: dashed 1px black;
   font-weight: bold;
 }
@@ -137,10 +138,10 @@ p {
 /* line 34, ../sass/css.scss */
 p.note {
   border: dashed 2px rgba(0, 0, 0, 0.25);
-  padding: 5px;
+  padding: 3px;
   font-style: italic;
   color: rgba(0, 0, 0, 0.65);
-  font-size: 10px;
+  font-size: 11px;
 }
 
 /* line 42, ../sass/css.scss */
@@ -597,8 +598,9 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 /* line 297, ../sass/css.scss */
 #content .incipit {
-  font-size: 1em;
-  margin-top: 20px;
+	font-size: 1em;
+	margin-top: 20px;
+	line-height: 18px;
 }
 /* line 301, ../sass/css.scss */
 #content .slogan {
