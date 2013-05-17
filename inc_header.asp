@@ -10,7 +10,7 @@
                         <li><a class="skyblue" href="#">contatti</a></li>
                         <li><a class="brown" href="#">cosa dicono di noi</a></li>
                         <li><a class="red" href="products.html">prodotti</a></li>
-                        <li><a class="blue" href="#">offerte</a></li>
+                        <li><a class="blue" href="offerte.asp">offerte</a></li>
                         <li><a class="yellowgreen" href="#">carrello</a></li>
                         <li><a class="magenta" href="#">condizioni di vendita</a></li>
                     </ul>
@@ -29,7 +29,7 @@
                         <li><a href="#">contatti</a></li>
                         <li><a href="#">cosa dicono di noi</a></li>
                         <li><a href="#">prodotti</a></li>
-                        <li><a href="#">offerte</a></li>
+                        <li><a href="offerte.asp">offerte</a></li>
                         <li><a href="#">carrello</a></li>
                         <li><a href="#">condizioni di vendita</a></li>
                     </ul>

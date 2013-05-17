@@ -2,8 +2,8 @@
 <%
 prov=request("prov")
 if prov="" then prov=0
-'se è 0 proviene dal sito
-'se è 1 proviene dal negozio
+'se = 0 proviene dal sito
+'se = 1 proviene dal negozio
 
 pkid = Session("idCliente")
 	if pkid = "" then pkid = 0
@@ -91,7 +91,7 @@ pkid = Session("idCliente")
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Complimenti "&nominativo&"! La tua iscrizione a Cristalensi.it è avvenuta correttamente.<br>Da adesso potrai ordinare i nostri prodotti senza dover inserire nuovamente i tuoi dati.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Complimenti "&nominativo&"! La tua iscrizione a Cristalensi.it &egrave; avvenuta correttamente.<br>Da adesso potrai ordinare i nostri prodotti senza dover inserire nuovamente i tuoi dati.</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dati sensibili e determinanti per l'accesso ai servizi di Cristalensi.it:<br>Nominativo: <b>"&nominativo&"</b><br>Login: <b>"&email&"</b><br>Password: <b>"&password&"</b></font><br>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -289,7 +289,7 @@ pkid = Session("idCliente")
                         <%else%>
                         	
                         	<h3 style="font-size: 14px; display: inline; border: none;">Autenticazione cliente</h3>
-                            <p>Se sei già iscritto, e quindi hai già Login (Email) e Password, non è necessario che ti iscriva nuovamente, è sufficiente inserire i dati di accesso qui sotto e sarai riconosciuto immediatamente.</p>
+                            <p>Se sei gi&agrave; iscritto, e quindi hai gi&agrave; Login (Email) e Password, non &egrave; necessario che ti iscriva nuovamente, &egrave; sufficiente inserire i dati di accesso qui sotto e sarai riconosciuto immediatamente.</p>
 							<div class="iscrizione clearfix">
                             	<form method="post" action="iscrizione.asp?mode=2&contr=1" name="newsform2">
                                 <div class="table">
@@ -303,14 +303,14 @@ pkid = Session("idCliente")
                                         </div>
                                        
                                     </div>
-                                    <div class="tr"><p style="text-align: center;"><input type="submit" value="accedi" />&nbsp;&nbsp;&nbsp;<a href="recupero_pw.asp">Clicca quì per recuperare la password</a></p></div>
+                                    <div class="tr"><p style="text-align: center;"><input type="submit" value="accedi" />&nbsp;&nbsp;&nbsp;<a href="recupero_pw.asp">Clicca qui per recuperare la password</a></p></div>
                                 </div>
                                 </form>
                             </div>
                             <hr>
                             <h3 style="font-size: 14px; display: inline; border: none;">Registrazione cliente</h3>
                             <p>In questa pagina puoi inserire i tuoi dati per registrarti a Cristalensi.<br />
-                                Informazione importante: è necessario che l'indirizzo Email sia un'indirizzo funzionante e che usi normalmente, in quanto ti verranno spedite comunicazioni relativamente agli ordini e ai prodotti.<br />Ti ricordiamo inoltre che l'indirizzo Email lo dovrai utilizzare come Login per accedere ai tuoi futuri ordini.
+                                Informazione importante: &egrave; necessario che l'indirizzo Email sia un'indirizzo funzionante e che usi normalmente, in quanto ti verranno spedite comunicazioni relativamente agli ordini e ai prodotti.<br />Ti ricordiamo inoltre che l'indirizzo Email lo dovrai utilizzare come Login per accedere ai tuoi futuri ordini.
                             </p>
                             
                           <%end if%>
@@ -350,7 +350,7 @@ pkid = Session("idCliente")
                                     </div>
                                     <div class="tr">
                                         <div class="td">
-	                                        Città (*)<br />
+	                                        Citt&agrave; (*)<br />
                                             <input name="citta" type="text" class="form" id="citta"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("citta")%><%else%><%if mode=3 then%><%=citta%><%end if%><%end if%>" />
                                         </div>
                                         <div class="td">
@@ -362,7 +362,7 @@ pkid = Session("idCliente")
                                         <div>Nazione</div>
                                     </div>
                                     <div class="tr">
-                                        Italia:&nbsp;&nbsp;Si&nbsp;<input type="radio" name="italia" value="Sì" <% if pkid > 0 then %><%if rs("italia")="Sì" then%> checked<%end if %><%else%> checked<%end if %> />&nbsp;&nbsp;No&nbsp;<input type="radio" name="italia" value="No" <% if pkid > 0 then %><%if rs("italia")="No" then%> checked<%end if %><%end if %> />&nbsp;Altra nazione
+                                        Italia:&nbsp;&nbsp;Si&nbsp;<input type="radio" name="italia" value="S&igrave;" <% if pkid > 0 then %><%if rs("italia")="S&igrave;" then%> checked<%end if %><%else%> checked<%end if %> />&nbsp;&nbsp;No&nbsp;<input type="radio" name="italia" value="No" <% if pkid > 0 then %><%if rs("italia")="No" then%> checked<%end if %><%end if %> />&nbsp;Altra nazione
                 <input name="nazionediversa" type="text" class="form" id="nazionediversa"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nazionediversa")%><%else%><%if mode=3 then%><%=nazionediversa%><%end if%><%end if%>" />
                                         
                                     </div>
@@ -378,7 +378,7 @@ pkid = Session("idCliente")
                                     </div>
                                     <div class="tr">
                                         <div class="td">
-                                        	<strong>E-mail</strong> (*) - Verrà usata come <strong>Login</strong> per i futuri ordini<br />
+                                        	<strong>E-mail</strong> (*) - Verr&agrave; usata come <strong>Login</strong> per i futuri ordini<br />
                                             <input name="email" type="text" class="form" id="email"  size="30" maxlength="100" value="<% if pkid > 0 then %><%=rs("email")%><%else%><%if mode=3 then%><%=email%><%end if%><%end if%>" />
 									  	<%if mode=3 then%>
                                           &nbsp;&nbsp;<font color="#990000"><b>Attenzione! L'e-mail inserita non pu&ograve; essere accettata </b></font>
@@ -409,15 +409,15 @@ pkid = Session("idCliente")
                                     <div class="tr">
                                         <div>
                                             <textarea name="privacy" cols="80" rows="5" readonly class="form">INFORMAZIONI RELATIVE AL TRATTAMENTO DI DATI PERSONALI 
-Ai sensi dell'art. 10 della L. n°675 del 31/12/1996, l'Azienda informa l'interessato che i dati che lo riguardano, forniti dall'interessato medesimo, formeranno oggetto di trattamento nel rispetto della normativa sopra richiamata. Tali dati verranno trattati per finalita' gestionali, commerciali, promozionali. Il conferimento dei dati alla nostra Azienda e' assolutamente facoltativo. 
+Ai sensi dell'art. 10 della L. n&deg;675 del 31/12/1996, l'Azienda informa l'interessato che i dati che lo riguardano, forniti dall'interessato medesimo, formeranno oggetto di trattamento nel rispetto della normativa sopra richiamata. Tali dati verranno trattati per finalita' gestionali, commerciali, promozionali. Il conferimento dei dati alla nostra Azienda e' assolutamente facoltativo. 
 I dati acquisiti potranno essere comunicati e diffusi in osservanza di quanto disposto all'articolo 20 della legge 675/96 allo scopo di perseguire le finalita' sopra indicate. 
 
 Il titolare del trattamento e' Cristalensi s.n.c. 
  con sede in via arti e mestieri, 1  
 Montelupo F.no (FI)
-, ove e' altresì domiciliato il responsabile protempore del trattamento, i cui dati identificativi possono essere acquisiti presso il Registro pubblico tenuto dal Garante, o presso la sede legale dell'Azienda. 
+, ove e' altres&igrave; domiciliato il responsabile protempore del trattamento, i cui dati identificativi possono essere acquisiti presso il Registro pubblico tenuto dal Garante, o presso la sede legale dell'Azienda. 
 
-L'Azienda informa altresì l'Interessato che questi potra' esercitare i diritti previsti dall'articolo 13 della legge 675/96, ossia:
+L'Azienda informa altres&igrave; l'Interessato che questi potra' esercitare i diritti previsti dall'articolo 13 della legge 675/96, ossia:
 Conoscere gratuitamente, mediante accesso al Registro Generale del Garante, l'esistenza di trattamenti di dati che possono riguardarlo; 
 Ottenere da Cristalensi s.n.c., - con un contributo spese solo in caso di risposta negativa - la conferma dell'esistenza o meno nei propri archivi di dati che lo riguardino, ed avere la loro comunicazione e l'indicazione della logica e delle finalita' su cui si basa il trattamento. La richiesta e' rinnovabile dopo novanta giorni; 
 Ottenere la cancellazione, la trasformazione in forma anonima ed il blocco dei dati trattati in violazione di legge; 
@@ -454,14 +454,14 @@ Opporsi gratuitamente al trattamento dei dati che lo riguardano.</textarea>
                                           <br /><br />
                                           <font color="#990000"><b>Benvenuto/a&nbsp;<%=nome_log%></b></font>
                                           <br /><br />
-                                          <a href="<%if italia_log="Sì" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
+                                          <a href="<%if italia_log="S&igrave;" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
                                       <%else%>
                                   
                                       <%if pkid=0 then%>
                                           Grazie per esserti iscritto/a a Cristalensi.it<br />
                                           Da questo momento potrai completare e inviare i tuoi ordini senza dover inserire tutti i tuoi dati.
                                           <br /><br />
-                                          <a href="<%if italia_log="Sì" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">Cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
+                                          <a href="<%if italia_log="S&igrave;" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">Cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
                                       <%else%>
                                           I tuoi dati sono stati aggiornati regolarmente.
                                       <%end if%>
