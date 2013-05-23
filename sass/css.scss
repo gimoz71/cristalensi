@@ -2,6 +2,7 @@
 /* questa è la base per gestire il tutto */
 html, body {
     background: #ccc;
+    
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -38,6 +39,11 @@ p {
         color: rgba(black, .65);
         font-size: 10px;
     }
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 label {
     @extend %font-base;
@@ -164,6 +170,9 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     ul {
         display: table;
         width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
         //@include display-box;
         //@include box-orient(horizontal);
         //@include box-align(stretch);

@@ -14,7 +14,6 @@
         <script src="js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/init.js"></script>
         <link href="css/css.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
@@ -223,6 +222,7 @@
             </div>
         </div>
         <!--#include file="inc_footer.asp"-->
+        <script src="js/init.js"></script>
     </body>
 </html>
 <!--#include file="inc_strClose.asp"-->

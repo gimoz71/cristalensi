@@ -5,5 +5,14 @@ $(document).ready(function() {
         $("#responsive-menu").toggleClass("show");
 
     });
-
+    
+    var contentHeight = $('#wrap').outerHeight();
+    
+    $("#sidebar-alt").css("height", contentHeight);
+    
+    $(window).resize(function() {
+        contentHeight = $('#main-content').outerHeight();
+        $("#sidebar-alt").css("height", contentHeight);
+    });
+    
 });
