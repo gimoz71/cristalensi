@@ -33,7 +33,7 @@
                     <div id="content">
                         <div>
                             <img class="negozio" src="images/negozio.jpg">
-                            <img class="anni" src="images/50anni.jpg">
+                            <img class="anni" src="images/50anni_new.jpg">
                             <h3>Cristalensi, la luce come idea</h3>
                             <p class="incipit">A portata di click una vasta e raffinata gamma di prodotti per illuminazione da interno ed esterno per arredare la vostra casa, il giardino, il tuo locale... Naviga nel Negozio on-line oppure visita il nostro Showroom, soddisferemo tutte le tue esigenze sia classiche che moderne.
                             </p>
