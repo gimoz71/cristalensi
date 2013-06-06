@@ -40,6 +40,7 @@ p {
         font-size: 10px;
     }
 }
+
 ul {
     margin: 0;
     padding: 0;
@@ -154,8 +155,8 @@ input, button {
 #responsive-menu {
     display: none;
 }
-#language, #menu {
-    height: 1.50em;
+#language li, #menu li {
+    height: 2em;
 }
 #language, #menu, #logo {
     display: block;
@@ -166,33 +167,58 @@ input, button {
 
 $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magenta;
 
-#menu {
+
+
+#language {
     ul {
-        display: table;
+        display: table; 
         width: 100%;
         margin: 0;
         padding: 0;
         list-style: none;
+        border-collapse: collapse;
+        li {display: table-cell;
+            padding: 0;
+            text-align: center;
+            vertical-align: middle;
+            a {
+                width: 30px;
+                height: 21px;
+                display: inline-block;
+            }
+        }
+    }
+}
+#menu {
+    ul {
+        display: table; 
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-collapse:collapse;
         //@include display-box;
         //@include box-orient(horizontal);
         //@include box-align(stretch);
         @each $section in $array-filtri  {
-            li{
+            li.#{$section}{
                 display: table-cell;
-                //@include box-flex(1);
-                a.#{$section} {
+                padding: 0;
+                background: #{$section};
+                vertical-align: middle;
+                a {
                     display: block;
-                    padding: 0.5em 0;
                     text-align: center;
+                    padding: 0;
                     color: white;
                     font-weight: bold;
                     @extend %font-base;
                     text-decoration: none;
-                    background: #{$section};
-                    &:hover {
-                        background: #ffd31c;
-                        color: #000;
-                    }
+                    
+                }
+                &:hover {
+                    background: #ffd31c;
+                    color: #000;
                 }
             }
         }

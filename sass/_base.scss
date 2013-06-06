@@ -42,7 +42,7 @@ $wide-screens: 61.250em; // equivalente a 980px
     }
 }
 
- @mixin buttonmobile {
+@mixin buttonmobile {
     @include effect-glass($border-radius: .3em);
     @include background(linear-gradient(lighten(#999, 20), darken(#999, 10)));
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
