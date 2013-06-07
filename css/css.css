@@ -1,11 +1,6 @@
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-/* line 22, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* normalize.css v1.1.0 | MIT License | git.io/normalize */
+/* normalize.css v1.1.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+/* line 20, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_html5.scss */
 article,
 aside,
 details,
@@ -21,185 +16,178 @@ summary {
   display: block;
 }
 
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-/* line 32, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 28, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_html5.scss */
 audio,
 canvas,
 video {
   display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-/* line 41, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 39, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_html5.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/**
- * Address styling not present in IE 8/9.
- */
-/* line 50, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 46, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_html5.scss */
 [hidden] {
   display: none;
 }
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Prevent system color scheme's background color being used in Firefox, IE,
- *    and Opera.
- * 2. Prevent system color scheme's text color being used in Firefox, IE, and
- *    Opera.
- * 3. Set default font family to sans-serif.
- * 4. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-/* line 68, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* normalize.css v1.1.0 | Base | MIT License | git.io/normalize */
+/* line 13, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_base.scss */
 html {
-  background: #fff;
-  /* 1 */
-  color: #000;
-  /* 2 */
+  font-size: 100%;
   font-family: sans-serif;
-  /* 3 */
-  -ms-text-size-adjust: 100%;
-  /* 4 */
   -webkit-text-size-adjust: 100%;
-  /* 4 */
+  -ms-text-size-adjust: 100%;
 }
 
-/**
- * Remove default margin.
- */
-/* line 80, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 30, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_base.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 37, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_base.scss */
 body {
   margin: 0;
 }
 
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-/* line 92, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* normalize.css v1.1.0 | Links | MIT License | git.io/normalize */
+/* line 9, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_links.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-/* line 101, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 16, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_links.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 114, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* normalize.css v1.1.0 | Typography | MIT License | git.io/normalize */
+/* line 13, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-/* line 123, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 19, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 24, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 29, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 34, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 39, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/* line 47, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 132, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 54, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-/* line 140, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 59, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/* line 66, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 dfn {
   font-style: italic;
 }
 
-/**
- * Address differences between Firefox and other browsers.
- */
-/* line 148, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 73, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/**
- * Address styling not present in IE 8/9.
- */
-/* line 158, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 81, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-/* line 170, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 90, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/* line 100, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 code,
 kbd,
 pre,
 samp {
   font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
   font-size: 1em;
 }
 
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-/* line 179, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 110, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 pre {
+  white-space: pre;
   white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-/**
- * Set consistent quote types.
- */
-/* line 187, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 118, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-/* line 195, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 127, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+q {
+  quotes: none;
+}
+
+/* line 132, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 140, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 small {
   font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-/* line 204, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 147, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 sub,
 sup {
   font-size: 75%;
@@ -208,205 +196,160 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 211, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 154, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 215, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 158, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-/* line 227, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
-img {
-  border: 0;
+/* line 11, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_lists.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
 }
 
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-/* line 235, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 15, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_lists.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 23, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_lists.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/* line 30, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_lists.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* normalize.css v1.1.0 | Embedded Content | MIT License | git.io/normalize */
+/* line 9, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_embeds.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 18, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_embeds.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-/* line 247, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* normalize.css v1.1.0 | Figures | MIT License | git.io/normalize */
+/* line 9, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_figures.scss */
 figure {
   margin: 0;
 }
 
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/**
- * Define consistent border, margin, and padding.
- */
-/* line 259, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* normalize.css v1.1.0 | Forms | MIT License | git.io/normalize */
+/* line 10, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+form {
+  margin: 0;
+}
+
+/* line 17, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-/* line 270, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 30, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 legend {
   border: 0;
-  /* 1 */
   padding: 0;
-  /* 2 */
+  white-space: normal;
+  *margin-left: -7px;
 }
 
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 284, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 49, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 button,
 input,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 2 */
   margin: 0;
-  /* 3 */
+  vertical-align: baseline;
+  *vertical-align: middle;
 }
 
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-/* line 296, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 63, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 button,
 input {
   line-height: normal;
 }
 
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-/* line 308, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 73, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 button,
 select {
   text-transform: none;
 }
 
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-/* line 323, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 90, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
-  /* 2 */
   cursor: pointer;
-  /* 3 */
+  *overflow: visible;
 }
 
-/**
- * Re-set default cursor for disabled elements.
- */
-/* line 333, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 101, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- */
-/* line 343, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 113, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
-  /* 1 */
   padding: 0;
-  /* 2 */
+  *height: 13px;
+  *width: 13px;
 }
 
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-/* line 354, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 126, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
-  /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  /* 2 */
   box-sizing: content-box;
 }
 
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-/* line 367, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 137, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-/* line 376, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 144, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-/* line 386, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* line 152, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
 textarea {
   overflow: auto;
-  /* 1 */
   vertical-align: top;
-  /* 2 */
 }
 
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-/* line 399, ../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.1.5/scss/normalize.scss */
+/* normalize.css v1.1.0 | Tables | MIT License | git.io/normalize */
+/* line 9, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_tables.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -418,72 +361,72 @@ p, label, #menu ul li a.green, #menu ul li a.darkorange, #menu ul li a.skyblue, 
 }
 
 /* questa è la base per gestire il tutto */
-/* line 3, ../sass/css.scss */
+/* line 4, ../sass/css.scss */
 html, body {
   background: #ccc;
   font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-/* line 9, ../sass/css.scss */
+/* line 10, ../sass/css.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 13, ../sass/css.scss */
+/* line 14, ../sass/css.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 18, ../sass/css.scss */
+/* line 19, ../sass/css.scss */
 h1 {
   font-size: 1.75em;
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
-/* line 18, ../sass/css.scss */
+/* line 19, ../sass/css.scss */
 h2 {
   font-size: 1.4em;
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
-/* line 18, ../sass/css.scss */
+/* line 19, ../sass/css.scss */
 h3 {
   font-size: 1.05em;
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
-/* line 18, ../sass/css.scss */
+/* line 19, ../sass/css.scss */
 h4 {
   font-size: 0.7em;
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
-/* line 18, ../sass/css.scss */
+/* line 19, ../sass/css.scss */
 h5 {
   font-size: 0.35em;
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
-/* line 25, ../sass/css.scss */
+/* line 26, ../sass/css.scss */
 a:link, a:visited {
   color: #333;
 }
 
-/* line 28, ../sass/css.scss */
+/* line 29, ../sass/css.scss */
 a:hover, a:active {
   color: #600;
 }
 
-/* line 32, ../sass/css.scss */
+/* line 33, ../sass/css.scss */
 p {
   margin: 10px 0;
 }
-/* line 35, ../sass/css.scss */
+/* line 36, ../sass/css.scss */
 p.note {
   border: dashed 2px rgba(0, 0, 0, 0.25);
   padding: 5px;
@@ -492,19 +435,19 @@ p.note {
   font-size: 10px;
 }
 
-/* line 43, ../sass/css.scss */
+/* line 44, ../sass/css.scss */
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 48, ../sass/css.scss */
+/* line 49, ../sass/css.scss */
 label {
   font-weight: bold;
 }
 
-/* line 53, ../sass/css.scss */
+/* line 54, ../sass/css.scss */
 .spacer {
   font-size: 0;
   line-height: 0;
@@ -512,7 +455,7 @@ label {
   margin-bottom: 10px;
 }
 
-/* line 60, ../sass/css.scss */
+/* line 61, ../sass/css.scss */
 select {
   background-color: #FFFFFF;
   border: 1px solid #333333;
@@ -521,7 +464,7 @@ select {
   color: #333333;
 }
 
-/* line 70, ../sass/css.scss */
+/* line 71, ../sass/css.scss */
 #wrap {
   overflow: hidden;
   *zoom: 1;
@@ -534,47 +477,47 @@ select {
   margin: 1em auto;
 }
 @media only screen and (min-width: 61.25em) {
-  /* line 70, ../sass/css.scss */
+  /* line 71, ../sass/css.scss */
   #wrap {
     width: 61.25em;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 70, ../sass/css.scss */
+  /* line 71, ../sass/css.scss */
   #wrap {
     width: 100%;
     margin: 0 auto;
   }
 }
 
-/* line 86, ../sass/css.scss */
+/* line 87, ../sass/css.scss */
 #header, #main-content, img {
   width: 100%;
   float: left;
 }
 
-/* line 92, ../sass/css.scss */
+/* line 93, ../sass/css.scss */
 input[type=submit], button[type=submit] {
   cursor: pointer;
 }
-/* line 94, ../sass/css.scss */
+/* line 95, ../sass/css.scss */
 #sidebar-alt input[type=submit], #sidebar-alt button[type=submit] {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 92, ../sass/css.scss */
+  /* line 93, ../sass/css.scss */
   input[type=submit], button[type=submit] {
     padding: 10px 0;
     font-size: 1em;
   }
 }
-/* line 102, ../sass/css.scss */
+/* line 103, ../sass/css.scss */
 input[type=text], input[type=password], button[type=text], button[type=password] {
   width: 97%;
   border: solid 1px #cfa600;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 102, ../sass/css.scss */
+  /* line 103, ../sass/css.scss */
   input[type=text], input[type=password], button[type=text], button[type=password] {
     width: 99%;
     padding: 5px 0;
@@ -583,7 +526,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 
-/* line 113, ../sass/css.scss */
+/* line 114, ../sass/css.scss */
 #footer {
   overflow: hidden;
   *zoom: 1;
@@ -593,20 +536,20 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-align: center;
 }
 @media only screen and (min-width: 61.25em) {
-  /* line 113, ../sass/css.scss */
+  /* line 114, ../sass/css.scss */
   #footer {
     width: 61.25em;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 113, ../sass/css.scss */
+  /* line 114, ../sass/css.scss */
   #footer {
     width: 100%;
     margin: 0 auto;
   }
 }
 
-/* line 128, ../sass/css.scss */
+/* line 129, ../sass/css.scss */
 .password-recover {
   display: inline-block;
   height: 16px;
@@ -614,7 +557,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACuklEQVR4Xm2PUWibZRSGn/P9f0yhm3O6NW1dW8GRsbKS1YSy6axVHE4xgvZSL7zwRi8FK7NN1awiA69244X3E6yiMjIyQWudlQnZVpnKLA5dmdsw7iKrLLH5/+/VBIqM9jnfyzkfvOccjn01M8pGCIeXLyqmAEb7GThnR8zZtJkB4NgAScTN6Oo9XZsKB57ZzcHnMxx8YS+jzw6yrffOgo91TRIAocQ64kjFbb1beoYfS+NjT+1GnUs//IEzRzq3A7Du6tVaMQhsOsRr3XYfRYXBB3cSe4c5x6/nr5B7+WQO4PwH+cqeA2m+nq0U5JgOE8nbr5AAPMmOBHEcYGZIUJ7a9ycy5EXY4VAUg4NQMtYQgISXwWoTS3QgRDq3k6XKL8sOz65sP9xaIY7qmEtg5cN7MQvADOccHoia0pPPDcHdA8hHOIsg9TBszgCC+goXv5glCANzZsaaaAmQ95DspHH5Z7R6E7aO8NOlTt5971PefGeWo+9/yZlq14mLq7twYKwhD3HT/37v/V0oTOA6kjSWFiGZ5qNShd19m3n7pf30be/kcrWeryxdx/3fLJpRtNwzsHVgaH8/8eoK4aYkf2kLtRsx1ZtNelOpKx8f/7A4MVkcqzUCXrzjLezUGw8Ajjj2y6m+u/oy+3bg5Qmco3T8Ai4wBvdsV/3aOcMcQRAAIAwRQvnwMKWJ4eXKsVE1vhtXY2Fcn72aUen1rMqTIwKy38/0yM+PSt+O6dAQ0sKj8t88ojMz/eLkxPD1c8ce0q35vP6ee1qN03n9N7Dd2NLCkW7mplKSpuXnx/TK47Ry+z831S0rvZbRE+P3ETU9GJw9XaVWa7ZOMJdIYvESzaZ0KD8EApwD3/ZSPnGB0FrF7G8Ia4cL4amji7lTkyP8U/8RCNr+zz9ZRIg12t7AMCDLes5yO1k2hn8BuShDVyJWwu4AAAAASUVORK5CYII=") no-repeat left center;
 }
 
-/* line 135, ../sass/css.scss */
+/* line 136, ../sass/css.scss */
 .info {
   display: inline-block;
   height: 16px;
@@ -622,42 +565,42 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC5ElEQVQ4y6WS20+SYRzHrbYu3LyqrbnW3+CNF2l5FmfNeaEieAjRxMRjaWqibhjDTDBEU9F5IE8VeAYNFdFANDUmOk+pKR6mN21uXbRi4LeHt4md1k3f7bM9z/M+v8/z/J69LgBc/oc/FupGWwL4fYrxhCa9Naxq5iRUYjyJqtVY87tk4+U9goB/CsRDHSKGbNqeJjdDPmFBr3GfolW7g6T6dwgW9tvzWwWivwpE6nZRuHQO4sEP0JgO0TxqQe3wFtondyHTbEGp30VZ7zJuZiuRU10s+kVQPdzoR6812BzFqrlDlLxexcD8IU7z5ZsNHXoL2sY/QthtRmCW3JYnzvJzCoq7u3SpTSao54/A61zG055V/J5Pn7+i4IUJnZM7iKsYQWIhT+cU0GVaa6vWghrVJvLkCxAql4nsgEJh3HVK0mVT5Nsi6kfXQUuUWJ2CgPK36J89AK/djAfN75HROEMxMHtWPGLaQ+pzPTJlBiiNO7geLYVTcKN0DH0z+8hvMyO9wYi0+imKtf1jqtiwcgSORIdkArdaB8U0EUQ++yFw5HZFt7VJu0l6X0GGbAbcWgNF58QmJXmiWMBd0ndShQaPmo2o0SwhMPax1SnIbhDrWNIJvCIvnVFnBFeqpzjN2t4xWEI1QYWGoWVEF/WCkZqmcwoE8jy/4Fy5rZSc1KbdQIpUhyTxKCbMe5SgZciMeEE/KhUmFHZOwyeab0vMjPE7FZwjnH9YmS/2jm1Eyct5tI6to6DJQK48DHaZGjl1OtSrFlHQboRXBB/x3ISzH4nkIsGV4JbGS28MYEnsDP4gat6soMuwSdhAlXoJETwlfOgl9tiUeJmHh8eFnwVurq6uV8LCwnIZDAb/XgZbzr6fuR10R2jzihLCK1KAwJhiGzOFs83mxMmZTCY/PDy8iOy/fCq4RLjm7u7u4enpecvX1zfO39+fFRQUlBwaGppNyKLRaBwyjwkJCaGTsTfhqqN1h+A779Ce7Xuwu4IAAAAASUVORK5CYII=") no-repeat left center;
 }
 
-/* line 144, ../sass/css.scss */
+/* line 145, ../sass/css.scss */
 #language, #logo {
   width: 17.34694%;
   background: #ffd31c;
   float: left;
 }
 
-/* line 149, ../sass/css.scss */
+/* line 150, ../sass/css.scss */
 #menu, #widget-area {
   width: 82.65306%;
   background: #0cc;
   float: right;
 }
 
-/* line 154, ../sass/css.scss */
+/* line 155, ../sass/css.scss */
 #responsive-menu {
   display: none;
 }
 
-/* line 157, ../sass/css.scss */
+/* line 158, ../sass/css.scss */
 #language, #menu {
   height: 1.50em;
 }
 
-/* line 160, ../sass/css.scss */
+/* line 161, ../sass/css.scss */
 #language, #menu, #logo {
   display: block;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 160, ../sass/css.scss */
+  /* line 161, ../sass/css.scss */
   #language, #menu, #logo {
     display: none;
   }
 }
 
-/* line 170, ../sass/css.scss */
+/* line 171, ../sass/css.scss */
 #menu ul {
   display: table;
   width: 100%;
@@ -665,11 +608,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   padding: 0;
   list-style: none;
 }
-/* line 180, ../sass/css.scss */
+/* line 181, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 183, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #menu ul li a.green {
   display: block;
   padding: 0.5em 0;
@@ -679,16 +622,16 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   background: green;
 }
-/* line 192, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 #menu ul li a.green:hover {
   background: #ffd31c;
   color: #000;
 }
-/* line 180, ../sass/css.scss */
+/* line 181, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 183, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #menu ul li a.darkorange {
   display: block;
   padding: 0.5em 0;
@@ -698,16 +641,16 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   background: darkorange;
 }
-/* line 192, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 #menu ul li a.darkorange:hover {
   background: #ffd31c;
   color: #000;
 }
-/* line 180, ../sass/css.scss */
+/* line 181, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 183, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #menu ul li a.skyblue {
   display: block;
   padding: 0.5em 0;
@@ -717,16 +660,16 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   background: skyblue;
 }
-/* line 192, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 #menu ul li a.skyblue:hover {
   background: #ffd31c;
   color: #000;
 }
-/* line 180, ../sass/css.scss */
+/* line 181, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 183, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #menu ul li a.red {
   display: block;
   padding: 0.5em 0;
@@ -736,16 +679,16 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   background: red;
 }
-/* line 192, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 #menu ul li a.red:hover {
   background: #ffd31c;
   color: #000;
 }
-/* line 180, ../sass/css.scss */
+/* line 181, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 183, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #menu ul li a.brown {
   display: block;
   padding: 0.5em 0;
@@ -755,16 +698,16 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   background: brown;
 }
-/* line 192, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 #menu ul li a.brown:hover {
   background: #ffd31c;
   color: #000;
 }
-/* line 180, ../sass/css.scss */
+/* line 181, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 183, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #menu ul li a.blue {
   display: block;
   padding: 0.5em 0;
@@ -774,16 +717,16 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   background: blue;
 }
-/* line 192, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 #menu ul li a.blue:hover {
   background: #ffd31c;
   color: #000;
 }
-/* line 180, ../sass/css.scss */
+/* line 181, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 183, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #menu ul li a.yellowgreen {
   display: block;
   padding: 0.5em 0;
@@ -793,16 +736,16 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   background: yellowgreen;
 }
-/* line 192, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 #menu ul li a.yellowgreen:hover {
   background: #ffd31c;
   color: #000;
 }
-/* line 180, ../sass/css.scss */
+/* line 181, ../sass/css.scss */
 #menu ul li {
   display: table-cell;
 }
-/* line 183, ../sass/css.scss */
+/* line 184, ../sass/css.scss */
 #menu ul li a.magenta {
   display: block;
   padding: 0.5em 0;
@@ -812,24 +755,24 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   background: magenta;
 }
-/* line 192, ../sass/css.scss */
+/* line 193, ../sass/css.scss */
 #menu ul li a.magenta:hover {
   background: #ffd31c;
   color: #000;
 }
 
-/* line 202, ../sass/css.scss */
+/* line 203, ../sass/css.scss */
 .product-menu {
   margin: 10px 0 20px 0;
   list-style: none;
 }
-/* line 206, ../sass/css.scss */
+/* line 207, ../sass/css.scss */
 .product-menu li {
   padding: 0;
   position: relative;
   border-bottom: dotted 1px #999;
 }
-/* line 210, ../sass/css.scss */
+/* line 211, ../sass/css.scss */
 .product-menu li a {
   display: inline-block;
   padding: 0.75em 0;
@@ -837,23 +780,23 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   font-weight: bold;
 }
-/* line 216, ../sass/css.scss */
+/* line 217, ../sass/css.scss */
 .product-menu li a:hover {
   background: #fff;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 202, ../sass/css.scss */
+  /* line 203, ../sass/css.scss */
   .product-menu {
     display: none;
   }
-  /* line 224, ../sass/css.scss */
+  /* line 225, ../sass/css.scss */
   .product-menu ul li {
     float: none;
   }
 }
 
 /* Button Responsive Menu*/
-/* line 230, ../sass/css.scss */
+/* line 231, ../sass/css.scss */
 #btn-responsive-menu {
   display: none;
   position: absolute;
@@ -875,7 +818,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 0 5px;
 }
 
-/* line 244, ../sass/css.scss */
+/* line 245, ../sass/css.scss */
 .icon-bar {
   display: block;
   width: 18px;
@@ -892,74 +835,74 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 1px 0;
 }
 
-/* line 253, ../sass/css.scss */
+/* line 254, ../sass/css.scss */
 .show {
   display: block !important;
 }
 
-/* line 257, ../sass/css.scss */
+/* line 258, ../sass/css.scss */
 #btn-responsive-menu, #logo-handheld {
   display: none;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 257, ../sass/css.scss */
+  /* line 258, ../sass/css.scss */
   #btn-responsive-menu, #logo-handheld {
     display: block;
   }
 }
 
-/* line 266, ../sass/css.scss */
+/* line 267, ../sass/css.scss */
 #responsive-menu ul {
   margin: 0;
   float: left;
   width: 100%;
   list-style: none;
 }
-/* line 271, ../sass/css.scss */
+/* line 272, ../sass/css.scss */
 #responsive-menu ul li {
   float: left;
   margin: 0;
   position: relative;
 }
-/* line 277, ../sass/css.scss */
+/* line 278, ../sass/css.scss */
 #responsive-menu a {
   color: #ccc;
   display: block;
   padding: 0.5em;
 }
-/* line 281, ../sass/css.scss */
+/* line 282, ../sass/css.scss */
 #responsive-menu a:hover {
   background: #666;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 265, ../sass/css.scss */
+  /* line 266, ../sass/css.scss */
   #responsive-menu {
     display: none;
   }
-  /* line 287, ../sass/css.scss */
+  /* line 288, ../sass/css.scss */
   #responsive-menu ul li {
     float: none;
   }
 }
 
-/* line 296, ../sass/css.scss */
+/* line 297, ../sass/css.scss */
 #content-sidebar-wrap {
   width: 82.65306%;
   float: right;
 }
 
-/* line 302, ../sass/css.scss */
+/* line 303, ../sass/css.scss */
 #content {
   width: 100%;
   background: #fff;
   float: left;
 }
-/* line 306, ../sass/css.scss */
+/* line 307, ../sass/css.scss */
 #content .incipit {
   font-size: 1em;
   margin-top: 20px;
 }
-/* line 310, ../sass/css.scss */
+/* line 311, ../sass/css.scss */
 #content .slogan {
   position: relative;
   -webkit-border-radius: 0.3em;
@@ -981,7 +924,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-size: 90%;
   margin: 2.46914% 0;
 }
-/* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+/* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
 #content .slogan:after {
   content: "";
   position: absolute;
@@ -1006,12 +949,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 318, ../sass/css.scss */
+/* line 319, ../sass/css.scss */
 #content .slogan * {
   color: #fff;
   border: none;
 }
-/* line 324, ../sass/css.scss */
+/* line 325, ../sass/css.scss */
 #content .area {
   border: none;
   background-color: #ffd31c;
@@ -1019,64 +962,64 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   margin: 2.46914% 0;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 324, ../sass/css.scss */
+  /* line 325, ../sass/css.scss */
   #content .area {
     text-align: center;
   }
 }
-/* line 333, ../sass/css.scss */
+/* line 334, ../sass/css.scss */
 #content .negozio {
   width: 26.17284%;
   border: solid 6px #ccc;
   margin-right: 1.23457%;
   float: left;
 }
-/* line 339, ../sass/css.scss */
+/* line 340, ../sass/css.scss */
 #content .anni {
   float: right;
   width: 12.34568%;
 }
-/* line 343, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #content .facebook {
   float: right;
   margin-left: 1.23457%;
   width: 18.51852%;
 }
-/* line 348, ../sass/css.scss */
+/* line 349, ../sass/css.scss */
 #content > div {
   padding: 2.46914%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 302, ../sass/css.scss */
+  /* line 303, ../sass/css.scss */
   #content {
     width: 100%;
     float: none;
   }
-  /* line 354, ../sass/css.scss */
+  /* line 355, ../sass/css.scss */
   #content .negozio {
     display: none;
   }
 }
 
-/* line 359, ../sass/css.scss */
+/* line 360, ../sass/css.scss */
 .listino, .catalogo {
   width: 100%;
   font-size: 90%;
 }
-/* line 362, ../sass/css.scss */
+/* line 363, ../sass/css.scss */
 .listino li, .catalogo li {
   width: 23.7037%;
   padding: 0.61728%;
   float: left;
   position: relative;
 }
-/* line 367, ../sass/css.scss */
+/* line 368, ../sass/css.scss */
 .listino li a, .catalogo li a {
   margin-top: 5px;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 367, ../sass/css.scss */
+  /* line 368, ../sass/css.scss */
   .listino li a, .catalogo li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1104,7 +1047,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     color: #fff;
     text-decoration: none;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .listino li a:after, .catalogo li a:after {
     content: "";
     position: absolute;
@@ -1129,31 +1072,31 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 373, ../sass/css.scss */
+  /* line 374, ../sass/css.scss */
   .listino li a img, .catalogo li a img {
     margin-bottom: 5px;
   }
 }
-/* line 378, ../sass/css.scss */
+/* line 379, ../sass/css.scss */
 .listino li .price, .catalogo li .price {
   margin-top: .4em;
 }
-/* line 380, ../sass/css.scss */
+/* line 381, ../sass/css.scss */
 .listino li .price span, .catalogo li .price span {
   text-decoration: line-through;
 }
-/* line 384, ../sass/css.scss */
+/* line 385, ../sass/css.scss */
 .listino li .cristalprice, .catalogo li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
-/* line 388, ../sass/css.scss */
+/* line 389, ../sass/css.scss */
 .listino li .scheda, .catalogo li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 388, ../sass/css.scss */
+  /* line 389, ../sass/css.scss */
   .listino li .scheda, .catalogo li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1182,7 +1125,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     width: 50%;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .listino li .scheda:after, .catalogo li .scheda:after {
     content: "";
     position: absolute;
@@ -1209,7 +1152,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 362, ../sass/css.scss */
+  /* line 363, ../sass/css.scss */
   .listino li, .catalogo li {
     width: 100%;
     float: none;
@@ -1218,24 +1161,24 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 
-/* line 404, ../sass/css.scss */
+/* line 405, ../sass/css.scss */
 .prodotti {
   width: 100%;
   font-size: 90%;
 }
-/* line 407, ../sass/css.scss */
+/* line 408, ../sass/css.scss */
 .prodotti li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 413, ../sass/css.scss */
+/* line 414, ../sass/css.scss */
 .prodotti li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 413, ../sass/css.scss */
+  /* line 414, ../sass/css.scss */
   .prodotti li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1264,7 +1207,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     width: auto;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .prodotti li a:after {
     content: "";
     position: absolute;
@@ -1289,46 +1232,46 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 419, ../sass/css.scss */
+  /* line 420, ../sass/css.scss */
   .prodotti li a img {
     margin-bottom: 5px;
   }
 }
-/* line 424, ../sass/css.scss */
+/* line 425, ../sass/css.scss */
 .prodotti li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 424, ../sass/css.scss */
+  /* line 425, ../sass/css.scss */
   .prodotti li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 433, ../sass/css.scss */
+/* line 434, ../sass/css.scss */
 .prodotti li .data {
   float: left;
   width: 72.83951%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 433, ../sass/css.scss */
+  /* line 434, ../sass/css.scss */
   .prodotti li .data {
     float: none;
     width: 100%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 433, ../sass/css.scss */
+  /* line 434, ../sass/css.scss */
   .prodotti li .data {
     margin-top: 10px;
   }
-  /* line 442, ../sass/css.scss */
+  /* line 443, ../sass/css.scss */
   .prodotti li .data .scheda {
     text-align: center;
   }
-  /* line 445, ../sass/css.scss */
+  /* line 446, ../sass/css.scss */
   .prodotti li .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1356,7 +1299,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     color: #fff;
     text-decoration: none;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .prodotti li .data a:after {
     content: "";
     position: absolute;
@@ -1382,57 +1325,57 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 451, ../sass/css.scss */
+/* line 452, ../sass/css.scss */
 .prodotti li .price {
   margin-top: .4em;
 }
-/* line 453, ../sass/css.scss */
+/* line 454, ../sass/css.scss */
 .prodotti li .price span {
   text-decoration: line-through;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 451, ../sass/css.scss */
+  /* line 452, ../sass/css.scss */
   .prodotti li .price {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 462, ../sass/css.scss */
+/* line 463, ../sass/css.scss */
 .prodotti li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 462, ../sass/css.scss */
+  /* line 463, ../sass/css.scss */
   .prodotti li .cristalprice {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 470, ../sass/css.scss */
+/* line 471, ../sass/css.scss */
 .prodotti li .produttore, .prodotti li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 474, ../sass/css.scss */
+/* line 475, ../sass/css.scss */
 .prodotti li .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 480, ../sass/css.scss */
+/* line 481, ../sass/css.scss */
 .prodotti li .cart-link {
   padding-right: 25px;
   background: url("/images/carrello-bianco.gif") no-repeat right center;
 }
-/* line 485, ../sass/css.scss */
+/* line 486, ../sass/css.scss */
 .prodotti li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 485, ../sass/css.scss */
+  /* line 486, ../sass/css.scss */
   .prodotti li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1461,7 +1404,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     width: 50%;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .prodotti li .scheda:after {
     content: "";
     position: absolute;
@@ -1488,36 +1431,36 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 407, ../sass/css.scss */
+  /* line 408, ../sass/css.scss */
   .prodotti li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 498, ../sass/css.scss */
+/* line 499, ../sass/css.scss */
 .prodotti li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 504, ../sass/css.scss */
+/* line 505, ../sass/css.scss */
 .scheda-prodotto {
   width: 100%;
   font-size: 90%;
 }
-/* line 507, ../sass/css.scss */
+/* line 508, ../sass/css.scss */
 .scheda-prodotto li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 512, ../sass/css.scss */
+/* line 513, ../sass/css.scss */
 .scheda-prodotto li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 512, ../sass/css.scss */
+  /* line 513, ../sass/css.scss */
   .scheda-prodotto li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1546,7 +1489,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     width: auto;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .scheda-prodotto li a:after {
     content: "";
     position: absolute;
@@ -1571,39 +1514,39 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 517, ../sass/css.scss */
+  /* line 518, ../sass/css.scss */
   .scheda-prodotto li a img {
     margin-bottom: 5px;
   }
 }
-/* line 522, ../sass/css.scss */
+/* line 523, ../sass/css.scss */
 .scheda-prodotto li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 522, ../sass/css.scss */
+  /* line 523, ../sass/css.scss */
   .scheda-prodotto li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 531, ../sass/css.scss */
+/* line 532, ../sass/css.scss */
 .scheda-prodotto li .data {
   float: left;
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 531, ../sass/css.scss */
+  /* line 532, ../sass/css.scss */
   .scheda-prodotto li .data {
     margin-top: 10px;
   }
-  /* line 536, ../sass/css.scss */
+  /* line 537, ../sass/css.scss */
   .scheda-prodotto li .data .scheda {
     text-align: center;
   }
-  /* line 539, ../sass/css.scss */
+  /* line 540, ../sass/css.scss */
   .scheda-prodotto li .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1631,7 +1574,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     color: #fff;
     text-decoration: none;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .scheda-prodotto li .data a:after {
     content: "";
     position: absolute;
@@ -1657,57 +1600,57 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 545, ../sass/css.scss */
+/* line 546, ../sass/css.scss */
 .scheda-prodotto li .price {
   margin-top: .4em;
 }
-/* line 547, ../sass/css.scss */
+/* line 548, ../sass/css.scss */
 .scheda-prodotto li .price span {
   text-decoration: line-through;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 545, ../sass/css.scss */
+  /* line 546, ../sass/css.scss */
   .scheda-prodotto li .price {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 556, ../sass/css.scss */
+/* line 557, ../sass/css.scss */
 .scheda-prodotto li .cristalprice {
   color: #c00;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 556, ../sass/css.scss */
+  /* line 557, ../sass/css.scss */
   .scheda-prodotto li .cristalprice {
     padding-top: 5px;
     display: inline-block;
   }
 }
-/* line 564, ../sass/css.scss */
+/* line 565, ../sass/css.scss */
 .scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 568, ../sass/css.scss */
+/* line 569, ../sass/css.scss */
 .scheda-prodotto li .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 574, ../sass/css.scss */
+/* line 575, ../sass/css.scss */
 .scheda-prodotto li .cart-link {
   padding-right: 25px;
   background: url("/images/carrello-bianco.gif") no-repeat right center;
 }
-/* line 579, ../sass/css.scss */
+/* line 580, ../sass/css.scss */
 .scheda-prodotto li .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 579, ../sass/css.scss */
+  /* line 580, ../sass/css.scss */
   .scheda-prodotto li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1736,7 +1679,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     width: 50%;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .scheda-prodotto li .scheda:after {
     content: "";
     position: absolute;
@@ -1762,13 +1705,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 587, ../sass/css.scss */
+/* line 588, ../sass/css.scss */
 .scheda-prodotto li .facebook {
   float: left !important;
   margin-right: 1.23457%;
   width: 18.51852%;
 }
-/* line 592, ../sass/css.scss */
+/* line 593, ../sass/css.scss */
 .scheda-prodotto li .fb-slogan {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1776,19 +1719,19 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   line-height: 160%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 507, ../sass/css.scss */
+  /* line 508, ../sass/css.scss */
   .scheda-prodotto li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 603, ../sass/css.scss */
+/* line 604, ../sass/css.scss */
 .scheda-prodotto li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 608, ../sass/css.scss */
+/* line 609, ../sass/css.scss */
 .carrello, .iscrizione {
   width: 100%;
   font-size: 90%;
@@ -1796,12 +1739,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 615, ../sass/css.scss */
+/* line 616, ../sass/css.scss */
 .carrello a, .iscrizione a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 615, ../sass/css.scss */
+  /* line 616, ../sass/css.scss */
   .carrello a, .iscrizione a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1830,7 +1773,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     width: auto;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .carrello a:after, .iscrizione a:after {
     content: "";
     position: absolute;
@@ -1855,104 +1798,104 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 620, ../sass/css.scss */
+  /* line 621, ../sass/css.scss */
   .carrello a img, .iscrizione a img {
     margin-bottom: 5px;
   }
 }
-/* line 625, ../sass/css.scss */
+/* line 626, ../sass/css.scss */
 .carrello table, .iscrizione table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 630, ../sass/css.scss */
+/* line 631, ../sass/css.scss */
 .carrello table tr, .iscrizione table tr {
   text-align: left;
 }
-/* line 633, ../sass/css.scss */
+/* line 634, ../sass/css.scss */
 .carrello table tr td, .iscrizione table tr td {
   padding: 3px 0;
   width: 50%;
 }
-/* line 636, ../sass/css.scss */
+/* line 637, ../sass/css.scss */
 .carrello table tr td input[type=text], .carrello table tr td input[type=password], .iscrizione table tr td input[type=text], .iscrizione table tr td input[type=password] {
   width: 50%;
 }
-/* line 642, ../sass/css.scss */
+/* line 643, ../sass/css.scss */
 .carrello .table, .iscrizione .table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 647, ../sass/css.scss */
+/* line 648, ../sass/css.scss */
 .carrello .table .tr, .iscrizione .table .tr {
   text-align: left;
   width: 100%;
 }
-/* line 651, ../sass/css.scss */
+/* line 652, ../sass/css.scss */
 .carrello .table .td, .iscrizione .table .td {
   padding: 3px 0;
   float: left;
   width: 50%;
 }
-/* line 656, ../sass/css.scss */
+/* line 657, ../sass/css.scss */
 .carrello .table input[type=text], .carrello .table input[type=password], .iscrizione .table input[type=text], .iscrizione .table input[type=password] {
   width: 50%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 660, ../sass/css.scss */
+  /* line 661, ../sass/css.scss */
   .carrello .table .tr, .carrello .table .td, .carrello .table input[type=text], .carrello .table input[type=password], .carrello .table input[type=submit], .carrello .table input[type=reset], .iscrizione .table .tr, .iscrizione .table .td, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table input[type=submit], .iscrizione .table input[type=reset] {
     width: 100% !important;
     float: none !important;
   }
 }
-/* line 667, ../sass/css.scss */
+/* line 668, ../sass/css.scss */
 .carrello .colonna, .iscrizione .colonna {
   display: inline-block;
   text-align: right;
 }
-/* line 671, ../sass/css.scss */
+/* line 672, ../sass/css.scss */
 .carrello .riga, .iscrizione .riga {
   padding: 5px 1.23457%;
   border-bottom: dashed 1px #ccc;
   margin: 0 !important;
 }
-/* line 676, ../sass/css.scss */
+/* line 677, ../sass/css.scss */
 .carrello .articolo, .iscrizione .articolo {
   width: 48.14815%;
   text-align: left;
 }
-/* line 680, ../sass/css.scss */
+/* line 681, ../sass/css.scss */
 .carrello .quantita, .iscrizione .quantita {
   width: 12.34568%;
 }
-/* line 683, ../sass/css.scss */
+/* line 684, ../sass/css.scss */
 .carrello .prezzo_unitario, .iscrizione .prezzo_unitario {
   width: 15.4321%;
 }
-/* line 686, ../sass/css.scss */
+/* line 687, ../sass/css.scss */
 .carrello .prezzo_totale, .iscrizione .prezzo_totale {
   width: 15.4321%;
 }
-/* line 689, ../sass/css.scss */
+/* line 690, ../sass/css.scss */
 .carrello .elimina, .iscrizione .elimina {
   width: 7.40741%;
 }
-/* line 692, ../sass/css.scss */
+/* line 693, ../sass/css.scss */
 .carrello .data, .iscrizione .data {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 692, ../sass/css.scss */
+  /* line 693, ../sass/css.scss */
   .carrello .data, .iscrizione .data {
     margin-top: 10px;
   }
-  /* line 696, ../sass/css.scss */
+  /* line 697, ../sass/css.scss */
   .carrello .data .scheda, .iscrizione .data .scheda {
     text-align: center;
   }
-  /* line 699, ../sass/css.scss */
+  /* line 700, ../sass/css.scss */
   .carrello .data a, .iscrizione .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1980,7 +1923,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     color: #fff;
     text-decoration: none;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .carrello .data a:after, .iscrizione .data a:after {
     content: "";
     position: absolute;
@@ -2006,25 +1949,25 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 705, ../sass/css.scss */
+/* line 706, ../sass/css.scss */
 .carrello .cart, .iscrizione .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 711, ../sass/css.scss */
+/* line 712, ../sass/css.scss */
 .carrello .cart .total_price, .iscrizione .cart .total_price {
   float: right;
   font-size: 10px;
 }
-/* line 715, ../sass/css.scss */
+/* line 716, ../sass/css.scss */
 .carrello .scheda, .iscrizione .scheda {
   background: url("/images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 715, ../sass/css.scss */
+  /* line 716, ../sass/css.scss */
   .carrello .scheda, .iscrizione .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2053,7 +1996,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     width: 50%;
   }
-  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .carrello .scheda:after, .iscrizione .scheda:after {
     content: "";
     position: absolute;
@@ -2080,7 +2023,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 608, ../sass/css.scss */
+  /* line 609, ../sass/css.scss */
   .carrello, .iscrizione {
     width: 100%;
     float: none;
@@ -2089,47 +2032,47 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 732, ../sass/css.scss */
+  /* line 733, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 737, ../sass/css.scss */
+/* line 738, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 739, ../sass/css.scss */
+/* line 740, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 743, ../sass/css.scss */
+/* line 744, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 748, ../sass/css.scss */
+/* line 749, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 753, ../sass/css.scss */
+/* line 754, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 756, ../sass/css.scss */
+/* line 757, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 761, ../sass/css.scss */
+  /* line 762, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
@@ -2137,13 +2080,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 767, ../sass/css.scss */
+  /* line 768, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
 
-/* line 774, ../sass/css.scss */
+/* line 775, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }

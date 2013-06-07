@@ -247,3 +247,16 @@ Load paths:
 2013-05-23 14:33:10 overwrite css/css.css 
 2013-05-23 14:33:22 overwrite css/css.css 
 2013-05-23 14:33:35 overwrite css/css.css 
+2013-05-23 16:35:03 overwrite css/css.css 
+2013-05-23 16:39:32 overwrite css/css.css 
+2013-05-23 16:41:00    create css/css.css 
+2013-05-23 16:43:25 overwrite css/css.css 
+2013-05-23 16:45:15 overwrite css/css.css 
+2013-05-23 16:47:28 overwrite css/css.css 
+2013-05-23 16:47:48 overwrite css/css.css 
+2013-05-23 16:48:15     error sass/css.scss (Line 7: Invalid CSS after "    font-family:": expected pseudoclass or pseudoelement, was " Verdana, Arial...")
+2013-05-23 16:48:15 overwrite css/css.css 
+2013-05-23 16:48:31 overwrite css/css.css 
+2013-05-23 16:51:41     error sass/css.scss (Line 7: Invalid CSS after "    font-family:": expected pseudoclass or pseudoelement, was " Verdana, Arial...")
+2013-05-23 16:51:41 overwrite css/css.css 
+2013-05-23 16:53:02 overwrite css/css.css 
