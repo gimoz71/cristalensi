@@ -29,6 +29,16 @@ a:hover, a:active {
     color: #600;
 }
 
+.button_link {
+    @include buttonmobile;
+    color: #fff;
+    img {
+        margin-bottom: 5px;
+    }
+}
+
+
+
 p {
     @extend %font-base;
     margin: 10px 0;
@@ -412,7 +422,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-weight: bold;
         }
         .scheda {
-            background: url('/images/dett_prodotto.jpg') no-repeat left center;
+            background: url('../images/dett_prodotto.jpg') no-repeat left center;
             padding-left: 25px;
             @include respond-to('medium-screens'){
                 @include buttonmobile;
@@ -422,6 +432,66 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         @include respond-to('medium-screens'){
             width: 100%;
             float: none;
+            padding-bottom: 10px;
+            border-bottom: dotted 1px #ccc;
+        }
+    }
+}
+
+.galleria {
+    width: 100%;
+    font-size: 90%;
+    li {
+        border: dashed 1px #fcc;
+        width: calc-em(192, 810);
+        height: 165px;
+        padding: calc-em(30, 810);
+        margin: calc-em(5, 810);
+        float: left;
+        position: relative;
+        text-align:center;
+        a {
+            @extend %font-base;
+            margin-top: 5px;
+            font-weight: bold;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                img {
+                    margin-bottom: 5px;
+                }
+            }
+            &.button_link {
+                @include buttonmobile;
+                img {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .price {
+            margin-top: .4em;
+            span {
+                text-decoration: line-through;
+            }
+        }
+        .cristalprice {
+            color: #c00;
+            font-weight: bold;
+        }
+        .scheda {
+            background: url('../images/dett_prodotto.jpg') no-repeat left center;
+            padding-left: 25px;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                width: 50%;
+            }
+        }
+        @include respond-to('medium-screens'){
+            width: 100%;
+            height: auto;
+            float: none;
+            padding: 0;
+            margin: 0;
+            border: none;
             padding-bottom: 10px;
             border-bottom: dotted 1px #ccc;
         }
@@ -479,19 +549,15 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             span {
                 text-decoration: line-through;
             }
-            @include respond-to('medium-screens'){
-                padding-top: 5px;
-                display: inline-block;
-            }
+            padding-top: 5px;
+            display: inline-block;
             
         }
         .cristalprice {
             color: #c00;
             font-weight: bold;
-            @include respond-to('medium-screens'){
-                padding-top: 5px;
-                display: inline-block;
-            }
+            padding-top: 5px;
+            display: inline-block;
         }
         .produttore, .cart-link {
             float: right;
@@ -503,13 +569,12 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             padding: calc-em(10, 810);
             margin: calc-em(20, 810) 0;
         }
-        .cart-link {
+        .cart-link span {
             padding-right: 25px;
-            background: url('/images/carrello-bianco.gif') no-repeat right center;
-            
+            background: url('../images/carrello-bianco.gif') no-repeat right center;
         }
         .scheda {
-            background: url('/images/dett_prodotto.jpg') no-repeat left center;
+            background: url('../images/dett_prodotto.jpg') no-repeat left center;
             padding-left: 25px;
             @include respond-to('medium-screens'){
                 @include buttonmobile;
@@ -573,19 +638,15 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             span {
                 text-decoration: line-through;
             }
-            @include respond-to('medium-screens'){
-                padding-top: 5px;
-                display: inline-block;
-            }
+            padding-top: 5px;
+            display: inline-block;
             
         }
         .cristalprice {
             color: #c00;
             font-weight: bold;
-            @include respond-to('medium-screens'){
                 padding-top: 5px;
                 display: inline-block;
-            }
         }
         .produttore, .cart-link {
             float: right;
@@ -597,13 +658,13 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             padding: calc-em(10, 810);
             margin: calc-em(20, 810) 0;
         }
-        .cart-link {
+        /*.cart-link {
             padding-right: 25px;
-            background: url('/images/carrello-bianco.gif') no-repeat right center;
+            background: url('/../images/carrello-bianco.gif') no-repeat right center;
             
-        }
+        }*/
         .scheda {
-            background: url('/images/dett_prodotto.jpg') no-repeat left center;
+            background: url('../images/dett_prodotto.jpg') no-repeat left center;
             padding-left: 25px;
             @include respond-to('medium-screens'){
                 @include buttonmobile;
@@ -739,7 +800,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 		font-size: 10px;
 	}
 	.scheda {
-		background: url('/images/dett_prodotto.jpg') no-repeat left center;
+		background: url('../images/dett_prodotto.jpg') no-repeat left center;
 		padding-left: 25px;
 		@include respond-to('medium-screens'){
 			@include buttonmobile;

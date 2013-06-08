@@ -51,7 +51,7 @@ $wide-screens: 61.250em; // equivalente a 980px
     padding: 10px;
     @include border-radius(2px);
     display: inline-block;
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
 }
 

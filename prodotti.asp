@@ -54,8 +54,8 @@
                                     <div class="data">
                                         <a href="scheda.html"><strong>Applique di vetro murano</strong></a> <span class="produttore">produttore: <a href="#"><strong>Illumnando</strong></a></span>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mauris vitae urna ornare convallis a eu elit. Nulla varius lobortis lorem a molestie. Maecenas dictum pretium tellus, quis porttitor ipsum congue sed. Nunc vel sodales arcu. Praesent at ipsum at nisi aliquam commodo.</p>
-                                        <a class="scheda" href="scheda.html">Scheda prodotto</a>
-                                        <p class="cart clearfix"><span class="price">Prezzo listino: <span>155€</span></span> <span class="cristalprice">Prezzo listino: 155€</span><a href="#" class="cart-link">Inserisci nel carrello</a></p>
+                                        <a class="button_link" href="scheda.html">Scheda prodotto</a>
+                                        <p class="cart clearfix"><span class="price">Prezzo listino: <span>155€</span></span> <span class="cristalprice">Prezzo listino: 155€</span><a href="#" class="cart-link button_link"><span>Inserisci nel carrello</span></a></p>
                                     </div>
                                 </li>
                                 
