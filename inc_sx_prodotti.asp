@@ -59,7 +59,7 @@
                             Hai a disposizione la nuova</p>
                         <button>RICERCA AVANZATA</button>
                         <h3>Contattaci!</h3>
-                        <p>Il nostro personale sarà a tua disposizione per qualsiasi chiarimento e informazione su tutto l'assortimento di articoli
+                        <p>Il nostro personale sar&agrave; a tua disposizione per qualsiasi chiarimento e informazione su tutto l'assortimento di articoli
                             per l'illuminazione per la casa e per il giardino.</p>
                         <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione:</p>
                         <p><strong>Cristalensi Snc</strong><br>
