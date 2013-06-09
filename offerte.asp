@@ -14,16 +14,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi</title>
-        <!--[if (lt IE 9)&(!IEMobile)]>
-        <link rel="stylesheet" type="text/css" href="enhanced.css" />
-        <![endif]-->
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/init.js"></script>
+        <script src="js/jquery.blueberry.js"></script>
         <link href="css/css.css" rel="stylesheet" type="text/css">
+        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -33,6 +31,13 @@
                 visibility: hidden;
             }
         </style>
+        <script>
+            $(window).load(function() {
+                    $('.blueberry').blueberry({
+                        pager: false
+                    });
+            });
+        </script>
     </head>
     <body>
         <div id="wrap">

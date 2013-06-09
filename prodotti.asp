@@ -6,16 +6,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi</title>
-        <!--[if (lt IE 9)&(!IEMobile)]>
-        <link rel="stylesheet" type="text/css" href="enhanced.css" />
-        <![endif]-->
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/init.js"></script>
+        <script src="js/jquery.blueberry.js"></script>
         <link href="css/css.css" rel="stylesheet" type="text/css">
+        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -25,6 +23,13 @@
                 visibility: hidden;
             }
         </style>
+        <script>
+            $(window).load(function() {
+                    $('.blueberry').blueberry({
+                        pager: false
+                    });
+            });
+        </script>
     </head>
     <body>
         <div id="wrap">
@@ -53,7 +58,7 @@
                                     </div>
                                     <div class="data">
                                         <a href="scheda.html"><strong>Applique di vetro murano</strong></a> <span class="produttore">produttore: <a href="#"><strong>Illumnando</strong></a></span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mauris vitae urna ornare convallis a eu elit. Nulla varius lobortis lorem a molestie. Maecenas dictum pretium tellus, quis porttitor ipsum congue sed. Nunc vel sodales arcu. Praesent at ipsum at nisi aliquam commodo.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mauris vitae urna ornare convallis a eu elit. Nulla varius lobortis lorem a molestie...</p>
                                         <a class="button_link" href="scheda.html">Scheda prodotto</a>
                                         <p class="cart clearfix"><span class="price">Prezzo listino: <span>155€</span></span> <span class="cristalprice">Prezzo listino: 155€</span><a href="#" class="cart-link button_link"><span>Inserisci nel carrello</span></a></p>
                                     </div>

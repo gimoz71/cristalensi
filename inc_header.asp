@@ -35,5 +35,10 @@
             <li><a href="#">condizioni di vendita</a></li>
         </ul>
     </div>
-    <div id="widget-area"><img src="images/gallery.png"></div>
+    <div id="widget-area" class="blueberry">
+        <ul class="slides">
+            <li><img src="images/gallery/foto1.jpg" /></li>
+            <li><img src="images/gallery/foto2.jpg" /></li>
+        </ul>
+    </div>
 </header>
