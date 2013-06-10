@@ -483,6 +483,7 @@ Opporsi gratuitamente al trattamento dei dati che lo riguardano.</textarea>
             </div>
         </div>
         <!--#include file="inc_footer.asp"-->
+        <script src="js/init.js"></script>
     </body>
 </html>
 <!--#include file="inc_strClose.asp"-->

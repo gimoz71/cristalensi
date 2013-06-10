@@ -24,13 +24,14 @@
                    <input type="text" name="login">
                    <label for="password">Password</label>
                    <input type="password" name="password">
-                   <button type="submit">Entra</button>
+                   <button type="submit" style="margin-top:10px;">Entra</button>
                <%if contr=2 then%>
                <p style="background: #900; color: #fff; font-weight: bold; padding: 5px;">Attenzione! I dati inseriti<br />non sono corretti.</p>
                <%end if%>
                </form>
                <p><a href="recupero_pw.asp" class="password-recover">Recupera la password</a></p>
-               <button type="submit" onClick="location.href='iscrizione.asp'">REGISTRATI!</button>
+               <!--<button type="submit" onClick="location.href='iscrizione.asp'">REGISTRATI!</button>-->
+               <div align="center"><a href="iscrizione.asp" class="button_link_red">&nbsp;&nbsp;&nbsp;&nbsp;REGISTRATI!&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
 
                <h3>Pagamenti</h3>
                <p><a href="#" class="info">Condizioni di vendita</a></p>

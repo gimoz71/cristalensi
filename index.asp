@@ -54,7 +54,7 @@
                                 <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
                             <!--prodotti in offerta-->
-                            <h4 class="area">OFFERTE: non perdere l'occasione!<a href="offerte.asp" style="float: right;">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
+                            <h4 class="area">OFFERTE: non perdere l'occasione!<a href="offerte.asp" style="float: right; padding: 1px 10px;" class="button_link_red">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
                             <%
 							'random prodotti in offerta
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")
@@ -143,7 +143,7 @@
 							end if
 							%>
                             <!--elenco categorie-->
-                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right; padding: 1px 5px;" class="button_link_red">RICERCA AVANZATA &raquo;</a></h4>
+                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right; padding: 1px 10px;" class="button_link_red">RICERCA AVANZATA &raquo;</a></h4>
                             <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
                             </p>
                             <ul class="catalogo clearfix">

@@ -7,12 +7,13 @@
 </div>
     <div id="menu">
         <ul>
-            <li class="green"><a href="#">home page</a></li>
+            <li class="green"><a href="index.asp">home page</a></li>
             <li class="darkorange"><a href="#">chi siamo</a></li>
             <li class="skyblue"><a href="#">contatti</a></li>
-            <li class="red"><a href="products.html">prodotti</a></li>
-            <li class="blue"><a href="#">offerte</a></li>
-            <li class="yellowgreen"><a href="#">carrello</a></li>
+            <li class="brown"><a href="#">commenti</a></li>
+            <li class="red"><a href="prodotti.asp">prodotti</a></li>
+            <li class="blue"><a href="offerte.asp">offerte</a></li>
+            <li class="yellowgreen"><a href="carrello.asp">carrello</a></li>
             <li class="magenta"><a href="#">condizioni di vendita</a></li>
         </ul>
     </div>
@@ -28,10 +29,10 @@
             <li><a href="index.asp">home page</a></li>
             <li><a href="#">chi siamo</a></li>
             <li><a href="#">contatti</a></li>
-            <li><a href="#">cosa dicono di noi</a></li>
-            <li><a href="#">prodotti</a></li>
+            <li><a href="#">commenti</a></li>
+            <li><a href="prodotti.asp">prodotti</a></li>
             <li><a href="offerte.asp">offerte</a></li>
-            <li><a href="#">carrello</a></li>
+            <li><a href="carrello.asp">carrello</a></li>
             <li><a href="#">condizioni di vendita</a></li>
         </ul>
     </div>
