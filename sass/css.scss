@@ -352,6 +352,26 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         font-size: 1em;
         margin-top: 20px;
     }
+    .social {
+        display: none;
+        @include respond-to('medium-screens'){
+            display: block;
+        }
+    }
+    .social_panel {
+        display: block; height: 250px; border: dashed 1px #ccc;width: 50%;
+        width: calc-em(400, 810);
+        margin: 10px 0;
+        &.facebook_p {
+            float: left;
+        }
+        &.twitter_p {
+            float: right;
+        }
+        @include respond-to('medium-screens'){
+            display: none;
+        }
+    }
     .slogan {
         @include effect-glass($border-radius: .3em);
         @include single-box-shadow;
@@ -359,6 +379,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         @include background-image(linear-gradient(#c00, #900)); 
         text-align: center;
         padding: calc-em(10, 810);
+        clear: both;
         font-size: 90%;
             * {
                 color: #fff;

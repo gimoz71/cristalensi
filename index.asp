@@ -43,8 +43,12 @@
                             <h3>Cristalensi, la luce come idea</h3>
                             <p class="incipit">A portata di click una vasta e raffinata gamma di prodotti per illuminazione da interno ed esterno per arredare la vostra casa, il giardino, il tuo locale... Naviga nel Negozio on-line oppure visita il nostro Showroom, soddisferemo tutte le tue esigenze sia classiche che moderne.
                             </p>
-                            <img class="facebook" src="images/facebook.png">
-                            <p style="padding-top:10px; line-height: 160%;">Seguici su FACEBOOK collegandoti alla pagina ufficiale di Cristalensi, troverai le ultime novità e bellissime fotografie di arredamento da condividere con i tuoi amici, inoltre troverai altri appassionati di illuminazione per parlare dei nostri articoli</p>
+                            <div class="social">
+                                <img class="facebook" src="images/facebook.png">
+                                <p style="padding-top:10px; line-height: 160%;">Seguici su FACEBOOK collegandoti alla pagina ufficiale di Cristalensi, troverai le ultime novità e bellissime fotografie di arredamento da condividere con i tuoi amici, inoltre troverai altri appassionati di illuminazione per parlare dei nostri articoli</p>
+                            </div>
+                            <div class="social_panel facebook_p">Facebook place</div>
+                            <div class="social_panel twitter_p">Twitter place</div>
                             <div class="slogan">
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
                                 <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
