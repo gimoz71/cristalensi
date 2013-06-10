@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* normalize.css v1.0.1 | HTML5 Display Definitions | MIT License | git.io/normalize */
 /* line 19, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_html5.scss */
@@ -45,6 +46,22 @@ html {
 
 /* line 19, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_base.scss */
 body {
+=======
+/* line 17, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+>>>>>>> master
   margin: 0;
 }
 
@@ -235,6 +252,7 @@ textarea {
   *vertical-align: middle;
 }
 
+<<<<<<< HEAD
 /* line 63, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 button,
 input {
@@ -298,6 +316,49 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+=======
+/* line 22, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Program Files (x86)/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+>>>>>>> master
 }
 
 /* line 10, ../sass/_base.scss */
@@ -324,35 +385,55 @@ html[xmlns] .clearfix {
 
 /* line 19, ../sass/css.scss */
 h1 {
+<<<<<<< HEAD
   font-size: 1.75em;
+=======
+  font-size: 1.875em;
+>>>>>>> master
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
 /* line 19, ../sass/css.scss */
 h2 {
+<<<<<<< HEAD
   font-size: 1.4em;
+=======
+  font-size: 1.525em;
+>>>>>>> master
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
 /* line 19, ../sass/css.scss */
 h3 {
+<<<<<<< HEAD
   font-size: 1.05em;
+=======
+  font-size: 1.175em;
+>>>>>>> master
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
 /* line 19, ../sass/css.scss */
 h4 {
+<<<<<<< HEAD
   font-size: 0.7em;
+=======
+  font-size: 0.825em;
+>>>>>>> master
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
 
 /* line 19, ../sass/css.scss */
 h5 {
+<<<<<<< HEAD
   font-size: 0.35em;
+=======
+  font-size: 0.475em;
+>>>>>>> master
   border-bottom: dashed 1px #000;
   font-weight: bold;
 }
@@ -1064,7 +1145,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-size: 90%;
   margin: 2.46914% 0;
 }
-/* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+/* line 26, C:/Users/Luca/.compass/extensions/compass-recipes-0.3.0/stylesheets/recipes/effect/_glass.scss */
 #content .slogan:after {
   content: "";
   position: absolute;
@@ -1107,18 +1188,27 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
   }
 }
+<<<<<<< HEAD
 /* line 399, ../sass/css.scss */
+=======
+/* line 268, ../sass/css.scss */
+>>>>>>> master
 #content .negozio {
   width: 26.17284%;
   border: solid 6px #ccc;
   margin-right: 1.23457%;
   float: left;
 }
+<<<<<<< HEAD
 /* line 405, ../sass/css.scss */
+=======
+/* line 274, ../sass/css.scss */
+>>>>>>> master
 #content .anni {
   float: right;
   width: 12.34568%;
 }
+<<<<<<< HEAD
 /* line 409, ../sass/css.scss */
 #content .facebook {
   float: right;
@@ -1793,6 +1883,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
+=======
+/* line 278, ../sass/css.scss */
+#content > div {
+  padding: 2.46914%;
+}
+>>>>>>> master
 @media only screen and (max-width: 40.625em) {
   /* line 533, ../sass/css.scss */
   .prodotti li {
@@ -1858,8 +1954,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: auto;
   }
+<<<<<<< HEAD
   /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .scheda-prodotto li a:after {
+=======
+  /* line 26, C:/Users/Luca/.compass/extensions/compass-recipes-0.3.0/stylesheets/recipes/effect/_glass.scss */
+  .listino li a:after, .catalogo li a:after {
+>>>>>>> master
     content: "";
     position: absolute;
     display: block;
@@ -2035,8 +2136,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: 50%;
   }
+<<<<<<< HEAD
   /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .scheda-prodotto li .scheda:after {
+=======
+  /* line 26, C:/Users/Luca/.compass/extensions/compass-recipes-0.3.0/stylesheets/recipes/effect/_glass.scss */
+  .listino li .scheda:after, .catalogo li .scheda:after {
+>>>>>>> master
     content: "";
     position: absolute;
     display: block;
@@ -2130,8 +2236,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: auto;
   }
+<<<<<<< HEAD
   /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .carrello a:after, .iscrizione a:after {
+=======
+  /* line 26, C:/Users/Luca/.compass/extensions/compass-recipes-0.3.0/stylesheets/recipes/effect/_glass.scss */
+  .prodotti li .thumb:after {
+>>>>>>> master
     content: "";
     position: absolute;
     display: block;
@@ -2355,8 +2466,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: 50%;
   }
+<<<<<<< HEAD
   /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .carrello .scheda:after, .iscrizione .scheda:after {
+=======
+  /* line 26, C:/Users/Luca/.compass/extensions/compass-recipes-0.3.0/stylesheets/recipes/effect/_glass.scss */
+  .prodotti li .scheda:after {
+>>>>>>> master
     content: "";
     position: absolute;
     display: block;
@@ -2389,6 +2505,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     border-bottom: dotted 1px #ccc;
   }
 }
+<<<<<<< HEAD
+=======
+/* line 377, ../sass/css.scss */
+.prodotti li:last-child {
+  border-bottom: dotted 1px #999;
+}
+>>>>>>> master
 
 @media only screen and (max-width: 40.625em) {
   /* line 849, ../sass/css.scss */
