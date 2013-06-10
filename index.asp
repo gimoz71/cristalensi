@@ -139,8 +139,8 @@
 							end if
 							%>
                             <!--elenco categorie-->
-                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right;">RICERCA AVANZATA &raquo;</a></h4>
-                            <p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>
+                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right; padding: 1px 5px;" class="button_link_red">RICERCA AVANZATA &raquo;</a></h4>
+                            <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
                             </p>
                             <ul class="catalogo clearfix">
                             <%

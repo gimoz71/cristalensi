@@ -57,7 +57,7 @@
                         <p style="font-weight: bold"><a href="#">[GALLERIA PRODOTTI]</a></p>
                         <p>Vuoi ricercare un prodotto per codice, per nome oppure in una fascia di prezzo? Vuoi combinare una serie di caratteristiche?
                             Hai a disposizione la nuova</p>
-                        <button>RICERCA AVANZATA</button>
+                        <a href="#" class="button_link_red">RICERCA AVANZATA</a>
                         <h3>Contattaci!</h3>
                         <p>Il nostro personale sar&agrave; a tua disposizione per qualsiasi chiarimento e informazione su tutto l'assortimento di articoli
                             per l'illuminazione per la casa e per il giardino.</p>

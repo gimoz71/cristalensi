@@ -37,6 +37,13 @@ a:hover, a:active {
         margin-bottom: 5px;
     }
 }
+.button_link_red {
+    @include buttonmobilered;
+    color: #fff;
+    img {
+        margin-bottom: 5px;
+    }
+}
 
 
 
@@ -75,6 +82,7 @@ select {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 10px;
     color: #333333;
+    width: 100%;
 }
 
 
