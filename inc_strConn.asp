@@ -134,11 +134,31 @@ Function NoHTML(strInput)
         ' conserva la formattazione 
  strInput = Replace(strInput, "<br>", chr(10))
  strInput = Replace(strInput, "'", "")
- strInput = Replace(strInput, """", "") 
+ strInput = Replace(strInput, """", "")
+ 
+ strInput = Replace(strInput, "é", "&eacute;")
+ strInput = Replace(strInput, "è", "&egrave;")
+ strInput = Replace(strInput, "à", "&agrave;")
+ strInput = Replace(strInput, "ù", "&ugrave;")
+ strInput = Replace(strInput, "ì", "&igrave;")
+ strInput = Replace(strInput, "ò", "&ograve;")
  
  NoHTML = RegEx.Replace(strInput, "") 
  
 End Function
 
+
+Function NoLettAcc(strInput) 
+  
+ strInput = Replace(strInput, "é", "&eacute;")
+ strInput = Replace(strInput, "è", "&egrave;")
+ strInput = Replace(strInput, "à", "&agrave;")
+ strInput = Replace(strInput, "ù", "&ugrave;")
+ strInput = Replace(strInput, "ì", "&igrave;")
+ strInput = Replace(strInput, "ò", "&ograve;")
+ 
+ NoLettAcc = strInput 
+ 
+End Function
 %>
 

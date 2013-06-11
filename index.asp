@@ -32,6 +32,16 @@
         </script>
     </head>
     <body>
+    <!--plugin facebook-->
+    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>    
+    <!--fine plugin facebook-->
         <div id="wrap">
             <!--#include file="inc_header.asp"-->
             <div id="main-content">
@@ -47,14 +57,35 @@
                                 <img class="facebook" src="images/facebook.png">
                                 <p style="padding-top:10px; line-height: 160%;">Seguici su FACEBOOK collegandoti alla pagina ufficiale di Cristalensi, troverai le ultime novità e bellissime fotografie di arredamento da condividere con i tuoi amici, inoltre troverai altri appassionati di illuminazione per parlare dei nostri articoli</p>
                             </div>
-                            <div class="social_panel facebook_p">Facebook place</div>
-                            <div class="social_panel twitter_p">Twitter place</div>
+                            <!--facebook-->
+                            <div class="social_panel facebook_p">
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-width="380" data-height="230" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
+                            </div>
+                            <!--dicono di noi-->
+                            <div class="social_panel twitter_p">
+                            <h4 class="area-commenti">Dicono di noi...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red">TUTTI I COMMENTI &raquo;</a></h4>
+                            <%
+							Set com_rs = Server.CreateObject("ADODB.Recordset")
+							sql = "SELECT TOP 5 * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
+							com_rs.open sql,conn, 1, 1
+				
+							if com_rs.recordcount>0 then
+								Do While not com_rs.EOF
+							%>
+							<p><%=NoLettAcc(Left(com_rs("Testo"), 110))%>...</p>
+							<%
+								com_rs.movenext
+								loop
+							end if
+							com_rs.close
+							%>
+                            </div>
                             <div class="slogan">
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
                                 <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
                             <!--prodotti in offerta-->
-                            <h4 class="area">OFFERTE: non perdere l'occasione!<a href="offerte.asp" style="float: right; padding: 1px 10px;" class="button_link_red">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
+                            <h4 class="area">OFFERTE: non perdere l'occasione!<a href="offerte.asp" style="float: right; padding: 1px 10px;" class="button_link_red" title="Prodotti illuminazone in offerta">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
                             <%
 							'random prodotti in offerta
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")
@@ -143,7 +174,7 @@
 							end if
 							%>
                             <!--elenco categorie-->
-                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right; padding: 1px 10px;" class="button_link_red">RICERCA AVANZATA &raquo;</a></h4>
+                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right; padding: 1px 10px;" class="button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
                             <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
                             </p>
                             <ul class="catalogo clearfix">
@@ -192,7 +223,7 @@
                             
                             </ul>
                             <!--elenco produttori: select con js-->
-                            <h4 class="area">PRODUTTORI<a href="produttori.asp" style="float: right;" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
+                            <h4 class="area">PRODUTTORI<a href="produttori.asp"  style="float: right; padding: 1px 10px;" class="button_link_red" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
                             <p>Se conosci la marca del prodotto la puoi selezionare qui sotto oppure andando all'elenco completo dei produttori.
                             </p>
                             <%

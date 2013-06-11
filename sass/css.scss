@@ -359,7 +359,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
     }
     .social_panel {
-        display: block; height: 250px; border: dashed 1px #ccc;width: 50%;
+        display: block; height: 230px; border: dashed 1px #ccc;width: 50%;
         width: calc-em(400, 810);
         margin: 10px 0;
         &.facebook_p {
@@ -368,7 +368,12 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         &.twitter_p {
             float: right;
         }
-        @include respond-to('medium-screens'){
+        & p {
+			border-top: dashed 1px #F90;
+			padding: calc-em(15, 810) 0;
+			margin: 0 calc-em(10, 810);
+		}
+		@include respond-to('medium-screens'){
             display: none;
         }
     }
@@ -380,7 +385,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         text-align: center;
         padding: calc-em(10, 810);
         clear: both;
-        font-size: 90%;
+        font-size: 95%;
             * {
                 color: #fff;
                 border: none;
@@ -392,6 +397,15 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         background-color: $yellow;
         padding: calc-em(10, 810);
         margin: calc-em(20, 810) 0;
+        @include respond-to('medium-screens'){
+            text-align: center;
+        }
+    }
+	.area-commenti {
+        border-bottom: none;
+        background-color: $yellow;
+        padding: calc-em(13, 810);
+        margin: calc-em(0, 810) 0;
         @include respond-to('medium-screens'){
             text-align: center;
         }
@@ -487,13 +501,13 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             @include respond-to('medium-screens'){
                 @include buttonmobile;
                 img {
-                    margin-bottom: 5px;
+                    margin-bottom: calc-em(10, 810);
                 }
             }
             &.button_link {
                 @include buttonmobile;
                 img {
-                    margin-bottom: 5px;
+                    margin-bottom: calc-em(10, 810);
                 }
             }
         }
