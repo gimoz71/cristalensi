@@ -51,7 +51,7 @@
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250&#8364;</h3>
                                 <p>Per ordini inferiori a 250&#8364; il costo di spedizione &egrave; di 10&#8364;.<br /> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
-                            <h4>Prodotti in offerta</h4>
+                            <h3>Prodotti in offerta</h3>
                             <p><em>In questa pagina trovate tutte le offerte di prodotti per illuminazione: sono gli articoli del catalogo con prezzi fantastici. Ogni prodotto ha una propria scheda dettagliata, per accederci &egrave; sufficiente cliccare sul nome o sulla foto dell'articolo.<br />
 					    Invece, per consultare tutto il catalogo potete cliccare qui su <a href="prodotti.asp" title="Catalogo prodotti per illuminazione">[Prodotti]</a> (oppure sullla stessa voce del men&ugrave; in alto) ma potete anche scegliere una categoria o un produttore dal men&ugrave; sulla sinistra.</em>
                           </p>
@@ -77,10 +77,10 @@
                                             id=prod_rs("pkid")
                                             titolo_prodotto=prod_rs("titolo")
 
-                                            NomePagina_prodotto=prod_rs("NomePagina")			
-                                            if NomePagina_prodotto="" then NomePagina_prodotto="#"
-                                            'if NomePagina_prodotto<>"#" then NomePagina_prodotto="public/pagine/"&NomePagina_prodotto
-                                            if NomePagina_prodotto<>"#" then NomePagina_prodotto="scheda_prodotto.asp?pkid="&id
+                                            NomePagina=prod_rs("NomePagina")			
+                                            if NomePagina="" then NomePagina="#"
+                                            'if NomePagina<>"#" then NomePagina="public/pagine/"&NomePagina
+                                            if NomePagina<>"#" then NomePagina="scheda_prodotto.asp?pkid="&id
 
                                             codicearticolo=prod_rs("codicearticolo")
                                             descrizione_prodotto=prod_rs("descrizione")
@@ -148,9 +148,9 @@
                                             End With
                                             Set objImageSize = Nothing
                                     %>
-                                    <a href="<%=NomePagina_prodotto%>" title="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" hspace="2" vspace="2" border="0"></a>
-                                            <%else%>
-                                    <a href="<%=NomePagina_prodotto%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
+                                    		<a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"></a>
+										<%else%>
+                                    		<a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
                                     <%
                                             end if
                                     else
@@ -158,24 +158,22 @@
                                             titolo_img=""
                                             file_img=""
                                     %>
-                                    <a href="<%=NomePagina_prodotto%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>
+                                    		<a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>
                                     <%	
                                     end if
                                     img_rs.close
                                     %>
                                     </div>
                                     <div class="data">
-                                        <a href="<%=NomePagina_prodotto%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore>0 then%><span class="produttore">Produttore: <a href="prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti <%=produttore%>"><%=produttore%></a></span><%end if%>
-                                        <p><%=Left(descrizione_prodotto,100)%><%if Len(descrizione_prodotto)>100 then%>...<%end if%><%if FkCategoria2>0 then%>&nbsp;&nbsp;Il prodotto lo trovi nella categoria: <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
-                                        <a href="<%=NomePagina_prodotto%>" title="<%=titolo_prodotto%>&nbsp;<%=titolo_cat%>">Scheda del prodotto</a><%if tot_img>0 then%>[<img src="images/img.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="Sono presenti altre immagini"><%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]<%end if%>
-                                        <%if allegato_prodotto<>"" then%>
-                                        <img src="images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="E' presente un allegato">Allegato
-                                        <%end if%>
-                                        <%if prezzoarticolo=0 then%>
-                                        	<p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span> <a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
-                                        <%else%>
-                                        	<p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%> <%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo listino: <%=prezzoarticolo%>&#8364;</span><%end if%><a href="<%=NomePagina_prodotto%>" title="Inserisci nel carrello" class="cart-link">Inserisci nel carrello</a></p>
-                                        <%end if%>
+                                        <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore>0 then%><span class="produttore">Produttore: <a href="prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
+                                            <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%><br /><i>Il prodotto lo trovi nella categoria:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
+                                            <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link">Scheda prodotto</a>
+											<%if tot_img>0 then%><span style="float:right;">[<%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]</span><%end if%>
+                                            <%if prezzoarticolo=0 then%>
+                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></span></p>
+                                            <%else%>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link"><span>Inserisci nel carrello</span></a></p>
+                                            <%end if%>
                                     </div>
                                 </li>
                                 <% 

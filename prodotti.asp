@@ -102,7 +102,64 @@ end if
                                 <p>
                                     <i><%=descrizione_cat%></i>.
                                 </p>
-                                <%end if%>
+                                <%else%>
+                                <p>&nbsp;</p>
+								<%end if%>
+                                
+								<%if cat>0 then%>
+									<SCRIPT LANGUAGE=javascript>
+                                    <!--
+                                        function invia_account() {
+                                            document.getElementById("form_prodotti").submit();
+                                        }
+                                    // End -->
+                                    </SCRIPT>
+                             		<hr />
+                                    <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
+                                      <p>
+                                      Non hai trovato il prodotto che cercavi? cambia la categoria specifica: 
+                                        <%
+                                        Set cs=Server.CreateObject("ADODB.Recordset")
+                                        sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo as Titolo_2 "
+                                        sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
+                                        sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
+                                        sql = sql + "ORDER BY Categorie1.Titolo ASC, Categorie2.Titolo ASC"
+                                        cs.Open sql, conn, 1, 1
+                                        %>
+                                        <select name="Cat" id="Cat" class="form" onChange="invia_account()">
+                                            <%
+                                            if cs.recordcount>0 then
+                                            Do While Not cs.EOF
+                                            %>
+                                            <option title="<%=cs("Titolo_2")%>" value=<%=cs("pkid_2")%> <%if cInt(cat)=cInt(cs("pkid_2")) then%> selected<%end if%>><%=cs("Titolo_2")%></option>
+                                            <%
+                                            cs.movenext
+                                            loop
+                                            end if
+                                            %>
+                                         </select>
+                                         <%cs.close%>
+                                         <br />Oppure, per una ricerca maggiormente dettagliata, sfrutta la <a href="#" class="button_link_red">RICERCA AVANZATA</a>
+                                      </p>
+                                    </form>
+                              	<%end if%>
+                              	
+                                <%
+									p=request("p")
+									if p="" then p=1
+									
+									order=request("order")
+									if order="" then order=1
+									if FkProduttore>0 and order=1 then order=5
+								%>
+                                
+                                <p class="area"> <strong>Ordinamento per prezzo:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=3"><img src="images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" title="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=4"><img src="images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" title="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" /></a>
+                              <%if FkProduttore>0 then%>
+                                  &nbsp;-&nbsp;<strong>Ordinamento per codice:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=5"><img src="images/az_new<%if order=5 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per codice articolo dalla A alla Z" title="ordina i prodotti per codice articolo dalla A alla Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=6"><img src="images/za_new<%if order=6 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per codice articolo dalla Z alla A" title="ordina i prodotti per codice articolo dalla Z alla A" /></a>
+                              <%else%>
+                                  &nbsp;-&nbsp;<strong>Ordinamento per nome:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=1"><img src="images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per titolo dalla A alla Z" title="ordina i prodotti per titolo dalla A alla Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=2"><img src="images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per titolo dalla Z alla A" title="ordina i prodotti per titolo dalla Z alla A" /></a>
+                              <%end if%>
+                              
                                 <ul class="prodotti clearfix">
                                     <li class="clearfix">
                                         <div class="thumb">
@@ -249,9 +306,9 @@ end if
                                             <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link">Scheda prodotto</a>
 											<%if tot_img>0 then%><span style="float:right;">[<%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]</span><%end if%>
                                             <%if prezzoarticolo=0 then%>
-                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></span></p>
+                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></span></p>
                                             <%else%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;&nbsp;<i>Iva compresa</i><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link"><span>Inserisci nel carrello</span></a></p>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link"><span>Inserisci nel carrello</span></a></p>
                                             <%end if%>
                                         </div>
                                     </li>

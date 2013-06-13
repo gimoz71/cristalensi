@@ -541,6 +541,48 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
     }
 }
+.produttori {
+    width: 100%;
+    font-size: 90%;
+    li {
+        border: dashed 1px #fcc;
+        width: calc-em(122, 810);
+        height: 125px;
+        padding: calc-em(30, 810);
+        margin: calc-em(7, 810);
+        float: left;
+        position: relative;
+        text-align:center;
+        a {
+            @extend %font-base;
+            margin-top: 5px;
+            font-weight: bold;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                img {
+                    margin-bottom: calc-em(10, 810);
+                }
+            }
+            &.button_link {
+                @include buttonmobile;
+                img {
+                    margin-bottom: calc-em(10, 810);
+                }
+            }
+        }
+        
+        @include respond-to('medium-screens'){
+            width: 100%;
+            height: auto;
+            float: none;
+            padding: 0;
+            margin: 0;
+            border: none;
+            padding-bottom: 10px;
+            border-bottom: dotted 1px #ccc;
+        }
+    }
+}
 .prodotti {
     width: 100%;
     font-size: 90%;
@@ -602,6 +644,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-weight: bold;
             padding-top: 5px;
             display: inline-block;
+			font-size: 110%;
         }
         .produttore, .cart-link {
             float: right;

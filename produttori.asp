@@ -61,7 +61,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
 							if prod_rs.recordcount>0 then
 								
 							%>
-                            <ul class="galleria clearfix">
+                            <ul class="produttori clearfix">
                                 <%
 								Do while not prod_rs.EOF
 								
@@ -72,6 +72,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
 								link=prod_rs("prodotti")
 								
 								url="prodotti.asp?FkProduttore="&id
+								file_img="logo_cristalensi_piccolo.jpg"
 								%>
                                 <%if link=1 then%>
                                 <li>
@@ -115,5 +116,6 @@ Call Visualizzazione("Produttori","0","produttori.asp")
             </div>
         </div>
          <!--#include file="inc_footer.asp"-->
+         <script src="js/init.js"></script>
     </body>
 </html>

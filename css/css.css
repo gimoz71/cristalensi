@@ -356,7 +356,7 @@ table {
 }
 
 /* line 10, ../sass/_base.scss */
-p, label, #menu ul li.green a, #menu ul li.darkorange a, #menu ul li.skyblue a, #menu ul li.red a, #menu ul li.brown a, #menu ul li.blue a, #menu ul li.yellowgreen a, #menu ul li.magenta a, .product-menu, .listino li a, .catalogo li a, .galleria li a, .prodotti li a, .carrello table, .iscrizione table, .carrello .table, .iscrizione .table {
+p, label, #menu ul li.green a, #menu ul li.darkorange a, #menu ul li.skyblue a, #menu ul li.red a, #menu ul li.brown a, #menu ul li.blue a, #menu ul li.yellowgreen a, #menu ul li.magenta a, .product-menu, .listino li a, .catalogo li a, .galleria li a, .produttori li a, .prodotti li a, .carrello table, .iscrizione table, .carrello .table, .iscrizione .table {
   font-size: 0.75em;
 }
 
@@ -1606,23 +1606,176 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 /* line 544, ../sass/css.scss */
-.prodotti {
+.produttori {
   width: 100%;
   font-size: 90%;
 }
 /* line 547, ../sass/css.scss */
+.produttori li {
+  border: dashed 1px #fcc;
+  width: 15.06173%;
+  height: 125px;
+  padding: 3.7037%;
+  margin: 0.8642%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+/* line 556, ../sass/css.scss */
+.produttori li a {
+  margin-top: 5px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 556, ../sass/css.scss */
+  .produttori li a {
+    position: relative;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+    background: -webkit-linear-gradient(#cccccc, #808080);
+    background: -moz-linear-gradient(#cccccc, #808080);
+    background: -o-linear-gradient(#cccccc, #808080);
+    background: linear-gradient(#cccccc, #808080);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff !important;
+    text-decoration: none;
+    text-align: center;
+  }
+  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  .produttori li a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  }
+  /* line 562, ../sass/css.scss */
+  .produttori li a img {
+    margin-bottom: 1.23457%;
+  }
+}
+/* line 566, ../sass/css.scss */
+.produttori li a.button_link {
+  position: relative;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
+  background: -webkit-linear-gradient(#cccccc, #808080);
+  background: -moz-linear-gradient(#cccccc, #808080);
+  background: -o-linear-gradient(#cccccc, #808080);
+  background: linear-gradient(#cccccc, #808080);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
+  padding: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+}
+/* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+.produttori li a.button_link:after {
+  content: "";
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid transparent;
+  border-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+  -webkit-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+  -moz-box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+  box-shadow: inset rgba(255, 255, 255, 0.72) 0 0 2px, inset rgba(255, 255, 255, 0.4) 0 0 10px;
+  background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
+}
+/* line 568, ../sass/css.scss */
+.produttori li a.button_link img {
+  margin-bottom: 1.23457%;
+}
+@media only screen and (max-width: 40.625em) {
+  /* line 547, ../sass/css.scss */
+  .produttori li {
+    width: 100%;
+    height: auto;
+    float: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    padding-bottom: 10px;
+    border-bottom: dotted 1px #ccc;
+  }
+}
+
+/* line 586, ../sass/css.scss */
+.prodotti {
+  width: 100%;
+  font-size: 90%;
+}
+/* line 589, ../sass/css.scss */
 .prodotti li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 553, ../sass/css.scss */
+/* line 595, ../sass/css.scss */
 .prodotti li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 553, ../sass/css.scss */
+  /* line 595, ../sass/css.scss */
   .prodotti li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1677,46 +1830,46 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 559, ../sass/css.scss */
+  /* line 601, ../sass/css.scss */
   .prodotti li a img {
     margin-bottom: 5px;
   }
 }
-/* line 564, ../sass/css.scss */
+/* line 606, ../sass/css.scss */
 .prodotti li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 564, ../sass/css.scss */
+  /* line 606, ../sass/css.scss */
   .prodotti li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 573, ../sass/css.scss */
+/* line 615, ../sass/css.scss */
 .prodotti li .data {
   float: left;
   width: 72.83951%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 573, ../sass/css.scss */
+  /* line 615, ../sass/css.scss */
   .prodotti li .data {
     float: none;
     width: 100%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 573, ../sass/css.scss */
+  /* line 615, ../sass/css.scss */
   .prodotti li .data {
     margin-top: 10px;
   }
-  /* line 582, ../sass/css.scss */
+  /* line 624, ../sass/css.scss */
   .prodotti li .data .scheda {
     text-align: center;
   }
-  /* line 585, ../sass/css.scss */
+  /* line 627, ../sass/css.scss */
   .prodotti li .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1771,47 +1924,48 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 591, ../sass/css.scss */
+/* line 633, ../sass/css.scss */
 .prodotti li .price {
   margin-top: .4em;
   padding-top: 5px;
   display: inline-block;
 }
-/* line 593, ../sass/css.scss */
+/* line 635, ../sass/css.scss */
 .prodotti li .price span {
   text-decoration: line-through;
 }
-/* line 600, ../sass/css.scss */
+/* line 642, ../sass/css.scss */
 .prodotti li .cristalprice {
   color: #c00;
   font-weight: bold;
   padding-top: 5px;
   display: inline-block;
+  font-size: 110%;
 }
-/* line 606, ../sass/css.scss */
+/* line 649, ../sass/css.scss */
 .prodotti li .produttore, .prodotti li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 610, ../sass/css.scss */
+/* line 653, ../sass/css.scss */
 .prodotti li .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 616, ../sass/css.scss */
+/* line 659, ../sass/css.scss */
 .prodotti li .cart-link span {
   padding-right: 25px;
   background: url("../images/carrello-bianco.gif") no-repeat right center;
 }
-/* line 620, ../sass/css.scss */
+/* line 663, ../sass/css.scss */
 .prodotti li .scheda {
   background: url("../images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 620, ../sass/css.scss */
+  /* line 663, ../sass/css.scss */
   .prodotti li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1868,24 +2022,24 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 547, ../sass/css.scss */
+  /* line 589, ../sass/css.scss */
   .prodotti li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 633, ../sass/css.scss */
+/* line 676, ../sass/css.scss */
 .prodotti li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 639, ../sass/css.scss */
+/* line 682, ../sass/css.scss */
 .scheda-prodotto {
   width: 100%;
   font-size: 90%;
 }
-/* line 642, ../sass/css.scss */
+/* line 685, ../sass/css.scss */
 .scheda-prodotto li {
   width: 100%;
   padding: 10px 0.61728%;
@@ -1897,12 +2051,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
       
   }*/
 }
-/* line 647, ../sass/css.scss */
+/* line 690, ../sass/css.scss */
 .scheda-prodotto li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 647, ../sass/css.scss */
+  /* line 690, ../sass/css.scss */
   .scheda-prodotto li a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -1957,39 +2111,39 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 652, ../sass/css.scss */
+  /* line 695, ../sass/css.scss */
   .scheda-prodotto li a img {
     margin-bottom: 5px;
   }
 }
-/* line 657, ../sass/css.scss */
+/* line 700, ../sass/css.scss */
 .scheda-prodotto li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 657, ../sass/css.scss */
+  /* line 700, ../sass/css.scss */
   .scheda-prodotto li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 666, ../sass/css.scss */
+/* line 709, ../sass/css.scss */
 .scheda-prodotto li .data {
   float: left;
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 666, ../sass/css.scss */
+  /* line 709, ../sass/css.scss */
   .scheda-prodotto li .data {
     margin-top: 10px;
   }
-  /* line 671, ../sass/css.scss */
+  /* line 714, ../sass/css.scss */
   .scheda-prodotto li .data .scheda {
     text-align: center;
   }
-  /* line 674, ../sass/css.scss */
+  /* line 717, ../sass/css.scss */
   .scheda-prodotto li .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2044,42 +2198,42 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 680, ../sass/css.scss */
+/* line 723, ../sass/css.scss */
 .scheda-prodotto li .price {
   margin-top: .4em;
   padding-top: 5px;
   display: inline-block;
 }
-/* line 682, ../sass/css.scss */
+/* line 725, ../sass/css.scss */
 .scheda-prodotto li .price span {
   text-decoration: line-through;
 }
-/* line 689, ../sass/css.scss */
+/* line 732, ../sass/css.scss */
 .scheda-prodotto li .cristalprice {
   color: #c00;
   font-weight: bold;
   padding-top: 5px;
   display: inline-block;
 }
-/* line 695, ../sass/css.scss */
+/* line 738, ../sass/css.scss */
 .scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 699, ../sass/css.scss */
+/* line 742, ../sass/css.scss */
 .scheda-prodotto li .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 710, ../sass/css.scss */
+/* line 753, ../sass/css.scss */
 .scheda-prodotto li .scheda {
   background: url("../images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 710, ../sass/css.scss */
+  /* line 753, ../sass/css.scss */
   .scheda-prodotto li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2135,13 +2289,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 718, ../sass/css.scss */
+/* line 761, ../sass/css.scss */
 .scheda-prodotto li .facebook {
   float: left !important;
   margin-right: 1.23457%;
   width: 18.51852%;
 }
-/* line 723, ../sass/css.scss */
+/* line 766, ../sass/css.scss */
 .scheda-prodotto li .fb-slogan {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2149,19 +2303,19 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   line-height: 160%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 642, ../sass/css.scss */
+  /* line 685, ../sass/css.scss */
   .scheda-prodotto li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 734, ../sass/css.scss */
+/* line 777, ../sass/css.scss */
 .scheda-prodotto li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 739, ../sass/css.scss */
+/* line 782, ../sass/css.scss */
 .carrello, .iscrizione {
   width: 100%;
   font-size: 90%;
@@ -2169,12 +2323,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 746, ../sass/css.scss */
+/* line 789, ../sass/css.scss */
 .carrello a, .iscrizione a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 746, ../sass/css.scss */
+  /* line 789, ../sass/css.scss */
   .carrello a, .iscrizione a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2229,104 +2383,104 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 751, ../sass/css.scss */
+  /* line 794, ../sass/css.scss */
   .carrello a img, .iscrizione a img {
     margin-bottom: 5px;
   }
 }
-/* line 756, ../sass/css.scss */
+/* line 799, ../sass/css.scss */
 .carrello table, .iscrizione table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 761, ../sass/css.scss */
+/* line 804, ../sass/css.scss */
 .carrello table tr, .iscrizione table tr {
   text-align: left;
 }
-/* line 764, ../sass/css.scss */
+/* line 807, ../sass/css.scss */
 .carrello table tr td, .iscrizione table tr td {
   padding: 3px 0;
   width: 50%;
 }
-/* line 767, ../sass/css.scss */
+/* line 810, ../sass/css.scss */
 .carrello table tr td input[type=text], .carrello table tr td input[type=password], .iscrizione table tr td input[type=text], .iscrizione table tr td input[type=password] {
   width: 50%;
 }
-/* line 773, ../sass/css.scss */
+/* line 816, ../sass/css.scss */
 .carrello .table, .iscrizione .table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 778, ../sass/css.scss */
+/* line 821, ../sass/css.scss */
 .carrello .table .tr, .iscrizione .table .tr {
   text-align: left;
   width: 100%;
 }
-/* line 782, ../sass/css.scss */
+/* line 825, ../sass/css.scss */
 .carrello .table .td, .iscrizione .table .td {
   padding: 3px 0;
   float: left;
   width: 50%;
 }
-/* line 787, ../sass/css.scss */
+/* line 830, ../sass/css.scss */
 .carrello .table input[type=text], .carrello .table input[type=password], .iscrizione .table input[type=text], .iscrizione .table input[type=password] {
   width: 50%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 791, ../sass/css.scss */
+  /* line 834, ../sass/css.scss */
   .carrello .table .tr, .carrello .table .td, .carrello .table input[type=text], .carrello .table input[type=password], .carrello .table input[type=submit], .carrello .table input[type=reset], .iscrizione .table .tr, .iscrizione .table .td, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table input[type=submit], .iscrizione .table input[type=reset] {
     width: 100% !important;
     float: none !important;
   }
 }
-/* line 798, ../sass/css.scss */
+/* line 841, ../sass/css.scss */
 .carrello .colonna, .iscrizione .colonna {
   display: inline-block;
   text-align: right;
 }
-/* line 802, ../sass/css.scss */
+/* line 845, ../sass/css.scss */
 .carrello .riga, .iscrizione .riga {
   padding: 5px 1.23457%;
   border-bottom: dashed 1px #ccc;
   margin: 0 !important;
 }
-/* line 807, ../sass/css.scss */
+/* line 850, ../sass/css.scss */
 .carrello .articolo, .iscrizione .articolo {
   width: 48.14815%;
   text-align: left;
 }
-/* line 811, ../sass/css.scss */
+/* line 854, ../sass/css.scss */
 .carrello .quantita, .iscrizione .quantita {
   width: 12.34568%;
 }
-/* line 814, ../sass/css.scss */
+/* line 857, ../sass/css.scss */
 .carrello .prezzo_unitario, .iscrizione .prezzo_unitario {
   width: 15.4321%;
 }
-/* line 817, ../sass/css.scss */
+/* line 860, ../sass/css.scss */
 .carrello .prezzo_totale, .iscrizione .prezzo_totale {
   width: 15.4321%;
 }
-/* line 820, ../sass/css.scss */
+/* line 863, ../sass/css.scss */
 .carrello .elimina, .iscrizione .elimina {
   width: 7.40741%;
 }
-/* line 823, ../sass/css.scss */
+/* line 866, ../sass/css.scss */
 .carrello .data, .iscrizione .data {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 823, ../sass/css.scss */
+  /* line 866, ../sass/css.scss */
   .carrello .data, .iscrizione .data {
     margin-top: 10px;
   }
-  /* line 827, ../sass/css.scss */
+  /* line 870, ../sass/css.scss */
   .carrello .data .scheda, .iscrizione .data .scheda {
     text-align: center;
   }
-  /* line 830, ../sass/css.scss */
+  /* line 873, ../sass/css.scss */
   .carrello .data a, .iscrizione .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2381,25 +2535,25 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 836, ../sass/css.scss */
+/* line 879, ../sass/css.scss */
 .carrello .cart, .iscrizione .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 842, ../sass/css.scss */
+/* line 885, ../sass/css.scss */
 .carrello .cart .total_price, .iscrizione .cart .total_price {
   float: right;
   font-size: 10px;
 }
-/* line 846, ../sass/css.scss */
+/* line 889, ../sass/css.scss */
 .carrello .scheda, .iscrizione .scheda {
   background: url("../images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 846, ../sass/css.scss */
+  /* line 889, ../sass/css.scss */
   .carrello .scheda, .iscrizione .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2456,7 +2610,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 739, ../sass/css.scss */
+  /* line 782, ../sass/css.scss */
   .carrello, .iscrizione {
     width: 100%;
     float: none;
@@ -2465,47 +2619,47 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 863, ../sass/css.scss */
+  /* line 906, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 868, ../sass/css.scss */
+/* line 911, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 870, ../sass/css.scss */
+/* line 913, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 874, ../sass/css.scss */
+/* line 917, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 879, ../sass/css.scss */
+/* line 922, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 884, ../sass/css.scss */
+/* line 927, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 887, ../sass/css.scss */
+/* line 930, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 892, ../sass/css.scss */
+  /* line 935, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
@@ -2513,13 +2667,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 898, ../sass/css.scss */
+  /* line 941, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
 
-/* line 905, ../sass/css.scss */
+/* line 948, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }
