@@ -61,7 +61,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
 							if prod_rs.recordcount>0 then
 								
 							%>
-                            <ul class="produttori clearfix">
+                            <ul class="galleria clearfix">
                                 <%
 								Do while not prod_rs.EOF
 								
