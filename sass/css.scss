@@ -558,6 +558,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                     width: auto;
                     img {
                         margin-bottom: 5px;
+                        float: none;
                     }
                 }
             }
@@ -608,11 +609,22 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             float: right;
             font-size: 10px;
         }
+        .cart-link {
+            float: right;
+            font-size: 10px;
+            @include respond-to('medium-screens'){
+                margin-top: 10px;
+                float: none;
+            }
+        }
         .cart {
             border: none;
             background-color: $yellow;
             padding: calc-em(10, 810);
             margin: calc-em(20, 810) 0;
+            @include respond-to('medium-screens'){
+                text-align: center;
+            }
         }
         .cart-link span {
             padding-right: 25px;

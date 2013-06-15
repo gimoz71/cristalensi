@@ -64,21 +64,6 @@
                             <!--dicono di noi-->
                             <div class="social_panel twitter_p">
                             <h4 class="area-commenti">Dicono di noi...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red">TUTTI I COMMENTI &raquo;</a></h4>
-                            <%
-							Set com_rs = Server.CreateObject("ADODB.Recordset")
-							sql = "SELECT TOP 5 * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
-							com_rs.open sql,conn, 1, 1
-				
-							if com_rs.recordcount>0 then
-								Do While not com_rs.EOF
-							%>
-							<p><%=NoLettAcc(Left(com_rs("Testo"), 110))%>...</p>
-							<%
-								com_rs.movenext
-								loop
-							end if
-							com_rs.close
-							%>
                             </div>
                             <div class="slogan">
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>

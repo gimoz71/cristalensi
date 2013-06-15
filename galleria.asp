@@ -44,7 +44,7 @@
                             <p>
                                 <i>Stai cercando lampade moderne per l'illuminazione della tua casa? il catalogo dei prodotti esposti è molto ampio, così abbiamo diviso gli articoli per illuminazione moderna in base alla loro destinazione: scegli tra lampade a sospensione e lampadari moderni, plafoniere moderne, lampade a parete e applique moderni, da tavolo, lumini e abat-jour moderne, lampade da ufficio e da scrivania, piantane moderne e lampade da terra. Tutti prodotti con uno stile moderno e di design dalle più importanti marche e produttori.</i>.
                             </p>
-                            <ul class="galleria clearfix">
+                            <ul class="produttori clearfix">
                                 <li>
                                     <a href="#">
                                         <img src="images/example.jpg">
