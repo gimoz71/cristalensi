@@ -64,6 +64,21 @@
                             <!--dicono di noi-->
                             <div class="social_panel twitter_p">
                             <h4 class="area-commenti">Dicono di noi...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red">TUTTI I COMMENTI &raquo;</a></h4>
+                            <%
+							Set com_rs = Server.CreateObject("ADODB.Recordset")
+							sql = "SELECT TOP 5 * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
+							com_rs.open sql,conn, 1, 1
+				
+							if com_rs.recordcount>0 then
+								Do While not com_rs.EOF
+							%>
+							<p><%=Left(NoHTML(com_rs("Testo")), 120)%>...</p>
+							<%
+								com_rs.movenext
+								loop
+							end if
+							com_rs.close
+							%>
                             </div>
                             <div class="slogan">
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
@@ -99,9 +114,12 @@
 									prezzolistino = rndArray( 4, i+ numero )
 									
 									NomePagina = rndArray( 5, i+ numero )
-									if NomePagina="" then NomePagina="#"
-									'if NomePagina<>"#" then NomePagina="public/pagine/"&NomePagina
-									if NomePagina<>"#" then NomePagina="scheda_prodotto.asp?pkid="&id
+									if Len(NomePagina)>0 then
+										'NomePagina="/public/pagine/"&NomePagina
+										NomePagina="scheda_prodotto.asp?id="&id
+									else
+										NomePagina="#"
+									end if
 									
 									
 									'recupero l'immagine
@@ -146,7 +164,7 @@
                                     %>
                                     <%if prezzolistino<>"" then%><p class="price">Prezzo listino: <span><%=prezzolistino%>€</span></p><%end if%>
                                     <%if prezzoarticolo<>"" then%><p class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</p><%end if%>
-                                    <a class="scheda" href="<%=NomePagina%>" title="Scheda del prodotto <%=titolo_prodotto%>">Scheda prodotto</a>
+                                    <a class="scheda" href="<%=NomePagina%>" title="Scheda del prodotto <%=titolo_prodotto%>"><span class="button_link">Scheda prodotto</span></a>
                                 </li>
                                 <%
 									NEXT
@@ -159,7 +177,7 @@
 							end if
 							%>
                             <!--elenco categorie-->
-                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right; padding: 1px 10px;" class="button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
+                            <h4 class="area">CATALOGO PRODOTTI <a href="ricerca_avanzata_modulo.asp" style="float: right; padding: 1px 10px;" class="button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
                             <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
                             </p>
                             <ul class="catalogo clearfix">
@@ -192,9 +210,9 @@
 									
 									if file_img<>"" then
 									%>
-									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><%=titolo_cat%></a>
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
 										<%else%>
-									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="immagini/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><%=titolo_cat%></a>	
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="immagini/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><span class="button_link"><%=titolo_cat%></span></a>	
 									<%	
 										end if
 									%>

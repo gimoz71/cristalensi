@@ -443,6 +443,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         width: calc-em(192, 810);
         padding: calc-em(5, 810);
         float: left;
+		text-align:center;
         position: relative;
         a {
             @extend %font-base;
@@ -466,7 +467,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-weight: bold;
         }
         .scheda {
-            background: url('../images/dett_prodotto.jpg') no-repeat left center;
+            /*background: url('../images/dett_prodotto.jpg') no-repeat left center;*/
             padding-left: 25px;
             @include respond-to('medium-screens'){
                 @include buttonmobile;

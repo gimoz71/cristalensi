@@ -53,6 +53,7 @@
             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
         </p>
         <img src="images/telefono_cristalensi.gif" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
-        <p>Seguici anche su Facebook<br /><a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" style="padding:10px 0 20px 0px;" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
+        <h3>Seguici anche su</h3>
+        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
     </div>
 </div>

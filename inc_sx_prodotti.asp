@@ -26,7 +26,7 @@
                             if cs.recordcount>0 then
                             %>
                             <h3>Elenco produttori</h3>
-                            <p>Puoi consultare il catalogo dei prodotti scegliendo un produttore dalla lista seguente: selezionandone uno otterrai una lista di articoli di quell'impresa</p>
+                            <p>Se conosci una marca puoi selezionare direttamente il produttore per avere il relativo elenco di prodotti</p>
                             <SCRIPT LANGUAGE=javascript>
                             <!--
                                 function invia_produttore() {
@@ -48,29 +48,29 @@
                                     %>
                                 </select>
                             </form>
-                            <p style="font-weight: bold"><a href="produttori.asp" title="Elenco completo dei produttori di articoli per illuminazione">Elenco completo</a></p>
+                            <p style="font-weight: bold"><a href="produttori.asp" title="Elenco completo dei produttori di articoli per illuminazione" class="button_link">Elenco completo marche</a></p>
                             <%end if%>
                             <%cs.close%>
 						<%end if%>
-                        <p>Scopri le ultime offerte e la galleria dei prodotti</p>
-                        <p style="font-weight: bold"><a href="#">[ULTIME OFFERTE]</a></p>
-                        <p style="font-weight: bold"><a href="#">[GALLERIA PRODOTTI]</a></p>
-                        <p>Vuoi ricercare un prodotto per codice, per nome oppure in una fascia di prezzo? Vuoi combinare una serie di caratteristiche?
-                            Hai a disposizione la nuova</p>
-                        <a href="#" class="button_link_red">RICERCA AVANZATA</a>
+                        <p><br /><br />Scopri le ultime offerte del nostro catalogo online</p>
+                        <a href="offerte.asp" class="button_link_red">PRODOTTI IN OFFERTA</a>
+                        <p><br /><br />Vuoi ricercare un prodotto per codice, per nome oppure in una fascia di prezzo? Vuoi combinare una serie di caratteristiche?
+                            Sfrutta la ricerca avanzata</p>
+                        <a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a>
                         <h3>Contattaci!</h3>
-                        <p>Il nostro personale sar&agrave; a tua disposizione per qualsiasi chiarimento e informazione su tutto l'assortimento di articoli
-                            per l'illuminazione per la casa e per il giardino.</p>
-                        <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione:</p>
-                        <p><strong>Cristalensi Snc</strong><br>
-                            Di Lensi Massimiliano & C.<br>
-                            C.F. e Iscr. Reg. Impr. di Firenze 05305820481<br>
-                            R.E.A. Firenze 536760<br>
-
-                            50056 Montelupo F.no (FI)<br>
-                            Via arti e mestieri, 1<br>
-                            Tel. e Fax: 0571 911163<br>
-                            e-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
+                        <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione</p>
+                        <p><a href="#" class="info">Contatti e riferimenti</a></p>
+                        <p class="note"><strong>Cristalensi Snc</strong><br />
+                            di Lensi Massimiliano & C.<br />
+                            C.F. e Iscr. Reg. Impr. di Firenze 05305820481<br />
+                            R.E.A. Firenze 536760<br />
+                            50056 Montelupo F.no (FI)<br />
+                            Via arti e mestieri, 1<br />
+                            Tel. e Fax: 0571.911163<br />
+                            E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
                         </p>
+                        <img src="images/telefono_cristalensi.gif" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
+                        <h3>Seguici anche su</h3>
+                        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
                     </div>
                 </div>
