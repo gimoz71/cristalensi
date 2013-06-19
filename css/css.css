@@ -1911,7 +1911,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
-  border-top: dotted 1px #999;
+  /*border-top: dotted 1px #999;*/
   /*.cart-link {
       padding-right: 25px;
       background: url('/../images/carrello-bianco.gif') no-repeat right center;
@@ -2081,26 +2081,27 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   padding-top: 5px;
   display: inline-block;
+  font-size: 110%;
 }
-/* line 709, ../sass/css.scss */
+/* line 710, ../sass/css.scss */
 .scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 713, ../sass/css.scss */
+/* line 714, ../sass/css.scss */
 .scheda-prodotto li .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 724, ../sass/css.scss */
+/* line 725, ../sass/css.scss */
 .scheda-prodotto li .scheda {
   background: url("../images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 724, ../sass/css.scss */
+  /* line 725, ../sass/css.scss */
   .scheda-prodotto li .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2156,13 +2157,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 732, ../sass/css.scss */
+/* line 733, ../sass/css.scss */
 .scheda-prodotto li .facebook {
   float: left !important;
   margin-right: 1.23457%;
   width: 18.51852%;
 }
-/* line 737, ../sass/css.scss */
+/* line 738, ../sass/css.scss */
 .scheda-prodotto li .fb-slogan {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2177,12 +2178,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 748, ../sass/css.scss */
+/* line 749, ../sass/css.scss */
 .scheda-prodotto li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 753, ../sass/css.scss */
+/* line 754, ../sass/css.scss */
 .carrello, .iscrizione {
   width: 100%;
   font-size: 90%;
@@ -2190,12 +2191,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 760, ../sass/css.scss */
+/* line 761, ../sass/css.scss */
 .carrello a, .iscrizione a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 760, ../sass/css.scss */
+  /* line 761, ../sass/css.scss */
   .carrello a, .iscrizione a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2250,104 +2251,104 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 765, ../sass/css.scss */
+  /* line 766, ../sass/css.scss */
   .carrello a img, .iscrizione a img {
     margin-bottom: 5px;
   }
 }
-/* line 770, ../sass/css.scss */
+/* line 771, ../sass/css.scss */
 .carrello table, .iscrizione table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 775, ../sass/css.scss */
+/* line 776, ../sass/css.scss */
 .carrello table tr, .iscrizione table tr {
   text-align: left;
 }
-/* line 778, ../sass/css.scss */
+/* line 779, ../sass/css.scss */
 .carrello table tr td, .iscrizione table tr td {
   padding: 3px 0;
   width: 50%;
 }
-/* line 781, ../sass/css.scss */
+/* line 782, ../sass/css.scss */
 .carrello table tr td input[type=text], .carrello table tr td input[type=password], .iscrizione table tr td input[type=text], .iscrizione table tr td input[type=password] {
   width: 50%;
 }
-/* line 787, ../sass/css.scss */
+/* line 788, ../sass/css.scss */
 .carrello .table, .iscrizione .table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 792, ../sass/css.scss */
+/* line 793, ../sass/css.scss */
 .carrello .table .tr, .iscrizione .table .tr {
   text-align: left;
   width: 100%;
 }
-/* line 796, ../sass/css.scss */
+/* line 797, ../sass/css.scss */
 .carrello .table .td, .iscrizione .table .td {
   padding: 3px 0;
   float: left;
   width: 50%;
 }
-/* line 801, ../sass/css.scss */
+/* line 802, ../sass/css.scss */
 .carrello .table input[type=text], .carrello .table input[type=password], .iscrizione .table input[type=text], .iscrizione .table input[type=password] {
   width: 50%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 805, ../sass/css.scss */
+  /* line 806, ../sass/css.scss */
   .carrello .table .tr, .carrello .table .td, .carrello .table input[type=text], .carrello .table input[type=password], .carrello .table input[type=submit], .carrello .table input[type=reset], .iscrizione .table .tr, .iscrizione .table .td, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table input[type=submit], .iscrizione .table input[type=reset] {
     width: 100% !important;
     float: none !important;
   }
 }
-/* line 812, ../sass/css.scss */
+/* line 813, ../sass/css.scss */
 .carrello .colonna, .iscrizione .colonna {
   display: inline-block;
   text-align: right;
 }
-/* line 816, ../sass/css.scss */
+/* line 817, ../sass/css.scss */
 .carrello .riga, .iscrizione .riga {
   padding: 5px 1.23457%;
   border-bottom: dashed 1px #ccc;
   margin: 0 !important;
 }
-/* line 821, ../sass/css.scss */
+/* line 822, ../sass/css.scss */
 .carrello .articolo, .iscrizione .articolo {
   width: 48.14815%;
   text-align: left;
 }
-/* line 825, ../sass/css.scss */
+/* line 826, ../sass/css.scss */
 .carrello .quantita, .iscrizione .quantita {
   width: 12.34568%;
 }
-/* line 828, ../sass/css.scss */
+/* line 829, ../sass/css.scss */
 .carrello .prezzo_unitario, .iscrizione .prezzo_unitario {
   width: 15.4321%;
 }
-/* line 831, ../sass/css.scss */
+/* line 832, ../sass/css.scss */
 .carrello .prezzo_totale, .iscrizione .prezzo_totale {
   width: 15.4321%;
 }
-/* line 834, ../sass/css.scss */
+/* line 835, ../sass/css.scss */
 .carrello .elimina, .iscrizione .elimina {
   width: 7.40741%;
 }
-/* line 837, ../sass/css.scss */
+/* line 838, ../sass/css.scss */
 .carrello .data, .iscrizione .data {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 837, ../sass/css.scss */
+  /* line 838, ../sass/css.scss */
   .carrello .data, .iscrizione .data {
     margin-top: 10px;
   }
-  /* line 841, ../sass/css.scss */
+  /* line 842, ../sass/css.scss */
   .carrello .data .scheda, .iscrizione .data .scheda {
     text-align: center;
   }
-  /* line 844, ../sass/css.scss */
+  /* line 845, ../sass/css.scss */
   .carrello .data a, .iscrizione .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2402,25 +2403,25 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 850, ../sass/css.scss */
+/* line 851, ../sass/css.scss */
 .carrello .cart, .iscrizione .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 856, ../sass/css.scss */
+/* line 857, ../sass/css.scss */
 .carrello .cart .total_price, .iscrizione .cart .total_price {
   float: right;
   font-size: 10px;
 }
-/* line 860, ../sass/css.scss */
+/* line 861, ../sass/css.scss */
 .carrello .scheda, .iscrizione .scheda {
   background: url("../images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 860, ../sass/css.scss */
+  /* line 861, ../sass/css.scss */
   .carrello .scheda, .iscrizione .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2477,7 +2478,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 753, ../sass/css.scss */
+  /* line 754, ../sass/css.scss */
   .carrello, .iscrizione {
     width: 100%;
     float: none;
@@ -2486,47 +2487,47 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 877, ../sass/css.scss */
+  /* line 878, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 882, ../sass/css.scss */
+/* line 883, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 884, ../sass/css.scss */
+/* line 885, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 888, ../sass/css.scss */
+/* line 889, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 893, ../sass/css.scss */
+/* line 894, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 898, ../sass/css.scss */
+/* line 899, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 901, ../sass/css.scss */
+/* line 902, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 906, ../sass/css.scss */
+  /* line 907, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
@@ -2534,17 +2535,17 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 912, ../sass/css.scss */
+  /* line 913, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
-/* line 916, ../sass/css.scss */
+/* line 917, ../sass/css.scss */
 #widget-area .slides {
   height: 210px;
 }
 
-/* line 922, ../sass/css.scss */
+/* line 923, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }

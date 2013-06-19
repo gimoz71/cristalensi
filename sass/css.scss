@@ -657,7 +657,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         width: 100%;
         padding: 10px calc-em(5, 810);
         position: relative;
-        border-top: dotted 1px #999;
+        /*border-top: dotted 1px #999;*/
         a {
             font-weight: bold;
             @include respond-to('medium-screens'){
@@ -705,6 +705,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-weight: bold;
                 padding-top: 5px;
                 display: inline-block;
+				font-size: 110%;
         }
         .produttore, .cart-link {
             float: right;
