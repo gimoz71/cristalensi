@@ -13,7 +13,7 @@
             <li class="brown"><a href="#">commenti</a></li>
             <li class="red"><a href="prodotti.asp">prodotti</a></li>
             <li class="blue"><a href="offerte.asp">offerte</a></li>
-            <li class="yellowgreen"><a href="carrello.asp">carrello</a></li>
+            <li class="yellowgreen"><a href="carrello1.asp">carrello</a></li>
             <li class="magenta"><a href="#">condizioni di vendita</a></li>
         </ul>
     </div>
@@ -32,7 +32,7 @@
             <li><a href="#">commenti</a></li>
             <li><a href="prodotti.asp">prodotti</a></li>
             <li><a href="offerte.asp">offerte</a></li>
-            <li><a href="carrello.asp">carrello</a></li>
+            <li><a href="carrello1.asp">carrello</a></li>
             <li><a href="#">condizioni di vendita</a></li>
         </ul>
     </div>
