@@ -1,29 +1,29 @@
+var contentHeight = 0;
+var sideHeight = 0;
+var width = 0;
+
 $(document).ready(function() {
 
-    var contentHeight = 0;
     
     //When btn is clicked
     $("#btn-responsive-menu").click(function() {
         $("#responsive-menu").toggleClass("show");
 
     });
-    $(window).load(function() {
-        contentHeight = $('#content').outerHeight();
-        $("#sidebar-alt").css("height", contentHeight);
-    });
     
-    $(window).resize(function() {
+    function calculate(){
+        contentHeight = $('#content').outerHeight();
+        sideHeight = $("#sidebar-alt").outerHeight();
+        width = $(window).width();
         
-        var width = $(window).width();
-	if (width < 650) {
+        if (width < 650 || sideHeight > contentHeight) {
             $("#sidebar-alt").css("height", 'auto');
 	}
 	else {
-            contentHeight = $('#content').outerHeight();
             $("#sidebar-alt").css("height", contentHeight);
 	}
         
-        
-    });
+    }
+    $(window).load(function() { calculate() }).resize(function() { calculate() });
     
 });

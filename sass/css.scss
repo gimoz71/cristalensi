@@ -455,6 +455,10 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                     margin-bottom: 5px;
                 }
             }
+            span {
+                display: inline-block;
+                height: 2em;
+            }
         }
         .price {
             margin-top: .4em;

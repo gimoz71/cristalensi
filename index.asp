@@ -147,9 +147,9 @@
 										Set objImageSize = Nothing
 							%>
                             	<li>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"><span><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
 										<%else%>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>	
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>	
                                     <%
                                         end if
                                     else
@@ -157,7 +157,7 @@
                                         titolo_img=""
                                         file_img=""
                                     %>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
                                     <%	
                                     end if
                                     img_rs.close
