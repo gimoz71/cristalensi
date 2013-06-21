@@ -69,7 +69,8 @@ if contr=1 then
 		nome_log=log_rs("Nominativo")
 		if nome_log="" then nome_log="Anonimo"
 		italia_log=log_rs("Italia")
-		if italia_log="" then italia_log="Sì"
+		if italia_log="" then italia_log="Si"
+		if italia_log="Sì" then italia_log="Si"
 	
 		Session("idCliente") = idsession
 		Session("nome_log") = nome_log
@@ -84,7 +85,7 @@ else
 	italia_log=Session("italia_log")
 	idsession=Session("idCliente")
 	if idsession="" then idsession=0
-	if italia_log="" then italia_log="Sì"
+	if italia_log="" then italia_log="Si"
 end if
 
 'funzione che mi registra il passaggio da un pagina, un'eventuale tabella aperta e il record aperto
@@ -156,6 +157,7 @@ Function NoLettAcc(strInput)
  strInput = Replace(strInput, "ù", "&ugrave;")
  strInput = Replace(strInput, "ì", "&igrave;")
  strInput = Replace(strInput, "ò", "&ograve;")
+ strInput = Replace(strInput, "€", "&#8364;")
  
  NoLettAcc = strInput 
  

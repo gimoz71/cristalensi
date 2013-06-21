@@ -180,10 +180,11 @@
                         <div>
                             <h3 style="font-size: 14px; display: inline; border: none;">Il tuo ordine: modalit&agrave; di spedizione/ritiro prodotti</h3>
                             <div class="carrello clearfix">
+                                <form name="modulocarrello" id="modulocarrello">
                                 <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantità</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span></p>
                                 <div class="data">
                                     <%if rs.recordcount>0 then%>
-                                        <form name="modulocarrello" id="modulocarrello">
+                                        
                                         <%
                                         Do while not rs.EOF
                                         %>					
@@ -198,36 +199,72 @@
                                         rs.movenext
                                         loop
                                         %>
-                                        </form>
+                                        
 									<%else%>
                                     	<p class="riga">Il carrello è vuoto</p>
                                     <%end if%>
-                                    
+                                    <p>&nbsp;</p>
                                     <h4>Colori misure e annotazioni</h4>
                                     <p>Scrivere in questo spazio il colore e la misura dei prodotti nel caso in cui fossero presenti più varianti degli stessi.<br>Oppure potete usare questo spazio per inserie qualche annotazione o comunicazione.</p>
-                                    <textarea name="NoteCliente" cols="110" rows="2" id="NoteCliente"><%=NoteCliente%></textarea> 
+                                    <textarea name="NoteCliente" cols="100" rows="2" id="NoteCliente" style="margin-left:20px;"><%=NoteCliente%></textarea> 
                                        
                                 </div>
+                                <%
+								Set trasp_rs = Server.CreateObject("ADODB.Recordset")
+								sql = "SELECT * FROM CostiTrasporto"
+								trasp_rs.Open sql, conn, 1, 1
+								%>
+                                <p class="area clearfix"><span class="colonna descrizione">Modalit&agrave; di spedizione - Descrizione</span><span class="colonna prezzo_unitario">Costo</span><span class="colonna prezzo_totale">Totale</span></p>
+                                <div class="data">
+                                        <%
+                                        if trasp_rs.recordcount>0 then
+										Do while not trasp_rs.EOF
+										PkIdSpedizione=trasp_rs("pkid")
+										NomeSpedizione=trasp_rs("nome")
+										DescrizioneSpedizione=trasp_rs("descrizione")
+										CostoSpedizione=trasp_rs("costo")
+										
+										TipoCosto=trasp_rs("TipoCosto")
+										if TipoCosto="" then TipoCosto=3
+                                        %>					
+    
+                                        <p class="riga">
+                                        <span class="colonna descrizione"><input type="radio" name="TipoTrasportoScelto" id="TipoTrasportoScelto" value="<%=PkIdSpedizione%>" <%if PkIdSpedizione=PkIdTrasportoScelto then%> checked="checked"<%end if%> onClick="Cambia();">&nbsp;<b><%=NomeSpedizione%></b><br><%=NoLettAcc(DescrizioneSpedizione)%></span>
+                                        <span class="colonna prezzo_unitario"><%=FormatNumber(CostoSpedizione,2)%><%if TipoCosto=1 then%>€<%end if%><%if TipoCosto=2 then%>%<%end if%></span>
+                                        <span class="colonna prezzo_totale"><%if PkIdSpedizione=PkIdTrasportoScelto then%><%=FormatNumber(CostoSpedizioneTotale,2)%>€<%else%>-<%end if%></span>
+                                        </p>
+                                        <%
+                                        trasp_rs.movenext
+                                        loop
+										end if
+                                        %>
+                                    <p>&nbsp;</p>
+                                    <h4>Riferimenti per l'indirizzo di spedizione</h4>
+                                    <p>E' possibile  indicare anche un indirizzo diverso da quello indicato<br>
+                  (i dati riportati sono gli stessi indicati al momento dell'iscrizione)</p>
+                                    <textarea name="Destinazione" cols="100" rows="2" id="Destinazione" style="margin-left:20px;"><%=Destinazione%></textarea> 
+                                       
+                                </div>
+                                <%trasp_rs.close%>
+                                
                                 <%if ss.recordcount>0 then%>
-                                  <h4 class="cart clearfix"><span class="total_price">Totale carrello: <%if ss("TotaleGenerale")<>0 then%>
+                                  <h4 class="cart clearfix"><span class="total_price">Totale carrello: 
+								  <%if ss("TotaleGenerale")<>0 then%>
 								  <%=FormatNumber(ss("TotaleGenerale"),2)%>
                                   <%else%>
                                   0,00
                                   <%end if%>
-                                  €&nbsp;€
+                                  €&nbsp;
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
-                                    <form method="post" action="<%if italia_log="Sì" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">
-                                    <h4>Colori misure e annotazioni</h4>
-                                    <p>Scrivere in questo spazio il colore e la misura dei prodotti nel caso in cui fossero presenti più varianti degli stessi.<br>Oppure potete usare questo spazio per inserie qualche annotazione o comunicazione.</p>
-                                    <textarea name="NoteCliente" cols="110" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
-                                    <p class="riga" style="text-align: right"><input type="submit" name="continua" value="clicca qui per continuare l'acquisto &raquo;"></p>
-                                    </form>
+                                    
+                                    <input type="button" name="continua" value="&laquo; passo precedente" onClick="location.href='carrello1.asp'" style="float:left;" class="button_link" />
+                                    <input type="button" name="continua" value="clicca qui per continuare l'acquisto &raquo;" onClick="Continua();" style="float:right;" class="button_link_red" />
                                     <%end if%>
-                                    <br>
-                                    <h4>INFORMAZIONI IMPORTANTI SULLA DISPONIBILITA' DEI PRODOTTI</h4>
-                                    <p>Come potete aver notato il nostro catalogo è composto da numerosi prodotti e numerose ditte, a tal ragione alcuni prodotti, al momento della richiesta, potrebbero non essere dispobili immediatamente e potrebbero essere in fase di ordinazione. Nel caso in cui ci fosse urgenza del prodotto desiderato, informarsi direttamente dal nostro staff per l'effettiva disponibilità o tempo di consegna nel caso in cui non fosse disponibile (minimo 2 giorni, massimo 30 giorni). <a href="#">Recapiti per informarsi sulla disponibilità dei prodotti.</a></p>
 								<%end if%>
+                                
+                                </form>
+                                
 								<%
                                 ss.close
                                 rs.close

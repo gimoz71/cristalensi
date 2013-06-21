@@ -215,7 +215,7 @@ end if
                                             end if
                                             col_rs.close
                                             %>
-                                            <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link"><span>Inserisci nel carrello</span></a><span><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px;">&nbsp;pezzi&nbsp;</span></p>
+                                            <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px;">&nbsp;pezzi&nbsp;</span></p>
                                             </form>	
 										<%end if%>
                                     </div>
