@@ -7,13 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi</title>
         <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="js/jquery.blueberry.js"></script>
+        <script src="js/jquery.tipTip.js"></script>
         <link href="css/css.css" rel="stylesheet" type="text/css">
         <link href="css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -23,13 +25,18 @@
                 visibility: hidden;
             }
         </style>
-        <script>
-            $(window).load(function() {
-                    $('.blueberry').blueberry({
-                        pager: false
-                    });
-            });
-        </script>
+        <!--[if lt IE 8]>
+            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <!--[if IE]>
+            <style type="text/css">
+                .clearfix {
+                    zoom: 1;   /* triggers hasLayout */
+                }   /* Only IE can see inside the conditional comment
+                    and read this CSS rule. Don't ever use a normal HTML
+                    comment inside the CC or it will close prematurely. */
+            </style>
+        <![endif]-->
     </head>
     <body>
     <!--plugin facebook-->
@@ -59,7 +66,7 @@
                             </div>
                             <!--facebook-->
                             <div class="social_panel facebook_p">
-                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-width="380" data-height="230" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
                             </div>
                             <!--dicono di noi-->
                             <div class="social_panel twitter_p">
@@ -85,7 +92,7 @@
                                 <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
                             <!--prodotti in offerta-->
-                            <h4 class="area">OFFERTE: non perdere l'occasione!<a href="offerte.asp" style="float: right; padding: 1px 10px;" class="button_link_red" title="Prodotti illuminazone in offerta">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>OFFERTE: non perdere l'occasione!</span><a href="offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
                             <%
 							'random prodotti in offerta
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")
@@ -147,9 +154,9 @@
 										Set objImageSize = Nothing
 							%>
                             	<li>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"><span><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
 										<%else%>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>	
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>	
                                     <%
                                         end if
                                     else
@@ -157,7 +164,7 @@
                                         titolo_img=""
                                         file_img=""
                                     %>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
                                     <%	
                                     end if
                                     img_rs.close
@@ -177,7 +184,7 @@
 							end if
 							%>
                             <!--elenco categorie-->
-                            <h4 class="area">CATALOGO PRODOTTI <a href="ricerca_avanzata_modulo.asp" style="float: right; padding: 1px 10px;" class="button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>CATALOGO PRODOTTI</span><a href="ricerca_avanzata_modulo.asp" class="right button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
                             <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
                             </p>
                             <ul class="catalogo clearfix">
@@ -226,7 +233,7 @@
                             
                             </ul>
                             <!--elenco produttori: select con js-->
-                            <h4 class="area">PRODUTTORI<a href="produttori.asp"  style="float: right; padding: 1px 10px;" class="button_link_red" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>PRODUTTORI</span><a href="produttori.asp" class="right button_link_red" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
                             <p>Se conosci la marca del prodotto la puoi selezionare qui sotto oppure andando all'elenco completo dei produttori.
                             </p>
                             <%

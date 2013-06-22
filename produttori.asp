@@ -14,8 +14,10 @@ Call Visualizzazione("Produttori","0","produttori.asp")
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="js/jquery.blueberry.js"></script>
+        <script src="js/jquery.tipTip.js"></script>
         <link href="css/css.css" rel="stylesheet" type="text/css">
         <link href="css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -25,20 +27,25 @@ Call Visualizzazione("Produttori","0","produttori.asp")
                 visibility: hidden;
             }
         </style>
-        <script>
-            $(window).load(function() {
-                    $('.blueberry').blueberry({
-                        pager: false
-                    });
-            });
-        </script>
+        <!--[if lt IE 8]>
+            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <!--[if IE]>
+            <style type="text/css">
+                .clearfix {
+                    zoom: 1;   /* triggers hasLayout */
+                }   /* Only IE can see inside the conditional comment
+                    and read this CSS rule. Don't ever use a normal HTML
+                    comment inside the CC or it will close prematurely. */
+            </style>
+        <![endif]-->
         <script language="JavaScript" type="text/JavaScript">
-		<!--
-		function MM_openBrWindow(theURL,winName,features) { //v2.0
-		  window.open(theURL,winName,features);
-		}
-		//-->
-		</script>
+            <!--
+            function MM_openBrWindow(theURL,winName,features) { //v2.0
+              window.open(theURL,winName,features);
+            }
+            //-->
+        </script>
     </head>
     <body>
         <div id="wrap">

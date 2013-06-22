@@ -17,7 +17,7 @@
             <%else%>
                 <h3>Area clienti</h3>
                 <p>Per consultare il catalogo non &egrave; necessario iscriversi</p>
-                <p><a href="#" class="info">Maggiori informazioni</a></p>
+                <p><a href="#" class="info tiptip" title="<h3>Informazioni</h3><strong>Inserire maggiori informazioni quì.</strong>Come vedi si può usare anche l'<strong style='color: red'>html</strong>, o inserire un <a href='#'>link</a>.">Maggiori informazioni</a></p>
                 <form method="post" name="logon" action="<%=MM_LoginAction%><%if Request.QueryString<>"" then%>&<%else%>?<%end if%>contr=1">
 
                    <label for="username">Login</label>

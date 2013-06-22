@@ -3,13 +3,12 @@ var sideHeight = 0;
 var width = 0;
 
 $(document).ready(function() {
-
-    
     //When btn is clicked
     $("#btn-responsive-menu").click(function() {
         $("#responsive-menu").toggleClass("show");
-
     });
+    
+    $(".tiptip").tipTip({activation: 'click', maxWidth: "auto", keepAlive: true});
     
     function calculate(){
         contentHeight = $('#content').outerHeight();
@@ -24,6 +23,17 @@ $(document).ready(function() {
 	}
         
     }
-    $(window).load(function() { calculate() }).resize(function() { calculate() });
-    
+    calculate(); 
+    $('#content').bind('DOMSubtreeModified', function(){
+        calculate();
+        console.log('dom changed!');
+    });
+    $(window).load(function() {
+        calculate(); 
+         $('.blueberry').blueberry({
+             pager: false
+         });
+    }).resize(function() { 
+         calculate(); 
+    });
 });
