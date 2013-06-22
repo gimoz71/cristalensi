@@ -374,7 +374,7 @@ pkid = Session("idCliente")
                                         <div>Nazione</div>
                                     </div>
                                     <div class="tr">
-                                        Italia:&nbsp;&nbsp;Si&nbsp;<input type="radio" name="italia" value="S&igrave;" <% if pkid > 0 then %><%if rs("italia")="S&igrave;" then%> checked<%end if %><%else%> checked<%end if %> />&nbsp;&nbsp;No&nbsp;<input type="radio" name="italia" value="No" <% if pkid > 0 then %><%if rs("italia")="No" then%> checked<%end if %><%end if %> />&nbsp;Altra nazione
+                                        Italia:&nbsp;&nbsp;Si&nbsp;<input type="radio" name="italia" value="Si" <% if pkid > 0 then %><%if rs("italia")="Si" then%> checked<%end if %><%else%> checked<%end if %> />&nbsp;&nbsp;No&nbsp;<input type="radio" name="italia" value="No" <% if pkid > 0 then %><%if rs("italia")="No" then%> checked<%end if %><%end if %> />&nbsp;Altra nazione
                 <input name="nazionediversa" type="text" class="form" id="nazionediversa"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nazionediversa")%><%else%><%if mode=3 then%><%=nazionediversa%><%end if%><%end if%>" />
                                         
                                     </div>
@@ -466,14 +466,20 @@ Opporsi gratuitamente al trattamento dei dati che lo riguardano.</textarea>
                                           <br /><br />
                                           <font color="#990000"><b>Benvenuto/a&nbsp;<%=nome_log%></b></font>
                                           <br /><br />
-                                          <a href="<%if italia_log="S&igrave;" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
+                                          <a href="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
+                                          <br><br>
+                          					<a href="commenti_form.asp">cliccando qui puoi inserire un tuo commento sul sito internet.<br>
+						  					Commenti &raquo;</a>
                                       <%else%>
                                   
                                       <%if pkid=0 then%>
                                           Grazie per esserti iscritto/a a Cristalensi.it<br />
                                           Da questo momento potrai completare e inviare i tuoi ordini senza dover inserire tutti i tuoi dati.
                                           <br /><br />
-                                          <a href="<%if italia_log="S&igrave;" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">Cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
+                                          <a href="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">Cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
+                                          <br><br>
+                          					<a href="commenti_form.asp">cliccando qui puoi inserire un tuo commento sul sito internet.<br>
+						  					Commenti &raquo;</a>
                                       <%else%>
                                           I tuoi dati sono stati aggiornati regolarmente.
                                       <%end if%>

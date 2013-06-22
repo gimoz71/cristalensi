@@ -9,8 +9,13 @@
                             cat_rs.open sql,conn, 1, 1
                             if cat_rs.recordcount>0 then
                             Do while not cat_rs.EOF
+							
+							nomepagina_categorie = cat_rs("NomePagina")
+							if nomepagina_categorie="" then nomepagina_categorie="#"
+							'if nomepagina_categorie<>"#" then nomepagina_categorie="public/pagine/"&nomepagina_categorie
+							if nomepagina_categorie<>"#" then nomepagina_categorie="categorie.asp?pkid="&cat_rs("PkId")
                             %>    
-                                <li><a href="/public/pagine/<%=cat_rs("NomePagina")%>" title="<%=cat_rs("Titolo")%>">&raquo; <%=cat_rs("Titolo")%></a></li>
+                                <li><a href="<%=nomepagina_categorie%>" title="<%=cat_rs("Titolo")%>">&raquo; <%=cat_rs("Titolo")%></a></li>
                             <%
                             cat_rs.movenext
                             loop
@@ -51,12 +56,23 @@
                             <p style="font-weight: bold"><a href="produttori.asp" title="Elenco completo dei produttori di articoli per illuminazione" class="button_link">Elenco completo marche</a></p>
                             <%end if%>
                             <%cs.close%>
+                            <p><br /><br />Scopri le ultime offerte del nostro catalogo online</p>
+                            <a href="offerte.asp" class="button_link_red">PRODOTTI IN OFFERTA</a>
+                            <p><br /><br />Vuoi ricercare un prodotto per codice, per nome oppure in una fascia di prezzo? Vuoi combinare una serie di caratteristiche?
+                                Sfrutta la ricerca avanzata</p>
+                            <a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a>
 						<%end if%>
-                        <p><br /><br />Scopri le ultime offerte del nostro catalogo online</p>
-                        <a href="offerte.asp" class="button_link_red">PRODOTTI IN OFFERTA</a>
-                        <p><br /><br />Vuoi ricercare un prodotto per codice, per nome oppure in una fascia di prezzo? Vuoi combinare una serie di caratteristiche?
-                            Sfrutta la ricerca avanzata</p>
-                        <a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a>
+                        
+                        <%if idsession>0 then%>
+                            <h3>Area clienti</h3>
+                            <p><font color="#990000"><strong>Benvenuto<br />&nbsp;<%=nome_log%></strong></font></p>
+                            <p>&raquo;<a href="iscrizione.asp">I dati della tua iscrizione</a></p>
+                            <p>&raquo;<a href="ordini_elenco.asp">I tuoi ordini</a></p>
+                            <p>&raquo;<a href="ordini_elenco.asp">Inserisci un commento</a></p>
+                            <p>&raquo;<a href="/admin/logout.asp">Esci dall'Area clienti</a></p>
+                            <p>&nbsp;</p>
+                        <%end if%>
+                        
                         <h3>Contattaci!</h3>
                         <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione</p>
                         <p><a href="#" class="info">Contatti e riferimenti</a></p>
@@ -72,5 +88,7 @@
                         <img src="images/telefono_cristalensi.gif" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
                         <h3>Seguici anche su</h3>
                         <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
+                        <p>&nbsp;</p>
+                        
                     </div>
                 </div>
