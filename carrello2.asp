@@ -247,8 +247,7 @@
                                         %>
                                     <p>&nbsp;</p>
                                     <h4>Riferimenti per l'indirizzo di spedizione</h4>
-                                    <p>E' possibile  indicare anche un indirizzo diverso da quello indicato<br>
-                  (i dati riportati sono gli stessi indicati al momento dell'iscrizione)</p>
+                                    <p>E' possibile  indicare anche un indirizzo diverso da quello indicato (i dati riportati sono gli stessi indicati al momento dell'iscrizione)</p>
                                     <textarea name="Destinazione" cols="100" rows="2" id="Destinazione" style="margin-left:20px;"><%=Destinazione%></textarea> 
                                        
                                 </div>

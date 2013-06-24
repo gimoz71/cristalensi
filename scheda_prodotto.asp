@@ -204,11 +204,11 @@ end if
                                                 <input type="hidden" name="num_colori" id="num_colori" value="1">
                                                 <input type="hidden" name="colore" id="colore" value="*****">
                                             <%end if%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i>&nbsp;|
                                            
                                             <%if col_rs.recordcount>1 then%>
-                                                 | <select name="colore" id="colore" style="width:auto">
-                                                <option value="">Colore</option>
+                                                <select name="colore" id="colore" style="width:auto; margin-left:10px;">
+                                                <option value="">Scegli il colore</option>
                                                 <%
                                                 Do While Not col_rs.EOF
                                                 %>
@@ -222,7 +222,7 @@ end if
                                             end if
                                             col_rs.close
                                             %>
-                                            <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px;">&nbsp;pezzi&nbsp;</span></p>
+                                            <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span></p>
                                             </form>	
                                         <%end if%>
                                     </div>

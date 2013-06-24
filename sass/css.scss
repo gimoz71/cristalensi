@@ -127,7 +127,7 @@ input, button {
         	width: 100%;
 		}
         @include respond-to('medium-screens'){
-            padding: 10px 0;
+            padding: 5px 0;
             font-size: 1em;
         }
     }
@@ -413,7 +413,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     .area {
         border: none;
         background-color: $yellow;
-        padding: calc-em(10, 810);
+        padding: calc-em(5, 810);
         margin: calc-em(20, 810) 0;
         span {
             display: inline-block;
@@ -890,7 +890,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 	}
 	.cart .total_price {
 		float: right;
-		font-size: 10px;
+		font-size: 12px;
 	}
 	.scheda {
 		background: url('../images/dett_prodotto.jpg') no-repeat left center;

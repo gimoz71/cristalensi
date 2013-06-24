@@ -252,9 +252,9 @@ Call Visualizzazione("",0,"carrello1.asp")
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     <form method="post" action="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">
-                                    <h4>Colori misure e annotazioni<%="itttt:"&italia_log%></h4>
+                                    <h4>Colori misure e annotazioni</h4>
                                     <p>Scrivere in questo spazio il colore e la misura dei prodotti nel caso in cui fossero presenti più varianti degli stessi.<br>Oppure potete usare questo spazio per inserie qualche annotazione o comunicazione.</p>
-                                    <textarea name="NoteCliente" cols="110" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
+                                    <textarea name="NoteCliente" cols="105" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
                                     <p class="riga" style="text-align: right"><input type="submit" name="continua" value="clicca qui per continuare l'acquisto &raquo;" class="button_link_red"></p>
                                     </form>
                                     <%end if%>
