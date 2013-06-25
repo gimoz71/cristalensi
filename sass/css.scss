@@ -16,11 +16,11 @@ html[xmlns] .clearfix {
 }
 
 @for $level from 0 to 5 {
-  h#{$level + 1} {
-    font-size: 1.750em - ($level * .35em);
-      border-bottom: dashed 1px #000;
-      font-weight: bold;
-  }
+    h#{$level + 1} {
+        font-size: 1.750em - ($level * .35em);
+        border-bottom: dashed 1px #000;
+        font-weight: bold;
+    }
 }
 
 a:link, a:visited {
@@ -76,6 +76,18 @@ label {
     margin-bottom: 10px;
 }
 
+.left{
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
 select {
     background-color: #FFFFFF;
     border: 1px solid #333333;
@@ -115,7 +127,7 @@ input, button {
         	width: 100%;
 		}
         @include respond-to('medium-screens'){
-            padding: 10px 0;
+            padding: 5px 0;
             font-size: 1em;
         }
     }
@@ -359,14 +371,25 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
     }
     .social_panel {
-        display: block; height: 250px; border: dashed 1px #ccc;width: 50%;
+        display: block;
+        min-height: 230px;
+        border: dashed 1px #ccc;
+        width: 50%;
         width: calc-em(400, 810);
         margin: 10px 0;
         &.facebook_p {
             float: left;
+                    * {
+                        width: 100% !important;
+                    }
         }
         &.twitter_p {
             float: right;
+        }
+        & p {
+            border-top: dashed 1px #F90;
+            padding: calc-em(15, 810) 0;
+            margin: 0 calc-em(10, 810);
         }
         @include respond-to('medium-screens'){
             display: none;
@@ -380,20 +403,36 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         text-align: center;
         padding: calc-em(10, 810);
         clear: both;
-        font-size: 90%;
-            * {
-                color: #fff;
-                border: none;
-            }
+        font-size: 95%;
+        * {
+            color: #fff;
+            border: none;
+        }
         margin: calc-em(20, 810) 0; 
     }
     .area {
         border: none;
         background-color: $yellow;
-        padding: calc-em(10, 810);
+        padding: calc-em(5, 810);
         margin: calc-em(20, 810) 0;
-        @include respond-to('medium-screens'){
+        span {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        @include respond-to('handhelds'){
             text-align: center;
+            *{
+                float: none;
+            }
+        }
+    }
+    .area-commenti {
+    border-bottom: none;
+    background-color: $yellow;
+    padding: calc-em(13, 810);
+    margin: calc-em(0, 810) 0;
+    @include respond-to('medium-screens'){
+        text-align: center;
         }
     }
     .negozio {
@@ -429,6 +468,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         width: calc-em(192, 810);
         padding: calc-em(5, 810);
         float: left;
+		text-align:center;
         position: relative;
         a {
             @extend %font-base;
@@ -439,6 +479,10 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 img {
                     margin-bottom: 5px;
                 }
+            }
+            .nome-articolo {
+                display: inline-block;
+                height: 2em;
             }
         }
         .price {
@@ -452,12 +496,13 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-weight: bold;
         }
         .scheda {
-            background: url('../images/dett_prodotto.jpg') no-repeat left center;
-            padding-left: 25px;
+            /*background: url('../images/dett_prodotto.jpg') no-repeat left center;*/
+            /*padding-left: 25px;*/
             @include respond-to('medium-screens'){
                 @include buttonmobile;
                 width: 50%;
             }
+            
         }
         @include respond-to('medium-screens'){
             width: 100%;
@@ -468,7 +513,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     }
 }
 
-.galleria {
+.galleria, .produttori {
     width: 100%;
     font-size: 90%;
     li {
@@ -487,13 +532,13 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             @include respond-to('medium-screens'){
                 @include buttonmobile;
                 img {
-                    margin-bottom: 5px;
+                    margin-bottom: calc-em(10, 810);
                 }
             }
             &.button_link {
                 @include buttonmobile;
                 img {
-                    margin-bottom: 5px;
+                    margin-bottom: calc-em(10, 810);
                 }
             }
         }
@@ -544,6 +589,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                     width: auto;
                     img {
                         margin-bottom: 5px;
+                        float: none;
                     }
                 }
             }
@@ -588,16 +634,28 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-weight: bold;
             padding-top: 5px;
             display: inline-block;
+			font-size: 110%;
         }
         .produttore, .cart-link {
             float: right;
             font-size: 10px;
+        }
+        .cart-link {
+            float: right;
+            font-size: 10px;
+            @include respond-to('medium-screens'){
+                margin-top: 10px;
+                float: none;
+            }
         }
         .cart {
             border: none;
             background-color: $yellow;
             padding: calc-em(10, 810);
             margin: calc-em(20, 810) 0;
+            @include respond-to('medium-screens'){
+                text-align: center;
+            }
         }
         .cart-link span {
             padding-right: 25px;
@@ -629,7 +687,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         width: 100%;
         padding: 10px calc-em(5, 810);
         position: relative;
-        border-top: dotted 1px #999;
+        /*border-top: dotted 1px #999;*/
         a {
             font-weight: bold;
             @include respond-to('medium-screens'){
@@ -677,6 +735,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-weight: bold;
                 padding-top: 5px;
                 display: inline-block;
+				font-size: 110%;
         }
         .produttore, .cart-link {
             float: right;
@@ -794,6 +853,10 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 		width: calc-em(390, 810);
 		text-align: left;
 	}
+	.descrizione{
+		width: calc-em(500, 810);
+		text-align: left;
+	}
 	.quantita {
 		width: calc-em(100, 810);
 	}
@@ -827,7 +890,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 	}
 	.cart .total_price {
 		float: right;
-		font-size: 10px;
+		font-size: 12px;
 	}
 	.scheda {
 		background: url('../images/dett_prodotto.jpg') no-repeat left center;
@@ -884,6 +947,9 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 #widget-area{
     @include respond-to('medium-screens'){
        display:none;
+    }
+    .slides {
+        height: 210px;
     }
 }
 

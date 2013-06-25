@@ -17,20 +17,21 @@
             <%else%>
                 <h3>Area clienti</h3>
                 <p>Per consultare il catalogo non &egrave; necessario iscriversi</p>
-                <p><a href="#" class="info">Maggiori informazioni</a></p>
+                <p><a href="#" class="info tiptip" title="<h3>Informazioni</h3><strong>Inserire maggiori informazioni quì.</strong>Come vedi si può usare anche l'<strong style='color: red'>html</strong>, o inserire un <a href='#'>link</a>.">Maggiori informazioni</a></p>
                 <form method="post" name="logon" action="<%=MM_LoginAction%><%if Request.QueryString<>"" then%>&<%else%>?<%end if%>contr=1">
 
                    <label for="username">Login</label>
                    <input type="text" name="login">
                    <label for="password">Password</label>
                    <input type="password" name="password">
-                   <button type="submit">Entra</button>
+                   <button type="submit" style="margin-top:10px;">Entra</button>
                <%if contr=2 then%>
                <p style="background: #900; color: #fff; font-weight: bold; padding: 5px;">Attenzione! I dati inseriti<br />non sono corretti.</p>
                <%end if%>
                </form>
                <p><a href="recupero_pw.asp" class="password-recover">Recupera la password</a></p>
-               <button type="submit" onClick="location.href='iscrizione.asp'">REGISTRATI!</button>
+               <!--<button type="submit" onClick="location.href='iscrizione.asp'">REGISTRATI!</button>-->
+               <div align="center"><a href="iscrizione.asp" class="button_link_red">&nbsp;&nbsp;&nbsp;&nbsp;REGISTRATI!&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
 
                <h3>Pagamenti</h3>
                <p><a href="#" class="info">Condizioni di vendita</a></p>
@@ -52,6 +53,7 @@
             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
         </p>
         <img src="images/telefono_cristalensi.gif" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
-        <p>Seguici anche su Facebook<br /><a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" style="padding:10px 0 20px 0px;" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
+        <h3>Seguici anche su</h3>
+        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
     </div>
 </div>

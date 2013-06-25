@@ -7,13 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi</title>
         <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="js/jquery.blueberry.js"></script>
+        <script src="js/jquery.tipTip.js"></script>
         <link href="css/css.css" rel="stylesheet" type="text/css">
         <link href="css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -23,15 +25,30 @@
                 visibility: hidden;
             }
         </style>
-        <script>
-            $(window).load(function() {
-                    $('.blueberry').blueberry({
-                        pager: false
-                    });
-            });
-        </script>
+        <!--[if lt IE 8]>
+            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <!--[if IE]>
+            <style type="text/css">
+                .clearfix {
+                    zoom: 1;   /* triggers hasLayout */
+                }   /* Only IE can see inside the conditional comment
+                    and read this CSS rule. Don't ever use a normal HTML
+                    comment inside the CC or it will close prematurely. */
+            </style>
+        <![endif]-->
     </head>
     <body>
+    <!--plugin facebook-->
+    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>    
+    <!--fine plugin facebook-->
         <div id="wrap">
             <!--#include file="inc_header.asp"-->
             <div id="main-content">
@@ -47,14 +64,35 @@
                                 <img class="facebook" src="images/facebook.png">
                                 <p style="padding-top:10px; line-height: 160%;">Seguici su FACEBOOK collegandoti alla pagina ufficiale di Cristalensi, troverai le ultime novità e bellissime fotografie di arredamento da condividere con i tuoi amici, inoltre troverai altri appassionati di illuminazione per parlare dei nostri articoli</p>
                             </div>
-                            <div class="social_panel facebook_p">Facebook place</div>
-                            <div class="social_panel twitter_p">Twitter place</div>
+                            <!--facebook-->
+                            <div class="social_panel facebook_p">
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
+                            </div>
+                            <!--dicono di noi-->
+                            <div class="social_panel twitter_p">
+                            <h4 class="area-commenti">Dicono di noi...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red">TUTTI I COMMENTI &raquo;</a></h4>
+                            <%
+							Set com_rs = Server.CreateObject("ADODB.Recordset")
+							sql = "SELECT TOP 5 * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
+							com_rs.open sql,conn, 1, 1
+				
+							if com_rs.recordcount>0 then
+								Do While not com_rs.EOF
+							%>
+							<p><%=Left(NoHTML(com_rs("Testo")), 120)%>...</p>
+							<%
+								com_rs.movenext
+								loop
+							end if
+							com_rs.close
+							%>
+                            </div>
                             <div class="slogan">
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
                                 <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
                             <!--prodotti in offerta-->
-                            <h4 class="area">OFFERTE: non perdere l'occasione!<a href="offerte.asp" style="float: right;">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>OFFERTE: non perdere l'occasione!</span><a href="offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
                             <%
 							'random prodotti in offerta
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")
@@ -83,9 +121,12 @@
 									prezzolistino = rndArray( 4, i+ numero )
 									
 									NomePagina = rndArray( 5, i+ numero )
-									if NomePagina="" then NomePagina="#"
-									'if NomePagina<>"#" then NomePagina="public/pagine/"&NomePagina
-									if NomePagina<>"#" then NomePagina="scheda_prodotto.asp?pkid="&id
+									if Len(NomePagina)>0 then
+										'NomePagina="/public/pagine/"&NomePagina
+										NomePagina="scheda_prodotto.asp?id="&id
+									else
+										NomePagina="#"
+									end if
 									
 									
 									'recupero l'immagine
@@ -113,9 +154,9 @@
 										Set objImageSize = Nothing
 							%>
                             	<li>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
 										<%else%>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>	
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>	
                                     <%
                                         end if
                                     else
@@ -123,14 +164,14 @@
                                         titolo_img=""
                                         file_img=""
                                     %>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
                                     <%	
                                     end if
                                     img_rs.close
                                     %>
                                     <%if prezzolistino<>"" then%><p class="price">Prezzo listino: <span><%=prezzolistino%>€</span></p><%end if%>
                                     <%if prezzoarticolo<>"" then%><p class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</p><%end if%>
-                                    <a class="scheda" href="<%=NomePagina%>" title="Scheda del prodotto <%=titolo_prodotto%>">Scheda prodotto</a>
+                                    <a class="scheda" href="<%=NomePagina%>" title="Scheda del prodotto <%=titolo_prodotto%>"><span class="button_link">Scheda prodotto</span></a>
                                 </li>
                                 <%
 									NEXT
@@ -143,7 +184,7 @@
 							end if
 							%>
                             <!--elenco categorie-->
-                            <h4 class="area">CATALOGO PRODOTTI <a href="#" style="float: right; padding: 1px 5px;" class="button_link_red">RICERCA AVANZATA &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>CATALOGO PRODOTTI</span><a href="ricerca_avanzata_modulo.asp" class="right button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
                             <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
                             </p>
                             <ul class="catalogo clearfix">
@@ -176,9 +217,9 @@
 									
 									if file_img<>"" then
 									%>
-									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><%=titolo_cat%></a>
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
 										<%else%>
-									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="immagini/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><%=titolo_cat%></a>	
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="immagini/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><span class="button_link"><%=titolo_cat%></span></a>	
 									<%	
 										end if
 									%>
@@ -192,7 +233,7 @@
                             
                             </ul>
                             <!--elenco produttori: select con js-->
-                            <h4 class="area">PRODUTTORI<a href="produttori.asp" style="float: right;" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>PRODUTTORI</span><a href="produttori.asp" class="right button_link_red" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
                             <p>Se conosci la marca del prodotto la puoi selezionare qui sotto oppure andando all'elenco completo dei produttori.
                             </p>
                             <%
@@ -232,7 +273,6 @@
             </div>
         </div>
         <!--#include file="inc_footer.asp"-->
-        <script src="js/init.js"></script>
     </body>
 </html>
 <!--#include file="inc_strClose.asp"-->
