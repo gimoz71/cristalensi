@@ -2321,72 +2321,73 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 /* line 827, ../sass/css.scss */
 .carrello .table .td, .iscrizione .table .td {
-  padding: 3px 0;
+  padding: 5px 0;
   float: left;
   width: 50%;
 }
 /* line 832, ../sass/css.scss */
-.carrello .table input[type=text], .carrello .table input[type=password], .iscrizione .table input[type=text], .iscrizione .table input[type=password] {
+.carrello .table input[type=text], .carrello .table input[type=password], .carrello .table textarea, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table textarea {
   width: 50%;
+  margin: 5px 0;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 836, ../sass/css.scss */
+  /* line 837, ../sass/css.scss */
   .carrello .table .tr, .carrello .table .td, .carrello .table input[type=text], .carrello .table input[type=password], .carrello .table input[type=submit], .carrello .table input[type=reset], .iscrizione .table .tr, .iscrizione .table .td, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table input[type=submit], .iscrizione .table input[type=reset] {
     width: 100% !important;
     float: none !important;
   }
 }
-/* line 843, ../sass/css.scss */
+/* line 844, ../sass/css.scss */
 .carrello .colonna, .iscrizione .colonna {
   display: inline-block;
   text-align: right;
 }
-/* line 847, ../sass/css.scss */
+/* line 848, ../sass/css.scss */
 .carrello .riga, .iscrizione .riga {
   padding: 5px 1.23457%;
   border-bottom: dashed 1px #ccc;
   margin: 0 !important;
 }
-/* line 852, ../sass/css.scss */
+/* line 853, ../sass/css.scss */
 .carrello .articolo, .iscrizione .articolo {
   width: 48.14815%;
   text-align: left;
 }
-/* line 856, ../sass/css.scss */
+/* line 857, ../sass/css.scss */
 .carrello .descrizione, .iscrizione .descrizione {
   width: 61.7284%;
   text-align: left;
 }
-/* line 860, ../sass/css.scss */
+/* line 861, ../sass/css.scss */
 .carrello .quantita, .iscrizione .quantita {
   width: 12.34568%;
 }
-/* line 863, ../sass/css.scss */
+/* line 864, ../sass/css.scss */
 .carrello .prezzo_unitario, .iscrizione .prezzo_unitario {
   width: 15.4321%;
 }
-/* line 866, ../sass/css.scss */
+/* line 867, ../sass/css.scss */
 .carrello .prezzo_totale, .iscrizione .prezzo_totale {
   width: 15.4321%;
 }
-/* line 869, ../sass/css.scss */
+/* line 870, ../sass/css.scss */
 .carrello .elimina, .iscrizione .elimina {
   width: 7.40741%;
 }
-/* line 872, ../sass/css.scss */
+/* line 873, ../sass/css.scss */
 .carrello .data, .iscrizione .data {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 872, ../sass/css.scss */
+  /* line 873, ../sass/css.scss */
   .carrello .data, .iscrizione .data {
     margin-top: 10px;
   }
-  /* line 876, ../sass/css.scss */
+  /* line 877, ../sass/css.scss */
   .carrello .data .scheda, .iscrizione .data .scheda {
     text-align: center;
   }
-  /* line 879, ../sass/css.scss */
+  /* line 880, ../sass/css.scss */
   .carrello .data a, .iscrizione .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2441,25 +2442,25 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 885, ../sass/css.scss */
+/* line 886, ../sass/css.scss */
 .carrello .cart, .iscrizione .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 891, ../sass/css.scss */
+/* line 892, ../sass/css.scss */
 .carrello .cart .total_price, .iscrizione .cart .total_price {
   float: right;
   font-size: 12px;
 }
-/* line 895, ../sass/css.scss */
+/* line 896, ../sass/css.scss */
 .carrello .scheda, .iscrizione .scheda {
   background: url("../images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 895, ../sass/css.scss */
+  /* line 896, ../sass/css.scss */
   .carrello .scheda, .iscrizione .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2515,7 +2516,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 903, ../sass/css.scss */
+/* line 904, ../sass/css.scss */
 .carrello .testo_grande, .iscrizione .testo_grande {
   text-align: center;
   font-size: 14px;
@@ -2531,47 +2532,47 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 917, ../sass/css.scss */
+  /* line 918, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 922, ../sass/css.scss */
+/* line 923, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 924, ../sass/css.scss */
+/* line 925, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 928, ../sass/css.scss */
+/* line 929, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 933, ../sass/css.scss */
+/* line 934, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 938, ../sass/css.scss */
+/* line 939, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 941, ../sass/css.scss */
+/* line 942, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 946, ../sass/css.scss */
+  /* line 947, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
@@ -2579,17 +2580,17 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 952, ../sass/css.scss */
+  /* line 953, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
-/* line 956, ../sass/css.scss */
+/* line 957, ../sass/css.scss */
 #widget-area .slides {
   height: 210px;
 }
 
-/* line 962, ../sass/css.scss */
+/* line 963, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }

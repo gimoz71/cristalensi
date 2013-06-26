@@ -825,12 +825,13 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 			width: 100%;
 		}
 		.td {
-			padding: 3px 0;
+			padding: 5px 0;
 			float: left;
 			width: 50%;
 		}
-		input[type=text], input[type=password]{
+		input[type=text], input[type=password], textarea {
 			width: 50%;
+			margin: 5px 0;
 		}
 		@include respond-to('medium-screens'){
 			.tr, .td, input[type=text], input[type=password], input[type=submit] , input[type=reset] {
