@@ -900,6 +900,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 			width: 50%;
 		}
 	}
+	.testo_grande {
+		text-align:center;
+		font-size: 14px;
+		font-weight:bold;
+	}
 	
 	@include respond-to('medium-screens'){
 		width: 100%;
