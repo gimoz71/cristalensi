@@ -357,6 +357,9 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     
 }
 #content{
+    > div {
+        padding: calc-em(20, 810);
+    }
     width: calc-em(810, 810);
     background: #fff;
     float: left;
@@ -409,6 +412,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             border: none;
         }
         margin: calc-em(20, 810) 0; 
+        &.small {
+            * {
+                margin: 0;
+            }
+        }
     }
     .area {
         border: none;
@@ -441,6 +449,12 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         margin-right: calc-em(10, 810);
         float: left;
     }
+    .immagini {
+        @extend .negozio;
+        width: calc-em(240, 810);
+        margin-bottom: calc-em(10, 810);
+        margin-top: calc-em(10, 810);
+    }
     .anni {
         float: right;
         width: calc-em(100, 810);
@@ -450,14 +464,20 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         margin-left: calc-em(10, 810);
         width: calc-em(150, 810);
     }
-    > div {
-        padding: calc-em(20, 810);
-    }
     @include respond-to('medium-screens'){
         width: 100%;
         float: none;
         .negozio {
             display: none;
+        }
+    }
+    h3.corporate {
+        clear: both;
+        border: none;
+        font-weight: normal;
+        font-size: 90%;
+        &:first-child {
+            margin-top: 20px;
         }
     }
 }
