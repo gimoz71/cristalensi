@@ -38,15 +38,15 @@
 			Oggetto = "Pagamento con Paypal non andato a buon fine"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
 '
 '			'invio al webmaster
 '			
@@ -57,17 +57,17 @@
 			Oggetto = "Pagamento con Paypal non andato a buon fine"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 %>

@@ -83,17 +83,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con bonifico bancario"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -121,17 +121,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con bonifico bancario"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -140,17 +140,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con bonifico bancario"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if
@@ -188,17 +188,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento in contrassegno"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -226,17 +226,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento in contrassegno"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -246,17 +246,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento in contrassegno"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if
@@ -436,7 +436,7 @@
     <input type="hidden" name="image_url" value="http://www.cristalensi.it/immagini/logo_cristalensi_piccolo.jpg">
     <input type="submit" name="paga_adesso" value="CLICCA QUI PER PAGARE CON IL SISTEMA SICURO DI PAYPAL" class="button" alt="Effettua i tuoi pagamenti con PayPal. È un sistema rapido, gratuito e sicuro." style="height: 40px; font-size:14px; font-weight:bold;">
     </form>								
-                                    <br><br><a href="#" onclick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="https://www.paypal.com/en_US/IT/i/bnr/bnr_horizontal_solution_PP_178wx80h.gif" border="0" alt="Che cos'&egrave; PayPal"></a><br><br>
+                                    <br><br><a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="https://www.paypal.com/en_US/IT/i/bnr/bnr_horizontal_solution_PP_178wx80h.gif" border="0" alt="Che cos'&egrave; PayPal"></a><br><br>
                                   <h2>La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento.<br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi

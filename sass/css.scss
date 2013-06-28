@@ -454,6 +454,14 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         width: calc-em(240, 810);
         margin-bottom: calc-em(10, 810);
         margin-top: calc-em(10, 810);
+		margin-left: calc-em(5, 810);
+    }
+	.immagini-2 {
+        @extend .negozio;
+        width: calc-em(120, 810);
+        margin-bottom: calc-em(10, 810);
+        margin-top: calc-em(10, 810);
+		margin-left: calc-em(20, 810);
     }
     .anni {
         float: right;

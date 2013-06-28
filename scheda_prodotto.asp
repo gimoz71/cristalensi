@@ -239,19 +239,21 @@ end if
 
                                             if zoom<>"" then
                                                     'percorso_img=server.mappath("public/"&zoom&"")
+													percorso_img="public/"&zoom
                                                     'percorso_img=path_img&zoom
-                                                    percorso_img="../"&zoom
+                                                    'percorso_img="../"&zoom
                                             else
                                                     'percorso_img=server.mappath("public/"&file_img&"")
+													percorso_img="public/"&file_img
                                                     'percorso_img=path_img&file_img
-                                                    percorso_img="../"&file_img
+                                                    'percorso_img="../"&file_img
                                             end if
                                             'calcolo misure immagini
                                             Set objImageSize = New ImageSize
                                             With objImageSize
                                               '.ImageFile = server.mappath("public/"&file_img&"")
-                                              .ImageFile = path_img&file_img
-                                              '.ImageFile = "public/"&file_img
+                                              '.ImageFile = path_img&file_img
+                                              .ImageFile = "public/"&file_img
 
                                               If .IsImage Then
                                                     W=.ImageWidth
@@ -267,7 +269,7 @@ end if
                                     %>
                                     <div class="thumb">
                                         <a href="<%=percorso_img%>" rel="lightbox[prod]" title="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>">
-					<img class="bordo-img" src="../<%=file_img%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" hspace="2" vspace="2" border="0" alt="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" title="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" /></a>
+					<img class="bordo-img" src="public/<%=file_img%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" hspace="2" vspace="2" border="0" alt="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" title="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" /></a>
                                     </div>
                                     <%
                                     img_rs.movenext

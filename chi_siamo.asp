@@ -67,14 +67,14 @@
                             <a href="images/chi-siamo/grandi/2.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/2.jpg"></a>
                             <a href="images/chi-siamo/grandi/3.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/3.jpg"></a>
                             <a href="images/chi-siamo/grandi/4.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/4.jpg"></a>
-                            <a href="images/chi-siamo/grandi/7.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/7.jpg"></a>
-                            <a href="images/chi-siamo/grandi/10.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/10.jpg"></a>
-                            <a href="images/chi-siamo/grandi/11.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/11.jpg"></a>
-                            <a href="images/chi-siamo/grandi/13.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/13.jpg"></a>
-                            <a href="images/chi-siamo/grandi/9.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/9.jpg"></a>
-                            <a href="images/chi-siamo/grandi/8.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/8.jpg"></a>
-                            <a href="images/chi-siamo/grandi/15.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/15.jpg"></a>
-                            <a href="images/chi-siamo/grandi/16.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini" src="images/chi-siamo/piccole/16.jpg"></a>
+                            <a href="images/chi-siamo/grandi/7.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini-2" src="images/chi-siamo/piccole/7.jpg"></a>
+                            <a href="images/chi-siamo/grandi/10.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini-2" src="images/chi-siamo/piccole/10.jpg"></a>
+                            <a href="images/chi-siamo/grandi/11.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini-2" src="images/chi-siamo/piccole/11.jpg"></a>
+                            <a href="images/chi-siamo/grandi/13.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini-2" src="images/chi-siamo/piccole/13.jpg"></a>
+                            <a href="images/chi-siamo/grandi/9.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini-2" src="images/chi-siamo/piccole/9.jpg"></a>
+                            <a href="images/chi-siamo/grandi/8.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini-2" src="images/chi-siamo/piccole/8.jpg"></a>
+                            <a href="images/chi-siamo/grandi/15.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini-2" src="images/chi-siamo/piccole/15.jpg"></a>
+                            <a href="images/chi-siamo/grandi/16.jpg" class="fancybox" rel="gallery" title="descrizione immagine"><img class="immagini-2" src="images/chi-siamo/piccole/16.jpg"></a>
                         </div>
                     </div>
                 </div>
@@ -82,6 +82,7 @@
             </div>
         </div>
         <!--#include file="inc_footer.asp"-->
+        <script src="js/init.js"></script>
     </body>
 </html>
 <!--#include file="inc_strClose.asp"-->
