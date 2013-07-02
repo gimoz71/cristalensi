@@ -443,25 +443,35 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         text-align: center;
         }
     }
-    .negozio {
-        width: calc-em(212, 810);
+    .img-border {
         border: solid 6px #ccc;
+    }
+    .negozio {
+        @extend .img-border;
+        width: calc-em(212, 810);
         margin-right: calc-em(10, 810);
         float: left;
     }
     .immagini {
         @extend .negozio;
-        width: calc-em(240, 810);
+        width: calc-em(235, 810);
         margin-bottom: calc-em(10, 810);
         margin-top: calc-em(10, 810);
-		margin-left: calc-em(5, 810);
+        margin-left: calc-em(5, 810);
     }
-	.immagini-2 {
+    .immagini-2 {
         @extend .negozio;
         width: calc-em(120, 810);
         margin-bottom: calc-em(10, 810);
         margin-top: calc-em(10, 810);
-		margin-left: calc-em(20, 810);
+        margin-left: calc-em(20, 810);
+        float: none;
+    }
+    .immagini-scheda {
+        @extend .img-border;
+        margin-left: calc-em(20, 810);
+        margin-right: calc-em(10, 810);
+        float: left;
     }
     .anni {
         float: right;
@@ -609,18 +619,18 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         position: relative;
         border-top: dotted 1px #999;
         
-            a {
-                @extend %font-base;
-                font-weight: bold;
-                @include respond-to('medium-screens'){
-                    @include buttonmobile;
-                    width: auto;
-                    img {
-                        margin-bottom: 5px;
-                        float: none;
-                    }
+        a {
+            @extend %font-base;
+            font-weight: bold;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                width: auto;
+                img {
+                    margin-bottom: 5px;
+                    float: none;
                 }
             }
+        }
         .thumb {
             width: calc-em(200, 810);
             float: left;

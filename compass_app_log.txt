@@ -379,3 +379,16 @@ Load paths:
 2013-06-28 17:12:03 identical css/css.css 
 2013-06-28 17:14:03 overwrite css/css.css 
 2013-06-28 17:26:50 overwrite css/css.css 
+2013-07-02 07:55:25     error sass/css.scss (Line 450: Invalid CSS after "...end .img-border": expected "{", was ";")
+2013-07-02 07:55:25 overwrite css/css.css 
+2013-07-02 07:55:52 overwrite css/css.css 
+2013-07-02 07:56:36 overwrite css/css.css 
+2013-07-02 07:58:34 overwrite css/css.css 
+2013-07-02 08:01:05 overwrite css/css.css 
+2013-07-02 08:01:48 overwrite css/css.css 
+2013-07-02 08:01:59 overwrite css/css.css 
+2013-07-02 08:15:57 overwrite css/css.css 
+2013-07-02 08:16:40 overwrite css/css.css 
+2013-07-02 08:17:04 overwrite css/css.css 
+2013-07-02 08:18:30 overwrite css/css.css 
+2013-07-02 08:19:20 overwrite css/css.css 
