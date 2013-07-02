@@ -9,7 +9,7 @@
         <ul>
             <li class="green"><a href="index.asp">home page</a></li>
             <li class="darkorange"><a href="chi_siamo.asp">chi siamo</a></li>
-            <li class="skyblue"><a href="#">contatti</a></li>
+            <li class="skyblue"><a href="contatti.asp">contatti</a></li>
             <li class="brown"><a href="#">commenti</a></li>
             <li class="red"><a href="prodotti.asp">prodotti</a></li>
             <li class="blue"><a href="offerte.asp">offerte</a></li>
@@ -28,7 +28,7 @@
         <ul>
             <li><a href="index.asp">home page</a></li>
             <li><a href="chi_siamo.asp">chi siamo</a></li>
-            <li><a href="#">contatti</a></li>
+            <li><a href="contatti.asp">contatti</a></li>
             <li><a href="#">commenti</a></li>
             <li><a href="prodotti.asp">prodotti</a></li>
             <li><a href="offerte.asp">offerte</a></li>
