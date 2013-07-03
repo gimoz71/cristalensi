@@ -741,7 +741,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             }
         }
         .thumb {
-            width: calc-em(200, 810);
+            /*width: calc-em(200, 810);*/
             float: left;
             margin-right: calc-em(10, 810);
             @include respond-to('medium-screens'){

@@ -40,6 +40,11 @@
         <ul class="slides">
             <li><img src="images/gallery/foto1.jpg" /></li>
             <li><img src="images/gallery/foto2.jpg" /></li>
+            <li><img src="images/gallery/foto3.jpg" /></li>
+            <li><img src="images/gallery/foto4.jpg" /></li>
+            <li><img src="images/gallery/foto5.jpg" /></li>
+            <li><img src="images/gallery/foto6.jpg" /></li>
+            <li><img src="images/gallery/foto7.jpg" /></li>
         </ul>
     </div>
 </header>

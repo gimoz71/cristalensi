@@ -2062,7 +2062,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 /* line 743, ../sass/css.scss */
 .scheda-prodotto li .thumb {
-  width: 24.69136%;
+  /*width: calc-em(200, 810);*/
   float: left;
   margin-right: 1.23457%;
 }
