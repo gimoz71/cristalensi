@@ -1,0 +1,211 @@
+<!--#include file="inc_strConn.asp"-->
+<%
+
+	mode = request("mode")
+	if mode = "" then mode = 0
+
+	if mode=1 then
+		email=request("email")
+	end if
+
+	if mode=1 then
+		Set rs=Server.CreateObject("ADODB.Recordset")
+		sql = "Select email,password,nominativo From Clienti where email='"&email&"'"
+		rs.Open sql, conn, 1, 1
+		if rs.recordcount=0 then
+			mode=2
+		else
+			nominativo=rs("nominativo")
+			password=rs("password")
+		end if
+		rs.close
+	end if
+	
+	if mode = 1 then
+		
+			
+			'invio l'email di recupero pw al cliente
+			HTML1 = ""
+			HTML1 = HTML1 & "<html>"
+			HTML1 = HTML1 & "<head>"
+			HTML1 = HTML1 & "<meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">"
+			HTML1 = HTML1 & "<title>Cristalensi</title>"
+			HTML1 = HTML1 & "</head>"
+			HTML1 = HTML1 & "<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>"
+			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
+			HTML1 = HTML1 & "<tr>"
+			HTML1 = HTML1 & "<td>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Spett.le "&nominativo&", la password inserita al momento dell'iscrizione a Cristalensi.it &egrave; la seguente:<br><br></font>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Password: <b>"&password&"</b><br>Login: <b>"&email&"</b></font><br>"
+			HTML1 = HTML1 & "</td>"
+			HTML1 = HTML1 & "</tr>"
+			HTML1 = HTML1 & "</table>"
+			HTML1 = HTML1 & "</body>"
+			HTML1 = HTML1 & "</html>"
+		
+			Mittente = "info@cristalensi.it"
+			Destinatario = email
+			Oggetto = "Recupero password dal sito Cristalensi.it"
+			Testo = HTML1
+
+			'Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
+			
+			'fine invio email
+			
+			'invio l'email all'amministratore
+			HTML1 = ""
+			HTML1 = HTML1 & "<html>"
+			HTML1 = HTML1 & "<head>"
+			HTML1 = HTML1 & "<meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">"
+			HTML1 = HTML1 & "<title>Cristalensi</title>"
+			HTML1 = HTML1 & "</head>"
+			HTML1 = HTML1 & "<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>"
+			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
+			HTML1 = HTML1 & "<tr>"
+			HTML1 = HTML1 & "<td>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>E' stata fatta una richiesta di recupero password dal seguente cliente: "&nominativo&"<br> La password inserita al momento dell'iscrizione a Cristalensi.it &egrave; la seguente:<br></font>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Password: <b>"&password&"</b><br>Login: <b>"&email&"</b></font><br>"
+			HTML1 = HTML1 & "</td>"
+			HTML1 = HTML1 & "</tr>"
+			HTML1 = HTML1 & "</table>"
+			HTML1 = HTML1 & "</body>"
+			HTML1 = HTML1 & "</html>"
+		
+			Mittente = "info@cristalensi.it"
+			Destinatario = "info@cristalensi.it"
+			Oggetto = "Richiesta recupero password dal sito Cristalensi.it"
+			Testo = HTML1
+
+			'Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
+			
+			'fine invio email
+			
+	end if
+	
+%>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Cristalensi</title>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="js/media-queries-ie.js"></script>
+        <![endif]-->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="js/jquery.blueberry.js"></script>
+        <script src="js/jquery.tipTip.js"></script>
+        <link href="css/css.css" rel="stylesheet" type="text/css">
+        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+        </style>
+        <!--[if lt IE 8]>
+            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <!--[if IE]>
+            <style type="text/css">
+                .clearfix {
+                    zoom: 1;   /* triggers hasLayout */
+                }   /* Only IE can see inside the conditional comment
+                    and read this CSS rule. Don't ever use a normal HTML
+                    comment inside the CC or it will close prematurely. */
+            </style>
+        <![endif]-->
+        <SCRIPT language="JavaScript">
+
+		function verifica() {
+				
+			email=document.newsform.email.value;
+		
+			if (email==""){
+				alert("Non  e\' stato compilato il campo \"Email\".");
+				return false;
+			}
+			if (email.indexOf("@")==-1 || email.indexOf(".")==-1){
+			alert("ATTENZIONE! \"e-mail\" non valida.");
+			return false; 
+			}
+		
+			else
+		return true
+		
+		}
+		
+		</SCRIPT>
+    </head>
+    <body>
+        <div id="wrap">
+            <!--#include file="inc_header.asp"-->
+            <div id="main-content">
+                
+                <div id="content-sidebar-wrap" >
+                    <div id="content">
+                        <div>
+                        <%if mode=0 or mode=2 then%>                        
+                        	<h3 style="font-size: 14px; display: inline; border: none;">Recupero password cliente</h3>
+                            <p>Da questa pagina puoi ottenere la password inserita al momento della registrazione a Cristalensi.<br>
+						Informazione importante: &egrave; necessario che l'indirizzo <strong>Email</strong> sia lo stesso usato per l'iscrizione.<br>
+						Ti ricordiamo inoltre che l'indirizzo <strong>Email</strong> lo dovrai utilizzare come <strong>Login</strong> per accedere ai tuoi futuri ordini.</p>
+							<div class="iscrizione clearfix">
+                            	<form method="post" action="recupero_pw.asp?mode=1" name="newsform" onSubmit="return verifica();">
+                                <div class="table">
+                                    <div class="tr" style="text-align:center;">
+                                            <strong>E-mail</strong> (obbligatoria)
+                                            
+                                    </div>
+                                    <div class="tr" style="text-align:center;">
+                                    <input name="email" type="text" id="email" size="30" maxlength="30" value="<% if pkid > 0 then %><%=rs("email")%><%else%><%if mode=2 or mode=3 then%><%=email%><%end if%><%end if%>" />
+                                    </div>
+                                    <%if mode=2 then%>
+                                    <div class="tr" style="text-align:center;">
+                          			<font color="#990000"><b>Attenzione! L'e-mail inserita non &egrave; corretta</b></font>
+                                    </div>
+                        			<%end if%>
+                                    <div class="tr"><p style="text-align: center;"><input type="submit" name="accedi" value="Invia" class="button_link" /></p></div>
+                                </div>
+                                </form>
+                            </div>
+                        <%else%>
+                        	<h3 style="font-size: 14px; display: inline; border: none;">Recupero password cliente</h3>
+                            <p style="text-align:center; padding-top:20px">La password di accesso a Cristalensi.it &egrave; stata inviata regolarmente al tuo indirizzo e-mail: controllandolo puoi recuperare i dati di accesso al sito internet. <br /><br /><a href="prodotti.asp">Per tornare alla Galleria prodotti, cliccare qui.</a>
+                            </p>    
+                        <%end if%>
+                        </div>
+                    </div>
+                </div>
+                <!--#include file="inc_sx.asp"-->
+            </div>
+        </div>
+        <!--#include file="inc_footer.asp"-->
+    </body>
+</html>
+<!--#include file="inc_strClose.asp"-->

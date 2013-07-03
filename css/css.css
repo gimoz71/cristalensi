@@ -2419,19 +2419,36 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   width: 7.40741%;
 }
 /* line 915, ../sass/css.scss */
+.carrello .num_ordine, .iscrizione .num_ordine {
+  width: 24.69136%;
+  text-align: left;
+}
+/* line 919, ../sass/css.scss */
+.carrello .totale_ordine, .iscrizione .totale_ordine {
+  width: 8.64198%;
+}
+/* line 922, ../sass/css.scss */
+.carrello .stato, .iscrizione .stato {
+  width: 19.75309%;
+}
+/* line 925, ../sass/css.scss */
+.carrello .azioni, .iscrizione .azioni {
+  width: 44.44444%;
+}
+/* line 928, ../sass/css.scss */
 .carrello .data, .iscrizione .data {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 915, ../sass/css.scss */
+  /* line 928, ../sass/css.scss */
   .carrello .data, .iscrizione .data {
     margin-top: 10px;
   }
-  /* line 919, ../sass/css.scss */
+  /* line 932, ../sass/css.scss */
   .carrello .data .scheda, .iscrizione .data .scheda {
     text-align: center;
   }
-  /* line 922, ../sass/css.scss */
+  /* line 935, ../sass/css.scss */
   .carrello .data a, .iscrizione .data a {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2486,25 +2503,25 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 928, ../sass/css.scss */
+/* line 941, ../sass/css.scss */
 .carrello .cart, .iscrizione .cart {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 934, ../sass/css.scss */
+/* line 947, ../sass/css.scss */
 .carrello .cart .total_price, .iscrizione .cart .total_price {
   float: right;
   font-size: 12px;
 }
-/* line 938, ../sass/css.scss */
+/* line 951, ../sass/css.scss */
 .carrello .scheda, .iscrizione .scheda {
   background: url("../images/dett_prodotto.jpg") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 938, ../sass/css.scss */
+  /* line 951, ../sass/css.scss */
   .carrello .scheda, .iscrizione .scheda {
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2560,7 +2577,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 946, ../sass/css.scss */
+/* line 959, ../sass/css.scss */
 .carrello .testo_grande, .iscrizione .testo_grande {
   text-align: center;
   font-size: 14px;
@@ -2576,47 +2593,47 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 960, ../sass/css.scss */
+  /* line 973, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 965, ../sass/css.scss */
+/* line 978, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 967, ../sass/css.scss */
+/* line 980, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 971, ../sass/css.scss */
+/* line 984, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 976, ../sass/css.scss */
+/* line 989, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 981, ../sass/css.scss */
+/* line 994, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 984, ../sass/css.scss */
+/* line 997, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 989, ../sass/css.scss */
+  /* line 1002, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
@@ -2624,17 +2641,17 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 995, ../sass/css.scss */
+  /* line 1008, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
-/* line 999, ../sass/css.scss */
+/* line 1012, ../sass/css.scss */
 #widget-area .slides {
   height: 210px;
 }
 
-/* line 1005, ../sass/css.scss */
+/* line 1018, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }

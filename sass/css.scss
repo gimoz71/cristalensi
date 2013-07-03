@@ -912,6 +912,19 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 	.elimina {
 		width: calc-em(60, 810);
 	}
+	.num_ordine {
+		width: calc-em(200, 810);
+		text-align:left;
+	}
+	.totale_ordine {
+		width: calc-em(70, 810);
+	}
+	.stato {
+		width: calc-em(160, 810);
+	}
+	.azioni {
+		width: calc-em(360, 810);
+	}
 	.data {
 		width: 100%;
 		@include respond-to('medium-screens'){
