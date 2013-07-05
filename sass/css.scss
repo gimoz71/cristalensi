@@ -84,6 +84,10 @@ label {
     float: right;
 }
 
+.sfondo-giallo {
+	background-color: #FFEEAA;
+}
+
 .clear {
     clear: both;
 }
@@ -734,7 +738,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             }
         }
         .thumb {
-            width: calc-em(200, 810);
+            /*width: calc-em(200, 810);*/
             float: left;
             margin: 0 calc-em(30, 810);
             img {
@@ -911,6 +915,19 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 	}
 	.elimina {
 		width: calc-em(60, 810);
+	}
+	.num_ordine {
+		width: calc-em(200, 810);
+		text-align:left;
+	}
+	.totale_ordine {
+		width: calc-em(70, 810);
+	}
+	.stato {
+		width: calc-em(160, 810);
+	}
+	.azioni {
+		width: calc-em(360, 810);
 	}
 	.data {
 		width: 100%;

@@ -10,7 +10,7 @@
             <p><font color="#990000"><strong>Benvenuto<br />&nbsp;<%=nome_log%></strong></font></p>
             <p>&raquo;<a href="iscrizione.asp">I dati della tua iscrizione</a></p>
             <p>&raquo;<a href="ordini_elenco.asp">I tuoi ordini</a></p>
-            <p>&raquo;<a href="ordini_elenco.asp">Inserisci un commento</a></p>
+            <p>&raquo;<a href="commenti_form.asp">Inserisci un commento</a></p>
             <p>&raquo;<a href="/admin/logout.asp">Esci dall'Area clienti</a></p>
         <%else%>
             <%if Instr(MM_LoginAction, "iscrizione")>0 then%>
