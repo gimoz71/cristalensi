@@ -475,7 +475,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         @extend .img-border;
         margin-left: calc-em(20, 810);
         margin-right: calc-em(10, 810);
-        float: left;
+        float: none;
     }
     .anni {
         float: right;
@@ -735,18 +735,22 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             @include respond-to('medium-screens'){
                 @include buttonmobile;
                 width: auto;
-                img {
-                    margin-bottom: 5px;
-                }
             }
         }
         .thumb {
             /*width: calc-em(200, 810);*/
             float: left;
-            margin-right: calc-em(10, 810);
+            margin: 0 calc-em(30, 810);
+            img {
+                float: none;
+            }
             @include respond-to('medium-screens'){
                 float: none;
                 width: 100%;
+                margin: 0;
+                img {
+                    border: none !important;
+                }
             }
         }
         .data {
