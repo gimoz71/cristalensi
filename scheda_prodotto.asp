@@ -20,9 +20,6 @@ if id>0 then
 		fkproduttore=prod_rs("fkproduttore")
 		if fkproduttore="" then fkproduttore=0
 		
-		offerta=prod_rs("offerta")
-		if offerta="" then offerta=0
-		
 		if fkproduttore>0 then
 			Set pr_rs = Server.CreateObject("ADODB.Recordset")
 			sql = "SELECT * FROM Produttori WHERE PkId="&fkproduttore&""
@@ -199,44 +196,40 @@ end if
                                         <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a></span>
                                         <%else%>
-                                            <%if offerta=10 then%>
-												<p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i>&nbsp;|&nbsp;<span class="cristalprice">IL PRODOTTO NON E' DISPONIBILE, CONTATTACI!</span></p>
-											<%else%>
-                                                <form name="newsform2" id="newsform2" onSubmit="return verifica_2();">
-                                                <input type="hidden" name="id" id="id" value="<%=id%>">
+                                            <form name="newsform2" id="newsform2" onSubmit="return verifica_2();">
+                                            <input type="hidden" name="id" id="id" value="<%=id%>">
+                                            <%
+                                            Set col_rs = Server.CreateObject("ADODB.Recordset")
+                                            sql = "SELECT [Prodotto-Colore].FkProdotto, Colori.Titolo FROM [Prodotto-Colore] INNER JOIN Colori ON [Prodotto-Colore].FkColore = Colori.PkId WHERE ((([Prodotto-Colore].FkProdotto)="&id&")) ORDER BY Colori.Titolo ASC"
+                                            col_rs.open sql,conn, 1, 1
+                                            if col_rs.recordcount>1 then
+                                            %>
+                                                <input type="hidden" name="num_colori" id="num_colori" value="<%=col_rs.recordcount%>">
+                                            <%else%>
+                                                <input type="hidden" name="num_colori" id="num_colori" value="1">
+                                                <input type="hidden" name="colore" id="colore" value="*****">
+                                            <%end if%>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i>&nbsp;|
+                                           
+                                            <%if col_rs.recordcount>1 then%>
+                                                <select name="colore" id="colore" style="width:auto; margin-left:10px;">
+                                                <option value="">Scegli il colore</option>
                                                 <%
-                                                Set col_rs = Server.CreateObject("ADODB.Recordset")
-                                                sql = "SELECT [Prodotto-Colore].FkProdotto, Colori.Titolo FROM [Prodotto-Colore] INNER JOIN Colori ON [Prodotto-Colore].FkColore = Colori.PkId WHERE ((([Prodotto-Colore].FkProdotto)="&id&")) ORDER BY Colori.Titolo ASC"
-                                                col_rs.open sql,conn, 1, 1
-                                                if col_rs.recordcount>1 then
+                                                Do While Not col_rs.EOF
                                                 %>
-                                                    <input type="hidden" name="num_colori" id="num_colori" value="<%=col_rs.recordcount%>">
-                                                <%else%>
-                                                    <input type="hidden" name="num_colori" id="num_colori" value="1">
-                                                    <input type="hidden" name="colore" id="colore" value="*****">
-                                                <%end if%>
-                                                <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i>&nbsp;|
-                                               
-                                                <%if col_rs.recordcount>1 then%>
-                                                    <select name="colore" id="colore" style="width:auto; margin-left:10px;">
-                                                    <option value="">Scegli il colore</option>
-                                                    <%
-                                                    Do While Not col_rs.EOF
-                                                    %>
-                                                        <option value="<%=col_rs("Titolo")%>"><%=col_rs("Titolo")%></option>
-                                                    <%
-                                                    col_rs.movenext
-                                                    loop
-                                                    %>
-                                                    </select>
+                                                    <option value="<%=col_rs("Titolo")%>"><%=col_rs("Titolo")%></option>
                                                 <%
-                                                end if
-                                                col_rs.close
+                                                col_rs.movenext
+                                                loop
                                                 %>
-                                                <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span></p>
-                                                </form>	
-                                        	<%end if%>
-										<%end if%>
+                                                </select>
+                                            <%
+                                            end if
+                                            col_rs.close
+                                            %>
+                                            <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span></p>
+                                            </form>	
+                                        <%end if%>
                                     </div>
                                     <%
                                     Set img_rs = Server.CreateObject("ADODB.Recordset")
@@ -263,15 +256,14 @@ end if
                                             'calcolo misure immagini
                                             Set objImageSize = New ImageSize
                                             With objImageSize
-                                              .ImageFile = server.mappath("public/"&file_img&"")
+                                              '.ImageFile = server.mappath("public/"&file_img&"")
                                               '.ImageFile = path_img&file_img
-                                              '.ImageFile = "public/"&file_img
+                                              .ImageFile = "public/"&file_img
 
                                               If .IsImage Then
                                                     W=.ImageWidth
                                                     H=.ImageHeight
                                                     'response.Write("w:"&w&"h:"&h)
-													
                                               Else
                                                     'Response.Write "Name: " & .ImageName & "<br>"
                                                     'Response.Write "it isn't an image"
@@ -280,11 +272,11 @@ end if
                                             End With
                                             Set objImageSize = Nothing
                                     %>
+
+
                                     <div class="thumb">
-
-
                                         <a href="<%=percorso_img%>" class="fancybox" rel="gallery" title="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>">
-					<img src="public/<%=file_img%>" width="<%if W>H then%><%if W<=160 then%><%=W%>px<%else%>160px<%end if%><%else%><%if W<=90 then%><%=W%>px<%else%>90px<%end if%><%end if%>" height="<%if H<=120 then%><%=H%>px<%else%>120px<%end if%>" hspace="2" vspace="2" border="0" alt="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" title="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" /></a>
+					<img class="img-border" src="public/<%=file_img%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" alt="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" title="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" /></a>
                                     </div>
                                     <%
                                     img_rs.movenext
