@@ -186,13 +186,11 @@ end if
                                     <h3><%=Titolo_prodotto%> - <%=codicearticolo%></h3>
                                     <p class="area clearfix"><%if codicearticolo<>"" then%>Codice articolo <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
                                     <div class="data">
-                                        <div style="float: right; width: 30%; background:#cc0; padding: 5px; text-align: center;">
-                                             <%if prezzoarticolo=0 then%>
-                                                <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a></span>
-                                            <%else%>
-                                                <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%><br><i>Iva compresa</i>
-                                            <%end if%>
-                                        </div>
+                                        <%if prezzoarticolo=0 then%>
+                                           <p class="cart-panel clearfix"s tyle="float: right; width: 30%;  text-align: center;"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a></span>
+                                       <%else%>
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%><br><i>Iva compresa</i>
+                                       <%end if%>
                                         <p><%=descrizione_prodotto%></p>
                                         <%if FkCategoria2>0 then%>
                                             <p> Il prodotto lo trovi nella categoria: <a href="/prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a></p>

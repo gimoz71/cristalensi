@@ -408,3 +408,26 @@ Load paths:
 2013-07-04 08:35:49 overwrite css/css.css 
 2013-07-04 08:36:07 overwrite css/css.css 
 2013-07-04 08:36:32 overwrite css/css.css 
+2013-07-09 09:05:47 overwrite css/css.css 
+2013-07-09 09:06:16 identical css/css.css 
+2013-07-09 09:06:27 identical css/css.css 
+2013-07-09 09:06:42 identical css/css.css 
+2013-07-09 09:06:54 identical css/css.css 
+2013-07-09 09:08:22 overwrite css/css.css 
+2013-07-09 09:08:55 identical css/css.css 
+2013-07-09 09:11:00 overwrite css/css.css 
+2013-07-09 09:17:46 overwrite css/css.css 
+2013-07-09 09:18:20 overwrite css/css.css 
+2013-07-09 09:18:24 identical css/css.css 
+2013-07-09 09:19:12 overwrite css/css.css 
+2013-07-09 09:19:22 overwrite css/css.css 
+2013-07-09 09:20:20 overwrite css/css.css 
+2013-07-09 09:24:41 overwrite css/css.css 
+2013-07-09 09:24:48 overwrite css/css.css 
+2013-07-09 09:31:43     error sass/css.scss (Line 996: Invalid CSS after "}": expected "}", was "")
+2013-07-09 09:31:43 overwrite css/css.css 
+2013-07-09 09:33:37     error sass/css.scss (Line 996: Invalid CSS after "}": expected "}", was "")
+2013-07-09 09:33:37 identical css/css.css 
+2013-07-09 09:35:40     error sass/css.scss (Line 997: Invalid CSS after "}": expected "}", was "")
+2013-07-09 09:35:40 overwrite css/css.css 
+2013-07-09 09:36:00 overwrite css/css.css 

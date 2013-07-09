@@ -414,10 +414,10 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         background-color: $yellow;
         padding: calc-em(5, 810);
         margin: calc-em(20, 810) 0;
-        span {
+        /*span {
             display: inline-block;
             margin-top: 10px;
-        }
+        }*/
         @include respond-to('handhelds'){
             text-align: center;
             *{
@@ -434,11 +434,36 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         text-align: center;
         }
     }
+    .img-border {
+        border: solid 6px #ccc;
+    }
     .negozio {
+        @extend .img-border;
         width: calc-em(212, 810);
         border: solid 6px #ccc;
         margin-right: calc-em(10, 810);
         float: left;
+    }
+    .immagini {
+        @extend .negozio;
+        width: calc-em(235, 810);
+        margin-bottom: calc-em(10, 810);
+        margin-top: calc-em(10, 810);
+        margin-left: calc-em(5, 810);
+    }
+    .immagini-2 {
+        @extend .negozio;
+        width: calc-em(120, 810);
+        margin-bottom: calc-em(10, 810);
+        margin-top: calc-em(10, 810);
+        margin-left: calc-em(20, 810);
+        float: none;
+    }
+    .immagini-scheda {
+        @extend .img-border;
+        margin-left: calc-em(20, 810);
+        margin-right: calc-em(10, 810);
+        float: none;
     }
     .anni {
         float: right;
@@ -457,6 +482,15 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         float: none;
         .negozio {
             display: none;
+        }
+    }
+    h3.corporate {
+        clear: both;
+        border: none;
+        font-weight: normal;
+        font-size: 90%;
+        &:first-child {
+            margin-top: 20px;
         }
     }
 }
@@ -579,19 +613,18 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         padding: 10px calc-em(5, 810);
         position: relative;
         border-top: dotted 1px #999;
-        
-            a {
-                @extend %font-base;
-                font-weight: bold;
-                @include respond-to('medium-screens'){
-                    @include buttonmobile;
-                    width: auto;
-                    img {
-                        margin-bottom: 5px;
-                        float: none;
-                    }
+        a {
+            @extend %font-base;
+            font-weight: bold;
+            @include respond-to('medium-screens'){
+                @include buttonmobile;
+                width: auto;
+                img {
+                    margin-bottom: 5px;
+                    float: none;
                 }
             }
+        }
         .thumb {
             width: calc-em(200, 810);
             float: left;
@@ -694,7 +727,6 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 width: auto;
                 img {
                     margin-bottom: 5px;
-                    width: auto;
                 }
             }
         }
@@ -722,20 +754,16 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 
         }
         .price {
-            margin-top: .4em;
             span {
                 text-decoration: line-through;
             }
-            padding-top: 5px;
-            display: inline-block;
-            
         }
         .cristalprice {
             color: #c00;
             font-weight: bold;
-                padding-top: 5px;
-                display: inline-block;
-                font-size: 120%;
+            padding: 5px 0;
+            font-size: 140%;
+            display: inline-block;
         }
         .produttore, .cart-link {
             float: right;
@@ -746,6 +774,15 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             background-color: $yellow;
             padding: calc-em(10, 810);
             margin: calc-em(20, 810) 0;
+        }
+        .cart-panel {
+            @extend .cart;
+            background-color: lighten($yellow, 20);
+            border: dashed 2px $yellow;
+            float: right;
+            width: calc-em(200, 810);
+            text-align: center;
+            margin: 0 0 0 10px;
         }
         /*.cart-link {
             padding-right: 25px;
