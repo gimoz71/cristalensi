@@ -10,7 +10,7 @@
             <p><font color="#990000"><strong>Benvenuto<br />&nbsp;<%=nome_log%></strong></font></p>
             <p>&raquo;<a href="iscrizione.asp">I dati della tua iscrizione</a></p>
             <p>&raquo;<a href="ordini_elenco.asp">I tuoi ordini</a></p>
-            <p>&raquo;<a href="ordini_elenco.asp">Inserisci un commento</a></p>
+            <p>&raquo;<a href="commenti_form.asp">Inserisci un commento</a></p>
             <p>&raquo;<a href="/admin/logout.asp">Esci dall'Area clienti</a></p>
         <%else%>
             <%if Instr(MM_LoginAction, "iscrizione")>0 then%>
@@ -54,6 +54,6 @@
         </p>
         <img src="images/telefono_cristalensi.gif" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
         <h3>Seguici anche su</h3>
-        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
+        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" style="padding-bottom: 20px;" /></a>
     </div>
 </div>

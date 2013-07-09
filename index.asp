@@ -66,7 +66,7 @@
                             </div>
                             <!--facebook-->
                             <div class="social_panel facebook_p">
-                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true" data-height="230"></div>
                             </div>
                             <!--dicono di noi-->
                             <div class="social_panel twitter_p">

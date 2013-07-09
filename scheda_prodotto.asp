@@ -75,8 +75,10 @@ end if
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="js/jquery.blueberry.js"></script>
         <script src="js/jquery.tipTip.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
         <link href="css/css.css" rel="stylesheet" type="text/css">
         <link href="css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
         <link href="css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
@@ -100,6 +102,9 @@ end if
             </style>
         <![endif]-->
     	<SCRIPT language="JavaScript">
+            $(document).ready(function() {
+                $('.fancybox').fancybox();
+            });
 		function verifica_1() {
 				
 			quantita=document.newsform2.quantita.value;
@@ -247,19 +252,21 @@ end if
 
                                             if zoom<>"" then
                                                     'percorso_img=server.mappath("public/"&zoom&"")
+													percorso_img="public/"&zoom
                                                     'percorso_img=path_img&zoom
-                                                    percorso_img="../"&zoom
+                                                    'percorso_img="../"&zoom
                                             else
                                                     'percorso_img=server.mappath("public/"&file_img&"")
+													percorso_img="public/"&file_img
                                                     'percorso_img=path_img&file_img
-                                                    percorso_img="../"&file_img
+                                                    'percorso_img="../"&file_img
                                             end if
                                             'calcolo misure immagini
                                             Set objImageSize = New ImageSize
                                             With objImageSize
                                               '.ImageFile = server.mappath("public/"&file_img&"")
-                                              .ImageFile = path_img&file_img
-                                              '.ImageFile = "public/"&file_img
+                                              '.ImageFile = path_img&file_img
+                                              .ImageFile = "public/"&file_img
 
                                               If .IsImage Then
                                                     W=.ImageWidth
@@ -273,9 +280,11 @@ end if
                                             End With
                                             Set objImageSize = Nothing
                                     %>
+
+
                                     <div class="thumb">
-                                        <a href="<%=percorso_img%>" rel="lightbox[prod]" title="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>">
-					<img class="bordo-img" src="../<%=file_img%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" hspace="2" vspace="2" border="0" alt="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" title="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" /></a>
+                                        <a href="<%=percorso_img%>" class="fancybox" rel="gallery" title="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>">
+					<img class="img-border" src="public/<%=file_img%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" alt="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" title="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" /></a>
                                     </div>
                                     <%
                                     img_rs.movenext

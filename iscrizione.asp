@@ -104,17 +104,17 @@ pkid = Session("idCliente")
 			Oggetto = "Iscrizione al sito Cristalensi.it"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -142,17 +142,17 @@ pkid = Session("idCliente")
 			Oggetto = "Nuova iscrizione al sito Cristalensi.it"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -165,17 +165,17 @@ pkid = Session("idCliente")
 			Oggetto = "Nuova iscrizione al sito Cristalensi.it"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 		end if
 
@@ -307,15 +307,15 @@ pkid = Session("idCliente")
                                 <div class="table">
                                     <div class="tr">
                                         <div class="td">
-                                            Login <input name="login" type="text" class="form" id="login" size="30" />
+                                            Login <input name="login" type="text" id="login" size="30" />
                                         </div>
                                         <div class="td">
-                                            Password <input name="password" type="password" class="form" id="password" size="30" />
+                                            Password <input name="password" type="password" id="password" size="30" />
                                             
                                         </div>
                                        
                                     </div>
-                                    <div class="tr"><p style="text-align: center;"><input type="submit" value="accedi" />&nbsp;&nbsp;&nbsp;<a href="recupero_pw.asp">Clicca qui per recuperare la password</a></p></div>
+                                    <div class="tr"><p style="text-align: center;"><input type="submit" name="accedi" value="accedi" class="button_link" />&nbsp;&nbsp;&nbsp;<a href="recupero_pw.asp">Clicca qui per recuperare la password</a></p></div>
                                 </div>
                                 </form>
                             </div>
@@ -333,41 +333,41 @@ pkid = Session("idCliente")
                                     <div class="tr">
                                         <div class="td">
 	                                        Nome e Cognome (*)<br />
-                                            <input name="nominativo" type="text" class="form" id="nominativo"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nominativo")%><%else%><%if mode=3 then%><%=nominativo%><%end if%><%end if%>" />
+                                            <input name="nominativo" type="text" id="nominativo"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nominativo")%><%else%><%if mode=3 then%><%=nominativo%><%end if%><%end if%>" />
                                         </div>
                                         <div class="td">
                                         	Ragione sociale ( nel caso in cui si tratti di un'Azienda )<br />
-                                            <input name="Rag_Soc" type="text" class="form" id="Rag_Soc"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("Rag_Soc")%><%else%><%if mode=3 then%><%=Rag_Soc%><%end if%><%end if%>" />
+                                            <input name="Rag_Soc" type="text" id="Rag_Soc"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("Rag_Soc")%><%else%><%if mode=3 then%><%=Rag_Soc%><%end if%><%end if%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
                                         <div class="td">
                                         Codice Fiscale<br />
-                                            <input name="cod_fisc" type="text" class="form" id="cod_fisc"  size="20" maxlength="16" value="<% if pkid > 0 then %><%=rs("cod_fisc")%><%else%><%if mode=3 then%><%=cod_fisc%><%end if%><%end if%>" />
+                                            <input name="cod_fisc" type="text" id="cod_fisc"  size="20" maxlength="16" value="<% if pkid > 0 then %><%=rs("cod_fisc")%><%else%><%if mode=3 then%><%=cod_fisc%><%end if%><%end if%>" />
                                         </div>
                                         <div class="td">
                                         Partita IVA ( nel caso in cui si tratti di un'Azienda )<br />
-                                            <input name="PartitaIVA" type="text" class="form" id="PartitaIVA"  size="20" maxlength="11" value="<% if pkid > 0 then %><%=rs("PartitaIVA")%><%else%><%if mode=3 then%><%=PartitaIVA%><%end if%><%end if%>" />
+                                            <input name="PartitaIVA" type="text" id="PartitaIVA"  size="20" maxlength="11" value="<% if pkid > 0 then %><%=rs("PartitaIVA")%><%else%><%if mode=3 then%><%=PartitaIVA%><%end if%><%end if%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
                                         <div class="td">
                                         	Indirizzo (*)<br />
-                                            <input name="indirizzo" type="text" class="form" id="indirizzo"  size="30" maxlength="100" value="<% if pkid > 0 then %><%=rs("indirizzo")%><%else%><%if mode=3 then%><%=indirizzo%><%end if%><%end if%>" />
+                                            <input name="indirizzo" type="text" id="indirizzo"  size="30" maxlength="100" value="<% if pkid > 0 then %><%=rs("indirizzo")%><%else%><%if mode=3 then%><%=indirizzo%><%end if%><%end if%>" />
                                         </div>
                                         <div class="td">
                                         	CAP<br />
-                                            <input name="cap" type="text" class="form" id="cap"  size="7" maxlength="5" value="<% if pkid > 0 then %><%=rs("cap")%><%else%><%if mode=3 then%><%=cap%><%end if%><%end if%>" />
+                                            <input name="cap" type="text" id="cap"  size="7" maxlength="5" value="<% if pkid > 0 then %><%=rs("cap")%><%else%><%if mode=3 then%><%=cap%><%end if%><%end if%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
                                         <div class="td">
 	                                        Citt&agrave; (*)<br />
-                                            <input name="citta" type="text" class="form" id="citta"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("citta")%><%else%><%if mode=3 then%><%=citta%><%end if%><%end if%>" />
+                                            <input name="citta" type="text" id="citta"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("citta")%><%else%><%if mode=3 then%><%=citta%><%end if%><%end if%>" />
                                         </div>
                                         <div class="td">
 	                                        Provincia<br />
-                                            <input type="text" name="provincia" id="provincia" value="<% if pkid > 0 then %><%=rs("provincia")%><%else%><%if mode=3 then%><%=provincia%><%end if%><%end if%>" size="3" maxlength="2" class="form" />
+                                            <input type="text" name="provincia" id="provincia" value="<% if pkid > 0 then %><%=rs("provincia")%><%else%><%if mode=3 then%><%=provincia%><%end if%><%end if%>" size="3" maxlength="2" />
                                         </div>
                                     </div>
                                     <div class="tr">
@@ -375,30 +375,30 @@ pkid = Session("idCliente")
                                     </div>
                                     <div class="tr">
                                         Italia:&nbsp;&nbsp;Si&nbsp;<input type="radio" name="italia" value="Si" <% if pkid > 0 then %><%if rs("italia")="Si" then%> checked<%end if %><%else%> checked<%end if %> />&nbsp;&nbsp;No&nbsp;<input type="radio" name="italia" value="No" <% if pkid > 0 then %><%if rs("italia")="No" then%> checked<%end if %><%end if %> />&nbsp;Altra nazione
-                <input name="nazionediversa" type="text" class="form" id="nazionediversa"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nazionediversa")%><%else%><%if mode=3 then%><%=nazionediversa%><%end if%><%end if%>" />
+                <input name="nazionediversa" type="text" id="nazionediversa"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nazionediversa")%><%else%><%if mode=3 then%><%=nazionediversa%><%end if%><%end if%>" />
                                         
                                     </div>
                                     <div class="tr">
                                         <div class="td">
                                         Telefono (*)<br />
-                                            <input name="telefono" type="text" class="form" id="telefono"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("telefono")%><%else%><%if mode=3 then%><%=telefono%><%end if%><%end if%>" />
+                                            <input name="telefono" type="text" id="telefono"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("telefono")%><%else%><%if mode=3 then%><%=telefono%><%end if%><%end if%>" />
                                         </div>
                                         <div class="td">
 	                                        Fax<br />
-                                            <input name="fax" type="text" class="form" id="fax"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("fax")%><%else%><%if mode=3 then%><%=fax%><%end if%><%end if%>" />
+                                            <input name="fax" type="text" id="fax"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("fax")%><%else%><%if mode=3 then%><%=fax%><%end if%><%end if%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
                                         <div class="td">
                                         	<strong>E-mail</strong> (*) - Verr&agrave; usata come <strong>Login</strong> per i futuri ordini<br />
-                                            <input name="email" type="text" class="form" id="email"  size="30" maxlength="100" value="<% if pkid > 0 then %><%=rs("email")%><%else%><%if mode=3 then%><%=email%><%end if%><%end if%>" />
+                                            <input name="email" type="text" id="email"  size="30" maxlength="100" value="<% if pkid > 0 then %><%=rs("email")%><%else%><%if mode=3 then%><%=email%><%end if%><%end if%>" />
 									  	<%if mode=3 then%>
                                           &nbsp;&nbsp;<font color="#990000"><b>Attenzione! L'e-mail inserita non pu&ograve; essere accettata </b></font>
                                         <%end if%>
                                         </div>
                                         <div class="td">
                                         <strong>Password</strong> (*)<br />
-                                            <input name="password" type="password" class="form" id="pw"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("password")%><%else%><%if mode=3 then%><%=password%><%end if%><%end if%>" />
+                                            <input name="password" type="password" id="pw"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("password")%><%else%><%if mode=3 then%><%=password%><%end if%><%end if%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
@@ -420,7 +420,7 @@ pkid = Session("idCliente")
                                     </div>
                                     <div class="tr">
                                         <div>
-                                            <textarea name="privacy" cols="80" rows="5" readonly class="form">INFORMAZIONI RELATIVE AL TRATTAMENTO DI DATI PERSONALI 
+                                            <textarea name="privacy" style="width: 700px;" rows="5" readonly>INFORMAZIONI RELATIVE AL TRATTAMENTO DI DATI PERSONALI 
 Ai sensi dell'art. 10 della L. n&deg;675 del 31/12/1996, l'Azienda informa l'interessato che i dati che lo riguardano, forniti dall'interessato medesimo, formeranno oggetto di trattamento nel rispetto della normativa sopra richiamata. Tali dati verranno trattati per finalita' gestionali, commerciali, promozionali. Il conferimento dei dati alla nostra Azienda e' assolutamente facoltativo. 
 I dati acquisiti potranno essere comunicati e diffusi in osservanza di quanto disposto all'articolo 20 della legge 675/96 allo scopo di perseguire le finalita' sopra indicate. 
 
@@ -448,9 +448,9 @@ Opporsi gratuitamente al trattamento dei dati che lo riguardano.</textarea>
                                     </div>
                                     <div class="tr">
                                         <div>
-                                            <input name="Submit" type="submit" class="form" value="Salva" align="absmiddle" disabled />
+                                            <input name="Submit" type="submit" class="button_link" value="Salva" align="absmiddle" disabled />
                                             &nbsp;
-                                            <input name="Submit2" type="reset" class="form" value="Annulla" />
+                                            <input name="Submit2" type="reset" class="button_link" value="Annulla" />
                                             (*) campo obbligatorio </div>
                                     </div>
                                     <div class="tr">
