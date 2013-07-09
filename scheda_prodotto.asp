@@ -181,6 +181,13 @@ end if
                                     <h3><%=Titolo_prodotto%> - <%=codicearticolo%></h3>
                                     <p class="area clearfix"><%if codicearticolo<>"" then%>Codice articolo <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
                                     <div class="data">
+                                        <div style="float: right; width: 30%; background:#cc0; padding: 5px; text-align: center;">
+                                             <%if prezzoarticolo=0 then%>
+                                                <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a></span>
+                                            <%else%>
+                                                <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%><br><i>Iva compresa</i>
+                                            <%end if%>
+                                        </div>
                                         <p><%=descrizione_prodotto%></p>
                                         <%if FkCategoria2>0 then%>
                                             <p> Il prodotto lo trovi nella categoria: <a href="/prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a></p>
@@ -192,37 +199,38 @@ end if
                                             <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a></span>
                                         <%else%>
                                             <form name="newsform2" id="newsform2" onSubmit="return verifica_2();">
-                                            <input type="hidden" name="id" id="id" value="<%=id%>">
-                                            <%
-                                            Set col_rs = Server.CreateObject("ADODB.Recordset")
-                                            sql = "SELECT [Prodotto-Colore].FkProdotto, Colori.Titolo FROM [Prodotto-Colore] INNER JOIN Colori ON [Prodotto-Colore].FkColore = Colori.PkId WHERE ((([Prodotto-Colore].FkProdotto)="&id&")) ORDER BY Colori.Titolo ASC"
-                                            col_rs.open sql,conn, 1, 1
-                                            if col_rs.recordcount>1 then
-                                            %>
-                                                <input type="hidden" name="num_colori" id="num_colori" value="<%=col_rs.recordcount%>">
-                                            <%else%>
-                                                <input type="hidden" name="num_colori" id="num_colori" value="1">
-                                                <input type="hidden" name="colore" id="colore" value="*****">
-                                            <%end if%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i>&nbsp;|
-                                           
-                                            <%if col_rs.recordcount>1 then%>
-                                                <select name="colore" id="colore" style="width:auto; margin-left:10px;">
-                                                <option value="">Scegli il colore</option>
+                                                <input type="hidden" name="id" id="id" value="<%=id%>">
                                                 <%
-                                                Do While Not col_rs.EOF
+                                                Set col_rs = Server.CreateObject("ADODB.Recordset")
+                                                sql = "SELECT [Prodotto-Colore].FkProdotto, Colori.Titolo FROM [Prodotto-Colore] INNER JOIN Colori ON [Prodotto-Colore].FkColore = Colori.PkId WHERE ((([Prodotto-Colore].FkProdotto)="&id&")) ORDER BY Colori.Titolo ASC"
+                                                col_rs.open sql,conn, 1, 1
+                                                if col_rs.recordcount>1 then
                                                 %>
-                                                    <option value="<%=col_rs("Titolo")%>"><%=col_rs("Titolo")%></option>
-                                                <%
-                                                col_rs.movenext
-                                                loop
-                                                %>
-                                                </select>
-                                            <%
-                                            end if
-                                            col_rs.close
-                                            %>
-                                            <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span></p>
+                                                    <input type="hidden" name="num_colori" id="num_colori" value="<%=col_rs.recordcount%>">
+                                                <%else%>
+                                                    <input type="hidden" name="num_colori" id="num_colori" value="1">
+                                                    <input type="hidden" name="colore" id="colore" value="*****">
+                                                <%end if%>
+                                                <p class="cart clearfix">
+
+                                                    <%if col_rs.recordcount>1 then%>
+                                                        <select name="colore" id="colore" style="width:auto; float:left; margin-top:7px;">
+                                                        <option value="">Scegli il colore</option>
+                                                        <%
+                                                        Do While Not col_rs.EOF
+                                                        %>
+                                                            <option value="<%=col_rs("Titolo")%>"><%=col_rs("Titolo")%></option>
+                                                        <%
+                                                        col_rs.movenext
+                                                        loop
+                                                        %>
+                                                        </select>
+                                                    <%
+                                                    end if
+                                                    col_rs.close
+                                                    %>
+                                                    <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span>
+                                                </p>
                                             </form>	
                                         <%end if%>
                                     </div>
