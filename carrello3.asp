@@ -40,7 +40,7 @@
 		sql = "Select * From Clienti where pkid="&idsession
 		cli_rs.Open sql, conn, 1, 1
 		if cli_rs.recordcount>0 then
-			Nominativo=cli_rs("Nominativo")
+			Nominativo=cli_rs("Nome")&" "&cli_rs("Nominativo")
 			Rag_Soc=cli_rs("Rag_Soc")
 			Cod_Fisc=cli_rs("Cod_Fisc")
 			PartitaIVA=cli_rs("PartitaIVA")

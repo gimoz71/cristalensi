@@ -12,6 +12,7 @@ pkid = Session("idCliente")
 	if mode = "" then mode = 0
 
 	if mode=1 then
+		nome=request("nome")
 		nominativo=request("nominativo")
 		partitaIVA=request("partitaIVA")
 		cod_fisc=request("cod_fisc")
@@ -50,6 +51,7 @@ pkid = Session("idCliente")
 	if mode = 1 then
 		if pkid = 0 then rs.addnew
 		
+		rs("nome")=nome
 		rs("nominativo")=nominativo
 		rs("partitaIVA")=partitaIVA
 		rs("cod_fisc")=cod_fisc
@@ -91,8 +93,8 @@ pkid = Session("idCliente")
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Complimenti "&nominativo&"! La tua iscrizione a Cristalensi.it &egrave; avvenuta correttamente.<br>Da adesso potrai ordinare i nostri prodotti senza dover inserire nuovamente i tuoi dati.</font><br>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dati sensibili e determinanti per l'accesso ai servizi di Cristalensi.it:<br>Nominativo: <b>"&nominativo&"</b><br>Login: <b>"&email&"</b><br>Password: <b>"&password&"</b></font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Complimenti "&nome&" "&nominativo&"! La tua iscrizione a Cristalensi.it &egrave; avvenuta correttamente.<br>Da adesso potrai ordinare i nostri prodotti senza dover inserire nuovamente i tuoi dati.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dati sensibili e determinanti per l'accesso ai servizi di Cristalensi.it:<br>Nome e Cognome: <b>"&nome&" "&nominativo&"</b><br>Login: <b>"&email&"</b><br>Password: <b>"&password&"</b></font><br>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
 			HTML1 = HTML1 & "</table>"
@@ -130,7 +132,7 @@ pkid = Session("idCliente")
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Nuova registrazione al sito internet.</font><br>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dati sensibili e determinanti per l'accesso ai servizi di Cristalensi.it:<br>Nominativo: <b>"&nominativo&"</b><br>Login: <b>"&email&"</b><br>Password: <b>"&password&"</b><br>Codice cliente: <b>"&pkid_iscritto&"</b></font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dati sensibili e determinanti per l'accesso ai servizi di Cristalensi.it:<br>Nome e Cognome: <b>"&nome&" "&nominativo&"</b><br>Login: <b>"&email&"</b><br>Password: <b>"&password&"</b><br>Codice cliente: <b>"&pkid_iscritto&"</b></font><br>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
 			HTML1 = HTML1 & "</table>"
@@ -179,8 +181,8 @@ pkid = Session("idCliente")
 			
 		end if
 
-		nome_log=nominativo
-		session("nome_log")=nominativo
+		nome_log=nome&" "&nominativo
+		session("nome_log")=nome&" "&nominativo
 		idsession=pkid_iscritto
 		session("idCliente")=pkid_iscritto
 		italia_log=italia
@@ -229,6 +231,7 @@ pkid = Session("idCliente")
 
 		function verifica() {
 				
+			nome=document.newsform.nome.value;
 			nominativo=document.newsform.nominativo.value;
 			indirizzo=document.newsform.indirizzo.value;
 			citta=document.newsform.citta.value;
@@ -236,8 +239,12 @@ pkid = Session("idCliente")
 			email=document.newsform.email.value;
 			password=document.newsform.pw.value;	
 		
+			if (nome==""){
+				alert("Non  e\' stato compilato il campo \"Nome\".");
+				return false;
+			}
 			if (nominativo==""){
-				alert("Non  e\' stato compilato il campo \"Nominativo\".");
+				alert("Non  e\' stato compilato il campo \"Cognome\".");
 				return false;
 			}
 			if (indirizzo==""){
@@ -332,12 +339,12 @@ pkid = Session("idCliente")
                                     <form method="post" action="iscrizione.asp?mode=1&amp;pkid=0" name="newsform" onSubmit="return verifica();">
                                     <div class="tr">
                                         <div class="td">
-	                                        Nome e Cognome (*)<br />
-                                            <input name="nominativo" type="text" id="nominativo"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nominativo")%><%else%><%if mode=3 then%><%=nominativo%><%end if%><%end if%>" />
+	                                        Nome (*) e Cognome (*)<br />
+                                            <input name="nome" type="text" id="nome" style="width:120px;" maxlength="50" value="<% if pkid > 0 then %><%=rs("nome")%><%else%><%if mode=3 then%><%=nome%><%end if%><%end if%>" />&nbsp;<input name="nominativo" type="text" id="nominativo" style="width:120px;" maxlength="50" value="<% if pkid > 0 then %><%=rs("nominativo")%><%else%><%if mode=3 then%><%=nominativo%><%end if%><%end if%>" />
                                         </div>
                                         <div class="td">
                                         	Ragione sociale ( nel caso in cui si tratti di un'Azienda )<br />
-                                            <input name="Rag_Soc" type="text" id="Rag_Soc"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("Rag_Soc")%><%else%><%if mode=3 then%><%=Rag_Soc%><%end if%><%end if%>" />
+                                            <input name="Rag_Soc" type="text" id="Rag_Soc" maxlength="50" value="<% if pkid > 0 then %><%=rs("Rag_Soc")%><%else%><%if mode=3 then%><%=Rag_Soc%><%end if%><%end if%>" />
                                         </div>
                                     </div>
                                     <div class="tr">

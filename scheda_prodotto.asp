@@ -193,6 +193,7 @@ end if
                                         <%if allegato_prodotto<>"" then%>
                                             <p><a href="/public/<%=allegato_prodotto%>" target="_blank"><img src="/images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="E' presente un allegato">Allegato</a></p>
                                         <%end if%>
+                                        
                                         <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a></span>
                                         <%else%>
@@ -209,11 +210,12 @@ end if
                                                 <input type="hidden" name="num_colori" id="num_colori" value="1">
                                                 <input type="hidden" name="colore" id="colore" value="*****">
                                             <%end if%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i>Iva compresa</i>&nbsp;|
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%>&nbsp;&nbsp;<i style="font-size:8px;">IVA Compresa</i>&nbsp;
                                            
-                                            <%if col_rs.recordcount>1 then%>
-                                                <select name="colore" id="colore" style="width:auto; margin-left:10px;">
-                                                <option value="">Scegli il colore</option>
+                                            <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding:7px 5px 0 5px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi</span>
+											<%if col_rs.recordcount>1 then%>
+                                                <select name="colore" id="colore" style="width:auto; margin-top:8px; float:right;">
+                                                <option value="">Scegli il colore del prodotto</option>
                                                 <%
                                                 Do While Not col_rs.EOF
                                                 %>
@@ -227,7 +229,7 @@ end if
                                             end if
                                             col_rs.close
                                             %>
-                                            <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span></p>
+                                            </p>
                                             </form>	
                                         <%end if%>
                                     </div>
