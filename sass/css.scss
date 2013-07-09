@@ -6,7 +6,6 @@ html, body {
 
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-
 html[xmlns] .clearfix {
 	display: block;
 }
@@ -695,6 +694,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 width: auto;
                 img {
                     margin-bottom: 5px;
+                    width: auto;
                 }
             }
         }
@@ -735,7 +735,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-weight: bold;
                 padding-top: 5px;
                 display: inline-block;
-				font-size: 110%;
+                font-size: 120%;
         }
         .produttore, .cart-link {
             float: right;
