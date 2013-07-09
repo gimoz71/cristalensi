@@ -66,8 +66,13 @@ if contr=1 then
 
 	if not log_rs.eof then
 		idsession=log_rs("PkId")
-		nome_log=log_rs("Nominativo")
-		if nome_log="" then nome_log="Anonimo"
+		nome_log=log_rs("Nome")
+		cognome_log=log_rs("Nominativo")
+		if nome_log="" and cognome_log="" then
+			nome_log="Cliente Anonimo"
+		else
+			nome_log=nome_log&" "&cognome_log
+		end if
 		italia_log=log_rs("Italia")
 		if italia_log="" then italia_log="Si"
 		if italia_log="Sì" then italia_log="Si"

@@ -13,7 +13,7 @@
 		sql = "Select * From Clienti where pkid="&idsession
 		rs.Open sql, conn, 1, 1	
 		
-		nominativo_email=rs("nominativo")
+		nominativo_email=rs("nome")&" "&rs("nominativo")
 		email=rs("email")
 		
 		rs.close
