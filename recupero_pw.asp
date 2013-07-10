@@ -191,7 +191,7 @@
                           			<font color="#990000"><b>Attenzione! L'e-mail inserita non &egrave; corretta</b></font>
                                     </div>
                         			<%end if%>
-                                    <div class="tr"><p style="text-align: center;"><input type="submit" name="accedi" value="Invia" class="button_link" /></p></div>
+                                    <div class="tr"><p style="text-align: center;"><button type="submit" name="accedi" class="button_link">Invia</button></p></div>
                                 </div>
                                 </form>
                             </div>

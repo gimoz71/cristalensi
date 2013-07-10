@@ -195,7 +195,7 @@
                         <div>
                             <h3 style="font-size: 14px; display: inline; border: none;">Ordine n&deg; <%=idordine%> - Data <%=Left(DataAggiornamento, 10)%></h3>
                             <div class="carrello clearfix">
-                                <p class="testo_grande">
+                                <p>
                                 	La procedura di pagamento con Paypal &egrave; stata completata correttamente.<br>
                                           <br>					    
                                       La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento.<br>

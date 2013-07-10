@@ -20,6 +20,9 @@ if id>0 then
 		fkproduttore=prod_rs("fkproduttore")
 		if fkproduttore="" then fkproduttore=0
 		
+		offerta=prod_rs("fkproduttore")
+		if offerta="" then offerta=0
+		
 		if fkproduttore>0 then
 			Set pr_rs = Server.CreateObject("ADODB.Recordset")
 			sql = "SELECT * FROM Produttori WHERE PkId="&fkproduttore&""

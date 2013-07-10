@@ -160,7 +160,7 @@
                         <div>
                             <h3 style="font-size: 14px; display: inline; border: none;">Il tuo ordine: modalit&agrave; di spedizione/ritiro prodotti</h3>
                             <div class="carrello clearfix">
-                                <p class="testo_grande">
+                                <p>
                                 <br /><br /><br />
                                 Grazie per aver scelto i nostri prodotti,<br />
 							    &egrave; stata inoltrata al nostro staff una richiesta di calcolo dei costi di spedizione<br />

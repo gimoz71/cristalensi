@@ -1,10 +1,5 @@
 <div id="sidebar-alt" >
     <div>
-       <!-- <div>
-            <a href="#" style="float: left;width: 50%; margin: 0; text-align: center;"><img class="flag" style="width: 30px; float: none;" src="images/flag_it.png" /></a>
-            <a href="#" style="float: left;width: 50%; margin: 0; text-align: center;"><img class="flag" style="width: 30px; float: none;" src="images/flag_en.png" /></a>
-        </div>-->
-
         <%if idsession>0 then%>
             <h3>Area clienti</h3>
             <p><font color="#990000"><strong>Benvenuto<br />&nbsp;<%=nome_log%></strong></font></p>

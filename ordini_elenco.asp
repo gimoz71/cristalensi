@@ -113,16 +113,16 @@ end if
                                         </span>
                                         <span class="colonna stato"><%=etichetta_stato%></span>
                                         <span class="colonna azioni">
-                                          <input type="button" name="visualizza" value="visualizza" class="button_link" onClick="MM_openBrWindow('stampa_ordine.asp?idordine=<%=rs("PkId")%>&mode=0','','width=760,height=400,scrollbars=yes')">
+                                          <button type="button" name="visualizza" class="button_link" onClick="MM_openBrWindow('stampa_ordine.asp?idordine=<%=rs("PkId")%>&mode=0','','width=760,height=400,scrollbars=yes')">visualizza</button>
 										  <%if stato=0 or stato=1 or stato=2 or stato=3 or stato=6 then%>
-                                           &nbsp;<input type="button" name="modifica" value="continua l'ordine" class="button_link" onClick="document.location.href='ordini_elenco.asp?IdOrdine=<%=rs("PkId")%>&mode=1';">
+                                           &nbsp;<button type="button" name="modifica" class="button_link" onClick="document.location.href='ordini_elenco.asp?IdOrdine=<%=rs("PkId")%>&mode=1';">continua l'ordine</button>
                                           <%else%>
                                             <%if stato=12 or stato=22 then%>
                                             <a href="ordini_elenco.asp?IdOrdine=<%=rs("PkId")%>&mode=2"><b>[<%=rs("PkId")%>]&nbsp;-&nbsp;<%=rs("DataAggiornamento")%></b></a>
-                                            &nbsp;<input type="button" name="modifica" value="continua l'ordine" class="button_link" onClick="document.location.href='ordini_elenco.asp?IdOrdine=<%=rs("PkId")%>&mode=2';">
+                                            &nbsp;<button type="button" name="modifica" class="button_link" onClick="document.location.href='ordini_elenco.asp?IdOrdine=<%=rs("PkId")%>&mode=2';">continua l'ordine</button>
                                             <%end if%>
                                           <%end if%>
-                                            &nbsp;<input type="button" name="stampa" value="stampa" class="button_link" onClick="MM_openBrWindow('stampa_ordine.asp?idordine=<%=rs("PkId")%>&mode=1','','width=760,height=900,scrollbars=yes')">
+                                            &nbsp;<button type="button" name="stampa" class="button_link" onClick="MM_openBrWindow('stampa_ordine.asp?idordine=<%=rs("PkId")%>&mode=1','','width=760,height=900,scrollbars=yes')">stampa</button>
                                         </span>
                                         </p>
                                         <%

@@ -119,7 +119,7 @@
                     <div id="content">
                         <div>
                             <div class="carrello clearfix">
-                                <p class="testo_grande">
+                                <p>
                                 <br /><br /><br />
                                 La procedura di pagamento con Paypal &egrave; stata annullata<br>
 							    oppure ci sono stati alcuni errori nel sistema di pagamento.<br>

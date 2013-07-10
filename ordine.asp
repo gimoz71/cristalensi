@@ -365,7 +365,7 @@
                             <h3 style="font-size: 14px; display: inline; border: none;">Ordine n&deg; <%=idordine%> - Data <%=Left(DataAggiornamento, 10)%></h3>
                             <div class="carrello clearfix">
                                 <%if FkPagamento=1 then%>
-                                <p class="testo_grande">
+                                <p>
                                 	<br><br>Grazie per aver scelto i nostri prodotti,<br>
                                     per completare l'ordine &egrave; necessario effettuare il bonifico con i seguenti dati:<br>
                                     <br>
@@ -387,15 +387,14 @@
                                 </p>
                                 <%end if%>
                       			<%if FkPagamento=3 then%>
-                                <p class="testo_grande">
-                                	Grazie per aver scelto i nostri prodotti,<br>
+                                <p>
+                                	<br><br>Grazie per aver scelto i nostri prodotti,<br>
                                     la merce verr&agrave; spedita appena sar&agrave; disponibile nel nostro magazino.<br>
-                                    Ti ricordiamo che per il pagamento in contrassegno, il corriere consegner&agrave; la merce solo se verr&agrave; pagata in contanti, non accetter&agrave; altri metodi di pagamento<br>
-                                    (anche gli assegni non saranno accettati).<br>
+                                    Ti ricordiamo che per il pagamento in contrassegno, il corriere consegner&agrave; la merce solo se verr&agrave; pagata in contanti, non accetter&agrave; altri metodi di pagamento (anche gli assegni non saranno accettati).<br>
                                     <br>
                                   Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br>
-                                  Salva oppure stampa le condizioni di vendita (consultabili nell'apposita pagina del sito internet) da questo file (.pdf) apribile con Adobe Acrobat Reader:</h2>
-                                  <a href="condizioni_di_vendita.pdf" target="_blank"><h2>condizion di vendita</h2></a>
+                                  Salva oppure stampa le condizioni di vendita (consultabili nell'apposita pagina del sito internet) da questo file (.pdf):<br>
+                                  <a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
                                   <br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi
@@ -409,14 +408,16 @@
                                   TotaleGeneralePP=Replace(TotaleGeneralePP, ".", "")
                                   TotaleGeneralePP=Replace(TotaleGeneralePP, ",", ".")
                                   %>
-                                  <p class="testo_grande">
-                                  	Grazie per aver scelto i nostri prodotti,<br>
+                                  <p>
+                                  	
+                                    <a href="https://www.paypal.com/it/webapps/mpp/paypal-popup" title="Come funziona PayPal" onclick="javascript:window.open('https://www.paypal.com/it/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo-center/logo_paypal_carte.jpg" border="0" style="float:right; padding-left:5px; width:319px; height:110px;" alt="Che cos'&egrave; PayPal"></a>Grazie per aver scelto i nostri prodotti,<br>
                                     per completare l'ordine &egrave; necessario effettuare il pagamento con i sistemi sicuri di Paypal che permettono di pagare con moltissime carte di credito e carte ricaribili:<br>
                                     MasterCard, Visa e Visa Electron, PostePay, Carta Aura e ricariche PayPal.<br><br>
                                     Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br>
-                                  Salva oppure stampa le condizioni di vendita (consultabili nell'apposita pagina del sito internet) da questo file (.pdf) apribile con Adobe Acrobat Reader:</h2>
-                                  <a href="condizioni_di_vendita.pdf" target="_blank"><h2>condizion di vendita</h2></a>							    <br>
+                                  Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br>
+                                  <a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>							    <br>
                                     <br>
+                                    </p>
     <form action="https://www.paypal.com/it/cgi-bin/webscr" method="post">
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="cristalensi@alice.it">
@@ -434,7 +435,8 @@
     <input type="hidden" name="image_url" value="http://www.cristalensi.it/immagini/logo_cristalensi_piccolo.jpg">
     <input type="submit" name="paga_adesso" value="CLICCA QUI PER PAGARE CON IL SISTEMA SICURO DI PAYPAL" class="button" alt="Effettua i tuoi pagamenti con PayPal. È un sistema rapido, gratuito e sicuro." style="height: 40px; font-size:14px; font-weight:bold;">
     </form>								
-                                    <br><br><a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="https://www.paypal.com/en_US/IT/i/bnr/bnr_horizontal_solution_PP_178wx80h.gif" border="0" alt="Che cos'&egrave; PayPal"></a><br><br>
+                                  <p>
+                                  <br><br>
                                   La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento.<br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi
@@ -537,7 +539,6 @@
                                   </h4>
                                     <form method="post" name="modulo" id="modulo" action="stampa_ordine.asp" target="_blank">
                                     <input type="hidden" name="idordine" id="idordine" value="<%=idordine%>">
-                                    <input type="button" name="continua" value="&laquo; passo precedente" onClick="location.href='carrello3.asp'" style="float:left;" class="button_link" />
                                     <%if FkPagamento=1 then%><button type="submit" name="stampa" style="float:right;" class="button_link_red">stampa l'ordine</button><%end if%>
                                     </form>
                             </div>
