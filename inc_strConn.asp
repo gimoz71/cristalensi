@@ -76,6 +76,7 @@ if contr=1 then
 		italia_log=log_rs("Italia")
 		if italia_log="" then italia_log="Si"
 		if italia_log="Sì" then italia_log="Si"
+		if italia_log="S&igrave;" then italia_log="Si"
 	
 		Session("idCliente") = idsession
 		Session("nome_log") = nome_log

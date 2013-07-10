@@ -366,21 +366,19 @@
                             <div class="carrello clearfix">
                                 <%if FkPagamento=1 then%>
                                 <p class="testo_grande">
-                                	Grazie per aver scelto i nostri prodotti,<br>
-                                    per completare l'ordine è necessario effettuare il bonifico con i seguenti dati:<br>
+                                	<br><br>Grazie per aver scelto i nostri prodotti,<br>
+                                    per completare l'ordine &egrave; necessario effettuare il bonifico con i seguenti dati:<br>
                                     <br>
-                                    <u>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO</u><br>IBAN: <u>IT33E0842537960000030277941</u><br>
-                                    Codice BIC/SWIFT: <u>CRACIT33</u>
-                                    <br>Nella causale indicare: "Ordine da sito internet n° <%=idordine%>"<br><br>
-                                    Beneficiario: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>
-                             Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)
-                                    <br><br><br>
-                                  La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento<br>
-                                  oppure, per velocizzare la spedizione, è possibile inviarci per email la ricevuta dell'avvenuto pagamento con bonifico (in caso di bonifico fatto con home banking spesso viene fornita dalla banca una ricevuta, oppure è possibile scannerizzare la ricevuta rilasciata dalla banca).<br>
+                                    <strong>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO<br>IBAN: IT33E0842537960000030277941<br>
+                                    Codice BIC/SWIFT: CRACIT33</strong>
+                                    <br><br>Nella causale indicare: "<strong>Ordine da sito internet n&deg; <%=idordine%></strong>"<br><br>
+                                    Beneficiario:<br><strong>Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>
+                             Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)</strong>
+                                    <br><br>
+                                  La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento con bonifico (in caso di bonifico fatto con home banking spesso viene fornita dalla banca una ricevuta, oppure &egrave; possibile scannerizzare la ricevuta rilasciata dalla banca).<br>
                                   <br>
-                                  Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br>
-                                  Salva oppure stampa le condizioni di vendita (consultabili nell'apposita pagina del sito internet) da questo file (.pdf) apribile con Adobe Acrobat Reader:</h2>
-                                  <a href="condizioni_di_vendita.pdf" target="_blank"><h2>condizion di vendita</h2></a><h2>
+                                  Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br><br>
+                                  Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br><a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
                                   <br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi
@@ -391,13 +389,13 @@
                       			<%if FkPagamento=3 then%>
                                 <p class="testo_grande">
                                 	Grazie per aver scelto i nostri prodotti,<br>
-                                    la merce verr&agrave; spedita appena sarà disponibile nel nostro magazino.<br>
-                                    Ti ricordiamo che per il pagamento in contrassegno, il corriere consegnerà la merce solo se verrà pagata in contanti, non accetterà altri metodi di pagamento<br>
+                                    la merce verr&agrave; spedita appena sar&agrave; disponibile nel nostro magazino.<br>
+                                    Ti ricordiamo che per il pagamento in contrassegno, il corriere consegner&agrave; la merce solo se verr&agrave; pagata in contanti, non accetter&agrave; altri metodi di pagamento<br>
                                     (anche gli assegni non saranno accettati).<br>
                                     <br>
                                   Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br>
                                   Salva oppure stampa le condizioni di vendita (consultabili nell'apposita pagina del sito internet) da questo file (.pdf) apribile con Adobe Acrobat Reader:</h2>
-                                  <a href="condizioni_di_vendita.pdf" target="_blank"><h2>condizion di vendita</h2></a><h2>
+                                  <a href="condizioni_di_vendita.pdf" target="_blank"><h2>condizion di vendita</h2></a>
                                   <br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi
@@ -413,7 +411,7 @@
                                   %>
                                   <p class="testo_grande">
                                   	Grazie per aver scelto i nostri prodotti,<br>
-                                    per completare l'ordine è necessario effettuare il pagamento con i sistemi sicuri di Paypal che permettono di pagare con moltissime carte di credito e carte ricaribili:<br>
+                                    per completare l'ordine &egrave; necessario effettuare il pagamento con i sistemi sicuri di Paypal che permettono di pagare con moltissime carte di credito e carte ricaribili:<br>
                                     MasterCard, Visa e Visa Electron, PostePay, Carta Aura e ricariche PayPal.<br><br>
                                     Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br>
                                   Salva oppure stampa le condizioni di vendita (consultabili nell'apposita pagina del sito internet) da questo file (.pdf) apribile con Adobe Acrobat Reader:</h2>
@@ -437,7 +435,7 @@
     <input type="submit" name="paga_adesso" value="CLICCA QUI PER PAGARE CON IL SISTEMA SICURO DI PAYPAL" class="button" alt="Effettua i tuoi pagamenti con PayPal. È un sistema rapido, gratuito e sicuro." style="height: 40px; font-size:14px; font-weight:bold;">
     </form>								
                                     <br><br><a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="https://www.paypal.com/en_US/IT/i/bnr/bnr_horizontal_solution_PP_178wx80h.gif" border="0" alt="Che cos'&egrave; PayPal"></a><br><br>
-                                  <h2>La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento.<br>
+                                  La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento.<br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi
                                   <br>
@@ -492,59 +490,56 @@
                                     <p><%=NoteCliente%></p>
                                 </div>
                                 
-                                <p class="area clearfix"><span class="colonna descrizione">Modalit&agrave; di pagamento - Descrizione</span><span class="colonna prezzo_unitario">&nbsp;</span><span class="colonna prezzo_totale">Totale</span></p>
+                                <p class="area clearfix"><span class="colonna descrizione">Modalit&agrave; di pagamento</span><span class="colonna prezzo_unitario">&nbsp;</span><span class="colonna prezzo_totale">Totale</span></p>
                                 <div class="data">
-    
-                                        <p class="riga">
-                                        <span class="colonna descrizione"><b><%=TipoPagamento%></b></span>
-                                        <span class="colonna prezzo_unitario">&nbsp;</span>
-                                        <span class="colonna prezzo_totale"><%=FormatNumber(CostoPagamento,2)%>&#8364;</span>
-                                        </p>
+                                    <p class="riga">
+                                    <span class="colonna descrizione"><b><%=TipoPagamento%></b></span>
+                                    <span class="colonna prezzo_unitario">&nbsp;</span>
+                                    <span class="colonna prezzo_totale"><%=FormatNumber(CostoPagamento,2)%>&#8364;</span>
+                                    </p>
                                     <p>&nbsp;</p>
                                     <h4>Riferimenti per i dati di fatturazione:</h4>
-                                    <div class="iscrizione clearfix">
-                                    <div class="table">
-                                    <div class="tr">
-                                        <div class="td">
-	                                        <%if Rag_Soc<>"" then%><%=Rag_Soc%>&nbsp;&nbsp;<%end if%><%if nominativo<>"" then%><%=nominativo%><%end if%>
+                                    <div class="clearfix">
+                                        <div class="table">
+                                            <div class="tr">
+                                                <div class="td">
+                                                    <%if Rag_Soc<>"" then%><%=Rag_Soc%>&nbsp;&nbsp;<%end if%><%if nominativo<>"" then%><%=nominativo%><%end if%>
+                                                </div>
+                                            </div>
+                                            <div class="tr">
+                                                <div class="td">
+                                                    Codice fiscale: <%=Cod_Fisc%><%if PartitaIVA<>"" then%> - Partita IVA: <%=PartitaIVA%><%end if%>
+                                                </div>
+                                            </div>
+                                            <div class="tr">
+                                                <div class="td">
+                                                    <%=indirizzo%>
+                                                </div>
+                                            </div>
+                                            <div class="tr">
+                                                <div class="td">
+                                                    <%=cap%> - <%=citta%> (<%=provincia%>)
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="tr">
-                                        <div class="td">
-                                        	Codice fiscale: <%=Cod_Fisc%><%if PartitaIVA<>"" then%> - Partita IVA: <%=PartitaIVA%><%end if%>
-                                        </div>
-                                    </div>
-                                    <div class="tr">
-                                        <div class="td">
-                                        	<%=indirizzo%>
-                                        </div>
-                                    </div>
-                                    <div class="tr">
-                                        <div class="td">
-	                                        <%=cap%> - <%=citta%> (<%=provincia%>)
-                                        </div>
-                                    </div>
-                                </div>
-                                </div> 
-                                       
+                                	</div> 
                                 </div>
                                 
-                                  <h4 class="cart clearfix"><span class="total_price">Totale ordine:&nbsp;
-                      <%if TotaleGenerale<>0 then%>
-                      <%=FormatNumber(TotaleGenerale,2)%>
-                      <%else%>
-                      0,00
-                      <%end if%>
-                      &#8364;
-                                  </span></h4>
+                                  <h4 class="cart clearfix">
+                                  <span class="total_price">Totale ordine:&nbsp;
+								  <%if TotaleGenerale<>0 then%>
+                                  <%=FormatNumber(TotaleGenerale,2)%>
+                                  <%else%>
+                                  0,00
+                                  <%end if%>
+                                  &#8364;
+                                  </span>
+                                  </h4>
                                     <form method="post" name="modulo" id="modulo" action="stampa_ordine.asp" target="_blank">
                                     <input type="hidden" name="idordine" id="idordine" value="<%=idordine%>">
                                     <input type="button" name="continua" value="&laquo; passo precedente" onClick="location.href='carrello3.asp'" style="float:left;" class="button_link" />
-                                    <%if FkPagamento=1 then%><input type="submit" name="stampa" value="stampa l'ordine" style="float:right;" class="button_link_red" /><%end if%>
-                                
-                                	</form>
-                                
-								
+                                    <%if FkPagamento=1 then%><button type="submit" name="stampa" style="float:right;" class="button_link_red">stampa l'ordine</button><%end if%>
+                                    </form>
                             </div>
                         </div>
                     </div>

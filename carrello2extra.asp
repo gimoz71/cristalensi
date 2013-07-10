@@ -263,8 +263,8 @@
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     
-                                    <input type="button" name="continua" value="&laquo; passo precedente" onClick="location.href='carrello1.asp'" style="float:left;" class="button_link" />
-                                    <input type="button" name="continua" value="<%if stato_ordine=22 then%>clicca qui per continuare l'acquisto<%else%>clicca qui per il calcolo del costo di spedizione<%end if%> &raquo;" onClick="<%if stato_ordine=22 then%>Continua();<%else%>CalcoloSpedizione();<%end if%>" style="float:right;" class="button_link_red" />
+                                    <button type="button" name="indietro" onClick="location.href='carrello1.asp'" style="float:left;" class="button_link">&laquo; passo precedente</button>
+                                    <button type="button" name="continua" onClick="<%if stato_ordine=22 then%>Continua();<%else%>CalcoloSpedizione();<%end if%>" style="float:right;" class="button_link_red"><%if stato_ordine=22 then%>clicca qui per continuare l'acquisto<%else%>clicca qui per il calcolo del costo di spedizione<%end if%> &raquo;</button>
                                     <%end if%>
 								<%end if%>
                                 

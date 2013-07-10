@@ -75,7 +75,7 @@
                         
                         <h3>Contattaci!</h3>
                         <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione</p>
-                        <p><a href="#" class="info">Contatti e riferimenti</a></p>
+                        <p><a href="contatti.asp" class="info">Contatti e riferimenti</a></p>
                         <p class="note"><strong>Cristalensi Snc</strong><br />
                             di Lensi Massimiliano & C.<br />
                             C.F. e Iscr. Reg. Impr. di Firenze 05305820481<br />

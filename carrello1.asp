@@ -236,7 +236,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         rs.movenext
                                         loop
                                         %>
-                                        <p class="riga" style="text-align: right"><input name="aggiorna" type="submit" value="aggiorna prodotti" class="button_link"></p>
+                                        <p class="riga" style="text-align: right"><button name="aggiorna" type="submit" class="button_link">aggiorna i prodotti</button></p>
                                         </form>
 									<%else%>
                                     	<p class="riga">Il carrello è vuoto</p>
@@ -255,7 +255,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                     <h4>Colori misure e annotazioni</h4>
                                     <p>Scrivere in questo spazio il colore e la misura dei prodotti nel caso in cui fossero presenti più varianti degli stessi.<br>Oppure potete usare questo spazio per inserie qualche annotazione o comunicazione.</p>
                                     <textarea name="NoteCliente" cols="105" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
-                                    <p class="riga" style="text-align: right"><input type="submit" name="continua" value="clicca qui per continuare l'acquisto &raquo;" class="button_link_red"></p>
+                                    <p class="riga" style="text-align: right"><button type="submit" name="continua" class="button_link_red">clicca qui per continuare l'acquisto &raquo;</button></p>
                                     </form>
                                     <%end if%>
                                     <br>

@@ -264,8 +264,8 @@
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     
-                                    <input type="button" name="continua" value="&laquo; passo precedente" onClick="location.href='carrello1.asp'" style="float:left;" class="button_link" />
-                                    <input type="button" name="continua" value="clicca qui per continuare l'acquisto &raquo;" onClick="Continua();" style="float:right;" class="button_link_red" />
+                                    <button type="button" name="indietro" onClick="location.href='carrello1.asp'" style="float:left;" class="button_link">&laquo; passo precedente</button>
+                                    <button type="button" name="continua" onClick="Continua();" style="float:right;" class="button_link_red">clicca qui per continuare l'acquisto &raquo;</button>
                                     <%end if%>
 								<%end if%>
                                 

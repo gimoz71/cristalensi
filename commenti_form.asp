@@ -74,11 +74,11 @@
                             <div class="carrello clearfix">
                                  <%if mode=1 then%>
                                  	<p>
-                                    Il tuo commento è stato inserito correttamente, adesso il nostro staff lo valuterà e se sarà approvato, ti verrà recapitata una notifica via email.<br />Grazie della tua collaborazione e di aver acquistato da Cristalensi.<br /><br /><a href="commenti_elenco.asp" class="button_link_red" style="float:right">Elenco commenti</a>
+                                    Il tuo commento è stato inserito correttamente, adesso il nostro staff lo valuterà e se sarà approvato, ti verrà recapitata una notifica via email.<br />Grazie della tua collaborazione dallo staff di Cristalensi.<br /><br /><a href="commenti_elenco.asp" class="button_link_red" style="float:right">Elenco commenti</a>
                                     </p>
 								 <%else%>   
                                     <form name="modulocarrello" id="modulocarrello" method="post" action="commenti_form.asp?mode=1">
-                                    <p>Inserisci un commento su i prodotti acquistati, se ti sono piaciuti o no, oppure un commento sul sito internet o sull'azienda e lo staff.<br />Il commento non sarà pubblicato immediatamente ma sarà soggetto a un controllo da parte del nostro staff per evitare che vengano inseriti contenuti non leciti, offese e termini non pubblicabili.<br />Si prega di non inserire codice html, email, link e collegamenti ad altri siti internet: il commento non sarà pubblicato.</p>
+                                    <p>Inserisci un commento su i prodotti acquistati, se ti sono piaciuti o no, oppure un commento sul sito internet o sull'azienda e lo staff.<br />Il commento non sarà pubblicato immediatamente ma sarà soggetto a un controllo da parte del nostro staff per evitare che vengano inseriti contenuti non leciti, offese e termini non pubblicabili.<br />Si prega di non inserire codice html, email, link e collegamenti ad altri siti internet: il commento non sarà pubblicato.<br />Per ogni commento saranno pubblicati anche il <strong>Nome</strong> e la <strong>Città</strong> inseriti al momento dell'iscrizione.</p>
                                     <textarea name="testo" cols="105" rows="5" id="testo"></textarea>
                                     <p>
                                     <input type="button" name="reset" value="&laquo; elenco commenti" class="button_link" style="float:left;" onClick="location.href='commenti_elenco.asp'">

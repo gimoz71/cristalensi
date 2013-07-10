@@ -49,17 +49,24 @@
                             
                             <div class="carrello clearfix">
                                 <div class="data">
-                                    <p><em>In un ottica di trasparenza, di avvicinamento alla clientela e di miglioramento dei nostri servizi abbiamo aperto quest'area dove i clienti possono lasciare un messaggio, un commento, un complimento o una critica al funzionamento del sito internet, ai prodotti acquistati ma anche ai servizi dello staff stesso. Per inviare un commento si dovrà essere registrati sul sito internet e i messaggi inviati saranno approvati dallo staff per evitare che siano pubblicati testi offensivi o inserire link pubblicitari verso altri siti internet.</em></p>
+                                    <p><em>In un ottica di trasparenza, di avvicinamento alla clientela e di miglioramento dei nostri servizi abbiamo aperto quest'area dove i clienti possono lasciare un messaggio, un commento, un complimento o una critica al funzionamento del sito internet, ai prodotti acquistati ma anche ai servizi dello staff stesso.<br />Per inviare un commento si dovrà essere registrati sul sito internet e i messaggi inviati saranno approvati dallo staff per evitare che siano pubblicati testi offensivi o inserire link pubblicitari verso altri siti internet.</em></p>
                                     <p class="riga" style="text-align: right; padding-bottom:10px;"><a href="commenti_form.asp" class="button_link_red">Inserisci un commento anche te!</a></p>
 									<%
 									Set prod_rs = Server.CreateObject("ADODB.Recordset")
-									sql = "SELECT * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
+									'sql = "SELECT * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
+									sql = "SELECT Commenti_Clienti.PkId, Commenti_Clienti.Testo, Commenti_Clienti.Risposta, Commenti_Clienti.Pubblicato, Clienti.Nome, Clienti.Citta "
+									sql = sql + "FROM Commenti_Clienti INNER JOIN Clienti ON Commenti_Clienti.FkIscritto = Clienti.PkId "
+									sql = sql + "WHERE (((Commenti_Clienti.Pubblicato)=True)) "
+									sql = sql + "ORDER BY Commenti_Clienti.PkId DESC"
+
 									prod_rs.open sql,conn, 1, 1
 									if prod_rs.recordcount>0 then
 										Do while not prod_rs.EOF
 											pkid_commento=prod_rs("PkId")
 											testo_commento=prod_rs("testo")
 											risposta=prod_rs("risposta")
+											nome=prod_rs("nome")
+											citta=prod_rs("citta")
 											if risposta="" then risposta=False
 											if risposta=True then
 												Set ris_rs = Server.CreateObject("ADODB.Recordset")
@@ -72,7 +79,7 @@
 											end if
 									%>
                                         <div class="riga">
-										<p><%=NoLettAcc(testo_commento)%></p>
+										<p><%=NoLettAcc(testo_commento)%><br /><strong><%=Nome%>&nbsp;(<%=Citta%>)</strong></p>
                                         <%if testo_risposta<>"" and risposta=True then%>
                                         <p style="padding:0px 10px;"><strong>Risposta dello staff Cristalensi:</strong><br /><em><%=NoLettAcc(testo_risposta)%></em></p>
                                         <%end if%>

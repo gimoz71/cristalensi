@@ -1,9 +1,9 @@
 <div id="sidebar-alt" >
     <div>
-        <div>
+       <!-- <div>
             <a href="#" style="float: left;width: 50%; margin: 0; text-align: center;"><img class="flag" style="width: 30px; float: none;" src="images/flag_it.png" /></a>
             <a href="#" style="float: left;width: 50%; margin: 0; text-align: center;"><img class="flag" style="width: 30px; float: none;" src="images/flag_en.png" /></a>
-        </div>
+        </div>-->
 
         <%if idsession>0 then%>
             <h3>Area clienti</h3>
@@ -17,7 +17,7 @@
             <%else%>
                 <h3>Area clienti</h3>
                 <p>Per consultare il catalogo non &egrave; necessario iscriversi</p>
-                <p><a href="#" class="info tiptip" title="<h3>Informazioni</h3><strong>Inserire maggiori informazioni quì.</strong>Come vedi si può usare anche l'<strong style='color: red'>html</strong>, o inserire un <a href='#'>link</a>.">Maggiori informazioni</a></p>
+                <p><a href="#" class="info tiptip" title="<h3>Informazioni generali</h3>L'iscrizione al sito internet Cristalensi <strong>&egrave; obbligatoria solo per acquistare</strong> ma non per consultare il catalogo dei prodotti.<br />Gli iscritti, oltre che poter acquistare i prodotti inserendo solamente <strong style='color: red'>Login</strong> e <strong style='color: red'>Password</strong> senza ripetere l'iscrizione ogni volta, potranno stampare gli ordini, aggiornare i propri dati, mettere i commenti al sito internet e saranno aggiornati sulle nostre offerte.<br />Per tutte le altre informazioni relative alle condizioni di vendita consulta la pagina specifica: <a href='condizioni_di_vendita.asp' style='color: red'>condizioni di vendita</a>.">Maggiori informazioni</a></p>
                 <form method="post" name="logon" action="<%=MM_LoginAction%><%if Request.QueryString<>"" then%>&<%else%>?<%end if%>contr=1">
 
                    <label for="username">Login</label>
@@ -30,11 +30,10 @@
                <%end if%>
                </form>
                <p><a href="recupero_pw.asp" class="password-recover">Recupera la password</a></p>
-               <!--<button type="submit" onClick="location.href='iscrizione.asp'">REGISTRATI!</button>-->
                <div align="center"><a href="iscrizione.asp" class="button_link_red">&nbsp;&nbsp;&nbsp;&nbsp;REGISTRATI!&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
 
                <h3>Pagamenti</h3>
-               <p><a href="#" class="info">Condizioni di vendita</a></p>
+               <p><a href="condizioni_di_vendita.asp" class="info">Condizioni di vendita</a></p>
                <p class="note">Gli ordini potranno esser pagati in Contrassegno o con Bonifico Bancario oppure online grazie al sistema sicuro di PayPal con Carte di Credito e Prepagate. </p>
                <img class="negozio" src="images/cartedicredito.jpg" style="padding-bottom:30px;" />
             <%end if%>
@@ -42,7 +41,7 @@
 
         <h3>Contattaci!</h3>
         <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione</p>
-        <p><a href="#" class="info">Contatti e riferimenti</a></p>
+        <p><a href="contatti.asp" class="info">Contatti e riferimenti</a></p>
         <p class="note"><strong>Cristalensi Snc</strong><br />
             di Lensi Massimiliano & C.<br />
             C.F. e Iscr. Reg. Impr. di Firenze 05305820481<br />

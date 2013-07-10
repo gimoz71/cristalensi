@@ -5,7 +5,7 @@ if prov="" then prov=0
 'se = 0 proviene dal sito
 'se = 1 proviene dal negozio
 
-pkid = Session("idCliente")
+	pkid = Session("idCliente")
 	if pkid = "" then pkid = 0
 
 	mode = request("mode")
@@ -179,16 +179,23 @@ pkid = Session("idCliente")
 '
 '			Set eMail_cdo = Nothing
 			
-		end if
+		
 
 		nome_log=nome&" "&nominativo
 		session("nome_log")=nome&" "&nominativo
 		idsession=pkid_iscritto
 		session("idCliente")=pkid_iscritto
 		italia_log=italia
+		if italia_log="" then italia_log="Si"
+		if italia_log="Sì" then italia_log="Si"
+		if italia_log="S&igrave;" then italia_log="Si"
 		session("italia_log")=italia_log
 		
+		end if
+		
 	end if
+	
+	if mode=2 and pkid=0 then response.Redirect("iscrizione.asp")
 %>
 <!doctype html>
 <html>
@@ -322,7 +329,7 @@ pkid = Session("idCliente")
                                         </div>
                                        
                                     </div>
-                                    <div class="tr"><p style="text-align: center;"><input type="submit" name="accedi" value="accedi" class="button_link" />&nbsp;&nbsp;&nbsp;<a href="recupero_pw.asp">Clicca qui per recuperare la password</a></p></div>
+                                    <div class="tr"><p style="text-align: center;"><button type="submit" name="accedi" class="button_link">accedi</button>&nbsp;&nbsp;&nbsp;<a href="recupero_pw.asp">Clicca qui per recuperare la password</a></p></div>
                                 </div>
                                 </form>
                             </div>
@@ -336,7 +343,7 @@ pkid = Session("idCliente")
                             <div class="iscrizione clearfix">
                                 
                                 <div class="table">
-                                    <form method="post" action="iscrizione.asp?mode=1&amp;pkid=0" name="newsform" onSubmit="return verifica();">
+                                    <form method="post" action="iscrizione.asp?mode=1&amp;pkid=<%=pkid%>" name="newsform" onSubmit="return verifica();">
                                     <div class="tr">
                                         <div class="td">
 	                                        Nome (*) e Cognome (*)<br />
@@ -455,9 +462,9 @@ Opporsi gratuitamente al trattamento dei dati che lo riguardano.</textarea>
                                     </div>
                                     <div class="tr">
                                         <div>
-                                            <input name="Submit" type="submit" class="button_link" value="Salva" align="absmiddle" disabled />
+                                            <button name="Submit" type="submit" class="button_link_red" align="absmiddle" disabled>Salva</button>
                                             &nbsp;
-                                            <input name="Submit2" type="reset" class="button_link" value="Annulla" />
+                                            <button name="Submit2" type="reset" class="button_link">Cancella</button>
                                             (*) campo obbligatorio </div>
                                     </div>
                                     <div class="tr">
@@ -465,41 +472,40 @@ Opporsi gratuitamente al trattamento dei dati che lo riguardano.</textarea>
                                     </div>
                                     </form>
                                 </div>
-                                
+                                </div>
                                 <%else%>
                                  	<h3 style="font-size: 14px; display: inline; border: none;">Autenticazione cliente</h3>
                                     <div class="iscrizione clearfix">
 									  <%if mode=2 then%>
                                           <br /><br />
                                           <font color="#990000"><b>Benvenuto/a&nbsp;<%=nome_log%></b></font>
-                                          <br /><br />
-                                          <a href="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
-                                          <br><br>
-                          					<a href="commenti_form.asp">cliccando qui puoi inserire un tuo commento sul sito internet.<br>
-						  					Commenti &raquo;</a>
+                                          <br /><br /><br /><br />
+                                          <a href="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">cliccando qui tornerai direttamente all'ordine da completare:<br />il Tuo Carrello on-line &raquo;</a>
+                                          <br /><br /><br /><br />
+                          					<a href="commenti_form.asp">cliccando qui puoi inserire un tuo commento sul sito internet:<br />
+						  					inserisci un commento &raquo;</a>
                                       <%else%>
-                                  
-                                      <%if pkid=0 then%>
-                                          Grazie per esserti iscritto/a a Cristalensi.it<br />
-                                          Da questo momento potrai completare e inviare i tuoi ordini senza dover inserire tutti i tuoi dati.
-                                          <br /><br />
-                                          <a href="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">Cliccando qui tornerai direttamente all'ordine da completare: Carrello on-line &raquo;</a>
-                                          <br><br>
-                          					<a href="commenti_form.asp">cliccando qui puoi inserire un tuo commento sul sito internet.<br>
-						  					Commenti &raquo;</a>
-                                      <%else%>
-                                          I tuoi dati sono stati aggiornati regolarmente.
-                                      <%end if%>
-                                    </div>
-                              <%end if%>
-
+										  <%if pkid=0 then%>
+                                              <br /><br />Grazie per esserti iscritto/a a Cristalensi.it<br />
+                                              Da questo momento potrai completare e inviare i tuoi ordini oppure inserire i commenti senza dover inserire tutti i tuoi dati
+                                              <br /><br /><br /><br />
+                                              <a href="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">cliccando qui tornerai direttamente all'ordine da completare:<br />il Tuo Carrello on-line &raquo;</a>
+                                              <br /><br /><br /><br />
+                                                <a href="commenti_form.asp">cliccando qui puoi inserire un tuo commento sul sito internet:<br />
+                                                inserisci un commento &raquo;</a>
+                                          <%else%>
+                                              <br /><br />
+                                              I tuoi dati sono stati aggiornati regolarmente.
+                                          <%end if%>
+                              		  <%end if%>
+                              		</div>
                             	
                             <%end if%>    
-                        	</div>
+                        	
                         </div>
                     </div>
                 </div>
-                <!--#include file="inc_sx.asp"-->
+                <!--#include file="inc_sx_prodotti.asp"-->
             </div>
         </div>
         <!--#include file="inc_footer.asp"-->
