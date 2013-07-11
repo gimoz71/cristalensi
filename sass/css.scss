@@ -530,11 +530,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         .price {
             margin-top: .4em;
             span {
-                text-decoration: line-through;
+                /*text-decoration: line-through;*/
             }
         }
         .cristalprice {
-            color: #c00;
+            color: #C00;
             font-weight: bold;
         }
         .scheda-link {
@@ -591,11 +591,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         .price {
             margin-top: .4em;
             span {
-                text-decoration: line-through;
+                /*text-decoration: line-through;*/
             }
         }
         .cristalprice {
-            color: #c00;
+            color: #C00;
             font-weight: bold;
         }
         .scheda-link {
@@ -667,14 +667,14 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         .price {
             margin-top: .4em;
             span {
-                text-decoration: line-through;
+                /*text-decoration: line-through;*/
             }
             padding-top: 5px;
             display: inline-block;
             
         }
         .cristalprice {
-            color: #c00;
+            color: #C00;
             font-weight: bold;
             padding-top: 5px;
             display: inline-block;
@@ -766,14 +766,16 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         .price {
             span {
-                text-decoration: line-through;
+                /*text-decoration: line-through;*/
+				font-size: 120%;
             }
         }
         .cristalprice {
-            color: #c00;
+            /*color: #c00;*/
+			color:#C00;
             font-weight: bold;
             padding: 5px 0;
-            font-size: 140%;
+            font-size: 150%;
             display: inline-block;
         }
         .produttore, .cart-link {

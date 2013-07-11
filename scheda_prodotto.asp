@@ -20,7 +20,7 @@ if id>0 then
 		fkproduttore=prod_rs("fkproduttore")
 		if fkproduttore="" then fkproduttore=0
 		
-		offerta=prod_rs("fkproduttore")
+		offerta=prod_rs("offerta")
 		if offerta="" then offerta=0
 		
 		if fkproduttore>0 then
@@ -190,7 +190,7 @@ end if
                                     <p class="area clearfix"><%if codicearticolo<>"" then%>Codice articolo <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
                                     <div class="data">
                                         <%if prezzoarticolo=0 then%>
-                                           <p class="cart-panel clearfix"s tyle="float: right; width: 30%;  text-align: center;"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a></span>
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><br /><br />
                                        <%else%>
                                            <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%><br><i>Iva compresa</i>
                                        <%end if%>
@@ -202,8 +202,12 @@ end if
                                             <p><a href="/public/<%=allegato_prodotto%>" target="_blank"><img src="/images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="E' presente un allegato">Allegato</a></p>
                                         <%end if%>
                                         <%if prezzoarticolo=0 then%>
-                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<span class="cristalprice"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a></span>
+                                            <p class="cart clearfix"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a>
                                         <%else%>
+                                        	<%if offerta=10 then%>
+											<p class="cart clearfix"><span class="cristalprice" style="float:right;">IL PRODOTTO NON E' DISPONIBILE, CONTATTACI!&nbsp;&nbsp;</span></p>
+											<%else%>
+
                                             <form name="newsform2" id="newsform2" onSubmit="return verifica_2();">
                                                 <input type="hidden" name="id" id="id" value="<%=id%>">
                                                 <%
@@ -237,7 +241,8 @@ end if
                                                     %>
                                                     <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span>
                                                 </p>
-                                            </form>	
+                                            </form>
+                                            <%end if%>	
                                         <%end if%>
                                     </div>
                                     <%
