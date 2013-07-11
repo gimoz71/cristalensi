@@ -187,7 +187,7 @@ if prov="" then prov=0
 		session("idCliente")=pkid_iscritto
 		italia_log=italia
 		if italia_log="" then italia_log="Si"
-		if italia_log="Sì" then italia_log="Si"
+		if italia_log="Sï¿½" then italia_log="Si"
 		if italia_log="S&igrave;" then italia_log="Si"
 		session("italia_log")=italia_log
 		
@@ -318,19 +318,20 @@ if prov="" then prov=0
                             <p>Se sei gi&agrave; iscritto, e quindi hai gi&agrave; Login (Email) e Password, non &egrave; necessario che ti iscriva nuovamente, &egrave; sufficiente inserire i dati di accesso qui sotto e sarai riconosciuto immediatamente.</p>
 							<div class="iscrizione clearfix">
                             	<form method="post" action="iscrizione.asp?mode=2&contr=1" name="newsform2">
-                                <div class="table">
-                                    <div class="tr">
-                                        <div class="td">
+                                    <div class="half_panel left_p" style="">
+                                        <div >
                                             Login <input name="login" type="text" id="login" size="30" />
                                         </div>
-                                        <div class="td">
+                                        <div class="">
                                             Password <input name="password" type="password" id="password" size="30" />
-                                            
                                         </div>
-                                       
                                     </div>
-                                    <div class="tr"><p style="text-align: center;"><button type="submit" name="accedi" class="button_link">accedi</button>&nbsp;&nbsp;&nbsp;<a href="recupero_pw.asp">Clicca qui per recuperare la password</a></p></div>
-                                </div>
+                                    <div class="half_panel left_p">
+                                        <div style="margin-top: 20px;">
+                                            <span style="text-align: center;"><button type="submit" name="accedi" class="button_link_red">accedi</button>&nbsp;&nbsp;&nbsp;</span>
+                                            <a href="recupero_pw.asp" ><small>Clicca qui per recuperare la password</small></a>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                             <hr>

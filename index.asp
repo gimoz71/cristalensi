@@ -65,11 +65,11 @@
                                 <p style="padding-top:10px; line-height: 160%;">Seguici su FACEBOOK collegandoti alla pagina ufficiale di Cristalensi, troverai le ultime novità e bellissime fotografie di arredamento da condividere con i tuoi amici, inoltre troverai altri appassionati di illuminazione per parlare dei nostri articoli</p>
                             </div>
                             <!--facebook-->
-                            <div class="social_panel facebook_p">
+                            <div class="half_panel social_box left_p_fb">
                             <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true" data-height="230"></div>
                             </div>
                             <!--dicono di noi-->
-                            <div class="social_panel twitter_p">
+                            <div class="half_panel social_box right_p">
                             <h4 class="area-commenti">Dicono di noi...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red">TUTTI I COMMENTI &raquo;</a></h4>
                             <%
 							Set com_rs = Server.CreateObject("ADODB.Recordset")
