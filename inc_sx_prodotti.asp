@@ -1,4 +1,4 @@
-			<div id="sidebar-alt" >
+			<div id="sidebar-alt" class="clearfix">
                     <div>
                         <%if Instr(MM_LoginAction, "prodott")>0 or Instr(MM_LoginAction, "categorie")>0 or Instr(MM_LoginAction, "offerte")>0 or Instr(MM_LoginAction, "produttori")>0 or Instr(MM_LoginAction, "ricerca")>0 then%>
                             <h3>Galleria prodotti</h3>
@@ -85,7 +85,7 @@
                             Tel. e Fax: 0571.911163<br />
                             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
                         </p>
-                        <img src="images/telefono_cristalensi.gif" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
+                        <img src="images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
                         <h3>Seguici anche su</h3>
                         <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
                         <p>&nbsp;</p>
