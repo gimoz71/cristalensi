@@ -123,9 +123,9 @@ select {
 input, button {
     &[type=submit] {
         cursor: pointer;
-		#sidebar-alt  & { 
-        	width: 100%;
-		}
+            #sidebar-alt  & { 
+            width: 100%;
+            }
         @include respond-to('medium-screens'){
             //padding: 5px 0;
             font-size: 1em;
@@ -423,10 +423,10 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         background-color: $yellow;
         padding: calc-em(5, 810);
         margin: calc-em(20, 810) 0;
-        /*span {
+        span {
             display: inline-block;
             margin-top: 10px;
-        }*/
+        }
         @include respond-to('handhelds'){
             text-align: center;
             *{
@@ -711,7 +711,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 padding-left: 25px;
             }
             @include respond-to('medium-screens'){
-                width: 50%;
+                width: 135px;
             }
         }
         @include respond-to('medium-screens'){
@@ -1008,6 +1008,15 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     h3 {
         margin-top: 30px;
         clear: both;
+    }
+    .register {
+        width: 100%;
+    }
+    .telefono, .fb {
+        @include respond-to('handhelds'){
+            text-align: center;
+            width: auto;
+        }
     }
 }
 #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt{

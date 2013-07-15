@@ -78,70 +78,75 @@
 	                                        Nome o Codice del prodotto<br />
                                             <input name="titolo" type="text" id="titolo" style="width:300px;" />
                                     </div>
-                                    <div class="spacer"></div>
                                     <div class="tr">
+                                        <div class="td">
+
                                         Categoria<br />
                                             <%
-											Set cs=Server.CreateObject("ADODB.Recordset")
-											sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo as Titolo_2 "
-											sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
-											'sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
-											sql = sql + "ORDER BY Categorie1.Titolo ASC, Categorie2.Titolo ASC"
-											cs.Open sql, conn, 1, 1
-											%>
-											<select name="Cat" id="Cat" style="width:300px;">
-												<option value="0" >Seleziona una categoria</option>
-												<%
-												if cs.recordcount>0 then
-												Do While Not cs.EOF
-												%>
-												<option title="<%=cs("Titolo_2")%>" value=<%=cs("pkid_2")%> ><%=cs("Titolo_1")%> - <%=cs("Titolo_2")%></option>
-												<%
-												cs.movenext
-												loop
-												end if
-												%>
-											 </select>
-											 <%cs.close%>
+                                                Set cs=Server.CreateObject("ADODB.Recordset")
+                                                sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo as Titolo_2 "
+                                                sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
+                                                'sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
+                                                sql = sql + "ORDER BY Categorie1.Titolo ASC, Categorie2.Titolo ASC"
+                                                cs.Open sql, conn, 1, 1
+                                            %>
+                                            <select name="Cat" id="Cat" style="width:300px;">
+                                                    <option value="0" >Seleziona una categoria</option>
+                                                    <%
+                                                    if cs.recordcount>0 then
+                                                    Do While Not cs.EOF
+                                                    %>
+                                                    <option title="<%=cs("Titolo_2")%>" value=<%=cs("pkid_2")%> ><%=cs("Titolo_1")%> - <%=cs("Titolo_2")%></option>
+                                                    <%
+                                                    cs.movenext
+                                                    loop
+                                                    end if
+                                                    %>
+                                             </select>
+                                             <%cs.close%>
                                     </div>
-                                    <div class="spacer"></div>
+                                    </div>
                                     <div class="tr">
-                                        	Produttore<br />
+                                        <div class="td">
+                                            Produttore<br />
                                             <%
-											Set cs=Server.CreateObject("ADODB.Recordset")
-											sql = "Select * From Produttori order by titolo ASC"
-											cs.Open sql, conn, 1, 1
-											if cs.recordcount>0 then
-											%>
-											<select name="FkProduttore" id="FkProduttore" style="width:300px;">
-											<option value="0">Seleziona un produttore</option>
-											<%
-											Do While Not cs.EOF
-											%>
-											<option value="<%=cs("pkid")%>"><%=cs("titolo")%></option>
-											<%
-											cs.movenext
-											loop
-											%>
-											</select>
-											<%end if%>
-											<%cs.close%>
+                                            Set cs=Server.CreateObject("ADODB.Recordset")
+                                            sql = "Select * From Produttori order by titolo ASC"
+                                            cs.Open sql, conn, 1, 1
+                                            if cs.recordcount>0 then
+                                            %>
+                                            <select name="FkProduttore" id="FkProduttore" style="width:300px;">
+                                            <option value="0">Seleziona un produttore</option>
+                                            <%
+                                            Do While Not cs.EOF
+                                            %>
+                                            <option value="<%=cs("pkid")%>"><%=cs("titolo")%></option>
+                                            <%
+                                            cs.movenext
+                                            loop
+                                            %>
+                                            </select>
+                                            <%end if%>
+                                            <%cs.close%>
+                                        </div>
                                     </div>
-                                    <div class="spacer"></div>
                                     <div class="tr">
+                                        <div class="td">
+
 	                                        Fascia di prezzo<br />
                                             Da <input name="prezzo_da" type="text" id="prezzo_da" style="width:100px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A <input name="prezzo_a" type="text" id="prezzo_a" style="width:100px;" />
+                                        </div>
                                     </div>
-                                    <div class="spacer"></div>
                                     
-                                    <div class="spacer"></div>
                                     <div class="tr">
-                                            <input name="Submit" type="submit" class="button_link" value="Avvia la ricerca" align="absmiddle" />
+                                        <div class="td">
+
+                                            <button name="Submit" type="submit" class="button_link" value="Avvia la ricerca" align="absmiddle">Avvia la ricerca</button>
+                                        </div>
                                     </div>
-                                    <div class="spacer"></div>
                                     </form>
                                 </div>
-                        	</div>
+                            </div>
                         </div>
                     </div>
                 </div>

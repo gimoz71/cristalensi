@@ -19,13 +19,13 @@
                    <input type="text" name="login">
                    <label for="password">Password</label>
                    <input type="password" name="password">
-                   <button type="submit" style="margin-top:10px;">Entra</button>
+                   <button type="submit" class="button_link" style="margin-top:10px;">Entra</button>
                <%if contr=2 then%>
                <p style="background: #900; color: #fff; font-weight: bold; padding: 5px;">Attenzione! I dati inseriti<br />non sono corretti.</p>
                <%end if%>
                </form>
                <p><a href="recupero_pw.asp" class="password-recover">Recupera la password</a></p>
-               <div align="center"><a href="iscrizione.asp" class="button_link_red">&nbsp;&nbsp;&nbsp;&nbsp;REGISTRATI!&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+               <a href="iscrizione.asp"><button class="register button_link_red">REGISTRATI!</button></a>
 
                <h3>Pagamenti</h3>
                <p><a href="condizioni_di_vendita.asp" class="info">Condizioni di vendita</a></p>
@@ -46,8 +46,8 @@
             Tel. e Fax: 0571.911163<br />
             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
         </p>
-        <img src="images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
+        <img class="telefono" src="images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
         <h3>Seguici anche su</h3>
-        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" style="padding-bottom: 20px;" /></a>
+        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img class="fb" src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
     </div>
 </div>
