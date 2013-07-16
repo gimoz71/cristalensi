@@ -157,7 +157,21 @@ end if
 				//document.newsform2.submit();
 		}
 		</SCRIPT>
-    
+    	<!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+		<script type="text/javascript">
+        
+          //var _gaq = _gaq || [];
+//          _gaq.push(['_setAccount', 'UA-320952-2']);
+//          _gaq.push(['_trackPageview']);
+//        
+//          (function() {
+//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//          })();
+        
+        </script>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
     <body>
     <!--facebook-->
@@ -270,9 +284,9 @@ end if
                                             'calcolo misure immagini
                                             Set objImageSize = New ImageSize
                                             With objImageSize
-                                              '.ImageFile = server.mappath("public/"&file_img&"")
+                                              .ImageFile = server.mappath("public/"&file_img&"")
                                               '.ImageFile = path_img&file_img
-                                              .ImageFile = "public/"&file_img
+                                              '.ImageFile = "public/"&file_img
 
                                               If .IsImage Then
                                                     W=.ImageWidth
@@ -299,9 +313,14 @@ end if
                                     img_rs.close
                                     %>
                                 </li>
+                                <hr />
                                 <li class="clearfix">
-                                    <img class="facebook" src="images/facebook2.png">
-                                    <p class="fb-slogan">Se questo articolo ti piace, condividilo con i tuoi amici su FACEBOOK</p>
+                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook"></a><span style="line-height:80px;">Se questo articolo ti piace, condividilo con i tuoi amici su FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
+                                    
+                                </li>
+                                <hr />
+                                <li class="clearfix">
+                                    <img src="images/telefono_cristalensi.png" alt="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" title="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" style="height:152px; width:162px; float:left; padding-left: 10px; padding-right: 10px;" /><br /><br /><br /><strong>Contattaci!</strong><br />Il nostro personale sarà a tua disposizione per qualsiasi chiarimento, informazione e consiglio sull'articolo desiderato.        
                                 </li>
                                 
                             </ul>

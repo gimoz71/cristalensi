@@ -4,7 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cristalensi</title>
+        <title>Condizioni di vendita ecommerce prodotti per illuminazione da interno, illuminazione da esterno, lampadari, piantane, plafoniere</title>
+		<meta name="description" content="Condizioni di vendita ecommerce di prodotti per illuminazione da interno, illuminazione da esterno, lampadari, piantane, plafoniere, lampade esterne, ventilatori, prodotti per bambini">
+		<meta name="keywords" content="Condizioni di vendita ecommerce prodotti illuminazione da interno illuminazione da esterno, lampade da interno, lampade da esterno, piantane, plafoniere, ventilatori, lampade per bambini, lampade per il bagno, lampade moderne, lampade classiche, lampade rustiche, lampade tiffany, lampade in cristallo, lampade murano, faretti, lampade da incasso, lampade a led, lampade a risparmio energetico, lampade economiche, lampadari economici">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/media-queries-ie.js"></script>
@@ -36,6 +38,21 @@
                     comment inside the CC or it will close prematurely. */
             </style>
         <![endif]-->
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+		<script type="text/javascript">
+        
+          //var _gaq = _gaq || [];
+//          _gaq.push(['_setAccount', 'UA-320952-2']);
+//          _gaq.push(['_trackPageview']);
+//        
+//          (function() {
+//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//          })();
+        
+        </script>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
     <body>
         <div id="wrap">
@@ -110,7 +127,7 @@
                             Per il pagamento con <span class="sfondo-giallo"><em><strong>Bonifico bancario</strong></em></span> non verr&agrave; addebitato <em><strong>nessun costo</strong></em>, ma la merce verr&agrave; inviata solo quando la Banca certificher&agrave; il pagamento. <br />
                             <br />
                             Per il pagamento online ci affidiamo al <span class="sfondo-giallo"><em><strong>sistema sicuro di Paypal</strong></em></span> che permette di pagare con un'ampia scelta di sistemi: dalle carte di credito pi&ugrave; diffuse, alle carte prepagate e ricaricabili.<br />
-                            Ecco l'ampia scelta: <br /><a href="#" onclick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="https://www.paypal.com/en_US/IT/i/bnr/bnr_horizontal_solution_PP_178wx80h.gif" border="0" alt="Che cos'&egrave; PayPal"></a><br />
+                            Ecco l'ampia scelta: <br /><a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="https://www.paypal.com/en_US/IT/i/bnr/bnr_horizontal_solution_PP_178wx80h.gif" border="0" alt="Che cos'&egrave; PayPal"></a><br />
                             <br />
                             Ricordiamo che per il <span class="sfondo-giallo"><strong><em>pagamento in contrassegno</em></strong></span> il corriere consegner&agrave; la merce se il pagamento avverr&agrave;<strong> in contanti</strong>, non verranno accettati assegni o altre formule di pagamento.<br />
                             Per il pagamento in contrassegno verr&agrave; conteggiato un costo di 4&euro; sul totale della merce acquistata.

@@ -29,7 +29,9 @@ end if
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cristalensi</title>
+        <title><%=title%> CRISTALENSI vendita online e diretta</title>
+		<meta name="description" content="<%=description%>, vendita <%=titlo_cat%>">
+		<meta name="keywords" content="Vendita <%=title%>, <%=kw%> ">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/media-queries-ie.js"></script>
@@ -61,6 +63,21 @@ end if
                     comment inside the CC or it will close prematurely. */
             </style>
         <![endif]-->
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+		<script type="text/javascript">
+        
+          //var _gaq = _gaq || [];
+//          _gaq.push(['_setAccount', 'UA-320952-2']);
+//          _gaq.push(['_trackPageview']);
+//        
+//          (function() {
+//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//          })();
+        
+        </script>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
     <body>
         <div id="wrap">

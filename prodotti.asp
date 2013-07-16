@@ -88,6 +88,21 @@ end if
             }
             //-->
         </script>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+		<script type="text/javascript">
+        
+          //var _gaq = _gaq || [];
+//          _gaq.push(['_setAccount', 'UA-320952-2']);
+//          _gaq.push(['_trackPageview']);
+//        
+//          (function() {
+//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//          })();
+        
+        </script>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
     <body>
         <div id="wrap">
@@ -146,7 +161,7 @@ end if
                                             %>
                                          </select>
                                          <%cs.close%>
-                                         <br />Oppure, per una ricerca maggiormente dettagliata, sfrutta la <a href="#" class="button_link_red">RICERCA AVANZATA</a>
+                                         <br />Oppure, per una ricerca maggiormente dettagliata, sfrutta la <a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a>
                                       </p>
                                     </form>
                               	<%end if%>
@@ -260,8 +275,8 @@ end if
 											'calcolo misure immagini
 											Set objImageSize = New ImageSize
 											With objImageSize
-											  '.ImageFile = server.mappath("public/"&file_img&"")
-											  .ImageFile = path_img&file_img
+											  .ImageFile = server.mappath("public/"&file_img&"")
+											  '.ImageFile = path_img&file_img
 											  
 											  If .IsImage Then
 												W=.ImageWidth

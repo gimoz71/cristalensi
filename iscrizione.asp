@@ -187,7 +187,7 @@ if prov="" then prov=0
 		session("idCliente")=pkid_iscritto
 		italia_log=italia
 		if italia_log="" then italia_log="Si"
-		if italia_log="Sï¿½" then italia_log="Si"
+		if italia_log="Sì" then italia_log="Si"
 		if italia_log="S&igrave;" then italia_log="Si"
 		session("italia_log")=italia_log
 		
@@ -202,7 +202,7 @@ if prov="" then prov=0
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cristalensi</title>
+        <title>CRISTALENSI iscrizione ecommerce prodotti iluminazione</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/media-queries-ie.js"></script>
@@ -295,6 +295,21 @@ if prov="" then prov=0
 								}
 							}
 		</SCRIPT>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+		<script type="text/javascript">
+        
+          //var _gaq = _gaq || [];
+//          _gaq.push(['_setAccount', 'UA-320952-2']);
+//          _gaq.push(['_trackPageview']);
+//        
+//          (function() {
+//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//          })();
+        
+        </script>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
     <body>
         <div id="wrap">

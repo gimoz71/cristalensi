@@ -8,6 +8,7 @@
 	'conn.open = "DSN=cristalensiit"
 	
 	path_img="d:\inetpub\webs\cristalensiit\public\"
+	'path_img="d:\dati\web\cristalensi_2013\new\public\"
 	
 	fromURL = Request.ServerVariables("HTTP_REFERER")
 	toUrl = Request.ServerVariables("SCRIPT_NAME")

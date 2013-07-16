@@ -4,7 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cristalensi</title>
+        <title>Negozio illuminazione Firenze Showroom lampadari da interno lampade da esterno</title>
+		<meta name="description" content="Cristalensi, negozio di illuminazione vicino Firenze, vende lampadari da interno, lampade da esterno, piantane, plafoniere, appliques, ventilatori, lampade per bambini e lampade per il bagno, prodotti in molti stili dal moderno al classico.">
+		<meta name="keywords" content="Negozio di illuminazione vicino Firenze, lampadari da interno, lampade da esterno, piantane, plafoniere, appliques, ventilatori, lampade per bambini e lampade per il bagno, prodotti in molti stili dal moderno al classico.">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/media-queries-ie.js"></script>
@@ -36,6 +38,21 @@
                     comment inside the CC or it will close prematurely. */
             </style>
         <![endif]-->
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+		<script type="text/javascript">
+        
+          //var _gaq = _gaq || [];
+//          _gaq.push(['_setAccount', 'UA-320952-2']);
+//          _gaq.push(['_trackPageview']);
+//        
+//          (function() {
+//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//          })();
+        
+        </script>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
     <body>
         <div id="wrap">
@@ -50,10 +67,10 @@
                                 <p class="corporate"><img src="images/telefono_cristalensi.png" alt="Numero telefono fisso Cristalensi, orario negozio dal Lunedi al Sabato" style="height:152px; width:162px; float:right; padding-left: 10px;" />
                                 <b>Cristalensi Snc</b> Di Lensi Massimiliano & C.<br />
                                 C.F. e Iscr. Reg. Impr. di Firenze 05305820481 - R.E.A. Firenze 536760<br /><br />
-                                <strong>Sede e Showroom</strong>: 50056 Montelupo F.no (FI) - Via arti e mestieri, 1<br />
+                                <strong>Sede e Showroom</strong>: 50056 Montelupo F.no (FI) - Via arti e mestieri, 1<br /><br />
                                 <strong>Telefono e Fax</strong>: 0571.911163<br /><br />
-                                Email: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a><br />
-                                Email certificata: <a href="mailto:info@pec.cristalensi.it">info@pec.cristalensi.it</a> <strong><br />
+                                <strong>Email</strong>: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a><br /><br />
+                                <strong>Email certificata</strong>: <a href="mailto:info@pec.cristalensi.it">info@pec.cristalensi.it</a> <strong>
                                 <font color="#CC0000">(SOLO per coloro che hanno un'email PEC)</font></strong><br />
                                 </p>
                             </div>

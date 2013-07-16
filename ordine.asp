@@ -266,7 +266,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cristalensi</title>
+        <title>Cristalensi - Ordine</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/media-queries-ie.js"></script>
@@ -410,7 +410,7 @@
                                   %>
                                   <p>
                                   	
-                                    <a href="https://www.paypal.com/it/webapps/mpp/paypal-popup" title="Come funziona PayPal" onclick="javascript:window.open('https://www.paypal.com/it/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo-center/logo_paypal_carte.jpg" border="0" style="float:right; padding-left:5px; width:319px; height:110px;" alt="Che cos'&egrave; PayPal"></a>Grazie per aver scelto i nostri prodotti,<br>
+                                    <a href="https://www.paypal.com/it/webapps/mpp/paypal-popup" title="Come funziona PayPal" onClick="javascript:window.open('https://www.paypal.com/it/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo-center/logo_paypal_carte.jpg" border="0" style="float:right; padding-left:5px; width:319px; height:110px;" alt="Che cos'&egrave; PayPal"></a>Grazie per aver scelto i nostri prodotti,<br>
                                     per completare l'ordine &egrave; necessario effettuare il pagamento con i sistemi sicuri di Paypal che permettono di pagare con moltissime carte di credito e carte ricaribili:<br>
                                     MasterCard, Visa e Visa Electron, PostePay, Carta Aura e ricariche PayPal.<br><br>
                                     Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br>

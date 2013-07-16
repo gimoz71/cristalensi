@@ -5,7 +5,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cristalensi</title>
+        <title>Vendita lampadari on line illuminazione da interni illuminazine da esterni CRISTALENSI</title>
+		<meta name="description" content="Cristalensi, showroom vicino Firenze, vende lampade e lampadari on line, prodotti per illuminazione da interno, illuminazione da esterno, lampadari, piantane, plafoniere, lampade da esterno, ventilatori, lampade per bambini e lampade per il bagno, prodotti in molti stili dal moderno al classico.">
+		<meta name="keywords" content="vendita lampadari on line, prodotti illuminazione da interni, prodotti illuminazione da esterni, lampade da interno, lampade da esterno, piantane, plafoniere, ventilatori, lampade per bambini, lampade per il bagno, lampade moderne, lampade classiche, lampade rustiche, lampade tiffany, lampade in cristallo, lampade murano, faretti, lampade da incasso, lampade a led, lampade a risparmio energetico, lampade economiche, lampadari economici">
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script src="js/media-queries-ie.js"></script>
@@ -37,6 +39,24 @@
                     comment inside the CC or it will close prematurely. */
             </style>
         <![endif]-->
+        
+        <!--<meta name="google-site-verification" content="4Pno_x3W_sfOLqaTpUk-z2OMJg8LPzzt-JiBFoMYZcQ" />-->
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+		<script type="text/javascript">
+        
+          //var _gaq = _gaq || [];
+//          _gaq.push(['_setAccount', 'UA-320952-2']);
+//          _gaq.push(['_trackPageview']);
+//        
+//          (function() {
+//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//          })();
+        
+        </script>
+        <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+        
     </head>
     <body>
     <!--plugin facebook-->
