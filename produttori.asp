@@ -73,7 +73,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <h3>Elenco produttori articoli per illuminazione</h3>
+                            <h1>Elenco produttori articoli per illuminazione</h1>
                             <p>
                                 <i>Questo è l'elenco delle imprese produttrici di articoli per illuminazione che riforniscono il nostro negozio.<br>
 					    Scegliendo un produttore vedrete l'elenco dei suoi prodotti, da lì potete accedere alla scheda del prodotto e acquistarlo. Se cercate un articolo specifico di un produttore, ma non lo trovate nel suo elenco, contattate il nostro staff per avere informazioni e un preventivo: nel catalogo sul sito internet non sono presenti tutti i prodotti, è stata fatta una selezione dai singoli cataloghi dei produttori.</i>.

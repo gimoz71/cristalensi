@@ -47,7 +47,7 @@ end if
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title><%if cat>0 then%><%=nuovo_title_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%> catalogo prodotti illuminazione vendita online Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalogo prodotti illuminazione da interno illuminazione da esterno vendita online Cristalesni<%end if%></title>
+        <title><%if cat>0 then%><%=nuovo_title_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%> catalogo prodotti illuminazione vendita online Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalogo articoli illuminazione da interno illuminazione da esterno vendita online Cristalesni<%end if%></title>
 		<meta name="description" content="<%if cat>0 then%><%=NoHTML(descrizione_cat)%><%end if%><%if FkProduttore>0 then%>Catalogo prodotti in vendita di <%=titolo_produttore%>, vendita online prodotti illuminazione su Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalogo prodotti illuminazione da interno, illuminazione da esterno, vendita online su Cristalesni<%end if%>">
 		<meta name="keywords" content="<%if cat>0 then%><%=nuovo_title_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%> catalogo prodotti illuminazione vendita online Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalogo prodotti illuminazione da interno illuminazione da esterno vendita online Cristalesni<%end if%>">
         <!--[if lt IE 9]>
@@ -119,7 +119,7 @@ end if
                             <%
 							'elenco prodotti di una categoria o di un produttore
 							if cat>0 or FkProduttore>0 then%>
-                                <h3>Catalogo prodotti: <%if cat>0 then%><%=titolo_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%><%end if%></h3>
+                                <h1>Catalogo prodotti: <%if cat>0 then%><%=titolo_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%><%end if%></h1>
                                 <%if descrizione_cat<>"" then%>
                                 <p>
                                     <i><%=descrizione_cat%></i>.
@@ -374,12 +374,12 @@ end if
 							 else
 							 'prodotti in vetrina
 							 %>
-                             	<h3>Prodotti in vetrina</h3>
+                             	<h1>Articoli illuminazione in primo piano</h1>
                                 <p>
                                     <i>
-                                    Questa è una breve selezione di prodotti che rappresentano la nostra galleria.<br />
+                                    Questa è una breve selezione di articoli di illuminazione che rappresentano la nostra galleria.<br />
 					    			Per consultare tutto il catalogo ed accedere ai singoli prodotti, potete scegliere una categoria sulla sinistra.<br />
-									Ogni prodotto ha una propria scheda dettagliata, per accederci è sufficiente cliccare sul nome o sulla foto del prodotto.
+									Ogni articolo ha una propria scheda dettagliata, per accederci è sufficiente cliccare o sul nome, o sulla fotografia oppure su "Scheda prodotto".
                                     </i>
                                 </p>
                                 

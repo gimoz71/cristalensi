@@ -88,10 +88,10 @@ end if
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <h3>Categoria scelta: <%=titolo_cat%></h3>
+                            <h1>Categoria scelta: <%=titolo_cat%></h1>
                             <%if descrizione_cat<>"" then%>
                             <p>
-                                <i><%=NoLettAcc(descrizione_cat)%></i>.
+                                <i><%=NoLettAcc(descrizione_cat)%></i>
                             </p>
                             <%end if%>
                             <%

@@ -57,10 +57,10 @@
                             <%end if%>
                             <%cs.close%>
                             <p><br /><br />Scopri le ultime offerte del nostro catalogo online</p>
-                            <a href="offerte.asp" class="button_link_red">PRODOTTI IN OFFERTA</a>
+                            <a href="offerte.asp" class="button_link_red" title="Offerte prodotti illuminazione">PRODOTTI IN OFFERTA</a>
                             <p><br /><br />Vuoi ricercare un prodotto per codice, per nome oppure in una fascia di prezzo? Vuoi combinare una serie di caratteristiche?
                                 Sfrutta la ricerca avanzata</p>
-                            <a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a>
+                            <a href="ricerca_avanzata_modulo.asp" class="button_link_red" title="Ricerca avanzata articoli per illuminazione">RICERCA AVANZATA</a>
 						<%end if%>
                         
                         <%if idsession>0 then%>
@@ -75,7 +75,7 @@
                         
                         <h3>Contattaci!</h3>
                         <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione</p>
-                        <p><a href="contatti.asp" class="info">Contatti e riferimenti</a></p>
+                        <p><a href="contatti.asp" class="info" title="Negozio illuminazione Firenze">Contatti e riferimenti</a></p>
                         <p class="note"><strong>Cristalensi Snc</strong><br />
                             di Lensi Massimiliano & C.<br />
                             C.F. e Iscr. Reg. Impr. di Firenze 05305820481<br />
