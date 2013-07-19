@@ -314,7 +314,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     @include box-shadow(rgba(black, 0.25) 0 0 1px 0);
 }
 .show{
-    display:block!important;
+    display:block;
 }
 
 #btn-responsive-menu, #logo-handheld {
@@ -326,23 +326,34 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 
 
 #responsive-menu {
+    display: none;
     ul {
         margin: 0;
-        float:left;
+        float: left;
         width:100%;
         list-style: none;
-        li {
-            float: left;
-            margin: 0;
-            position: relative;
-        }
-    }
-    a {
-        color: #ccc;
-        display: block;
-        padding: 0.5em;
-        &:hover {
-            background:#666;
+        @each $section in $array-filtri  {
+            li.#{$section}{
+                //float: left;
+                margin: 3px calc-em(20, 810);
+                position: relative;
+                background: #{$section};
+                @include border-radius(4px);
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 10px;
+                    color: white;
+                    font-weight: bold;
+                    @extend %font-base;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        background: #ffd31c !important;
+                        color: #000 !important;
+                    }
+                }
+            }
         }
     }
     @include respond-to('medium-screens'){

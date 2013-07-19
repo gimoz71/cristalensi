@@ -26,14 +26,14 @@
     </div>
     <div id="responsive-menu">
         <ul>
-            <li><a href="index.asp" title="Cristalensi vendita lampadari on line">home page</a></li>
-            <li><a href="chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta">chi siamo</a></li>
-            <li><a href="contatti.asp" title="Negozio illuminazione Firenze">contatti</a></li>
-            <li><a href="commenti_elenco.asp" title="Commenti prodotti illuminazione">commenti</a></li>
-            <li><a href="prodotti.asp" title="Catalogo articoli illuminazione">prodotti</a></li>
-            <li><a href="offerte.asp" title="Offerte prodotti illuminazione">offerte</a></li>
-            <li><a href="carrello1.asp" title="Carrello E-commerce vendita lampadari">carrello</a></li>
-            <li><a href="condizioni_di_vendita.asp" title="Condizioni di vendita ecommerce">condizioni di vendita</a></li>
+            <li class="green"><a href="index.asp" title="Cristalensi vendita lampadari on line">home page</a></li>
+            <li class="darkorange"><a href="chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta">chi siamo</a></li>
+            <li class="skyblue"><a href="contatti.asp" title="Negozio illuminazione Firenze">contatti</a></li>
+            <li class="brown"><a href="commenti_elenco.asp" title="Commenti prodotti illuminazione">commenti</a></li>
+            <li class="red"><a href="prodotti.asp" title="Catalogo articoli illuminazione">prodotti</a></li>
+            <li class="blue"><a href="offerte.asp" title="Offerte prodotti illuminazione">offerte</a></li>
+            <li class="yellowgreen"><a href="carrello1.asp" title="Carrello E-commerce vendita lampadari">carrello</a></li>
+            <li class="magenta"><a href="condizioni_di_vendita.asp" title="Condizioni di vendita ecommerce">condizioni di vendita</a></li>
         </ul>
     </div>
     <div id="widget-area" class="blueberry">

@@ -1,11 +1,12 @@
 var contentHeight = 0;
 var sideHeight = 0;
 var width = 0;
+var height = 0;
 
 $(document).ready(function() {
     //When btn is clicked
     $("#btn-responsive-menu").click(function() {
-        $("#responsive-menu").toggleClass("show");
+        $("#responsive-menu").slideToggle();
     });
     
     $(".tiptip").tipTip({activation: 'click', maxWidth: "auto", keepAlive: true});
@@ -34,6 +35,9 @@ $(document).ready(function() {
              pager: false
          });
     }).resize(function() { 
-         calculate(); 
+        if (width >= 650) {
+            $("#responsive-menu").hide();
+        }
+        calculate(); 
     });
 });

@@ -75,7 +75,7 @@
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <a href="chisiamo.asp" title="Showroom Negozio lampadari - Vendita diretta"><img class="negozio" src="images/negozio.jpg" alt="Cristalensi Vendita lampadari on line"></a>
+                            <a href="chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta"><img class="negozio" src="images/negozio.jpg" alt="Cristalensi Vendita lampadari on line"></a>
                             <img class="anni" src="images/50anni_new.jpg" alt="Da pi&ugrave; di 50 anni vendita lampadari">
                             <h3>Cristalensi, la luce come idea</h3>
                             <p class="incipit">A portata di click una vasta e raffinata gamma di prodotti per illuminazione da interno ed esterno per arredare la vostra casa, il giardino, il tuo locale... Naviga nel Negozio on-line oppure visita il nostro <a href="chisiamo.asp" title="Showroom Negozio lampadari - Vendita diretta"><strong>Showroom</strong></a>, soddisferemo tutte le tue esigenze sia classiche che moderne.

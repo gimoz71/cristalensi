@@ -1,6 +1,6 @@
-/* normalize.css v1.1.0 | MIT License | git.io/normalize */
-/* normalize.css v1.1.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
-/* line 20, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_html5.scss */
+/* normalize.css v1.0.1 | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | HTML5 Display Definitions | MIT License | git.io/normalize */
+/* line 19, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_html5.scss */
 article,
 aside,
 details,
@@ -9,14 +9,13 @@ figure,
 footer,
 header,
 hgroup,
-main,
 nav,
 section,
 summary {
   display: block;
 }
 
-/* line 28, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_html5.scss */
+/* line 27, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_html5.scss */
 audio,
 canvas,
 video {
@@ -25,130 +24,82 @@ video {
   *zoom: 1;
 }
 
-/* line 39, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_html5.scss */
+/* line 38, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_html5.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 46, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_html5.scss */
+/* line 45, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_html5.scss */
 [hidden] {
   display: none;
 }
 
-/* normalize.css v1.1.0 | Base | MIT License | git.io/normalize */
-/* line 13, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_base.scss */
+/* normalize.css v1.0.1 | Base | MIT License | git.io/normalize */
+/* line 11, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_base.scss */
 html {
-  font-size: 100%;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
-/* line 30, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_base.scss */
-html,
-button,
-input,
-select,
-textarea {
-  font-family: sans-serif;
-}
-
-/* line 37, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_base.scss */
+/* line 19, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_base.scss */
 body {
   margin: 0;
 }
 
-/* normalize.css v1.1.0 | Links | MIT License | git.io/normalize */
-/* line 9, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_links.scss */
+/* normalize.css v1.0.1 | Links | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_links.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 16, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_links.scss */
+/* line 16, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_links.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* normalize.css v1.1.0 | Typography | MIT License | git.io/normalize */
-/* line 13, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* normalize.css v1.0.1 | Typography | MIT License | git.io/normalize */
+/* line 10, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
-/* line 19, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
-}
-
-/* line 24, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
-}
-
-/* line 29, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
-}
-
-/* line 34, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-
-/* line 39, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
-h6 {
-  font-size: 0.67em;
-  margin: 2.33em 0;
-}
-
-/* line 47, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 16, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 54, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 23, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 59, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 28, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 66, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 35, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 73, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/* line 81, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 41, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 90, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 50, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 p,
 pre {
   margin: 1em 0;
 }
 
-/* line 100, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 60, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 code,
 kbd,
 pre,
@@ -158,36 +109,36 @@ samp {
   font-size: 1em;
 }
 
-/* line 110, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 70, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 118, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 78, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-/* line 127, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 87, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 q {
   quotes: none;
 }
 
-/* line 132, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 92, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 q:before,
 q:after {
   content: '';
   content: none;
 }
 
-/* line 140, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 100, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 small {
   font-size: 80%;
 }
 
-/* line 147, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 107, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 sub,
 sup {
   font-size: 75%;
@@ -196,17 +147,17 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 154, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 114, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 158, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_typography.scss */
+/* line 118, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_typography.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 11, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_lists.scss */
+/* line 11, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_lists.scss */
 dl,
 menu,
 ol,
@@ -214,57 +165,57 @@ ul {
   margin: 1em 0;
 }
 
-/* line 15, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_lists.scss */
+/* line 15, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_lists.scss */
 dd {
   margin: 0 0 0 40px;
 }
 
-/* line 23, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_lists.scss */
+/* line 23, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_lists.scss */
 menu,
 ol,
 ul {
   padding: 0 0 0 40px;
 }
 
-/* line 30, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_lists.scss */
+/* line 30, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_lists.scss */
 nav ul,
 nav ol {
   list-style: none;
   list-style-image: none;
 }
 
-/* normalize.css v1.1.0 | Embedded Content | MIT License | git.io/normalize */
-/* line 9, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_embeds.scss */
+/* normalize.css v1.0.1 | Embedded Content | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_embeds.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 18, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_embeds.scss */
+/* line 18, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_embeds.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* normalize.css v1.1.0 | Figures | MIT License | git.io/normalize */
-/* line 9, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_figures.scss */
+/* normalize.css v1.0.1 | Figures | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_figures.scss */
 figure {
   margin: 0;
 }
 
-/* normalize.css v1.1.0 | Forms | MIT License | git.io/normalize */
-/* line 10, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* normalize.css v1.0.1 | Forms | MIT License | git.io/normalize */
+/* line 10, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 form {
   margin: 0;
 }
 
-/* line 17, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 17, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 30, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 30, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 legend {
   border: 0;
   padding: 0;
@@ -272,7 +223,7 @@ legend {
   *margin-left: -7px;
 }
 
-/* line 49, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 49, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 button,
 input,
 select,
@@ -284,19 +235,13 @@ textarea {
   *vertical-align: middle;
 }
 
-/* line 63, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 63, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 button,
 input {
   line-height: normal;
 }
 
-/* line 73, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
-button,
-select {
-  text-transform: none;
-}
-
-/* line 90, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 80, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -306,13 +251,13 @@ input[type="submit"] {
   *overflow: visible;
 }
 
-/* line 101, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 91, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 button[disabled],
-html input[disabled] {
+input[disabled] {
   cursor: default;
 }
 
-/* line 113, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 103, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -321,7 +266,7 @@ input[type="radio"] {
   *width: 13px;
 }
 
-/* line 126, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 116, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -329,34 +274,34 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 137, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 127, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 144, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 134, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 152, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_forms.scss */
+/* line 142, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_forms.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
 }
 
-/* normalize.css v1.1.0 | Tables | MIT License | git.io/normalize */
-/* line 9, C:/Users/Iury Mazzoni/.compass/extensions/compass-normalize/stylesheets/normalize/_tables.scss */
+/* normalize.css v1.0.1 | Tables | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-normalize-1.4.2/stylesheets/normalize/_tables.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* line 10, ../sass/_base.scss */
-p, label, #menu ul li.green a, #menu ul li.darkorange a, #menu ul li.skyblue a, #menu ul li.red a, #menu ul li.brown a, #menu ul li.blue a, #menu ul li.yellowgreen a, #menu ul li.magenta a, .product-menu, .listino li a, .catalogo li a, .galleria li a, .produttori li a, .prodotti li a, .carrello table, .iscrizione table, .carrello .table, .iscrizione .table {
+p, label, #menu ul li.green a, #menu ul li.darkorange a, #menu ul li.skyblue a, #menu ul li.red a, #menu ul li.brown a, #menu ul li.blue a, #menu ul li.yellowgreen a, #menu ul li.magenta a, .product-menu, #responsive-menu ul li.green a, #responsive-menu ul li.darkorange a, #responsive-menu ul li.skyblue a, #responsive-menu ul li.red a, #responsive-menu ul li.brown a, #responsive-menu ul li.blue a, #responsive-menu ul li.yellowgreen a, #responsive-menu ul li.magenta a, .listino li a, .catalogo li a, .galleria li a, .produttori li a, .prodotti li a, .carrello table, .iscrizione table, .carrello .table, .iscrizione .table {
   font-size: 0.75em;
 }
 
@@ -458,7 +403,7 @@ a:hover, a:active {
   text-align: center;
   color: #fff;
 }
-/* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+/* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
 .button_link:after {
   content: "";
   position: absolute;
@@ -519,7 +464,7 @@ a:hover, a:active {
   text-align: center;
   color: #fff;
 }
-/* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+/* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
 .button_link_red:after {
   content: "";
   position: absolute;
@@ -1021,7 +966,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 
 /* line 316, ../sass/css.scss */
 .show {
-  display: block !important;
+  display: block;
 }
 
 /* line 320, ../sass/css.scss */
@@ -1035,108 +980,296 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 
-/* line 329, ../sass/css.scss */
+/* line 328, ../sass/css.scss */
+#responsive-menu {
+  display: none;
+}
+/* line 330, ../sass/css.scss */
 #responsive-menu ul {
   margin: 0;
   float: left;
   width: 100%;
   list-style: none;
 }
-/* line 334, ../sass/css.scss */
-#responsive-menu ul li {
-  float: left;
-  margin: 0;
+/* line 336, ../sass/css.scss */
+#responsive-menu ul li.green {
+  margin: 3px 2.46914%;
   position: relative;
+  background: green;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
-/* line 340, ../sass/css.scss */
-#responsive-menu a {
-  color: #ccc;
+/* line 342, ../sass/css.scss */
+#responsive-menu ul li.green a {
   display: block;
-  padding: 0.5em;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
-/* line 344, ../sass/css.scss */
-#responsive-menu a:hover {
-  background: #666;
+/* line 351, ../sass/css.scss */
+#responsive-menu ul li.green a:hover {
+  background: #ffd31c !important;
+  color: #000 !important;
+}
+/* line 336, ../sass/css.scss */
+#responsive-menu ul li.darkorange {
+  margin: 3px 2.46914%;
+  position: relative;
+  background: darkorange;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 342, ../sass/css.scss */
+#responsive-menu ul li.darkorange a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 351, ../sass/css.scss */
+#responsive-menu ul li.darkorange a:hover {
+  background: #ffd31c !important;
+  color: #000 !important;
+}
+/* line 336, ../sass/css.scss */
+#responsive-menu ul li.skyblue {
+  margin: 3px 2.46914%;
+  position: relative;
+  background: skyblue;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 342, ../sass/css.scss */
+#responsive-menu ul li.skyblue a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 351, ../sass/css.scss */
+#responsive-menu ul li.skyblue a:hover {
+  background: #ffd31c !important;
+  color: #000 !important;
+}
+/* line 336, ../sass/css.scss */
+#responsive-menu ul li.red {
+  margin: 3px 2.46914%;
+  position: relative;
+  background: red;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 342, ../sass/css.scss */
+#responsive-menu ul li.red a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 351, ../sass/css.scss */
+#responsive-menu ul li.red a:hover {
+  background: #ffd31c !important;
+  color: #000 !important;
+}
+/* line 336, ../sass/css.scss */
+#responsive-menu ul li.brown {
+  margin: 3px 2.46914%;
+  position: relative;
+  background: brown;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 342, ../sass/css.scss */
+#responsive-menu ul li.brown a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 351, ../sass/css.scss */
+#responsive-menu ul li.brown a:hover {
+  background: #ffd31c !important;
+  color: #000 !important;
+}
+/* line 336, ../sass/css.scss */
+#responsive-menu ul li.blue {
+  margin: 3px 2.46914%;
+  position: relative;
+  background: blue;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 342, ../sass/css.scss */
+#responsive-menu ul li.blue a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 351, ../sass/css.scss */
+#responsive-menu ul li.blue a:hover {
+  background: #ffd31c !important;
+  color: #000 !important;
+}
+/* line 336, ../sass/css.scss */
+#responsive-menu ul li.yellowgreen {
+  margin: 3px 2.46914%;
+  position: relative;
+  background: yellowgreen;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 342, ../sass/css.scss */
+#responsive-menu ul li.yellowgreen a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 351, ../sass/css.scss */
+#responsive-menu ul li.yellowgreen a:hover {
+  background: #ffd31c !important;
+  color: #000 !important;
+}
+/* line 336, ../sass/css.scss */
+#responsive-menu ul li.magenta {
+  margin: 3px 2.46914%;
+  position: relative;
+  background: magenta;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 342, ../sass/css.scss */
+#responsive-menu ul li.magenta a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 351, ../sass/css.scss */
+#responsive-menu ul li.magenta a:hover {
+  background: #ffd31c !important;
+  color: #000 !important;
 }
 @media only screen and (max-width: 40.625em) {
   /* line 328, ../sass/css.scss */
   #responsive-menu {
     display: none;
   }
-  /* line 350, ../sass/css.scss */
+  /* line 361, ../sass/css.scss */
   #responsive-menu ul li {
     float: none;
   }
 }
 
-/* line 359, ../sass/css.scss */
+/* line 370, ../sass/css.scss */
 #content-sidebar-wrap {
   width: 82.65306%;
   float: right;
 }
 
-/* line 365, ../sass/css.scss */
+/* line 376, ../sass/css.scss */
 #content {
   width: 100%;
   background: #fff;
   float: left;
 }
-/* line 369, ../sass/css.scss */
+/* line 380, ../sass/css.scss */
 #content .incipit {
   font-size: 1em;
   margin-top: 20px;
 }
-/* line 373, ../sass/css.scss */
+/* line 384, ../sass/css.scss */
 #content .social {
   display: none;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 373, ../sass/css.scss */
+  /* line 384, ../sass/css.scss */
   #content .social {
     display: block;
   }
 }
-/* line 379, ../sass/css.scss */
+/* line 390, ../sass/css.scss */
 #content .half_panel {
   display: block;
   width: 50%;
   width: 49.38272%;
   margin: 10px 0;
 }
-/* line 381, ../sass/css.scss */
+/* line 392, ../sass/css.scss */
 #content .half_panel.social_box {
   min-height: 230px;
   border: dashed 1px #ccc;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 381, ../sass/css.scss */
+  /* line 392, ../sass/css.scss */
   #content .half_panel.social_box {
     display: none;
   }
 }
-/* line 391, ../sass/css.scss */
+/* line 402, ../sass/css.scss */
 #content .half_panel.left_p {
   float: left;
 }
-/* line 394, ../sass/css.scss */
+/* line 405, ../sass/css.scss */
 #content .half_panel.left_p_fb {
   float: left;
 }
-/* line 396, ../sass/css.scss */
+/* line 407, ../sass/css.scss */
 #content .half_panel.left_p_fb * {
   width: 100% !important;
 }
-/* line 400, ../sass/css.scss */
+/* line 411, ../sass/css.scss */
 #content .half_panel.right_p {
   float: right;
 }
-/* line 403, ../sass/css.scss */
+/* line 414, ../sass/css.scss */
 #content .half_panel p {
   border-top: dashed 1px #F90;
   padding: 1.85185% 0;
   margin: 0 1.23457%;
 }
-/* line 410, ../sass/css.scss */
+/* line 421, ../sass/css.scss */
 #content .slogan {
   position: relative;
   -webkit-border-radius: 0.3em;
@@ -1159,7 +1292,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-size: 95%;
   margin: 2.46914% 0;
 }
-/* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+/* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
 #content .slogan:after {
   content: "";
   position: absolute;
@@ -1184,34 +1317,34 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 419, ../sass/css.scss */
+/* line 430, ../sass/css.scss */
 #content .slogan * {
   color: #fff;
   border: none;
 }
-/* line 425, ../sass/css.scss */
+/* line 436, ../sass/css.scss */
 #content .area {
   border: none;
   background-color: #ffd31c;
   padding: 0.61728%;
   margin: 2.46914% 0;
 }
-/* line 430, ../sass/css.scss */
+/* line 441, ../sass/css.scss */
 #content .area span {
   display: inline-block;
   margin-top: 10px;
 }
 @media only screen and (max-width: 30em) {
-  /* line 425, ../sass/css.scss */
+  /* line 436, ../sass/css.scss */
   #content .area {
     text-align: center;
   }
-  /* line 436, ../sass/css.scss */
+  /* line 447, ../sass/css.scss */
   #content .area * {
     float: none;
   }
 }
-/* line 441, ../sass/css.scss */
+/* line 452, ../sass/css.scss */
 #content .area-commenti {
   border-bottom: none;
   background-color: #ffd31c;
@@ -1219,30 +1352,30 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   margin: 0% 0;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 441, ../sass/css.scss */
+  /* line 452, ../sass/css.scss */
   #content .area-commenti {
     text-align: center;
   }
 }
-/* line 450, ../sass/css.scss */
+/* line 461, ../sass/css.scss */
 #content .img-border, #content .negozio, #content .immagini, #content .immagini-2, #content .immagini-scheda {
   border: solid 6px #ccc;
 }
-/* line 453, ../sass/css.scss */
+/* line 464, ../sass/css.scss */
 #content .negozio, #content .immagini, #content .immagini-2 {
   width: 26.17284%;
   border: solid 6px #ccc;
   margin-right: 1.23457%;
   float: left;
 }
-/* line 460, ../sass/css.scss */
+/* line 471, ../sass/css.scss */
 #content .immagini {
   width: 29.01235%;
   margin-bottom: 1.23457%;
   margin-top: 1.23457%;
   margin-left: 0.61728%;
 }
-/* line 467, ../sass/css.scss */
+/* line 478, ../sass/css.scss */
 #content .immagini-2 {
   width: 14.81481%;
   margin-bottom: 1.23457%;
@@ -1250,56 +1383,56 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   margin-left: 2.46914%;
   float: none;
 }
-/* line 475, ../sass/css.scss */
+/* line 486, ../sass/css.scss */
 #content .immagini-scheda {
   margin-left: 2.46914%;
   margin-right: 1.23457%;
   float: none;
 }
-/* line 481, ../sass/css.scss */
+/* line 492, ../sass/css.scss */
 #content .anni {
   float: right;
   width: 12.34568%;
 }
-/* line 485, ../sass/css.scss */
+/* line 496, ../sass/css.scss */
 #content .facebook {
   float: right;
   margin-left: 1.23457%;
   width: 18.51852%;
 }
-/* line 490, ../sass/css.scss */
+/* line 501, ../sass/css.scss */
 #content > div {
   padding: 2.46914%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 365, ../sass/css.scss */
+  /* line 376, ../sass/css.scss */
   #content {
     width: 100%;
     float: none;
   }
-  /* line 496, ../sass/css.scss */
+  /* line 507, ../sass/css.scss */
   #content .negozio, #content .immagini, #content .immagini-2 {
     display: none;
   }
 }
-/* line 500, ../sass/css.scss */
+/* line 511, ../sass/css.scss */
 #content h3.corporate {
   clear: both;
   border: none;
   font-weight: normal;
   font-size: 90%;
 }
-/* line 505, ../sass/css.scss */
+/* line 516, ../sass/css.scss */
 #content h3.corporate:first-child {
   margin-top: 20px;
 }
 
-/* line 510, ../sass/css.scss */
+/* line 521, ../sass/css.scss */
 .listino, .catalogo {
   width: 100%;
   font-size: 90%;
 }
-/* line 513, ../sass/css.scss */
+/* line 524, ../sass/css.scss */
 .listino li, .catalogo li {
   width: 23.7037%;
   padding: 0.61728%;
@@ -1307,13 +1440,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-align: center;
   position: relative;
 }
-/* line 519, ../sass/css.scss */
+/* line 530, ../sass/css.scss */
 .listino li a, .catalogo li a {
   margin-top: 5px;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 519, ../sass/css.scss */
+  /* line 530, ../sass/css.scss */
   .listino li a, .catalogo li a {
     border: none;
     position: relative;
@@ -1343,7 +1476,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     text-align: center;
   }
-  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .listino li a:after, .catalogo li a:after {
     content: "";
     position: absolute;
@@ -1368,42 +1501,42 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 525, ../sass/css.scss */
+  /* line 536, ../sass/css.scss */
   .listino li a img, .catalogo li a img {
     margin-bottom: 5px;
   }
 }
-/* line 529, ../sass/css.scss */
+/* line 540, ../sass/css.scss */
 .listino li a .nome-articolo, .catalogo li a .nome-articolo {
   display: inline-block;
   height: 2em;
 }
-/* line 534, ../sass/css.scss */
+/* line 545, ../sass/css.scss */
 .listino li .price, .catalogo li .price {
   margin-top: .4em;
 }
-/* line 536, ../sass/css.scss */
+/* line 547, ../sass/css.scss */
 .listino li .price span, .catalogo li .price span {
   /*text-decoration: line-through;*/
 }
-/* line 540, ../sass/css.scss */
+/* line 551, ../sass/css.scss */
 .listino li .cristalprice, .catalogo li .cristalprice {
   color: #C00;
   font-weight: bold;
 }
-/* line 545, ../sass/css.scss */
+/* line 556, ../sass/css.scss */
 .listino li .scheda-link span, .catalogo li .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 544, ../sass/css.scss */
+  /* line 555, ../sass/css.scss */
   .listino li .scheda-link, .catalogo li .scheda-link {
     width: 50%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 513, ../sass/css.scss */
+  /* line 524, ../sass/css.scss */
   .listino li, .catalogo li {
     width: 100%;
     float: none;
@@ -1412,12 +1545,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 
-/* line 562, ../sass/css.scss */
+/* line 573, ../sass/css.scss */
 .galleria, .produttori {
   width: 100%;
   font-size: 90%;
 }
-/* line 565, ../sass/css.scss */
+/* line 576, ../sass/css.scss */
 .galleria li, .produttori li {
   border: dashed 1px #fcc;
   width: 23.7037%;
@@ -1428,13 +1561,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   position: relative;
   text-align: center;
 }
-/* line 574, ../sass/css.scss */
+/* line 585, ../sass/css.scss */
 .galleria li a, .produttori li a {
   margin-top: 5px;
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 574, ../sass/css.scss */
+  /* line 585, ../sass/css.scss */
   .galleria li a, .produttori li a {
     border: none;
     position: relative;
@@ -1464,7 +1597,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     text-align: center;
   }
-  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .galleria li a:after, .produttori li a:after {
     content: "";
     position: absolute;
@@ -1489,12 +1622,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 580, ../sass/css.scss */
+  /* line 591, ../sass/css.scss */
   .galleria li a img, .produttori li a img {
     margin-bottom: 1.23457%;
   }
 }
-/* line 584, ../sass/css.scss */
+/* line 595, ../sass/css.scss */
 .galleria li a.button_link, .produttori li a.button_link {
   border: none;
   position: relative;
@@ -1524,7 +1657,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-decoration: none;
   text-align: center;
 }
-/* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+/* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
 .galleria li a.button_link:after, .produttori li a.button_link:after {
   content: "";
   position: absolute;
@@ -1549,11 +1682,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 586, ../sass/css.scss */
+/* line 597, ../sass/css.scss */
 .galleria li a.button_link img, .produttori li a.button_link img {
   margin-bottom: 1.23457%;
 }
-/* line 590, ../sass/css.scss */
+/* line 601, ../sass/css.scss */
 .galleria li a.button_link_red, .produttori li a.button_link_red {
   border: none;
   position: relative;
@@ -1584,7 +1717,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-align: center;
   width: auto;
 }
-/* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+/* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
 .galleria li a.button_link_red:after, .produttori li a.button_link_red:after {
   content: "";
   position: absolute;
@@ -1609,32 +1742,32 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 595, ../sass/css.scss */
+/* line 606, ../sass/css.scss */
 .galleria li .price, .produttori li .price {
   margin-top: .4em;
 }
-/* line 597, ../sass/css.scss */
+/* line 608, ../sass/css.scss */
 .galleria li .price span, .produttori li .price span {
   /*text-decoration: line-through;*/
 }
-/* line 601, ../sass/css.scss */
+/* line 612, ../sass/css.scss */
 .galleria li .cristalprice, .produttori li .cristalprice {
   color: #C00;
   font-weight: bold;
 }
-/* line 606, ../sass/css.scss */
+/* line 617, ../sass/css.scss */
 .galleria li .scheda-link span, .produttori li .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 605, ../sass/css.scss */
+  /* line 616, ../sass/css.scss */
   .galleria li .scheda-link, .produttori li .scheda-link {
     width: 50%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 565, ../sass/css.scss */
+  /* line 576, ../sass/css.scss */
   .galleria li, .produttori li {
     width: 100%;
     height: auto;
@@ -1647,24 +1780,24 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 
-/* line 626, ../sass/css.scss */
+/* line 637, ../sass/css.scss */
 .prodotti {
   width: 100%;
   font-size: 90%;
 }
-/* line 629, ../sass/css.scss */
+/* line 640, ../sass/css.scss */
 .prodotti li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 634, ../sass/css.scss */
+/* line 645, ../sass/css.scss */
 .prodotti li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 634, ../sass/css.scss */
+  /* line 645, ../sass/css.scss */
   .prodotti li a {
     border: none;
     position: relative;
@@ -1695,7 +1828,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: auto;
   }
-  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .prodotti li a:after {
     content: "";
     position: absolute;
@@ -1720,12 +1853,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 640, ../sass/css.scss */
+  /* line 651, ../sass/css.scss */
   .prodotti li a img {
     margin-bottom: 5px;
     float: none;
   }
-  /* line 644, ../sass/css.scss */
+  /* line 655, ../sass/css.scss */
   .prodotti li a.button_link_red {
     border: none;
     position: relative;
@@ -1756,7 +1889,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: auto;
   }
-  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .prodotti li a.button_link_red:after {
     content: "";
     position: absolute;
@@ -1782,48 +1915,48 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 650, ../sass/css.scss */
+/* line 661, ../sass/css.scss */
 .prodotti li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 650, ../sass/css.scss */
+  /* line 661, ../sass/css.scss */
   .prodotti li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 659, ../sass/css.scss */
+/* line 670, ../sass/css.scss */
 .prodotti li .data {
   float: left;
   width: 72.83951%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 659, ../sass/css.scss */
+  /* line 670, ../sass/css.scss */
   .prodotti li .data {
     float: none;
     width: 100%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 659, ../sass/css.scss */
+  /* line 670, ../sass/css.scss */
   .prodotti li .data {
     margin-top: 10px;
   }
 }
-/* line 671, ../sass/css.scss */
+/* line 682, ../sass/css.scss */
 .prodotti li .price {
   margin-top: .4em;
   padding-top: 5px;
   display: inline-block;
 }
-/* line 673, ../sass/css.scss */
+/* line 684, ../sass/css.scss */
 .prodotti li .price span {
   /*text-decoration: line-through;*/
 }
-/* line 680, ../sass/css.scss */
+/* line 691, ../sass/css.scss */
 .prodotti li .cristalprice {
   color: #C00;
   font-weight: bold;
@@ -1831,29 +1964,29 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   display: inline-block;
   font-size: 110%;
 }
-/* line 687, ../sass/css.scss */
+/* line 698, ../sass/css.scss */
 .prodotti li .produttore, .prodotti li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 691, ../sass/css.scss */
+/* line 702, ../sass/css.scss */
 .prodotti li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 694, ../sass/css.scss */
+/* line 705, ../sass/css.scss */
 .prodotti li .cart-link span {
   padding-right: 25px;
   background: url("../images/carrello-bianco.png") no-repeat right center;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 691, ../sass/css.scss */
+  /* line 702, ../sass/css.scss */
   .prodotti li .cart-link {
     margin-top: 10px;
     float: none;
   }
 }
-/* line 703, ../sass/css.scss */
+/* line 714, ../sass/css.scss */
 .prodotti li .cart, .prodotti .scheda-prodotto li .cart-panel, .scheda-prodotto .prodotti li .cart-panel {
   border: none;
   background-color: #ffd31c;
@@ -1861,53 +1994,53 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   margin: 2.46914% 0;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 703, ../sass/css.scss */
+  /* line 714, ../sass/css.scss */
   .prodotti li .cart, .prodotti .scheda-prodotto li .cart-panel, .scheda-prodotto .prodotti li .cart-panel {
     text-align: center;
   }
 }
-/* line 713, ../sass/css.scss */
+/* line 724, ../sass/css.scss */
 .prodotti li .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 712, ../sass/css.scss */
+  /* line 723, ../sass/css.scss */
   .prodotti li .scheda-link {
     width: 135px;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 629, ../sass/css.scss */
+  /* line 640, ../sass/css.scss */
   .prodotti li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 726, ../sass/css.scss */
+/* line 737, ../sass/css.scss */
 .prodotti li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 732, ../sass/css.scss */
+/* line 743, ../sass/css.scss */
 .scheda-prodotto {
   width: 100%;
   font-size: 90%;
 }
-/* line 735, ../sass/css.scss */
+/* line 746, ../sass/css.scss */
 .scheda-prodotto li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   /*border-top: dotted 1px #999;*/
 }
-/* line 740, ../sass/css.scss */
+/* line 751, ../sass/css.scss */
 .scheda-prodotto li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 740, ../sass/css.scss */
+  /* line 751, ../sass/css.scss */
   .scheda-prodotto li a {
     border: none;
     position: relative;
@@ -1938,7 +2071,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: auto;
   }
-  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .scheda-prodotto li a:after {
     content: "";
     position: absolute;
@@ -1963,11 +2096,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 745, ../sass/css.scss */
+  /* line 756, ../sass/css.scss */
   .scheda-prodotto li a img {
     margin-bottom: 5px;
   }
-  /* line 748, ../sass/css.scss */
+  /* line 759, ../sass/css.scss */
   .scheda-prodotto li a.button_link_red {
     border: none;
     position: relative;
@@ -1998,7 +2131,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: auto;
   }
-  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .scheda-prodotto li a.button_link_red:after {
     content: "";
     position: absolute;
@@ -2024,36 +2157,36 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 754, ../sass/css.scss */
+/* line 765, ../sass/css.scss */
 .scheda-prodotto li .thumb {
   width: 24.69136%;
   float: left;
   margin-right: 1.23457%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 754, ../sass/css.scss */
+  /* line 765, ../sass/css.scss */
   .scheda-prodotto li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 763, ../sass/css.scss */
+/* line 774, ../sass/css.scss */
 .scheda-prodotto li .data {
   float: left;
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 763, ../sass/css.scss */
+  /* line 774, ../sass/css.scss */
   .scheda-prodotto li .data {
     margin-top: 10px;
   }
 }
-/* line 772, ../sass/css.scss */
+/* line 783, ../sass/css.scss */
 .scheda-prodotto li .price span {
   /*text-decoration: line-through;*/
   font-size: 120%;
 }
-/* line 777, ../sass/css.scss */
+/* line 788, ../sass/css.scss */
 .scheda-prodotto li .cristalprice {
   /*color: #c00;*/
   color: #C00;
@@ -2062,36 +2195,36 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-size: 150%;
   display: inline-block;
 }
-/* line 785, ../sass/css.scss */
+/* line 796, ../sass/css.scss */
 .scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 789, ../sass/css.scss */
+/* line 800, ../sass/css.scss */
 .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 792, ../sass/css.scss */
+/* line 803, ../sass/css.scss */
 .scheda-prodotto li .cart-link span {
   padding-right: 25px;
   background: url("../images/carrello-bianco.png") no-repeat right center;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 789, ../sass/css.scss */
+  /* line 800, ../sass/css.scss */
   .scheda-prodotto li .cart-link {
     margin-top: 10px;
     float: none;
   }
 }
-/* line 801, ../sass/css.scss */
+/* line 812, ../sass/css.scss */
 .scheda-prodotto li .cart, .scheda-prodotto li .cart-panel {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 807, ../sass/css.scss */
+/* line 818, ../sass/css.scss */
 .scheda-prodotto li .cart-panel {
   background-color: #ffe782;
   border: dashed 2px #ffd31c;
@@ -2100,24 +2233,24 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-align: center;
   margin: 0 0 0 10px;
 }
-/* line 817, ../sass/css.scss */
+/* line 828, ../sass/css.scss */
 .scheda-prodotto li .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 816, ../sass/css.scss */
+  /* line 827, ../sass/css.scss */
   .scheda-prodotto li .scheda-link {
     width: 50%;
   }
 }
-/* line 825, ../sass/css.scss */
+/* line 836, ../sass/css.scss */
 .scheda-prodotto li .facebook {
   float: left !important;
   margin-right: 1.23457%;
   width: 18.51852%;
 }
-/* line 830, ../sass/css.scss */
+/* line 841, ../sass/css.scss */
 .scheda-prodotto li .fb-slogan {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2125,19 +2258,19 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   line-height: 160%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 735, ../sass/css.scss */
+  /* line 746, ../sass/css.scss */
   .scheda-prodotto li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 841, ../sass/css.scss */
+/* line 852, ../sass/css.scss */
 .scheda-prodotto li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 846, ../sass/css.scss */
+/* line 857, ../sass/css.scss */
 .carrello, .iscrizione {
   width: 100%;
   font-size: 90%;
@@ -2145,12 +2278,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 853, ../sass/css.scss */
+/* line 864, ../sass/css.scss */
 .carrello a, .iscrizione a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 853, ../sass/css.scss */
+  /* line 864, ../sass/css.scss */
   .carrello a, .iscrizione a {
     border: none;
     position: relative;
@@ -2181,7 +2314,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
     width: auto;
   }
-  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .carrello a:after, .iscrizione a:after {
     content: "";
     position: absolute;
@@ -2206,126 +2339,126 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 858, ../sass/css.scss */
+  /* line 869, ../sass/css.scss */
   .carrello a img, .iscrizione a img {
     margin-bottom: 5px;
   }
 }
-/* line 863, ../sass/css.scss */
+/* line 874, ../sass/css.scss */
 .carrello table, .iscrizione table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 868, ../sass/css.scss */
+/* line 879, ../sass/css.scss */
 .carrello table tr, .iscrizione table tr {
   text-align: left;
 }
-/* line 871, ../sass/css.scss */
+/* line 882, ../sass/css.scss */
 .carrello table tr td, .iscrizione table tr td {
   padding: 3px 0;
   width: 50%;
 }
-/* line 874, ../sass/css.scss */
+/* line 885, ../sass/css.scss */
 .carrello table tr td input[type=text], .carrello table tr td input[type=password], .iscrizione table tr td input[type=text], .iscrizione table tr td input[type=password] {
   width: 50%;
 }
-/* line 880, ../sass/css.scss */
+/* line 891, ../sass/css.scss */
 .carrello .table, .iscrizione .table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 885, ../sass/css.scss */
+/* line 896, ../sass/css.scss */
 .carrello .table .tr, .iscrizione .table .tr {
   text-align: left;
   width: 100%;
 }
-/* line 889, ../sass/css.scss */
+/* line 900, ../sass/css.scss */
 .carrello .table .td, .iscrizione .table .td {
   padding: 3px 0;
   float: left;
   width: 50%;
 }
-/* line 894, ../sass/css.scss */
+/* line 905, ../sass/css.scss */
 .carrello .table input[type=text], .carrello .table input[type=password], .iscrizione .table input[type=text], .iscrizione .table input[type=password] {
   width: 50%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 898, ../sass/css.scss */
+  /* line 909, ../sass/css.scss */
   .carrello .table .tr, .carrello .table .td, .carrello .table input[type=text], .carrello .table input[type=password], .carrello .table input[type=submit], .carrello .table input[type=reset], .iscrizione .table .tr, .iscrizione .table .td, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table input[type=submit], .iscrizione .table input[type=reset] {
     width: 100% !important;
     float: none !important;
   }
 }
-/* line 905, ../sass/css.scss */
+/* line 916, ../sass/css.scss */
 .carrello .colonna, .iscrizione .colonna {
   display: inline-block;
   text-align: right;
 }
-/* line 909, ../sass/css.scss */
+/* line 920, ../sass/css.scss */
 .carrello .riga, .iscrizione .riga {
   padding: 5px 1.23457%;
   border-bottom: dashed 1px #ccc;
   margin: 0 !important;
 }
-/* line 914, ../sass/css.scss */
+/* line 925, ../sass/css.scss */
 .carrello .articolo, .iscrizione .articolo {
   width: 48.14815%;
   text-align: left;
 }
-/* line 918, ../sass/css.scss */
+/* line 929, ../sass/css.scss */
 .carrello .descrizione, .iscrizione .descrizione {
   width: 61.7284%;
   text-align: left;
 }
-/* line 922, ../sass/css.scss */
+/* line 933, ../sass/css.scss */
 .carrello .quantita, .iscrizione .quantita {
   width: 12.34568%;
 }
-/* line 925, ../sass/css.scss */
+/* line 936, ../sass/css.scss */
 .carrello .prezzo_unitario, .iscrizione .prezzo_unitario {
   width: 15.4321%;
 }
-/* line 928, ../sass/css.scss */
+/* line 939, ../sass/css.scss */
 .carrello .prezzo_totale, .iscrizione .prezzo_totale {
   width: 15.4321%;
 }
-/* line 931, ../sass/css.scss */
+/* line 942, ../sass/css.scss */
 .carrello .elimina, .iscrizione .elimina {
   width: 7.40741%;
 }
-/* line 934, ../sass/css.scss */
+/* line 945, ../sass/css.scss */
 .carrello .num_ordine, .iscrizione .num_ordine {
   width: 24.69136%;
   text-align: left;
 }
-/* line 938, ../sass/css.scss */
+/* line 949, ../sass/css.scss */
 .carrello .totale_ordine, .iscrizione .totale_ordine {
   width: 8.64198%;
 }
-/* line 941, ../sass/css.scss */
+/* line 952, ../sass/css.scss */
 .carrello .stato, .iscrizione .stato {
   width: 19.75309%;
 }
-/* line 944, ../sass/css.scss */
+/* line 955, ../sass/css.scss */
 .carrello .azioni, .iscrizione .azioni {
   width: 44.44444%;
 }
-/* line 947, ../sass/css.scss */
+/* line 958, ../sass/css.scss */
 .carrello .data, .iscrizione .data {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 947, ../sass/css.scss */
+  /* line 958, ../sass/css.scss */
   .carrello .data, .iscrizione .data {
     margin-top: 10px;
   }
-  /* line 951, ../sass/css.scss */
+  /* line 962, ../sass/css.scss */
   .carrello .data .scheda, .iscrizione .data .scheda {
     text-align: center;
   }
-  /* line 954, ../sass/css.scss */
+  /* line 965, ../sass/css.scss */
   .carrello .data a, .iscrizione .data a {
     border: none;
     position: relative;
@@ -2355,7 +2488,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-decoration: none;
     text-align: center;
   }
-  /* line 26, C:/Users/Iury Mazzoni/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
+  /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
   .carrello .data a:after, .iscrizione .data a:after {
     content: "";
     position: absolute;
@@ -2381,31 +2514,31 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 960, ../sass/css.scss */
+/* line 971, ../sass/css.scss */
 .carrello .cart, .carrello .scheda-prodotto li .cart-panel, .scheda-prodotto li .carrello .cart-panel, .iscrizione .cart, .iscrizione .scheda-prodotto li .cart-panel, .scheda-prodotto li .iscrizione .cart-panel {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 966, ../sass/css.scss */
+/* line 977, ../sass/css.scss */
 .carrello .cart .total_price, .carrello .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .carrello .cart-panel .total_price, .iscrizione .cart .total_price, .iscrizione .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .iscrizione .cart-panel .total_price {
   float: right;
   font-size: 12px;
 }
-/* line 971, ../sass/css.scss */
+/* line 982, ../sass/css.scss */
 .carrello .scheda-link span, .iscrizione .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 970, ../sass/css.scss */
+  /* line 981, ../sass/css.scss */
   .carrello .scheda-link, .iscrizione .scheda-link {
     width: 50%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 846, ../sass/css.scss */
+  /* line 857, ../sass/css.scss */
   .carrello, .iscrizione {
     width: 100%;
     float: none;
@@ -2414,50 +2547,50 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 988, ../sass/css.scss */
+  /* line 999, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 993, ../sass/css.scss */
+/* line 1004, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 995, ../sass/css.scss */
+/* line 1006, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 999, ../sass/css.scss */
+/* line 1010, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 1004, ../sass/css.scss */
+/* line 1015, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 1009, ../sass/css.scss */
+/* line 1020, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 1012, ../sass/css.scss */
+/* line 1023, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
-/* line 1016, ../sass/css.scss */
+/* line 1027, ../sass/css.scss */
 #sidebar-alt .register {
   width: 100%;
 }
 @media only screen and (max-width: 30em) {
-  /* line 1019, ../sass/css.scss */
+  /* line 1030, ../sass/css.scss */
   #sidebar-alt .telefono, #sidebar-alt .fb {
     text-align: center;
     width: auto;
@@ -2465,7 +2598,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 1026, ../sass/css.scss */
+  /* line 1037, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
@@ -2473,17 +2606,17 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 1032, ../sass/css.scss */
+  /* line 1043, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
-/* line 1036, ../sass/css.scss */
+/* line 1047, ../sass/css.scss */
 #widget-area .slides {
   height: 210px;
 }
 
-/* line 1042, ../sass/css.scss */
+/* line 1053, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }
