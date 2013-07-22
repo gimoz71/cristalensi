@@ -189,9 +189,10 @@ input, button {
     background: #0cc;
     float: right;
 }
-#responsive-menu {
-    display: none;
+#widget-area{
+    background: none;
 }
+
 #language li, #menu li {
     height: 2em;
 }
@@ -356,12 +357,9 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             }
         }
     }
-    @include respond-to('medium-screens'){
+    /*@include respond-to('medium-screens'){
         display: none;
-        ul li {
-            float: none;
-        }
-    }
+    }*/
 } 
 
 

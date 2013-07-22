@@ -141,7 +141,7 @@
 							      <br>					    
 							  Eventualmente contattare Cristalensi per avere dettagli e assistenza nel pagamento, grazie.<br><br>Telefono: 0571/911163<br>Email: <a href="mailto: info@cristalensi.it">info@cristalensi.it</a>
 							  <br><br>
-							  Il nostro personale è a tua disposizione per qualsiasi chiarimento.<br>
+							  Il nostro personale ï¿½ a tua disposizione per qualsiasi chiarimento.<br>
 							  <br>
 							  Cordiali saluti, lo staff di Cristalensi
                                 </p>
@@ -153,7 +153,6 @@
             </div>
         </div>
          <!--#include file="inc_footer.asp"-->
-          <script src="js/init.js"></script>
     </body>
 </html>
 <!--#include file="inc_strClose.asp"-->
