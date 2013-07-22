@@ -418,13 +418,20 @@ if prov="" then prov=0
                                             <input name="fax" type="text" id="fax"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("fax")%><%else%><%if mode=3 then%><%=fax%><%end if%><%end if%>" />
                                         </div>
                                     </div>
+                                    <%if mode=3 then%>
+                                    <div class="tr">
+                                        <div class="td" style="background-color:#F90;">
+                                        <font color="#990000"><b>Attenzione! L'e-mail inserita non pu&ograve; essere accettata </b></font>
+                                        </div>
+                                        <div class="td" style="background-color:#F90;">
+                                        &nbsp;
+                                        </div>
+                                    </div>
+                                    <%end if%>
                                     <div class="tr">
                                         <div class="td">
                                         	<strong>E-mail</strong> (*) - Verr&agrave; usata come <strong>Login</strong> per i futuri ordini<br />
                                             <input name="email" type="text" id="email"  size="30" maxlength="100" value="<% if pkid > 0 then %><%=rs("email")%><%else%><%if mode=3 then%><%=email%><%end if%><%end if%>" />
-									  	<%if mode=3 then%>
-                                          &nbsp;&nbsp;<font color="#990000"><b>Attenzione! L'e-mail inserita non pu&ograve; essere accettata </b></font>
-                                        <%end if%>
                                         </div>
                                         <div class="td">
                                         <strong>Password</strong> (*)<br />

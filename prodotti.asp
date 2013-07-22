@@ -269,13 +269,12 @@ end if
 											tot_img=img_rs.recordcount
 											titolo_img=img_rs("titolo")
 											file_img=img_rs("file")
-											file_img="logo_cristalensi_piccolo.jpg"
 											if file_img<>"" then
 											
 											'calcolo misure immagini
 											Set objImageSize = New ImageSize
 											With objImageSize
-											  .ImageFile = server.mappath("public/"&file_img&"")
+											  .ImageFile = server.mappath("/public/"&file_img&"")
 											  '.ImageFile = path_img&file_img
 											  
 											  If .IsImage Then
@@ -291,7 +290,7 @@ end if
 											Set objImageSize = Nothing
 										%>
                                         
-                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"></a>
+                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
                                     		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
 										<%
@@ -456,14 +455,14 @@ end if
 											tot_img=img_rs.recordcount
 											titolo_img=img_rs("titolo")
 											file_img=img_rs("file")
-											file_img="logo_cristalensi_piccolo.jpg"
+											'file_img="logo_cristalensi_piccolo.jpg"
 											if file_img<>"" then
 											
 											'calcolo misure immagini
 											Set objImageSize = New ImageSize
 											With objImageSize
-											  '.ImageFile = server.mappath("public/"&file_img&"")
-											  .ImageFile = path_img&file_img
+											  .ImageFile = server.mappath("/public/"&file_img&"")
+											  '.ImageFile = path_img&file_img
 											  
 											  If .IsImage Then
 												W=.ImageWidth
@@ -478,7 +477,7 @@ end if
 											Set objImageSize = Nothing
 										%>
                                         
-                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" width="<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>" height="<%if H<=120 then%><%=H%><%else%>120<%end if%>" border="0"></a>
+                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
                                     		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
 										<%

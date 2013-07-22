@@ -111,10 +111,11 @@ end if
                                 <li>
                                     <a href="<%=url%>" title="<%=titolo_cat%><%=" - "&prod_rs("titolo")%>">
                                         <%
-										file_img=prod_rs("logo")
+										'file_img="../"&prod_rs("logo")
+										file_img="/public/"&prod_rs("logo")
 										if file_img<>"" then
 										%>
-                                        <img src="../<%=file_img%>" width="160" height="120" style="margin-bottom: 10px" alt="<%=titolo_cat%><%=" - "&prod_rs("titolo")%>" title="<%=titolo_cat%><%=" - "&prod_rs("titolo")%>" />
+                                        <img src="<%=file_img%>" width="160" height="120" style="margin-bottom: 10px" alt="<%=titolo_cat%><%=" - "&prod_rs("titolo")%>" title="<%=titolo_cat%><%=" - "&prod_rs("titolo")%>" />
                                         <%else%>
                                         <img src="../logo_cristalensi_piccolo.jpg" width="160" height="120" style="margin-bottom: 10px" alt="Immagine della categoria <%=titolo_cat%><%=" - "&prod_rs("titolo")%> non disponibile" />
                                         <%end if%>

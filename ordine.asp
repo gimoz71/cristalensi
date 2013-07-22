@@ -260,6 +260,111 @@
 			
 			'fine invio email
 	end if
+	
+	if FkPagamento=4 then
+		Set rs=Server.CreateObject("ADODB.Recordset")
+		sql = "Select * From Clienti where pkid="&idsession
+		rs.Open sql, conn, 1, 1	
+		
+		nominativo_email=rs("nome")&" "&rs("nominativo")
+		email=rs("email")
+		
+		rs.close
+			
+			HTML1 = ""
+			HTML1 = HTML1 & "<html>"
+			HTML1 = HTML1 & "<head>"
+			HTML1 = HTML1 & "<meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">"
+			HTML1 = HTML1 & "<title>Cristalensi</title>"
+			HTML1 = HTML1 & "</head>"
+			HTML1 = HTML1 & "<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>"
+			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
+			HTML1 = HTML1 & "<tr>"
+			HTML1 = HTML1 & "<td>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><b>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><u>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO</u><br>IBAN: <u>IT33E0842537960000030277941</u><br>Codice BIC/SWIFT: <u>CRACIT33</u><br>Nella causale indicare: Ordine da sito internet n° "&idordine&"<br><br>Beneficiario: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)<br><br><br>Il nostro staff avrà cura di spedirti la merce appena riceveremo la notifica del pagamento oppure, per velocizzare la spedizione, è possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Cordiali Saluti, lo staff di Cristalensi</font>"
+			HTML1 = HTML1 & "</td>"
+			HTML1 = HTML1 & "</tr>"
+			HTML1 = HTML1 & "</table>"
+			HTML1 = HTML1 & "</body>"
+			HTML1 = HTML1 & "</html>"
+		
+			Mittente = "info@cristalensi.it"
+			Destinatario = email
+			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
+			Testo = HTML1
+
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
+			
+			'fine invio email
+			
+			'invio l'email all'amministratore
+			HTML1 = ""
+			HTML1 = HTML1 & "<html>"
+			HTML1 = HTML1 & "<head>"
+			HTML1 = HTML1 & "<meta http-equiv=""Content-Type"" content=""text/html; charset=iso-8859-1"">"
+			HTML1 = HTML1 & "<title>Cristalensi</title>"
+			HTML1 = HTML1 & "</head>"
+			HTML1 = HTML1 & "<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>"
+			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
+			HTML1 = HTML1 & "<tr>"
+			HTML1 = HTML1 & "<td>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Nuovo ordine con pagamento con POSTEPAY dal sito internet.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dati sensibili e determinanti del nuovo ordine:<br>Nominativo: <b>"&nominativo_email&"</b><br>Email: <b>"&email&"</b><br>Codice cliente: <b>"&idsession&"</b><br>Codice ordine: <b>"&idordine&"</b></font><br>"
+			HTML1 = HTML1 & "</td>"
+			HTML1 = HTML1 & "</tr>"
+			HTML1 = HTML1 & "</table>"
+			HTML1 = HTML1 & "</body>"
+			HTML1 = HTML1 & "</html>"
+		
+			Mittente = "info@cristalensi.it"
+			Destinatario = "info@cristalensi.it"
+			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
+			Testo = HTML1
+
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
+			
+			'invio al webmaster
+			
+			Mittente = "info@cristalensi.it"
+			Destinatario = "iurymazzoni@hotmail.com"
+			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
+			Testo = HTML1
+
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
+			
+			'fine invio email
+	end if
 %>
 <!doctype html>
 <html>
@@ -376,6 +481,28 @@
                              Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)</strong>
                                     <br><br>
                                   La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento con bonifico (in caso di bonifico fatto con home banking spesso viene fornita dalla banca una ricevuta, oppure &egrave; possibile scannerizzare la ricevuta rilasciata dalla banca).<br>
+                                  <br>
+                                  Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br><br>
+                                  Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br><a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
+                                  <br>
+                                  <br>
+                                  Cordiali saluti, lo staff di Cristalensi
+                                  <br>
+                                  <br>
+                                </p>
+                                <%end if%>
+                                <%if FkPagamento=4 then%>
+                                <p>
+                                	<br><br>Grazie per aver scelto i nostri prodotti,<br>
+                                    per completare l'ordine &egrave; necessario effettuare il versamente sulla Carta di POSTEPAY con i seguenti dati:<br>
+                                    <br>
+                                    <strong>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO<br>IBAN: IT33E0842537960000030277941<br>
+                                    Codice BIC/SWIFT: CRACIT33</strong>
+                                    <br><br>Nella causale indicare: "<strong>Ordine da sito internet n&deg; <%=idordine%></strong>"<br><br>
+                                    Beneficiario:<br><strong>Lensi Giuliano Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>
+                             Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)</strong>
+                                    <br><br>
+                                  La merce verr&agrave; spedita al momento che riceveremo il pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.<br>
                                   <br>
                                   Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br><br>
                                   Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br><a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
@@ -539,7 +666,7 @@
                                   </h4>
                                     <form method="post" name="modulo" id="modulo" action="stampa_ordine.asp" target="_blank">
                                     <input type="hidden" name="idordine" id="idordine" value="<%=idordine%>">
-                                    <%if FkPagamento=1 then%><button type="submit" name="stampa" style="float:right;" class="button_link_red">stampa l'ordine</button><%end if%>
+                                    <%if FkPagamento=1 or FkPagamento=3 or FkPagamento=4 then%><button type="submit" name="stampa" style="float:right;" class="button_link_red">stampa l'ordine</button><%end if%>
                                     </form>
                             </div>
                         </div>
