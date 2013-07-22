@@ -161,11 +161,12 @@ end if
                                             %>
                                          </select>
                                          <%cs.close%>
-                                         <br />Oppure, per una ricerca maggiormente dettagliata, sfrutta la <a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a>
-                                      </p>
+                                        </p>
+                                        <p style="text-align: center">Oppure, per una ricerca maggiormente dettagliata, sfrutta la<p>
+                                        <p style="text-align: center"><a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a></p>
+                                        
                                     </form>
                               	<%end if%>
-                              	
                                 <%
 									p=request("p")
 									if p="" then p=1
