@@ -171,7 +171,7 @@
                                             End With
                                             Set objImageSize = Nothing
                                     %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
                                     		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
                                     <%

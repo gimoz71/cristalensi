@@ -649,7 +649,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     font-size: 90%;
     li {
         width: 100%;
-        padding: 10px calc-em(5, 810);
+        padding: 10px calc-em(5, 790);
         position: relative;
         border-top: dotted 1px #999;
         a {
@@ -669,17 +669,22 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             }
         }
         .thumb {
-            width: calc-em(200, 810);
+            //width: calc-em(200, 810);
+            text-align: center;
             float: left;
-            margin-right: calc-em(10, 810);
+            margin-right: calc-em(10, 770);
+            width: calc-em(200, 770);
+            img{
+                float: none;
+            }
             @include respond-to('medium-screens'){
                 float: none;
                 width: 100%;
             }
         }
         .data {
-            float: left;
-            width: calc-em(590, 810);
+            float: right;
+            width: calc-em(560, 770);
             @include respond-to('medium-screens'){
                 float: none;
                 width: 100%;
@@ -776,7 +781,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             //width: calc-em(200, 810);
             float: left;
             margin-right: calc-em(30, 810);
+            margin-bottom: 25px;
             img {
+                float: none;
+                height: 100%;
+                width: 100%;
                 @include respond-to('medium-screens'){
                     float: left;
                     border: none !important;

@@ -127,8 +127,11 @@
                             Per il pagamento con <span class="sfondo-giallo"><em><strong>Bonifico bancario</strong></em></span> non verr&agrave; addebitato <em><strong>nessun costo</strong></em>, ma la merce verr&agrave; inviata solo quando la Banca certificher&agrave; il pagamento. <br />
                             <br />
                             Per il pagamento online ci affidiamo al <span class="sfondo-giallo"><em><strong>sistema sicuro di Paypal</strong></em></span> che permette di pagare con un'ampia scelta di sistemi: dalle carte di credito pi&ugrave; diffuse, alle carte prepagate e ricaricabili.<br />
-                            Ecco l'ampia scelta: <br /><a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="https://www.paypal.com/en_US/IT/i/bnr/bnr_horizontal_solution_PP_178wx80h.gif" border="0" alt="Che cos'&egrave; PayPal"></a><br />
-                            <br />
+                            Ecco l'ampia scelta: <p>
+                            <p>
+                            <a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="images/logo_paypal_carte.jpg" style="width: 319px; float: none" border="0" alt="Che cos'&egrave; PayPal"></a>
+                            </p>
+                            <p>
                             Ricordiamo che per il <span class="sfondo-giallo"><strong><em>pagamento in contrassegno</em></strong></span> il corriere consegner&agrave; la merce se il pagamento avverr&agrave;<strong> in contanti</strong>, non verranno accettati assegni o altre formule di pagamento.<br />
                             Per il pagamento in contrassegno verr&agrave; conteggiato un costo di 4&euro; sul totale della merce acquistata.
                             </p>
