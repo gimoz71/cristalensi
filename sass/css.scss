@@ -814,6 +814,9 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-size: 150%;
             display: inline-block;
         }
+        span.produttore {
+            margin: 0 !important;
+        }
         .produttore, .cart-link {
             float: right;
             font-size: 10px;
@@ -854,10 +857,13 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 width: 50%;
             }
         }
-        .facebook {
+        .facebook-prod {
             float: left !important;
             margin-right: calc-em(10, 810);
-            width: calc-em(150, 810);
+            width: 150px;
+            @include respond-to('medium-screens'){
+                width: 100%;
+            }
         }
         .fb-slogan {
             padding-top:10px;
