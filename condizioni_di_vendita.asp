@@ -99,8 +99,8 @@
                             <p>
                             In linea di massima, le modalit&agrave; e i costi di spedizione e di pagamento possono essere riassunti in questi termini:<br /><br />
                             <span class="sfondo-giallo"><strong>Modalit&agrave; di spedizione: </strong></span><br />
-                              La merce potr&agrave; essere spedita con un corriere nazionale da noi scelto oppure potr&agrave; essere ritirata presso il nostro negozio. <br />
-                              <span class="sfondo-giallo"><strong>Le spese di spedizione per l'invio della merce con un corriere ammonteranno a <u>10&#8364;</u> per spedizioni in tutta Italia (isole comprese), indipendentemente dal numero degli oggetti e dalla loro grandezza.</strong></span><br />
+                              La merce potr&agrave; essere spedita con un corriere nazionale da noi scelto oppure potr&agrave; essere ritirata presso il nostro negozio. <br /><br />
+                              <span class="sfondo-giallo"><strong>Le spese di spedizione per l'invio della merce con un corriere ammonteranno a <u>10&#8364;</u> per spedizioni in tutta Italia (isole comprese), indipendentemente dal numero degli oggetti e dalla loro grandezza.</strong></span><br /><br />
                               Per gli acquirenti dall'estero, il costo di spedizione sar&agrave; calcolato in base al peso della merce ordinata: non potr&agrave; essere completato un ordine senza aver richiesto il costo esatto. La procedura di acquisto dei prodotti, nel caso di cliente estero, si interromper&agrave; nel momento dei costi di spedizione, mandando una richiesta di calcolo dei costi al nostro staff, che poi vi contatter&agrave; e vi permetter&agrave; di continuare l'acquisto. <br />
                               <br />
                               <span class="sfondo-giallo"><em><strong>Il costo di spedizione sar&agrave;  0 (zero) se il costo totale dei prodotti acquistati sar&agrave; maggiore di 250,00&euro; e la spedizione sar&agrave; in Italia</strong></em></span> <br />
@@ -122,9 +122,9 @@
                             </p>
                             <p>
                             <span class="sfondo-giallo"><strong>Modalit&agrave; di pagamento:</strong></span><br />
-                            il pagamento dell’ordine totale (quindi comprensivo di spese di spedizione e di pagamento) potr&agrave; essere effettuato con Bonifico bancario, in contrassegno (solo con contanti) o con le pi&ugrave; diffuse carte di credito, carte prepagate e PostePay attraverso il sistema sicuro di pagamento online di Paypal.<br />
+                            il pagamento dell’ordine totale (quindi comprensivo di spese di spedizione e di pagamento) potr&agrave; essere effettuato con Bonifico bancario, in contrassegno (solo con contanti), su carta PostePay o con le pi&ugrave; diffuse carte di credito, carte prepagate e PostePay attraverso il sistema sicuro di pagamento online di Paypal.<br />
                             <br />
-                            Per il pagamento con <span class="sfondo-giallo"><em><strong>Bonifico bancario</strong></em></span> non verr&agrave; addebitato <em><strong>nessun costo</strong></em>, ma la merce verr&agrave; inviata solo quando la Banca certificher&agrave; il pagamento. <br />
+                            Per il pagamento diretto con <span class="sfondo-giallo"><em><strong>Bonifico bancario</strong></em></span> e <span class="sfondo-giallo"><em><strong>PostePay</strong></em></span> non verr&agrave; addebitato <em><strong>nessun costo</strong></em>, ma la merce verr&agrave; inviata solo quando sarà certificato il pagamento. <br />
                             <br />
                             Per il pagamento online ci affidiamo al <span class="sfondo-giallo"><em><strong>sistema sicuro di Paypal</strong></em></span> che permette di pagare con un'ampia scelta di sistemi: dalle carte di credito pi&ugrave; diffuse, alle carte prepagate e ricaricabili.<br />
                             Ecco l'ampia scelta: <p>

@@ -1,8 +1,8 @@
 <header id="header">
     <div id="language">
         <ul>
-        <li><a href="http://www.cristalensi.it" title="Cristalensi vendita lampadari on line"><img class="flag" src="images/flag_it.png"></a></li>
-        <li><a href="/en/" title="Cristalensi lights online store"><img class="flag" src="images/flag_en.png"></a></li>
+        <li><a href="index.asp" title="Cristalensi vendita lampadari on line"><img class="flag" src="images/flag_it.png"></a></li>
+        <li><a href="/en/index.asp" title="Cristalensi lights online store"><img class="flag" src="images/flag_en.png"></a></li>
     </ul>
 </div>
     <div id="menu">

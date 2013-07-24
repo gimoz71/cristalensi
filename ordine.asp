@@ -281,7 +281,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><b>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><u>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO</u><br>IBAN: <u>IT33E0842537960000030277941</u><br>Codice BIC/SWIFT: <u>CRACIT33</u><br>Nella causale indicare: Ordine da sito internet n° "&idordine&"<br><br>Beneficiario: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)<br><br><br>Il nostro staff avrà cura di spedirti la merce appena riceveremo la notifica del pagamento oppure, per velocizzare la spedizione, è possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><b>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><u><strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023 6005 5507 0285</strong><br><br>Nella causale indicare: Ordine da sito internet n° "&idordine&"<br><br>Beneficiario: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)<br><br><br>Il nostro staff avrà cura di spedirti la merce appena riceveremo la notifica del pagamento oppure, per velocizzare la spedizione, è possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Cordiali Saluti, lo staff di Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -495,13 +495,10 @@
                                 <p>
                                 	<br><br>Grazie per aver scelto i nostri prodotti,<br>
                                     per completare l'ordine &egrave; necessario effettuare il versamente sulla Carta di POSTEPAY con i seguenti dati:<br>
-                                    <br>
-                                    <strong>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO<br>IBAN: IT33E0842537960000030277941<br>
-                                    Codice BIC/SWIFT: CRACIT33</strong>
-                                    <br><br>Nella causale indicare: "<strong>Ordine da sito internet n&deg; <%=idordine%></strong>"<br><br>
-                                    Beneficiario:<br><strong>Lensi Giuliano Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>
-                             Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)</strong>
                                     <br><br>
+                                    <strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023 6005 5507 0285</strong>
+                                    <br><br>Nella causale indicare: "<strong>Ordine da sito internet n&deg; <%=idordine%></strong>"<br><br>
+                                    
                                   La merce verr&agrave; spedita al momento che riceveremo il pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.<br>
                                   <br>
                                   Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br><br>
@@ -676,7 +673,6 @@
             </div>
         </div>
          <!--#include file="inc_footer.asp"-->
-          <script src="js/init.js"></script>
     </body>
 </html>
 <!--#include file="inc_strClose.asp"-->
