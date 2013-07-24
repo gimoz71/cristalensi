@@ -101,7 +101,9 @@ select {
     width: 100%;
 }
 
-
+.sfondo-giallo {
+    background-color: #FFEEAA;
+}
 
 #wrap {
     @include clearfix;
@@ -559,7 +561,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         .scheda-link {
             span {
-                background: url('../images/dett_prodotto.png') no-repeat left center;
+                background: url('/images/dett_prodotto.png') no-repeat left center;
                 padding-left: 25px;
             }
             @include respond-to('medium-screens'){
@@ -625,7 +627,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         .scheda-link {
             span {
-                background: url('../images/dett_prodotto.png') no-repeat left center;
+                background: url('/images/dett_prodotto.png') no-repeat left center;
                 padding-left: 25px;
             }
             @include respond-to('medium-screens'){
@@ -719,7 +721,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-size: 10px;
             span {
                 padding-right: 25px;
-                background: url('../images/carrello-bianco.png') no-repeat right center;
+                background: url('/images/carrello-bianco.png') no-repeat right center;
             }
             @include respond-to('medium-screens'){
                 margin-top: 10px;
@@ -737,7 +739,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         .scheda-link {
             span {
-                background: url('../images/dett_prodotto.png') no-repeat left center;
+                background: url('/images/dett_prodotto.png') no-repeat left center;
                 padding-left: 25px;
             }
             @include respond-to('medium-screens'){
@@ -823,7 +825,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             font-size: 10px;
             span {
                 padding-right: 25px;
-                background: url('../images/carrello-bianco.png') no-repeat right center;
+                background: url('/images/carrello-bianco.png') no-repeat right center;
             }
             @include respond-to('medium-screens'){
                 margin-top: 10px;
@@ -847,7 +849,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         .scheda-link {
             span {
-                background: url('../images/dett_prodotto.png') no-repeat left center;
+                background: url('/images/dett_prodotto.png') no-repeat left center;
                 padding-left: 25px;
             }
             @include respond-to('medium-screens'){
@@ -1001,7 +1003,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 	}
 	.scheda-link {
             span {
-                background: url('../images/dett_prodotto.png') no-repeat left center;
+                background: url('/images/dett_prodotto.png') no-repeat left center;
                 padding-left: 25px;
             }
             @include respond-to('medium-screens'){
