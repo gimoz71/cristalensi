@@ -34,14 +34,14 @@ end if
 		<meta name="keywords" content="<%=kw%>">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -117,7 +117,7 @@ end if
 										%>
                                         <img src="<%=file_img%>" width="160" height="120" style="margin-bottom: 10px" alt="<%=titolo_cat%><%=" - "&prod_rs("titolo_en")%>" title="<%=titolo_cat%><%=" - "&prod_rs("titolo_en")%>" />
                                         <%else%>
-                                        <img src="../logo_cristalensi_piccolo.jpg" width="160" height="120" style="margin-bottom: 10px" alt="image of category <%=titolo_cat%><%=" - "&prod_rs("titolo_en")%> not available" />
+                                        <img src="/public/logo_cristalensi_piccolo.jpg" width="160" height="120" style="margin-bottom: 10px" alt="image of category <%=titolo_cat%><%=" - "&prod_rs("titolo_en")%> not available" />
                                         <%end if%>
                                         <span class="button_link"><%=prod_rs("titolo_en")%></span>
                                     </a>

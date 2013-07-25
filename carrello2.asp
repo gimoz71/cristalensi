@@ -280,7 +280,7 @@
 									<%if rs.recordcount>0 then%>
                                     
                                     <p><button type="button" name="indietro" onClick="location.href='carrello1.asp'" style="float:left;" class="button_link">&laquo; passo precedente</button>
-                                    <button type="button" name="continua" onClick="Continua();" style="float:right;" class="button_link_red">riferimenti fatturazione &raquo;</button></p>
+                                    <button type="button" name="continua" onClick="Continua();" style="float:right;" class="button_link_red">clicca qui per completare l'acquisto &raquo;</button></p>
                                     <%end if%>
 								<%end if%>
                                 

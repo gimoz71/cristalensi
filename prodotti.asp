@@ -122,13 +122,16 @@ end if
                                 <h1>Catalogo prodotti: <%if cat>0 then%><%=titolo_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%><%end if%></h1>
                                 <%if descrizione_cat<>"" then%>
                                 <p>
-                                    <i><%=descrizione_cat%></i>.
+                                    <i><%=descrizione_cat%></i>
                                 </p>
+                                <hr />
                                 <%else%>
                                 <p>&nbsp;</p>
+                                
 								<%end if%>
                                 
 								<%if cat>0 then%>
+									
 									<SCRIPT LANGUAGE=javascript>
                                     <!--
                                         function invia_account() {
@@ -136,7 +139,7 @@ end if
                                         }
                                     // End -->
                                     </SCRIPT>
-                             		<hr />
+                             		
                                     <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
                                       <p>
                                       Non hai trovato il prodotto che cercavi? cambia la categoria specifica: 
@@ -162,10 +165,9 @@ end if
                                          </select>
                                          <%cs.close%>
                                         </p>
-                                        <p style="text-align: center">Oppure, per una ricerca maggiormente dettagliata, sfrutta la<p>
+                                       </form>
+                                        <p style="text-align: center">Oppure, per una ricerca maggiormente dettagliata, usa la<p>
                                         <p style="text-align: center"><a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a></p>
-                                        
-                                    </form>
                               	<%end if%>
                                 <%
 									p=request("p")
@@ -309,7 +311,7 @@ end if
                                         </div>
                                         
                                         <div class="data">
-                                            <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore>0 then%><span class="produttore">Produttore: <a href="prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
+                                            <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore_pr>0 then%><span class="produttore">Produttore: <a href="prodotti.asp?FkProduttore=<%=fkproduttore_pr%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Il prodotto lo trovi nella categoria:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Scheda prodotto</span></a>
 											<%if tot_img>0 then%><span style="float:right;">[<%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]</span><%end if%>

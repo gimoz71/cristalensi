@@ -75,8 +75,8 @@
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <a href="chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta"><img class="negozio" src="/images/negozio.jpg" alt="Cristalensi Vendita lampadari on line"></a>
-                            <img class="anni" src="/images/50anni_new.jpg" alt="Da pi&ugrave; di 50 anni vendita lampadari">
+                            <a href="chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta"><img class="negozio" src="images/negozio.jpg" alt="Cristalensi Vendita lampadari on line"></a>
+                            <img class="anni" src="images/50anni_new.jpg" alt="Da pi&ugrave; di 50 anni vendita lampadari">
                             <h3>Cristalensi, la luce come idea</h3>
                             <p class="incipit">A portata di click una vasta e raffinata gamma di prodotti per illuminazione da interno ed esterno per arredare la vostra casa, il giardino, il tuo locale... Naviga nel Negozio on-line oppure visita il nostro <a href="chisiamo.asp" title="Showroom Negozio lampadari - Vendita diretta"><strong>Showroom</strong></a>, soddisferemo tutte le tue esigenze sia classiche che moderne.
                             </p>
@@ -158,7 +158,7 @@
 										'calcolo misure immagini
 										Set objImageSize = New ImageSize
 										With objImageSize
-										  .ImageFile = server.mappath("/public/"&file_img&"")
+										  .ImageFile = server.mappath("public/"&file_img&"")
 										  '.ImageFile = path_img&file_img
 										  
 										  If .IsImage Then
@@ -170,9 +170,9 @@
 										Set objImageSize = Nothing
 							%>
                             	<li>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
 										<%else%>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>	
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>	
                                     <%
                                         end if
                                     else
@@ -180,7 +180,7 @@
                                         titolo_img=""
                                         file_img=""
                                     %>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
                                     <%	
                                     end if
                                     img_rs.close
@@ -233,9 +233,9 @@
 									
 									if file_img<>"" then
 									%>
-									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="/public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
 										<%else%>
-									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="/images/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><span class="button_link"><%=titolo_cat%></span></a>	
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><span class="button_link"><%=titolo_cat%></span></a>	
 									<%	
 										end if
 									%>

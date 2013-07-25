@@ -2273,35 +2273,39 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   display: inline-block;
 }
 /* line 819, ../sass/css.scss */
+.scheda-prodotto li span.produttore {
+  margin: 0 !important;
+}
+/* line 822, ../sass/css.scss */
 .scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 823, ../sass/css.scss */
+/* line 826, ../sass/css.scss */
 .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 826, ../sass/css.scss */
+/* line 829, ../sass/css.scss */
 .scheda-prodotto li .cart-link span {
   padding-right: 25px;
   background: url("/images/carrello-bianco.png") no-repeat right center;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 823, ../sass/css.scss */
+  /* line 826, ../sass/css.scss */
   .scheda-prodotto li .cart-link {
     margin-top: 10px;
     float: none;
   }
 }
-/* line 835, ../sass/css.scss */
+/* line 838, ../sass/css.scss */
 .scheda-prodotto li .cart, .scheda-prodotto li .cart-panel {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 841, ../sass/css.scss */
+/* line 844, ../sass/css.scss */
 .scheda-prodotto li .cart-panel {
   background-color: #ffe782;
   border: dashed 2px #ffd31c;
@@ -2310,24 +2314,30 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-align: center;
   margin: 0 0 0 10px;
 }
-/* line 851, ../sass/css.scss */
+/* line 854, ../sass/css.scss */
 .scheda-prodotto li .scheda-link span {
   background: url("/images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 850, ../sass/css.scss */
+  /* line 853, ../sass/css.scss */
   .scheda-prodotto li .scheda-link {
     width: 50%;
   }
 }
-/* line 859, ../sass/css.scss */
-.scheda-prodotto li .facebook {
+/* line 862, ../sass/css.scss */
+.scheda-prodotto li .facebook-prod {
   float: left !important;
   margin-right: 1.23457%;
-  width: 18.51852%;
+  width: 150px;
 }
-/* line 864, ../sass/css.scss */
+@media only screen and (max-width: 40.625em) {
+  /* line 862, ../sass/css.scss */
+  .scheda-prodotto li .facebook-prod {
+    width: 100%;
+  }
+}
+/* line 870, ../sass/css.scss */
 .scheda-prodotto li .fb-slogan {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2342,12 +2352,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 875, ../sass/css.scss */
+/* line 881, ../sass/css.scss */
 .scheda-prodotto li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 880, ../sass/css.scss */
+/* line 886, ../sass/css.scss */
 .carrello, .iscrizione {
   width: 100%;
   font-size: 90%;
@@ -2355,12 +2365,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 887, ../sass/css.scss */
+/* line 893, ../sass/css.scss */
 .carrello a, .iscrizione a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 887, ../sass/css.scss */
+  /* line 893, ../sass/css.scss */
   .carrello a, .iscrizione a {
     border: none;
     position: relative;
@@ -2416,126 +2426,126 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 892, ../sass/css.scss */
+  /* line 898, ../sass/css.scss */
   .carrello a img, .iscrizione a img {
     margin-bottom: 5px;
   }
 }
-/* line 897, ../sass/css.scss */
+/* line 903, ../sass/css.scss */
 .carrello table, .iscrizione table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 902, ../sass/css.scss */
+/* line 908, ../sass/css.scss */
 .carrello table tr, .iscrizione table tr {
   text-align: left;
 }
-/* line 905, ../sass/css.scss */
+/* line 911, ../sass/css.scss */
 .carrello table tr td, .iscrizione table tr td {
   padding: 3px 0;
   width: 50%;
 }
-/* line 908, ../sass/css.scss */
+/* line 914, ../sass/css.scss */
 .carrello table tr td input[type=text], .carrello table tr td input[type=password], .iscrizione table tr td input[type=text], .iscrizione table tr td input[type=password] {
   width: 50%;
 }
-/* line 914, ../sass/css.scss */
+/* line 920, ../sass/css.scss */
 .carrello .table, .iscrizione .table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 919, ../sass/css.scss */
+/* line 925, ../sass/css.scss */
 .carrello .table .tr, .iscrizione .table .tr {
   text-align: left;
   width: 100%;
 }
-/* line 923, ../sass/css.scss */
+/* line 929, ../sass/css.scss */
 .carrello .table .td, .iscrizione .table .td {
   padding: 3px 0;
   float: left;
   width: 50%;
 }
-/* line 928, ../sass/css.scss */
+/* line 934, ../sass/css.scss */
 .carrello .table input[type=text], .carrello .table input[type=password], .iscrizione .table input[type=text], .iscrizione .table input[type=password] {
   width: 50%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 932, ../sass/css.scss */
+  /* line 938, ../sass/css.scss */
   .carrello .table .tr, .carrello .table .td, .carrello .table input[type=text], .carrello .table input[type=password], .carrello .table input[type=submit], .carrello .table input[type=reset], .iscrizione .table .tr, .iscrizione .table .td, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table input[type=submit], .iscrizione .table input[type=reset] {
     width: 100% !important;
     float: none !important;
   }
 }
-/* line 939, ../sass/css.scss */
+/* line 945, ../sass/css.scss */
 .carrello .colonna, .iscrizione .colonna {
   display: inline-block;
   text-align: right;
 }
-/* line 943, ../sass/css.scss */
+/* line 949, ../sass/css.scss */
 .carrello .riga, .iscrizione .riga {
   padding: 5px 1.23457%;
   border-bottom: dashed 1px #ccc;
   margin: 0 !important;
 }
-/* line 948, ../sass/css.scss */
+/* line 954, ../sass/css.scss */
 .carrello .articolo, .iscrizione .articolo {
   width: 48.14815%;
   text-align: left;
 }
-/* line 952, ../sass/css.scss */
+/* line 958, ../sass/css.scss */
 .carrello .descrizione, .iscrizione .descrizione {
   width: 61.7284%;
   text-align: left;
 }
-/* line 956, ../sass/css.scss */
+/* line 962, ../sass/css.scss */
 .carrello .quantita, .iscrizione .quantita {
   width: 12.34568%;
 }
-/* line 959, ../sass/css.scss */
+/* line 965, ../sass/css.scss */
 .carrello .prezzo_unitario, .iscrizione .prezzo_unitario {
   width: 15.4321%;
 }
-/* line 962, ../sass/css.scss */
+/* line 968, ../sass/css.scss */
 .carrello .prezzo_totale, .iscrizione .prezzo_totale {
   width: 15.4321%;
 }
-/* line 965, ../sass/css.scss */
+/* line 971, ../sass/css.scss */
 .carrello .elimina, .iscrizione .elimina {
   width: 7.40741%;
 }
-/* line 968, ../sass/css.scss */
+/* line 974, ../sass/css.scss */
 .carrello .num_ordine, .iscrizione .num_ordine {
   width: 24.69136%;
   text-align: left;
 }
-/* line 972, ../sass/css.scss */
+/* line 978, ../sass/css.scss */
 .carrello .totale_ordine, .iscrizione .totale_ordine {
   width: 8.64198%;
 }
-/* line 975, ../sass/css.scss */
+/* line 981, ../sass/css.scss */
 .carrello .stato, .iscrizione .stato {
   width: 19.75309%;
 }
-/* line 978, ../sass/css.scss */
+/* line 984, ../sass/css.scss */
 .carrello .azioni, .iscrizione .azioni {
   width: 44.44444%;
 }
-/* line 981, ../sass/css.scss */
+/* line 987, ../sass/css.scss */
 .carrello .data, .iscrizione .data {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 981, ../sass/css.scss */
+  /* line 987, ../sass/css.scss */
   .carrello .data, .iscrizione .data {
     margin-top: 10px;
   }
-  /* line 985, ../sass/css.scss */
+  /* line 991, ../sass/css.scss */
   .carrello .data .scheda, .iscrizione .data .scheda {
     text-align: center;
   }
-  /* line 988, ../sass/css.scss */
+  /* line 994, ../sass/css.scss */
   .carrello .data a, .iscrizione .data a {
     border: none;
     position: relative;
@@ -2591,31 +2601,31 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 994, ../sass/css.scss */
+/* line 1000, ../sass/css.scss */
 .carrello .cart, .carrello .scheda-prodotto li .cart-panel, .scheda-prodotto li .carrello .cart-panel, .iscrizione .cart, .iscrizione .scheda-prodotto li .cart-panel, .scheda-prodotto li .iscrizione .cart-panel {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 1000, ../sass/css.scss */
+/* line 1006, ../sass/css.scss */
 .carrello .cart .total_price, .carrello .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .carrello .cart-panel .total_price, .iscrizione .cart .total_price, .iscrizione .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .iscrizione .cart-panel .total_price {
   float: right;
   font-size: 12px;
 }
-/* line 1005, ../sass/css.scss */
+/* line 1011, ../sass/css.scss */
 .carrello .scheda-link span, .iscrizione .scheda-link span {
   background: url("/images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 1004, ../sass/css.scss */
+  /* line 1010, ../sass/css.scss */
   .carrello .scheda-link, .iscrizione .scheda-link {
     width: 50%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 880, ../sass/css.scss */
+  /* line 886, ../sass/css.scss */
   .carrello, .iscrizione {
     width: 100%;
     float: none;
@@ -2624,50 +2634,50 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 1022, ../sass/css.scss */
+  /* line 1028, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 1027, ../sass/css.scss */
+/* line 1033, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 1029, ../sass/css.scss */
+/* line 1035, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 1033, ../sass/css.scss */
+/* line 1039, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 1038, ../sass/css.scss */
+/* line 1044, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 1043, ../sass/css.scss */
+/* line 1049, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 1046, ../sass/css.scss */
+/* line 1052, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
-/* line 1050, ../sass/css.scss */
+/* line 1056, ../sass/css.scss */
 #sidebar-alt .register {
   width: 100%;
 }
 @media only screen and (max-width: 30em) {
-  /* line 1053, ../sass/css.scss */
+  /* line 1059, ../sass/css.scss */
   #sidebar-alt .telefono, #sidebar-alt .fb {
     text-align: center;
     width: auto;
@@ -2675,7 +2685,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 1060, ../sass/css.scss */
+  /* line 1066, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
@@ -2683,17 +2693,17 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 1066, ../sass/css.scss */
+  /* line 1072, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
-/* line 1070, ../sass/css.scss */
+/* line 1076, ../sass/css.scss */
 #widget-area .slides {
   height: 210px;
 }
 
-/* line 1076, ../sass/css.scss */
+/* line 1082, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }

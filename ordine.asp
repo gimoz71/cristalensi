@@ -11,7 +11,7 @@
 	
 	if idsession=0 then response.Redirect("iscrizione.asp?prov=1")
 		
-	session("ordine_shop")=""
+	'session("ordine_shop")=""
 	
 	
 	Set ss = Server.CreateObject("ADODB.Recordset")
@@ -294,17 +294,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -332,17 +332,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -351,17 +351,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
 			Testo = HTML1
 
-			Set eMail_cdo = CreateObject("CDO.Message")
-
-			eMail_cdo.From = Mittente
-			eMail_cdo.To = Destinatario
-			eMail_cdo.Subject = Oggetto
-
-			eMail_cdo.HTMLBody = Testo
-
-			eMail_cdo.Send()
-
-			Set eMail_cdo = Nothing
+'			Set eMail_cdo = CreateObject("CDO.Message")
+'
+'			eMail_cdo.From = Mittente
+'			eMail_cdo.To = Destinatario
+'			eMail_cdo.Subject = Oggetto
+'
+'			eMail_cdo.HTMLBody = Testo
+'
+'			eMail_cdo.Send()
+'
+'			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if

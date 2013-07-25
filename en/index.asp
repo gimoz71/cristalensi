@@ -103,6 +103,7 @@
 							com_rs.close
 							%>
                             </div>
+                            <div class="spacer"></div>
                             <!--prodotti in offerta-->
                             <h4 class="area clearfix"><span>PRODUCTS ON OFFER: Don't miss the opportunity to buy italian style products!!!</span><a href="offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">ALL THE OFFERS &raquo;</a></h4>
                             <%
@@ -230,7 +231,7 @@
 									%>
 									<a href="<%=nomepagina_categorie%>" title="Products list <%=titolo_cat%>"><img src="/public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
 										<%else%>
-									<a href="<%=nomepagina_categorie%>" title="Products list <%=titolo_cat%>"><img src="/images/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="image of the category <%=titolo_cat%> not available"><span class="button_link"><%=titolo_cat%></span></a>	
+									<a href="<%=nomepagina_categorie%>" title="Products list <%=titolo_cat%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="image of the category <%=titolo_cat%> not available"><span class="button_link"><%=titolo_cat%></span></a>	
 									<%	
 										end if
 									%>

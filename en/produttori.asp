@@ -7,19 +7,18 @@ Call Visualizzazione("Produttori","0","produttori.asp")
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Elenco produttori articoli illuminazione CRISTALENSI Negozio lampadari, piantane, plafoniere, lampade esterne, ventilatori, lampade per bambini, lampade per il bagno</title>
-		<meta name="description" content="Elenco produttori articoli illuminazione, elenco di imprese illuminazione, catalogo dei produttori di lampadari, piantane, plafoniere, lampade esterne, ventilatori, prodotti per bambini">
-		<meta name="keywords" content="Produttori articoli illuminazione, imprese illuminazione, produttori di lampadari, piantane, plafoniere, lampade esterne, ventilatori, prodotti per bambini">
+        <title>list of italian producers of lighting products lamps lights producers' catalogs</title>
+		<meta name="description" content="This is a list of italian producers of lighting products serving our shop, a selection of lamps and lights was made by individual italian producers' catalogs">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -73,10 +72,10 @@ Call Visualizzazione("Produttori","0","produttori.asp")
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <h1>Elenco produttori articoli per illuminazione</h1>
+                            <h1>List of italian producers of lighting products</h1>
                             <p>
-                                <i>Questo è l'elenco delle imprese produttrici di articoli per illuminazione che riforniscono il nostro negozio.<br>
-					    Scegliendo un produttore vedrete l'elenco dei suoi prodotti, da lì potete accedere alla scheda del prodotto e acquistarlo. Se cercate un articolo specifico di un produttore, ma non lo trovate nel suo elenco, contattate il nostro staff per avere informazioni e un preventivo: nel catalogo sul sito internet non sono presenti tutti i prodotti, è stata fatta una selezione dai singoli cataloghi dei produttori.</i>.
+                                <i>This is a list of italian producers of lighting products serving our shop.
+Choosing a manufacturer will see a list of its products, from there you can access the product page and buy it. If you are looking for a specific article of a italian producer, but can not find it in its list, please contact our staff for information and an estimate: in the catalog on the website are not present all the products, a selection was made by individual italian producers' catalogs.</i>.
                             </p>
                             <%
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")
@@ -103,18 +102,18 @@ Call Visualizzazione("Produttori","0","produttori.asp")
                                         <%if file_img<>"" then%>
                                         <img src="/public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
                                         <%else%>
-                                        <img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" style="margin-bottom: 10px" alt="logo del produttore <%=titolo%> non disponibile" />
+                                        <img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
                                         <%end if%>
                                         <span class="button_link"><%=titolo%></span>
                                     </a>
                                 </li>
                                 <%else%>
                                 <li>
-                                    <a href="#" onClick="MM_openBrWindow('richiesta_informazioni_produttore.asp?produttore=<%=titolo%>&amp;id=<%=id%>','','scrollbars=yes,width=650,height=650')" title="Richiesta informazioni del produttore <%=titolo%>">
+                                    <a href="#" onClick="MM_openBrWindow('richiesta_informazioni_produttore.asp?produttore=<%=titolo%>&amp;id=<%=id%>','','scrollbars=yes,width=650,height=650')" title="Request information about the producers <%=titolo%>">
                                         <%if file_img<>"" then%>
                                         <img src="/public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
                                         <%else%>
-                                        <img src="public/logo_cristalensi_piccolo.jpg" style="margin-bottom: 10px" alt="logo del produttore <%=titolo%> non disponibile" />
+                                        <img src="/public/logo_cristalensi_piccolo.jpg" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
                                         <%end if%>
                                         <span class="button_link"><%=titolo%></span>
                                     </a>
@@ -126,7 +125,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
 								%>
                             </ul>
                             <%else%>
-                                <p><br /><br /><br />Nessun produttore presente</p>
+                                <p><br /><br /><br />No producers</p>
 							<%	
 							end if
 							prod_rs.close

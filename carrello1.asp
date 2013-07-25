@@ -270,7 +270,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                     <h4>Colori misure e annotazioni</h4>
                                     <p>Scrivere in questo spazio il colore e la misura dei prodotti nel caso in cui fossero presenti più varianti degli stessi.<br>Oppure potete usare questo spazio per inserie qualche annotazione o comunicazione.</p>
                                     <textarea name="NoteCliente" cols="105" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
-                                    <p><button type="submit" name="continua" style="float: left" class="button_link">&laquo; continua con gli acquisti</button>&nbsp;&nbsp;<button type="submit" name="continua" style="float: right" class="button_link_red">modalità di spedizione &raquo;</button></p>
+                                    <p><button type="button" name="continua" onClick="location.href='prodotti.asp'" style="float: left" class="button_link">&laquo; continua gli acquisti</button>&nbsp;&nbsp;<button type="submit" name="continua" style="float: right" class="button_link_red">clicca qui per completare l'acquisto  &raquo;</button></p>
                                     </form>
                                     <%end if%>
                                     <br>
