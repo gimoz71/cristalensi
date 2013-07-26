@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>>CRISTALENSI ricerca avanzata catalogo prodotti illuminazione</title>
+        <title>CRISTALENSI Advanced search for Lamps Lights</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
@@ -47,7 +47,7 @@
 			prezzo_a=document.newsform.prezzo_a.value;
 		
 			if (titolo=="" && cat=="0" && FkProduttore=="0" && prezzo_da=="" && prezzo_a==""){
-				alert("Inserire o scegliere almeno un valore per effettuare la ricerca.");
+				alert("Enter or select at least one value to search.");
 				return false;
 			}
 		
@@ -83,8 +83,8 @@
                         <div>
                         	
                         	
-                            <h3 style="font-size: 14px; display: inline; border: none;">Ricerca avanzata articoli illuminazione</h3>
-                            <p>Grazie alla Ricerca avanzata hai la possiblit&agrave; di inserire il <strong>Nome</strong> o il <strong>Codice</strong> dell'articolo di illuminazione, oppure selezionare una <strong>Categoria</strong> o il <strong>Produttore</strong>, oppure inserire una <strong>fascia di prezzo</strong> ma puoi anche combinare le singole ricerche per arrivare ad un elenco maggiormente filtrato e <strong>su misura per i tuoi desideri</strong>.
+                            <h3 style="font-size: 14px; display: inline; border: none;">Advanced search for Lamps & Lights</h3>
+                            <p>With advanced search you have the possibility to enter the lighthing product<strong> name</strong> or <strong>code</strong>, or select a <strong>category</strong> or <strong>manufacturer</strong>, or enter a <strong>price range</strong> but you can also combine the individual searches to get a filtered list of Lamps & Lights, and more tailored to your desires.
                             </p>
                             <div class="iscrizione clearfix">                                
                                 <div class="table">
@@ -96,17 +96,17 @@
                                     <div class="tr">
                                         <div class="td">
 
-                                        Categoria<br />
+                                        Category<br />
                                             <%
                                                 Set cs=Server.CreateObject("ADODB.Recordset")
-                                                sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo as Titolo_2 "
+                                                sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo_en as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo_en as Titolo_2 "
                                                 sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
                                                 'sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
-                                                sql = sql + "ORDER BY Categorie1.Titolo ASC, Categorie2.Titolo ASC"
+                                                sql = sql + "ORDER BY Categorie1.Titolo_en ASC, Categorie2.Titolo_en ASC"
                                                 cs.Open sql, conn, 1, 1
                                             %>
                                             <select name="Cat" id="Cat" style="width:300px;">
-                                                    <option value="0" >Seleziona una categoria</option>
+                                                    <option value="0" >Select the category</option>
                                                     <%
                                                     if cs.recordcount>0 then
                                                     Do While Not cs.EOF
@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="tr">
                                         <div class="td">
-                                            Produttore<br />
+                                            Producers<br />
                                             <%
                                             Set cs=Server.CreateObject("ADODB.Recordset")
                                             sql = "Select * From Produttori order by titolo ASC"
@@ -131,7 +131,7 @@
                                             if cs.recordcount>0 then
                                             %>
                                             <select name="FkProduttore" id="FkProduttore" style="width:300px;">
-                                            <option value="0">Seleziona un produttore</option>
+                                            <option value="0">Select the producer</option>
                                             <%
                                             Do While Not cs.EOF
                                             %>
@@ -148,15 +148,15 @@
                                     <div class="tr">
                                         <div class="td">
 
-	                                        Fascia di prezzo<br />
-                                            Da <input name="prezzo_da" type="text" id="prezzo_da" style="width:100px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A <input name="prezzo_a" type="text" id="prezzo_a" style="width:100px;" />
+	                                        Price range<br />
+                                            From <input name="prezzo_da" type="text" id="prezzo_da" style="width:100px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To <input name="prezzo_a" type="text" id="prezzo_a" style="width:100px;" />
                                         </div>
                                     </div>
                                     
                                     <div class="tr">
                                         <div class="td">
 
-                                            <button name="Submit" type="submit" class="button_link" value="Avvia la ricerca" align="absmiddle">Avvia la ricerca</button>
+                                            <button name="Submit" type="submit" class="button_link" value="Start the search" align="absmiddle">Start the search</button>
                                         </div>
                                     </div>
                                     </form>

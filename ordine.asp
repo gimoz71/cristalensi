@@ -11,7 +11,7 @@
 	
 	if idsession=0 then response.Redirect("iscrizione.asp?prov=1")
 		
-	'session("ordine_shop")=""
+	session("ordine_shop")=""
 	
 	
 	Set ss = Server.CreateObject("ADODB.Recordset")

@@ -13,7 +13,7 @@
             <li class="brown"><a href="commenti_elenco.asp" title="Comments about lights products">comments</a></li>
             <li class="red"><a href="prodotti.asp" title="Products gallery">products</a></li>
             <li class="blue"><a href="offerte.asp" title="Products on offer">offers</a></li>
-            <li class="yellowgreen"><a href="carrello1.asp" title="Your cart">cart</a></li>
+            <li class="yellowgreen"><a href="carrello1.asp" title="Your cart">&nbsp;&nbsp;cart&nbsp;&nbsp;</a></li>
             <li class="magenta"><a href="condizioni_di_vendita.asp" title="Conditions of sale">conditions of sale</a></li>
         </ul>
     </div>

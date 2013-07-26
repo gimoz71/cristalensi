@@ -12,8 +12,8 @@ if id>0 then
 	if prod_rs.recordcount>0 then
 		CodiceArticolo=prod_rs("CodiceArticolo")
 		'FkCat_Prod=prod_rs("FkCat_Prod")
-		Titolo_prodotto=prod_rs("Titolo")
-		Descrizione_prodotto=prod_rs("Descrizione")
+		Titolo_prodotto=prod_rs("Titolo_en")
+		Descrizione_prodotto=prod_rs("Descrizione_en")
 		allegato_prodotto=prod_rs("Allegato")
 		PrezzoArticolo=prod_rs("PrezzoProdotto")
 		PrezzoListino=prod_rs("PrezzoListino")
@@ -38,7 +38,7 @@ if id>0 then
 		
 		if FkCategoria2>0 then
 			Set cat_rs = Server.CreateObject("ADODB.Recordset")
-			sql = "SELECT Categorie1.PkId as Cat_Principale, Categorie1.Titolo as Titolo1, Categorie2.PkId, Categorie2.Titolo as Titolo2, Categorie2.Descrizione as Descrizione2 "
+			sql = "SELECT Categorie1.PkId as Cat_Principale, Categorie1.Titolo_en as Titolo1, Categorie2.PkId, Categorie2.Titolo_en as Titolo2, Categorie2.Descrizione_en as Descrizione2 "
 			sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.FkCategoria1 "
 			sql = sql + "WHERE Categorie2.PkId="&FkCategoria2
 			cat_rs.open sql,conn, 1, 1
@@ -68,9 +68,9 @@ end if
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title><%=Titolo_prodotto%> - <%=titolo_cat%> - <%=codicearticolo%></title>
-		<meta name="description" content="Cristalensi vende <%=titolo_cat%>: <%=Titolo_prodotto%> - <%=codicearticolo%>">
-		<meta name="keywords" content="<%=Titolo_prodotto%>, <%=Titolo_prodotto%> <%=titolo_cat%>, <%=Titolo_prodotto%> <%=codicearticolo%>">
+        <title><%=Titolo_prodotto%> - <%=titolo_cat%> CRISTALENSI Product description</title>
+		<meta name="description" content="Product description <%=Titolo_prodotto%> Cristalensi shop online <%=TogliTAG(descrizione_cat)%>">
+		<meta name="keywords" content="Product description <%=Titolo_prodotto%> Cristalensi shop online <%=kw%>">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
@@ -115,12 +115,12 @@ end if
 			colore=document.newsform2.colore.value;
 		
 			if (quantita=="0"){
-				alert("La quantita\' deve essere maggiore di 0");
+				alert("The quantity must be greater than 0");
 				return false;
 			}
 			
 			if (num_colori>1 && colore==""){
-				alert("Deve essere scelto un colore");
+				alert("You have to choose a color");
 				return false;
 			}
 			
@@ -140,12 +140,12 @@ end if
 			colore=document.newsform2.colore.value;
 		
 			if (quantita=="0"){
-				alert("La quantita\' deve essere maggiore di 0");
+				alert("The quantity must be greater than 0");
 				return false;
 			}
 			
 			if (num_colori>1 && colore==""){
-				alert("Deve essere scelto un colore");
+				alert("You have to choose a color");
 				return false;
 			}
 			
@@ -192,41 +192,39 @@ end if
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <div class="slogan">
-                                <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
-                                <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
+                            <div class="spacer">
                             </div>
 
                             <ul class="scheda-prodotto clearfix">
                                 <li class="clearfix">
-                                    <a href="javascript:history.back()" class="cart-link button_link">Torna indietro</a>
+                                    <a href="javascript:history.back()" class="cart-link button_link">Go back</a>
                                     <h1><%=Titolo_prodotto%> - <%=codicearticolo%></h1>
-                                    <p class="area clearfix"><%if codicearticolo<>"" then%>Codice articolo <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
+                                    <p class="area clearfix"><%if codicearticolo<>"" then%>Article code <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">producers: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="List of product of the same producer: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
                                     <div class="data">
                                         <%if prezzoarticolo=0 then%>
                                            <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><br /><br />
                                        <%else%>
-                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%><br><i>Iva compresa</i>
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>€</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>€</span><%end if%><br><i>VAT included</i>
                                        <%end if%>
                                         <p><%=descrizione_prodotto%></p>
                                         <%if FkCategoria2>0 then%>
-                                            <p> Il prodotto lo trovi nella categoria: <a href="/prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a></p>
+                                            <p> You find the product in the category: <a href="/prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>"><%=titolo_cat%></a></p>
 					<%end if%>
                                         <%if allegato_prodotto<>"" then%>
-                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank"><img src="/images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="E' presente un allegato">Allegato</a></p>
+                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank"><img src="/images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="Attached file">Attached file</a></p>
                                         <%end if%>
                                         <%if prezzoarticolo=0 then%>
-                                            <p class="cart clearfix"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a>
+                                            <p class="cart clearfix"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Do you want to know the Cristalensi price? Click here to have an estimate from our staff</a>
                                         <%else%>
                                         	<%if offerta=10 then%>
-											<p class="cart clearfix"><span class="cristalprice" style="float:right;">IL PRODOTTO NON E' DISPONIBILE, CONTATTACI!&nbsp;&nbsp;</span></p>
+											<p class="cart clearfix"><span class="cristalprice" style="float:right;">THE PRODUCT IS NOT AVAILABLE, CONTACT US!&nbsp;&nbsp;</span></p>
 											<%else%>
 
                                             <form name="newsform2" id="newsform2" onSubmit="return verifica_2();">
                                                 <input type="hidden" name="id" id="id" value="<%=id%>">
                                                 <%
                                                 Set col_rs = Server.CreateObject("ADODB.Recordset")
-                                                sql = "SELECT [Prodotto-Colore].FkProdotto, Colori.Titolo FROM [Prodotto-Colore] INNER JOIN Colori ON [Prodotto-Colore].FkColore = Colori.PkId WHERE ((([Prodotto-Colore].FkProdotto)="&id&")) ORDER BY Colori.Titolo ASC"
+                                                sql = "SELECT [Prodotto-Colore].FkProdotto, Colori.Titolo_en FROM [Prodotto-Colore] INNER JOIN Colori ON [Prodotto-Colore].FkColore = Colori.PkId WHERE ((([Prodotto-Colore].FkProdotto)="&id&")) ORDER BY Colori.Titolo_en ASC"
                                                 col_rs.open sql,conn, 1, 1
                                                 if col_rs.recordcount>1 then
                                                 %>
@@ -239,11 +237,11 @@ end if
 
                                                     <%if col_rs.recordcount>1 then%>
                                                         <select name="colore" id="colore" style="width:auto; float:left; margin-top:7px;">
-                                                        <option value="">Scegli il colore</option>
+                                                        <option value="">Choose the color</option>
                                                         <%
                                                         Do While Not col_rs.EOF
                                                         %>
-                                                            <option value="<%=col_rs("Titolo")%>"><%=col_rs("Titolo")%></option>
+                                                            <option value="<%=col_rs("Titolo_en")%>"><%=col_rs("Titolo_en")%></option>
                                                         <%
                                                         col_rs.movenext
                                                         loop
@@ -253,7 +251,7 @@ end if
                                                     end if
                                                     col_rs.close
                                                     %>
-                                                    <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span>
+                                                    <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pieces&nbsp;&nbsp;</span>
                                                 </p>
                                             </form>
                                             <%end if%>	
@@ -315,12 +313,12 @@ end if
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook"></a><span style="line-height:80px;">Se questo articolo ti piace, condividilo con i tuoi amici su FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
+                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook"></a><span style="line-height:80px;">If you like this article, share it with your friends on FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
                                     
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <img src="/images/telefono_cristalensi.png" alt="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" title="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" style="height:152px; width:162px; float:left; padding-left: 10px; padding-right: 10px;" /><br /><br /><br /><strong>Contattaci!</strong><br />Il nostro personale sarà a tua disposizione per qualsiasi chiarimento, informazione e consiglio sull'articolo desiderato.        
+                                    <strong>Contact us!</strong> Our staff is at your disposal for any clarification, information and advice on the article desired.<br /><br />
                                 </li>
                                 
                             </ul>

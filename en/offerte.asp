@@ -3,8 +3,8 @@
 <%
 	order=request("order")
 	if order="" then order=3
-	if order=1 then ordine="Titolo ASC"
-	if order=2 then ordine="Titolo DESC"
+	if order=1 then ordine="Titolo_en ASC"
+	if order=2 then ordine="Titolo_en DESC"
 	if order=3 then ordine="prezzoprodotto ASC"
 	if order=4 then ordine="prezzoprodotto DESC"	
 %>

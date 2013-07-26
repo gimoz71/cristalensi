@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>>CRISTALENSI ricerca avanzata catalogo prodotti illuminazione</title>
+        <title>CRISTALENSI ricerca avanzata catalogo prodotti illuminazione</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/media-queries-ie.js"></script>
@@ -90,7 +90,7 @@
                                 <div class="table">
                                     <form method="post" action="ricerca_avanzata_elenco.asp" name="newsform" onSubmit="return verifica();">
                                     <div class="tr">
-	                                        Nome o Codice del prodotto<br />
+	                                        Name or Code of product<br />
                                             <input name="titolo" type="text" id="titolo" style="width:300px;" />
                                     </div>
                                     <div class="tr">
