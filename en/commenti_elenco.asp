@@ -4,8 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Commenti prodotti illuminazione commenti lampadari acquistati Cristalensi</title>
-        <meta name="description" content="Lascia un commento per i prodotti di illuminazione acquistati. In un ottica di trasparenza, di avvicinamento alla clientela e di miglioramento dei nostri servizi abbiamo aperto quest'area dove i clienti possono lasciare un messaggio, un commento, un complimento o una critica al funzionamento del sito internet, ai prodotti di illuminazione comprati ma anche ai servizi dello staff stesso.">
+        <title>Comments about lighthings shop online reviews of italian lighting products</title>
+        <meta name="description" content="Comments about lighthings shop online and reviews of italian lighting products.">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
@@ -65,8 +65,8 @@
                             
                             <div class="carrello clearfix">
                                 <div class="data">
-                                    <p><em>In un ottica di trasparenza, di avvicinamento alla clientela e di miglioramento dei nostri servizi abbiamo aperto quest'area dove i clienti possono lasciare un messaggio, un commento, un complimento o una critica al funzionamento del sito internet, ai prodotti di illuminazione acquistati ma anche ai servizi dello staff stesso.<br />Per inviare un commento si dovrà essere registrati sul sito internet e i messaggi inviati saranno approvati dallo staff per evitare che siano pubblicati testi offensivi o inserire link pubblicitari verso altri siti internet.</em></p>
-                                    <p class="riga" style="text-align: right; padding-bottom:10px;"><a href="commenti_form.asp" class="button_link_red">Inserisci un commento anche te!</a></p>
+                                    <p><em>With a view to transparency, approach to customers and improving our services we have opened this area where customers can submit a message or comment on the functioning of the website, or a review lighting products purchased but also to the services of the staff itself. <br /> To post a comment you must be registered on the website and sent messages will be approved by the staff to prevent the publication or offensive lyrics insert advertising links to other Internet sites.</em></p>
+                                    <p class="riga" style="text-align: right; padding-bottom:10px;"><a href="commenti_form.asp" class="button_link_red">Send a comment you too!</a></p>
 									<%
 									Set prod_rs = Server.CreateObject("ADODB.Recordset")
 									'sql = "SELECT * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
@@ -97,7 +97,7 @@
                                         <div class="riga">
 										<p><%=NoLettAcc(testo_commento)%><br /><strong><%=Nome%>&nbsp;(<%=Citta%>)</strong></p>
                                         <%if testo_risposta<>"" and risposta=True then%>
-                                        <p style="padding:0px 10px;"><strong>Risposta dello staff Cristalensi:</strong><br /><em><%=NoLettAcc(testo_risposta)%></em></p>
+                                        <p style="padding:0px 10px;"><strong>Replay staff Cristalensi:</strong><br /><em><%=NoLettAcc(testo_risposta)%></em></p>
                                         <%end if%>
                                         </div>
                                         

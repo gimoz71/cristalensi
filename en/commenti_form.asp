@@ -45,8 +45,8 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver inserito un commento!<br>Se sarà accettato dal nostro staff riceverai una notifica via email della pubblicazione.</font><br>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Cordiali Saluti, lo staff di Cristalensi</font>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" to send a comment!<br>If accepted by our moderators you will receive an email notification of the publication.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Best wishes from the staff of Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
 			HTML1 = HTML1 & "</table>"
@@ -55,7 +55,7 @@
 		
 			Mittente = "info@cristalensi.it"
 			Destinatario = email
-			Oggetto = "Conferma invio commento a Cristalensi.it"
+			Oggetto = "Confirmation for a comment on Cristalensi.it"
 			Testo = HTML1
 
 '			Set eMail_cdo = CreateObject("CDO.Message")
@@ -93,7 +93,7 @@
 		
 			Mittente = "info@cristalensi.it"
 			Destinatario = "info@cristalensi.it"
-			Oggetto = "Conferma invio commento a Cristalensi.it"
+			Oggetto = "Conferma invio commento a Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
 '			Set eMail_cdo = CreateObject("CDO.Message")
@@ -112,7 +112,7 @@
 			
 			Mittente = "info@cristalensi.it"
 			Destinatario = "iurymazzoni@hotmail.com"
-			Oggetto = "Conferma invio commento a Cristalensi.it"
+			Oggetto = "Conferma invio commento a Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
 '			Set eMail_cdo = CreateObject("CDO.Message")
@@ -136,7 +136,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Commenti Cristalensi</title>
+        <title>Comments Cristalensi</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
@@ -192,23 +192,23 @@
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <h3 style="font-size: 14px; display: inline; border: none;">Inserisci il tuo commento!</h3>
+                            <h3 style="font-size: 14px; display: inline; border: none;">Send a comment you too!</h3>
                             <div class="carrello clearfix">
                                  <%if mode=1 then%>
                                  	<p>
-                                    Il tuo commento è stato inserito correttamente, adesso il nostro staff lo valuterà e se sarà approvato, ti verrà recapitata una notifica via email.<br />Grazie della tua collaborazione dallo staff di Cristalensi.<br /><br /><a href="commenti_elenco.asp" class="button_link_red" style="float:right">Elenco commenti</a>
+                                    Your comment has been inserted correctly, now our staff will evaluate and if approved, we will send you an email notification. <br /> Thank you for your cooperation with the staff of Cristalensi.<br /><br /><a href="commenti_elenco.asp" class="button_link_red" style="float:right">ALL COMMENTS AND REVIEWS</a>
                                     </p>
 								 <%else%>   
                                     <form name="modulocarrello" id="modulocarrello" method="post" action="commenti_form.asp?mode=1">
-                                    <p>Inserisci un commento su i prodotti acquistati, se ti sono piaciuti o no, oppure un commento sul sito internet o sull'azienda e lo staff.<br />Il commento non sarà pubblicato immediatamente ma sarà soggetto a un controllo da parte del nostro staff per evitare che vengano inseriti contenuti non leciti, offese e termini non pubblicabili.<br />Si prega di non inserire codice html, email, link e collegamenti ad altri siti internet: il commento non sarà pubblicato.<br />Per ogni commento saranno pubblicati anche il <strong>Nome</strong> e la <strong>Città</strong> inseriti al momento dell'iscrizione.</p>
+                                    <p>Send a comment on the products purchased, whether you liked it or not, or a review on the website or the company and the staff. <br /> Comment will not be published immediately but will be subject to inspection by our staff to prevent them from being inserted content to be unlawful, offensive and terms not be published. <br /> Please do not insert html code, email and links to other websites: the comment will not be published. <br /> In every comments will also be published <strong> Name </ strong> and <strong> City </ strong> submitted at registration.</p>
                                     <%if mode=2 then%>
-                                    <p><br><br><strong>Attenzione! Controllare il testo inserito rispettando le regole, grazie.</strong><br><br></p>
+                                    <p><br><br><strong>Warning! Check the text entered by the rules, thank you.</strong><br><br></p>
                                     <%end if%>
                                     <p>
                                     <textarea name="testo" cols="105" rows="7" id="testo"></textarea>
                                     <br><br>
-                                    <button type="button" name="reset" class="button_link" style="float:left;" onClick="location.href='commenti_elenco.asp'">&laquo; elenco commenti</button>
-                                    <button type="submit" name="continua" class="button_link_red" style="float:right">clicca qui per inserire il tuo commento &raquo;</button>
+                                    <button type="button" name="reset" class="button_link" style="float:left;" onClick="location.href='commenti_elenco.asp'">&laquo; ALL COMMENTS AND REVIEWS</button>
+                                    <button type="submit" name="continua" class="button_link_red" style="float:right">Click here to submit your comment &raquo;</button>
                                     </p>
                                     </form>
 								<%end if%>

@@ -86,7 +86,7 @@
                             </div>
                             <!--dicono di noi-->
                             <div class="half_panel social_box right_p">
-                            <h4 class="area-commenti">About us...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red" title="Comments about italian lighting products">ALL COMMENTS &raquo;</a></h4>
+                            <h4 class="area-commenti">About us...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red" title="Comments about lighthings shop online and reviews of italian lighting products">ALL COMMENTS AND REVIEWS &raquo;</a></h4>
                             <%
 							Set com_rs = Server.CreateObject("ADODB.Recordset")
 							sql = "SELECT TOP 5 * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
