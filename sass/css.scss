@@ -1075,6 +1075,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     }
 }
 #widget-area{
+    display: block;
     @include respond-to('medium-screens'){
        display:none;
     }

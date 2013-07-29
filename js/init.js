@@ -2,6 +2,7 @@ var contentHeight = 0;
 var sideHeight = 0;
 var width = 0;
 var height = 0;
+var slides = $('.slides');
 
 $(document).ready(function() {
     //When btn is clicked
@@ -37,6 +38,12 @@ $(document).ready(function() {
     }).resize(function() { 
         if (width >= 650) {
             $("#responsive-menu").hide();
+            if (slides.height() == 0) {
+                console.log('slides height 0');
+                $('.blueberry').blueberry({
+                    pager: false
+                });
+            }
         }
         calculate(); 
     });

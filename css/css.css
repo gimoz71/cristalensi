@@ -2637,18 +2637,22 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 
+/* line 1077, ../sass/css.scss */
+#widget-area {
+  display: bock;
+}
 @media only screen and (max-width: 40.625em) {
   /* line 1077, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
-/* line 1081, ../sass/css.scss */
+/* line 1082, ../sass/css.scss */
 #widget-area .slides {
   height: 210px;
 }
 
-/* line 1087, ../sass/css.scss */
+/* line 1088, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }
