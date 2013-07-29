@@ -498,6 +498,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         margin-left: calc-em(10, 810);
         width: calc-em(150, 810);
     }
+    .paypal {
+        @include respond-to('handheld'){
+            width: 163px;
+        }
+    }
     > div {
         padding: calc-em(20, 810);
     }
@@ -1056,8 +1061,8 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     .register {
         width: 100%;
     }
-    .telefono, .fb {
-        @include respond-to('handhelds'){
+    .telefono, .fb, .paypal {
+        @include respond-to('medium-screens'){
             text-align: center;
             width: auto;
         }

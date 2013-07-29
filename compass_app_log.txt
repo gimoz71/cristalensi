@@ -597,3 +597,8 @@ Load paths:
 2013-07-29 08:17:18 overwrite css/css.css 
 2013-07-29 08:18:12 overwrite css/css.css 
 2013-07-29 08:29:58 overwrite css/css.css 
+2013-07-29 08:37:28     error sass/css.scss (Line 526: Invalid CSS after "    }": expected selector or at-rule, was "}")
+2013-07-29 08:37:28 overwrite css/css.css 
+2013-07-29 08:37:54 overwrite css/css.css 
+2013-07-29 08:39:35 identical css/css.css 
+2013-07-29 08:40:45 overwrite css/css.css 

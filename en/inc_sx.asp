@@ -30,7 +30,7 @@
                <h3>Payment</h3>
                <p><a href="condizioni_di_vendita.asp" class="info" title="Conditions of sale">Conditions of sale</a></p>
                <p class="note">You can pay for your chosen products by Bank Transfer, Cash On Delivery, or directly on line with the secure PayPal system.</p>
-               <img class="negozio" src="../images/cartedicredito.jpg" style="padding-bottom:30px;" title="Cards with which you can pay with PayPal" />
+               <img class="negozio paypal" src="../images/cartedicredito.jpg" style="padding-bottom:30px;" title="Cards with which you can pay with PayPal" />
             <%end if%>
         <%end if%>
 

@@ -30,7 +30,7 @@
                <h3>Pagamenti</h3>
                <p><a href="condizioni_di_vendita.asp" class="info" title="Regolamento per acquistare i prodotti Cristalensi">Condizioni di vendita</a></p>
                <p class="note">Gli ordini potranno esser pagati in Contrassegno o con Bonifico Bancario oppure online grazie al sistema sicuro di PayPal con Carte di Credito e Prepagate. </p>
-               <img class="negozio" src="images/cartedicredito.jpg" style="padding-bottom:30px;" title="Sistemi di pagamento" />
+               <img class="negozio paypal" src="images/cartedicredito.jpg" style="padding-bottom:30px;" title="Sistemi di pagamento" />
             <%end if%>
         <%end if%>
 
