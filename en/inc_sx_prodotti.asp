@@ -89,7 +89,7 @@
                         </p>
                        
                         <h3>Follow us on Facebook</h3>
-                        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Official page of Cristalensi"><img class="fb" src="/images/facebook.png" align="absmiddle" border="0" alt="Follow us on Facebook" /></a>
+                        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Official page of Cristalensi"><img class="fb" src="../images/facebook.png" align="absmiddle" border="0" alt="Follow us on Facebook" /></a>
                         <p>&nbsp;</p>
                         
                     </div>

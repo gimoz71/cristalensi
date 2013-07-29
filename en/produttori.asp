@@ -11,14 +11,14 @@ Call Visualizzazione("Produttori","0","produttori.asp")
 		<meta name="description" content="This is a list of italian producers of lighting products serving our shop, a selection of lamps and lights was made by individual italian producers' catalogs">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="/js/media-queries-ie.js"></script>
+        <script src="../js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
-        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery.blueberry.js"></script>
+        <script src="../js/jquery.tipTip.js"></script>
+        <link href="../css/css.css" rel="stylesheet" type="text/css">
+        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -29,7 +29,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -100,10 +100,11 @@ Choosing a manufacturer will see a list of its products, from there you can acce
                                 <li>
                                     <a href="<%=url%>" title="Elenco prodotti di <%=titolo%>">
                                         <%if file_img<>"" then%>
-                                        <img src="/public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
+                                        <img src="../public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
                                         <%else%>
-                                        <img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
+                                        <img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
                                         <%end if%>
+                                        <div class="clear"></div>
                                         <span class="button_link"><%=titolo%></span>
                                     </a>
                                 </li>
@@ -111,10 +112,11 @@ Choosing a manufacturer will see a list of its products, from there you can acce
                                 <li>
                                     <a href="#" onClick="MM_openBrWindow('richiesta_informazioni_produttore.asp?produttore=<%=titolo%>&amp;id=<%=id%>','','scrollbars=yes,width=650,height=650')" title="Request information about the producers <%=titolo%>">
                                         <%if file_img<>"" then%>
-                                        <img src="/public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
+                                        <img src="../public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
                                         <%else%>
-                                        <img src="/public/logo_cristalensi_piccolo.jpg" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
+                                        <img src="../public/logo_cristalensi_piccolo.jpg" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
                                         <%end if%>
+                                        <div class="clear"></div>
                                         <span class="button_link"><%=titolo%></span>
                                     </a>
                                 </li>

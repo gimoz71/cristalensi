@@ -105,6 +105,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
                                         <%else%>
                                         <img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" style="margin-bottom: 10px" alt="logo del produttore <%=titolo%> non disponibile" />
                                         <%end if%>
+                                        <div class="clear"></div>
                                         <span class="button_link"><%=titolo%></span>
                                     </a>
                                 </li>
@@ -116,6 +117,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
                                         <%else%>
                                         <img src="public/logo_cristalensi_piccolo.jpg" style="margin-bottom: 10px" alt="logo del produttore <%=titolo%> non disponibile" />
                                         <%end if%>
+                                        <div class="clear"></div>
                                         <span class="button_link"><%=titolo%></span>
                                     </a>
                                 </li>

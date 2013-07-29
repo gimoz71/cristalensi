@@ -12,7 +12,7 @@
             <%else%>
                 <h3>Client Area</h3>
                 <p>To see the catalogue is not necessary to register</p>
-                <p><a href="#" class="info tiptip" title="<h3> General Information </ h3> Registration in the website Cristalensi <strong> is only compulsory to buy </ strong> but not to take a look at the catalogue of products. <br /> Clients, as well as be able to buy the produced by only entering <strong style='color: red'> Login </ strong> and <strong style='color: red'> Password </ strong> without re-register each time, will be able to print orders, update their data, post the comments on the website and will be updated on our offers. <br /> for all other information relating to the conditions of sale refer to the specific page <a href='condizioni_di_vendita.asp' title='conditions of sale' style='color: red'>conditions of sale</a>.">More information</a></p>
+                <p><a href="#" class="info tiptip" title="<h3> General Information </h3> Registration in the website Cristalensi <strong> is only compulsory to buy </strong> but not to take a look at the catalogue of products. <br /> Clients, as well as be able to buy the produced by only entering <strong style='color: red'> Login </strong> and <strong style='color: red'> Password </strong> without re-register each time, will be able to print orders, update their data, post the comments on the website and will be updated on our offers. <br/> for all other information relating to the conditions of sale refer to the specific page <a href='condizioni_di_vendita.asp' title='conditions of sale' style='color: red'>conditions of sale</a>.">More information</a></p>
                 <form method="post" name="logon" action="<%=MM_LoginAction%><%if Request.QueryString<>"" then%>&<%else%>?<%end if%>contr=1">
 
                    <label for="username">Login</label>
@@ -30,7 +30,7 @@
                <h3>Payment</h3>
                <p><a href="condizioni_di_vendita.asp" class="info" title="Conditions of sale">Conditions of sale</a></p>
                <p class="note">You can pay for your chosen products by Bank Transfer, Cash On Delivery, or directly on line with the secure PayPal system.</p>
-               <img class="negozio" src="/images/cartedicredito.jpg" style="padding-bottom:30px;" title="Cards with which you can pay with PayPal" />
+               <img class="negozio" src="../images/cartedicredito.jpg" style="padding-bottom:30px;" title="Cards with which you can pay with PayPal" />
             <%end if%>
         <%end if%>
 
@@ -49,6 +49,6 @@
         </p>
         
         <h3>Follow us on Facebook</h3>
-        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Official page of Cristalensi"><img class="fb" src="/images/facebook.png" align="absmiddle" border="0" alt="Follow us on Facebook" /></a>
+        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Official page of Cristalensi"><img class="fb" src="../images/facebook.png" align="absmiddle" border="0" alt="Follow us on Facebook" /></a>
     </div>
 </div>

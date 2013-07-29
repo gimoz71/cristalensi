@@ -18,14 +18,14 @@
 		<meta name="keywords" content="store online shop ecommerce lights lamps lighting products discounted articles on offer italian style">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="/js/media-queries-ie.js"></script>
+        <script src="../js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
-        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery.blueberry.js"></script>
+        <script src="../js/jquery.tipTip.js"></script>
+        <link href="../css/css.css" rel="stylesheet" type="text/css">
+        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -36,7 +36,7 @@
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -76,12 +76,12 @@
 					    Instead, to consult the entire catalog click here on <a href="prodotti.asp" title="Products gallery">[Products]</a> (or on the same voice in the menu above)  but you can also choose a category or a producer from the menu on the left.</em>
                           </p>
                             <p class="area"> <strong>Arrange by price:</strong> 
-                            <a href="offerte.asp?order=3"><img src="/images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by price from lowest to highest" title="arrange the products by price from lowest to highest" /></a>
-                            <a href="offerte.asp?order=4"><img src="/images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by price from highest to lowest" title="arrange the products by price from highest to lowest" /></a>
+                            <a href="offerte.asp?order=3"><img src="../images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by price from lowest to highest" title="arrange the products by price from lowest to highest" /></a>
+                            <a href="offerte.asp?order=4"><img src="../images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by price from highest to lowest" title="arrange the products by price from highest to lowest" /></a>
                             &nbsp;-&nbsp;
                             <strong>Arrange by name:</strong>
-                            <a href="offerte.asp?order=1"><img src="/images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  hspace="3" border="0" align="top" alt="arrange the products by name from A to Z" title="arrange the products by name from A to Z" /></a>&nbsp;
-                            <a href="offerte.asp?order=2"><img src="/images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  border="0" align="top" alt="arrange the products by name from Z to A" title="arrange the products by name from Z to A" /></a></p>
+                            <a href="offerte.asp?order=1"><img src="../images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  hspace="3" border="0" align="top" alt="arrange the products by name from A to Z" title="arrange the products by name from A to Z" /></a>&nbsp;
+                            <a href="offerte.asp?order=2"><img src="../images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  border="0" align="top" alt="arrange the products by name from Z to A" title="arrange the products by name from Z to A" /></a></p>
                          
                           <ul class="prodotti clearfix">
                                 
@@ -98,7 +98,7 @@
 
                                             NomePagina=prod_rs("NomePagina_en")			
                                             if NomePagina="" then NomePagina="#"
-                                            'if NomePagina<>"#" then NomePagina="/public/pagine/"&NomePagina
+                                            'if NomePagina<>"#" then NomePagina="../public/pagine/"&NomePagina
                                             if NomePagina<>"#" then NomePagina="scheda_prodotto.asp?pkid="&id
 
                                             codicearticolo=prod_rs("codicearticolo")
@@ -152,7 +152,7 @@
                                             'calcolo misure immagini
                                             Set objImageSize = New ImageSize
                                             With objImageSize
-                                              .ImageFile = server.mappath("/public/"&file_img&"")
+                                              .ImageFile = server.mappath("../public/"&file_img&"")
                                               '.ImageFile = path_img&file_img
 
                                               If .IsImage Then
@@ -167,9 +167,9 @@
                                             End With
                                             Set objImageSize = Nothing
                                     %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" alt="no image for the product <%=titolo_prodotto%>"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/logo_cristalensi_piccolo.jpg" alt="no image for the product <%=titolo_prodotto%>"></a>	
                                     <%
                                             end if
                                     else
@@ -177,7 +177,7 @@
                                             titolo_img=""
                                             file_img=""
                                     %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" alt="no image for the product <%=titolo_prodotto%>"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/logo_cristalensi_piccolo.jpg" alt="no image for the product <%=titolo_prodotto%>"></a>
                                     <%	
                                     end if
                                     img_rs.close

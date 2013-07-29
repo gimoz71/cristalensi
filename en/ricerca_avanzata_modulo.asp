@@ -7,14 +7,14 @@
         <title>CRISTALENSI Advanced search for Lamps Lights</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="/js/media-queries-ie.js"></script>
+        <script src="../js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
-        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery.blueberry.js"></script>
+        <script src="../js/jquery.tipTip.js"></script>
+        <link href="../css/css.css" rel="stylesheet" type="text/css">
+        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -25,7 +25,7 @@
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">

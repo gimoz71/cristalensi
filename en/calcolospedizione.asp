@@ -28,7 +28,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This email is confirmation that we have received your request for the mailing costs necessary to continue with your order n° "&idordine&".<br> In the next few hours (max 24) you will recieve our reply indicating that the order can be completed. At this point it will be necessary to insert your Login and Password in the Client area of the Home Page, click on the link “my orders” and then click on the order in question. To complete the order you will need to  choose the method of payment (bank transfer or PayPal with credit card or prepaid card).</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This email is confirmation that we have received your request for the mailing costs necessary to continue with your order nï¿½ "&idordine&".<br> In the next few hours (max 24) you will recieve our reply indicating that the order can be completed. At this point it will be necessary to insert your Login and Password in the Client area of the Home Page, click on the link ï¿½my ordersï¿½ and then click on the order in question. To complete the order you will need to  choose the method of payment (bank transfer or PayPal with credit card or prepaid card).</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Best regards, from the staff of Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -120,14 +120,14 @@
         <title>Cristalensi - Order</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="/js/media-queries-ie.js"></script>
+        <script src="../js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
-        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery.blueberry.js"></script>
+        <script src="../js/jquery.tipTip.js"></script>
+        <link href="../css/css.css" rel="stylesheet" type="text/css">
+        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -138,7 +138,7 @@
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -179,7 +179,7 @@
                                 <br /><br /><br />
                                 Thank you for having chosen our products,<br />
 							    a request has been made for the calculation of the mailing cost<br />
-							    in order to continue order n°: <%=idordine%><br />
+							    in order to continue order nÂ°: <%=idordine%><br />
 							    <br>
 							    In the next few hours (max 24h) you will receive an email which will  allow you to complete the order.&nbsp; To  continue you will need to insert the Login and Password in the client area of  the Home page. To complete the order you must choose a method of payment (bank  transfer or payment through PayPal via credit card or prepaid credit card).<br /><br /><br />
 							    Best wishes from the staff of Cristalensi

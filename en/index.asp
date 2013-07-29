@@ -10,15 +10,15 @@
 		<meta name="keywords" content="lamps for sales, ecommerce about lights, online store for italian lighting products, Modern lamps, LED Lights, Classic lamps, Rustic lamps, Tiffany, Murano lights, Crystal lamps, lights for children, Spotlights and tracks, Ceiling fans, Outside modern lights, Outside classic lamps , Light bulbs and Drivers">
         <meta name="language" content="en">
         <!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script src="/js/media-queries-ie.js"></script>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="../js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
-        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery.blueberry.js"></script>
+        <script src="../js/jquery.tipTip.js"></script>
+        <link href="../css/css.css" rel="stylesheet" type="text/css">
+        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -29,7 +29,7 @@
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -75,8 +75,8 @@
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <a href="chi_siamo.asp" title="Our Showroom in Italy"><img class="negozio" src="/images/negozio.jpg" alt="CRISTALENSI lights online store"></a>
-                            <img class="anni" src="/images/50anni_new.jpg" alt="Cristalensi 50 years">
+                            <a href="chi_siamo.asp" title="Our Showroom in Italy"><img class="negozio" src="../images/negozio.jpg" alt="CRISTALENSI lights online store"></a>
+                            <img class="anni" src="../images/50anni_new.jpg" alt="Cristalensi 50 years">
                             <h3>Cristalensi, light as idea</h3>
                             <p class="incipit">At just a click away, a vast and refined assortment of italian lighting products for inside and out... Take a look around our <strong>on-line Store</strong> of lights or visit our <a href="chisiamo.asp" title="Our Showroom of lamps and lights"><strong>Showroom of lamps</strong></a>, we can satisfy all your style requirements be they classical or modern. 
                             </p>
@@ -135,7 +135,7 @@
 									
 									NomePagina = rndArray( 5, i+ numero )
 									if Len(NomePagina)>0 then
-										'NomePagina="/public/pagine/"&NomePagina
+										'NomePagina="../public/pagine/"&NomePagina
 										NomePagina="scheda_prodotto.asp?id="&id
 									else
 										NomePagina="#"
@@ -155,7 +155,7 @@
 										'calcolo misure immagini
 										Set objImageSize = New ImageSize
 										With objImageSize
-										  .ImageFile = server.mappath("/public/"&file_img&"")
+										  .ImageFile = server.mappath("../public/"&file_img&"")
 										  '.ImageFile = path_img&file_img
 										  
 										  If .IsImage Then
@@ -167,9 +167,9 @@
 										Set objImageSize = Nothing
 							%>
                             	<li>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="../public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
 										<%else%>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="Product image not available"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>	
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="Product image not available"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>	
                                     <%
                                         end if
                                     else
@@ -177,7 +177,7 @@
                                         titolo_img=""
                                         file_img=""
                                     %>
-                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="Product image not available"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
+                                    <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="Product image not available"><span class="nome-articolo"><%=titolo_prodotto%><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></span></a>
                                     <%	
                                     end if
                                     img_rs.close
@@ -229,9 +229,9 @@
 									
 									if file_img<>"" then
 									%>
-									<a href="<%=nomepagina_categorie%>" title="Products list <%=titolo_cat%>"><img src="/public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
+									<a href="<%=nomepagina_categorie%>" title="Products list <%=titolo_cat%>"><img src="../public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
 										<%else%>
-									<a href="<%=nomepagina_categorie%>" title="Products list <%=titolo_cat%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="image of the category <%=titolo_cat%> not available"><span class="button_link"><%=titolo_cat%></span></a>	
+									<a href="<%=nomepagina_categorie%>" title="Products list <%=titolo_cat%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="image of the category <%=titolo_cat%> not available"><span class="button_link"><%=titolo_cat%></span></a>	
 									<%	
 										end if
 									%>

@@ -73,16 +73,16 @@ end if
 		<meta name="keywords" content="Product description <%=Titolo_prodotto%> Cristalensi shop online <%=kw%>">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="/js/media-queries-ie.js"></script>
+        <script src="../js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <script src="/js/jquery.fancybox.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
-        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery.blueberry.js"></script>
+        <script src="../js/jquery.tipTip.js"></script>
+        <script src="../js/jquery.fancybox.js"></script>
+        <link href="../css/css.css" rel="stylesheet" type="text/css">
+        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -93,7 +93,7 @@ end if
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -211,7 +211,7 @@ end if
                                             <p> You find the product in the category: <a href="/prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>"><%=titolo_cat%></a></p>
 					<%end if%>
                                         <%if allegato_prodotto<>"" then%>
-                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank"><img src="/images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="Attached file">Attached file</a></p>
+                                            <p><a href="../public/<%=allegato_prodotto%>" target="_blank"><img src="../images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="Attached file">Attached file</a></p>
                                         <%end if%>
                                         <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Do you want to know the Cristalensi price? Click here to have an estimate from our staff</a>
@@ -270,19 +270,19 @@ end if
 
                                             if zoom<>"" then
                                                     'percorso_img=server.mappath("public/"&zoom&"")
-													percorso_img="/public/"&zoom
+													percorso_img="../public/"&zoom
                                                     'percorso_img=path_img&zoom
                                                     'percorso_img="../"&zoom
                                             else
                                                     'percorso_img=server.mappath("public/"&file_img&"")
-													percorso_img="/public/"&file_img
+													percorso_img="../public/"&file_img
                                                     'percorso_img=path_img&file_img
                                                     'percorso_img="../"&file_img
                                             end if
                                             'calcolo misure immagini
                                             Set objImageSize = New ImageSize
                                             With objImageSize
-                                              .ImageFile = server.mappath("/public/"&file_img&"")
+                                              .ImageFile = server.mappath("../public/"&file_img&"")
                                               '.ImageFile = path_img&file_img
                                               '.ImageFile = "public/"&file_img
 
@@ -302,7 +302,7 @@ end if
 
                                     <div class="thumb" style="width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px">
                                         <a href="<%=percorso_img%>" class="fancybox" rel="gallery" title="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>">
-					<img class="img-border" src="/public/<%=file_img%>"  alt="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" title="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" /></a>
+					<img class="img-border" src="../public/<%=file_img%>"  alt="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" title="<%if titolo_img<>"" then%><%=titolo_img%>&nbsp;<%=titolo_cat%><%else%><%=titolo_prodotto%>&nbsp;<%=titolo_cat%><%end if%>" /></a>
                                     </div>
                                     <%
                                     img_rs.movenext
@@ -313,7 +313,7 @@ end if
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook"></a><span style="line-height:80px;">If you like this article, share it with your friends on FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
+                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="../images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook"></a><span style="line-height:80px;">If you like this article, share it with your friends on FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
                                     
                                 </li>
                                 <hr />

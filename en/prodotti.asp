@@ -52,14 +52,14 @@ end if
 		<meta name="keywords" content="<%if cat>0 then%><%=nuovo_title_cat%><%end if%><%if FkProduttore>0 then%>lighting products catalog of  <%=titolo_produttore%> lighting products catalog online sale Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalog items indoor lighting outdoor lamps online sale Cristalesni<%end if%>">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="/js/media-queries-ie.js"></script>
+        <script src="../js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
-        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery.blueberry.js"></script>
+        <script src="../js/jquery.tipTip.js"></script>
+        <link href="../css/css.css" rel="stylesheet" type="text/css">
+        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -70,7 +70,7 @@ end if
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -176,11 +176,11 @@ end if
 									if FkProduttore>0 and order=1 then order=5
 								%>
                                 
-                                <p class="area"> <strong>Arrange by price:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=3"><img src="/images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by price from lowest to highest" title="arrange the products by price from lowest to highest" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=4"><img src="/images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by price from highest to lowest" title="arrange the products by price from highest to lowest" /></a>
+                                <p class="area"> <strong>Arrange by price:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=3"><img src="../images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by price from lowest to highest" title="arrange the products by price from lowest to highest" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=4"><img src="../images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by price from highest to lowest" title="arrange the products by price from highest to lowest" /></a>
                               <%if FkProduttore>0 then%>
-                                  &nbsp;-&nbsp;<strong>Arrange by code:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=5"><img src="/images/az_new<%if order=5 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by article code from A to Z" title="arrange the products by article code from A to Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=6"><img src="/images/za_new<%if order=6 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by article code from Z to A" title="arrange the products by article code from Z to A" /></a>
+                                  &nbsp;-&nbsp;<strong>Arrange by code:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=5"><img src="../images/az_new<%if order=5 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by article code from A to Z" title="arrange the products by article code from A to Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=6"><img src="../images/za_new<%if order=6 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by article code from Z to A" title="arrange the products by article code from Z to A" /></a>
                               <%else%>
-                                  &nbsp;-&nbsp;<strong>Arrange by name:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=1"><img src="/images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by name from A to Z" title="arrange the products by name from A to Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=2"><img src="/images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by name from Z to A" title="arrange the products by name from Z to A" /></a>
+                                  &nbsp;-&nbsp;<strong>Arrange by name:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=1"><img src="../images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by name from A to Z" title="arrange the products by name from A to Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=2"><img src="../images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by name from Z to A" title="arrange the products by name from Z to A" /></a>
                               <%end if%>
                               
                               <%
@@ -213,7 +213,7 @@ end if
 											titolo_prodotto=prod_rs("titolo_en")
 											NomePagina=prod_rs("NomePagina_en")
 											if Len(NomePagina)>0 then
-												'NomePagina="/public/pagine/"&NomePagina
+												'NomePagina="../public/pagine/"&NomePagina
 												NomePagina="scheda_prodotto.asp?id="&id
 											else
 												NomePagina="#"
@@ -275,7 +275,7 @@ end if
 											'calcolo misure immagini
 											Set objImageSize = New ImageSize
 											With objImageSize
-											  .ImageFile = server.mappath("/public/"&file_img&"")
+											  .ImageFile = server.mappath("../public/"&file_img&"")
 											  '.ImageFile = path_img&file_img
 											  
 											  If .IsImage Then
@@ -291,9 +291,9 @@ end if
 											Set objImageSize = Nothing
 										%>
                                         
-                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
+                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>	
 										<%
                                             end if
                                         else
@@ -301,7 +301,7 @@ end if
                                             titolo_img=""
                                             file_img=""
                                         %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
 										<%	
                                         end if
                                         img_rs.close
@@ -419,7 +419,7 @@ end if
 											
 											NomePagina = rndArray( 16, i+ numero )
 											if NomePagina="" then NomePagina="#"
-											if NomePagina<>"#" then NomePagina="/public/pagine/"&NomePagina
+											if NomePagina<>"#" then NomePagina="../public/pagine/"&NomePagina
 										
 											if fkproduttore>0 then
 												Set pr_rs = Server.CreateObject("ADODB.Recordset")
@@ -464,7 +464,7 @@ end if
 											'calcolo misure immagini
 											Set objImageSize = New ImageSize
 											With objImageSize
-											  .ImageFile = server.mappath("/public/"&file_img&"")
+											  .ImageFile = server.mappath("../public/"&file_img&"")
 											  '.ImageFile = path_img&file_img
 											  
 											  If .IsImage Then
@@ -480,9 +480,9 @@ end if
 											Set objImageSize = Nothing
 										%>
                                         
-                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
+                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>	
 										<%
                                             end if
                                         else
@@ -490,7 +490,7 @@ end if
                                             titolo_img=""
                                             file_img=""
                                         %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
 										<%	
                                         end if
                                         img_rs.close
