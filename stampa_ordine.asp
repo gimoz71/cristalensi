@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-<!--#include file="strConn.asp"-->
+<!--#include file="inc_strConn.asp"-->
 <%
 	IdOrdine=request("IdOrdine")
 	if IdOrdine="" then IdOrdine=0
@@ -123,7 +123,8 @@
                 </tr>
 <%
 	Set rs = Server.CreateObject("ADODB.Recordset")
-	sql = "SELECT RigheOrdine.PkId, RigheOrdine.FkOrdine, RigheOrdine.PrezzoProdotto as PrezzoProdotto, RigheOrdine.FkProdotto, RigheOrdine.Quantita, RigheOrdine.TotaleRiga, Prodotti.Titolo, Prodotti.CodiceArticolo FROM Prodotti INNER JOIN RigheOrdine ON Prodotti.PkId = RigheOrdine.FkProdotto WHERE (((RigheOrdine.FkOrdine)="&idOrdine&"))"
+	'sql = "SELECT RigheOrdine.PkId, RigheOrdine.FkOrdine, RigheOrdine.PrezzoProdotto as PrezzoProdotto, RigheOrdine.FkProdotto, RigheOrdine.Quantita, RigheOrdine.TotaleRiga, Prodotti.Titolo, Prodotti.CodiceArticolo FROM Prodotti INNER JOIN RigheOrdine ON Prodotti.PkId = RigheOrdine.FkProdotto WHERE (((RigheOrdine.FkOrdine)="&idOrdine&"))"
+	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
 	rs.Open sql, conn, 1, 1
 	num_prodotti_carrello=rs.recordcount
 if rs.recordcount>0 then
@@ -133,7 +134,7 @@ Do while not rs.EOF
 %>					
 				  <tr>
                   <td align="left" width="341">
-				  <b>[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%></b>				  				  </td>
+				  <b>[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%></b><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%>				  				  </td>
                   <td align="right" width="89">
 				  <%
 				  quantita=rs("quantita")
@@ -281,4 +282,4 @@ loop
 </td></tr></table>
 </body>
 </html>
-<!--#include file="strClose.asp"-->
+<!--#include file="inc_strClose.asp"-->

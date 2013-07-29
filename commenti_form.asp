@@ -58,17 +58,17 @@
 			Oggetto = "Conferma invio commento a Cristalensi.it"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -96,17 +96,17 @@
 			Oggetto = "Conferma invio commento a Cristalensi.it"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -115,17 +115,17 @@
 			Oggetto = "Conferma invio commento a Cristalensi.it"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email	
 	end if
@@ -139,14 +139,14 @@
         <title>Commenti Cristalensi</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -171,15 +171,15 @@
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -196,10 +196,10 @@
                             <div class="carrello clearfix">
                                  <%if mode=1 then%>
                                  	<p>
-                                    Il tuo commento &egrave; stato inserito correttamente, adesso il nostro staff lo valuter&agrave; e se sar&agrave; approvato, ti verr&agrave; recapitata una notifica via email.<br />Grazie della tua collaborazione dallo staff di Cristalensi.<br /><br /><a href="commenti_elenco.asp" class="button_link_red" style="float:right">Elenco commenti</a>
+                                    Il tuo commento &egrave; stato inserito correttamente, adesso il nostro staff lo valuter&agrave; e se sar&agrave; approvato, ti verr&agrave; recapitata una notifica via email.<br />Grazie della tua collaborazione dallo staff di Cristalensi.<br /><br /><a href="/commenti_elenco.asp" class="button_link_red" style="float:right">Elenco commenti</a>
                                     </p>
 								 <%else%>   
-                                    <form name="modulocarrello" id="modulocarrello" method="post" action="commenti_form.asp?mode=1">
+                                    <form name="modulocarrello" id="modulocarrello" method="post" action="/commenti_form.asp?mode=1">
                                     <p>Inserisci un commento su i prodotti acquistati, se ti sono piaciuti o no, oppure un commento sul sito internet o sull'azienda e lo staff.<br />Il commento non sar&agrave; pubblicato immediatamente ma sar&agrave; soggetto a un controllo da parte del nostro staff per evitare che vengano inseriti contenuti non leciti, offese e termini non pubblicabili.<br />Si prega di non inserire codice html, email, link e collegamenti ad altri siti internet: il commento non sar&agrave; pubblicato.<br />Per ogni commento saranno pubblicati anche il <strong>Nome</strong> e la <strong>Citt&agrave;</strong> inseriti al momento dell'iscrizione.</p>
                                     <%if mode=2 then%>
                                     <p><br><br><strong>Attenzione! Controllare il testo inserito rispettando le regole, grazie.</strong><br><br></p>

@@ -21,7 +21,7 @@ if cat>0 then
 	Call Visualizzazione("Categorie1",Cat,NomePagina)
 else
 	'Call Visualizzazione("",0,"prodotti.asp")
-	response.Redirect("../../prodotti.asp")
+	response.Redirect("/en/prodotti.asp")
 end if
 %>
 <!doctype html>
@@ -66,15 +66,15 @@ end if
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -112,12 +112,12 @@ end if
                                     <a href="<%=url%>" title="<%=titolo_cat%><%=" - "&prod_rs("titolo_en")%>">
                                         <%
 										'file_img="../"&prod_rs("logo")
-										file_img="../public/"&prod_rs("logo")
+										file_img="/public/"&prod_rs("logo")
 										if file_img<>"" then
 										%>
                                         <img src="<%=file_img%>" width="160" height="120" style="margin-bottom: 10px" alt="<%=titolo_cat%><%=" - "&prod_rs("titolo_en")%>" title="<%=titolo_cat%><%=" - "&prod_rs("titolo_en")%>" />
                                         <%else%>
-                                        <img src="../public/logo_cristalensi_piccolo.jpg" width="160" height="120" style="margin-bottom: 10px" alt="image of category <%=titolo_cat%><%=" - "&prod_rs("titolo_en")%> not available" />
+                                        <img src="/public/logo_cristalensi_piccolo.jpg" width="160" height="120" style="margin-bottom: 10px" alt="image of category <%=titolo_cat%><%=" - "&prod_rs("titolo_en")%> not available" />
                                         <%end if%>
                                         <span class="button_link"><%=prod_rs("titolo_en")%></span>
                                     </a>

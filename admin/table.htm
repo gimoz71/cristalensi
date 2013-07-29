@@ -1,0 +1,80 @@
+<html>
+<head>
+<style type="text/css">
+ body   {background:threedface}
+</style>
+<script>
+function getInfoAndUpdate()
+{
+   if (isNaN(formNumRows.value))
+   {
+      alert ("Il campo Righe può contenere solo numeri");return;
+   }
+   else if (isNaN(formNumCols.value))
+   {
+      alert ("Il campo Colonne può contenere solo numeri");return;
+   }
+   var callerWindowObj = dialogArguments;
+   callerWindowObj.rtNumRows = formNumRows.value;
+   callerWindowObj.rtNumCols = formNumCols.value;
+   callerWindowObj.rtTblAlign = formTblAlign.value;
+   callerWindowObj.rtTblWidth = formTblWidth.value;
+   callerWindowObj.createTable();
+   window.close();
+}
+</script>
+<title>Corradini Gas</title>
+<link href="stile.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table align='center' border='0' cellpadding='0' cellspacing='0' width='100%' class="testograssetto">
+  <tr>
+    <td height="10" colspan="2"><br>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width='50%' height="22"> Numero di righe: </td>
+    <td width='50%'>
+      <input id=formNumRows size='2' value='1' class="formbianco">
+    </td>
+  </tr>
+  <tr>
+    <td width='50%' height="22"> Numero di colonne: </td>
+    <td width='50%'>
+      <input id=formNumCols size='2' value='1' class="formbianco">
+    </td>
+  </tr>
+  <tr>
+    <td width='50%' height="22"> Allineamento: </td>
+    <td width='50%'>
+      <select id=formTblAlign size='1' class="formbianco">
+        <option value='left'>sinistra</option>
+        <option value='center' selected>centro</option>
+        <option value='right'>destra</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td width='50%' height="22"> Larghezza: </td>
+    <td width='50%'>
+          <select id=formTblWidth size='1' class="formbianco">
+	        <option value='25%'>25%</option>
+	        <option value='50%' >50%</option>
+	        <option value='75%'>75%</option>
+	        <option value='100%' selected>100%</option>
+      </select>
+    </td>
+  </tr>
+</table>
+<br>
+<table border='0' cellpadding='0'cellspacing='0'width='100%' class="testograssetto">
+  <tr>
+    <td width='50%' align='right' height="22"> 
+      <input value='Ok' type=button onclick='getInfoAndUpdate();' class="formbianco">&nbsp;
+    </td>
+    <td width='50%' align='left'>
+      &nbsp;<input value='Cancel' type=button onclick='window.close();' class="formbianco">
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -52,14 +52,14 @@ end if
 		<meta name="keywords" content="<%if cat>0 then%><%=nuovo_title_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%> catalogo prodotti illuminazione vendita online Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalogo prodotti illuminazione da interno illuminazione da esterno vendita online Cristalesni<%end if%>">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -91,15 +91,15 @@ end if
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -140,7 +140,7 @@ end if
                                     // End -->
                                     </SCRIPT>
                              		
-                                    <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
+                                    <form method="post" action="/prodotti.asp" name="form_prodotti" id="form_prodotti">
                                       <p>
                                       Non hai trovato il prodotto che cercavi? cambia la categoria specifica: 
                                         <%
@@ -167,7 +167,7 @@ end if
                                         </p>
                                        </form>
                                         <p style="text-align: center">Oppure, per una ricerca maggiormente dettagliata, usa la<p>
-                                        <p style="text-align: center"><a href="ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a></p>
+                                        <p style="text-align: center"><a href="/ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a></p>
                               	<%end if%>
                                 <%
 									p=request("p")
@@ -178,11 +178,11 @@ end if
 									if FkProduttore>0 and order=1 then order=5
 								%>
                                 
-                                <p class="area"> <strong>Ordinamento per prezzo:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=3"><img src="images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" title="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=4"><img src="images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" title="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" /></a>
+                                <p class="area"> <strong>Ordinamento per prezzo:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=3"><img src="/images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" title="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=4"><img src="/images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" title="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" /></a>
                               <%if FkProduttore>0 then%>
-                                  &nbsp;-&nbsp;<strong>Ordinamento per codice:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=5"><img src="images/az_new<%if order=5 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per codice articolo dalla A alla Z" title="ordina i prodotti per codice articolo dalla A alla Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=6"><img src="images/za_new<%if order=6 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per codice articolo dalla Z alla A" title="ordina i prodotti per codice articolo dalla Z alla A" /></a>
+                                  &nbsp;-&nbsp;<strong>Ordinamento per codice:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=5"><img src="/images/az_new<%if order=5 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per codice articolo dalla A alla Z" title="ordina i prodotti per codice articolo dalla A alla Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=6"><img src="/images/za_new<%if order=6 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per codice articolo dalla Z alla A" title="ordina i prodotti per codice articolo dalla Z alla A" /></a>
                               <%else%>
-                                  &nbsp;-&nbsp;<strong>Ordinamento per nome:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=1"><img src="images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per titolo dalla A alla Z" title="ordina i prodotti per titolo dalla A alla Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=2"><img src="images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per titolo dalla Z alla A" title="ordina i prodotti per titolo dalla Z alla A" /></a>
+                                  &nbsp;-&nbsp;<strong>Ordinamento per nome:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=1"><img src="/images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per titolo dalla A alla Z" title="ordina i prodotti per titolo dalla A alla Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=2"><img src="/images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per titolo dalla Z alla A" title="ordina i prodotti per titolo dalla Z alla A" /></a>
                               <%end if%>
                               
                               <%
@@ -215,8 +215,8 @@ end if
 											titolo_prodotto=prod_rs("titolo")
 											NomePagina=prod_rs("NomePagina")
 											if Len(NomePagina)>0 then
-												'NomePagina="/public/pagine/"&NomePagina
-												NomePagina="scheda_prodotto.asp?id="&id
+												NomePagina="/public/pagine/"&NomePagina
+												'NomePagina="/public/pagine/scheda_prodotto.asp?id="&id
 											else
 												NomePagina="#"
 											end if
@@ -295,7 +295,7 @@ end if
                                         
                                         	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
 										<%
                                             end if
                                         else
@@ -303,7 +303,7 @@ end if
                                             titolo_img=""
                                             file_img=""
                                         %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>
 										<%	
                                         end if
                                         img_rs.close
@@ -331,15 +331,15 @@ end if
 								  <%if prod_rs.recordcount>10 then%>
                                   <li>
                                   Pag. <strong><%=p%></strong> di <%=prod_rs.PageCount%> - Vai alla Pagina: 
-                                  <%if p > 2 then%>&nbsp;[<a href="prodotti.asp?p=1&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">prima pag.</a>]<%end if%>
+                                  <%if p > 2 then%>&nbsp;[<a href="/prodotti.asp?p=1&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">prima pag.</a>]<%end if%>
                                   <% if p >= 5 then %>
-                                  [<a href="prodotti.asp?p=<%=p-4%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">&lt;&lt; 5 prec</a>] 
+                                  [<a href="/prodotti.asp?p=<%=p-4%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">&lt;&lt; 5 prec</a>] 
                                   <% end if %>
                                   <% if p > 1 then %>
-                                  [<a href="prodotti.asp?p=<%=p-1%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">&lt; prec</a>] 
+                                  [<a href="/prodotti.asp?p=<%=p-1%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">&lt; prec</a>] 
                                   <% end if %>
                                   <% for page = p+1 to p+4 %>
-                                  <%if not page>maxPage then%><a href="prodotti.asp?p=<%=Page%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>"><%=page%></a>&nbsp;<%end if%>
+                                  <%if not page>maxPage then%><a href="/prodotti.asp?p=<%=Page%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>"><%=page%></a>&nbsp;<%end if%>
                                   <% if page >= prod_rs.PageCount then
                                      page = p+4
                                      'exit for
@@ -348,12 +348,12 @@ end if
                                   <% next %>
                                   <% 'if page-1 <= prod_rs.PageCount then %>
                                   <% if cInt(p) < maxPage then %>
-                                  [<a href="prodotti.asp?p=<%=p+1%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">succ &gt;</a>] 
+                                  [<a href="/prodotti.asp?p=<%=p+1%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">succ &gt;</a>] 
                                   <% end if %>
                                   <% if prod_rs.PageCount-page > 3 then %>
-                                  [<a href="prodotti.asp?p=<%=p+5%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">5 succ &gt;&gt;</a>] 
+                                  [<a href="/prodotti.asp?p=<%=p+5%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">5 succ &gt;&gt;</a>] 
                                   <% end if%>
-                                  <%if maxPage>5 and cInt(p)<>prod_rs.PageCount then%>[<a href="prodotti.asp?p=<%=prod_rs.PageCount%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">ultima pag.</a>]<%end if%>	
+                                  <%if maxPage>5 and cInt(p)<>prod_rs.PageCount then%>[<a href="/prodotti.asp?p=<%=prod_rs.PageCount%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">ultima pag.</a>]<%end if%>	
                                     </li>
                                   <%end if%>
                                   <!--fine paginazione-->
@@ -366,7 +366,7 @@ end if
 									<%if FkProduttore>0 then%>
                                     <p>Al momento non sono esposti sul sito internet prodotti di <%=titolo_Produttore%>, ma abbiamo comunque a disposizione il loro catalogo e vendiamo i loro prodotti nel nostro negozio. <br />Quindi, se conosci un articolo di questo produttore e vuoi avere un preventivo di prezzo riempi il modulo indicandoci il prodotto, 
 		  verrai contattato il prima possibile: il nostro staff sar&agrave; a Tua disposizione per qualsiasi chiarimento.<br />
-	      <br /><a href="#" onClick="MM_openBrWindow('richiesta_informazioni_produttore.asp?produttore=<%=titolo_produttore%>&amp;id=<%=FkProduttore%>','','scrollbars=yes,width=650,height=650')">Clicca qui per aprire il modulo per la richiesta informazioni e preventivi</a></p>
+	      <br /><a href="#" onClick="MM_openBrWindow('/richiesta_informazioni_produttore.asp?produttore=<%=titolo_produttore%>&amp;id=<%=FkProduttore%>','','scrollbars=yes,width=650,height=650')">Clicca qui per aprire il modulo per la richiesta informazioni e preventivi</a></p>
           							<%end if%>
                                <%	
 								end if
@@ -482,7 +482,7 @@ end if
                                         
                                         	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
 										<%
                                             end if
                                         else
@@ -490,19 +490,19 @@ end if
                                             titolo_img=""
                                             file_img=""
                                         %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>
 										<%	
                                         end if
                                         img_rs.close
                                         %>
                                         </div>
                                         <div class="data">
-                                            <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore>0 then%><span class="produttore">Produttore: <a href="prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
+                                            <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore>0 then%><span class="produttore">Produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Il prodotto lo trovi nella categoria:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Scheda prodotto</span></a>
 											<%if tot_img>0 then%><span style="float:right;">[<%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]</span><%end if%>
                                             <%if prezzoarticolo=0 then%>
-                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
+                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('/richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
                                             <%else%>
                                             <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€&nbsp;&nbsp;<small><i>Iva compresa</i></small></span><%end if%><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a></p>
                                             <%end if%>

@@ -50,15 +50,15 @@ Call Visualizzazione("Produttori","0","produttori.asp")
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -94,15 +94,15 @@ Choosing a manufacturer will see a list of its products, from there you can acce
 								file_img=prod_rs("logo")
 								link=prod_rs("prodotti")
 								
-								url="prodotti.asp?FkProduttore="&id
+								url="/en/prodotti.asp?FkProduttore="&id
 								%>
                                 <%if link=1 then%>
                                 <li>
                                     <a href="<%=url%>" title="Elenco prodotti di <%=titolo%>">
                                         <%if file_img<>"" then%>
-                                        <img src="../public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
+                                        <img src="/public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
                                         <%else%>
-                                        <img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
+                                        <img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
                                         <%end if%>
                                         <div class="clear"></div>
                                         <span class="button_link"><%=titolo%></span>
@@ -112,9 +112,9 @@ Choosing a manufacturer will see a list of its products, from there you can acce
                                 <li>
                                     <a href="#" onClick="MM_openBrWindow('richiesta_informazioni_produttore.asp?produttore=<%=titolo%>&amp;id=<%=id%>','','scrollbars=yes,width=650,height=650')" title="Request information about the producers <%=titolo%>">
                                         <%if file_img<>"" then%>
-                                        <img src="../public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
+                                        <img src="/public/<%=file_img%>" style="margin-bottom: 10px; width:120px; height:90px;" alt="<%=titolo%>" title="<%=titolo%>" />
                                         <%else%>
-                                        <img src="../public/logo_cristalensi_piccolo.jpg" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
+                                        <img src="/public/logo_cristalensi_piccolo.jpg" style="margin-bottom: 10px" alt="logo of producer <%=titolo%> unavailable" />
                                         <%end if%>
                                         <div class="clear"></div>
                                         <span class="button_link"><%=titolo%></span>

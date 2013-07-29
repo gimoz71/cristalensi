@@ -4,7 +4,7 @@
 	Set conn = Server.CreateObject("ADODB.Connection")
 	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\cristalensiit\mdb-database\db_cristalensi.mdb"
 	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\viadeimediciit\mdb-database\db_cristalensi.mdb"
-	conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq="& Server.MapPath("mdb-database/db_cristalensi.mdb")
+	conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq="& Server.MapPath("/mdb-database/db_cristalensi.mdb")
 	'conn.open = "DSN=cristalensiit"
 	
 	path_img="d:\inetpub\webs\cristalensiit\public\"
@@ -24,7 +24,7 @@
 	'Response.Write "La pagina dove sono è: " &toURL& "."
 	
 'If Err.Number <> 0 Then
-	'Response.Redirect("aggiornamento.htm")
+	'Response.Redirect("aggiornamento.html")
 'End IF
 
 MM_LoginAction = Request.ServerVariables("URL")

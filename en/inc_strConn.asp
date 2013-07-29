@@ -1,5 +1,5 @@
 <%
-'On Error Resume Next
+On Error Resume Next
 
 	Set conn = Server.CreateObject("ADODB.Connection")
 	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\cristalensiit\mdb-database\db_cristalensi.mdb"
@@ -23,9 +23,9 @@
 	toUrl = Mid((toUrl),(UltimoSlash2 + 1), len(toUrl)- UltimoSlash2)
 	'Response.Write "La pagina dove sono è: " &toURL& "."
 	
-'If Err.Number <> 0 Then
-	'Response.Redirect("aggiornamento.htm")
-'End IF
+If Err.Number <> 0 Then
+	Response.Redirect("aggiornamento.html")
+End IF
 
 MM_LoginAction = Request.ServerVariables("URL")
 If Request.QueryString<>"" Then MM_LoginAction = MM_LoginAction + "?" + Request.QueryString

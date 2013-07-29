@@ -8,14 +8,14 @@
         <meta name="description" content="Lascia un commento per i prodotti di illuminazione acquistati. Inserisci una recensione di un lampadario comprato. In un ottica di trasparenza, di avvicinamento alla clientela e di miglioramento dei nostri servizi abbiamo aperto quest'area dove i clienti possono lasciare un messaggio, un commento, un complimento o una critica al funzionamento del sito internet, ai prodotti di illuminazione comprati ma anche ai servizi dello staff stesso.">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -40,15 +40,15 @@
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -66,7 +66,7 @@
                             <div class="carrello clearfix">
                                 <div class="data">
                                     <p><em>In un ottica di trasparenza, di avvicinamento alla clientela e di miglioramento dei nostri servizi abbiamo aperto quest'area dove i clienti possono lasciare un messaggio, un commento, un complimento o una critica al funzionamento del sito internet, una recensione sui prodotti di illuminazione acquistati ma anche ai servizi dello staff stesso.<br />Per inviare un commento si dovrà essere registrati sul sito internet e i messaggi inviati saranno approvati dallo staff per evitare che siano pubblicati testi offensivi o inserire link pubblicitari verso altri siti internet.</em></p>
-                                    <p class="riga" style="text-align: right; padding-bottom:10px;"><a href="commenti_form.asp" class="button_link_red">Inserisci un commento anche te!</a></p>
+                                    <p class="riga" style="text-align: right; padding-bottom:10px;"><a href="/commenti_form.asp" class="button_link_red">Inserisci un commento anche te!</a></p>
 									<%
 									Set prod_rs = Server.CreateObject("ADODB.Recordset")
 									'sql = "SELECT * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"

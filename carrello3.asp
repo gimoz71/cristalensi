@@ -114,14 +114,14 @@
         <title>Cristalensi</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -147,7 +147,7 @@
 		function Cambia()
 		{
 				document.modulocarrello.method = "post";
-				document.modulocarrello.action = "carrello3.asp";
+				document.modulocarrello.action = "/carrello3.asp";
 				document.modulocarrello.submit();
 		}
 		</script>
@@ -155,22 +155,22 @@
 		function Continua()
 		{
 				document.modulocarrello.method = "post";
-				document.modulocarrello.action = "carrello3.asp?mode=1";
+				document.modulocarrello.action = "/carrello3.asp?mode=1";
 				document.modulocarrello.submit();
 		}
 		</script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -241,7 +241,7 @@
                                     <h4>Riferimenti per l'indirizzo di spedizione</h4>
                                     <p><%=DatiSpedizione%></p>
                                     <p>&nbsp;</p>
-                                    <h4>Colori misure e annotazioni</h4>
+                                    <h4>Eventuali annotazioni</h4>
                                     <p><%=NoteCliente%></p>
                                 </div>
                                 
@@ -342,7 +342,7 @@
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     
-                                    <p><button type="button" name="indietro" onClick="location.href='carrello2.asp'" style="float:left;" class="button_link">&laquo; passo precedente</button>
+                                    <p><button type="button" name="indietro" onClick="location.href='/carrello2.asp'" style="float:left;" class="button_link">&laquo; passo precedente</button>
                                     <button type="button" name="continua" onClick="Continua();" style="float:right;" class="button_link_red">CONCLUDI L'ACQUISTO &raquo;</button></p>
                                     <%end if%>
 								<%end if%>

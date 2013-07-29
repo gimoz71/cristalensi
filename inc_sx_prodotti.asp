@@ -12,8 +12,8 @@
 							
 							nomepagina_categorie = cat_rs("NomePagina")
 							if nomepagina_categorie="" then nomepagina_categorie="#"
-							'if nomepagina_categorie<>"#" then nomepagina_categorie="public/pagine/"&nomepagina_categorie
-							if nomepagina_categorie<>"#" then nomepagina_categorie="categorie.asp?pkid="&cat_rs("PkId")
+							'if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/"&nomepagina_categorie
+							if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/categorie.asp?pkid="&cat_rs("PkId")
                             %>    
                                 <li><a href="<%=nomepagina_categorie%>" title="<%=cat_rs("Titolo")%>">&raquo; <%=cat_rs("Titolo")%></a></li>
                             <%
@@ -39,7 +39,7 @@
                                 }
                             // End -->
                             </SCRIPT>
-                            <form method="post" name="form_produttori" id="form_produttori" action="prodotti.asp">
+                            <form method="post" name="form_produttori" id="form_produttori" action="/prodotti.asp">
                             
                                 <select name="FkProduttore" id="FkProduttore" class="form" onChange="invia_produttore()">
                                     <option value="0">Seleziona un produttore</option>
@@ -53,29 +53,29 @@
                                     %>
                                 </select>
                             </form>
-                            <p style="font-weight: bold"><a href="produttori.asp" title="Elenco completo dei produttori di articoli per illuminazione" class="button_link">Elenco completo marche</a></p>
+                            <p style="font-weight: bold"><a href="/produttori.asp" title="Elenco completo dei produttori di articoli per illuminazione" class="button_link">Elenco completo marche</a></p>
                             <%end if%>
                             <%cs.close%>
                             <p><br /><br />Scopri le ultime offerte del nostro catalogo online</p>
-                            <a href="offerte.asp" class="button_link_red" title="Offerte prodotti illuminazione">PRODOTTI IN OFFERTA</a>
+                            <a href="/offerte.asp" class="button_link_red" title="Offerte prodotti illuminazione">PRODOTTI IN OFFERTA</a>
                             <p><br /><br />Vuoi ricercare un prodotto per codice, per nome oppure in una fascia di prezzo? Vuoi combinare una serie di caratteristiche?
                                 Sfrutta la ricerca avanzata</p>
-                            <a href="ricerca_avanzata_modulo.asp" class="button_link_red" title="Ricerca avanzata articoli per illuminazione">RICERCA AVANZATA</a>
+                            <a href="/ricerca_avanzata_modulo.asp" class="button_link_red" title="Ricerca avanzata articoli per illuminazione">RICERCA AVANZATA</a>
 						<%end if%>
                         
                         <%if idsession>0 then%>
                             <h3>Area clienti</h3>
                             <p><font color="#990000"><strong>Benvenuto<br />&nbsp;<%=nome_log%></strong></font></p>
-                            <p>&raquo;<a href="iscrizione.asp">I dati della tua iscrizione</a></p>
-                            <p>&raquo;<a href="ordini_elenco.asp">I tuoi ordini</a></p>
-                            <p>&raquo;<a href="commenti_form.asp">Inserisci un commento</a></p>
+                            <p>&raquo;<a href="/iscrizione.asp">I dati della tua iscrizione</a></p>
+                            <p>&raquo;<a href="/ordini_elenco.asp">I tuoi ordini</a></p>
+                            <p>&raquo;<a href="/commenti_form.asp">Inserisci un commento</a></p>
                             <p>&raquo;<a href="/admin/logout.asp">Esci dall'Area clienti</a></p>
                             <p>&nbsp;</p>
                         <%end if%>
                         
                         <h3>Contattaci!</h3>
                         <p>Il nostro personale sar&agrave; a Tua disposizione per qualsiasi informazione</p>
-                        <p><a href="contatti.asp" class="info" title="Negozio illuminazione Firenze">Contatti e riferimenti</a></p>
+                        <p><a href="/contatti.asp" class="info" title="Negozio illuminazione Firenze">Contatti e riferimenti</a></p>
                         <p class="note"><strong>Cristalensi Snc</strong><br />
                             di Lensi Massimiliano & C.<br />
                             C.F. e Iscr. Reg. Impr. di Firenze 05305820481<br />
@@ -85,9 +85,9 @@
                             Tel. e Fax: 0571.911163<br />
                             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
                         </p>
-                        <img class="telefono" src="images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
+                        <img class="telefono" src="/images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
                         <h3>Seguici anche su</h3>
-                        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img class="fb" src="images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
+                        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img class="fb" src="/images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
                         <p>&nbsp;</p>
                         
                     </div>

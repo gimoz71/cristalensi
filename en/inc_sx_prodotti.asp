@@ -12,8 +12,8 @@
 							
 							nomepagina_categorie = cat_rs("NomePagina_en")
 							if nomepagina_categorie="" then nomepagina_categorie="#"
-							'if nomepagina_categorie<>"#" then nomepagina_categorie="public/pagine/"&nomepagina_categorie
-							if nomepagina_categorie<>"#" then nomepagina_categorie="categorie.asp?pkid="&cat_rs("PkId")
+							if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/"&nomepagina_categorie
+							'if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/categorie_en.asp?pkid="&cat_rs("PkId")
                             %>    
                                 <li><a href="<%=nomepagina_categorie%>" title="<%=cat_rs("Titolo_en")%>">&raquo; <%=cat_rs("Titolo_en")%></a></li>
                             <%
@@ -39,7 +39,7 @@
                                 }
                             // End -->
                             </SCRIPT>
-                            <form method="post" name="form_produttori" id="form_produttori" action="prodotti.asp">
+                            <form method="post" name="form_produttori" id="form_produttori" action="/en/prodotti.asp">
                             
                                 <select name="FkProduttore" id="FkProduttore" class="form" onChange="invia_produttore()">
                                     <option value="0">Select a brand</option>
@@ -53,22 +53,22 @@
                                     %>
                                 </select>
                             </form>
-                            <p style="font-weight: bold"><a href="produttori.asp" title="Complete list of lights producers" class="button_link">Complete list of producers</a></p>
+                            <p style="font-weight: bold"><a href="/en/produttori.asp" title="Complete list of lights producers" class="button_link">Complete list of producers</a></p>
                             <%end if%>
                             <%cs.close%>
                             <p><br /><br />Discover the latest offers online</p>
-                            <a href="offerte.asp" class="button_link_red" title="Latest offers of lamps">LATEST OFFERS</a>
+                            <a href="/en/offerte.asp" class="button_link_red" title="Latest offers of lamps">LATEST OFFERS</a>
                             <p><br /><br />Do You want to search for a product code, name or in a price range? Do You want to combine a number of features?
                                 Use the advanced search</p>
-                            <a href="ricerca_avanzata_modulo.asp" class="button_link_red" title="Advanced search lighting products">ADVANCED SEARCH</a>
+                            <a href="/en/ricerca_avanzata_modulo.asp" class="button_link_red" title="Advanced search lighting products">ADVANCED SEARCH</a>
 						<%end if%>
                         
                         <%if idsession>0 then%>
                             <h3>Client Area</h3>
                             <p><font color="#990000"><strong>Welcome<br />&nbsp;<%=nome_log%></strong></font></p>
-                            <p>&raquo;<a href="iscrizione.asp">The details of your registration</a></p>
-                            <p>&raquo;<a href="ordini_elenco.asp">Your orders</a></p>
-                            <p>&raquo;<a href="commenti_form.asp">Post a comment</a></p>
+                            <p>&raquo;<a href="/en/iscrizione.asp">The details of your registration</a></p>
+                            <p>&raquo;<a href="/en/ordini_elenco.asp">Your orders</a></p>
+                            <p>&raquo;<a href="/en/commenti_form.asp">Post a comment</a></p>
                             <p>&raquo;<a href="/admin/logout.asp">Exit from your profile</a></p>
                             <p>&nbsp;</p>
                             
@@ -76,7 +76,7 @@
                         
                         <h3>Contact us!</h3>
                         <p>Our staff will be pleased to answer any questions</p>
-                        <p><a href="contatti.asp" class="info" title="Lighthing Showromm in Florence">Maps & Contacts</a></p>
+                        <p><a href="/en/contatti.asp" class="info" title="Lighthing Showromm in Florence">Maps & Contacts</a></p>
                         <p class="note"><strong>Cristalensi Snc</strong><br />
                             di Lensi Massimiliano & C.<br />
                             C.F. e Iscr. Reg. Impr. di Florence 05305820481<br />
@@ -89,7 +89,7 @@
                         </p>
                        
                         <h3>Follow us on Facebook</h3>
-                        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Official page of Cristalensi"><img class="fb" src="../images/facebook.png" align="absmiddle" border="0" alt="Follow us on Facebook" /></a>
+                        <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Official page of Cristalensi"><img class="fb" src="/images/facebook.png" align="absmiddle" border="0" alt="Follow us on Facebook" /></a>
                         <p>&nbsp;</p>
                         
                     </div>

@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Corradini Gas</title>
+<link href="stile.css" rel="stylesheet" type="text/css">
+<style type='text/css'>
+  body   {margin-left:15; font-family:Verdana; font-size:12; background:threedface}
+  .colorCells  {cursor:hand}
+</style>
+<script language=JavaScript>
+function colorSelect(color)
+{
+  window.returnValue = color;
+  window.close();
+}
+</script>
+</head>
+<body topmargin='0' leftmargin='0'> 
+<table width='150' align='center' border='0' cellspacing='2' cellpadding='3' class="testo"> 
+  <tr class='colorCells'> 
+    <td bgcolor=yellow onClick="colorSelect('yellow');">&nbsp;</td> 
+    <td bgcolor=black onClick="colorSelect('black');">&nbsp;</td> 
+    <td bgcolor=white onClick="colorSelect('white');">&nbsp;</td> 
+    <td bgcolor=green onClick="colorSelect('green');">&nbsp;</td> 
+    <td bgcolor=maroon onClick="colorSelect('maroon');">&nbsp;</td> 
+    <td bgcolor=olive onClick="colorSelect('olive');">&nbsp;</td> 
+    <td bgcolor=navy onClick="colorSelect('navy');">&nbsp;</td> 
+    <td bgcolor=gray onClick="colorSelect('gray');">&nbsp;</td> 
+  </tr> 
+  <tr class='colorCells'> 
+    <td bgcolor=orange onClick="colorSelect('orange');">&nbsp;</td> 
+    <td bgcolor=lime onClick="colorSelect('lime');">&nbsp;</td> 
+    <td bgcolor=aqua onClick="colorSelect('aqua');">&nbsp;</td> 
+    <td bgcolor=pink onClick="colorSelect('pink');">&nbsp;</td> 
+    <td bgcolor=silver onClick="colorSelect('silver');">&nbsp;</td> 
+    <td bgcolor=red onClick="colorSelect('red');">&nbsp;</td> 
+    <td bgcolor=blue onClick="colorSelect('blue');">&nbsp;</td> 
+    <td bgcolor=teal onClick="colorSelect('teal');">&nbsp;</td> 
+  </tr> 
+</table> 
+</body>
+</html>

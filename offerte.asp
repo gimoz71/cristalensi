@@ -18,14 +18,14 @@
 		<meta name="keywords" content="offerte prodotti illuminazione lampadari in offerta Vendita lampade in offerta">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -50,15 +50,15 @@
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -77,15 +77,15 @@
                             </div>
                             <h1>Prodotti per illuminazione in offerta</h1>
                             <p><em>In questa pagina trovate tutte le offerte di prodotti per illuminazione: sono gli articoli del catalogo con prezzi fantastici. Ogni prodotto ha una propria scheda dettagliata, per accederci &egrave; sufficiente cliccare sul nome o sulla foto dell'articolo.<br />
-					    Invece, per consultare tutto il catalogo potete cliccare qui su <a href="prodotti.asp" title="Catalogo articoli per illuminazione">[Prodotti]</a> (oppure sullla stessa voce del men&ugrave; in alto) ma potete anche scegliere una categoria o un produttore dal men&ugrave; sulla sinistra.</em>
+					    Invece, per consultare tutto il catalogo potete cliccare qui su <a href="/prodotti.asp" title="Catalogo articoli per illuminazione">[Prodotti]</a> (oppure sullla stessa voce del men&ugrave; in alto) ma potete anche scegliere una categoria o un produttore dal men&ugrave; sulla sinistra.</em>
                           </p>
                             <p class="area"> <strong>Ordinamento per prezzo:</strong> 
-                            <a href="offerte.asp?order=3"><img src="images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" title="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" /></a>
-                            <a href="offerte.asp?order=4"><img src="images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" title="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" /></a>
+                            <a href="offerte.asp?order=3"><img src="/images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" title="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" /></a>
+                            <a href="offerte.asp?order=4"><img src="/images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" title="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" /></a>
                             &nbsp;-&nbsp;
                             <strong>Ordinamento per nome:</strong>
-                            <a href="offerte.asp?order=1"><img src="images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  hspace="3" border="0" align="top" alt="ordina i prodotti per titolo dalla A alla Z" title="ordina i prodotti per titolo dalla A alla Z" /></a>&nbsp;
-                            <a href="offerte.asp?order=2"><a href="offerte.asp?order=2"><img src="images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  border="0" align="top" alt="ordina i prodotti per titolo dalla Z alla A" title="ordina i prodotti per titolo dalla Z alla A" /></a></a></p>
+                            <a href="offerte.asp?order=1"><img src="/images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  hspace="3" border="0" align="top" alt="ordina i prodotti per titolo dalla A alla Z" title="ordina i prodotti per titolo dalla A alla Z" /></a>&nbsp;
+                            <a href="offerte.asp?order=2"><a href="offerte.asp?order=2"><img src="/images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  border="0" align="top" alt="ordina i prodotti per titolo dalla Z alla A" title="ordina i prodotti per titolo dalla Z alla A" /></a></a></p>
                          
                           <ul class="prodotti clearfix">
                                 
@@ -102,8 +102,8 @@
 
                                             NomePagina=prod_rs("NomePagina")			
                                             if NomePagina="" then NomePagina="#"
-                                            'if NomePagina<>"#" then NomePagina="public/pagine/"&NomePagina
-                                            if NomePagina<>"#" then NomePagina="scheda_prodotto.asp?pkid="&id
+                                            if NomePagina<>"#" then NomePagina="/public/pagine/"&NomePagina
+                                            'if NomePagina<>"#" then NomePagina="/public/pagine/scheda_prodotto.asp?pkid="&id
 
                                             codicearticolo=prod_rs("codicearticolo")
                                             descrizione_prodotto=prod_rs("descrizione")
@@ -173,7 +173,7 @@
                                     %>
                                     		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>	
                                     <%
                                             end if
                                     else
@@ -181,7 +181,7 @@
                                             titolo_img=""
                                             file_img=""
                                     %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="public/logo_cristalensi_piccolo.jpg" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" alt="immagine del prodotto <%=titolo_prodotto%> non disponibile"></a>
                                     <%	
                                     end if
                                     img_rs.close

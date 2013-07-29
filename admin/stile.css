@@ -1,0 +1,205 @@
+html { height: 100%; }
+body {
+	height: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+}
+.TAB_centrale {
+	text-align: left;
+	vertical-align: top;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	height: 100%;
+}
+.data {
+	background-color: #333333;
+	text-align: left;
+	padding-left: 7px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+.scheda {
+	background-image: url(immagini/hotlinepc-sfondo.jpg);
+	background-repeat: repeat-y;
+}
+.banner {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #000000;
+	border-bottom-color: #000000;
+}
+.menu {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+a.menu {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menu-celle {
+	background-color: #FFCC00;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+	padding-left: 2px;
+	font-weight: bold;
+	height:20px;
+}
+.menu-celle a{
+	background-color: #FFCC00;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+	padding-left: 2px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.intestazione {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color: #CC0000;
+	line-height: 25px;
+	font-weight: bold;
+}
+.contenuti {
+	padding-right: 7px;
+	padding-left: 7px;
+	text-align: left;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCCCCC;
+	background-color: #FFFFFF;
+}
+.intestazione-grigia {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	background-color: #333333;
+	line-height: 25px;
+	font-weight: bold;
+}
+.contenuti-grigio {
+	background-color: #F3F3F3;
+	padding-right: 7px;
+	padding-left: 7px;
+}
+.intestazione-bianca {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	background-color: #FFFFFF;
+	line-height: 25px;
+	font-weight: bold;
+}
+.grigio {
+	background-color: #F3F3F3;
+}
+.news {
+	background-color: #FFFFFF;
+}
+.piede {
+	font-size: 3pt;
+	background-color: #333333;
+	line-height: 7px;
+}
+.sfondo {
+	background-image: url(immagini/sfondo.jpg);
+	background-repeat: repeat-y;
+	background-color: #F3F3F3;
+}
+.admin-intestazione {
+	font-size: 3pt;
+	background-color: #333333;
+	line-height: 18px;
+	color: #ffffff;
+	font-size: 11px;
+}
+.admin-intestazione a{
+	font-size: 11px;
+	background-color: #333333;
+	line-height: 18px;
+	color: #ffffff;
+	font-size: 11px;
+	text-decoration: underline;
+}
+.admin-intestazione a:hover{
+	font-size: 11px;
+	background-color: #333333;
+	line-height: 18px;
+	color: #CC0000;
+	font-size: 11px;
+	text-decoration: underline;
+}
+.admin-menu {
+	background-color: #FFFFFF;
+	padding-left: 7px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #333333;
+}
+.admin-righe{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+	color: #333333;
+	vertical-align: middle;
+}
+.admin-righe a{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	color: #333333;
+	text-decoration: underline;
+	vertical-align: middle;
+}
+.admin-righe a:hover{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	color: #CC0000;
+	text-decoration: underline;
+	vertical-align: middle;
+}
+
+.form {
+	background-color: #FFFFFF;
+	border: 1px solid #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+a:hover {
+	color: #CC0000;
+	text-decoration: none;
+}
+a {
+	color: #333333;
+	text-decoration:none;
+}
+.login {
+	margin-top: 200px;
+}

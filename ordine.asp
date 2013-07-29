@@ -83,17 +83,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con bonifico bancario"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -121,17 +121,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con bonifico bancario"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -140,17 +140,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con bonifico bancario"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if
@@ -188,17 +188,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento in contrassegno"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -226,17 +226,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento in contrassegno"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -246,17 +246,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento in contrassegno"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if
@@ -281,7 +281,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><b>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><u><strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023 6005 5507 0285</strong><br><br>Nella causale indicare: Ordine da sito internet n° "&idordine&"<br><br>Beneficiario: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)<br><br><br>Il nostro staff avrà cura di spedirti la merce appena riceveremo la notifica del pagamento oppure, per velocizzare la spedizione, è possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><strong>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></strong><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><br><strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023 6005 5507 0285</strong><br><br>Nella causale indicare: <strong>Ordine da sito internet n&deg; "&idordine&"</strong><br><br><br>Il nostro staff avr&agrave; cura di spedirti la merce appena ricever&agrave; la notifica del pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Cordiali Saluti, lo staff di Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -294,17 +294,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -332,17 +332,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -351,17 +351,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if
@@ -374,14 +374,14 @@
         <title>Cristalensi - Ordine</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -483,7 +483,7 @@
                                   La merce verr&agrave; spedita al momento che la nostra banca ricever&agrave; il pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento con bonifico (in caso di bonifico fatto con home banking spesso viene fornita dalla banca una ricevuta, oppure &egrave; possibile scannerizzare la ricevuta rilasciata dalla banca).<br>
                                   <br>
                                   Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br><br>
-                                  Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br><a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
+                                  Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br><a href="/condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
                                   <br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi
@@ -502,7 +502,7 @@
                                   La merce verr&agrave; spedita al momento che riceveremo il pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.<br>
                                   <br>
                                   Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br><br>
-                                  Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br><a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
+                                  Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br><a href="/condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
                                   <br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi
@@ -518,7 +518,7 @@
                                     <br>
                                   Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br>
                                   Salva oppure stampa le condizioni di vendita (consultabili nell'apposita pagina del sito internet) da questo file (.pdf):<br>
-                                  <a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
+                                  <a href="/condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>
                                   <br>
                                   <br>
                                   Cordiali saluti, lo staff di Cristalensi
@@ -539,7 +539,7 @@
                                     MasterCard, Visa e Visa Electron, PostePay, Carta Aura e ricariche PayPal.<br><br>
                                     Pagando, e quindi completando l'ordine, si accettano le condizioni di vendita.<br>
                                   Salva oppure stampa le condizioni di vendita (consultabili anche nell'apposita pagina del sito internet) da questo file (.pdf):<br>
-                                  <a href="condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>							    <br>
+                                  <a href="/condizioni_di_vendita.pdf" target="_blank">condizion di vendita</a>							    <br>
                                     <br>
                                     </p>
     <form action="https://www.paypal.com/it/cgi-bin/webscr" method="post">
@@ -661,7 +661,7 @@
                                   &#8364;
                                   </span>
                                   </h4>
-                                    <form method="post" name="modulo" id="modulo" action="stampa_ordine.asp" target="_blank">
+                                    <form method="post" name="modulo" id="modulo" action="/stampa_ordine.asp" target="_blank">
                                     <input type="hidden" name="idordine" id="idordine" value="<%=idordine%>">
                                     <%if FkPagamento=1 or FkPagamento=3 or FkPagamento=4 then%><button type="submit" name="stampa" style="float:right;" class="button_link_red">stampa l'ordine</button><%end if%>
                                     </form>

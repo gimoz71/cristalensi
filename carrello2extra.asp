@@ -121,14 +121,14 @@
         <title>Cristalensi - Carrello</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -154,7 +154,7 @@
 		function Continua()
 		{
 				document.modulocarrello.method = "post";
-				document.modulocarrello.action = "carrello2extra.asp?mode=1";
+				document.modulocarrello.action = "/carrello2extra.asp?mode=1";
 				document.modulocarrello.submit();
 		}
 		</script>
@@ -162,22 +162,22 @@
 		function CalcoloSpedizione()
 		{
 				document.modulocarrello.method = "post";
-				document.modulocarrello.action = "carrello2extra.asp?mode=2";
+				document.modulocarrello.action = "/carrello2extra.asp?mode=2";
 				document.modulocarrello.submit();
 		}
 		</script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -219,7 +219,7 @@
                                         Do while not rs.EOF
                                         %>					
     
-                                        <p class="riga"><a href="scheda_prodotto.asp?id=<%=rs("FkProdotto")%>" class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%></a>
+                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%></span>
                                         <%
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
@@ -234,8 +234,8 @@
                                     	<p class="riga">Il carrello è vuoto</p>
                                     <%end if%>
                                     <p>&nbsp;</p>
-                                    <h4>Colori misure e annotazioni</h4>
-                                    <p>Scrivere in questo spazio il colore e la misura dei prodotti nel caso in cui fossero presenti più varianti degli stessi.<br>Oppure potete usare questo spazio per inserie qualche annotazione o comunicazione.</p>
+                                    <h4>Eventuali annotazioni</h4>
+                                    <p>Potete usare questo spazio per inserie eventuali annotazioni o comunicazioni in relazione ai prodotti acquistati.</p>
                                     <textarea name="NoteCliente" cols="100" rows="2" id="NoteCliente" style="margin-left:20px;"><%=NoteCliente%></textarea> 
                                        
                                 </div>
@@ -278,7 +278,7 @@
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     
-                                    <p><button type="button" name="indietro" onClick="location.href='carrello1.asp'" style="float:left;" class="button_link">&laquo; passo precedente</button>
+                                    <p><button type="button" name="indietro" onClick="location.href='/carrello1.asp'" style="float:left;" class="button_link">&laquo; passo precedente</button>
                                     <button type="button" name="continua" onClick="<%if stato_ordine=22 then%>Continua();<%else%>CalcoloSpedizione();<%end if%>" style="float:right;" class="button_link_red"><%if stato_ordine=22 then%>clicca qui per continuare l'acquisto<%else%>clicca qui per il calcolo del costo di spedizione<%end if%> &raquo;</button></p>
                                     <%end if%>
 								<%end if%>

@@ -74,17 +74,17 @@
 			Oggetto = "Confirmation payment order n "&idordine&" with Paypal to Cristalensi.it"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -112,15 +112,15 @@
 			Oggetto = "Conferma pagamento ordine n "&idordine&" con Paypal a Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
 '
 '			'invio al webmaster
 '			
@@ -131,17 +131,17 @@
 			Oggetto = "Conferma pagamento ordine n "&idordine&" con Paypal a Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if
@@ -186,15 +186,15 @@
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->

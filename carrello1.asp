@@ -165,14 +165,14 @@ Call Visualizzazione("",0,"carrello1.asp")
         <title>Cristalensi - Carrello E-commerce vendita lampadari</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="js/jquery.blueberry.js"></script>
-        <script src="js/jquery.tipTip.js"></script>
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link href="css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -197,15 +197,15 @@ Call Visualizzazione("",0,"carrello1.asp")
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -229,7 +229,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <h3 style="font-size: 14px; display: inline; border: none;">Il tuo carrello:</h3> <p style="display: inline;"><%=num_prodotti_carrello%>&nbsp;<%if num_prodotti_carrello=1 then%>prodotto inserito<%else%>prodotti inseriti<%end if%></p>  <%if idOrdine<>0 then%><a href="carrello1.asp?mode=2" style="float:right; font-size: 12px;">svuota il carrello <span style="display: inline-block; padding: 0 2px; font-weight: bold;border: dotted 1px #c00; font-style: italic; color: #c00;">x</span></a><%end if%>
+                            <h3 style="font-size: 14px; display: inline; border: none;">Il tuo carrello:</h3> <p style="display: inline;"><%=num_prodotti_carrello%>&nbsp;<%if num_prodotti_carrello=1 then%>prodotto inserito<%else%>prodotti inseriti<%end if%></p>  <%if idOrdine<>0 then%><a href="/carrello1.asp?mode=2" style="float:right; font-size: 12px;">svuota il carrello <span style="display: inline-block; padding: 0 2px; font-weight: bold;border: dotted 1px #c00; font-style: italic; color: #c00;">x</span></a><%end if%>
                             <div class="carrello clearfix">
                                 <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantità</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span><span class="colonna elimina">elimina</span></p>
                                 <div class="data">
@@ -240,7 +240,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         Do while not rs.EOF
                                         %>					
     
-                                        <p class="riga"><a href="scheda_prodotto.asp?id=<%=rs("FkProdotto")%>" class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%></a>
+                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%></span>
                                         <%
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
@@ -263,19 +263,19 @@ Call Visualizzazione("",0,"carrello1.asp")
                                   <%else%>
                                   0,00
                                   <%end if%>
-                                  €&nbsp;€
+                                  €
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
-                                    <form method="post" action="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">
-                                    <h4>Colori misure e annotazioni</h4>
-                                    <p>Scrivere in questo spazio il colore e la misura dei prodotti nel caso in cui fossero presenti più varianti degli stessi.<br>Oppure potete usare questo spazio per inserie qualche annotazione o comunicazione.</p>
+                                    <form method="post" action="<%if italia_log="Si" then%>/carrello2.asp<%end if%><%if italia_log="No" then%>/carrello2extra.asp<%end if%>">
+                                    <h4>Eventuali annotazioni</h4>
+                                    <p>Potete usare questo spazio per inserie eventuali annotazioni o comunicazioni in relazione ai prodotti acquistati.</p>
                                     <textarea name="NoteCliente" cols="105" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
                                     <p><button type="button" name="continua" onClick="location.href='prodotti.asp'" style="float: left" class="button_link">&laquo; continua gli acquisti</button>&nbsp;&nbsp;<button type="submit" name="continua" style="float: right" class="button_link_red">clicca qui per completare l'acquisto  &raquo;</button></p>
                                     </form>
                                     <%end if%>
                                     <br>
                                     <h4>INFORMAZIONI IMPORTANTI SULLA DISPONIBILITA' DEI PRODOTTI</h4>
-                                    <p>Come potete aver notato il nostro catalogo è composto da numerosi prodotti e numerose ditte, a tal ragione alcuni prodotti, al momento della richiesta, potrebbero non essere dispobili immediatamente e potrebbero essere in fase di ordinazione. Nel caso in cui ci fosse urgenza del prodotto desiderato, informarsi direttamente dal nostro staff per l'effettiva disponibilità o tempo di consegna nel caso in cui non fosse disponibile (minimo 2 giorni, massimo 30 giorni). <a href="#">Recapiti per informarsi sulla disponibilità dei prodotti.</a></p>
+                                    <p>Come potete aver notato il nostro catalogo è composto da numerosi prodotti e numerose ditte, a tal ragione alcuni prodotti, al momento della richiesta, potrebbero non essere dispobili immediatamente e potrebbero essere in fase di ordinazione. Nel caso in cui ci fosse urgenza del prodotto desiderato, informarsi direttamente dal nostro staff per l'effettiva disponibilità o tempo di consegna nel caso in cui non fosse disponibile (minimo 2 giorni, massimo 30 giorni). <a href="/contatti.asp">Recapiti per informarsi sulla disponibilità dei prodotti.</a></p>
 								<%end if%>
 								<%
                                 ss.close

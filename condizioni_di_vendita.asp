@@ -41,15 +41,15 @@
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -129,7 +129,7 @@
                             Per il pagamento online ci affidiamo al <span class="sfondo-giallo"><em><strong>sistema sicuro di Paypal</strong></em></span> che permette di pagare con un'ampia scelta di sistemi: dalle carte di credito pi&ugrave; diffuse, alle carte prepagate e ricaricabili.<br />
                             Ecco l'ampia scelta: <p>
                             <p>
-                            <a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="images/logo_paypal_carte.jpg" style="width: 319px; float: none" border="0" alt="Che cos'&egrave; PayPal"></a>
+                            <a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="/images/logo_paypal_carte.jpg" style="width: 319px; float: none" border="0" alt="Che cos'&egrave; PayPal"></a>
                             </p>
                             <p>
                             Ricordiamo che per il <span class="sfondo-giallo"><strong><em>pagamento in contrassegno</em></strong></span> il corriere consegner&agrave; la merce se il pagamento avverr&agrave;<strong> in contanti</strong>, non verranno accettati assegni o altre formule di pagamento.<br />
@@ -206,7 +206,7 @@
                             <br />
                             <br />
                             <br />
-                            <a href="condizioni_di_vendita.pdf" target="_blank" title="Condizioni generali di vendita su file stampabile">Condizioni generali di vendita su file stampabile (pdf)</a>
+                            <a href="/condizioni_di_vendita.pdf" target="_blank" title="Condizioni generali di vendita su file stampabile">Condizioni generali di vendita su file stampabile (pdf)</a>
                             </p>
                             </div>
                         </div>

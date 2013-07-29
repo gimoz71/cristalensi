@@ -64,15 +64,15 @@ if prezzo_a="" then prezzo_a=0
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
         
-          //var _gaq = _gaq || [];
-//          _gaq.push(['_setAccount', 'UA-320952-2']);
-//          _gaq.push(['_trackPageview']);
-//        
-//          (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//          })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-320952-2']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
@@ -148,8 +148,8 @@ if prezzo_a="" then prezzo_a=0
 									titolo_prodotto=prod_rs("titolo_en")
 									NomePagina=prod_rs("NomePagina_en")
 									if Len(NomePagina)>0 then
-										'NomePagina="../public/pagine/"&NomePagina
-										NomePagina="scheda_prodotto.asp?id="&id
+										NomePagina="/public/pagine/"&NomePagina
+										'NomePagina="/public/pagine/scheda_prodotto.asp?id="&id
 									else
 										NomePagina="#"
 									end if
@@ -204,7 +204,7 @@ if prezzo_a="" then prezzo_a=0
 											'calcolo misure immagini
 											Set objImageSize = New ImageSize
 											With objImageSize
-											  .ImageFile = server.mappath("../public/"&file_img&"")
+											  .ImageFile = server.mappath("/public/"&file_img&"")
 											  '.ImageFile = path_img&file_img
 											  
 											  If .IsImage Then
@@ -220,9 +220,9 @@ if prezzo_a="" then prezzo_a=0
 											Set objImageSize = Nothing
 										%>
                                         
-                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
+                                        	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>	
 										<%
                                             end if
                                         else
@@ -230,7 +230,7 @@ if prezzo_a="" then prezzo_a=0
                                             titolo_img=""
                                             file_img=""
                                         %>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="../public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
 										<%	
                                         end if
                                         img_rs.close

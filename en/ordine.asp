@@ -83,17 +83,17 @@
 			Oggetto = "Confirmation dispatch order n "&idordine&" to Cristalensi.it with payment by bank transfer"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -121,17 +121,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it (sito inglese) con pagamento con bonifico bancario"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -140,17 +140,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it (sito inglese) con pagamento con bonifico bancario"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if
@@ -188,17 +188,17 @@
 			Oggetto = "Confirmation dispatch order n "&idordine&" a Cristalensi.it with payment on receipt of goods"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -226,17 +226,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it (sito inglese) con pagamento in contrassegno"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
@@ -246,17 +246,17 @@
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it (sito inglese) con pagamento in contrassegno"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 	end if
