@@ -7,14 +7,14 @@
         <title>CRISTALENSI Advanced search for Lamps Lights</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="../js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="../js/jquery.blueberry.js"></script>
-        <script src="../js/jquery.tipTip.js"></script>
-        <link href="../css/css.css" rel="stylesheet" type="text/css">
-        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -25,7 +25,7 @@
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -89,11 +89,11 @@
                             <div class="iscrizione clearfix">                                
                                 <div class="table">
                                     <form method="post" action="ricerca_avanzata_elenco.asp" name="newsform" onSubmit="return verifica();">
-                                    <div class="tr">
+                                    <div class="tr text-center">
 	                                        Name or Code of product<br />
                                             <input name="titolo" type="text" id="titolo" style="width:300px;" />
                                     </div>
-                                    <div class="tr">
+                                    <div class="tr text-center">
                                         <div class="td">
 
                                         Category<br />
@@ -121,7 +121,7 @@
                                              <%cs.close%>
                                     </div>
                                     </div>
-                                    <div class="tr">
+                                    <div class="tr text-center">
                                         <div class="td">
                                             Producers<br />
                                             <%
@@ -145,7 +145,7 @@
                                             <%cs.close%>
                                         </div>
                                     </div>
-                                    <div class="tr">
+                                    <div class="tr text-center">
                                         <div class="td">
 
 	                                        Price range<br />
@@ -153,7 +153,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="tr">
+                                    <div class="tr text-center">
                                         <div class="td">
 
                                             <button name="Submit" type="submit" class="button_link" value="Start the search" align="absmiddle">Start the search</button>

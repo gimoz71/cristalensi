@@ -301,7 +301,7 @@ table {
 }
 
 /* line 10, ../sass/_base.scss */
-p, label, #menu ul li.green a, #menu ul li.darkorange a, #menu ul li.skyblue a, #menu ul li.red a, #menu ul li.brown a, #menu ul li.blue a, #menu ul li.yellowgreen a, #menu ul li.magenta a, .product-menu, #responsive-menu ul li.green a, #responsive-menu ul li.darkorange a, #responsive-menu ul li.skyblue a, #responsive-menu ul li.red a, #responsive-menu ul li.brown a, #responsive-menu ul li.blue a, #responsive-menu ul li.yellowgreen a, #responsive-menu ul li.magenta a, .listino li a, .catalogo li a, .galleria li a, .produttori li a, .prodotti li a, .carrello table, .iscrizione table, .carrello .table, .iscrizione .table {
+p, label, #menu ul li.green a, #menu ul li.darkorange a, #menu ul li.skyblue a, #menu ul li.red a, #menu ul li.brown a, #menu ul li.blue a, #menu ul li.yellowgreen a, #menu ul li.magenta a, .product-menu, #responsive-menu ul li.green a, #responsive-menu ul li.darkorange a, #responsive-menu ul li.skyblue a, #responsive-menu ul li.red a, #responsive-menu ul li.brown a, #responsive-menu ul li.blue a, #responsive-menu ul li.yellowgreen a, #responsive-menu ul li.magenta a, .listino li a, .catalogo li a, .galleria li a, .produttori li a, .prodotti li a, .carrello table, .iscrizione table, .ricerca table, .carrello .table, .iscrizione .table, .ricerca .table {
   font-size: 0.75em;
 }
 
@@ -381,11 +381,11 @@ a:hover, a:active {
   -ms-border-radius: 0.3em;
   -o-border-radius: 0.3em;
   border-radius: 0.3em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
-  background: -webkit-linear-gradient(#cccccc, #808080);
-  background: -moz-linear-gradient(#cccccc, #808080);
-  background: -o-linear-gradient(#cccccc, #808080);
-  background: linear-gradient(#cccccc, #808080);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6a6a6), color-stop(100%, #4d4d4d));
+  background: -webkit-linear-gradient(#a6a6a6, #4d4d4d);
+  background: -moz-linear-gradient(#a6a6a6, #4d4d4d);
+  background: -o-linear-gradient(#a6a6a6, #4d4d4d);
+  background: linear-gradient(#a6a6a6, #4d4d4d);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
@@ -908,13 +908,19 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 /* line 276, ../sass/css.scss */
 .product-menu li a {
-  display: inline-block;
-  padding: 0.75em 0;
+  display: block;
+  padding: 0.75em 0 0.75em;
   width: 100%;
   text-decoration: none;
   font-weight: bold;
+  background: url("../images/arrowslist.png") no-repeat left center;
 }
-/* line 282, ../sass/css.scss */
+/* line 283, ../sass/css.scss */
+.product-menu li a span {
+  display: inline-block;
+  padding-left: 13px;
+}
+/* line 287, ../sass/css.scss */
 .product-menu li a:hover {
   background: #fff;
 }
@@ -923,14 +929,14 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   .product-menu {
     display: none;
   }
-  /* line 290, ../sass/css.scss */
+  /* line 295, ../sass/css.scss */
   .product-menu ul li {
     float: none;
   }
 }
 
 /* Button Responsive Menu*/
-/* line 296, ../sass/css.scss */
+/* line 301, ../sass/css.scss */
 #btn-responsive-menu {
   display: none;
   position: absolute;
@@ -952,7 +958,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 0 5px;
 }
 
-/* line 310, ../sass/css.scss */
+/* line 315, ../sass/css.scss */
 .icon-bar {
   display: block;
   width: 18px;
@@ -969,37 +975,37 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 1px 0;
 }
 
-/* line 319, ../sass/css.scss */
+/* line 324, ../sass/css.scss */
 .show {
   display: block;
 }
 
-/* line 323, ../sass/css.scss */
+/* line 328, ../sass/css.scss */
 #btn-responsive-menu, #logo-handheld {
   display: none;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 323, ../sass/css.scss */
+  /* line 328, ../sass/css.scss */
   #btn-responsive-menu, #logo-handheld {
     display: block;
   }
 }
 
-/* line 331, ../sass/css.scss */
+/* line 336, ../sass/css.scss */
 #responsive-menu {
   display: none;
   /*@include respond-to('medium-screens'){
       display: none;
   }*/
 }
-/* line 333, ../sass/css.scss */
+/* line 338, ../sass/css.scss */
 #responsive-menu ul {
   margin: 0;
   float: left;
   width: 100%;
   list-style: none;
 }
-/* line 339, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #responsive-menu ul li.green {
   margin: 3px 2.46914%;
   position: relative;
@@ -1010,7 +1016,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 345, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #responsive-menu ul li.green a {
   display: block;
   text-align: center;
@@ -1019,12 +1025,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   text-decoration: none;
 }
-/* line 354, ../sass/css.scss */
+/* line 359, ../sass/css.scss */
 #responsive-menu ul li.green a:hover {
   background: #ffd31c !important;
   color: #000 !important;
 }
-/* line 339, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #responsive-menu ul li.darkorange {
   margin: 3px 2.46914%;
   position: relative;
@@ -1035,7 +1041,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 345, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #responsive-menu ul li.darkorange a {
   display: block;
   text-align: center;
@@ -1044,12 +1050,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   text-decoration: none;
 }
-/* line 354, ../sass/css.scss */
+/* line 359, ../sass/css.scss */
 #responsive-menu ul li.darkorange a:hover {
   background: #ffd31c !important;
   color: #000 !important;
 }
-/* line 339, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #responsive-menu ul li.skyblue {
   margin: 3px 2.46914%;
   position: relative;
@@ -1060,7 +1066,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 345, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #responsive-menu ul li.skyblue a {
   display: block;
   text-align: center;
@@ -1069,12 +1075,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   text-decoration: none;
 }
-/* line 354, ../sass/css.scss */
+/* line 359, ../sass/css.scss */
 #responsive-menu ul li.skyblue a:hover {
   background: #ffd31c !important;
   color: #000 !important;
 }
-/* line 339, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #responsive-menu ul li.red {
   margin: 3px 2.46914%;
   position: relative;
@@ -1085,7 +1091,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 345, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #responsive-menu ul li.red a {
   display: block;
   text-align: center;
@@ -1094,12 +1100,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   text-decoration: none;
 }
-/* line 354, ../sass/css.scss */
+/* line 359, ../sass/css.scss */
 #responsive-menu ul li.red a:hover {
   background: #ffd31c !important;
   color: #000 !important;
 }
-/* line 339, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #responsive-menu ul li.brown {
   margin: 3px 2.46914%;
   position: relative;
@@ -1110,7 +1116,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 345, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #responsive-menu ul li.brown a {
   display: block;
   text-align: center;
@@ -1119,12 +1125,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   text-decoration: none;
 }
-/* line 354, ../sass/css.scss */
+/* line 359, ../sass/css.scss */
 #responsive-menu ul li.brown a:hover {
   background: #ffd31c !important;
   color: #000 !important;
 }
-/* line 339, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #responsive-menu ul li.blue {
   margin: 3px 2.46914%;
   position: relative;
@@ -1135,7 +1141,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 345, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #responsive-menu ul li.blue a {
   display: block;
   text-align: center;
@@ -1144,12 +1150,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   text-decoration: none;
 }
-/* line 354, ../sass/css.scss */
+/* line 359, ../sass/css.scss */
 #responsive-menu ul li.blue a:hover {
   background: #ffd31c !important;
   color: #000 !important;
 }
-/* line 339, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #responsive-menu ul li.yellowgreen {
   margin: 3px 2.46914%;
   position: relative;
@@ -1160,7 +1166,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 345, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #responsive-menu ul li.yellowgreen a {
   display: block;
   text-align: center;
@@ -1169,12 +1175,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   text-decoration: none;
 }
-/* line 354, ../sass/css.scss */
+/* line 359, ../sass/css.scss */
 #responsive-menu ul li.yellowgreen a:hover {
   background: #ffd31c !important;
   color: #000 !important;
 }
-/* line 339, ../sass/css.scss */
+/* line 344, ../sass/css.scss */
 #responsive-menu ul li.magenta {
   margin: 3px 2.46914%;
   position: relative;
@@ -1185,7 +1191,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 345, ../sass/css.scss */
+/* line 350, ../sass/css.scss */
 #responsive-menu ul li.magenta a {
   display: block;
   text-align: center;
@@ -1194,80 +1200,80 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-weight: bold;
   text-decoration: none;
 }
-/* line 354, ../sass/css.scss */
+/* line 359, ../sass/css.scss */
 #responsive-menu ul li.magenta a:hover {
   background: #ffd31c !important;
   color: #000 !important;
 }
 
-/* line 370, ../sass/css.scss */
+/* line 375, ../sass/css.scss */
 #content-sidebar-wrap {
   width: 82.65306%;
   float: right;
 }
 
-/* line 376, ../sass/css.scss */
+/* line 381, ../sass/css.scss */
 #content {
   width: 100%;
   background: #fff;
   float: left;
 }
-/* line 380, ../sass/css.scss */
+/* line 385, ../sass/css.scss */
 #content .incipit {
   font-size: 1em;
   margin-top: 20px;
 }
-/* line 384, ../sass/css.scss */
+/* line 389, ../sass/css.scss */
 #content .social {
   display: none;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 384, ../sass/css.scss */
+  /* line 389, ../sass/css.scss */
   #content .social {
     display: block;
   }
 }
-/* line 390, ../sass/css.scss */
+/* line 395, ../sass/css.scss */
 #content .half_panel {
   display: block;
   width: 50%;
   width: 49.38272%;
   margin: 10px 0;
 }
-/* line 392, ../sass/css.scss */
+/* line 397, ../sass/css.scss */
 #content .half_panel.social_box {
   min-height: 230px;
   border: dashed 1px #ccc;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 392, ../sass/css.scss */
+  /* line 397, ../sass/css.scss */
   #content .half_panel.social_box {
     display: none;
   }
 }
-/* line 402, ../sass/css.scss */
+/* line 407, ../sass/css.scss */
 #content .half_panel.left_p {
   float: left;
 }
-/* line 405, ../sass/css.scss */
+/* line 410, ../sass/css.scss */
 #content .half_panel.left_p_fb {
   float: left;
 }
-/* line 407, ../sass/css.scss */
+/* line 412, ../sass/css.scss */
 #content .half_panel.left_p_fb * {
   width: 100% !important;
 }
-/* line 411, ../sass/css.scss */
+/* line 416, ../sass/css.scss */
 #content .half_panel.right_p {
   float: right;
 }
-/* line 414, ../sass/css.scss */
+/* line 419, ../sass/css.scss */
 #content .half_panel p {
   border-top: dashed 1px #F90;
   padding: 1.85185% 0;
   margin: 0 1.23457%;
 }
-/* line 421, ../sass/css.scss */
+/* line 426, ../sass/css.scss */
 #content .slogan {
   position: relative;
   -webkit-border-radius: 0.3em;
@@ -1315,34 +1321,38 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 430, ../sass/css.scss */
+/* line 435, ../sass/css.scss */
 #content .slogan * {
   color: #fff;
   border: none;
 }
-/* line 436, ../sass/css.scss */
+/* line 442, ../sass/css.scss */
 #content .area {
   border: none;
   background-color: #ffd31c;
   padding: 0.61728%;
   margin: 2.46914% 0;
 }
-/* line 441, ../sass/css.scss */
+/* line 447, ../sass/css.scss */
 #content .area span {
   display: inline-block;
   margin-top: 10px;
 }
+/* line 450, ../sass/css.scss */
+#content .area span.title {
+  font-size: 14px;
+}
 @media only screen and (max-width: 30em) {
-  /* line 436, ../sass/css.scss */
+  /* line 442, ../sass/css.scss */
   #content .area {
     text-align: center;
   }
-  /* line 447, ../sass/css.scss */
+  /* line 456, ../sass/css.scss */
   #content .area * {
     float: none;
   }
 }
-/* line 452, ../sass/css.scss */
+/* line 461, ../sass/css.scss */
 #content .area-commenti {
   border-bottom: none;
   background-color: #ffd31c;
@@ -1350,30 +1360,30 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   margin: 0% 0;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 452, ../sass/css.scss */
+  /* line 461, ../sass/css.scss */
   #content .area-commenti {
     text-align: center;
   }
 }
-/* line 461, ../sass/css.scss */
+/* line 470, ../sass/css.scss */
 #content .img-border, #content .negozio, #content .immagini, #content .immagini-2, #content .immagini-scheda {
   border: solid 6px #ccc;
 }
-/* line 464, ../sass/css.scss */
+/* line 473, ../sass/css.scss */
 #content .negozio, #content .immagini, #content .immagini-2 {
   width: 26.17284%;
   border: solid 6px #ccc;
   margin-right: 1.23457%;
   float: left;
 }
-/* line 471, ../sass/css.scss */
+/* line 480, ../sass/css.scss */
 #content .immagini {
   width: 29.01235%;
   margin-bottom: 1.23457%;
   margin-top: 1.23457%;
   margin-left: 0.61728%;
 }
-/* line 478, ../sass/css.scss */
+/* line 487, ../sass/css.scss */
 #content .immagini-2 {
   width: 14.81481%;
   margin-bottom: 1.23457%;
@@ -1381,56 +1391,56 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   margin-left: 2.46914%;
   float: none;
 }
-/* line 486, ../sass/css.scss */
+/* line 495, ../sass/css.scss */
 #content .immagini-scheda {
   margin-left: 2.46914%;
   margin-right: 1.23457%;
   float: none;
 }
-/* line 492, ../sass/css.scss */
+/* line 501, ../sass/css.scss */
 #content .anni {
   float: right;
   width: 12.34568%;
 }
-/* line 496, ../sass/css.scss */
+/* line 505, ../sass/css.scss */
 #content .facebook {
   float: right;
   margin-left: 1.23457%;
   width: 18.51852%;
 }
-/* line 506, ../sass/css.scss */
+/* line 515, ../sass/css.scss */
 #content > div {
   padding: 2.46914%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 376, ../sass/css.scss */
+  /* line 381, ../sass/css.scss */
   #content {
     width: 100%;
     float: none;
   }
-  /* line 512, ../sass/css.scss */
+  /* line 521, ../sass/css.scss */
   #content .negozio, #content .immagini, #content .immagini-2 {
     display: none;
   }
 }
-/* line 516, ../sass/css.scss */
+/* line 525, ../sass/css.scss */
 #content h3.corporate {
   clear: both;
   border: none;
   font-weight: normal;
   font-size: 90%;
 }
-/* line 521, ../sass/css.scss */
+/* line 530, ../sass/css.scss */
 #content h3.corporate:first-child {
   margin-top: 20px;
 }
 
-/* line 526, ../sass/css.scss */
+/* line 535, ../sass/css.scss */
 .listino, .catalogo {
   width: 100%;
   font-size: 90%;
 }
-/* line 529, ../sass/css.scss */
+/* line 538, ../sass/css.scss */
 .listino li, .catalogo li {
   width: 23.7037%;
   padding: 0.61728%;
@@ -1438,12 +1448,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-align: center;
   position: relative;
 }
-/* line 535, ../sass/css.scss */
+/* line 544, ../sass/css.scss */
 .listino li a, .catalogo li a {
   margin-top: 5px;
   font-weight: bold;
 }
-/* line 539, ../sass/css.scss */
+/* line 548, ../sass/css.scss */
 .listino li a img, .catalogo li a img {
   display: block;
   margin: 0 auto;
@@ -1451,7 +1461,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   margin-bottom: 5px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 535, ../sass/css.scss */
+  /* line 544, ../sass/css.scss */
   .listino li a, .catalogo li a {
     border: none;
     position: relative;
@@ -1460,11 +1470,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     -ms-border-radius: 0.3em;
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
-    background: -webkit-linear-gradient(#cccccc, #808080);
-    background: -moz-linear-gradient(#cccccc, #808080);
-    background: -o-linear-gradient(#cccccc, #808080);
-    background: linear-gradient(#cccccc, #808080);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6a6a6), color-stop(100%, #4d4d4d));
+    background: -webkit-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -moz-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -o-linear-gradient(#a6a6a6, #4d4d4d);
+    background: linear-gradient(#a6a6a6, #4d4d4d);
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
@@ -1506,42 +1516,42 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 547, ../sass/css.scss */
+  /* line 556, ../sass/css.scss */
   .listino li a img, .catalogo li a img {
     height: auto;
   }
 }
-/* line 551, ../sass/css.scss */
+/* line 560, ../sass/css.scss */
 .listino li a .nome-articolo, .catalogo li a .nome-articolo {
   display: block;
-  height: 2em;
+  height: 3.5em;
 }
-/* line 557, ../sass/css.scss */
+/* line 566, ../sass/css.scss */
 .listino li .price, .catalogo li .price {
   margin-top: .4em;
 }
-/* line 559, ../sass/css.scss */
+/* line 568, ../sass/css.scss */
 .listino li .price span, .catalogo li .price span {
   /*text-decoration: line-through;*/
 }
-/* line 563, ../sass/css.scss */
+/* line 572, ../sass/css.scss */
 .listino li .cristalprice, .catalogo li .cristalprice {
   color: #C00;
   font-weight: bold;
 }
-/* line 568, ../sass/css.scss */
+/* line 577, ../sass/css.scss */
 .listino li .scheda-link span, .catalogo li .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 567, ../sass/css.scss */
+  /* line 576, ../sass/css.scss */
   .listino li .scheda-link, .catalogo li .scheda-link {
     width: 50%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 529, ../sass/css.scss */
+  /* line 538, ../sass/css.scss */
   .listino li, .catalogo li {
     width: 100%;
     float: none;
@@ -1550,12 +1560,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 
-/* line 585, ../sass/css.scss */
+/* line 594, ../sass/css.scss */
 .galleria, .produttori {
   width: 100%;
   font-size: 90%;
 }
-/* line 588, ../sass/css.scss */
+/* line 597, ../sass/css.scss */
 .galleria li, .produttori li {
   border: dashed 1px #fcc;
   width: 23.7037%;
@@ -1566,17 +1576,17 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   position: relative;
   text-align: center;
 }
-/* line 597, ../sass/css.scss */
+/* line 606, ../sass/css.scss */
 .galleria li a, .produttori li a {
   margin-top: 5px;
   font-weight: bold;
 }
-/* line 601, ../sass/css.scss */
+/* line 610, ../sass/css.scss */
 .galleria li a img, .produttori li a img {
   float: none;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 597, ../sass/css.scss */
+  /* line 606, ../sass/css.scss */
   .galleria li a, .produttori li a {
     border: none;
     position: relative;
@@ -1585,11 +1595,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     -ms-border-radius: 0.3em;
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
-    background: -webkit-linear-gradient(#cccccc, #808080);
-    background: -moz-linear-gradient(#cccccc, #808080);
-    background: -o-linear-gradient(#cccccc, #808080);
-    background: linear-gradient(#cccccc, #808080);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6a6a6), color-stop(100%, #4d4d4d));
+    background: -webkit-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -moz-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -o-linear-gradient(#a6a6a6, #4d4d4d);
+    background: linear-gradient(#a6a6a6, #4d4d4d);
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
@@ -1631,13 +1641,13 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 606, ../sass/css.scss */
+  /* line 615, ../sass/css.scss */
   .galleria li a img, .produttori li a img {
     margin-bottom: 1.23457%;
     height: auto;
   }
 }
-/* line 611, ../sass/css.scss */
+/* line 620, ../sass/css.scss */
 .galleria li a.button_link, .produttori li a.button_link {
   clear: both;
   border: none;
@@ -1647,11 +1657,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   -ms-border-radius: 0.3em;
   -o-border-radius: 0.3em;
   border-radius: 0.3em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
-  background: -webkit-linear-gradient(#cccccc, #808080);
-  background: -moz-linear-gradient(#cccccc, #808080);
-  background: -o-linear-gradient(#cccccc, #808080);
-  background: linear-gradient(#cccccc, #808080);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6a6a6), color-stop(100%, #4d4d4d));
+  background: -webkit-linear-gradient(#a6a6a6, #4d4d4d);
+  background: -moz-linear-gradient(#a6a6a6, #4d4d4d);
+  background: -o-linear-gradient(#a6a6a6, #4d4d4d);
+  background: linear-gradient(#a6a6a6, #4d4d4d);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
@@ -1693,11 +1703,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 614, ../sass/css.scss */
+/* line 623, ../sass/css.scss */
 .galleria li a.button_link img, .produttori li a.button_link img {
   margin-bottom: 1.23457%;
 }
-/* line 618, ../sass/css.scss */
+/* line 627, ../sass/css.scss */
 .galleria li a.button_link_red, .produttori li a.button_link_red {
   border: none;
   position: relative;
@@ -1753,32 +1763,32 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
-/* line 623, ../sass/css.scss */
+/* line 632, ../sass/css.scss */
 .galleria li .price, .produttori li .price {
   margin-top: .4em;
 }
-/* line 625, ../sass/css.scss */
+/* line 634, ../sass/css.scss */
 .galleria li .price span, .produttori li .price span {
   /*text-decoration: line-through;*/
 }
-/* line 629, ../sass/css.scss */
+/* line 638, ../sass/css.scss */
 .galleria li .cristalprice, .produttori li .cristalprice {
   color: #C00;
   font-weight: bold;
 }
-/* line 634, ../sass/css.scss */
+/* line 643, ../sass/css.scss */
 .galleria li .scheda-link span, .produttori li .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 633, ../sass/css.scss */
+  /* line 642, ../sass/css.scss */
   .galleria li .scheda-link, .produttori li .scheda-link {
     width: 50%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 588, ../sass/css.scss */
+  /* line 597, ../sass/css.scss */
   .galleria li, .produttori li {
     width: 100%;
     height: auto;
@@ -1791,24 +1801,24 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   }
 }
 
-/* line 654, ../sass/css.scss */
+/* line 663, ../sass/css.scss */
 .prodotti {
   width: 100%;
   font-size: 90%;
 }
-/* line 657, ../sass/css.scss */
+/* line 666, ../sass/css.scss */
 .prodotti li {
   width: 100%;
   padding: 10px 0.63291%;
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 662, ../sass/css.scss */
+/* line 671, ../sass/css.scss */
 .prodotti li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 662, ../sass/css.scss */
+  /* line 671, ../sass/css.scss */
   .prodotti li a {
     border: none;
     position: relative;
@@ -1817,11 +1827,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     -ms-border-radius: 0.3em;
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
-    background: -webkit-linear-gradient(#cccccc, #808080);
-    background: -moz-linear-gradient(#cccccc, #808080);
-    background: -o-linear-gradient(#cccccc, #808080);
-    background: linear-gradient(#cccccc, #808080);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6a6a6), color-stop(100%, #4d4d4d));
+    background: -webkit-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -moz-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -o-linear-gradient(#a6a6a6, #4d4d4d);
+    background: linear-gradient(#a6a6a6, #4d4d4d);
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
@@ -1864,12 +1874,12 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 668, ../sass/css.scss */
+  /* line 677, ../sass/css.scss */
   .prodotti li a img {
     margin-bottom: 5px;
     float: none;
   }
-  /* line 672, ../sass/css.scss */
+  /* line 681, ../sass/css.scss */
   .prodotti li a.button_link_red {
     border: none;
     position: relative;
@@ -1926,53 +1936,53 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 678, ../sass/css.scss */
+/* line 687, ../sass/css.scss */
 .prodotti li .thumb {
   text-align: center;
   float: left;
   margin-right: 1.2987%;
   width: 25.97403%;
 }
-/* line 684, ../sass/css.scss */
+/* line 693, ../sass/css.scss */
 .prodotti li .thumb img {
   float: none;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 678, ../sass/css.scss */
+  /* line 687, ../sass/css.scss */
   .prodotti li .thumb {
     float: none;
     width: 100%;
   }
 }
-/* line 692, ../sass/css.scss */
+/* line 701, ../sass/css.scss */
 .prodotti li .data {
   float: right;
   width: 72.72727%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 692, ../sass/css.scss */
+  /* line 701, ../sass/css.scss */
   .prodotti li .data {
     float: none;
     width: 100%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 692, ../sass/css.scss */
+  /* line 701, ../sass/css.scss */
   .prodotti li .data {
     margin-top: 10px;
   }
 }
-/* line 704, ../sass/css.scss */
+/* line 713, ../sass/css.scss */
 .prodotti li .price {
   margin-top: .4em;
   padding-top: 5px;
   display: inline-block;
 }
-/* line 706, ../sass/css.scss */
+/* line 715, ../sass/css.scss */
 .prodotti li .price span {
   /*text-decoration: line-through;*/
 }
-/* line 713, ../sass/css.scss */
+/* line 722, ../sass/css.scss */
 .prodotti li .cristalprice {
   color: #C00;
   font-weight: bold;
@@ -1980,29 +1990,33 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   display: inline-block;
   font-size: 110%;
 }
-/* line 720, ../sass/css.scss */
+/* line 729, ../sass/css.scss */
 .prodotti li .produttore, .prodotti li .cart-link {
   float: right;
-  font-size: 10px;
+  font-size: 12px;
 }
-/* line 724, ../sass/css.scss */
+/* line 732, ../sass/css.scss */
+.prodotti li .produttore a, .prodotti li .cart-link a {
+  font-size: 12px;
+}
+/* line 736, ../sass/css.scss */
 .prodotti li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 727, ../sass/css.scss */
+/* line 739, ../sass/css.scss */
 .prodotti li .cart-link span {
   padding-right: 25px;
   background: url("../images/carrello-bianco.png") no-repeat right center;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 724, ../sass/css.scss */
+  /* line 736, ../sass/css.scss */
   .prodotti li .cart-link {
     margin-top: 10px;
     float: none;
   }
 }
-/* line 736, ../sass/css.scss */
+/* line 748, ../sass/css.scss */
 .prodotti li .cart, .prodotti .scheda-prodotto li .cart-panel, .scheda-prodotto .prodotti li .cart-panel {
   border: none;
   background-color: #ffd31c;
@@ -2010,53 +2024,53 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   margin: 2.46914% 0;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 736, ../sass/css.scss */
+  /* line 748, ../sass/css.scss */
   .prodotti li .cart, .prodotti .scheda-prodotto li .cart-panel, .scheda-prodotto .prodotti li .cart-panel {
     text-align: center;
   }
 }
-/* line 746, ../sass/css.scss */
+/* line 758, ../sass/css.scss */
 .prodotti li .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 745, ../sass/css.scss */
+  /* line 757, ../sass/css.scss */
   .prodotti li .scheda-link {
     width: 135px;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 657, ../sass/css.scss */
+  /* line 666, ../sass/css.scss */
   .prodotti li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 759, ../sass/css.scss */
+/* line 771, ../sass/css.scss */
 .prodotti li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 765, ../sass/css.scss */
+/* line 777, ../sass/css.scss */
 .scheda-prodotto {
   width: 100%;
   font-size: 90%;
 }
-/* line 768, ../sass/css.scss */
+/* line 780, ../sass/css.scss */
 .scheda-prodotto li {
   width: 100%;
   padding: 10px 0.61728%;
   position: relative;
   /*border-top: dotted 1px #999;*/
 }
-/* line 773, ../sass/css.scss */
+/* line 785, ../sass/css.scss */
 .scheda-prodotto li a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 773, ../sass/css.scss */
+  /* line 785, ../sass/css.scss */
   .scheda-prodotto li a {
     border: none;
     position: relative;
@@ -2065,11 +2079,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     -ms-border-radius: 0.3em;
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
-    background: -webkit-linear-gradient(#cccccc, #808080);
-    background: -moz-linear-gradient(#cccccc, #808080);
-    background: -o-linear-gradient(#cccccc, #808080);
-    background: linear-gradient(#cccccc, #808080);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6a6a6), color-stop(100%, #4d4d4d));
+    background: -webkit-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -moz-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -o-linear-gradient(#a6a6a6, #4d4d4d);
+    background: linear-gradient(#a6a6a6, #4d4d4d);
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
@@ -2112,11 +2126,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 778, ../sass/css.scss */
+  /* line 790, ../sass/css.scss */
   .scheda-prodotto li a img {
     margin-bottom: 5px;
   }
-  /* line 781, ../sass/css.scss */
+  /* line 793, ../sass/css.scss */
   .scheda-prodotto li a.button_link_red {
     border: none;
     position: relative;
@@ -2173,42 +2187,42 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 787, ../sass/css.scss */
+/* line 799, ../sass/css.scss */
 .scheda-prodotto li .thumb {
   float: left;
   margin-right: 3.7037%;
   margin-bottom: 25px;
 }
-/* line 792, ../sass/css.scss */
+/* line 804, ../sass/css.scss */
 .scheda-prodotto li .thumb img {
   float: none;
   height: 100%;
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 792, ../sass/css.scss */
+  /* line 804, ../sass/css.scss */
   .scheda-prodotto li .thumb img {
     float: left;
     border: none !important;
   }
 }
-/* line 802, ../sass/css.scss */
+/* line 814, ../sass/css.scss */
 .scheda-prodotto li .data {
   float: left;
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 802, ../sass/css.scss */
+  /* line 814, ../sass/css.scss */
   .scheda-prodotto li .data {
     margin-top: 10px;
   }
 }
-/* line 811, ../sass/css.scss */
+/* line 823, ../sass/css.scss */
 .scheda-prodotto li .price span {
   /*text-decoration: line-through;*/
   font-size: 120%;
 }
-/* line 816, ../sass/css.scss */
+/* line 828, ../sass/css.scss */
 .scheda-prodotto li .cristalprice {
   /*color: #c00;*/
   color: #C00;
@@ -2217,40 +2231,40 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   font-size: 150%;
   display: inline-block;
 }
-/* line 824, ../sass/css.scss */
+/* line 836, ../sass/css.scss */
 .scheda-prodotto li span.produttore {
   margin: 0 !important;
 }
-/* line 827, ../sass/css.scss */
+/* line 839, ../sass/css.scss */
 .scheda-prodotto li .produttore, .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 831, ../sass/css.scss */
+/* line 843, ../sass/css.scss */
 .scheda-prodotto li .cart-link {
   float: right;
   font-size: 10px;
 }
-/* line 834, ../sass/css.scss */
+/* line 846, ../sass/css.scss */
 .scheda-prodotto li .cart-link span {
   padding-right: 25px;
   background: url("../images/carrello-bianco.png") no-repeat right center;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 831, ../sass/css.scss */
+  /* line 843, ../sass/css.scss */
   .scheda-prodotto li .cart-link {
     margin-top: 10px;
     float: none;
   }
 }
-/* line 843, ../sass/css.scss */
+/* line 855, ../sass/css.scss */
 .scheda-prodotto li .cart, .scheda-prodotto li .cart-panel {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 849, ../sass/css.scss */
+/* line 861, ../sass/css.scss */
 .scheda-prodotto li .cart-panel {
   background-color: #ffe782;
   border: dashed 2px #ffd31c;
@@ -2259,30 +2273,30 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   text-align: center;
   margin: 0 0 0 10px;
 }
-/* line 859, ../sass/css.scss */
+/* line 871, ../sass/css.scss */
 .scheda-prodotto li .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 858, ../sass/css.scss */
+  /* line 870, ../sass/css.scss */
   .scheda-prodotto li .scheda-link {
     width: 50%;
   }
 }
-/* line 867, ../sass/css.scss */
+/* line 879, ../sass/css.scss */
 .scheda-prodotto li .facebook-prod {
   float: left !important;
   margin-right: 1.23457%;
   width: 150px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 867, ../sass/css.scss */
+  /* line 879, ../sass/css.scss */
   .scheda-prodotto li .facebook-prod {
     width: 100%;
   }
 }
-/* line 875, ../sass/css.scss */
+/* line 887, ../sass/css.scss */
 .scheda-prodotto li .fb-slogan {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2290,33 +2304,33 @@ input[type=text], input[type=password], button[type=text], button[type=password]
   line-height: 160%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 768, ../sass/css.scss */
+  /* line 780, ../sass/css.scss */
   .scheda-prodotto li {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
   }
 }
-/* line 886, ../sass/css.scss */
+/* line 898, ../sass/css.scss */
 .scheda-prodotto li:last-child {
   border-bottom: dotted 1px #999;
 }
 
-/* line 891, ../sass/css.scss */
-.carrello, .iscrizione {
+/* line 903, ../sass/css.scss */
+.carrello, .iscrizione, .ricerca {
   width: 100%;
   font-size: 90%;
   width: 100%;
   position: relative;
   border-top: dotted 1px #999;
 }
-/* line 898, ../sass/css.scss */
-.carrello a, .iscrizione a {
+/* line 910, ../sass/css.scss */
+.carrello a, .iscrizione a, .ricerca a {
   font-weight: bold;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 898, ../sass/css.scss */
-  .carrello a, .iscrizione a {
+  /* line 910, ../sass/css.scss */
+  .carrello a, .iscrizione a, .ricerca a {
     border: none;
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2324,11 +2338,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     -ms-border-radius: 0.3em;
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
-    background: -webkit-linear-gradient(#cccccc, #808080);
-    background: -moz-linear-gradient(#cccccc, #808080);
-    background: -o-linear-gradient(#cccccc, #808080);
-    background: linear-gradient(#cccccc, #808080);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6a6a6), color-stop(100%, #4d4d4d));
+    background: -webkit-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -moz-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -o-linear-gradient(#a6a6a6, #4d4d4d);
+    background: linear-gradient(#a6a6a6, #4d4d4d);
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
@@ -2347,7 +2361,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     width: auto;
   }
   /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
-  .carrello a:after, .iscrizione a:after {
+  .carrello a:after, .iscrizione a:after, .ricerca a:after {
     content: "";
     position: absolute;
     display: block;
@@ -2371,127 +2385,136 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
-  /* line 903, ../sass/css.scss */
-  .carrello a img, .iscrizione a img {
+  /* line 915, ../sass/css.scss */
+  .carrello a img, .iscrizione a img, .ricerca a img {
     margin-bottom: 5px;
   }
 }
-/* line 908, ../sass/css.scss */
-.carrello table, .iscrizione table {
+/* line 920, ../sass/css.scss */
+.carrello table, .iscrizione table, .ricerca table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 913, ../sass/css.scss */
-.carrello table tr, .iscrizione table tr {
+/* line 925, ../sass/css.scss */
+.carrello table tr, .iscrizione table tr, .ricerca table tr {
   text-align: left;
 }
-/* line 916, ../sass/css.scss */
-.carrello table tr td, .iscrizione table tr td {
+/* line 928, ../sass/css.scss */
+.carrello table tr td, .iscrizione table tr td, .ricerca table tr td {
   padding: 3px 0;
   width: 50%;
 }
-/* line 919, ../sass/css.scss */
-.carrello table tr td input[type=text], .carrello table tr td input[type=password], .iscrizione table tr td input[type=text], .iscrizione table tr td input[type=password] {
+/* line 931, ../sass/css.scss */
+.carrello table tr td input[type=text], .carrello table tr td input[type=password], .iscrizione table tr td input[type=text], .iscrizione table tr td input[type=password], .ricerca table tr td input[type=text], .ricerca table tr td input[type=password] {
   width: 50%;
 }
-/* line 925, ../sass/css.scss */
-.carrello .table, .iscrizione .table {
+/* line 937, ../sass/css.scss */
+.carrello .table, .iscrizione .table, .ricerca .table {
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
 }
-/* line 930, ../sass/css.scss */
-.carrello .table .tr, .iscrizione .table .tr {
+/* line 942, ../sass/css.scss */
+.carrello .table .tr, .iscrizione .table .tr, .ricerca .table .tr {
   text-align: left;
   width: 100%;
 }
-/* line 934, ../sass/css.scss */
-.carrello .table .td, .iscrizione .table .td {
+/* line 945, ../sass/css.scss */
+.carrello .table .tr .td, .iscrizione .table .tr .td, .ricerca .table .tr .td {
   padding: 3px 0;
   float: left;
   width: 50%;
 }
-/* line 939, ../sass/css.scss */
-.carrello .table input[type=text], .carrello .table input[type=password], .iscrizione .table input[type=text], .iscrizione .table input[type=password] {
+/* line 950, ../sass/css.scss */
+.carrello .table .tr.text-center, .iscrizione .table .tr.text-center, .ricerca .table .tr.text-center {
+  text-align: center !important;
+}
+/* line 952, ../sass/css.scss */
+.carrello .table .tr.text-center .td, .iscrizione .table .tr.text-center .td, .ricerca .table .tr.text-center .td {
+  width: 100%;
+  padding: 10px 0;
+}
+/* line 958, ../sass/css.scss */
+.carrello .table input[type=text], .carrello .table input[type=password], .iscrizione .table input[type=text], .iscrizione .table input[type=password], .ricerca .table input[type=text], .ricerca .table input[type=password] {
   width: 50%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 943, ../sass/css.scss */
-  .carrello .table .tr, .carrello .table .td, .carrello .table input[type=text], .carrello .table input[type=password], .carrello .table input[type=submit], .carrello .table input[type=reset], .iscrizione .table .tr, .iscrizione .table .td, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table input[type=submit], .iscrizione .table input[type=reset] {
+  /* line 962, ../sass/css.scss */
+  .carrello .table .tr, .carrello .table .td, .carrello .table input[type=text], .carrello .table input[type=password], .carrello .table input[type=submit], .carrello .table input[type=reset], .iscrizione .table .tr, .iscrizione .table .td, .iscrizione .table input[type=text], .iscrizione .table input[type=password], .iscrizione .table input[type=submit], .iscrizione .table input[type=reset], .ricerca .table .tr, .ricerca .table .td, .ricerca .table input[type=text], .ricerca .table input[type=password], .ricerca .table input[type=submit], .ricerca .table input[type=reset] {
     width: 100% !important;
     float: none !important;
   }
 }
-/* line 950, ../sass/css.scss */
-.carrello .colonna, .iscrizione .colonna {
+/* line 969, ../sass/css.scss */
+.carrello .colonna, .iscrizione .colonna, .ricerca .colonna {
   display: inline-block;
   text-align: right;
 }
-/* line 954, ../sass/css.scss */
-.carrello .riga, .iscrizione .riga {
+/* line 973, ../sass/css.scss */
+.carrello .riga, .iscrizione .riga, .ricerca .riga {
   padding: 5px 1.23457%;
   border-bottom: dashed 1px #ccc;
   margin: 0 !important;
 }
-/* line 959, ../sass/css.scss */
-.carrello .articolo, .iscrizione .articolo {
+/* line 978, ../sass/css.scss */
+.carrello .articolo, .iscrizione .articolo, .ricerca .articolo {
   width: 48.14815%;
   text-align: left;
 }
-/* line 963, ../sass/css.scss */
-.carrello .descrizione, .iscrizione .descrizione {
+/* line 982, ../sass/css.scss */
+.carrello .descrizione, .iscrizione .descrizione, .ricerca .descrizione {
   width: 61.7284%;
   text-align: left;
 }
-/* line 967, ../sass/css.scss */
-.carrello .quantita, .iscrizione .quantita {
+/* line 986, ../sass/css.scss */
+.carrello .quantita, .iscrizione .quantita, .ricerca .quantita {
   width: 12.34568%;
 }
-/* line 970, ../sass/css.scss */
-.carrello .prezzo_unitario, .iscrizione .prezzo_unitario {
+/* line 989, ../sass/css.scss */
+.carrello .prezzo_unitario, .iscrizione .prezzo_unitario, .ricerca .prezzo_unitario {
   width: 15.4321%;
 }
-/* line 973, ../sass/css.scss */
-.carrello .prezzo_totale, .iscrizione .prezzo_totale {
+/* line 992, ../sass/css.scss */
+.carrello .prezzo_totale, .iscrizione .prezzo_totale, .ricerca .prezzo_totale {
   width: 15.4321%;
 }
-/* line 976, ../sass/css.scss */
-.carrello .elimina, .iscrizione .elimina {
+/* line 995, ../sass/css.scss */
+.carrello .elimina, .iscrizione .elimina, .ricerca .elimina {
   width: 7.40741%;
 }
-/* line 979, ../sass/css.scss */
-.carrello .num_ordine, .iscrizione .num_ordine {
+/* line 998, ../sass/css.scss */
+.carrello .num_ordine, .iscrizione .num_ordine, .ricerca .num_ordine {
   width: 24.69136%;
   text-align: left;
 }
-/* line 983, ../sass/css.scss */
-.carrello .totale_ordine, .iscrizione .totale_ordine {
+/* line 1002, ../sass/css.scss */
+.carrello .totale_ordine, .iscrizione .totale_ordine, .ricerca .totale_ordine {
   width: 8.64198%;
 }
-/* line 986, ../sass/css.scss */
-.carrello .stato, .iscrizione .stato {
+/* line 1005, ../sass/css.scss */
+.carrello .stato, .iscrizione .stato, .ricerca .stato {
   width: 19.75309%;
 }
-/* line 989, ../sass/css.scss */
-.carrello .azioni, .iscrizione .azioni {
+/* line 1008, ../sass/css.scss */
+.carrello .azioni, .iscrizione .azioni, .ricerca .azioni {
   width: 44.44444%;
 }
-/* line 992, ../sass/css.scss */
-.carrello .data, .iscrizione .data {
+/* line 1011, ../sass/css.scss */
+.carrello .data, .iscrizione .data, .ricerca .data {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 992, ../sass/css.scss */
-  .carrello .data, .iscrizione .data {
+  /* line 1011, ../sass/css.scss */
+  .carrello .data, .iscrizione .data, .ricerca .data {
     margin-top: 10px;
   }
-  /* line 996, ../sass/css.scss */
-  .carrello .data .scheda, .iscrizione .data .scheda {
+  /* line 1015, ../sass/css.scss */
+  .carrello .data .scheda, .iscrizione .data .scheda, .ricerca .data .scheda {
     text-align: center;
   }
-  /* line 999, ../sass/css.scss */
-  .carrello .data a, .iscrizione .data a {
+  /* line 1018, ../sass/css.scss */
+  .carrello .data a, .iscrizione .data a, .ricerca .data a {
     border: none;
     position: relative;
     -webkit-border-radius: 0.3em;
@@ -2499,11 +2522,11 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     -ms-border-radius: 0.3em;
     -o-border-radius: 0.3em;
     border-radius: 0.3em;
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #808080));
-    background: -webkit-linear-gradient(#cccccc, #808080);
-    background: -moz-linear-gradient(#cccccc, #808080);
-    background: -o-linear-gradient(#cccccc, #808080);
-    background: linear-gradient(#cccccc, #808080);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6a6a6), color-stop(100%, #4d4d4d));
+    background: -webkit-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -moz-linear-gradient(#a6a6a6, #4d4d4d);
+    background: -o-linear-gradient(#a6a6a6, #4d4d4d);
+    background: linear-gradient(#a6a6a6, #4d4d4d);
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
@@ -2521,7 +2544,7 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     text-align: center;
   }
   /* line 26, ../../../../../../../../Users/Gianluca/.compass/extensions/compass-recipes/stylesheets/recipes/effect/_glass.scss */
-  .carrello .data a:after, .iscrizione .data a:after {
+  .carrello .data a:after, .iscrizione .data a:after, .ricerca .data a:after {
     content: "";
     position: absolute;
     display: block;
@@ -2546,32 +2569,32 @@ input[type=text], input[type=password], button[type=text], button[type=password]
     background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 50.5%);
   }
 }
-/* line 1005, ../sass/css.scss */
-.carrello .cart, .carrello .scheda-prodotto li .cart-panel, .scheda-prodotto li .carrello .cart-panel, .iscrizione .cart, .iscrizione .scheda-prodotto li .cart-panel, .scheda-prodotto li .iscrizione .cart-panel {
+/* line 1024, ../sass/css.scss */
+.carrello .cart, .carrello .scheda-prodotto li .cart-panel, .scheda-prodotto li .carrello .cart-panel, .iscrizione .cart, .iscrizione .scheda-prodotto li .cart-panel, .scheda-prodotto li .iscrizione .cart-panel, .ricerca .cart, .ricerca .scheda-prodotto li .cart-panel, .scheda-prodotto li .ricerca .cart-panel {
   border: none;
   background-color: #ffd31c;
   padding: 1.23457%;
   margin: 2.46914% 0;
 }
-/* line 1011, ../sass/css.scss */
-.carrello .cart .total_price, .carrello .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .carrello .cart-panel .total_price, .iscrizione .cart .total_price, .iscrizione .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .iscrizione .cart-panel .total_price {
+/* line 1030, ../sass/css.scss */
+.carrello .cart .total_price, .carrello .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .carrello .cart-panel .total_price, .iscrizione .cart .total_price, .iscrizione .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .iscrizione .cart-panel .total_price, .ricerca .cart .total_price, .ricerca .scheda-prodotto li .cart-panel .total_price, .scheda-prodotto li .ricerca .cart-panel .total_price {
   float: right;
   font-size: 12px;
 }
-/* line 1016, ../sass/css.scss */
-.carrello .scheda-link span, .iscrizione .scheda-link span {
+/* line 1035, ../sass/css.scss */
+.carrello .scheda-link span, .iscrizione .scheda-link span, .ricerca .scheda-link span {
   background: url("../images/dett_prodotto.png") no-repeat left center;
   padding-left: 25px;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 1015, ../sass/css.scss */
-  .carrello .scheda-link, .iscrizione .scheda-link {
+  /* line 1034, ../sass/css.scss */
+  .carrello .scheda-link, .iscrizione .scheda-link, .ricerca .scheda-link {
     width: 50%;
   }
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 891, ../sass/css.scss */
-  .carrello, .iscrizione {
+  /* line 903, ../sass/css.scss */
+  .carrello, .iscrizione, .ricerca {
     width: 100%;
     float: none;
     border-bottom: dotted 1px #ccc;
@@ -2579,50 +2602,50 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 1033, ../sass/css.scss */
+  /* line 1052, ../sass/css.scss */
   .listino {
     text-align: center;
   }
 }
 
-/* line 1038, ../sass/css.scss */
+/* line 1057, ../sass/css.scss */
 .catalogo {
   text-align: center;
 }
-/* line 1040, ../sass/css.scss */
+/* line 1059, ../sass/css.scss */
 .catalogo li {
   min-height: 180px;
 }
 
-/* line 1044, ../sass/css.scss */
+/* line 1063, ../sass/css.scss */
 #sidebar {
   width: 37.03704%;
   background: #c00;
   float: right;
 }
 
-/* line 1049, ../sass/css.scss */
+/* line 1068, ../sass/css.scss */
 #sidebar-alt {
   width: 17.34694%;
   font-size: 90%;
   background: #ffd31c;
   float: left;
 }
-/* line 1054, ../sass/css.scss */
+/* line 1073, ../sass/css.scss */
 #sidebar-alt > div {
   padding: 2.94118%;
 }
-/* line 1057, ../sass/css.scss */
+/* line 1076, ../sass/css.scss */
 #sidebar-alt h3 {
   margin-top: 30px;
   clear: both;
 }
-/* line 1061, ../sass/css.scss */
+/* line 1080, ../sass/css.scss */
 #sidebar-alt .register {
   width: 100%;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 1064, ../sass/css.scss */
+  /* line 1083, ../sass/css.scss */
   #sidebar-alt .telefono, #sidebar-alt .fb, #sidebar-alt .paypal {
     text-align: center;
     width: auto;
@@ -2630,29 +2653,29 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 }
 
 @media only screen and (max-width: 40.625em) {
-  /* line 1071, ../sass/css.scss */
+  /* line 1090, ../sass/css.scss */
   #language, #menu, #logo, #widget-area, #content-sidebar-wrap, #content, #sidebar, #sidebar-alt {
     width: 100%;
     float: none;
   }
 }
 
-/* line 1077, ../sass/css.scss */
+/* line 1096, ../sass/css.scss */
 #widget-area {
-  display: bock;
+  display: block;
 }
 @media only screen and (max-width: 40.625em) {
-  /* line 1077, ../sass/css.scss */
+  /* line 1096, ../sass/css.scss */
   #widget-area {
     display: none;
   }
 }
-/* line 1082, ../sass/css.scss */
+/* line 1101, ../sass/css.scss */
 #widget-area .slides {
   height: 210px;
 }
 
-/* line 1088, ../sass/css.scss */
+/* line 1107, ../sass/css.scss */
 #footer .credits {
   padding: 10px;
 }

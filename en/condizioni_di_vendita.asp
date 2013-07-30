@@ -9,14 +9,14 @@
 		<meta name="keywords" content="CRISTALENSI Conditions of sale lighting products conditions to buy lamps Shipping modality Payment modality">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="../js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="../js/jquery.blueberry.js"></script>
-        <script src="../js/jquery.tipTip.js"></script>
-        <link href="../css/css.css" rel="stylesheet" type="text/css">
-        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -27,7 +27,7 @@
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -131,7 +131,7 @@ Express couriers are obliged to attempt delivery twice.  If you are absent at th
 						When paying by <span class="sfondo-giallo"><em><strong>Bank Transfer</strong></em></span> no extra cost will be added but the goods will be shipped only after the bank has certified payment. <br>
 						<br>
 						When paying online we rely on <span class="sfondo-giallo"><em><strong>Paypal's secure system</strong></em></span> (one has to undergo a rapid registration process) which permits payment with an ample choice of systems:  from the major credit cards to prepaid and rechargable cards.<br>
-						Here is the amply choice: <br><a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="../images/logo_paypal_carte.jpg" style="width: 319px; float: none" border="0" alt="Che cos'&egrave; PayPal"></a><br>
+						Here is the amply choice: <br><a href="#" onClick="javascript:window.open('https://www.paypal.com/it/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="/images/logo_paypal_carte.jpg" style="width: 319px; float: none" border="0" alt="Che cos'&egrave; PayPal"></a><br>
 						<br>
 						We remind you that when using <span class="sfondo-giallo"><strong><em>pay on delivery</em></strong></span> the courier must be paid in cash.  The courier will not consign the goods with any other system of payment.  Checks and cards cannot be accepted in this case.<br>
 						When using pay on delivery systems a 4 Euro charge will be added to the total cost of the goods.</p>

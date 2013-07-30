@@ -86,14 +86,14 @@
                             <h3 style="font-size: 14px; display: inline; border: none;">Ricerca avanzata articoli illuminazione</h3>
                             <p>Grazie alla Ricerca avanzata hai la possiblit&agrave; di inserire il <strong>Nome</strong> o il <strong>Codice</strong> dell'articolo di illuminazione, oppure selezionare una <strong>Categoria</strong> o il <strong>Produttore</strong>, oppure inserire una <strong>fascia di prezzo</strong> ma puoi anche combinare le singole ricerche per arrivare ad un elenco maggiormente filtrato e <strong>su misura per i tuoi desideri</strong>.
                             </p>
-                            <div class="iscrizione clearfix">                                
+                            <div class="ricerca clearfix">                                
                                 <div class="table">
                                     <form method="post" action="/ricerca_avanzata_elenco.asp" name="newsform" onSubmit="return verifica();">
-                                    <div class="tr">
+                                    <div class="tr text-center">
 	                                        Nome o Codice del prodotto<br />
                                             <input name="titolo" type="text" id="titolo" style="width:300px;" />
                                     </div>
-                                    <div class="tr">
+                                    <div class="tr text-center">
                                         <div class="td">
 
                                         Categoria<br />
@@ -121,7 +121,7 @@
                                              <%cs.close%>
                                     </div>
                                     </div>
-                                    <div class="tr">
+                                    <div class="tr text-center">
                                         <div class="td">
                                             Produttore<br />
                                             <%
@@ -145,7 +145,7 @@
                                             <%cs.close%>
                                         </div>
                                     </div>
-                                    <div class="tr">
+                                    <div class="tr text-center">
                                         <div class="td">
 
 	                                        Fascia di prezzo<br />
@@ -153,7 +153,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="tr">
+                                    <div class="tr text-center">
                                         <div class="td">
 
                                             <button name="Submit" type="submit" class="button_link" value="Avvia la ricerca" align="absmiddle">Avvia la ricerca</button>

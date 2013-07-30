@@ -34,14 +34,14 @@ end if
 		<meta name="keywords" content="<%=kw%>">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="../js/media-queries-ie.js"></script>
+        <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="../js/jquery.blueberry.js"></script>
-        <script src="../js/jquery.tipTip.js"></script>
-        <link href="../css/css.css" rel="stylesheet" type="text/css">
-        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -52,7 +52,7 @@ end if
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -105,13 +105,13 @@ end if
 								Do while not prod_rs.EOF
 								
 								id=prod_rs("PkId")
-								'url="../../en/prodotti.asp?cat="&id
+								'url="/en/prodotti.asp?cat="&id
 								url="/en/prodotti.asp?cat="&id
 								%>
                                 <li>
                                     <a href="<%=url%>" title="<%=titolo_cat%><%=" - "&prod_rs("titolo_en")%>">
                                         <%
-										'file_img="../"&prod_rs("logo")
+										'file_img="/"&prod_rs("logo")
 										file_img="/public/"&prod_rs("logo")
 										if file_img<>"" then
 										%>

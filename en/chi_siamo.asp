@@ -9,16 +9,16 @@
 		<meta name="keywords" content="lamps for sales, ecommerce about lights, online store for italian lighting products, Modern lamps, LED Lights, Classic lamps, Rustic lamps, Tiffany, Murano lights, Crystal lamps, lights for children, Spotlights and tracks, Ceiling fans, Outside modern lights, Outside classic lamps , Light bulbs and Drivers">
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script src="../js/media-queries-ie.js"></script>
+            <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="../js/jquery.blueberry.js"></script>
-        <script src="../js/jquery.tipTip.js"></script>
-        <script src="../js/jquery.fancybox.js"></script>
-        <link href="../css/css.css" rel="stylesheet" type="text/css">
-        <link href="../css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-        <link href="../css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="/js/jquery.blueberry.js"></script>
+        <script src="/js/jquery.tipTip.js"></script>
+        <script src="/js/jquery.fancybox.js"></script>
+        <link href="/css/css.css" rel="stylesheet" type="text/css">
+        <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
+        <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+        <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -29,7 +29,7 @@
             }
         </style>
         <!--[if lt IE 8]>
-            <link href="../css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
         <!--[if IE]>
             <style type="text/css">
@@ -71,9 +71,9 @@
                             <div class="slogan small">
                                 <h3>For 50 years Cristalensi has meant lighting.</h3>
                             </div>
-                            <a href="images/chi-siamo/grandi/5.jpg" class="fancybox" rel="gallery" title="Shop lighting - Entry and parking"><img class="immagini" src="../images/chi-siamo/piccole/5.jpg"></a>
-                            <a href="images/chi-siamo/grandi/6.jpg" class="fancybox" rel="gallery" title="Shop lighting - Staff"><img class="immagini" src="../images/chi-siamo/piccole/6.jpg"></a>
-                            <a href="images/chi-siamo/grandi/1.jpg" class="fancybox" rel="gallery" title="Shop chandeliers - Overview"><img class="immagini" src="../images/chi-siamo/piccole/1.jpg"></a>
+                            <a href="images/chi-siamo/grandi/5.jpg" class="fancybox" rel="gallery" title="Shop lighting - Entry and parking"><img class="immagini" src="/images/chi-siamo/piccole/5.jpg"></a>
+                            <a href="images/chi-siamo/grandi/6.jpg" class="fancybox" rel="gallery" title="Shop lighting - Staff"><img class="immagini" src="/images/chi-siamo/piccole/6.jpg"></a>
+                            <a href="images/chi-siamo/grandi/1.jpg" class="fancybox" rel="gallery" title="Shop chandeliers - Overview"><img class="immagini" src="/images/chi-siamo/piccole/1.jpg"></a>
                             <h3 class="corporate"><strong>For 50 years</strong>, the privilege of our well-established company to <strong>provide our clientele</strong> with a <strong>vast and refined array of products</strong>, both for inside and out, able to satisfy style needs both classic and modern. <br>
               Halogen, ceiling lights, appliques, table lamps, directed lights, spotlights and low energy consumption lights can be seen at their best in <strong>our showroom of lamps</strong> with italian style.<br>
 <br>
@@ -84,18 +84,18 @@ thanks to the play of light and shadow created by <strong>technicians expert</st
 Cristalensi offers its' clients a <strong>complete service</strong>, offering <strong>free estimates</strong> and <strong>careful planning</strong> of the environments to be illuminated.<br>
 <br><br>
                                 <i><strong>Click on photos to enlarge</strong></i></h3>
-                            <a href="images/chi-siamo/grandi/2.jpg" class="fancybox" rel="gallery" title="Shop chandeliers in Florence - Overview"><img class="immagini" src="../images/chi-siamo/piccole/2.jpg"></a>
-                            <a href="images/chi-siamo/grandi/3.jpg" class="fancybox" rel="gallery" title="Shop rustic lamps"><img class="immagini" src="../images/chi-siamo/piccole/3.jpg"></a>
-                            <a href="images/chi-siamo/grandi/4.jpg" class="fancybox" rel="gallery" title="Shop crystal chandeliers"><img class="immagini" src="../images/chi-siamo/piccole/4.jpg"></a>
+                            <a href="images/chi-siamo/grandi/2.jpg" class="fancybox" rel="gallery" title="Shop chandeliers in Florence - Overview"><img class="immagini" src="/images/chi-siamo/piccole/2.jpg"></a>
+                            <a href="images/chi-siamo/grandi/3.jpg" class="fancybox" rel="gallery" title="Shop rustic lamps"><img class="immagini" src="/images/chi-siamo/piccole/3.jpg"></a>
+                            <a href="images/chi-siamo/grandi/4.jpg" class="fancybox" rel="gallery" title="Shop crystal chandeliers"><img class="immagini" src="/images/chi-siamo/piccole/4.jpg"></a>
                             <div class="clearfix" style="text-align: center;" >                           
-                                <a href="images/chi-siamo/grandi/7.jpg" class="fancybox" rel="gallery" title="Shop Tiffany-style lamps"><img class="immagini-2" src="../images/chi-siamo/piccole/7.jpg"></a>
-                                <a href="images/chi-siamo/grandi/10.jpg" class="fancybox" rel="gallery" title="Shop modern chandeliers"><img class="immagini-2" src="../images/chi-siamo/piccole/10.jpg"></a>
-                                <a href="images/chi-siamo/grandi/11.jpg" class="fancybox" rel="gallery" title="Shop fans with lights"><img class="immagini-2" src="../images/chi-siamo/piccole/11.jpg"></a>
-                                <a href="images/chi-siamo/grandi/13.jpg" class="fancybox" rel="gallery" title="Shop chandeliers - Overview"><img class="immagini-2" src="../images/chi-siamo/piccole/13.jpg"></a>
-                                <a href="images/chi-siamo/grandi/9.jpg" class="fancybox" rel="gallery" title="Shop lighting - Overview"><img class="immagini-2" src="../images/chi-siamo/piccole/9.jpg"></a>
-                                <a href="images/chi-siamo/grandi/8.jpg" class="fancybox" rel="gallery" title="Shop chandeliers - Overview"><img class="immagini-2" src="../images/chi-siamo/piccole/8.jpg"></a>
-                                <a href="images/chi-siamo/grandi/15.jpg" class="fancybox" rel="gallery" title="Shop Lighting Outdoor"><img class="immagini-2" src="../images/chi-siamo/piccole/15.jpg"></a>
-                                <a href="images/chi-siamo/grandi/16.jpg" class="fancybox" rel="gallery" title="Shop Lighting Outdoor"><img class="immagini-2" src="../images/chi-siamo/piccole/16.jpg"></a>
+                                <a href="images/chi-siamo/grandi/7.jpg" class="fancybox" rel="gallery" title="Shop Tiffany-style lamps"><img class="immagini-2" src="/images/chi-siamo/piccole/7.jpg"></a>
+                                <a href="images/chi-siamo/grandi/10.jpg" class="fancybox" rel="gallery" title="Shop modern chandeliers"><img class="immagini-2" src="/images/chi-siamo/piccole/10.jpg"></a>
+                                <a href="images/chi-siamo/grandi/11.jpg" class="fancybox" rel="gallery" title="Shop fans with lights"><img class="immagini-2" src="/images/chi-siamo/piccole/11.jpg"></a>
+                                <a href="images/chi-siamo/grandi/13.jpg" class="fancybox" rel="gallery" title="Shop chandeliers - Overview"><img class="immagini-2" src="/images/chi-siamo/piccole/13.jpg"></a>
+                                <a href="images/chi-siamo/grandi/9.jpg" class="fancybox" rel="gallery" title="Shop lighting - Overview"><img class="immagini-2" src="/images/chi-siamo/piccole/9.jpg"></a>
+                                <a href="images/chi-siamo/grandi/8.jpg" class="fancybox" rel="gallery" title="Shop chandeliers - Overview"><img class="immagini-2" src="/images/chi-siamo/piccole/8.jpg"></a>
+                                <a href="images/chi-siamo/grandi/15.jpg" class="fancybox" rel="gallery" title="Shop Lighting Outdoor"><img class="immagini-2" src="/images/chi-siamo/piccole/15.jpg"></a>
+                                <a href="images/chi-siamo/grandi/16.jpg" class="fancybox" rel="gallery" title="Shop Lighting Outdoor"><img class="immagini-2" src="/images/chi-siamo/piccole/16.jpg"></a>
                             </div>
                         </div>
                     </div>

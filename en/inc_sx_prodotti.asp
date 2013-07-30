@@ -9,13 +9,12 @@
                             cat_rs.open sql,conn, 1, 1
                             if cat_rs.recordcount>0 then
                             Do while not cat_rs.EOF
-							
 							nomepagina_categorie = cat_rs("NomePagina_en")
 							if nomepagina_categorie="" then nomepagina_categorie="#"
 							if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/"&nomepagina_categorie
 							'if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/categorie_en.asp?pkid="&cat_rs("PkId")
                             %>    
-                                <li><a href="<%=nomepagina_categorie%>" title="<%=cat_rs("Titolo_en")%>">&raquo; <%=cat_rs("Titolo_en")%></a></li>
+                                <li><a href="<%=nomepagina_categorie%>" title="<%=cat_rs("Titolo_en")%>"><span><%=cat_rs("Titolo_en")%></span></a></li>
                             <%
                             cat_rs.movenext
                             loop

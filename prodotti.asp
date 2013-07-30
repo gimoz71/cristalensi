@@ -140,34 +140,39 @@ end if
                                     // End -->
                                     </SCRIPT>
                              		
-                                    <form method="post" action="/prodotti.asp" name="form_prodotti" id="form_prodotti">
-                                      <p>
-                                      Non hai trovato il prodotto che cercavi? cambia la categoria specifica: 
-                                        <%
-                                        Set cs=Server.CreateObject("ADODB.Recordset")
-                                        sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo as Titolo_2 "
-                                        sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
-                                        sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
-                                        sql = sql + "ORDER BY Categorie1.Titolo ASC, Categorie2.Titolo ASC"
-                                        cs.Open sql, conn, 1, 1
-                                        %>
-                                        <select name="Cat" id="Cat" class="form" onChange="invia_account()">
-                                            <%
-                                            if cs.recordcount>0 then
-                                            Do While Not cs.EOF
-                                            %>
-                                            <option title="<%=cs("Titolo_2")%>" value=<%=cs("pkid_2")%> <%if cInt(cat)=cInt(cs("pkid_2")) then%> selected<%end if%>><%=cs("Titolo_2")%></option>
-                                            <%
-                                            cs.movenext
-                                            loop
-                                            end if
-                                            %>
-                                         </select>
-                                         <%cs.close%>
-                                        </p>
+                                    <div class="half_panel left_p">
+                                        <form method="post" action="/prodotti.asp" name="form_prodotti" id="form_prodotti">
+                                        <p>
+                                          Non hai trovato il prodotto che cercavi? cambia la categoria specifica:<br><br><br>
+                                          <%
+                                          Set cs=Server.CreateObject("ADODB.Recordset")
+                                          sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo as Titolo_2 "
+                                          sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
+                                          sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
+                                          sql = sql + "ORDER BY Categorie1.Titolo ASC, Categorie2.Titolo ASC"
+                                          cs.Open sql, conn, 1, 1
+                                          %>
+                                          <select name="Cat" id="Cat" class="form" onChange="invia_account()">
+                                              <%
+                                              if cs.recordcount>0 then
+                                              Do While Not cs.EOF
+                                              %>
+                                              <option title="<%=cs("Titolo_2")%>" value=<%=cs("pkid_2")%> <%if cInt(cat)=cInt(cs("pkid_2")) then%> selected<%end if%>><%=cs("Titolo_2")%></option>
+                                              <%
+                                              cs.movenext
+                                              loop
+                                              end if
+                                              %>
+                                           </select>
+                                           <%cs.close%>
+                                          </p>
                                        </form>
-                                        <p style="text-align: center">Oppure, per una ricerca maggiormente dettagliata, usa la<p>
-                                        <p style="text-align: center"><a href="/ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a></p>
+                                    </div>
+                                    <div class="half_panel right_p">
+                                        <p style="text-align: center">Oppure, per una ricerca maggiormente dettagliata, usa la<br><br>
+                                        <span style="text-align: center"><a href="/ricerca_avanzata_modulo.asp" class="button_link_red">RICERCA AVANZATA</a></span>
+                                    </div>
+                                    <div class="clear"></div>
                               	<%end if%>
                                 <%
 									p=request("p")
@@ -308,13 +313,14 @@ end if
                                         end if
                                         img_rs.close
                                         %>
+                                        <%if tot_img>0 then%><span>[<%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]</span><%end if%>
                                         </div>
                                         
                                         <div class="data">
                                             <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore_pr>0 then%><span class="produttore">Produttore: <a href="prodotti.asp?FkProduttore=<%=fkproduttore_pr%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Il prodotto lo trovi nella categoria:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Scheda prodotto</span></a>
-											<%if tot_img>0 then%><span style="float:right;">[<%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]</span><%end if%>
+											
                                             <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
                                             <%else%>
@@ -495,12 +501,12 @@ end if
                                         end if
                                         img_rs.close
                                         %>
+                                        <%if tot_img>0 then%><span>[<%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]</span><%end if%>
                                         </div>
                                         <div class="data">
                                             <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore>0 then%><span class="produttore">Produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Il prodotto lo trovi nella categoria:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Scheda prodotto</span></a>
-											<%if tot_img>0 then%><span style="float:right;">[<%if tot_img=1 then%>1 Immagine<%else%><%=tot_img%> Immagini<%end if%>]</span><%end if%>
                                             <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('/richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
                                             <%else%>

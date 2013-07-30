@@ -15,7 +15,7 @@
 							'if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/"&nomepagina_categorie
 							if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/categorie.asp?pkid="&cat_rs("PkId")
                             %>    
-                                <li><a href="<%=nomepagina_categorie%>" title="<%=cat_rs("Titolo")%>">&raquo; <%=cat_rs("Titolo")%></a></li>
+                                <li><a href="<%=nomepagina_categorie%>" title="<%=cat_rs("Titolo")%>"><span><%=cat_rs("Titolo")%></span></a></li>
                             <%
                             cat_rs.movenext
                             loop

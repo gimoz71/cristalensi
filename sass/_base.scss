@@ -44,7 +44,7 @@ $wide-screens: 61.250em; // equivalente a 980px
 @mixin buttonmobile {
     border: none;
     @include effect-glass($border-radius: .3em);
-    @include background(linear-gradient(lighten(#999, 20), darken(#999, 10)));
+    @include background(linear-gradient(lighten(#999, 5), darken(#999, 30)));
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     @include text-shadow(rgba(black, 0.4) 0px -1px 0);
     @include box-shadow(rgba(black, 0.15) 0 2px 2px);

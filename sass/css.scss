@@ -274,11 +274,16 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         position: relative;
         border-bottom: dotted 1px #999;
         a {
-            display: inline-block;
-            padding: 0.75em 0;
+            display: block;
+            padding: 0.75em 0 0.75em;
             width: 100%;
             text-decoration: none;
             font-weight: bold;
+            background: url('../images/arrowslist.png') no-repeat left center;
+            span {
+                display: inline-block;
+                padding-left: 13px;
+            }
             &:hover {
                 background:#fff;
             }
@@ -433,6 +438,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         margin: calc-em(20, 810) 0; 
     }
+    
     .area {
         border: none;
         background-color: $yellow;
@@ -441,6 +447,9 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         span {
             display: inline-block;
             margin-top: 10px;
+            &.title {
+                font-size: 14px;
+            }
         }
         @include respond-to('handhelds'){
             text-align: center;
@@ -551,7 +560,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             .nome-articolo {
                 display: block;
                 
-                height: 2em;
+                height: 3.5em;
             }
         }
         .price {
@@ -719,7 +728,10 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         .produttore, .cart-link {
             float: right;
-            font-size: 10px;
+            font-size: 12px;
+                a {
+                    font-size: 12px;
+                }
         }
         .cart-link {
             float: right;
@@ -888,7 +900,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
     }
 }
-.carrello, .iscrizione {
+.carrello, .iscrizione, .ricerca {
     width: 100%;
     font-size: 90%;
     
@@ -928,13 +940,20 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 		padding: 0;
 		width: 100%;
 		.tr {
-			text-align: left;
-			width: 100%;
-		}
-		.td {
-			padding: 3px 0;
-			float: left;
-			width: 50%;
+                    text-align: left;
+                    width: 100%;
+                    .td {
+                        padding: 3px 0;
+                        float: left;
+                        width: 50%;
+                    }
+                    &.text-center {
+                        text-align: center !important;   
+                        .td {
+                            width: 100%;
+                            padding: 10px 0;
+                        }
+                    }
 		}
 		input[type=text], input[type=password]{
 			width: 50%;
