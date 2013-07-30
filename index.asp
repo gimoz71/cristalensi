@@ -108,7 +108,7 @@
                                 <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
                             <!--prodotti in offerta-->
-                            <h4 class="area clearfix"><span>OFFERTE: non perdere l'occasione!</span><a href="/offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>OFFERTE: non perdere l'occasione!&nbsp;</span><a href="/offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
                             <%
 							'random prodotti in offerta
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")
@@ -200,7 +200,7 @@
 							end if
 							%>
                             <!--elenco categorie-->
-                            <h4 class="area clearfix"><span>CATALOGO PRODOTTI</span><a href="/ricerca_avanzata_modulo.asp" class="right button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>CATALOGO PRODOTTI&nbsp;</span><a href="/ricerca_avanzata_modulo.asp" class="right button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
                             <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
                             </p>
                             <ul class="catalogo clearfix">
@@ -249,7 +249,7 @@
                             
                             </ul>
                             <!--elenco produttori: select con js-->
-                            <h4 class="area clearfix"><span>PRODUTTORI</span><a href="/produttori.asp" class="right button_link_red" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>PRODUTTORI&nbsp;</span><a href="/produttori.asp" class="right button_link_red" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
                             <p>Se conosci la marca del prodotto la puoi selezionare qui sotto oppure andando all'elenco completo dei produttori.
                             </p>
                             <%

@@ -81,7 +81,7 @@ end if
     </head>
     <body>
         <div id="wrap">
-            <!--#include file="inc_header.asp"-->
+            <!--#include file="../../en/inc_header.asp"-->
 
             <div id="main-content">
                 

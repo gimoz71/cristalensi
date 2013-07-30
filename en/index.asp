@@ -82,7 +82,7 @@
                             </p>
                             <!--facebook-->
                             <div class="half_panel social_box left_p_fb">
-                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true" data-height="230"></div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true" data-height="240"></div>
                             </div>
                             <!--dicono di noi-->
                             <div class="half_panel social_box right_p">
@@ -95,7 +95,7 @@
 							if com_rs.recordcount>0 then
 								Do While not com_rs.EOF
 							%>
-							<p><%=Left(NoHTML(com_rs("Testo")), 120)%>...</p>
+							<p><%=Left(NoHTML(com_rs("Testo")), 100)%>...</p>
 							<%
 								com_rs.movenext
 								loop
@@ -105,7 +105,7 @@
                             </div>
                             <div class="spacer"></div>
                             <!--prodotti in offerta-->
-                            <h4 class="area clearfix"><span>PRODUCTS ON OFFER: Don't miss the opportunity to buy italian style products!!!</span><a href="offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">ALL THE OFFERS &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>PRODUCTS ON OFFER: Don't miss the opportunity to buy italian products!!!&nbsp;</span><a href="offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">ALL THE OFFERS &raquo;</a></h4>
                             <%
 							'random prodotti in offerta
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")
@@ -197,7 +197,7 @@
 							end if
 							%>
                             <!--elenco categorie-->
-                            <h4 class="area clearfix"><span>CATALOG PRODUCTS</span><a href="ricerca_avanzata_modulo.asp" class="right button_link_red" title="Advanced search lighting products">ADVANCED SEARCH &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>CATALOG PRODUCTS&nbsp;</span><a href="ricerca_avanzata_modulo.asp" class="right button_link_red" title="Advanced search lighting products">ADVANCED SEARCH &raquo;</a></h4>
                             </p>
                             <ul class="catalogo clearfix">
                             <%
@@ -245,7 +245,7 @@
                             
                             </ul>
                             <!--elenco produttori: select con js-->
-                            <h4 class="area clearfix"><span>PRODUCERS</span><a href="produttori.asp" class="right button_link_red" title="complete list of producers of lamps">COMPLETE LIST OF PRODUCERS &raquo;</a></h4>
+                            <h4 class="area clearfix"><span>PRODUCERS&nbsp;</span><a href="produttori.asp" class="right button_link_red" title="complete list of producers of lamps">COMPLETE LIST OF PRODUCERS &raquo;</a></h4>
                             <p>If you know the brand of the product you can select below or going to the complete list of producers.
                             </p>
                             <%

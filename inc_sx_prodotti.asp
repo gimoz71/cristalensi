@@ -1,6 +1,8 @@
 			<div id="sidebar-alt" class="clearfix">
                     <div>
-                        <%if Instr(MM_LoginAction, "prodott")>0 or Instr(MM_LoginAction, "categorie")>0 or Instr(MM_LoginAction, "offerte")>0 or Instr(MM_LoginAction, "produttori")>0 or Instr(MM_LoginAction, "ricerca")>0 then%>
+                        <%'if Instr(MM_LoginAction, "prodott")>0 or Instr(MM_LoginAction, "categorie")>0 or Instr(MM_LoginAction, "offerte")>0 or Instr(MM_LoginAction, "produttori")>0 or Instr(MM_LoginAction, "ricerca")>0 then%>
+                        <%if Instr(MM_LoginAction, "carrello")>0 or Instr(MM_LoginAction, "calcolo")>0 or Instr(MM_LoginAction, "ordin")>0 or Instr(MM_LoginAction, "iscrizione")>0 or Instr(MM_LoginAction, "pagamento")>0 then%>
+                        <%else%>
                             <h3>Galleria prodotti</h3>
                             <ul class="product-menu">
                             <%
@@ -12,8 +14,8 @@
 							
 							nomepagina_categorie = cat_rs("NomePagina")
 							if nomepagina_categorie="" then nomepagina_categorie="#"
-							'if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/"&nomepagina_categorie
-							if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/categorie.asp?pkid="&cat_rs("PkId")
+							if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/"&nomepagina_categorie
+							'if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/categorie.asp?pkid="&cat_rs("PkId")
                             %>    
                                 <li><a href="<%=nomepagina_categorie%>" title="<%=cat_rs("Titolo")%>">&raquo; <%=cat_rs("Titolo")%></a></li>
                             <%
