@@ -332,7 +332,7 @@ We remind you moreover that the <strong>Email address</strong> will be your <str
                         	<h3 style="font-size: 14px; display: inline; border: none;">Client Authentication</h3>
                             <p>If you have already signed in, and therefore already have a <strong>Login</strong> and <strong>Password</strong>, it is not necessary to sign on again,
 it is sufficient that you enter the access data here: <strong>Login (email)</strong> and <strong>Password</strong></p>
-							<div class="iscrizione clearfix">
+							<div class="iscrizione clearfix" style="background-color: #FEF4C0; padding:5px 0px 8px 8px; border:0px; margin-bottom: 20px;">
                             	<form method="post" action="iscrizione.asp?mode=2&contr=1" name="newsform2">
                                     <div class="half_panel left_p" style="">
                                         <div >
@@ -343,9 +343,9 @@ it is sufficient that you enter the access data here: <strong>Login (email)</str
                                         </div>
                                     </div>
                                     <div class="half_panel left_p">
-                                        <div style="margin-top: 20px;">
-                                            <span style="text-align: center;"><button type="submit" name="accedi" class="button_link_red">sign in</button>&nbsp;&nbsp;&nbsp;</span>
-                                            <a href="recupero_pw.asp" ><small>Click here to recover your password</small></a>
+                                        <div style="margin-top: 25px;">
+                                            <span style="text-align: center;">&nbsp;&nbsp;&nbsp;<button type="submit" name="accedi" class="button_link_red">sign in</button>&nbsp;&nbsp;&nbsp;</span>
+                                            <a href="recupero_pw.asp" style="font-size:11px;">Click here to recover your password</a>
                                         </div>
                                     </div>
                                 </form>

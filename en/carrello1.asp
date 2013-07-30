@@ -267,15 +267,14 @@ Call Visualizzazione("",0,"carrello1.asp")
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     <form method="post" action="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">
-                                    <h4>Colors, Size and Note</h4>
-                                    <p>Writing in this space, color and size of the product if they are multiple variants of the same.<br>
-    Or, instead, you can use this space to insert notes or communications.</p>
+                                    <h3 style="font-size:12px;">Any notes</h3>
+                                    <p>You can use this space to enter any notes or communications in relation to the products purchased.</p>
                                     <textarea name="NoteCliente" cols="105" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
                                     <p><button type="submit" name="continua" style="float: left" class="button_link">&laquo; Click here to continue to buy</button>&nbsp;&nbsp;<button type="submit" name="continua" style="float: right" class="button_link_red">Click here to continue the order &raquo;</button></p>
                                     </form>
                                     <%end if%>
                                     <br>
-                                    <h4>AVAIBILITY OF PRODUCTS</h4>
+                                    <h3 style="font-size:12px;">AVAIBILITY OF PRODUCTS</h3>
                                     <p>Our catalog is made up of numerous products and producers, therefore some products may not be immediately available.  In the case that you urgently need the desired product, <strong>ask our staff directly if the product is available immediately or how long it will take for the merchandise to be in stock</strong>.<br>
 						Delivery will take place within a minimum of 2 days and a maximum of 30 days.<br>						<a href="contatti.asp">Contact to inquire about product availability</a></p>
 								<%end if%>

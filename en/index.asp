@@ -76,13 +76,13 @@
                     <div id="content">
                         <div>
                             <a href="chi_siamo.asp" title="Our Showroom in Italy"><img class="negozio" src="/images/negozio.jpg" alt="CRISTALENSI lights online store"></a>
-                            <img class="anni" src="/images/50anni_eng.jpg" alt="Cristalensi 50 years">
+                            <img class="anni" src="/images/50anni_eng.png" alt="Cristalensi 50 years">
                             <h3>Cristalensi, light as idea</h3>
                             <p class="incipit">At just a click away, a vast and refined assortment of italian lighting products for inside and out... Take a look around our <strong>on-line Store</strong> of lights or visit our <a href="chisiamo.asp" title="Our Showroom of lamps and lights"><strong>Showroom of lamps</strong></a>, we can satisfy all your style requirements be they classical or modern. 
                             </p>
                             <!--facebook-->
                             <div class="half_panel social_box left_p_fb">
-                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true" data-height="230"></div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true" data-height="240"></div>
                             </div>
                             <!--dicono di noi-->
                             <div class="half_panel social_box right_p">
@@ -95,7 +95,7 @@
 							if com_rs.recordcount>0 then
 								Do While not com_rs.EOF
 							%>
-							<p><%=Left(NoHTML(com_rs("Testo")), 120)%>...</p>
+							<p><%=Left(NoHTML(com_rs("Testo")), 100)%>...</p>
 							<%
 								com_rs.movenext
 								loop
@@ -105,7 +105,7 @@
                             </div>
                             <div class="spacer"></div>
                             <!--prodotti in offerta-->
-                            <h4 class="area clearfix"><span class="title">PRODUCTS ON OFFER: Don't miss the opportunity to buy italian style products!!!</span><a href="offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">ALL THE OFFERS &raquo;</a></h4>
+                            <h4 class="area clearfix"><span class="title">PRODUCTS ON OFFER: Don't miss the opportunity to buy italian products!!!</span><a href="offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">ALL THE OFFERS &raquo;</a></h4>
                             <%
 							'random prodotti in offerta
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")

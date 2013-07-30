@@ -226,7 +226,7 @@
                                     	<p class="riga">Il carrello è vuoto</p>
                                     <%end if%>
                                     <p>&nbsp;</p>
-                                    <h4>Eventuali annotazioni</h4>
+                                    <h3 style="font-size:12px;">Eventuali annotazioni</h3>
                                     <p>Potete usare questo spazio per inserie eventuali annotazioni o comunicazioni in relazione ai prodotti acquistati.</p>
                                     <textarea name="NoteCliente" cols="100" rows="2" id="NoteCliente" style="margin-left:20px;"><%=NoteCliente%></textarea> 
                                        
@@ -261,7 +261,7 @@
 										end if
                                         %>
                                     <p>&nbsp;</p>
-                                    <h4>Riferimenti per l'indirizzo di spedizione</h4>
+                                    <h3 style="font-size:12px;">Riferimenti per l'indirizzo di spedizione</h3>
                                     <p>E' possibile  indicare anche un indirizzo diverso da quello indicato (i dati riportati sono gli stessi indicati al momento dell'iscrizione)</p>
                                     <textarea name="Destinazione" cols="100" rows="2" id="Destinazione" style="margin-left:20px;"><%=Destinazione%></textarea> 
                                        

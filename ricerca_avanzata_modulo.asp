@@ -89,13 +89,13 @@
                             <div class="ricerca clearfix">                                
                                 <div class="table">
                                     <form method="post" action="/ricerca_avanzata_elenco.asp" name="newsform" onSubmit="return verifica();">
+                                    <p>&nbsp;</p>
                                     <div class="tr text-center">
 	                                        Nome o Codice del prodotto<br />
                                             <input name="titolo" type="text" id="titolo" style="width:300px;" />
                                     </div>
                                     <div class="tr text-center">
                                         <div class="td">
-
                                         Categoria<br />
                                             <%
                                                 Set cs=Server.CreateObject("ADODB.Recordset")
@@ -119,7 +119,7 @@
                                                     %>
                                              </select>
                                              <%cs.close%>
-                                    </div>
+                                    	</div>
                                     </div>
                                     <div class="tr text-center">
                                         <div class="td">

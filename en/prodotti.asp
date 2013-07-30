@@ -47,9 +47,9 @@ end if
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title><%if cat>0 then%><%=nuovo_title_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%> lighting products catalog online sale Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalog items indoor lighting outdoor lamps online sale Cristalesni<%end if%></title>
-		<meta name="description" content="<%if cat>0 then%><%=NoHTML(descrizione_cat)%><%end if%><%if FkProduttore>0 then%>lighting products catalog of <%=titolo_produttore%>, sale online lighting products Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalog items indoor lighting, outdoor lamps, sale online on Cristalesni<%end if%>">
-		<meta name="keywords" content="<%if cat>0 then%><%=nuovo_title_cat%><%end if%><%if FkProduttore>0 then%>lighting products catalog of  <%=titolo_produttore%> lighting products catalog online sale Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalog items indoor lighting outdoor lamps online sale Cristalesni<%end if%>">
+        <title><%if cat>0 then%><%=title_cat%> <%elseif FkProduttore>0 then%><%=titolo_produttore%> <%else%>lamps lights lighthing<%end if%></title>
+		<meta name="description" content="<%if cat>0 then%>Products sales <%=titolo_cat%><%=" "&TogliTAG(descrizione_cat)%><%elseif FkProduttore>0 then%>Products gallery <%=titolo_produttore%> lamps store online<%else%>Products gallery of lamps<%end if%>">
+		<meta name="keywords" content="<%if cat>0 then%><%=title_cat%>, <%elseif FkProduttore>0 then%><%=titolo_produttore%>, <%else%>lamps lights lighthing<%end if%>"/>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
@@ -122,7 +122,6 @@ end if
                                 <p>
                                     <i><%=descrizione_cat%></i>
                                 </p>
-                                <hr />
                                 <%else%>
                                 <p>&nbsp;</p>
                                 
@@ -137,7 +136,7 @@ end if
                                         }
                                     // End -->
                                     </SCRIPT>
-                             		
+                             		<div class="half_panel left_p">
                                     <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
                                       <p>
                                       Haven't found what you're looking for? Change the category: 
@@ -149,7 +148,7 @@ end if
                                         sql = sql + "ORDER BY Categorie1.Titolo_en ASC, Categorie2.Titolo_en ASC"
                                         cs.Open sql, conn, 1, 1
                                         %>
-                                        <select name="Cat" id="Cat" class="form" onChange="invia_account()">
+                                        <select name="Cat" id="Cat" class="form" onChange="invia_account()" style="margin-top:10px;">
                                             <%
                                             if cs.recordcount>0 then
                                             Do While Not cs.EOF
@@ -164,8 +163,13 @@ end if
                                          <%cs.close%>
                                         </p>
                                        </form>
-                                        <p style="text-align: center">Or, for a more detailed search, use the<p>
-                                        <p style="text-align: center"><a href="ricerca_avanzata_modulo.asp" class="button_link_red">ADVANCED SEARCH</a></p>
+                                       </div>
+                                       <div class="half_panel right_p">
+                                        <p>Or, for a more detailed search, use the<br>
+                                        <span><a href="ricerca_avanzata_modulo.asp" class="button_link_red" style="margin-top:7px;">ADVANCED SEARCH</a></span>
+                                        </p>
+                                        </div>
+                                    <div class="clear"></div>
                               	<%end if%>
                                 <%
 									p=request("p")
@@ -311,7 +315,7 @@ end if
                                         
                                         <div class="data">
                                             <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore_pr>0 then%><span class="produttore">Producers: <a href="prodotti.asp?FkProduttore=<%=fkproduttore_pr%>" title="List of products from the same producers: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
-                                            <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>You find the product in the category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
+                                            <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>" style="font-size:9px;"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Product description&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Product description</span></a>
 											
                                             <%if prezzoarticolo=0 then%>
@@ -500,7 +504,7 @@ end if
                                         </div>
                                         <div class="data">
                                             <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore>0 then%><span class="produttore">Producer: <a href="prodotti.asp?FkProduttore=<%=fkproduttore%>" title="List of products from the same producer: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
-                                            <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>You find the product in the category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
+                                            <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>" style="font-size:9px;"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Product description&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Product description</span></a>
                                             <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">List price: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Cristalensi price? Click here to have an estimate from our staff</a></p>

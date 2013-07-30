@@ -62,7 +62,7 @@
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <h3>Contatti</h3>
+                            <h3>Contacts</h3>
                             <div class="clearfix">
                                 <p class="corporate">
                                 <b>Cristalensi Snc</b> Di Lensi Massimiliano & C.<br />

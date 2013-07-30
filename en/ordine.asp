@@ -611,10 +611,10 @@
                                     <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>&#8364;</span>
                                     </p>
                                     <p>&nbsp;</p>
-                                    <h4>Mailing address</h4>
+                                    <h3 style="font-size:12px;">Mailing address</h3>
                                     <p><%=DatiSpedizione%></p>
                                     <p>&nbsp;</p>
-                                    <h4>Note</h4>
+                                    <h3 style="font-size:12px;">Any notes</h3>
                                     <p><%=NoteCliente%></p>
                                 </div>
                                 
@@ -626,7 +626,7 @@
                                     <span class="colonna prezzo_totale"><%=FormatNumber(CostoPagamento,2)%>&#8364;</span>
                                     </p>
                                     <p>&nbsp;</p>
-                                    <h4>Billing details:</h4>
+                                    <h3 style="font-size:12px;">Billing details:</h3>
                                     <div class="clearfix">
                                         <div class="table">
                                             <div class="tr">

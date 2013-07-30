@@ -238,10 +238,10 @@
                                     <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>€</span>
                                     </p>
                                     <p>&nbsp;</p>
-                                    <h4>Riferimenti per l'indirizzo di spedizione</h4>
+                                    <h3 style="font-size:12px;">Riferimenti per l'indirizzo di spedizione</h3>
                                     <p><%=DatiSpedizione%></p>
                                     <p>&nbsp;</p>
-                                    <h4>Eventuali annotazioni</h4>
+                                    <h3 style="font-size:12px;">Eventuali annotazioni</h3>
                                     <p><%=NoteCliente%></p>
                                 </div>
                                 
@@ -279,7 +279,7 @@
                                         loop
                                         %>
                                     <p>&nbsp;</p>
-                                    <h4>Riferimenti per i dati di fatturazione:</h4>
+                                    <h3 style="font-size:12px;">Riferimenti per i dati di fatturazione:</h3>
                                     <p>&egrave; possibile  indicare dati diversi da quelli indicati (i dati riportati sono gli stessi indicati al momento dell'iscrizione).<br>La fattura, alle aziende che espressamente la richiedono, è emessa per ordini superiori a 150€.</p>
                                     
                                     <div class="iscrizione clearfix">

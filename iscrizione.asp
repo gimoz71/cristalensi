@@ -331,20 +331,20 @@ if prov="" then prov=0
                         	
                         	<h3 style="font-size: 14px; display: inline; border: none;">Autenticazione cliente</h3>
                             <p>Se sei gi&agrave; iscritto, e quindi hai gi&agrave; Login (Email) e Password, non &egrave; necessario che ti iscriva nuovamente, &egrave; sufficiente inserire i dati di accesso qui sotto e sarai riconosciuto immediatamente.</p>
-							<div class="iscrizione clearfix">
+							<div class="iscrizione clearfix" style="background-color: #FEF4C0; padding:5px 0px 8px 8px; border:0px; margin-bottom: 20px;">
                             	<form method="post" action="iscrizione.asp?mode=2&contr=1" name="newsform2">
                                     <div class="half_panel left_p" style="">
                                         <div >
                                             Login <input name="login" type="text" id="login" size="30" />
                                         </div>
-                                        <div class="">
+                                        <div>
                                             Password <input name="password" type="password" id="password" size="30" />
                                         </div>
                                     </div>
                                     <div class="half_panel left_p">
-                                        <div style="margin-top: 20px;">
-                                            <span style="text-align: center;"><button type="submit" name="accedi" class="button_link_red">accedi</button>&nbsp;&nbsp;&nbsp;</span>
-                                            <a href="recupero_pw.asp" ><small>Clicca qui per recuperare la password</small></a>
+                                        <div style="margin-top: 25px;">
+                                            <span style="text-align: center;">&nbsp;&nbsp;&nbsp;<button type="submit" name="accedi" class="button_link_red">accedi</button>&nbsp;&nbsp;&nbsp;</span>
+                                            <a href="recupero_pw.asp" style="font-size:11px;">Clicca qui per recuperare la password</a>
                                         </div>
                                     </div>
                                 </form>

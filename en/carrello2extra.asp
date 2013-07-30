@@ -234,9 +234,8 @@
                                     	<p class="riga">Cart is empty</p>
                                     <%end if%>
                                     <p>&nbsp;</p>
-                                    <h4>Colors, Size and Note</h4>
-                                    <p>Writing in this space, color and size of the product if they are multiple variants of the same.<br>
-    Or, instead, you can use this space to insert notes or communications.</p>
+                                    <h3 style="font-size:12px;">Any notes</h3>
+                                    <p>You can use this space to enter any notes or communications in relation to the products purchased.</p>
                                     <textarea name="NoteCliente" cols="100" rows="2" id="NoteCliente" style="margin-left:20px;"><%=NoteCliente%></textarea> 
                                        
                                 </div>
@@ -262,7 +261,7 @@
                                         </p>
                                         <%end if%>
                                     <p>&nbsp;</p>
-                                    <h4>Mailing address</h4>
+                                    <h3 style="font-size:12px;">Mailing address</h3>
                                     <p>it is possible to indicate an address different from that already indicated (the data indicated are the same as those indicated at the moment of the registration)</p>
                                     <textarea name="Destinazione" cols="100" rows="2" id="Destinazione" style="margin-left:20px;"><%=Destinazione%></textarea> 
                                        

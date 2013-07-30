@@ -89,6 +89,7 @@
                             <div class="iscrizione clearfix">                                
                                 <div class="table">
                                     <form method="post" action="ricerca_avanzata_elenco.asp" name="newsform" onSubmit="return verifica();">
+                                    <p>&nbsp;</p>
                                     <div class="tr text-center">
 	                                        Name or Code of product<br />
                                             <input name="titolo" type="text" id="titolo" style="width:300px;" />

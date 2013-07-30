@@ -267,14 +267,14 @@ Call Visualizzazione("",0,"carrello1.asp")
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     <form method="post" action="<%if italia_log="Si" then%>/carrello2.asp<%end if%><%if italia_log="No" then%>/carrello2extra.asp<%end if%>">
-                                    <h4>Eventuali annotazioni</h4>
-                                    <p>Potete usare questo spazio per inserie eventuali annotazioni o comunicazioni in relazione ai prodotti acquistati.</p>
+                                    <h3 style="font-size:12px;">Eventuali annotazioni</h3>
+                                    <p>Potete usare questo spazio per inserire eventuali annotazioni o comunicazioni in relazione ai prodotti acquistati.</p>
                                     <textarea name="NoteCliente" cols="105" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
                                     <p><button type="button" name="continua" onClick="location.href='prodotti.asp'" style="float: left" class="button_link">&laquo; continua gli acquisti</button>&nbsp;&nbsp;<button type="submit" name="continua" style="float: right" class="button_link_red">clicca qui per completare l'acquisto  &raquo;</button></p>
                                     </form>
                                     <%end if%>
                                     <br>
-                                    <h4>INFORMAZIONI IMPORTANTI SULLA DISPONIBILITA' DEI PRODOTTI</h4>
+                                    <h3 style="font-size:12px;">INFORMAZIONI IMPORTANTI SULLA DISPONIBILITA' DEI PRODOTTI</h3>
                                     <p>Come potete aver notato il nostro catalogo è composto da numerosi prodotti e numerose ditte, a tal ragione alcuni prodotti, al momento della richiesta, potrebbero non essere dispobili immediatamente e potrebbero essere in fase di ordinazione. Nel caso in cui ci fosse urgenza del prodotto desiderato, informarsi direttamente dal nostro staff per l'effettiva disponibilità o tempo di consegna nel caso in cui non fosse disponibile (minimo 2 giorni, massimo 30 giorni). <a href="/contatti.asp">Recapiti per informarsi sulla disponibilità dei prodotti.</a></p>
 								<%end if%>
 								<%

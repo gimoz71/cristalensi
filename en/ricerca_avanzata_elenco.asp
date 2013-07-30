@@ -235,12 +235,13 @@ if prezzo_a="" then prezzo_a=0
                                         end if
                                         img_rs.close
                                         %>
+                                        <%if tot_img>0 then%><span style="float:right;">[<%if tot_img=1 then%>1 Image<%else%><%=tot_img%> Images<%end if%>]</span><%end if%>
                                         </div>
                                         <div class="data">
                                             <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore_pr>0 then%><span class="produttore">Producer: <a href="prodotti.asp?FkProduttore=<%=fkproduttore_pr%>" title="List of products from the same producers: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
-                                            <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>You find the product in the category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>"><%=titolo_cat%></a><%end if%></p>
+                                            <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>" style="font-size:9px;"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Product description&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Product description</span></a>
-											<%if tot_img>0 then%><span style="float:right;">[<%if tot_img=1 then%>1 Image<%else%><%=tot_img%> Images<%end if%>]</span><%end if%>
+											
                                             <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">List price: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Cristalensi price? Click here to have an estimate from our staff</a></p>
                                             <%else%>

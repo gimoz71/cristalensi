@@ -77,7 +77,7 @@
                         
                         <h3>Contact us!</h3>
                         <p>Our staff will be pleased to answer any questions</p>
-                        <p><a href="/en/contatti.asp" class="info" title="Lighthing Showromm in Florence">Maps & Contacts</a></p>
+                        <p><a href="/en/contatti.asp" class="info" title="Lighthing Showromm in Florence">Contacts and references</a></p>
                         <p class="note"><strong>Cristalensi Snc</strong><br />
                             di Lensi Massimiliano & C.<br />
                             C.F. e Iscr. Reg. Impr. di Florence 05305820481<br />
@@ -89,7 +89,7 @@
                             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
                         </p>
                        
-                        <h3>Follow us on Facebook</h3>
+                        <h3>Follow us on</h3>
                         <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Official page of Cristalensi"><img class="fb" src="/images/facebook.png" align="absmiddle" border="0" alt="Follow us on Facebook" /></a>
                         <p>&nbsp;</p>
                         

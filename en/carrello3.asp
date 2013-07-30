@@ -203,10 +203,10 @@
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                            <h3 style="font-size: 14px; display: inline; border: none;">Il tuo ordine: modalit&agrave; di pagamento</h3>
+                            <h3 style="font-size: 14px; display: inline; border: none;">Your order:&nbsp; method of payment</h3>
                             <div class="carrello clearfix">
                                 <form name="modulocarrello" id="modulocarrello">
-                                <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantità</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span></p>
+                                <p class="area clearfix"><span class="colonna articolo">[article code] product name</span><span class="colonna quantita">quantity</span><span class="colonna prezzo_unitario">unit cost</span><span class="colonna prezzo_totale">total</span></p>
                                 <div class="data">
                                     <%if rs.recordcount>0 then%>
                                         
@@ -219,18 +219,18 @@
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
                                         %>
-                                        <span class="colonna quantita"><%=quantita%> pezzi </span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>€</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>€</span></p>
+                                        <span class="colonna quantita"><%=quantita%> pieces </span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>€</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>€</span></p>
                                         <%
                                         rs.movenext
                                         loop
                                         %>
                                         
 									<%else%>
-                                    	<p class="riga">Il carrello è vuoto</p>
+                                    	<p class="riga">Cart is empty</p>
                                     <%end if%>
                                 </div>
                                 
-                                <p class="area clearfix"><span class="colonna descrizione">Modalit&agrave; di spedizione</span><span class="colonna prezzo_unitario">&nbsp;</span><span class="colonna prezzo_totale">Totale</span></p>
+                                <p class="area clearfix"><span class="colonna descrizione">Shipment method</span><span class="colonna prezzo_unitario">&nbsp;</span><span class="colonna prezzo_totale">Total</span></p>
                                 <div class="data">
                                     <p class="riga">
                                     <span class="colonna descrizione"><b><%=TipoTrasporto%></b></span>
@@ -238,10 +238,10 @@
                                     <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>€</span>
                                     </p>
                                     <p>&nbsp;</p>
-                                    <h4>Riferimenti per l'indirizzo di spedizione</h4>
+                                    <h3 style="font-size:12px;">Mailing address</h3>
                                     <p><%=DatiSpedizione%></p>
                                     <p>&nbsp;</p>
-                                    <h4>Colori misure e annotazioni</h4>
+                                    <h3 style="font-size:12px;">Any notes</h3>
                                     <p><%=NoteCliente%></p>
                                 </div>
                                 
@@ -256,13 +256,13 @@
 								trasp_rs.Open sql, conn, 1, 1
 								if trasp_rs.recordcount>0 then
 								%>
-                                <p class="area clearfix"><span class="colonna descrizione">Modalit&agrave; di pagamento - Descrizione</span><span class="colonna prezzo_unitario">Costo</span><span class="colonna prezzo_totale">Totale</span></p>
+                                <p class="area clearfix"><span class="colonna descrizione">Method of Payment - Description</span><span class="colonna prezzo_unitario">Cost</span><span class="colonna prezzo_totale">Total</span></p>
                                 <div class="data">
                                         <%
 										Do while not trasp_rs.EOF
 										PkIdPagamento=trasp_rs("pkid")
-										NomePagamento=trasp_rs("nome")
-										DescrizionePagamento=trasp_rs("descrizione")
+										NomePagamento=trasp_rs("nome_en")
+										DescrizionePagamento=trasp_rs("descrizione_en")
 										CostoPagamento=trasp_rs("costo")
 										
 										TipoCosto=trasp_rs("TipoCosto")
@@ -279,48 +279,49 @@
                                         loop
                                         %>
                                     <p>&nbsp;</p>
-                                    <h4>Riferimenti per i dati di fatturazione:</h4>
-                                    <p>&egrave; possibile  indicare dati diversi da quelli indicati (i dati riportati sono gli stessi indicati al momento dell'iscrizione).<br>La fattura, alle aziende che espressamente la richiedono, è emessa per ordini superiori a 150€.</p>
+                                    <h3 style="font-size:12px;">Billing details:</h3>
+                                    <p>it is possible to include data different than those already included (the data included are the same as those indicated in the registration).<br>
+                  The bill, for those companies who expressly request it, will only be  issued for totals superior to 150 Euros.</p>
                                     
                                     <div class="iscrizione clearfix">
                                     <div class="table">
                                     <div class="tr">
                                         <div class="td">
-	                                        Nome e Cognome (*)<br />
+	                                        Name and Surname (*)<br />
                                             <input name="nominativo" type="text" class="form" id="nominativo"  size="30" maxlength="50" value="<%=nominativo%>" />
                                         </div>
                                         <div class="td">
-                                        	Ragione sociale ( nel caso in cui si tratti di un'Azienda )<br />
+                                        	Company name  ( in the case of a business )<br />
                                             <input name="Rag_Soc" type="text" class="form" id="Rag_Soc"  size="30" maxlength="50" value="<%=Rag_Soc%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
                                         <div class="td">
-                                        Codice Fiscale<br />
+                                        Tax Code<br />
                                             <input name="cod_fisc" type="text" class="form" id="cod_fisc"  size="20" maxlength="16" value="<%=cod_fisc%>" />
                                         </div>
                                         <div class="td">
-                                        Partita IVA ( nel caso in cui si tratti di un'Azienda )<br />
+                                        Value Added Tax registration number or equivalent ( in the case of a business )<br />
                                             <input name="PartitaIVA" type="text" class="form" id="PartitaIVA"  size="20" maxlength="11" value="<%=PartitaIVA%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
                                         <div class="td">
-                                        	Indirizzo (*)<br />
+                                        	Address (*)<br />
                                             <input name="indirizzo" type="text" class="form" id="indirizzo"  size="30" maxlength="100" value="<%=indirizzo%>" />
                                         </div>
                                         <div class="td">
-                                        	CAP<br />
+                                        	Post Code<br />
                                             <input name="cap" type="text" class="form" id="cap"  size="7" maxlength="5" value="<%=cap%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
                                         <div class="td">
-	                                        Citt&agrave; (*)<br />
+	                                        City (*)<br />
                                             <input name="citta" type="text" class="form" id="citta"  size="30" maxlength="50" value="<%=citta%>" />
                                         </div>
                                         <div class="td">
-	                                        Provincia<br />
+	                                        Province/Region<br />
                                             <input type="text" name="provincia" id="provincia" value="<%=provincia%>" size="3" maxlength="2" class="form" />
                                         </div>
                                     </div>
@@ -332,7 +333,7 @@
                                 <%trasp_rs.close%>
                                 
                                 <%if ss.recordcount>0 then%>
-                                  <h4 class="cart clearfix"><span class="total_price">Totale carrello: 
+                                  <h4 class="cart clearfix"><span class="total_price">Total order: 
 								  <%if ss("TotaleGenerale")<>0 then%>
 								  <%=FormatNumber(ss("TotaleGenerale"),2)%>
                                   <%else%>
@@ -342,8 +343,8 @@
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     
-                                    <p><button type="button" name="indietro" onClick="location.href='carrello2.asp'" style="float:left;" class="button_link">&laquo; passo precedente</button>
-                                    <button type="button" name="continua" onClick="Continua();" style="float:right;" class="button_link_red">CONCLUDI L'ACQUISTO &raquo;</button></p>
+                                    <p><button type="button" name="indietro" onClick="location.href='carrello2.asp'" style="float:left;" class="button_link">&laquo; Previous step</button>
+                                    <button type="button" name="continua" onClick="Continua();" style="float:right;" class="button_link_red">Click here to buy out the order &raquo;</button></p>
                                     <%end if%>
 								<%end if%>
                                 
