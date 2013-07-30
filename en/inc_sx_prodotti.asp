@@ -1,6 +1,8 @@
 			<div id="sidebar-alt" class="clearfix">
                     <div>
-                        <%if Instr(MM_LoginAction, "prodott")>0 or Instr(MM_LoginAction, "categorie")>0 or Instr(MM_LoginAction, "offerte")>0 or Instr(MM_LoginAction, "produttori")>0 or Instr(MM_LoginAction, "ricerca")>0 then%>
+                        <%'if Instr(MM_LoginAction, "prodott")>0 or Instr(MM_LoginAction, "categorie")>0 or Instr(MM_LoginAction, "offerte")>0 or Instr(MM_LoginAction, "produttori")>0 or Instr(MM_LoginAction, "ricerca")>0 then%>
+                        <%if Instr(MM_LoginAction, "carrello")>0 or Instr(MM_LoginAction, "calcolo")>0 or Instr(MM_LoginAction, "ordin")>0 or Instr(MM_LoginAction, "iscrizione")>0 or Instr(MM_LoginAction, "pagamento")>0 then%>
+                        <%else%>
                             <h3>Product Gallery</h3>
                             <ul class="product-menu">
                             <%
@@ -56,7 +58,7 @@
                             <%end if%>
                             <%cs.close%>
                             <p><br /><br />Discover the latest offers online</p>
-                            <a href="/en/offerte.asp" class="button_link_red" title="Latest offers of lamps">LATEST OFFERS</a>
+                            <a href="/en/offerte.asp" class="button_link_red" title="Latest offers of lamps">&nbsp;&nbsp;LATEST OFFERS&nbsp;&nbsp;</a>
                             <p><br /><br />Do You want to search for a product code, name or in a price range? Do You want to combine a number of features?
                                 Use the advanced search</p>
                             <a href="/en/ricerca_avanzata_modulo.asp" class="button_link_red" title="Advanced search lighting products">ADVANCED SEARCH</a>
