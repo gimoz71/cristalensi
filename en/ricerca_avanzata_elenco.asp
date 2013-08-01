@@ -2,6 +2,7 @@
 <!--#include file="inc_clsImageSize.asp"-->
 <%
 titolo=request("titolo")
+titolo=Replace(titolo, "'", "")
 
 cat=request("cat")				  
 if cat="" then cat=0

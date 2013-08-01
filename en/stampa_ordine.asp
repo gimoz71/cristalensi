@@ -110,10 +110,10 @@
 			  <table width="100%"  border="0" cellpadding="0" cellspacing="0">
                 
 				<tr class="sfondo-giallo">
-                  <td height="20" align="left">&nbsp;[codice articolo] nome prodotto</td>
-				  <td height="20" align="right">quantità</td>
-				  <td height="20" align="right">costo unitario</td>
-				  <td width="131" height="20" align="right">totale</td>
+                  <td height="20" align="left">&nbsp;[article code] product name</td>
+				  <td height="20" align="right">quantity</td>
+				  <td height="20" align="right">unit cost</td>
+				  <td width="131" height="20" align="right">total</td>
 			    </tr>
 				<tr>
                   <td colspan="4" align="left" class="intestazione-elenco"><img src="immagini/spacer.gif" height="5"></td>
@@ -123,7 +123,12 @@
                 </tr>
 <%
 	Set rs = Server.CreateObject("ADODB.Recordset")
-	sql = "SELECT RigheOrdine.PkId, RigheOrdine.FkOrdine, RigheOrdine.PrezzoProdotto as PrezzoProdotto, RigheOrdine.FkProdotto, RigheOrdine.Quantita, RigheOrdine.TotaleRiga, Prodotti.Titolo, Prodotti.CodiceArticolo FROM Prodotti INNER JOIN RigheOrdine ON Prodotti.PkId = RigheOrdine.FkProdotto WHERE (((RigheOrdine.FkOrdine)="&idOrdine&"))"
+	'sql = "SELECT RigheOrdine.PkId, RigheOrdine.FkOrdine, RigheOrdine.PrezzoProdotto as PrezzoProdotto, RigheOrdine.FkProdotto, RigheOrdine.Quantita, RigheOrdine.TotaleRiga, Prodotti.Titolo, Prodotti.CodiceArticolo FROM Prodotti INNER JOIN RigheOrdine ON Prodotti.PkId = RigheOrdine.FkProdotto WHERE (((RigheOrdine.FkOrdine)="&idOrdine&"))"
+	if pkid<12210 then
+		sql = "SELECT RigheOrdine.PkId, RigheOrdine.FkOrdine, RigheOrdine.PrezzoProdotto as PrezzoProdotto, RigheOrdine.FkProdotto, RigheOrdine.Quantita, RigheOrdine.TotaleRiga, Prodotti.Titolo, Prodotti.CodiceArticolo, RigheOrdine.Colore FROM Prodotti INNER JOIN RigheOrdine ON Prodotti.PkId = RigheOrdine.FkProdotto WHERE (((RigheOrdine.FkOrdine)="&idOrdine&"))"
+	else
+		sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
+	end if
 	rs.Open sql, conn, 1, 1
 	num_prodotti_carrello=rs.recordcount
 if rs.recordcount>0 then
@@ -133,13 +138,13 @@ Do while not rs.EOF
 %>					
 				  <tr>
                   <td align="left" width="341">
-				  <b>[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%></b>				  				  </td>
+				  <b>[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%></b><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%>				  				  </td>
                   <td align="right" width="89">
 				  <%
 				  quantita=rs("quantita")
 				  if quantita="" then quantita=1
 				  %>
-				  <%=quantita%> pezzi </td>
+				  <%=quantita%> pieces </td>
                   <td align="right" width="119"><%=FormatNumber(rs("PrezzoProdotto"),2)%>€</td>
                   <td align="right"><%=FormatNumber(rs("TotaleRiga"),2)%>€</td>
                   </tr>
@@ -160,8 +165,8 @@ loop
 			  <br>
 			  <table width="100%"  border="0" cellpadding="0" cellspacing="0">
 				<tr class="sfondo-giallo">
-				<td width="609" height="20" align="left">&nbsp;Modalit&agrave; di spedizione </td>
-				<td width="71" height="20" align="right">totale</td>
+				<td width="609" height="20" align="left">&nbsp;Shipment method </td>
+				<td width="71" height="20" align="right">total</td>
 				</tr>
 				<tr>
 				<td colspan="2" align="left" class="intestazione-elenco"><img src="immagini/spacer.gif" height="5"></td>
@@ -181,13 +186,13 @@ loop
                 <td colspan="2" align="left"><img src="immagini/spacer.gif" height="10"></td>
                 </tr>
 				<tr>
-                <td height="35" colspan="2" align="left"><b>Riferimenti per l'indirizzo di spedizione:</b><br><%=DatiSpedizione%></td>
+                <td height="35" colspan="2" align="left"><b>Mailing address:</b><br><%=DatiSpedizione%></td>
                 </tr>
 				<tr>
                 <td colspan="2" align="left"><img src="immagini/spacer.gif" height="10"></td>
                 </tr>
 				<tr>
-                <td height="35" colspan="2" align="left"><b>Eventuali annotazioni:</b><br><%=NoteCliente%></td>
+                <td height="35" colspan="2" align="left"><b>Any notes:</b><br><%=NoteCliente%></td>
                 </tr>
 				<tr>
                 <td colspan="2" align="left"><img src="immagini/spacer.gif" height="10"></td>
@@ -195,8 +200,8 @@ loop
 			  </table>
 			  <table width="100%"  border="0" cellpadding="0" cellspacing="0">
 				<tr class="sfondo-giallo">
-				<td width="89%" height="20" align="left">&nbsp;Modalit&agrave; di Pagamento </td>
-				<td width="11%" height="20" align="right">totale</td>
+				<td width="89%" height="20" align="left">&nbsp;Method of Payment </td>
+				<td width="11%" height="20" align="right">total</td>
 				</tr>
 				<tr>
 				<td colspan="2" align="left" class="intestazione-elenco"><img src="immagini/spacer.gif" height="5"></td>
@@ -213,7 +218,7 @@ loop
                 <td colspan="2" align="left" class="divisione-elenco"><img src="immagini/spacer.gif" height="10"></td>
                 </tr>
 				<tr>
-                <td height="25" colspan="2" align="left"><b>Riferimenti per i dati di fatturazione: </b></td>
+                <td height="25" colspan="2" align="left"><b>Billing details: </b></td>
                 </tr>
 				<tr>
                 <td colspan="2" align="center">
@@ -222,7 +227,7 @@ loop
                       <td height="20" colspan="2"><%if Rag_Soc<>"" then%><%=Rag_Soc%>&nbsp;&nbsp;<%end if%><%if nominativo<>"" then%><%=nominativo%><%end if%></td>
                     </tr>
                     <tr align="left">
-                      <td height="20" colspan="2">Codice fiscale: <%=Cod_Fisc%><%if PartitaIVA<>"" then%> - Partita IVA: <%=PartitaIVA%><%end if%></td>
+                      <td height="20" colspan="2">Tax Code: <%=Cod_Fisc%><%if PartitaIVA<>"" then%> - VAT: <%=PartitaIVA%><%end if%></td>
 				    </tr>
                     <tr align="left">
                       <td height="20" colspan="2"><%=indirizzo%></td>
@@ -248,7 +253,7 @@ loop
                   <td colspan="2" align="left"><img src="immagini/spacer.gif" height="5"></td>
                 </tr>
 				<tr>
-                  <td height="25" colspan="2" align="right" class="sfondo-giallo"><strong> Totale ordine:&nbsp;
+                  <td height="25" colspan="2" align="right" class="sfondo-giallo"><strong> Total order:&nbsp;
                       <%if TotaleGenerale<>0 then%>
                       <%=FormatNumber(TotaleGenerale,2)%>
                       <%else%>
@@ -264,7 +269,7 @@ loop
                 </tr>
 				<tr>
                   <td align="left">&nbsp;</td>
-				  <td align="right"><input type="button" name="stampa" value="Stampa ordine" class="button" onClick="print();">
+				  <td align="right"><input type="button" name="stampa" value="Print order" class="button" onClick="print();">
 				  </td>
 				</tr>
               </table>
