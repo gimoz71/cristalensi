@@ -49,8 +49,8 @@
 			Oggetto = "Recupero password dal sito Cristalensi.it"
 			Testo = HTML1
 
-			'Set eMail_cdo = CreateObject("CDO.Message")
-'
+			Set eMail_cdo = CreateObject("CDO.Message")
+
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
@@ -206,7 +206,7 @@
                           			<font color="#990000"><b>Attenzione! L'e-mail inserita non &egrave; corretta</b></font>
                                     </div>
                         			<%end if%>
-                                    <div class="tr"><p style="text-align: center;"><button type="submit" name="accedi" class="button_link">Invia</button></p></div>
+                                    <div class="tr text-center"><div class="td"><button type="submit" name="accedi" class="button_link">Invia</button></div></div>
                                 </div>
                                 </form>
                             </div>

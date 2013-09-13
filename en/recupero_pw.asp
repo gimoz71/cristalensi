@@ -206,7 +206,7 @@
                           			<font color="#990000"><b>Attention! The e-mail inserted is not correct</b></font>
                                     </div>
                         			<%end if%>
-                                    <div class="tr"><p style="text-align: center;"><button type="submit" name="accedi" class="button_link">submit</button></p></div>
+                                    <div class="tr text-center"><div class="td"><button type="submit" name="accedi" class="button_link">submit</button></div></div>
                                 </div>
                                 </form>
                             </div>
