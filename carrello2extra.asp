@@ -3,7 +3,7 @@
 	mode=request("mode")
 	if mode="" then mode=0
 	
-	'se la session è già aperta sfrutto il pkid dell'ordine, altrimenti ne apro una
+	'se la session &eacute; gi&agrave; aperta sfrutto il pkid dell'ordine, altrimenti ne apro una
 	IdOrdine=session("ordine_shop")
 	if IdOrdine="" then IdOrdine=0
 	if idOrdine=0 then response.redirect("carrello1.asp")
@@ -25,7 +25,7 @@
 	mode=request("mode")
 	if mode="" then mode=0
 	
-	'inserisco il costo del trasporto. se nn ne è stato scelto uno, perchè sono appena entrato adesso in questa pagina, prendo il primo costo dal db
+	'inserisco il costo del trasporto. se nn ne &eacute; stato scelto uno, perch&eacute; sono appena entrato adesso in questa pagina, prendo il primo costo dal db
 	
 '	TipoTrasportoScelto=3
 
@@ -116,7 +116,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi - Carrello</title>
         <!--[if lt IE 9]>
@@ -211,7 +211,7 @@
                             <h3 style="font-size: 14px; display: inline; border: none;">Il tuo ordine: modalit&agrave; di spedizione/ritiro prodotti</h3>
                             <div class="carrello clearfix">
                                 <form name="modulocarrello" id="modulocarrello">
-                                <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantità</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span></p>
+                                <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantit&agrave;</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span></p>
                                 <div class="data">
                                     <%if rs.recordcount>0 then%>
                                         
@@ -224,14 +224,14 @@
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
                                         %>
-                                        <span class="colonna quantita"><%=quantita%> pezzi </span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>€</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>€</span></p>
+                                        <span class="colonna quantita"><%=quantita%> pezzi </span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>&#8364;</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>&#8364;</span></p>
                                         <%
                                         rs.movenext
                                         loop
                                         %>
                                         
 									<%else%>
-                                    	<p class="riga">Il carrello è vuoto</p>
+                                    	<p class="riga">Il carrello &eacute; vuoto</p>
                                     <%end if%>
                                     <p>&nbsp;</p>
                                     <h3 style="font-size:12px;">Eventuali annotazioni</h3>
@@ -245,12 +245,12 @@
                                         <%if stato_ordine=22 then%>					
                                         <p class="riga">
                                         <span class="colonna descrizione"><b>Corriere internazionale</b></span>
-                                        <span class="colonna prezzo_unitario"><%=FormatNumber(CostoSpedizioneTotale,2)%>€</span>
-                                        <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>€</span>
+                                        <span class="colonna prezzo_unitario"><%=FormatNumber(CostoSpedizioneTotale,2)%>&#8364;</span>
+                                        <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>&#8364;</span>
                                         </p>
                                         <%else%>
                                         <p class="riga">
-                                        <span class="colonna descrizione"><b>Corriere internazionale</b><br />Per le spedizioni internazionali è necessario calcolare il peso dei prodotti ordinati per sapere il costo della spedizione.<br />
+                                        <span class="colonna descrizione"><b>Corriere internazionale</b><br />Per le spedizioni internazionali &eacute; necessario calcolare il peso dei prodotti ordinati per sapere il costo della spedizione.<br />
 			      Per chi desidera continuare l'acquisto deve seguire la seguente procedura:<br />
 			      -assicurarsi che i prodotti inseriti nel carrello siano quelli desiderati,<br />
 			      -cliccare sul pulsante &quot;clicca qui per il calcolo del costo di spedizione&quot;.<br />
@@ -274,7 +274,7 @@
                                   <%else%>
                                   0,00
                                   <%end if%>
-                                  €&nbsp;
+                                  &#8364;&nbsp;
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     

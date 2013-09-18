@@ -160,7 +160,7 @@ Call Visualizzazione("",0,"carrello1.asp")
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi - Carrello E-commerce vendita lampadari</title>
         <!--[if lt IE 9]>
@@ -231,7 +231,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                         <div>
                             <h3 style="font-size: 14px; display: inline; border: none;">Il tuo carrello:</h3> <p style="display: inline;"><%=num_prodotti_carrello%>&nbsp;<%if num_prodotti_carrello=1 then%>prodotto inserito<%else%>prodotti inseriti<%end if%></p>  <%if idOrdine<>0 then%><a href="/carrello1.asp?mode=2" style="float:right; font-size: 12px;">svuota il carrello <span style="display: inline-block; padding: 0 2px; font-weight: bold;border: dotted 1px #c00; font-style: italic; color: #c00;">x</span></a><%end if%>
                             <div class="carrello clearfix">
-                                <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantità</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span><span class="colonna elimina">elimina</span></p>
+                                <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantit&agrave;</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span><span class="colonna elimina">elimina</span></p>
                                 <div class="data">
                                     <%if rs.recordcount>0 then%>
                                         <form method="post" action="carrello1.asp?mode=1" style="margin=0px;">
@@ -245,7 +245,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
                                         %>
-                                        <span class="colonna quantita">n° pezzi <input name="quantita<%=conta%>" value="<%=quantita%>" type="text" style="width: 20px"></span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>€</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>€</span><span class="colonna elimina"><input name="eliminare" value="<%=rs("pkid")%>" type="checkbox"></span></p>
+                                        <span class="colonna quantita">n&deg; pezzi <input name="quantita<%=conta%>" value="<%=quantita%>" type="text" style="width: 20px"></span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>&#8364;</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>&#8364;</span><span class="colonna elimina"><input name="eliminare" value="<%=rs("pkid")%>" type="checkbox"></span></p>
                                         <%
                                         conta=conta+1
                                         rs.movenext
@@ -254,7 +254,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         <p class="riga" style="text-align: right"><button name="aggiorna" type="submit" class="button_link">aggiorna i prodotti</button></p>
                                         </form>
 									<%else%>
-                                    	<p class="riga">Il carrello è vuoto</p>
+                                    	<p class="riga">Il carrello &eacute; vuoto</p>
                                     <%end if%>    
                                 </div>
                                 <%if ss.recordcount>0 then%>
@@ -263,7 +263,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                   <%else%>
                                   0,00
                                   <%end if%>
-                                  €
+                                  &#8364;
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     <form method="post" action="<%if italia_log="Si" then%>/carrello2.asp<%end if%><%if italia_log="No" then%>/carrello2extra.asp<%end if%>">
@@ -275,7 +275,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                     <%end if%>
                                     <br>
                                     <h3 style="font-size:12px;">INFORMAZIONI IMPORTANTI SULLA DISPONIBILITA' DEI PRODOTTI</h3>
-                                    <p>Come potete aver notato il nostro catalogo è composto da numerosi prodotti e numerose ditte, a tal ragione alcuni prodotti, al momento della richiesta, potrebbero non essere dispobili immediatamente e potrebbero essere in fase di ordinazione. Nel caso in cui ci fosse urgenza del prodotto desiderato, informarsi direttamente dal nostro staff per l'effettiva disponibilità o tempo di consegna nel caso in cui non fosse disponibile (minimo 2 giorni, massimo 30 giorni). <a href="/contatti.asp">Recapiti per informarsi sulla disponibilità dei prodotti.</a></p>
+                                    <p>Come potete aver notato il nostro catalogo &eacute; composto da numerosi prodotti e numerose ditte, a tal ragione alcuni prodotti, al momento della richiesta, potrebbero non essere dispobili immediatamente e potrebbero essere in fase di ordinazione. Nel caso in cui ci fosse urgenza del prodotto desiderato, informarsi direttamente dal nostro staff per l'effettiva disponibilit&agrave; o tempo di consegna nel caso in cui non fosse disponibile (minimo 2 giorni, massimo 30 giorni). <a href="/contatti.asp">Recapiti per informarsi sulla disponibilit&agrave; dei prodotti.</a></p>
 								<%end if%>
 								<%
                                 ss.close

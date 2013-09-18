@@ -18,7 +18,7 @@ end if
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi - Ordini</title>
         <!--[if lt IE 9]>
@@ -124,7 +124,7 @@ end if
 										  TotaleGenerale=rs("TotaleGenerale")
 										  if TotaleGenerale="" or Isnull(TotaleGenerale) then TotaleGenerale=0
 										  %>
-										  <%=FormatNumber(TotaleGenerale,2)%>€
+										  <%=FormatNumber(TotaleGenerale,2)%>&#8364;
                                         </span>
                                         <span class="colonna stato"><%=etichetta_stato%></span>
                                         <span class="colonna azioni">

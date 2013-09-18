@@ -167,6 +167,7 @@ Function NoLettAcc(strInput)
  strInput = Replace(strInput, "€", "&#8364;")
  strInput = Replace(strInput, "'", "&#8217;")
  
+ 
  NoLettAcc = strInput 
  
 End Function

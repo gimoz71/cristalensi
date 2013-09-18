@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Negozio lampadari prodotti illuminazione da interno illuminazione da esterno showroom vicino Firenze</title>
 		<meta name="description" content="Cristalensi, negozio lampadari vicino Firenze, vende prodotti per illuminazione da interno, illuminazione da esterno, lampadari, piantane, plafoniere, lampade da esterno, ventilatori, lampade per bambini e lampade per il bagno, prodotti in molti stili dal moderno al classico.">
@@ -75,9 +75,9 @@
                             <a href="images/chi-siamo/grandi/5.jpg" class="fancybox" rel="gallery" title="Negozio illuminazione - Entrata e parcheggio"><img class="immagini" src="images/chi-siamo/piccole/5.jpg"></a>
                             <a href="images/chi-siamo/grandi/6.jpg" class="fancybox" rel="gallery" title="Negozio illuminazione - Staff"><img class="immagini" src="images/chi-siamo/piccole/6.jpg"></a>
                             <a href="images/chi-siamo/grandi/1.jpg" class="fancybox" rel="gallery" title="Negozio lampadari - Panoramica"><img class="immagini" src="images/chi-siamo/piccole/1.jpg"></a>
-                            <h3 class="corporate"><strong>Da 50 anni</strong>, la prerogativa di questo affermato negozio di lampadari è fornire alla clientela una <strong>vasta e raffinata gamma di prodotti di illuminazione da interno ed esterno</strong> volti a soddisfare esigenze <strong>classiche e moderne</strong>.
-                                Alogene, plafoniere, appliques, lumi da tavolo, fari, faretti e lampade a risparmio energetico fanno bella mostra di sè nella <strong>sala espositiva</strong> dell'azienda stessa.<br><br>
-                                Grazie ad una privilegiata posizione stradale, (tra Firenze, Pisa e Siena: <a href="contatti.asp" title="Negozio illuminazione Firenze">vedi la mappa</a>) e favorita da un <strong>ampio parcheggio</strong>, il negozio di lampadari offre la possibilità di una visita in tutta tranquillità al nostro <strong>showroom</strong>.<br><br>
+                            <h3 class="corporate"><strong>Da 50 anni</strong>, la prerogativa di questo affermato negozio di lampadari &eacute; fornire alla clientela una <strong>vasta e raffinata gamma di prodotti di illuminazione da interno ed esterno</strong> volti a soddisfare esigenze <strong>classiche e moderne</strong>.
+                                Alogene, plafoniere, appliques, lumi da tavolo, fari, faretti e lampade a risparmio energetico fanno bella mostra di s&eacute; nella <strong>sala espositiva</strong> dell'azienda stessa.<br><br>
+                                Grazie ad una privilegiata posizione stradale, (tra Firenze, Pisa e Siena: <a href="contatti.asp" title="Negozio illuminazione Firenze">vedi la mappa</a>) e favorita da un <strong>ampio parcheggio</strong>, il negozio di lampadari offre la possibilit&agrave; di una visita in tutta tranquillit&agrave; al nostro <strong>showroom</strong>.<br><br>
                                 Piscine, parchi e giardini assumono un aspetto caratteristico grazie al gioco di luci ed ombre creato da <strong>tecnici esperti</strong> per il montaggio in esterni:
                                 l'azienda Cristalensi offre un <strong>servizio completo</strong> alla sua clientela, offrendo <strong>preventivi gratuiti</strong> con <strong>sopralluoghi</strong> all'ambiente da illuminare.<br><br>
                                 <i><strong>Cliccare sulle fotografie per vederle ingrandite</strong></i></h3>

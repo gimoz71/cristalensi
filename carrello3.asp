@@ -5,14 +5,14 @@
 	mode=request("mode")
 	if mode="" then mode=0
 	
-	'se la session è già aperta sfrutto il pkid dell'ordine, altrimenti ne apro una
+	'se la session &eacute; gi&agrave; aperta sfrutto il pkid dell'ordine, altrimenti ne apro una
 	IdOrdine=session("ordine_shop")
 	if IdOrdine="" then IdOrdine=0
 	if idOrdine=0 then response.redirect("carrello1.asp")
 	
 	if idsession=0 then response.Redirect("iscrizione.asp?prov=1")
 	
-	'inserisco il costo del pagamento. se nn ne è stato scelto uno, perchè sono appena entrato adesso in questa pagina, prendo il primo costo dal db
+	'inserisco il costo del pagamento. se nn ne &eacute; stato scelto uno, perch&eacute; sono appena entrato adesso in questa pagina, prendo il primo costo dal db
 	
 	TipoPagamentoScelto=request("TipoPagamentoScelto")
 	if TipoPagamentoScelto="" then TipoPagamentoScelto=0
@@ -109,7 +109,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi</title>
         <!--[if lt IE 9]>
@@ -206,7 +206,7 @@
                             <h3 style="font-size: 14px; display: inline; border: none;">Il tuo ordine: modalit&agrave; di pagamento</h3>
                             <div class="carrello clearfix">
                                 <form name="modulocarrello" id="modulocarrello">
-                                <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantità</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span></p>
+                                <p class="area clearfix"><span class="colonna articolo">[Codice articolo] Nome prodotto</span><span class="colonna quantita">quantit&agrave;</span><span class="colonna prezzo_unitario">prezzo unitario</span><span class="colonna prezzo_totale">prezzo totale</span></p>
                                 <div class="data">
                                     <%if rs.recordcount>0 then%>
                                         
@@ -219,14 +219,14 @@
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
                                         %>
-                                        <span class="colonna quantita"><%=quantita%> pezzi </span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>€</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>€</span></p>
+                                        <span class="colonna quantita"><%=quantita%> pezzi </span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>&#8364;</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>&#8364;</span></p>
                                         <%
                                         rs.movenext
                                         loop
                                         %>
                                         
 									<%else%>
-                                    	<p class="riga">Il carrello è vuoto</p>
+                                    	<p class="riga">Il carrello &eacute; vuoto</p>
                                     <%end if%>
                                 </div>
                                 
@@ -235,7 +235,7 @@
                                     <p class="riga">
                                     <span class="colonna descrizione"><b><%=TipoTrasporto%></b></span>
                                     <span class="colonna prezzo_unitario">&nbsp;</span>
-                                    <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>€</span>
+                                    <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>&#8364;</span>
                                     </p>
                                     <p>&nbsp;</p>
                                     <h3 style="font-size:12px;">Riferimenti per l'indirizzo di spedizione</h3>
@@ -271,8 +271,8 @@
     
                                         <p class="riga">
                                         <span class="colonna descrizione"><input type="radio" name="TipoPagamentoScelto" id="TipoPagamentoScelto" value="<%=PkIdPagamento%>" <%if PkIdPagamento=PkIdPagamentoScelto then%> checked="checked"<%end if%> onClick="Cambia();">&nbsp;<b><%=NomePagamento%></b><br><%=NoLettAcc(DescrizionePagamento)%></span>
-                                        <span class="colonna prezzo_unitario"><%=FormatNumber(CostoPagamento,2)%><%if TipoCosto=1 then%>€<%end if%><%if TipoCosto=2 then%>%<%end if%></span>
-                                        <span class="colonna prezzo_totale"><%if PkIdPagamento=PkIdPagamentoScelto then%><%=FormatNumber(CostoPagamentoTotale,2)%>€<%else%>-<%end if%></span>
+                                        <span class="colonna prezzo_unitario"><%=FormatNumber(CostoPagamento,2)%><%if TipoCosto=1 then%>&#8364;<%end if%><%if TipoCosto=2 then%>%<%end if%></span>
+                                        <span class="colonna prezzo_totale"><%if PkIdPagamento=PkIdPagamentoScelto then%><%=FormatNumber(CostoPagamentoTotale,2)%>&#8364;<%else%>-<%end if%></span>
                                         </p>
                                         <%
                                         trasp_rs.movenext
@@ -280,7 +280,7 @@
                                         %>
                                     <p>&nbsp;</p>
                                     <h3 style="font-size:12px;">Riferimenti per i dati di fatturazione:</h3>
-                                    <p>&egrave; possibile  indicare dati diversi da quelli indicati (i dati riportati sono gli stessi indicati al momento dell'iscrizione).<br>La fattura, alle aziende che espressamente la richiedono, è emessa per ordini superiori a 150€.</p>
+                                    <p>&egrave; possibile  indicare dati diversi da quelli indicati (i dati riportati sono gli stessi indicati al momento dell'iscrizione).<br>La fattura, alle aziende che espressamente la richiedono, &eacute; emessa per ordini superiori a 150&#8364;.</p>
                                     
                                     <div class="iscrizione clearfix">
                                     <div class="table">
@@ -338,7 +338,7 @@
                                   <%else%>
                                   0,00
                                   <%end if%>
-                                  €&nbsp;
+                                  &#8364;&nbsp;
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     

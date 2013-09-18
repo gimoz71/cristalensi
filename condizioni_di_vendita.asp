@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Condizioni di vendita ecommerce prodotti per illuminazione da interno, illuminazione da esterno, lampadari, piantane, plafoniere</title>
 		<meta name="description" content="Condizioni di vendita ecommerce di prodotti per illuminazione da interno, illuminazione da esterno, lampadari, piantane, plafoniere, lampade esterne, ventilatori, prodotti per bambini">
@@ -68,7 +68,7 @@
                             <strong>Il catalogo del negozio del sito internet:</strong><br />
                             Sul sito internet &egrave; presente un'ampia gamma dei prodotti che abbiamo in listino presso il nostro negozio di Montelupo Fiorentino (provincia di Firenze), situato nel cuore della Toscana facilmente raggiungibile dalle maggiori province: Firenze, Pisa, Siena, Pistoia, Lucca e Livorno.<br />
                             Sul sito i prodotti sono divisi per categoria (per facilitare la scelta, ogni categoria &egrave; stata ulteriormente suddivisa in sotto-categorie), ogni categoria comprende i vari articoli indicandone nome del prodotto - codice - breve descrizione - produttore - prezzo (<strong>il prezzo espresso si intende comprensivo di IVA</strong>).<br />
-                            Cliccando sul nome del prodotto, oppure sulla foto del prodotto o sull’immagine del carrello accederete alla <strong>scheda del prodotto</strong>, dove sar&agrave; presente la descrizione completa del prodotto e, se presenti, altre foto del prodotto scelto.
+                            Cliccando sul nome del prodotto, oppure sulla foto del prodotto o sull'immagine del carrello accederete alla <strong>scheda del prodotto</strong>, dove sar&agrave; presente la descrizione completa del prodotto e, se presenti, altre foto del prodotto scelto.
                             </p>
                             <p>
                             <strong>Come inserire i prodotti da ordinare nel vostro carrello:</strong><br />
@@ -79,7 +79,7 @@
                             </p>
                             <p>
                             <strong>Come continuare l'ordine:</strong> <br />
-                            Una volta terminati i vostri acquisti, per confermare l'ordine, dovete, dalla pagina del carrello, continuare l'ordine (pulsante in basso a destra), passando alla fase di registrazione o riconoscimento:  nel primo caso dovete inserire i vostri dati, compresa un’email vera che utilizzerete come <strong>Login</strong> per accedere a futuri ordini; nel secondo caso, se siete gi&agrave; iscritti al sito, potete farvi riconoscere  inserendo appunto <strong>Login e Password</strong>.<br />
+                            Una volta terminati i vostri acquisti, per confermare l'ordine, dovete, dalla pagina del carrello, continuare l'ordine (pulsante in basso a destra), passando alla fase di registrazione o riconoscimento:  nel primo caso dovete inserire i vostri dati, compresa un'email vera che utilizzerete come <strong>Login</strong> per accedere a futuri ordini; nel secondo caso, se siete gi&agrave; iscritti al sito, potete farvi riconoscere  inserendo appunto <strong>Login e Password</strong>.<br />
                             La fase successiva riguarda le <strong>modalit&agrave; e i costi di spedizione</strong> dei prodotti che ordinerete (<span class="sfondo-giallo"><em><strong>Il costo di spedizione sar&agrave;  0 (zero) se il costo totale dei prodotti acquistati sar&agrave; maggiore di 250,00&euro; e la spedizione sar&agrave; in Italia, altrimenti il costo di spedizione &egrave; pari a <u>10&euro;</u></strong></em></span>): in questa pagina avete la possibilit&agrave; di specificare un indirizzo diverso da quello di registrazione, nel caso in cui volesse recapitare l'oggetto presso un'altra abitazione o sede.<br />
                             Sempre in questa pagina &egrave; possibile specificare alcune note relative alla spedizione e all'ordine.<br />
                             L'ultima fase riguarda le <strong>modalit&agrave; di pagamento</strong>:
@@ -113,8 +113,8 @@
                               <br />
                               <b>Importante:</b><br />
                                 Al momento della consegna della merce da parte del corriere, il Cliente &egrave; tenuto a controllare:<br /> 
-                                • che il numero dei colli in consegna corrisponda a quanto indicato nel documento di trasporto;<br /> 
-                                • che l'imballo risulti integro, non danneggiato, n&eacute; bagnato o comunque alterato, anche nei materiali di chiusura (nastro adesivo, carta da imballo).<br /> 
+                                - che il numero dei colli in consegna corrisponda a quanto indicato nel documento di trasporto;<br /> 
+                                - che l'imballo risulti integro, non danneggiato, n&eacute; bagnato o comunque alterato, anche nei materiali di chiusura (nastro adesivo, carta da imballo).<br /> 
                                 Eventuali danni all'imballo e/o al prodotto o la mancata corrispondenza del numero dei colli o delle indicazioni, devono essere immediatamente contestati, apponendo &quot;CON RISERVA SALVO VERIFICA CONTENUTO&quot; scritto sulla prova di consegna del corriere oppure potete respingere il pacco scrivendo &quot;RIFIUTATO, PACCO DANNEGGIATO&quot;.<br />
                                 Una volta firmato il documento del corriere, il Cliente non potr&agrave; opporre alcuna contestazione circa le caratteristiche esteriori di quanto consegnato.<br /> 
                                 Se gli articoli risultassero danneggiati contattateci immediatamente via e-mail (info@cristalensi.it).<br />
@@ -122,9 +122,9 @@
                             </p>
                             <p>
                             <span class="sfondo-giallo"><strong>Modalit&agrave; di pagamento:</strong></span><br />
-                            il pagamento dell’ordine totale (quindi comprensivo di spese di spedizione e di pagamento) potr&agrave; essere effettuato con Bonifico bancario, in contrassegno (solo con contanti), su carta PostePay o con le pi&ugrave; diffuse carte di credito, carte prepagate e PostePay attraverso il sistema sicuro di pagamento online di Paypal.<br />
+                            il pagamento dell'ordine totale (quindi comprensivo di spese di spedizione e di pagamento) potr&agrave; essere effettuato con Bonifico bancario, in contrassegno (solo con contanti), su carta PostePay o con le pi&ugrave; diffuse carte di credito, carte prepagate e PostePay attraverso il sistema sicuro di pagamento online di Paypal.<br />
                             <br />
-                            Per il pagamento diretto con <span class="sfondo-giallo"><em><strong>Bonifico bancario</strong></em></span> e <span class="sfondo-giallo"><em><strong>PostePay</strong></em></span> non verr&agrave; addebitato <em><strong>nessun costo</strong></em>, ma la merce verr&agrave; inviata solo quando sarà certificato il pagamento. <br />
+                            Per il pagamento diretto con <span class="sfondo-giallo"><em><strong>Bonifico bancario</strong></em></span> e <span class="sfondo-giallo"><em><strong>PostePay</strong></em></span> non verr&agrave; addebitato <em><strong>nessun costo</strong></em>, ma la merce verr&agrave; inviata solo quando sar&agrave; certificato il pagamento. <br />
                             <br />
                             Per il pagamento online ci affidiamo al <span class="sfondo-giallo"><em><strong>sistema sicuro di Paypal</strong></em></span> che permette di pagare con un'ampia scelta di sistemi: dalle carte di credito pi&ugrave; diffuse, alle carte prepagate e ricaricabili.<br />
                             Ecco l'ampia scelta: <p>
@@ -148,7 +148,7 @@
                             <span class="sfondo-giallo"><strong>
                             Accettazione delle condizioni di vendita:</strong></span> <br />
                             Il contratto stipulato tra Cristalensi e il Cliente deve intendersi concluso con l'accettazione dell'ordine da parte di Cristalensi, dopo che il Cliente ha pagato l'ordine eseguito. Tale accettazione si ritiene tacita, se non altrimenti comunicato con qualsiasi modalit&agrave; al Cliente. Il Cliente effettuando un ordine nelle varie modalit&agrave; previste, dichiara di aver preso visione di tutte le indicazioni a lui fornite durante la procedura d'acquisto, e di accettare integralmente le condizioni generali in questa pagina esposte.<br />
-                            Il Cliente, una volta conclusa la procedura d'acquisto on line con il pagamento, provveder&agrave; a salvare copia elettronica e conservare le presenti condizioni generali di vendita, nel rispetto di quanto previsto dal Dlgs 206/2005 “Codice del Consumo” sulle vendite a distanza.
+                            Il Cliente, una volta conclusa la procedura d'acquisto on line con il pagamento, provveder&agrave; a salvare copia elettronica e conservare le presenti condizioni generali di vendita, nel rispetto di quanto previsto dal Dlgs 206/2005 "Codice del Consumo" sulle vendite a distanza.
                             <br />
                             <br />
                             <a href="condizioni_di_vendita.pdf" target="_blank">Condizioni generali di vendita su file stampabile (pdf)</a><br />
@@ -191,7 +191,7 @@
                             <br />
                             <strong>Rimborso della somma pagata.<br />
                             </strong>Cristalensi provveder&agrave; a rimborsare al cliente l'importo gi&agrave; pagato decurtato di tutte le spese sostenute per la processazione e la spedizione dell'ordine nonch&eacute; per l'incasso e la restituzione del pagamento.<br />
-                            E’ escluso il rimborso delle spese di spedizione sostenute dal venditore per l'invio della merce, secondo gli importi indicati nel documento di vendita.<br />
+                            E' escluso il rimborso delle spese di spedizione sostenute dal venditore per l'invio della merce, secondo gli importi indicati nel documento di vendita.<br />
                             Cristalensi proceder&agrave;, tramite bonifico bancario, al rimborso entro i 30 giorni lavorativi successivi al ricevimento della merce.<br />
                             <br />
                             <br /> 
@@ -202,7 +202,7 @@
                             Passati gli otto giorni si declina ogni tipo di responsabilit&agrave; per rotture/anomalie/mancanze.<br />
                             Le fotografie delle lampade devono essere effettuate nei loro imballi originali.<br />
                             Non si accettano contestazioni di lampade installate.<br />
-                            Constatata l ’anomalia/rottura viene effettuata la spedizione di una lampada o di un componente in sostituzione a seconda che il problema riguardi la lampada completa o solamente una parte della stessa. 
+                            Constatata l'anomalia/rottura viene effettuata la spedizione di una lampada o di un componente in sostituzione a seconda che il problema riguardi la lampada completa o solamente una parte della stessa. 
                             <br />
                             <br />
                             <br />

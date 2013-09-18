@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Vendita lampadari on line illuminazione da interni illuminazine da esterni CRISTALENSI</title>
 		<meta name="description" content="Cristalensi, showroom vicino Firenze, vende lampade e lampadari on line, prodotti per illuminazione da interno, illuminazione da esterno, lampadari, piantane, plafoniere, lampade da esterno, ventilatori, lampade per bambini e lampade per il bagno, prodotti in molti stili dal moderno al classico.">
@@ -104,8 +104,8 @@
 							%>
                             </div>
                             <div class="slogan">
-                                <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
-                                <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
+                                <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250&#8364;</h3>
+                                <p>Per ordini inferiori a 250&#8364; il costo di spedizione &eacute; di 10&#8364;.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
                             <!--prodotti in offerta-->
                             <h4 class="area clearfix"><span class="title">OFFERTE: non perdere l'occasione!</span><a href="/offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
@@ -185,8 +185,8 @@
                                     end if
                                     img_rs.close
                                     %>
-                                    <%if prezzolistino<>"" then%><p class="price">Prezzo listino: <span><%=prezzolistino%>€</span></p><%end if%>
-                                    <%if prezzoarticolo<>"" then%><p class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</p><%end if%>
+                                    <%if prezzolistino<>"" then%><p class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></p><%end if%>
+                                    <%if prezzoarticolo<>"" then%><p class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;</p><%end if%>
                                     <a class="scheda" href="<%=NomePagina%>" title="Scheda del prodotto <%=titolo_prodotto%>"><span class="button_link">Scheda prodotto</span></a>
                                 </li>
                                 <%

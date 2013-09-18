@@ -5,7 +5,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Elenco produttori articoli illuminazione CRISTALENSI Negozio lampadari, piantane, plafoniere, lampade esterne, ventilatori, lampade per bambini, lampade per il bagno</title>
 		<meta name="description" content="Elenco produttori articoli illuminazione, elenco di imprese illuminazione, catalogo dei produttori di lampadari, piantane, plafoniere, lampade esterne, ventilatori, prodotti per bambini">
@@ -75,8 +75,8 @@ Call Visualizzazione("Produttori","0","produttori.asp")
                         <div>
                             <h1>Elenco produttori articoli per illuminazione</h1>
                             <p>
-                                <i>Questo è l'elenco delle imprese produttrici di articoli per illuminazione che riforniscono il nostro negozio.<br>
-					    Scegliendo un produttore vedrete l'elenco dei suoi prodotti, da lì potete accedere alla scheda del prodotto e acquistarlo. Se cercate un articolo specifico di un produttore, ma non lo trovate nel suo elenco, contattate il nostro staff per avere informazioni e un preventivo: nel catalogo sul sito internet non sono presenti tutti i prodotti, è stata fatta una selezione dai singoli cataloghi dei produttori.</i>.
+                                <i>Questo &eacute; l'elenco delle imprese produttrici di articoli per illuminazione che riforniscono il nostro negozio.<br>
+					    Scegliendo un produttore vedrete l'elenco dei suoi prodotti, da l&igrave; potete accedere alla scheda del prodotto e acquistarlo. Se cercate un articolo specifico di un produttore, ma non lo trovate nel suo elenco, contattate il nostro staff per avere informazioni e un preventivo: nel catalogo sul sito internet non sono presenti tutti i prodotti, &eacute; stata fatta una selezione dai singoli cataloghi dei produttori.</i>.
                             </p>
                             <%
 							Set prod_rs = Server.CreateObject("ADODB.Recordset")

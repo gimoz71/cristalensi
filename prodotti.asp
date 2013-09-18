@@ -45,7 +45,7 @@ end if
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><%if cat>0 then%><%=nuovo_title_cat%><%end if%><%if FkProduttore>0 then%><%=titolo_produttore%> catalogo prodotti illuminazione vendita online Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalogo articoli illuminazione da interno illuminazione da esterno vendita online Cristalesni<%end if%></title>
 		<meta name="description" content="<%if cat>0 then%><%=NoHTML(descrizione_cat)%><%end if%><%if FkProduttore>0 then%>Catalogo prodotti in vendita di <%=titolo_produttore%>, vendita online prodotti illuminazione su Cristalensi<%end if%><%if cat=0 and FkProduttore=0 then%>catalogo prodotti illuminazione da interno, illuminazione da esterno, vendita online su Cristalesni<%end if%>">
@@ -114,7 +114,7 @@ end if
                         <div>
                             <div class="slogan">
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
-                                <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
+                                <p>Per ordini inferiori a 250&#8364; il costo di spedizione &eacute; di 10&#8364;.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
                             <%
 							'elenco prodotti di una categoria o di un produttore
@@ -322,9 +322,9 @@ end if
                                             <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Scheda prodotto</span></a>
 											
                                             <%if prezzoarticolo=0 then%>
-                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
+                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
                                             <%else%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€ &nbsp;&nbsp;<small><i>Iva compresa</i></small></span><%end if%><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a></p>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;&nbsp;&nbsp;<small><i>Iva compresa</i></small></span><%end if%><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a></p>
                                             <%end if%>
                                         </div>
                                         
@@ -385,9 +385,9 @@ end if
                              	<h1>Articoli illuminazione in primo piano</h1>
                                 <p>
                                     <i>
-                                    Questa è una breve selezione di articoli di illuminazione che rappresentano la nostra galleria.<br />
+                                    Questa &eacute; una breve selezione di articoli di illuminazione che rappresentano la nostra galleria.<br />
 					    			Per consultare tutto il catalogo ed accedere ai singoli prodotti, potete scegliere una categoria sulla sinistra.<br />
-									Ogni articolo ha una propria scheda dettagliata, per accederci è sufficiente cliccare o sul nome, o sulla fotografia oppure su "Scheda prodotto".
+									Ogni articolo ha una propria scheda dettagliata, per accederci &eacute; sufficiente cliccare o sul nome, o sulla fotografia oppure su "Scheda prodotto".
                                     </i>
                                 </p>
                                 
@@ -508,9 +508,9 @@ end if
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Categoria:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>" style="font-size:9px;"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Scheda prodotto</span></a>
                                             <%if prezzoarticolo=0 then%>
-                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('/richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
+                                            <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('/richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
                                             <%else%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€&nbsp;&nbsp;<small><i>Iva compresa</i></small></span><%end if%><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a></p>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;&nbsp;&nbsp;<small><i>Iva compresa</i></small></span><%end if%><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a></p>
                                             <%end if%>
                                         </div>
                                     </li>

@@ -66,7 +66,7 @@ end if
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><%=Titolo_prodotto%> - <%=titolo_cat%> - <%=codicearticolo%></title>
 		<meta name="description" content="Cristalensi vende <%=titolo_cat%>: <%=Titolo_prodotto%> - <%=codicearticolo%>">
@@ -193,8 +193,8 @@ end if
                     <div id="content">
                         <div>
                             <div class="slogan">
-                                <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250€</h3>
-                                <p>Per ordini inferiori a 250€ il costo di spedizione è di 10€.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
+                                <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250&#8364;</h3>
+                                <p>Per ordini inferiori a 250&#8364; il costo di spedizione &eacute; di 10&#8364;.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
 
                             <ul class="scheda-prodotto clearfix">
@@ -204,9 +204,9 @@ end if
                                     <p class="area clearfix"><%if codicearticolo<>"" then%>Codice articolo <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
                                     <div class="data">
                                         <%if prezzoarticolo=0 then%>
-                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><br /><br />
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><br /><br />
                                        <%else%>
-                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>€</span><%end if%><br><i>Iva compresa</i>
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;</span><%end if%><br><i>Iva compresa</i>
                                        <%end if%>
                                         <p><%=descrizione_prodotto%></p>
                                         <%if FkCategoria2>0 then%>
@@ -315,12 +315,12 @@ end if
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook-prod"></a><span >Se questo articolo ti piace, condividilo con i tuoi amici su FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
+                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook-prod"></a><span><br />Se questo articolo ti piace, condividilo con i tuoi amici su FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
                                     
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <img src="/images/telefono_cristalensi.png" alt="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" title="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" style="height:152px; width:162px; float:left; padding-left: 10px; padding-right: 10px;" /><br /><br /><br /><strong>Contattaci!</strong><br />Il nostro personale sarà a tua disposizione per qualsiasi chiarimento, informazione e consiglio sull'articolo desiderato.        
+                                    <img src="/images/telefono_cristalensi.png" alt="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" title="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" style="height:152px; width:162px; float:left; padding-left: 10px; padding-right: 10px;" /><br /><br /><br /><strong>Contattaci!</strong><br />Il nostro personale sar&agrave; a tua disposizione per qualsiasi chiarimento, informazione e consiglio sull'articolo desiderato.        
                                 </li>
                                 
                             </ul>

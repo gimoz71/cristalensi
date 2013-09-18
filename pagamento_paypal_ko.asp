@@ -75,7 +75,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi - Pagamento PayPal</title>
         <!--[if lt IE 9]>
@@ -141,7 +141,7 @@
 							      <br>					    
 							  Eventualmente contattare Cristalensi per avere dettagli e assistenza nel pagamento, grazie.<br><br>Telefono: 0571/911163<br>Email: <a href="mailto: info@cristalensi.it">info@cristalensi.it</a>
 							  <br><br>
-							  Il nostro personale � a tua disposizione per qualsiasi chiarimento.<br>
+							  Il nostro personale &eacute; a tua disposizione per qualsiasi chiarimento.<br>
 							  <br>
 							  Cordiali saluti, lo staff di Cristalensi
                                 </p>

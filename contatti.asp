@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Negozio illuminazione Firenze Showroom lampadari da interno lampade da esterno</title>
 		<meta name="description" content="Cristalensi, negozio di illuminazione vicino Firenze, vende lampadari da interno, lampade da esterno, piantane, plafoniere, appliques, ventilatori, lampade per bambini e lampade per il bagno, prodotti in molti stili dal moderno al classico.">

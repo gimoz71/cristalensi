@@ -369,7 +369,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi - Ordine</title>
         <!--[if lt IE 9]>
@@ -557,7 +557,7 @@
     <input type="hidden" name="os0" value="<%=nome_log%>">
     <input type="hidden" name="cn" value="0">
     <input type="hidden" name="image_url" value="http://www.cristalensi.it/immagini/logo_cristalensi_piccolo.jpg">
-    <input type="submit" name="paga_adesso" value="CLICCA QUI PER PAGARE CON IL SISTEMA SICURO DI PAYPAL" class="button" alt="Effettua i tuoi pagamenti con PayPal. È un sistema rapido, gratuito e sicuro." style="height: 40px; font-size:14px; font-weight:bold;">
+    <input type="submit" name="paga_adesso" value="CLICCA QUI PER PAGARE CON IL SISTEMA SICURO DI PAYPAL" class="button" alt="Effettua i tuoi pagamenti con PayPal. E' un sistema rapido, gratuito e sicuro." style="height: 40px; font-size:14px; font-weight:bold;">
     </form>								
                                   <p>
                                   <br><br>
