@@ -18,7 +18,7 @@ end if
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi - Orders</title>
         <!--[if lt IE 9]>
@@ -99,23 +99,23 @@ end if
 										NoteCri=rs("NoteCri")
 										stato=rs("Stato")
 										
-										if stato=0 then etichetta_stato="Carrello iniziato"
-										if stato=1 then etichetta_stato="Carrello iniziato"
-										if stato=2 then etichetta_stato="Spedizione scelta"
-										if stato=12 then etichetta_stato="Spedizione scelta"
-										if stato=3 then etichetta_stato="Pagamento da scegliere"
-										if stato=22 then etichetta_stato="Pagamento da scegliere"
+										if stato=0 then etichetta_stato="Cart started"
+										if stato=1 then etichetta_stato="Cart started"
+										if stato=2 then etichetta_stato="Shipping chosen"
+										if stato=12 then etichetta_stato="Shipping chosen"
+										if stato=3 then etichetta_stato="Payment to choose"
+										if stato=22 then etichetta_stato="Payment to choose"
 										
-										if stato=4 then etichetta_stato="Pagato con PayPal"
-										if stato=5 then etichetta_stato="Pagamento annullato"
-										if stato=6 then etichetta_stato="In fase di pagamento"
-										if stato=7 then etichetta_stato="Ordine in lavorazione"
+										if stato=4 then etichetta_stato="Paid with PayPal"
+										if stato=5 then etichetta_stato="Payment Canceled"
+										if stato=6 then etichetta_stato="When payment"
+										if stato=7 then etichetta_stato="Order in process"
 										if stato=8 then
-											etichetta_stato="Prodotti spediti"
+											etichetta_stato="Products shipped"
 											if InfoSpedizione<>"" then etichetta_stato=etichetta_stato&"<br>"&InfoSpedizione
 											if Left(NoteCri,4)="http" then etichetta_stato=etichetta_stato&"<br><a href="""&NoteCri&""" target=_blank>LINK</a>"
 										end if
-										
+																				
 										%>	
     
                                         <p class="riga">
@@ -125,7 +125,7 @@ end if
 										  TotaleGenerale=rs("TotaleGenerale")
 										  if TotaleGenerale="" or Isnull(TotaleGenerale) then TotaleGenerale=0
 										  %>
-										  <%=FormatNumber(TotaleGenerale,2)%>€
+										  <%=FormatNumber(TotaleGenerale,2)%>&#8364;
                                         </span>
                                         <span class="colonna stato"><%=etichetta_stato%></span>
                                         <span class="colonna azioni">

@@ -107,7 +107,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi Retrieval password client</title>
         <!--[if lt IE 9]>

@@ -106,17 +106,17 @@ if prov="" then prov=0
 			Oggetto = "Iscrizione al sito Cristalensi.it"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -144,17 +144,17 @@ if prov="" then prov=0
 			Oggetto = "Nuova iscrizione al sito Cristalensi.it"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 			'fine invio email
 			
@@ -166,17 +166,17 @@ if prov="" then prov=0
 			Oggetto = "Nuova iscrizione al sito Cristalensi.it"
 			Testo = HTML1
 
-'			Set eMail_cdo = CreateObject("CDO.Message")
-'
-'			eMail_cdo.From = Mittente
-'			eMail_cdo.To = Destinatario
-'			eMail_cdo.Subject = Oggetto
-'
-'			eMail_cdo.HTMLBody = Testo
-'
-'			eMail_cdo.Send()
-'
-'			Set eMail_cdo = Nothing
+			Set eMail_cdo = CreateObject("CDO.Message")
+
+			eMail_cdo.From = Mittente
+			eMail_cdo.To = Destinatario
+			eMail_cdo.Subject = Oggetto
+
+			eMail_cdo.HTMLBody = Testo
+
+			eMail_cdo.Send()
+
+			Set eMail_cdo = Nothing
 			
 		
 

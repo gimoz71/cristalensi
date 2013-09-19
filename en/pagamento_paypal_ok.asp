@@ -61,7 +61,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail is a confirmation of the completion of order n° "&idordine&".<br> It will be the care of our staff  to send the merchandise to you the moment our bank is notified of payment with Paypal.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail is a confirmation of the completion of order n. "&idordine&".<br> It will be the care of our staff  to send the merchandise to you the moment our bank is notified of payment with Paypal.</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Best wishes from the staff of Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -149,7 +149,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi - PayPal payment</title>
         <!--[if lt IE 9]>
@@ -227,7 +227,7 @@
                                 <div class="data">
 <%
 	Set rs = Server.CreateObject("ADODB.Recordset")
-	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
+	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore, Lampadina FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
 	rs.Open sql, conn, 1, 1
 	num_prodotti_carrello=rs.recordcount
 	
@@ -238,7 +238,7 @@
                                         Do while not rs.EOF
                                         %>					
     
-                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%></span>
+                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<strong><%=rs("titolo")%></strong><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Light:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
                                         <%
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1

@@ -5,7 +5,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>list of italian producers of lighting products lamps lights producers' catalogs</title>
 		<meta name="description" content="This is a list of italian producers of lighting products serving our shop, a selection of lamps and lights was made by individual italian producers' catalogs">

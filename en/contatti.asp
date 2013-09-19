@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>CRISTALENSI office showroom Florence Italy map</title>
 		<meta name="description" content="In Cristalensi you find italian lamps for sales, Cristalensi is an ecommerce about lights, online store for italian lighting products and discounted products">
@@ -70,7 +70,7 @@
                                 <strong>Office and Showroom</strong>: 50056 Montelupo F.no (Florence - Italy) - Via arti e mestieri, 1<br /><br />
                                 <strong>Phone e Fax</strong>: 0571.911163<br /><br />
                                 <strong>Email</strong>: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a><br /><br />
-                                <strong>Email certificata</strong>: <a href="mailto:info@pec.cristalensi.it">info@pec.cristalensi.it</a> <strong>
+                                <strong>Email certified</strong>: <a href="mailto:info@pec.cristalensi.it">info@pec.cristalensi.it</a> <strong>
                                 <font color="#CC0000">(ONLY for those who have an email PEC)</font></strong><br />
                                 </p>
                             </div>

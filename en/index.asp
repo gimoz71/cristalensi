@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>CRISTALENSI lights online store lamps italian lighting products sales</title>
 		<meta name="description" content="In Cristalensi you find italian lamps for sales, Cristalensi is an ecommerce about lights, online store for italian lighting products and discounted products">
@@ -182,8 +182,8 @@
                                     end if
                                     img_rs.close
                                     %>
-                                    <%if prezzolistino<>"" then%><p class="price">List price: <span><%=prezzolistino%>€</span></p><%end if%>
-                                    <%if prezzoarticolo<>"" then%><p class="cristalprice">Cristalensi price: <%=prezzoarticolo%>€</p><%end if%>
+                                    <%if prezzolistino<>"" then%><p class="price">List price: <span><%=prezzolistino%>&#8364;</span></p><%end if%>
+                                    <%if prezzoarticolo<>"" then%><p class="cristalprice">Cristalensi price: <%=prezzoarticolo%>&#8364;</p><%end if%>
                                     <a class="scheda" href="<%=NomePagina%>" title="Description <%=titolo_prodotto%>"><span class="button_link">Product description</span></a>
                                 </li>
                                 <%

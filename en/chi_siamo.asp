@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Shop chandeliers Showroom of lamps italian style lights Store Florence Italy</title>
 		<meta name="description" content="Cristalensi Showroom of lamps, italian style lights, Showroom near Florence Italy">

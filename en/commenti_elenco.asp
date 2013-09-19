@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Comments about lighthings shop online reviews of italian lighting products</title>
         <meta name="description" content="Comments about lighthings shop online and reviews of italian lighting products.">

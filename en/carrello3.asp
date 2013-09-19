@@ -109,7 +109,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi</title>
         <!--[if lt IE 9]>
@@ -182,7 +182,7 @@
             <div id="main-content">
 <%
 	Set rs = Server.CreateObject("ADODB.Recordset")
-	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
+	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore, Lampadina FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
 	rs.Open sql, conn, 1, 1
 	num_prodotti_carrello=rs.recordcount
 	
@@ -214,12 +214,12 @@
                                         Do while not rs.EOF
                                         %>					
     
-                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%></span>
+                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<strong><%=rs("titolo")%></strong><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Light:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
                                         <%
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
                                         %>
-                                        <span class="colonna quantita"><%=quantita%> pieces </span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>€</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>€</span></p>
+                                        <span class="colonna quantita"><%=quantita%> pieces </span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>&#8364;</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>&#8364;</span></p>
                                         <%
                                         rs.movenext
                                         loop
@@ -235,7 +235,7 @@
                                     <p class="riga">
                                     <span class="colonna descrizione"><b><%=TipoTrasporto%></b></span>
                                     <span class="colonna prezzo_unitario">&nbsp;</span>
-                                    <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>€</span>
+                                    <span class="colonna prezzo_totale"><%=FormatNumber(CostoSpedizioneTotale,2)%>&#8364;</span>
                                     </p>
                                     <p>&nbsp;</p>
                                     <h3 style="font-size:12px;">Mailing address</h3>
@@ -271,8 +271,8 @@
     
                                         <p class="riga">
                                         <span class="colonna descrizione"><input type="radio" name="TipoPagamentoScelto" id="TipoPagamentoScelto" value="<%=PkIdPagamento%>" <%if PkIdPagamento=PkIdPagamentoScelto then%> checked="checked"<%end if%> onClick="Cambia();">&nbsp;<b><%=NomePagamento%></b><br><%=NoLettAcc(DescrizionePagamento)%></span>
-                                        <span class="colonna prezzo_unitario"><%=FormatNumber(CostoPagamento,2)%><%if TipoCosto=1 then%>€<%end if%><%if TipoCosto=2 then%>%<%end if%></span>
-                                        <span class="colonna prezzo_totale"><%if PkIdPagamento=PkIdPagamentoScelto then%><%=FormatNumber(CostoPagamentoTotale,2)%>€<%else%>-<%end if%></span>
+                                        <span class="colonna prezzo_unitario"><%=FormatNumber(CostoPagamento,2)%><%if TipoCosto=1 then%>&#8364;<%end if%><%if TipoCosto=2 then%>%<%end if%></span>
+                                        <span class="colonna prezzo_totale"><%if PkIdPagamento=PkIdPagamentoScelto then%><%=FormatNumber(CostoPagamentoTotale,2)%>&#8364;<%else%>-<%end if%></span>
                                         </p>
                                         <%
                                         trasp_rs.movenext
@@ -339,7 +339,7 @@
                                   <%else%>
                                   0,00
                                   <%end if%>
-                                  €&nbsp;
+                                  &#8364;&nbsp;
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     

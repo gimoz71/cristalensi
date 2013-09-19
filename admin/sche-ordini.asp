@@ -480,9 +480,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 <%
 	Set rs = Server.CreateObject("ADODB.Recordset")
 	if pkid<12210 then
-		sql = "SELECT RigheOrdine.PkId, RigheOrdine.FkOrdine, RigheOrdine.PrezzoProdotto as PrezzoProdotto, RigheOrdine.FkProdotto, RigheOrdine.Quantita, RigheOrdine.TotaleRiga, Prodotti.Titolo, Prodotti.CodiceArticolo, RigheOrdine.Colore FROM Prodotti INNER JOIN RigheOrdine ON Prodotti.PkId = RigheOrdine.FkProdotto WHERE (((RigheOrdine.FkOrdine)="&pkid&"))"
+		sql = "SELECT RigheOrdine.PkId, RigheOrdine.FkOrdine, RigheOrdine.PrezzoProdotto as PrezzoProdotto, RigheOrdine.FkProdotto, RigheOrdine.Quantita, RigheOrdine.TotaleRiga, Prodotti.Titolo, Prodotti.CodiceArticolo, RigheOrdine.Colore, RigheOrdine.Lampadina FROM Prodotti INNER JOIN RigheOrdine ON Prodotti.PkId = RigheOrdine.FkProdotto WHERE (((RigheOrdine.FkOrdine)="&pkid&"))"
 	else
-		sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore FROM RigheOrdine WHERE FkOrdine="&pkid&""
+		sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore, Lampadina FROM RigheOrdine WHERE FkOrdine="&pkid&""
 	end if
 	rs.Open sql, conn, 1, 1
 	num_prodotti_carrello=rs.recordcount
@@ -561,7 +561,7 @@ Do while not rs.EOF
 %>					
 				  <tr class="admin-righe">
                   <td align="left" width="341">
-				  [<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%>
+				  [<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%>&nbsp;(<%=rs("colore")%>&nbsp;<%=rs("lampadina")%>)<%end if%>
 				  </td>
                   <td align="right" width="89">
 				  <%

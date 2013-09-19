@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>CRISTALENSI lights online store lamps italian lighting products sales</title>
 		<meta name="description" content="In Cristalensi you find italian lamps for sales, Cristalensi is an ecommerce about lights, online store for italian lighting products and discounted products">
@@ -64,15 +64,15 @@
                     <div id="content">
                         <div>
                             <div class="slogan small">
-                                <h3>Da 50 anni Cristalensi vuol dire illuminazione</h3>
+                                <h3>Seit 50 Jahren steht der Name Cristalensi für Beleuchtung</h3>
                             </div>
-                            <h3 class="corporate">Se stai cercando un articolo per l'illuminazione della tua casa o del tuo ufficio, oppure per il tuo spazio esterno e per il giardino, cerca tra i prodotti di Cristalensi: troverai un'ampio catalogo di lampade, plafoniere, applique, piantane e lampadari, prodotti moderni e classici, in stile rustico o Tiffany, in cristallo o di Murano, lampade per il bagno, per la cucina e per la cameretta dei bambini.<br /><br />Sono tutti prodotti italiani, Made in Italy, ideati e realizzati in Italia tutti con un design italiano, e alcuni con uno stile tipico toscano e fiorentino, essendo Cristalensi anche uno showroom di Firenze (Toscana).<br /><br />Sull'e-commerce di Cristalensi puoi acquistare pagando con il sistema sicuro di PayPal (carte di credito e carte prepagate), oppure pagando con bonifico bancario o in contrassegno alla consegna.<br />Spedizioni sicure e garantite in tutto il mondo.<br><br>
-                                <i><strong>Scegli una categoria qui sotto per proseguire la navigazione tra i prodotti</strong></i></h3>
+                            <h3 class="corporate">Wenn Sie auf der Suche nach der passenden Beleuchtung für Ihr Heim oder Büro, den Außenbereich oder den Garten sind, wählen Sie unter den Produkten von Cristalensi: Ob modern oder klassisch, rustikal oder im Tiffany-Stil, ob in Kristall oder Murano, ob Beleuchtung für Bad, Küche oder Kinderzimmer, hier finden Sie eine große Auswahl an Lampen, Deckenleuchten, Wandleuchten, Stehlampen und Kronleuchtern.<br /><br />Wir führen nur italienische Produkte, Made in Italy, in Italien entwickelt und hergestellt, allesamt in italienischem Design – auch einige im typisch toskanischen und florentinischen Stil. Besuchen Sie den Showroom von Cristalensi in Florenz (Toscana).<br /><br />In unserem Online-Shop können Sie sicher über PayPal (Kreditkarten und Prepaid-Kreditkarten), per Überweisung oder per Nachnahme zahlen.<br />Wir versenden sicher und zuverlässig in die ganze Welt.<br><br>
+                                <i><strong>Wählen sie eine Kategorie aus</strong></i></h3>
                             
                             <div class="spacer"></div>
                             
                             <!--elenco categorie-->
-                            <h4 class="area clearfix"><span class="title">CATALOGO PRODOTTI</span><a href="/ricerca_avanzata_modulo.asp" class="right button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
+                            <h4 class="area clearfix"><span class="title">PRODUKTKATALOG</span><a href="/ricerca_avanzata_modulo.asp" class="right button_link_red" title="Erweiterte suche leuchten">ERWEITERTE SUCHE &raquo;</a></h4>
                             
                             <ul class="catalogo clearfix">
                                 

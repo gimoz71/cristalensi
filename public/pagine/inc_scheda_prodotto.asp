@@ -113,6 +113,8 @@ end if
 			quantita=document.newsform2.quantita.value;
 			num_colori=document.newsform2.num_colori.value;
 			colore=document.newsform2.colore.value;
+			num_lampadine=document.newsform2.num_lampadine.value;
+			lampadina=document.newsform2.lampadina.value;
 		
 			if (quantita=="0"){
 				alert("La quantita\' deve essere maggiore di 0");
@@ -121,6 +123,11 @@ end if
 			
 			if (num_colori>1 && colore==""){
 				alert("Deve essere scelto un colore");
+				return false;
+			}
+			
+			if (num_lampadine>1 && lampadina==""){
+				alert("Deve essere scelta una lampadina");
 				return false;
 			}
 			
@@ -138,6 +145,8 @@ end if
 			quantita=document.newsform2.quantita.value;
 			num_colori=document.newsform2.num_colori.value;
 			colore=document.newsform2.colore.value;
+			num_lampadine=document.newsform2.num_lampadine.value;
+			lampadina=document.newsform2.lampadina.value;
 		
 			if (quantita=="0"){
 				alert("La quantita\' deve essere maggiore di 0");
@@ -146,6 +155,11 @@ end if
 			
 			if (num_colori>1 && colore==""){
 				alert("Deve essere scelto un colore");
+				return false;
+			}
+			
+			if (num_lampadine>1 && lampadina==""){
+				alert("Deve essere scelta una lampadina");
 				return false;
 			}
 			
@@ -235,10 +249,23 @@ end if
                                                     <input type="hidden" name="num_colori" id="num_colori" value="1">
                                                     <input type="hidden" name="colore" id="colore" value="*****">
                                                 <%end if%>
+                                                
+                                                <%
+                                                Set lam_rs = Server.CreateObject("ADODB.Recordset")
+                                                sql = "SELECT [Prodotto-Lampadina].FkProdotto, Lampadine.Titolo FROM [Prodotto-Lampadina] INNER JOIN Lampadine ON [Prodotto-Lampadina].FkLampadina = Lampadine.PkId WHERE ((([Prodotto-Lampadina].FkProdotto)="&id&")) ORDER BY Lampadine.Titolo ASC"
+                                                lam_rs.open sql,conn, 1, 1
+                                                if lam_rs.recordcount>1 then
+                                                %>
+                                                    <input type="hidden" name="num_lampadine" id="num_lampadine" value="<%=lam_rs.recordcount%>">
+                                                <%else%>
+                                                    <input type="hidden" name="num_lampadine" id="num_lampadine" value="1">
+                                                    <input type="hidden" name="lampadina" id="lampadina" value="*****">
+                                                <%end if%>
+                                                
                                                 <p class="cart clearfix">
 
                                                     <%if col_rs.recordcount>1 then%>
-                                                        <select name="colore" id="colore" style="width:auto; float:left; margin-top:7px;">
+                                                        <select name="colore" id="colore" style="width:auto; float:left; margin-top:7px; margin-right:10px;">
                                                         <option value="">Scegli il colore</option>
                                                         <%
                                                         Do While Not col_rs.EOF
@@ -253,6 +280,25 @@ end if
                                                     end if
                                                     col_rs.close
                                                     %>
+                                                    
+                                                    <%if lam_rs.recordcount>1 then%>
+                                                        &nbsp;&nbsp;
+                                                        <select name="lampadina" id="lampadina" style="width:auto; float:left; margin-top:7px;">
+                                                        <option value="">Scegli la lampadina</option>
+                                                        <%
+                                                        Do While Not lam_rs.EOF
+                                                        %>
+                                                            <option value="<%=lam_rs("Titolo")%>"><%=lam_rs("Titolo")%></option>
+                                                        <%
+                                                        lam_rs.movenext
+                                                        loop
+                                                        %>
+                                                        </select>
+                                                    <%
+                                                    end if
+                                                    lam_rs.close
+                                                    %>
+                                                    
                                                     <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span>
                                                 </p>
                                             </form>

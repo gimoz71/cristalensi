@@ -143,6 +143,39 @@
 		end if
 		
 		
+		'aggiornamento lampadine
+		if pkid>0 then
+			Set pps=Server.CreateObject("ADODB.Recordset")
+			sql = "Select * From [Prodotto-Lampadina] where FkProdotto="&pkid&" "
+			pps.Open sql, conn, 3, 3
+			if pps.recordcount>0 then
+				Do while not pps.EOF
+					pps.delete
+				pps.movenext
+				loop
+			end if
+			pps.close
+			
+			fklampadine=request("fklampadine")
+			arrFklampadina=split(fklampadine,", ")
+		
+			if fklampadine<>"" then
+				For iLoop = LBound(arrFklampadina) to UBound(arrFklampadina)	
+					fklampadina=arrFklampadina(iLoop)
+					fklampadina=cInt(fklampadina)
+					Set pps=Server.CreateObject("ADODB.Recordset")
+					sql = "Select * From [Prodotto-Lampadina]"
+					pps.Open sql, conn, 3, 3	
+					pps.addnew
+					pps("fklampadina")=fklampadina
+					pps("fkprodotto")=pkid
+					pps.update
+					pps.close
+				Next
+			end if
+		end if
+		
+		
 				
 		if request("C1") = "ON" then
 			rs.delete
@@ -176,6 +209,19 @@
 				loop
 			end if
 			pps.close
+			
+			'elimino le lampadine
+			Set pps=Server.CreateObject("ADODB.Recordset")
+			sql = "Select * From [Prodotto-Lampadina] where FkProdotto="&pkid&" "
+			pps.Open sql, conn, 3, 3
+			if pps.recordcount>0 then
+				Do while not pps.EOF
+					pps.delete
+				pps.movenext
+				loop
+			end if
+			pps.close
+			
 		end if
 		rs.update
 		
@@ -216,6 +262,25 @@
 					pps.Open sql, conn, 3, 3	
 					pps.addnew
 					pps("fkcolore")=fkcolore
+					pps("fkprodotto")=pkid
+					pps.update
+					pps.close
+				Next
+			end if
+			
+			'inserisco le lampadine
+			fklampadine=request("fklampadine")
+			arrFklampadina=split(fklampadine,", ")
+		
+			if fklampadine<>"" then
+				For iLoop = LBound(arrFklampadina) to UBound(arrFklampadina)	
+					fklampadina=arrFklampadina(iLoop)
+					fklampadina=cInt(fklampadina)
+					Set pps=Server.CreateObject("ADODB.Recordset")
+					sql = "Select * From [Prodotto-Lampadina]"
+					pps.Open sql, conn, 3, 3	
+					pps.addnew
+					pps("fklampadina")=fklampadina
 					pps("fkprodotto")=pkid
 					pps.update
 					pps.close
@@ -445,6 +510,66 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					Si 
 				    <input name="PrimoPiano" type="radio" value="si" <% if pkid > 0 then %><%if rs("PrimoPiano")=True then%>checked<%end if%><%end if%>>&nbsp;&nbsp;No <input name="PrimoPiano" type="radio" value="no" <% if pkid > 0 then %><%if rs("PrimoPiano")=False then%>checked<%end if%><%else%>checked<%end if%>>					</td>
                   </tr>
+                  <tr align="left">
+                    <td height="20" colspan="2">&nbsp;</td>
+                  </tr>
+                  <%
+					Set ns=Server.CreateObject("ADODB.Recordset")
+					sql = "Select * From Lampadine order by Titolo ASC"
+					ns.Open sql, conn, 1, 1
+					totale=ns.recordcount
+					conta=0
+					if ns.recordcount>0 then			  
+				   %>
+                  <tr align="left">
+                    <td height="15" colspan="2"><strong>Lampadine</strong></td>
+                  </tr>
+                  <tr align="left"><td height="15" colspan="2"><table width="100%" class="admin-righe">
+                  <%
+					Do While not ns.EOF
+					If((conta Mod 3)=0) then
+				  %>
+				  <tr align="left">
+                  <%end if%>
+                    <td>
+                    <%
+					pkid_lampadina=ns("pkid")
+					pkid_lampadina=cInt(pkid_lampadina)
+					if pkid>0 then
+						pkid=cInt(pkid)	
+						esiste=""
+						Set ps=Server.CreateObject("ADODB.Recordset")
+						sql = "SELECT [Prodotto-Lampadina].FkProdotto, [Prodotto-Lampadina].FkLampadina FROM [Prodotto-Lampadina] WHERE ((([Prodotto-Lampadina].FkProdotto)="&pkid&") AND (([Prodotto-Lampadina].FkLampadina)="&pkid_lampadina&"))"
+						ps.Open sql, conn, 1, 1
+						if ps.recordcount=1 then
+							esiste="Si"
+						else
+							esiste="No"
+						end if
+						ps.close
+					else
+						esiste="No"
+					end if
+					%>
+					
+					<input name="fklampadine" type="checkbox" value=<%=pkid_lampadina%> <%if esiste="Si" then%> checked<%end if%>>&nbsp;<%=ns("Titolo")%> / <%=ns("Titolo_en")%>
+					</td>
+                    <%If((conta Mod 3)=2) then%>
+                  </tr>
+                  <tr> </tr>
+                  <%
+					End if
+					conta=conta+1
+					ns.movenext
+					loop
+				  %>
+                  </table></td></tr>
+                  <tr align="left">
+                    <td height="20" colspan="2">&nbsp;</td>
+                  </tr>
+                  <%end if%>
+                  <%ns.close%>
+                  
 				   <tr align="left">
                     <td height="20" colspan="2">&nbsp;</td>
                   </tr>
@@ -487,7 +612,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					end if
 					%>
 					
-					<input name="fkcolori" type="checkbox" value=<%=pkid_colore%> <%if esiste="Si" then%> checked<%end if%>>&nbsp;<%=ns("Titolo")%>/<%=ns("Titolo_en")%>
+					<input name="fkcolori" type="checkbox" value=<%=pkid_colore%> <%if esiste="Si" then%> checked<%end if%>>&nbsp;<%=ns("Titolo")%> / <%=ns("Titolo_en")%>
 					</td>
                     <%If((conta Mod 3)=2) then%>
                   </tr>

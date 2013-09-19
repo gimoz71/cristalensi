@@ -32,7 +32,7 @@
 						
 			'qui devono essere inserite tutte le tabelle dove compare FkColore per cancellare il record oppure metterlo a 0
 			Set ss=Server.CreateObject("ADODB.Recordset")
-			sql = "Select * From Prodotto-Colore where FkColore="&pkid&""
+			sql = "Select * From [Prodotto-Colore] where FkColore="&pkid&""
 			ss.Open sql, conn, 3, 3
 				if ss.recordcount>0 then
 					Do while not ss.EOF

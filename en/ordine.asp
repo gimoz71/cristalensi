@@ -70,7 +70,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail confirms the completion of order n° "&idordine&".<br><br><b>TOTAL ORDER: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> To complete the order you must make a bank transfer with the following details:<br><u>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO</u><br>IBAN: <u>IT33E0842537960000030277941</u><br>Code BIC/SWIFT: <u>CRACIT33</u><br>As the cause of payment please indicate: Order from web site n° "&idordine&"<br><br>Beneficiary: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)<br><br><br>Our staff will send the merchandise as soon as the bank is notified of the bank transfer or, to speed-up the consignment, send an e-mail with the bank transfer reciept (in the case of home banking a bank transfer receipt is often provided by the bank, or you could scan the receipt left by the bank).</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail confirms the completion of order n. "&idordine&".<br><br><b>TOTAL ORDER: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> To complete the order you must make a bank transfer with the following details:<br><u>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO</u><br>IBAN: <u>IT33E0842537960000030277941</u><br>Code BIC/SWIFT: <u>CRACIT33</u><br>As the cause of payment please indicate: Order from web site n. "&idordine&"<br><br>Beneficiary: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)<br><br><br>Our staff will send the merchandise as soon as the bank is notified of the bank transfer or, to speed-up the consignment, send an e-mail with the bank transfer reciept (in the case of home banking a bank transfer receipt is often provided by the bank, or you could scan the receipt left by the bank).</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Best wishes from the staff of Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -175,7 +175,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail is confirmation of the completion of order n° "&idordine&".<br><br><br>.  It will be the care of our staff to send you the merchandise as soon as it is available in our stock room.<br>We remind you that in the case of payment on receipt of goods, the courier will consign the merchandise only if paid in cash, other types of payment will not be accepted (even checks will not be accepted).</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail is confirmation of the completion of order n. "&idordine&".<br><br><br>.  It will be the care of our staff to send you the merchandise as soon as it is available in our stock room.<br>We remind you that in the case of payment on receipt of goods, the courier will consign the merchandise only if paid in cash, other types of payment will not be accepted (even checks will not be accepted).</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Best wishes from the staff of Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -281,10 +281,10 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail confirms the completion of order n° "&idordine&".<br><br><b>TOTAL ORDER: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> To complete the order you must make a bank transfer with the following details:<br><u>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO</u><br>IBAN: <u>IT33E0842537960000030277941</u><br>Code BIC/SWIFT: <u>CRACIT33</u><br>As the cause of payment please indicate: Order from web site n° "&idordine&"<br><br>Beneficiary: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)<br><br><br>Our staff will send the merchandise as soon as the bank is notified of the bank transfer or, to speed-up the consignment, send an e-mail with the bank transfer reciept (in the case of home banking a bank transfer receipt is often provided by the bank, or you could scan the receipt left by the bank).</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail confirms the completion of order n. "&idordine&".<br><br><b>TOTAL ORDER: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> To complete the order you must make a bank transfer with the following details:<br><u>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO</u><br>IBAN: <u>IT33E0842537960000030277941</u><br>Code BIC/SWIFT: <u>CRACIT33</u><br>As the cause of payment please indicate: Order from web site n. "&idordine&"<br><br>Beneficiary: Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>Via arti e mestieri, 1 - 50056 Montelupo F.no (FI)<br><br><br>Our staff will send the merchandise as soon as the bank is notified of the bank transfer or, to speed-up the consignment, send an e-mail with the bank transfer reciept (in the case of home banking a bank transfer receipt is often provided by the bank, or you could scan the receipt left by the bank).</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Best wishes from the staff of Cristalensi</font>"
 			
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail confirms the completion of order n° "&idordine&".<br><br><b>TOTAL ORDER: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> To complete the order you must make a card PostePay transfer with the following details:<br><u><strong>Beneficiary: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Card Number: 4023 6005 5507 0285</strong><br><br>As the cause of payment please indicate: Order from Cristalensi web site n° "&idordine&"<br><br>Our staff will send the merchandise as soon as the bank is notified of the bank transfer or, to speed-up the consignment, send an e-mail with the bank transfer reciept.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Thank you "&nominativo_email&" for having chosen our products!<br>This e-mail confirms the completion of order n. "&idordine&".<br><br><b>TOTAL ORDER: <u>"&TotaleGenerale&"&#8364;</u></b><br><br> To complete the order you must make a card PostePay transfer with the following details:<br><u><strong>Beneficiary: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Card Number: 4023 6005 5507 0285</strong><br><br>As the cause of payment please indicate: Order from Cristalensi web site n. "&idordine&"<br><br>Our staff will send the merchandise as soon as the bank is notified of the bank transfer or, to speed-up the consignment, send an e-mail with the bank transfer reciept.</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Best wishes from the staff of Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -372,7 +372,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cristalensi - Order</title>
         <!--[if lt IE 9]>
@@ -481,7 +481,7 @@
                                     <br>
                                     <strong><u>BANCA DI CREDITO COOPERATIVO DI CAMBIANO AG. MONTELUPO FIORENTINO</u><br>IBAN: <u>IT33E0842537960000030277941</u><br>
                                     Codice BIC/SWIFT: <u>CRACIT33</u></strong>
-                                    <br>As the cause of payment please indicate: "<strong>Order from web site n° <%=idordine%></strong>"<br><br>
+                                    <br>As the cause of payment please indicate: "<strong>Order from web site n&deg; <%=idordine%></strong>"<br><br>
                                     Beneficiary: <strong>Cristalensi Snc di Lensi Massimiliano & C. (P.Iva e C.Fiscale 05305820481)<br>
                              Via arti e mestieri, 1 - 50056 Montelupo F.no (Florence) Italy</strong>
                                     <br><br><br>
@@ -502,7 +502,7 @@
                                     to complete the order you must make out a POSTEPAY card transfer to the following address:<br>
                                     <br>
                                     <strong>Beneficiary: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Card number: 4023 6005 5507 0285</strong>
-                                    <br><br>As the cause of payment please indicate: "<strong>Order from web site n° <%=idordine%></strong>"<br><br>
+                                    <br><br>As the cause of payment please indicate: "<strong>Order from web site n&deg; <%=idordine%></strong>"<br><br>
                                     The merchandise will be sent when our bank recieves payment, or to speed-up the consignment, you can send by e-mail the receipt of payment by bank transfer.
                                   <br><br>
                                    By paying, and thereby completing the order, you have accepted the conditions of sale.  Save or stamp the conditions of sale (consultable on the appropriate page of the internet site) from this file (.pdf) using Adobe Acrobat Reader:<br><a href="condizioni_di_vendita.pdf" target="_blank">conditions of sale</a>
@@ -576,7 +576,7 @@
                                 <div class="data">
 <%
 	Set rs = Server.CreateObject("ADODB.Recordset")
-	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
+	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore, Lampadina FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
 	rs.Open sql, conn, 1, 1
 	num_prodotti_carrello=rs.recordcount
 	
@@ -587,7 +587,7 @@
                                         Do while not rs.EOF
                                         %>					
     
-                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%></span>
+                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<strong><%=rs("titolo")%></strong><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Light:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
                                         <%
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1

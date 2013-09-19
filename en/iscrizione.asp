@@ -200,7 +200,7 @@ if prov="" then prov=0
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>CRISTALENSI Client Authentication Lamps store online</title>
         <!--[if lt IE 9]>
@@ -406,7 +406,7 @@ We remind you moreover that the <strong>Email address</strong> will be your <str
                                         <div>Nation</div>
                                     </div>
                                     <div class="tr">
-                                        Italy:&nbsp;&nbsp;Si&nbsp;<input type="radio" name="italia" value="Si" <% if pkid > 0 then %><%if rs("italia")="Si" then%> checked<%end if %><%else%> checked<%end if %> />&nbsp;&nbsp;No&nbsp;<input type="radio" name="italia" value="No" <% if pkid > 0 then %><%if rs("italia")="No" then%> checked<%end if %><%end if %> />&nbsp;Other nation
+                                        Italy:&nbsp;&nbsp;Yes&nbsp;<input type="radio" name="italia" value="Si" <% if pkid > 0 then %><%if rs("italia")="Si" then%> checked<%end if %><%else%> checked<%end if %> />&nbsp;&nbsp;No&nbsp;<input type="radio" name="italia" value="No" <% if pkid > 0 then %><%if rs("italia")="No" then%> checked<%end if %><%end if %> />&nbsp;Other nation
                 <input name="nazionediversa" type="text" id="nazionediversa"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nazionediversa")%><%else%><%if mode=3 then%><%=nazionediversa%><%end if%><%end if%>" />
                                         
                                     </div>

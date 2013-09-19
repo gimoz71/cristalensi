@@ -93,6 +93,10 @@ Call Visualizzazione("",0,"carrello1.asp")
 				
 				colore=request("colore")
 				if colore="*****" then colore=""
+				
+				lampadina=request("lampadina")
+				if lampadina="*****" then lampadina=""
+				
 				'prendo le caretteristriche del prodotto
 				
 				Set prodotto_rs = Server.CreateObject("ADODB.Recordset")
@@ -119,6 +123,7 @@ Call Visualizzazione("",0,"carrello1.asp")
 				TotaleRiga=PrezzoProdotto*Quantita
 				riga_rs("TotaleRiga")=TotaleRiga
 				riga_rs("colore")=Colore
+				riga_rs("lampadina")=Lampadina
 				riga_rs("CodiceArticolo")=CodiceArticolo
 				riga_rs("Titolo")=TitoloProdotto
 				riga_rs("Data")=now()
@@ -160,7 +165,7 @@ Call Visualizzazione("",0,"carrello1.asp")
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>CRISTALENSI Cart - You order</title>
         <!--[if lt IE 9]>
@@ -218,7 +223,7 @@ Call Visualizzazione("",0,"carrello1.asp")
 <%
 	Set rs = Server.CreateObject("ADODB.Recordset")
 	'sql = "SELECT RigheOrdine.PkId, RigheOrdine.FkOrdine, RigheOrdine.PrezzoProdotto as PrezzoProdotto, RigheOrdine.FkProdotto, RigheOrdine.Quantita, RigheOrdine.TotaleRiga, Prodotti.Titolo, Prodotti.CodiceArticolo FROM Prodotti INNER JOIN RigheOrdine ON Prodotti.PkId = RigheOrdine.FkProdotto WHERE (((RigheOrdine.FkOrdine)="&idOrdine&"))"
-	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
+	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore, Lampadina FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
 	rs.Open sql, conn, 1, 1
 	num_prodotti_carrello=rs.recordcount
 	
@@ -240,12 +245,12 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         Do while not rs.EOF
                                         %>					
     
-                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<%=rs("titolo")%><%if Len(rs("colore"))>0 then%>&nbsp;(<%=rs("colore")%>)<%end if%></span>
+                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<strong><%=rs("titolo")%></strong><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Light:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
                                         <%
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
                                         %>
-                                        <span class="colonna quantita">n° pieces <input name="quantita<%=conta%>" value="<%=quantita%>" type="text" style="width: 20px"></span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>€</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>€</span><span class="colonna elimina"><input name="eliminare" value="<%=rs("pkid")%>" type="checkbox"></span></p>
+                                        <span class="colonna quantita">n&deg; pieces <input name="quantita<%=conta%>" value="<%=quantita%>" type="text" style="width: 20px"></span><span class="colonna prezzo_unitario"><%=FormatNumber(rs("PrezzoProdotto"),2)%>&#8364;</span><span class="colonna prezzo_totale"><%=FormatNumber(rs("TotaleRiga"),2)%>&#8364;</span><span class="colonna elimina"><input name="eliminare" value="<%=rs("pkid")%>" type="checkbox"></span></p>
                                         <%
                                         conta=conta+1
                                         rs.movenext
@@ -263,7 +268,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                   <%else%>
                                   0,00
                                   <%end if%>
-                                  €&nbsp;€
+                                  &#8364;
                                   </span></h4>
 									<%if rs.recordcount>0 then%>
                                     <form method="post" action="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">

@@ -26,6 +26,9 @@
           <tr>
             <td height="22" class="menu"><img src="immagini/quadrati-bianco.gif" width="5" height="5"> <a href="ges-colori.asp">Colori</a> </td>
           </tr>
+          <tr>
+            <td height="22" class="menu"><img src="immagini/quadrati-bianco.gif" width="5" height="5"> <a href="ges-lampadine.asp">Lampadine</a> </td>
+          </tr>
 		  <tr>
             <td height="22" class="menu"><img src="immagini/quadrati-bianco.gif" width="5" height="5"> <a href="ges-categoria1.asp">Categorie livello 1</a> </td>
           </tr>

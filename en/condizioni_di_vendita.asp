@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>CRISTALENSI Conditions of sale lighting products conditions to buy lamps Shipping modality Payment modality</title>
 		<meta name="description" content="In Cristalensi you find italian lamps for sales, Cristalensi is an ecommerce about lights, online store for italian lighting products and discounted products">
@@ -73,7 +73,7 @@
 					  <p>
 						<strong>How to insert the chosen products in your shopping cart:<br>
 						</strong>o place an item in the cart you must first enter the description page.<br>
-						Once you have written the number of pieces desired, select the image of the cart, the product chosen will automatically appear in the virtual shopping basket.  You can in any moment see the shopping basket by clicking on “shopping cart” in the menu at the top of the page.<br>
+						Once you have written the number of pieces desired, select the image of the cart, the product chosen will automatically appear in the virtual shopping basket.  You can in any moment see the shopping basket by clicking on "shopping cart"� in the menu at the top of the page.<br>
 You can at any time eliminate an article or modify the quantity desired: the page will calculate the total in real time. <br>
 						<br></p>
 					  <p>
@@ -113,8 +113,8 @@ You can at any time eliminate an article or modify the quantity desired: the pag
 						  <br>
 						  <b>Important:</b><br>
 At the moment of delivery by the courier the client is obliged to check:<br> 
-• that the number of packages in the delivery corresponds to the number indicated in the travel documents;<br> 
-• that the packaging is whole, undamaged, not wet, nor in any way hampered with even with regards the sealing material (sealing tape, wrapping paper).<br> 
+- that the number of packages in the delivery corresponds to the number indicated in the travel documents;<br> 
+- that the packaging is whole, undamaged, not wet, nor in any way hampered with even with regards the sealing material (sealing tape, wrapping paper).<br> 
 Eventual damage to the wrapping and/or to the product or the non correspondence of the number of packages to that indicated in the delivery documents must be immediately contested, writing  &quot;WITH RESERVE, SUBJECT TO VERIFICATION OF THE CONTENTS&quot; on the courier's receipt, or you can refuse the pack writing &quot;REFUSED, PACK DAMAGED&quot;.<br>
 Once the courier's receipt has been signed the client no longer has a right to claim that the pack was damaged.<br> 
 If the articles are damaged please contact us immediately at info@cristalensi.it.<br>
@@ -138,7 +138,7 @@ Express couriers are obliged to attempt delivery twice.  If you are absent at th
 					  <p>
 						<br><span class="sfondo-giallo"><strong>
 						Invoicing:</strong></span> <br>
-						Invoices are issued to those companies which expressely request them, and only for purchases over 150 €. 
+						Invoices are issued to those companies which expressely request them, and only for purchases over 150 &#8364;. 
 <br>
 						<br></p>
 					  <p>
@@ -151,7 +151,7 @@ Express couriers are obliged to attempt delivery twice.  If you are absent at th
 						<br><span class="sfondo-giallo"><strong>
 						Acceptance of the sales conditions:</strong></span> <br>
 						The contract stipulated between Cristalensi and the Client should be considered concluded with the acceptance of the order on the part of Cristalensi, after the Client's payment of the order has been effected.  This acceptance is held as tacit, if not communicated by other means by the Client.  The Client effecting an order in one of the foreseen modes, declares to have seen all the indications furnished her/him during the procedure of acquisition, and to accept entirely the general conditions laid out in this page.<br>
-						The client, having concluded the online acquisition procedure  should save an electronic copy of the online procedure and payment, and should also conserve a copy of the present general conditions of sale, in respect of the Law Dlgs 206/2005 “Codice del Consumo” regarding the distance selling of goods.
+						The client, having concluded the online acquisition procedure  should save an electronic copy of the online procedure and payment, and should also conserve a copy of the present general conditions of sale, in respect of the Law Dlgs 206/2005 "Codice del Consumo"� regarding the distance selling of goods.
 <br>
 <br>
 <a href="condizioni_di_vendita.pdf" target="_blank">General conditions of sale on printable file (pdf)</a><br>
@@ -192,7 +192,7 @@ Cristalensi will proceed, through bank transfer, to riemburse the client within 
 <br>
 <br> 
 <span class="sfondo-giallo"><strong>Breakages deriving from transport</strong></span><br><strong>
-At the moment of receiving the goods, sign and write “SUBJECT TO CONTROL” both on the two courier's bills and on the courier's slip</strong>, this will simplify subsequent procedures in the case that the products have been damaged.<br>
+At the moment of receiving the goods, sign and write "SUBJECT TO CONTROL"� both on the two courier's bills and on the courier's slip</strong>, this will simplify subsequent procedures in the case that the products have been damaged.<br>
 After receipt check that all goods ordered are present and undamaged.<br>
 Eventual communications of anomalies or breakages must be sent by post along with photos of the damage <strong>within a period of not more than 8 days of receiving the goods</strong>.<br>
 After this period of 8 days after reception of the goods we decline all responsibility for breakages/anomalies/missing parts.<br>

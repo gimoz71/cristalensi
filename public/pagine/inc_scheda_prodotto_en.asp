@@ -66,7 +66,7 @@ end if
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><%=Titolo_prodotto%> - <%=titolo_cat%> CRISTALENSI Product description</title>
 		<meta name="description" content="Product description <%=Titolo_prodotto%> Cristalensi shop online <%=TogliTAG(descrizione_cat)%>">
@@ -113,6 +113,8 @@ end if
 			quantita=document.newsform2.quantita.value;
 			num_colori=document.newsform2.num_colori.value;
 			colore=document.newsform2.colore.value;
+			num_lampadine=document.newsform2.num_lampadine.value;
+			lampadina=document.newsform2.lampadina.value;
 		
 			if (quantita=="0"){
 				alert("The quantity must be greater than 0");
@@ -121,6 +123,11 @@ end if
 			
 			if (num_colori>1 && colore==""){
 				alert("You have to choose a color");
+				return false;
+			}
+			
+			if (num_lampadine>1 && lampadina==""){
+				alert("You have to choose a light");
 				return false;
 			}
 			
@@ -138,6 +145,8 @@ end if
 			quantita=document.newsform2.quantita.value;
 			num_colori=document.newsform2.num_colori.value;
 			colore=document.newsform2.colore.value;
+			num_lampadine=document.newsform2.num_lampadine.value;
+			lampadina=document.newsform2.lampadina.value;
 		
 			if (quantita=="0"){
 				alert("The quantity must be greater than 0");
@@ -146,6 +155,11 @@ end if
 			
 			if (num_colori>1 && colore==""){
 				alert("You have to choose a color");
+				return false;
+			}
+			
+			if (num_lampadine>1 && lampadina==""){
+				alert("You have to choose a light");
 				return false;
 			}
 			
@@ -202,9 +216,9 @@ end if
                                     <p class="area clearfix"><%if codicearticolo<>"" then%>Article code <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">producers: <a href="/en/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="List of product of the same producer: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
                                     <div class="data">
                                         <%if prezzoarticolo=0 then%>
-                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>€</span></span><br /><br />
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">List price: <span><%=prezzolistino%>€</span></span><br /><br />
                                        <%else%>
-                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>€</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>€</span><%end if%><br><i>VAT included</i>
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>&#8364;</span><%end if%><br><i>VAT included</i>
                                        <%end if%>
                                         <p><%=descrizione_prodotto%></p>
                                         <%if FkCategoria2>0 then%>
@@ -233,6 +247,19 @@ end if
                                                     <input type="hidden" name="num_colori" id="num_colori" value="1">
                                                     <input type="hidden" name="colore" id="colore" value="*****">
                                                 <%end if%>
+                                                
+                                                <%
+                                                Set lam_rs = Server.CreateObject("ADODB.Recordset")
+                                                sql = "SELECT [Prodotto-Lampadina].FkProdotto, Lampadine.Titolo_en FROM [Prodotto-Lampadina] INNER JOIN Lampadine ON [Prodotto-Lampadina].FkLampadina = Lampadine.PkId WHERE ((([Prodotto-Lampadina].FkProdotto)="&id&")) ORDER BY Lampadine.Titolo_en ASC"
+                                                lam_rs.open sql,conn, 1, 1
+                                                if lam_rs.recordcount>1 then
+                                                %>
+                                                    <input type="hidden" name="num_lampadine" id="num_lampadine" value="<%=lam_rs.recordcount%>">
+                                                <%else%>
+                                                    <input type="hidden" name="num_lampadine" id="num_lampadine" value="1">
+                                                    <input type="hidden" name="lampadina" id="lampadina" value="*****">
+                                                <%end if%>
+                                                
                                                 <p class="cart clearfix">
 
                                                     <%if col_rs.recordcount>1 then%>
@@ -251,6 +278,25 @@ end if
                                                     end if
                                                     col_rs.close
                                                     %>
+                                                    
+                                                    <%if lam_rs.recordcount>1 then%>
+                                                        &nbsp;&nbsp;
+                                                        <select name="lampadina" id="lampadina" style="width:auto; float:left; margin-top:7px;">
+                                                        <option value="">Choose the light</option>
+                                                        <%
+                                                        Do While Not lam_rs.EOF
+                                                        %>
+                                                            <option value="<%=lam_rs("Titolo_en")%>"><%=lam_rs("Titolo_en")%></option>
+                                                        <%
+                                                        lam_rs.movenext
+                                                        loop
+                                                        %>
+                                                        </select>
+                                                    <%
+                                                    end if
+                                                    lam_rs.close
+                                                    %>
+                                                    
                                                     <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pieces&nbsp;&nbsp;</span>
                                                 </p>
                                             </form>
