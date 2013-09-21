@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>CRISTALENSI lights online store lamps italian lighting products sales</title>
-		<meta name="description" content="In Cristalensi you find italian lamps for sales, Cristalensi is an ecommerce about lights, online store for italian lighting products and discounted products">
-		<meta name="keywords" content="lamps for sales, ecommerce about lights, online store for italian lighting products, Modern lamps, LED Lights, Classic lamps, Rustic lamps, Tiffany, Murano lights, Crystal lamps, lights for children, Spotlights and tracks, Ceiling fans, Outside modern lights, Outside classic lamps , Light bulbs and Drivers">
+        <title>Designer Beleuchtung für Ihr Heim oder Büro, den Außenbereich oder den Garten sind CRISTALENSI Online-Shop italienische Produkte</title>
+		<meta name="description" content="Online-Shop CRISTALENSI italienische Produkte Beleuchtung für Ihr Heim oder Büro, den Außenbereich oder den Garten sind">
+		<meta name="keywords" content="Designer Beleuchtung, Moderne Leuchten, Ultramoderne Leuchten, LED-Leuchten, Klassische Leuchten, Rustikale Leuchten, Tiffany-Leuchten, Murano-Leuchten, Kristallleuchten, Leuchten für Kinder, Badezimmerleuchten, Einbaustrahler und Spots, Deckenventilatoren, Außenbeleuchtung modern, Außenbeleuchtung klassisch, Leuchtmittel und Driver, Beleuchtung für Bad, Beleuchtung für Küche, Beleuchtung für Kinderzimmer, Auswahl an Lampen, Deckenleuchten, Wandleuchten, Stehlampen, Kronleuchtern, lampen verkaufen">
         <meta name="language" content="en">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,100 +72,99 @@
                             <div class="spacer"></div>
                             
                             <!--elenco categorie-->
-                            <h4 class="area clearfix"><span class="title">PRODUKTKATALOG</span><a href="/ricerca_avanzata_modulo.asp" class="right button_link_red" title="Erweiterte suche leuchten">ERWEITERTE SUCHE &raquo;</a></h4>
+                            <h4 class="area clearfix"><span class="title">PRODUKT KATALOG</span><a href="/en/ricerca_avanzata_modulo.asp" class="right button_link_red" title="Erweiterte suche leuchten">ERWEITERTE SUCHE &raquo;</a></h4>
                             
                             <ul class="catalogo clearfix">
                                 
                                 <li>
                                     
-									<a href="/public/pagine/1-lampade-moderne.asp" title="Elenco articoli Lampade moderne"><img src="/public/370 3.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade moderne"><span class="button_link">Lampade moderne</span></a>
+									<a href="/public/pagine/1-modern-lamps.asp" title="Produkt katalog Moderne Leuchten"><img src="/public/370 3.jpg" width="160" height="120" vspace="2" border="0" alt="Moderne Leuchten"><span class="button_link">Moderne Leuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/16-ultramoderne.asp" title="Elenco articoli Ultramoderne"><img src="/public/30075.jpg" width="160" height="120" vspace="2" border="0" alt="Ultramoderne"><span class="button_link">Ultramoderne</span></a>
+									<a href="/public/pagine/16-ultramodern-lamps.asp" title="Produkt katalog Ultramoderne Leuchten"><img src="/public/30075.jpg" width="160" height="120" vspace="2" border="0" alt="Ultramoderne Leuchten"><span class="button_link">Ultramoderne Leuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/14-lampade-a-led.asp" title="Elenco articoli Lampade a LED"><img src="/public/6670 C.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade a LED"><span class="button_link">Lampade a LED</span></a>
+									<a href="/public/pagine/14-led-lights.asp" title="Produkt katalog LED-Leuchten"><img src="/public/6670 C.jpg" width="160" height="120" vspace="2" border="0" alt="LED-Leuchten"><span class="button_link">LED-Leuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/2-lampade-classiche.asp" title="Elenco articoli Lampade classiche"><img src="/public/Lampadari-601_5.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade classiche"><span class="button_link">Lampade classiche</span></a>
+									<a href="/public/pagine/2-classic-lamps.asp" title="Produkt katalog Klassische Leuchten"><img src="/public/Lampadari-601_5.jpg" width="160" height="120" vspace="2" border="0" alt="Klassische Leuchten"><span class="button_link">Klassische Leuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/3-lampade-rustiche.asp" title="Elenco articoli Lampade rustiche"><img src="/public/rua837_1b.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade rustiche"><span class="button_link">Lampade rustiche</span></a>
+									<a href="/public/pagine/3-rustic-lamps.asp" title="Produkt katalog Rustikale Leuchten"><img src="/public/rua837_1b.jpg" width="160" height="120" vspace="2" border="0" alt="Rustikale Leuchten"><span class="button_link">Rustikale Leuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/4-lampade-tiffany.asp" title="Elenco articoli Lampade Tiffany"><img src="/public/T964 S1.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade Tiffany"><span class="button_link">Lampade Tiffany</span></a>
+									<a href="/public/pagine/4-tiffany-lamps.asp" title="Produkt katalog Tiffany-Leuchten"><img src="/public/T964 S1.jpg" width="160" height="120" vspace="2" border="0" alt="Tiffany-Leuchten"><span class="button_link">Tiffany-Leuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/5-lampade-murano.asp" title="Elenco articoli Lampade Murano"><img src="/public/rialto_1b.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade Murano"><span class="button_link">Lampade Murano</span></a>
+									<a href="/public/pagine/5-murano-lamps.asp" title="Produkt katalog Murano-Leuchten"><img src="/public/rialto_1b.jpg" width="160" height="120" vspace="2" border="0" alt="Murano-Leuchten"><span class="button_link">Murano-Leuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/6-lampade-cristallo.asp" title="Elenco articoli Lampade Cristallo"><img src="/public/anacleto_plafoniera1.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade Cristallo"><span class="button_link">Lampade Cristallo</span></a>
+									<a href="/public/pagine/6-crystal-lamps.asp" title="Produkt katalog Kristallleuchten"><img src="/public/anacleto_plafoniera1.jpg" width="160" height="120" vspace="2" border="0" alt="Kristallleuchten"><span class="button_link">Kristallleuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/7-lampade-per-bambini.asp" title="Elenco articoli Lampade per bambini"><img src="/public/sole so.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade per bambini"><span class="button_link">Lampade per bambini</span></a>
+									<a href="/public/pagine/7-lamps-for-kids.asp" title="Produkt katalog Leuchten für Kinder"><img src="/public/sole so.jpg" width="160" height="120" vspace="2" border="0" alt="Leuchten für Kinder"><span class="button_link">Leuchten für Kinder</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/8-lampade-per-il-bagno.asp" title="Elenco articoli Lampade per il bagno"><img src="/public/dome_1a.jpg" width="160" height="120" vspace="2" border="0" alt="Lampade per il bagno"><span class="button_link">Lampade per il bagno</span></a>
+									<a href="/public/pagine/8-bathroom-lights.asp" title="Produkt katalog Badezimmerleuchten"><img src="/public/dome_1a.jpg" width="160" height="120" vspace="2" border="0" alt="Badezimmerleuchten"><span class="button_link">Badezimmerleuchten</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/9-incassi-e-faretti.asp" title="Elenco articoli Incassi e Faretti"><img src="/public/4935.jpg" width="160" height="120" vspace="2" border="0" alt="Incassi e Faretti"><span class="button_link">Incassi e Faretti</span></a>
+									<a href="/public/pagine/9-recessed-lights-and-spotlights.asp" title="Produkt katalog Einbaustrahler und Spots"><img src="/public/4935.jpg" width="160" height="120" vspace="2" border="0" alt="Einbaustrahler und Spots"><span class="button_link">Einbaustrahler und Spots</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/10-ventilatori-soffitto.asp" title="Elenco articoli Ventilatori soffitto"><img src="/public/ventilatore_swing_eco1.jpg" width="160" height="120" vspace="2" border="0" alt="Ventilatori soffitto"><span class="button_link">Ventilatori soffitto</span></a>
+									<a href="/public/pagine/10-ceiling-fans.asp" title="Produkt katalog Deckenventilatoren"><img src="/public/ventilatore_swing_eco1.jpg" width="160" height="120" vspace="2" border="0" alt="Deckenventilatoren"><span class="button_link">Deckenventilatoren</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/11-esterne-moderne.asp" title="Elenco articoli Esterne moderne"><img src="/public/EST 380 A.jpg" width="160" height="120" vspace="2" border="0" alt="Esterne moderne"><span class="button_link">Esterne moderne</span></a>
+									<a href="/public/pagine/11-outside-modern-lights.asp" title="Produkt katalog Außenbeleuchtung modern"><img src="/public/EST 380 A.jpg" width="160" height="120" vspace="2" border="0" alt="Außenbeleuchtung modern"><span class="button_link">Außenbeleuchtung modern</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/12-esterne-classiche.asp" title="Elenco articoli Esterne classiche"><img src="/public/474-2.jpg" width="160" height="120" vspace="2" border="0" alt="Esterne classiche"><span class="button_link">Esterne classiche</span></a>
+									<a href="/public/pagine/12-outside-classic-lights.asp" title="Produkt katalog Außenbeleuchtung klassisch"><img src="/public/474-2.jpg" width="160" height="120" vspace="2" border="0" alt="Außenbeleuchtung klassisch"><span class="button_link">Außenbeleuchtung klassisch</span></a>
 										
                                 </li>
                                 
                                 <li>
                                     
-									<a href="/public/pagine/13-lampadine-e-driver.asp" title="Elenco articoli Lampadine e Driver"><img src="/public/led_gu10_2a.jpg" width="160" height="120" vspace="2" border="0" alt="Lampadine e Driver"><span class="button_link">Lampadine e Driver</span></a>
+									<a href="/public/pagine/13-light-bulbs-and-drivers.asp" title="Produkt katalog Leuchtmittel und Driver"><img src="/public/led_gu10_2a.jpg" width="160" height="120" vspace="2" border="0" alt="Leuchtmittel und Driver"><span class="button_link">Leuchtmittel und Driver</span></a>
 										
                                 </li>
-                            
                             
                             </ul>
 
@@ -174,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <!--#include file="inc_sx_catalogo.asp"-->
+                <!--#include file="inc_sx_katalog.asp"-->
             </div>
         </div>
         <!--#include file="inc_footer.asp"-->
