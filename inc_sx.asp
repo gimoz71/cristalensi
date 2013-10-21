@@ -13,16 +13,17 @@
                 <h3>Area clienti</h3>
                 <p>Per consultare il catalogo non &egrave; necessario iscriversi</p>
                 <p><a href="#" class="info tiptip" title="<h3>Informazioni generali</h3>L'iscrizione al sito internet Cristalensi <strong>&egrave; obbligatoria solo per acquistare</strong> ma non per consultare il catalogo dei prodotti.<br />Gli iscritti, oltre che poter acquistare i prodotti inserendo solamente <strong style='color: red'>Login</strong> e <strong style='color: red'>Password</strong> senza ripetere l'iscrizione ogni volta, potranno stampare gli ordini, aggiornare i propri dati, mettere i commenti al sito internet e saranno aggiornati sulle nostre offerte.<br />Per tutte le altre informazioni relative alle condizioni di vendita consulta la pagina specifica: <a href='/condizioni_di_vendita.asp' title='Condizioni di vendita' style='color: red'>condizioni di vendita</a>.">Maggiori informazioni</a></p>
-                <form method="post" name="logon" action="<%=MM_LoginAction%><%if Request.QueryString<>"" then%>&<%else%>?<%end if%>contr=1">
+                <form method="post" name="logon" action="<%=MM_LoginAction%><%if Request.QueryString="contr=1" then%><%else%><%if Request.QueryString<>"" then%>&<%else%>?<%end if%>contr=1<%end if%>">
 
                    <label for="username">Login</label>
                    <input type="text" name="login">
                    <label for="password">Password</label>
                    <input type="password" name="password">
+                   <%if contr=2 then%>
+               		<p style="background: #900; color: #fff; font-weight: bold; padding: 5px;">Attenzione!<br />I dati inseriti non sono corretti.</p>
+               	   <%end if%>
                    <button type="submit" class="button_link" style="margin-top:10px;">Entra</button>
-               <%if contr=2 then%>
-               <p style="background: #900; color: #fff; font-weight: bold; padding: 5px;">Attenzione! I dati inseriti<br />non sono corretti.</p>
-               <%end if%>
+               
                </form>
                <p><a href="/recupero_pw.asp" class="password-recover" title="Recupera la password smarrita">Recupera la password</a></p>
                <a href="/iscrizione.asp" title="Registrati per acquistare i nostri prodotti per illuminazione" class="button_link_red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REGISTRATI!&nbsp;&nbsp;&nbsp;&nbsp;</a>
