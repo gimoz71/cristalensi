@@ -25,7 +25,7 @@
                <%end if%>
                </form>
                <p><a href="/recupero_pw.asp" class="password-recover" title="Recupera la password smarrita">Recupera la password</a></p>
-               <a href="/iscrizione.asp" title="Registrati per acquistare i nostri prodotti per illuminazione"><button class="register button_link_red">REGISTRATI!</button></a>
+               <a href="/iscrizione.asp" title="Registrati per acquistare i nostri prodotti per illuminazione" class="button_link_red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REGISTRATI!&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
                <h3>Pagamenti</h3>
                <p><a href="/condizioni_di_vendita.asp" class="info" title="Regolamento per acquistare i prodotti Cristalensi">Condizioni di vendita</a></p>

@@ -25,7 +25,7 @@
                <%end if%>
                </form>
                <p><a href="/en/recupero_pw.asp" class="password-recover" title="Recover Lost Password">Recover lost Password</a></p>
-               <a href="/en/iscrizione.asp" title="Register to buy our lighting products"><button class="register button_link_red">SIGN IN!</button></a>
+               <a href="/en/iscrizione.asp" title="Register to buy our lighting products" class="button_link_red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIGN IN!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
                <h3>Payment</h3>
                <p><a href="/en/condizioni_di_vendita.asp" class="info" title="Conditions of sale">Conditions of sale</a></p>

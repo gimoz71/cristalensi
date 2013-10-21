@@ -25,6 +25,37 @@
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->

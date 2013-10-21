@@ -92,6 +92,37 @@ end if
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -263,8 +294,8 @@ end if
                                                 <p class="cart clearfix">
 
                                                     <%if col_rs.recordcount>1 then%>
-                                                        <select name="colore" id="colore" style="width:auto; float:left; margin-top:7px;">
-                                                        <option value="">Choose the color</option>
+                                                        <select name="colore" id="colore" style="width:auto; float:left; margin-top:7px; margin-right:10px;">
+                                                        <option value="">Choose the color and/or the finish </option>
                                                         <%
                                                         Do While Not col_rs.EOF
                                                         %>
@@ -282,7 +313,7 @@ end if
                                                     <%if lam_rs.recordcount>1 then%>
                                                         &nbsp;&nbsp;
                                                         <select name="lampadina" id="lampadina" style="width:auto; float:left; margin-top:7px;">
-                                                        <option value="">Choose the light</option>
+                                                        <option value="">Choose the light and/or the glass</option>
                                                         <%
                                                         Do While Not lam_rs.EOF
                                                         %>

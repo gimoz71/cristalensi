@@ -69,6 +69,37 @@ end if
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -507,9 +538,9 @@ end if
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>" style="font-size:9px;"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Product description&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Product description</span></a>
                                             <%if prezzoarticolo=0 then%>
-                                            <p class="cart clearfix"><span class="price">List price: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Cristalensi price? Click here to have an estimate from our staff</a></p>
+                                            <p class="cart clearfix"><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Cristalensi price? Click here to have an estimate from our staff</a></p>
                                             <%else%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>€&nbsp;&nbsp;<small><i>IVA/VAT included</i></small></span><%end if%><a href="<%=NomePagina%>" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a></p>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>&#8364;&nbsp;&nbsp;<small><i>IVA/VAT included</i></small></span><%end if%><a href="<%=NomePagina%>" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a></p>
                                             <%end if%>
                                         </div>
                                     </li>
