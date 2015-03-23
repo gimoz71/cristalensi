@@ -138,7 +138,7 @@
                               <br />
                               <em><strong>La merce potr&agrave; essere ritirata anche presso il nostro negozio senza alcun costo di spedizione:<br />
                               </strong></em><strong>Cristalensi Snc</strong> Di Lensi Massimiliano & C. (P.I. 05305820481)<br />
-    							50056 Montelupo F.no (FI) Via arti e mestieri, 1 - tel: 0571 911163<br />
+    							50056 Montelupo F.no (FI) Via arti e mestieri, 1 - tel: 0571.911163 - fax: 0571.073327<br />
                               <br />
                               Per i clienti della provincia di Firenze e di determinate aree della Toscana, la consegna potr&agrave; essere effettuata dal nostro staff.<br />
                               <br />
@@ -168,7 +168,7 @@
                             </p>
                             <p>
                             <span class="sfondo-giallo"><strong>Fatturazione:</strong></span> <br />
-							La fattura, alle aziende che espressamente la richiedono, &egrave; emessa per ordini superiori a 150&euro;. 
+							La fattura &egrave; emessa su richiesta sia per aziende che per privati. 
                             </p>
                             <p>
                             <span class="sfondo-giallo"><strong>

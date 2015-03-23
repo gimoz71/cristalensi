@@ -32,7 +32,7 @@
               <tr> 
                 <td colspan="5">&nbsp;</td>
               </tr>
-              <%for anno=2010 to 2014%>
+              <%for anno=2010 to 2015%>
               <tr class="admin-intestazione" align="left"> 
                 <td width="27%"><strong>&nbsp;ANNO&nbsp;<%=anno%></strong></td>
                 <td width="15%" align="right">n. ordini</td>
@@ -93,6 +93,24 @@
               <tr> 
                 <td colspan="5">&nbsp;</td>
               </tr>
+              <%
+			  	'Set trs=Server.CreateObject("ADODB.Recordset")
+				'sql = "SELECT Sum([Ordini.TotaleCarrello]) AS totale_carrello, Sum([Ordini.TotaleGenerale]) AS totale_generale, Count(*) AS n_ordini "
+				'sql = sql + "FROM Ordini "
+				'sql = sql + "WHERE (((Ordini.DataOrdine)>=#1/1/"&anno&" 00:00:00# And (Ordini.DataOrdine)<=#12/31/"&anno&" 23:59:59#) AND ((Ordini.Stato)=7 Or (Ordini.Stato)=8))"
+				'trs.Open sql, conn, 1, 1
+			  %>
+              <!--<tr align="left" class="admin-righe"> 
+                <td height="20">&nbsp;Anno <%'=anno%></td>
+                <td align="right"><%'=trs("n_ordini")%></td>
+                <td align="right"><%'=FormatNumber(trs("totale_carrello"),2)%></td>
+                <td align="right"><%'=FormatNumber((trs("totale_carrello")/trs("n_ordini")),2)%></td>
+                <td align="right"><%'=FormatNumber(trs("totale_generale"),2)%></td>
+              </tr>
+              <%'trs.close%>
+              <tr> 
+                <td colspan="5">&nbsp;</td>
+              </tr>-->
               <%next%>
               
             </table>

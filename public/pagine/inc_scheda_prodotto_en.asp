@@ -256,8 +256,11 @@ end if
                                             <p> You find the product in the category: <a href="/en/prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>"><%=titolo_cat%></a></p>
 					<%end if%>
                                         <%if allegato_prodotto<>"" then%>
-                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank"><img src="/images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="Attached file">Attached file</a></p>
+                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank" title="Attached file for product: <%=titolo_prodotto%>"><img src="/images/file.jpg" border="0" style="width:18px; height:18px;" hspace="3" align="absmiddle" alt="Attached file for product: <%=titolo_prodotto%>">Attached file</a></p>
                                         <%end if%>
+                                        <p>&nbsp;</p>
+                                        <p class="sfondo-giallo-chiaro">AVAIBILITY OF PRODUCTS: <a href="contatti.asp"><strong>Contact our staff to inquire about product availability.</strong></a></p>
+                                        
                                         <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><a href="#" onClick="MM_openBrWindow('/en/richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Do you want to know the Cristalensi price? Click here to have an estimate from our staff</a>
                                         <%else%>
@@ -390,12 +393,12 @@ end if
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook"></a><span style="line-height:80px;">If you like this article, share it with your friends on FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
+                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook-prod"></a><span style="line-height:80px;">If you like this article, share it with your friends on FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
                                     
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <strong>Contact us!</strong> Our staff is at your disposal for any clarification, information and advice on the article desired.<br /><br />
+                                    <strong>Contact us!</strong> Our staff is at your disposal for any clarification, information and advice on the article desired.<br /><%=Titolo_prodotto%> <%=" "& produttore%> - <%=titolo_cat%><br /><br />
                                 </li>
                                 
                             </ul>

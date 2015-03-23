@@ -82,6 +82,28 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
+			
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
 
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
@@ -91,6 +113,7 @@
 
 			eMail_cdo.Send()
 
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -102,6 +125,28 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
+			
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
 
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
@@ -111,16 +156,39 @@
 
 			eMail_cdo.Send()
 
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			'fine invio email
 			
 			'invio l'email al webmaster
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Cristalensi.it: pubblicato il commento - published the comment"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
+			
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
 
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
@@ -130,6 +198,7 @@
 
 			eMail_cdo.Send()
 
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			'fine invio email
 			
@@ -257,7 +326,7 @@
 				
 				'invio l'email al webmaster
 				Mittente = "info@cristalensi.it"
-				Destinatario = "iurymazzoni@hotmail.com"
+				Destinatario = "viadeimedici@gmail.com"
 				Oggetto = "Cristalensi.it: inserita risposta al commento - inserted response to the comment"
 				Testo = HTML1
 	
@@ -363,8 +432,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
                     <td height="15">
 					Si 
 				    <input name="Pubblicato" type="radio" value="si" <% if pkid > 0 then %><%if rs("Pubblicato")=True then%>checked<%end if%><%end if%>>&nbsp;&nbsp;No <input name="Pubblicato" type="radio" value="no" <% if pkid > 0 then %><%if rs("Pubblicato")=False then%>checked<%end if%><%else%>checked<%end if%>></td>
-                    <td height="15">Si 
-				    <input name="Notifica_pub" type="radio" value="si" />&nbsp;&nbsp;No <input name="Notifica_pub" type="radio" value="no" checked /></td>
+                    <td height="15">Si&nbsp;&nbsp;<input name="Notifica_pub" type="checkbox" value="si" /></td>
 				  </tr>
 				  <tr align="left">
                     <td colspan="2" height="15"><strong>Cliente</strong> </td>
@@ -405,8 +473,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
                     <td height="15">
 					Si 
 				    <input name="Risposta" type="radio" value="si" <% if pkid > 0 then %><%if rs("Risposta")=True then%>checked<%end if%><%end if%>>&nbsp;&nbsp;No <input name="Risposta" type="radio" value="no" <% if pkid > 0 then %><%if rs("Risposta")=False then%>checked<%end if%><%else%>checked<%end if%>><%if rs("Risposta")=True then%><input type="hidden" name="pkid_risposta" value="<%=risp_rs("PkId")%>" /><%end if%></td>
-                    <td height="15">Si 
-				    <input name="Notifica_risp" type="radio" value="si" />&nbsp;&nbsp;No <input name="Notifica_risp" type="radio" value="no" checked /></td>
+                    <td height="15">Si&nbsp;&nbsp;<input name="Notifica_risp" type="checkbox" value="si" /></td>
                   </tr>
 				  <tr align="left">
                     <td height="15" colspan="2"><strong>Testo risposta</strong></td>

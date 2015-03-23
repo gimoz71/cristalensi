@@ -106,6 +106,49 @@
                             <p><em>In this page you will find all of our offers on lighting: they are the catalog products at fantastic prices. Every product has its own detailed card, to see it, all you have to do is click on the name or on the photo of the article.<br>
 					    Instead, to consult the entire catalog click here on <a href="prodotti.asp" title="Products gallery">[Products]</a> (or on the same voice in the menu above)  but you can also choose a category or a producer from the menu on the left.</em>
                           </p>
+                          <SCRIPT LANGUAGE=javascript>
+                                    <!--
+                                        function invia_account() {
+                                            document.getElementById("form_prodotti").submit();
+                                        }
+                                    // End -->
+                                    </SCRIPT>
+                             		<div class="half_panel left_p">
+                                    <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
+                                      <p>
+                                      Haven't found what you're looking for? Choose a category: 
+                                        <%
+                                        Set cs=Server.CreateObject("ADODB.Recordset")
+                                        sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo_en as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo_en as Titolo_2 "
+                                        sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
+                                        'sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
+                                        sql = sql + "ORDER BY Categorie1.Titolo_en ASC, Categorie2.Titolo_en ASC"
+                                        cs.Open sql, conn, 1, 1
+                                        %>
+                                        <select name="Cat" id="Cat" class="form" onChange="invia_account()" style="margin-top:10px;">
+                                            <option title="Choose a category" value="0">Choose a category</option>
+											<%
+                                            if cs.recordcount>0 then
+                                            Do While Not cs.EOF
+                                            %>
+                                            <option title="<%=cs("Titolo_2")%>" value=<%=cs("pkid_2")%>><%=cs("Titolo_2")%></option>
+                                            <%
+                                            cs.movenext
+                                            loop
+                                            end if
+                                            %>
+                                         </select>
+                                         <%cs.close%>
+                                        </p>
+                                       </form>
+                                       </div>
+                                       <div class="half_panel right_p">
+                                        <p>Or, for a more detailed search, use the<br>
+                                        <span><a href="ricerca_avanzata_modulo.asp" class="button_link_red" style="margin-top:7px;">ADVANCED SEARCH</a></span>
+                                        </p>
+                                        </div>
+                                    <div class="clear"></div>
+                                    
                             <p class="area"> <strong>Arrange by price:</strong> 
                             <a href="offerte.asp?order=3"><img src="/images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by price from lowest to highest" title="arrange the products by price from lowest to highest" /></a>
                             <a href="offerte.asp?order=4"><img src="/images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by price from highest to lowest" title="arrange the products by price from highest to lowest" /></a>

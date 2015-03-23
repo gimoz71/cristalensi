@@ -1,10 +1,10 @@
 <%
-'On Error Resume Next
+On Error Resume Next
 
 	Set conn = Server.CreateObject("ADODB.Connection")
-	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\cristalensiit\mdb-database\db_cristalensi.mdb"
-	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\viadeimediciit\mdb-database\db_cristalensi.mdb"
-	conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq="& Server.MapPath("/mdb-database/db_cristalensi.mdb")
+	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\cristalensiit\mdb-database\db_cristalensi_2013.mdb"
+	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\viadeimediciit\mdb-database\db_cristalensi_2013.mdb"
+	conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq="& Server.MapPath("/mdb-database/db_cristalensi_2013.mdb")
 	'conn.open = "DSN=cristalensiit"
 	
 	path_img="d:\inetpub\webs\cristalensiit\public\"
@@ -23,9 +23,9 @@
 	toUrl = Mid((toUrl),(UltimoSlash2 + 1), len(toUrl)- UltimoSlash2)
 	'Response.Write "La pagina dove sono è: " &toURL& "."
 	
-'If Err.Number <> 0 Then
-	'Response.Redirect("aggiornamento.html")
-'End IF
+If Err.Number <> 0 Then
+	Response.Redirect("/aggiornamento.html")
+End IF
 
 MM_LoginAction = Request.ServerVariables("URL")
 If Request.QueryString<>"" Then MM_LoginAction = MM_LoginAction + "?" + Request.QueryString
@@ -46,7 +46,18 @@ if contr=1 then
 		login=Replace(login, "&", " ")	
 		'response.End()
 	end if
+	lg3=InStr(login, "=")
+	if lg3>0 then
+		login=Replace(login, "=", " ")	
+		'response.End()
+	end if
+	lg4=InStr(login, " or ")
+	if lg4>0 then
+		login=Replace(login, " or ", " ")	
+		'response.End()
+	end if
 	login=Trim(login)
+	
 	password = Request.form("Password")
 	pw1=InStr(password, "'")
 	if pw1>0 then
@@ -56,6 +67,16 @@ if contr=1 then
 	pw2=InStr(password, "&")
 	if pw2>0 then
 		password=Replace(password, "&", " ")	
+		'response.End()
+	end if
+	pw3=InStr(password, "=")
+	if pw3>0 then
+		password=Replace(password, "=", " ")	
+		'response.End()
+	end if
+	pw4=InStr(password, " or ")
+	if pw4>0 then
+		password=Replace(password, " or ", " ")	
 		'response.End()
 	end if
 	password=Trim(password)

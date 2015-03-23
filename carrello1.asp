@@ -274,9 +274,23 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         <%conta=0%>
                                         <%
                                         Do while not rs.EOF
+										
+										Set url_prodotto_rs = Server.CreateObject("ADODB.Recordset")
+										sql = "SELECT PkId, NomePagina FROM Prodotti where PkId="&rs("FkProdotto")&""
+										url_prodotto_rs.Open sql, conn, 1, 1
+						
+										NomePagina=url_prodotto_rs("NomePagina")
+										if Len(NomePagina)>0 then
+											NomePagina="/public/pagine/"&NomePagina
+											'NomePagina="/public/pagine/scheda_prodotto.asp?id="&id
+										else
+											NomePagina="#"
+										end if
+											
+										url_prodotto_rs.close
                                         %>					
     
-                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<strong><%=rs("titolo")%></strong><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Lamp.:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
+                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<a href="<%=NomePagina%>" title="Scheda prodotto: <%=rs("titolo")%>"><strong><%=rs("titolo")%></strong></a><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Lamp.:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
                                         <%
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
@@ -306,19 +320,58 @@ Call Visualizzazione("",0,"carrello1.asp")
                                     <h3 style="font-size:12px;">Eventuali annotazioni</h3>
                                     <p>Potete usare questo spazio per inserire eventuali annotazioni o comunicazioni in relazione ai prodotti acquistati.</p>
                                     <textarea name="NoteCliente" cols="105" rows="2" id="NoteCliente"><%=ss("NoteCliente")%></textarea>
+                                    <p>&nbsp;</p>
                                     <p><button type="button" name="continua" onClick="location.href='prodotti.asp'" style="float: left" class="button_link">&laquo; continua gli acquisti</button>&nbsp;&nbsp;<button type="submit" name="continua" style="float: right" class="button_link_red">clicca qui per completare l'acquisto  &raquo;</button></p>
                                     </form>
                                     <%end if%>
-                                    <br>
-                                    <h3 style="font-size:12px;">INFORMAZIONI IMPORTANTI SULLA DISPONIBILITA' DEI PRODOTTI</h3>
-                                    <p>Come potete aver notato il nostro catalogo &eacute; composto da numerosi prodotti e numerose ditte, a tal ragione alcuni prodotti, al momento della richiesta, potrebbero non essere dispobili immediatamente e potrebbero essere in fase di ordinazione. Nel caso in cui ci fosse urgenza del prodotto desiderato, informarsi direttamente dal nostro staff per l'effettiva disponibilit&agrave; o tempo di consegna nel caso in cui non fosse disponibile (minimo 2 giorni, massimo 30 giorni). <a href="/contatti.asp">Recapiti per informarsi sulla disponibilit&agrave; dei prodotti.</a></p>
+                                    
 								<%end if%>
 								<%
                                 ss.close
                                 rs.close
                                 %>
                             </div>
+                            
+                            <p>&nbsp;</p>
+                            <h3 style="font-size:12px;">INFORMAZIONI IMPORTANTI SULLA DISPONIBILITA' DEI PRODOTTI</h3>
+                            <p>Come potete aver notato il nostro catalogo &eacute; composto da numerosi prodotti e numerose ditte, a tal ragione alcuni prodotti, al momento della richiesta, potrebbero non essere dispobili immediatamente e potrebbero essere in fase di ordinazione.<br />Nel caso in cui ci fosse urgenza del prodotto desiderato, informarsi direttamente dal nostro staff per l'effettiva disponibilit&agrave; o tempo di consegna nel caso in cui fosse in ordinazione: da un minimo 2 giorni a un massimo 30 giorni.</p>
+                            <p class="sfondo-giallo-chiaro">DISPONIBILITA' DEI PRODOTTI: <a href="/contatti.asp"><strong>Contatta lo staff per avere informazioni sulla disponibilit&agrave;.</strong></a></p>
+                            <!--spedizione-->
+                            <div class="half_panel left">
+                            <h4 class="area-commenti">Costi di spedizione</h4>
+                            <table cellpadding="3" cellspacing="3" width="100%" border="0">
+                            <tr class="bordo-top"><td colspan="2"><em>Spedizione in tutta Italia (Isole comprese):</em></td></tr>
+                            <tr class="bordo-top"><td width="80%"><strong>&raquo; Ordine maggiore di 250€:</strong></td><td width="20%" align="right"><strong>0€</strong></td></tr>
+                            <tr class="bordo-top"><td width="80%">&raquo; Ordine minore di 250€:</td><td width="20%" align="right">10€</td></tr>
+                            <tr class="bordo-top"><td width="80%">&raquo;  Ritiro in sede:</td><td width="20%" align="right">0€</td></tr>
+                            <tr class="bordo-top"><td colspan="2"><em>Spedizione internazionale:<br />dipende dalla destinazione e dal volume dei prodotti</em></td></tr>
+                            </table>
+                            </div>
+                            
+                            <!--pagamenti-->
+                            <div class="half_panel right">
+                            <h4 class="area-commenti">Sistemi di pagamento</h4>
+                            <table cellpadding="3" cellspacing="3" width="100%" border="0">
+                            <tr class="bordo-top"><td width="80%">&raquo; Bonifico bancario:</td><td width="20%" align="right">0€</td></tr>
+                            <tr class="bordo-top"><td width="80%">&raquo; Poste Pay:</td><td width="20%" align="right">0€</td></tr>
+                            <tr class="bordo-top"><td width="80%">&raquo; Contassegno:</td><td width="20%" align="right">4€</td></tr>
+                            <tr class="bordo-top"><td width="80%">&raquo; Carta di credito con PayPal:</td><td width="20%" align="right">2%</td></tr>
+                            <tr class="bordo-top"><td width="80%">&raquo; Carta Prepagata con PayPal:</td><td width="20%" align="right">2%</td></tr>
+                            </table>
+                            </div>
+                            
+                            
                         </div>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
                     </div>
                 </div>
                 <!--#include file="inc_sx_prodotti.asp"-->

@@ -73,15 +73,38 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -121,34 +144,80 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Cristalensi.it: Costi di spedizione inseriti per l'ordine n. "&pkid&" - Mailing costs inserted for order n. "&pkid&""
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 		end if
 		
@@ -165,7 +234,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Spett.le "&nome&" "&nominativo&", l'Ordine da sito internet n° "&pkid&" è stato preso in carico dal nostro staff.<br>Appena sarà spedito riceverà un'email con i dati di spedizione: nome del corriere e codice identificativo.<br><br><b>Al momento del ricevimento della merce, firmare e scrivere la dicitura &quot;RISERVA DI CONTROLLO&quot; sulla CEDOLINA del corriere, tutto ci&ograve; per avere copertura assicurativa nel caso in cui siano presenti prodotti danneggiati.</b><br><br>Per qualsiasi chiarimento o informazione ci contatti.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Spett.le "&nome&" "&nominativo&", l'Ordine da sito internet n&deg; "&pkid&" &egrave; stato preso in carico dal nostro staff.<br>Appena sar&agrave; spedito ricever&agrave; un'email con i dati di spedizione: nome del corriere e codice identificativo.<br><br><b><u><font face=Verdana size=3 color=#990000>LEGGERE ATTENTAMENTE:</font></u></b><br><br><b>Al momento del ricevimento della merce controllare attentamente i colli:<br>- se alla vista, esternamente, i colli sono danneggiati, firmare e scrivere la dicitura &quot;COLLI DANNEGGIATI&quot; sulla CEDOLINA del corriere;<br>- altrimenti, anche in presenza di colli non danneggiati, firmare e scrivere la dicitura &quot;RISERVA DI CONTROLLO&quot; sulla CEDOLINA del corriere;<br><br>tutto ci&ograve; per avere copertura assicurativa nel caso in cui siano presenti prodotti danneggiati.</b><br><br>Per qualsiasi chiarimento o informazione ci contatti:<br>Tel. 0571.911163 - Email: info@cristalensi.it</font>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Cordiali Saluti, lo staff di Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -176,7 +245,7 @@
 				HTML1 = HTML1 & "</tr>"
 				HTML1 = HTML1 & "<tr>"
 				HTML1 = HTML1 & "<td>"
-				HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dear "&nome&" "&nominativo&", the order from internet site n° "&pkid&" is being processed by our staff.<br> As soon as it has been sent you will receive an e-mail with the mailing data:  name of the courier and identification code.<br><br><b>When you receive the goods please write “SUBJECT TO CONTROL” on the COURIER'S RECIEPT SLIP, all of which will help to have better coverage should any goods have been damaged.</b></font><br>"
+				HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dear "&nome&" "&nominativo&", the order from internet site n&deg; "&pkid&" is being processed by our staff.<br> As soon as it has been sent you will receive an e-mail with the mailing data:  name of the courier and identification code.<br><br><b><u><font face=Verdana size=3 color=#990000>Attention, to read carefully:</font></u></b><br><br><b>When you receive the goods please carefully check the hills:<br>- if the eye, externally, the packages are damaged, write &quot;DAMAGED PACKAGES&quot; on the COURIER'S RECIEPT SLIP;<br>- otherwise, even in the presence of packages not damaged, write &quot;SUBJECT TO CONTROL&quot; on the COURIER'S RECIEPT SLIP;<br><br> all of which will help to have better coverage should any goods have been damaged.</b></font><br>"
 				HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Best regards, from the staff of Cristalensi</font>"
 				HTML1 = HTML1 & "</td>"
 				HTML1 = HTML1 & "</tr>"
@@ -195,15 +264,38 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -211,20 +303,43 @@
 			'invio al webmaster
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Aggiornamento ordine n. "&pkid&" effettuato su Cristalensi.it"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email	
@@ -244,13 +359,13 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Spett.le "&nome&" "&nominativo&", i prodotti da lei ordinati con l'Ordine da sito internet n° "&pkid&" sono stati spediti secondo le modalità richieste.<br><br>"
-			HTML1 = HTML1 & "<b>LEGGERE ATTENTAMENTE:<br>Al momento del ricevimento della merce, firmare e scrivere la dicitura &quot;RISERVA DI CONTROLLO&quot; sulla CEDOLINA del corriere, tutto ci&ograve; per avere copertura assicurativa nel caso in cui siano presenti prodotti danneggiati.</b><br><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Spett.le "&nome&" "&nominativo&", i prodotti da lei ordinati con l'Ordine da sito internet n&deg; "&pkid&" sono stati spediti secondo le modalit&agrave; richieste.<br><br>"
+			HTML1 = HTML1 & "<b><u><font face=Verdana size=3 color=#990000>LEGGERE ATTENTAMENTE:</font></u></b><br><br><b>Al momento del ricevimento della merce controllare attentamente i colli:<br>- se alla vista, esternamente, i colli sono danneggiati, firmare e scrivere la dicitura &quot;COLLI DANNEGGIATI&quot; sulla CEDOLINA del corriere;<br>- altrimenti, anche in presenza di colli non danneggiati, firmare e scrivere la dicitura &quot;RISERVA DI CONTROLLO&quot; sulla CEDOLINA del corriere;<br><br>tutto ci&ograve; per avere copertura assicurativa nel caso in cui siano presenti prodotti danneggiati.</b><br><br>"
 			HTML1 = HTML1 & "Note sulla spedizione:<br>"&InfoSpedizione&"<br><br>"
 			if Left(NoteCri,4)="http" then
 			HTML1 = HTML1 & "<b><a href="""&NoteCri&""">"&NoteCri&"</a></b><br><br>"
 			end if
-			HTML1 = HTML1 & "<br><br>Per qualsiasi chiarimento o informazione ci contatti.</font><br>"
+			HTML1 = HTML1 & "<br><br>Per qualsiasi chiarimento o informazione ci contatti:<br>Tel. 0571.911163 - Email: info@cristalensi.it</font>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Cordiali Saluti, lo staff di Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -261,8 +376,8 @@
 				HTML1 = HTML1 & "</tr>"
 				HTML1 = HTML1 & "<tr>"
 				HTML1 = HTML1 & "<td>"
-				HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dear "&nominativo&", the products which you ordered with  the Order from internet site n° "&pkid&" 000 have been sent in the mode which you specified.<br><br>"
-				HTML1 = HTML1 & "<b>TO READ CAREFULLY:<br>When you receive the goods please write “SUBJECT TO CONTROL” on the COURIER'S RECIEPT SLIP, all of which will help to have better coverage should any goods have been damaged.</b></font><br><br>"
+				HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dear "&nominativo&", the products which you ordered with  the Order from internet site n&deg; "&pkid&" have been sent in the mode which you specified.<br><br>"
+				HTML1 = HTML1 & "<b><u><font face=Verdana size=3 color=#990000>Attention, to read carefully:</font></u></b><br><br><b>When you receive the goods please carefully check the hills:<br>- if the eye, externally, the packages are damaged, write &quot;DAMAGED PACKAGES&quot; on the COURIER'S RECIEPT SLIP;<br>- otherwise, even in the presence of packages not damaged, write &quot;SUBJECT TO CONTROL&quot; on the COURIER'S RECIEPT SLIP;<br><br> all of which will help to have better coverage should any goods have been damaged.</b></font><br><br>"
 				HTML1 = HTML1 & "Note on the consignment:<br>"&InfoSpedizione&"<br><br>"
 				if Left(NoteCri,4)="http" then
 					HTML1 = HTML1 & "<b><a href="""&NoteCri&""">"&NoteCri&"</a></b><br><br>"
@@ -286,15 +401,38 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -310,8 +448,8 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Spett.le "&nome&" "&nominativo&", i prodotti da lei ordinati con l'Ordine da sito internet n° "&pkid&" sono stati spediti secondo le modalità richieste.<br><br>"
-			HTML1 = HTML1 & "<b>LEGGERE ATTENTAMENTE:<br>Al momento del ricevimento della merce, firmare e scrivere la dicitura &quot;RISERVA DI CONTROLLO&quot; sulla CEDOLINA del corriere, tutto ci&ograve; per avere copertura assicurativa nel caso in cui siano presenti prodotti danneggiati.</b><br><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Spett.le "&nome&" "&nominativo&", i prodotti da lei ordinati con l'Ordine da sito internet n&deg; "&pkid&" sono stati spediti secondo le modalit&agrave; richieste.<br><br>"
+			HTML1 = HTML1 & "<b><u><font face=Verdana size=3 color=#990000>LEGGERE ATTENTAMENTE:</font></u></b><br><br><b>Al momento del ricevimento della merce controllare attentamente i colli:<br>- se alla vista, esternamente, i colli sono danneggiati, firmare e scrivere la dicitura &quot;COLLI DANNEGGIATI&quot; sulla CEDOLINA del corriere;<br>- altrimenti, anche in presenza di colli non danneggiati, firmare e scrivere la dicitura &quot;RISERVA DI CONTROLLO&quot; sulla CEDOLINA del corriere;<br><br>tutto ci&ograve; per avere copertura assicurativa nel caso in cui siano presenti prodotti danneggiati.</b><br><br>"
 			HTML1 = HTML1 & "Note sulla spedizione:<br>"&InfoSpedizione&"<br><br>"
 			if Left(NoteCri,4)="http" then
 			HTML1 = HTML1 & "<b><a href="""&NoteCri&""">"&NoteCri&"</a></b><br><br>"
@@ -327,8 +465,8 @@
 				HTML1 = HTML1 & "</tr>"
 				HTML1 = HTML1 & "<tr>"
 				HTML1 = HTML1 & "<td>"
-				HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dear "&nome&" "&nominativo&", the products which you ordered with  the Order from internet site n° "&pkid&" 000 have been sent in the mode which you specified.<br><br>"
-				HTML1 = HTML1 & "<b>TO READ CAREFULLY:<br>When you receive the goods please write “SUBJECT TO CONTROL” on the COURIER'S RECIEPT SLIP, all of which will help to have better coverage should any goods have been damaged.</b></font><br><br>"
+				HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Dear "&nome&" "&nominativo&", the products which you ordered with  the Order from internet site n&deg; "&pkid&" have been sent in the mode which you specified.<br><br>"
+				HTML1 = HTML1 & "<b><u><font face=Verdana size=3 color=#990000>Attention, to read carefully:</font></u></b><br><br><b>When you receive the goods please carefully check the hills:<br>- if the eye, externally, the packages are damaged, write &quot;DAMAGED PACKAGES&quot; on the COURIER'S RECIEPT SLIP;<br>- otherwise, even in the presence of packages not damaged, write &quot;SUBJECT TO CONTROL&quot; on the COURIER'S RECIEPT SLIP;<br><br> all of which will help to have better coverage should any goods have been damaged.</b></font><br><br>"
 				HTML1 = HTML1 & "Note on the consignment:<br>"&InfoSpedizione&"<br><br>"
 				if Left(NoteCri,4)="http" then
 					HTML1 = HTML1 & "<b><a href="""&NoteCri&""">"&NoteCri&"</a></b><br><br>"
@@ -352,21 +490,44 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			if italia="No" then
 				Oggetto = "Conferma spedizione ordine n "&pkid&" da Cristalensi.it - Confirmation of shipment order n. "&pkid&" from Cristalensi.it"
 			else
@@ -375,15 +536,38 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email	

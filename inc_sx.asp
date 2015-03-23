@@ -28,9 +28,23 @@
                <p><a href="/recupero_pw.asp" class="password-recover" title="Recupera la password smarrita">Recupera la password</a></p>
                <a href="/iscrizione.asp" title="Registrati per acquistare i nostri prodotti per illuminazione" class="button_link_red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REGISTRATI!&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
-               <h3>Pagamenti</h3>
+               <h3>Condizioni</h3>
                <p><a href="/condizioni_di_vendita.asp" class="info" title="Regolamento per acquistare i prodotti Cristalensi">Condizioni di vendita</a></p>
-               <p class="note">Gli ordini potranno esser pagati in Contrassegno o con Bonifico Bancario oppure online grazie al sistema sicuro di PayPal con Carte di Credito e Prepagate. </p>
+               <p class="note">
+               <strong>Costi di spedizione</strong><br />
+               <span>Spedizione in tutta Italia (Isole comprese)</span><br />
+               <span style="float:left; width:160px;">Ordine maggiore di 250€: &nbsp;0€</span><br />
+               <span style="float:left; width:130px;">Ordine minore di 250€:</span><span style="float:right; width:15px;">10€</span><br />
+               <span style="float:left; width:128px;">Ritiro in sede:</span><span style="float:right; width:16px;">&nbsp;&nbsp;0€</span><br />
+               </p>
+               <p class="note">
+               <strong>Sistemi di pagamento</strong><br />
+               <span style="float:left; width:120px;">Bonifico bancario:</span><span style="float:right; width:10px;">0€</span><br />
+               <span style="float:left; width:120px;">Poste Pay:</span><span style="float:right; width:10px;">0€</span><br />
+               <span style="float:left; width:120px;">Contassegno:</span><span style="float:right; width:10px;">4€</span><br />
+               <span style="float:left; width:160px;">Carta di credito - PayPal: 2%</span><br />
+               <span style="float:left; width:110px;">Prepagata - PayPal:</span><span style="float:right; width:13px;">2%</span><br />
+               </p>
                <img class="negozio paypal" src="/images/cartedicredito.jpg" style="padding-bottom:30px;" title="Sistemi di pagamento" />
             <%end if%>
         <%end if%>
@@ -44,10 +58,12 @@
             R.E.A. Firenze 536760<br />
             50056 Montelupo F.no (FI)<br />
             Via arti e mestieri, 1<br />
-            Tel. e Fax: 0571.911163<br />
+            Tel.: 0571.911163<br />
+            Fax: 0571.073327<br />
             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
         </p>
-        <img class="telefono" src="/images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
+        <img class="telefono" src="/images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 20px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
+        <p>Per <strong>aperture e chiusure</strong> straordinarie controlla gli aggiornamenti su Facebook</p>
         <h3>Seguici anche su</h3>
         <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img class="fb" src="/images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
         <p>&nbsp;</p>

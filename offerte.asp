@@ -110,6 +110,50 @@
                             <p><em>In questa pagina trovate tutte le offerte di prodotti per illuminazione: sono gli articoli del catalogo con prezzi fantastici. Ogni prodotto ha una propria scheda dettagliata, per accederci &egrave; sufficiente cliccare sul nome o sulla foto dell'articolo.<br />
 					    Invece, per consultare tutto il catalogo potete cliccare qui su <a href="/prodotti.asp" title="Catalogo articoli per illuminazione">[Prodotti]</a> (oppure sullla stessa voce del men&ugrave; in alto) ma potete anche scegliere una categoria o un produttore dal men&ugrave; sulla sinistra.</em>
                           </p>
+                          <SCRIPT LANGUAGE=javascript>
+                                    <!--
+                                        function invia_account() {
+                                            document.getElementById("form_prodotti").submit();
+                                        }
+                                    // End -->
+                                    </SCRIPT>
+                             		
+                                    <div class="half_panel left_p">
+                                        <form method="post" action="/prodotti.asp" name="form_prodotti" id="form_prodotti">
+                                        <p>
+                                          Non hai trovato il prodotto che cercavi?<br />scegli una categoria:
+                                          <%
+                                          Set cs=Server.CreateObject("ADODB.Recordset")
+                                          sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo as Titolo_2 "
+                                          sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
+                                          'sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
+                                          sql = sql + "ORDER BY Categorie1.Titolo ASC, Categorie2.Titolo ASC"
+                                          cs.Open sql, conn, 1, 1
+                                          %>
+                                          <select name="Cat" id="Cat" class="form" onChange="invia_account()" style="margin-top:10px;">
+                                              <option title="Scegli una categoria" value="0">Scegli una categoria</option>
+											  <%
+                                              if cs.recordcount>0 then
+                                              Do While Not cs.EOF
+                                              %>
+                                              <option title="<%=cs("Titolo_2")%>" value=<%=cs("pkid_2")%>><%=cs("Titolo_2")%></option>
+                                              <%
+                                              cs.movenext
+                                              loop
+                                              end if
+                                              %>
+                                           </select>
+                                           <%cs.close%>
+                                          </p>
+                                       </form>
+                                    </div>
+                                    <div class="half_panel right_p">
+                                        <p>Oppure, per una ricerca maggiormente dettagliata, usa la<br>
+                                        <span><a href="/ricerca_avanzata_modulo.asp" class="button_link_red" style="margin-top:7px;">RICERCA AVANZATA</a></span>
+                                        </p>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
                             <p class="area"> <strong>Ordinamento per prezzo:</strong> 
                             <a href="offerte.asp?order=3"><img src="/images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" title="ordina i prodotti per prezzo dal pi&ugrave; basso al pi&ugrave; alto" /></a>
                             <a href="offerte.asp?order=4"><img src="/images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" title="ordina i prodotti per prezzo dal pi&ugrave; alto al pi&ugrave; basso" /></a>

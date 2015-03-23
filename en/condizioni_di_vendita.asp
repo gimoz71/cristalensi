@@ -138,7 +138,7 @@ You can at any time eliminate an article or modify the quantity desired: the pag
 						  
 						  <em><strong>The merchandise may also be collected at our showroom with no shipping cost:<br>
 						  </strong></em><strong>Cristalensi Snc</strong> Di Lensi Massimiliano & C. (P.I. 05305820481)<br>
-50056 Montelupo F.no (FI) Via arti e mestieri, 1 - tel: 0571 911163<br>
+50056 Montelupo F.no (FI) Via arti e mestieri, 1 - tel: 0571.911163 - fax: 0571.073327<br>
 						  <br>
 						  For clients from the province of Florence and certain areas of Tuscany, the delivery can be made our staff.<br>
 						  <br>

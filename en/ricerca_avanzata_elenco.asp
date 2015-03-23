@@ -1,8 +1,21 @@
 <!--#include file="inc_strConn.asp"-->
 <!--#include file="inc_clsImageSize.asp"-->
 <%
-titolo=request("titolo")
-titolo=Replace(titolo, "'", "")
+Function CleanStr(sTesto)  
+	If Len(sTesto)>0 Then
+		sTesto = Replace(sTesto,"'","")
+		stesto = replace(sTesto, "*", "")
+		stesto = replace(sTesto, "%", "")
+		stesto = replace(sTesto, "=", "")
+		stesto = replace(sTesto, "&", "")
+	End If
+	CleanStr=sTesto
+End Function
+
+titolo=CleanStr(request("titolo"))
+'titolo=Replace(titolo, "'", "")
+'titolo=Replace(titolo, "&", "")
+'titolo=Replace(titolo, "=", "")
 
 cat=request("cat")				  
 if cat="" then cat=0
@@ -10,10 +23,10 @@ if cat="" then cat=0
 FkProduttore=request("FkProduttore")				  
 if FkProduttore="" then FkProduttore=0
 
-prezzo_da=request("prezzo_da")
+prezzo_da=CleanStr(request("prezzo_da"))
 if prezzo_da="" then prezzo_da=0
 
-prezzo_a=request("prezzo_a")
+prezzo_a=CleanStr(request("prezzo_a"))
 if prezzo_a="" then prezzo_a=0
 %>
 <!doctype html>

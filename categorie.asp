@@ -119,6 +119,7 @@ end if
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
+                            <a href="/ricerca_avanzata_modulo.asp" class="right button_link_red" style="font-size:10px; font-weight:bold; margin-top:3px;">RICERCA AVANZATA &raquo;</a>
                             <h1>Categoria scelta: <%=titolo_cat%></h1>
                             <%if descrizione_cat<>"" then%>
                             <p>
@@ -148,7 +149,7 @@ end if
 										%>
                                         <img src="<%=file_img%>" width="160" height="120" style="margin-bottom: 10px" alt="<%=titolo_cat%><%=" - "&prod_rs("titolo")%>" title="<%=titolo_cat%><%=" - "&prod_rs("titolo")%>" />
                                         <%else%>
-                                        <img src="../logo_cristalensi_piccolo.jpg" width="160" height="120" style="margin-bottom: 10px" alt="Immagine della categoria <%=titolo_cat%><%=" - "&prod_rs("titolo")%> non disponibile" />
+                                        <img src="/logo_cristalensi_piccolo.jpg" width="160" height="120" style="margin-bottom: 10px" alt="Immagine della categoria <%=titolo_cat%><%=" - "&prod_rs("titolo")%> non disponibile" />
                                         <%end if%>
                                         <span class="button_link"><%=prod_rs("titolo")%></span>
                                     </a>

@@ -68,9 +68,9 @@ end if
     <head>
         <meta charset="iso-8859-1">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title><%=Titolo_prodotto%> - <%=titolo_cat%> - <%=codicearticolo%></title>
-		<meta name="description" content="Cristalensi vende <%=titolo_cat%>: <%=Titolo_prodotto%> - <%=codicearticolo%>">
-		<meta name="keywords" content="<%=Titolo_prodotto%>, <%=Titolo_prodotto%> <%=titolo_cat%>, <%=Titolo_prodotto%> <%=codicearticolo%>">
+        <title><%=Titolo_prodotto%> <%=" "& produttore%> - <%=titolo_cat%> codice <%=codicearticolo%></title>
+		<meta name="description" content="Cristalensi vende <%=titolo_cat%>: <%=Titolo_prodotto%> - <%=produttore%> - <%=codicearticolo%>">
+		<meta name="keywords" content="<%=Titolo_prodotto%> <%=produttore%>, <%=Titolo_prodotto%> <%=titolo_cat%>, <%=Titolo_prodotto%> <%=codicearticolo%>">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
@@ -249,17 +249,21 @@ end if
                                     <p class="area clearfix"><%if codicearticolo<>"" then%>Codice articolo <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
                                     <div class="data">
                                         <%if prezzoarticolo=0 then%>
-                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><br /><br />
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span></p><br /><br />
                                        <%else%>
-                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;</span><%end if%><br><i>Iva compresa</i>
+                                           <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;</span><%end if%><br><i>Iva compresa</i></p>
+                                          
                                        <%end if%>
                                         <p><%=descrizione_prodotto%></p>
                                         <%if FkCategoria2>0 then%>
                                             <p> Il prodotto lo trovi nella categoria: <a href="/prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>"><%=titolo_cat%></a></p>
 					<%end if%>
                                         <%if allegato_prodotto<>"" then%>
-                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank"><img src="/images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="E' presente un allegato">Allegato</a></p>
+                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank" title="E' presente un allegato per il prodotto: <%=titolo_prodotto%>"><img src="/images/file.jpg" border="0" style="width:18px; height:18px;" hspace="3" align="absmiddle" alt="E' presente un allegato per il prodotto: <%=titolo_prodotto%>">Allegato</a></p>
                                         <%end if%>
+                                        
+                                        <p class="sfondo-giallo-chiaro">DISPONIBILITA' DEL PRODOTTO: <a href="/contatti.asp">Contatta lo staff per avere informazioni sulla disponibilit&agrave;.</a></p>
+                                        
                                         <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a>
                                         <%else%>
@@ -397,7 +401,7 @@ end if
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <img src="/images/telefono_cristalensi.png" alt="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" title="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" style="height:152px; width:162px; float:left; padding-left: 10px; padding-right: 10px;" /><br /><br /><br /><strong>Contattaci!</strong><br />Il nostro personale sar&agrave; a tua disposizione per qualsiasi chiarimento, informazione e consiglio sull'articolo desiderato.        
+                                    <img src="/images/telefono_cristalensi.png" alt="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" title="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" style="height:260px; width:160px; float:left; padding-left: 10px; padding-right: 10px;" /><br /><br /><br /><strong>Contattaci!</strong><br />Il nostro personale sar&agrave; a tua disposizione per qualsiasi chiarimento, informazione e consiglio sull'articolo desiderato:<br /><br /><%=Titolo_prodotto%> <%=" "& produttore%> - codice: <%=codicearticolo%> <br />Categoria: <%=titolo_cat%>        
                                 </li>
                                 
                             </ul>

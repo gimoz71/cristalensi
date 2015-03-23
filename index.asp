@@ -111,33 +111,96 @@
                             <h3>Cristalensi, la luce come idea</h3>
                             <p class="incipit">A portata di click una vasta e raffinata gamma di prodotti per illuminazione da interno ed esterno per arredare la vostra casa, il giardino, il tuo locale... Naviga nel Negozio on-line oppure visita il nostro <a href="chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta"><strong>Showroom</strong></a>, soddisferemo tutte le tue esigenze sia classiche che moderne.
                             </p>
-                            <!--facebook-->
-                            <div class="half_panel social_box left_p_fb">
-                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true" data-height="240"></div>
-                            </div>
-                            <!--dicono di noi-->
-                            <div class="half_panel social_box right_p">
-                            <h4 class="area-commenti">Dicono di noi...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red" title="Recensioni e Commenti prodotti illuminazione">TUTTI I COMMENTI &raquo;</a></h4>
-                            <%
-							Set com_rs = Server.CreateObject("ADODB.Recordset")
-							sql = "SELECT TOP 5 * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
-							com_rs.open sql,conn, 1, 1
-				
-							if com_rs.recordcount>0 then
-								Do While not com_rs.EOF
-							%>
-							<p><%=Left(NoHTML(com_rs("Testo")), 100)%>...</p>
-							<%
-								com_rs.movenext
-								loop
-							end if
-							com_rs.close
-							%>
-                            </div>
-                            <div class="slogan">
+                            
+<!--                            <div class="slogan">
                                 <h3>Eccezionale sconto!!! Nessun costo di spedizione per ordini superiori a 250&#8364;</h3>
-                                <p>Per ordini inferiori a 250&#8364; il costo di spedizione &eacute; di 10&#8364;.<br> Condizioni valide solo per le spedizioni in tutta Italia, isole comprese.</p>
                             </div>
+-->                            
+                            <!--elenco categorie-->
+                            <h4 class="area clearfix"><span class="title">CATALOGO PRODOTTI</span><a href="/ricerca_avanzata_modulo.asp" class="right button_link_red" title="Ricerca avanzata prodotti illuminazione">&nbsp;&nbsp;&nbsp;&nbsp;RICERCA AVANZATA &raquo;&nbsp;&nbsp;&nbsp;&nbsp;</a></h4>
+                            <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
+                            </p>
+                            <ul class="catalogo clearfix">
+                            <%
+							'elenco categorie
+							Set prod_rs = Server.CreateObject("ADODB.Recordset")
+							sql = "SELECT * FROM Categorie1 ORDER BY Posizione"
+							prod_rs.open sql,conn, 1, 1
+							if prod_rs.recordcount>0 then
+								conta=0
+								Do while not prod_rs.EOF
+								
+								cat=prod_rs("PkId")
+								titolo_cat=prod_rs("Titolo")
+								nomepagina_categorie=prod_rs("NomePagina")
+								if nomepagina_categorie="" then nomepagina_categorie="#"
+								if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/"&nomepagina_categorie
+								'if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/categorie.asp?pkid="&cat
+							%>    
+                                <li>
+                                    <%
+									file_img=""
+									Set cat_rs = Server.CreateObject("ADODB.Recordset")
+									sql = "SELECT * FROM Categorie2 WHERE FkCategoria1="&cat&" AND Logo<>'' ORDER BY Posizione"
+									cat_rs.open sql,conn, 1, 1
+									if cat_rs.recordcount>0 then
+									file_img=cat_rs("logo")
+									end if
+									cat_rs.close
+									
+									if file_img<>"" then
+									%>
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="/public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
+										<%else%>
+									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><span class="button_link"><%=titolo_cat%></span></a>	
+									<%	
+										end if
+									%>
+                                </li>
+                            <%
+								prod_rs.movenext
+								loop	
+							end if
+							prod_rs.close
+							%>
+                            
+                            </ul>
+                            <!--elenco produttori: select con js-->
+                            <h4 class="area clearfix"><span class="title">PRODUTTORI</span><a href="/produttori.asp" class="right button_link_red" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
+                            <p>Se conosci la marca del prodotto la puoi selezionare qui sotto oppure andando all'elenco completo dei produttori.
+                            </p>
+                            <%
+							Set cs=Server.CreateObject("ADODB.Recordset")
+							sql = "Select * From Produttori order by titolo ASC"
+							cs.Open sql, conn, 1, 1
+							if cs.recordcount>0 then
+							%>
+							<SCRIPT LANGUAGE=javascript>
+							<!--
+								function invia_produttore() {
+									document.getElementById("form_produttori").submit();
+								}
+							// End -->
+							</SCRIPT>
+							<form method="post" name="form_produttori" id="form_produttori" action="/prodotti.asp">
+                            <select name="FkProduttore" id="FkProduttore" class="form" onChange="invia_produttore()">
+                            <option value="0">Seleziona un produttore</option>
+                            <%
+                            Do While Not cs.EOF
+                            %>
+                            <option value="<%=cs("pkid")%>"><%=cs("titolo")%></option>
+                            <%
+                            cs.movenext
+                            loop
+                            %>
+                            </select>
+                            </form>
+							<%end if%>
+							<%cs.close%>
+                            <!--fine elenco produttori-->
+                            
+                            <p>&nbsp;</p>
+                            
                             <!--prodotti in offerta-->
                             <h4 class="area clearfix"><span class="title">OFFERTE: non perdere l'occasione!</span><a href="/offerte.asp" class="right button_link_red" title="Prodotti illuminazone in offerta">TUTTI I PRODOTTI IN OFFERTA &raquo;</a></h4>
                             <%
@@ -230,88 +293,33 @@
 								prod_rs.close
 							end if
 							%>
-                            <!--elenco categorie-->
-                            <h4 class="area clearfix"><span class="title">CATALOGO PRODOTTI</span><a href="/ricerca_avanzata_modulo.asp" class="right button_link_red" title="Ricerca avanzata prodotti illuminazione">RICERCA AVANZATA &raquo;</a></h4>
-                            <!--<p>Ricerca il prodotto desiderato usando la divisione in categorie oppure la <button>RICERCA AVANZATA</button>-->
-                            </p>
-                            <ul class="catalogo clearfix">
-                            <%
-							'elenco categorie
-							Set prod_rs = Server.CreateObject("ADODB.Recordset")
-							sql = "SELECT * FROM Categorie1 ORDER BY Posizione"
-							prod_rs.open sql,conn, 1, 1
-							if prod_rs.recordcount>0 then
-								conta=0
-								Do while not prod_rs.EOF
-								
-								cat=prod_rs("PkId")
-								titolo_cat=prod_rs("Titolo")
-								nomepagina_categorie=prod_rs("NomePagina")
-								if nomepagina_categorie="" then nomepagina_categorie="#"
-								if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/"&nomepagina_categorie
-								'if nomepagina_categorie<>"#" then nomepagina_categorie="/public/pagine/categorie.asp?pkid="&cat
-							%>    
-                                <li>
-                                    <%
-									file_img=""
-									Set cat_rs = Server.CreateObject("ADODB.Recordset")
-									sql = "SELECT * FROM Categorie2 WHERE FkCategoria1="&cat&" AND Logo<>'' ORDER BY Posizione"
-									cat_rs.open sql,conn, 1, 1
-									if cat_rs.recordcount>0 then
-									file_img=cat_rs("logo")
-									end if
-									cat_rs.close
-									
-									if file_img<>"" then
-									%>
-									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="/public/<%=file_img%>" width="160" height="120" vspace="2" border="0" alt="<%=titolo_cat%>"><span class="button_link"><%=titolo_cat%></span></a>
-										<%else%>
-									<a href="<%=nomepagina_categorie%>" title="Elenco articoli <%=titolo_cat%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="immagine della categoria <%=titolo_cat%> non disponibile"><span class="button_link"><%=titolo_cat%></span></a>	
-									<%	
-										end if
-									%>
-                                </li>
-                            <%
-								prod_rs.movenext
-								loop	
-							end if
-							prod_rs.close
-							%>
                             
-                            </ul>
-                            <!--elenco produttori: select con js-->
-                            <h4 class="area clearfix"><span class="title">PRODUTTORI</span><a href="/produttori.asp" class="right button_link_red" title="Elenco completo dei produttori di articoli per illuminazione">ELENCO COMPLETO PRODUTTORI &raquo;</a></h4>
-                            <p>Se conosci la marca del prodotto la puoi selezionare qui sotto oppure andando all'elenco completo dei produttori.
-                            </p>
+                            <p>&nbsp;</p>
+                            
+                            <!--facebook-->
+                            <div class="half_panel social_box left_p_fb">
+                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284?ref=hl" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true" data-height="240"></div>
+                            </div>
+                            <!--dicono di noi-->
+                            <div class="half_panel social_box right_p">
+                            <h4 class="area-commenti">Dicono di noi...<a href="commenti_elenco.asp" style="float: right; padding: 1px 10px;" class="button_link_red" title="Recensioni e Commenti prodotti illuminazione">TUTTI I COMMENTI &raquo;</a></h4>
                             <%
-							Set cs=Server.CreateObject("ADODB.Recordset")
-							sql = "Select * From Produttori order by titolo ASC"
-							cs.Open sql, conn, 1, 1
-							if cs.recordcount>0 then
+							Set com_rs = Server.CreateObject("ADODB.Recordset")
+							sql = "SELECT TOP 5 * FROM Commenti_Clienti WHERE Pubblicato=True ORDER BY PkId DESC"
+							com_rs.open sql,conn, 1, 1
+				
+							if com_rs.recordcount>0 then
+								Do While not com_rs.EOF
 							%>
-							<SCRIPT LANGUAGE=javascript>
-							<!--
-								function invia_produttore() {
-									document.getElementById("form_produttori").submit();
-								}
-							// End -->
-							</SCRIPT>
-							<form method="post" name="form_produttori" id="form_produttori" action="/prodotti.asp">
-                            <select name="FkProduttore" id="FkProduttore" class="form" onChange="invia_produttore()">
-                            <option value="0">Seleziona un produttore</option>
-                            <%
-                            Do While Not cs.EOF
-                            %>
-                            <option value="<%=cs("pkid")%>"><%=cs("titolo")%></option>
-                            <%
-                            cs.movenext
-                            loop
-                            %>
-                            </select>
-                            </form>
-							<%end if%>
-							<%cs.close%>
-                            <!--fine elenco produttori-->
+							<p><%=Left(NoHTML(com_rs("Testo")), 100)%>...</p>
+							<%
+								com_rs.movenext
+								loop
+							end if
+							com_rs.close
+							%>
+                            </div>
+                            
                             <p>&nbsp;</p>
                         </div>
                     </div>

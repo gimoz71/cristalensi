@@ -119,6 +119,7 @@ end if
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
+                            <a href="/en/ricerca_avanzata_modulo.asp" class="right button_link_red" style="font-size:10px; font-weight:bold; margin-top:3px;">ADVANCED SEARCH &raquo;</a>
                             <h1>Chosen category: <%=titolo_cat%></h1>
                             <%if descrizione_cat<>"" then%>
                             <p>

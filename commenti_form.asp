@@ -59,15 +59,38 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -97,34 +120,80 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Conferma invio commento a Cristalensi.it"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email	

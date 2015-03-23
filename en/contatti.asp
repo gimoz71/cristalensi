@@ -99,7 +99,8 @@
                                 <b>Cristalensi Snc</b> Di Lensi Massimiliano & C.<br />
                                 C.F. e Iscr. Reg. Impr. of Florence 05305820481 - R.E.A. Florence 536760<br /><br />
                                 <strong>Office and Showroom</strong>: 50056 Montelupo F.no (Florence - Italy) - Via arti e mestieri, 1<br /><br />
-                                <strong>Phone e Fax</strong>: 0571.911163<br /><br />
+                                <strong>Phone</strong>: 0571.911163<br /><br />
+                                <strong>Fax</strong>: 0571.073327<br /><br />
                                 <strong>Email</strong>: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a><br /><br />
                                 <strong>Email certified</strong>: <a href="mailto:info@pec.cristalensi.it">info@pec.cristalensi.it</a> <strong>
                                 <font color="#CC0000">(ONLY for those who have an email PEC)</font></strong><br />

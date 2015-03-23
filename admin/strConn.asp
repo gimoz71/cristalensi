@@ -4,13 +4,13 @@ On Error Resume Next
 Set conn = Server.CreateObject("ADODB.Connection")
 	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\cristalensiit\mdb-database\db_cristalensi.mdb"
 	'conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\viadeimediciit\mdb-database\db_cristalensi.mdb"
-	conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq="& Server.MapPath("/mdb-database/db_cristalensi.mdb")
+	conn.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq="& Server.MapPath("/mdb-database/db_cristalensi_2013.mdb")
 	'conn.open = "DSN=cristalensi"
 	
-Set conn2 = Server.CreateObject("ADODB.Connection")
+'Set conn2 = Server.CreateObject("ADODB.Connection")
 	'conn2.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\cristalensiit\mdb-database\db_cristalensi_privato.mdb"
 	'conn2.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq=d:\inetpub\webs\viadeimediciit\mdb-database\db_cristalensi_privato.mdb"
-	conn2.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq="& Server.MapPath("/mdb-database/db_cristalensi_privato.mdb")
+	'conn2.open = "DRIVER={Microsoft Access Driver (*.mdb)};dbq="& Server.MapPath("/mdb-database/db_cristalensi_privato.mdb")
 		
 If Err.Number <> 0 Then
 	Response.Redirect("../aggiornamento.htm")
