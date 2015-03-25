@@ -39,34 +39,78 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-'
-'			'invio al webmaster
-'			
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Pagamento con Paypal non andato a buon fine"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -97,6 +141,37 @@
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->

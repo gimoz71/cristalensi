@@ -85,7 +85,8 @@
                             Florence (Italy)<br />
                             50056 Montelupo F.no<br />
                             Via arti e mestieri, 1<br />
-                            Tel. e Fax: 0571.911163<br />
+                            Tel.: 0571.911163<br />
+            				Fax: 0571.073327<br />
                             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
                         </p>
                        

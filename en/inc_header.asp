@@ -45,6 +45,9 @@
             <li><img src="/images/gallery/foto5.jpg" /></li>
             <li><img src="/images/gallery/foto6.jpg" /></li>
             <li><img src="/images/gallery/foto7.jpg" /></li>
+            <li><img src="/images/gallery/foto8.jpg" /></li>
+            <li><img src="/images/gallery/foto9.jpg" /></li>
+            <li><img src="/images/gallery/foto10.jpg" /></li>
         </ul>
     </div>
 </header>

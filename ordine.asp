@@ -84,15 +84,38 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -122,34 +145,80 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con bonifico bancario"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -189,15 +258,38 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -227,35 +319,81 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento in contrassegno"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -281,7 +419,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><strong>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></strong><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><br><strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023 6005 5507 0285</strong><br><br>Nella causale indicare: <strong>Ordine da sito internet n&deg; "&idordine&"</strong><br><br><br>Il nostro staff avr&agrave; cura di spedirti la merce appena ricever&agrave; la notifica del pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><strong>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></strong><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><br><strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023 6009 0886 7676</strong><br><br>Nella causale indicare: <strong>Ordine da sito internet n&deg; "&idordine&"</strong><br><br><br>Il nostro staff avr&agrave; cura di spedirti la merce appena ricever&agrave; la notifica del pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Cordiali Saluti, lo staff di Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -295,15 +433,38 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -333,34 +494,80 @@
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'invio al webmaster
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Conferma invio ordine n "&idordine&" a Cristalensi.it con pagamento con POSTEPAY"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -391,6 +598,37 @@
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -496,7 +734,8 @@
                                 	<br><br>Grazie per aver scelto i nostri prodotti,<br>
                                     per completare l'ordine &egrave; necessario effettuare il versamente sulla Carta di POSTEPAY con i seguenti dati:<br>
                                     <br><br>
-                                    <strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023 6005 5507 0285</strong>
+                                    <strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>
+                                    Numero carta: 4023 6009 0886 7676</strong>
                                     <br><br>Nella causale indicare: "<strong>Ordine da sito internet n&deg; <%=idordine%></strong>"<br><br>
                                     
                                   La merce verr&agrave; spedita al momento che riceveremo il pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.<br>

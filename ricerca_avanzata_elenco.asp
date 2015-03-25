@@ -1,8 +1,21 @@
 <!--#include file="inc_strConn.asp"-->
 <!--#include file="inc_clsImageSize.asp"-->
 <%
-titolo=request("titolo")
-titolo=Replace(titolo, "'", "")
+Function CleanStr(sTesto)  
+	If Len(sTesto)>0 Then
+		sTesto = Replace(sTesto,"'","")
+		stesto = replace(sTesto, "*", "")
+		stesto = replace(sTesto, "%", "")
+		stesto = replace(sTesto, "=", "")
+		stesto = replace(sTesto, "&", "")
+	End If
+	CleanStr=sTesto
+End Function
+
+titolo=CleanStr(request("titolo"))
+'titolo=Replace(titolo, "'", "")
+'titolo=Replace(titolo, "&", "")
+'titolo=Replace(titolo, "=", "")
 
 cat=request("cat")				  
 if cat="" then cat=0
@@ -10,10 +23,10 @@ if cat="" then cat=0
 FkProduttore=request("FkProduttore")				  
 if FkProduttore="" then FkProduttore=0
 
-prezzo_da=request("prezzo_da")
+prezzo_da=CleanStr(request("prezzo_da"))
 if prezzo_da="" then prezzo_da=0
 
-prezzo_a=request("prezzo_a")
+prezzo_a=CleanStr(request("prezzo_a"))
 if prezzo_a="" then prezzo_a=0
 %>
 <!doctype html>
@@ -43,6 +56,37 @@ if prezzo_a="" then prezzo_a=0
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->

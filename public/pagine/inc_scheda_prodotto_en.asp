@@ -92,6 +92,37 @@ end if
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -225,8 +256,11 @@ end if
                                             <p> You find the product in the category: <a href="/en/prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>"><%=titolo_cat%></a></p>
 					<%end if%>
                                         <%if allegato_prodotto<>"" then%>
-                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank"><img src="/images/file.jpg" border="0" width="18" height="18" hspace="3" align="absmiddle" alt="Attached file">Attached file</a></p>
+                                            <p><a href="/public/<%=allegato_prodotto%>" target="_blank" title="Attached file for product: <%=titolo_prodotto%>"><img src="/images/file.jpg" border="0" style="width:18px; height:18px;" hspace="3" align="absmiddle" alt="Attached file for product: <%=titolo_prodotto%>">Attached file</a></p>
                                         <%end if%>
+                                        <p>&nbsp;</p>
+                                        <p class="sfondo-giallo-chiaro">AVAIBILITY OF PRODUCTS: <a href="contatti.asp"><strong>Contact our staff to inquire about product availability.</strong></a></p>
+                                        
                                         <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><a href="#" onClick="MM_openBrWindow('/en/richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Do you want to know the Cristalensi price? Click here to have an estimate from our staff</a>
                                         <%else%>
@@ -263,8 +297,8 @@ end if
                                                 <p class="cart clearfix">
 
                                                     <%if col_rs.recordcount>1 then%>
-                                                        <select name="colore" id="colore" style="width:auto; float:left; margin-top:7px;">
-                                                        <option value="">Choose the color</option>
+                                                        <select name="colore" id="colore" style="width:auto; float:left; margin-top:7px; margin-right:10px;">
+                                                        <option value="">Choose the color and/or the finish </option>
                                                         <%
                                                         Do While Not col_rs.EOF
                                                         %>
@@ -282,7 +316,7 @@ end if
                                                     <%if lam_rs.recordcount>1 then%>
                                                         &nbsp;&nbsp;
                                                         <select name="lampadina" id="lampadina" style="width:auto; float:left; margin-top:7px;">
-                                                        <option value="">Choose the light</option>
+                                                        <option value="">Choose the light and/or the glass</option>
                                                         <%
                                                         Do While Not lam_rs.EOF
                                                         %>
@@ -359,12 +393,12 @@ end if
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook"></a><span style="line-height:80px;">If you like this article, share it with your friends on FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
+                                    <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook-prod"></a><span style="line-height:80px;">If you like this article, share it with your friends on FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
                                     
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <strong>Contact us!</strong> Our staff is at your disposal for any clarification, information and advice on the article desired.<br /><br />
+                                    <strong>Contact us!</strong> Our staff is at your disposal for any clarification, information and advice on the article desired.<br /><%=Titolo_prodotto%> <%=" "& produttore%> - <%=titolo_cat%><br /><br />
                                 </li>
                                 
                             </ul>

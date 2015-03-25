@@ -187,6 +187,37 @@ Call Visualizzazione("",0,"carrello1.asp")
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -243,9 +274,23 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         <%conta=0%>
                                         <%
                                         Do while not rs.EOF
+										
+										Set url_prodotto_rs = Server.CreateObject("ADODB.Recordset")
+										sql = "SELECT PkId, NomePagina_en FROM Prodotti where PkId="&rs("FkProdotto")&""
+										url_prodotto_rs.Open sql, conn, 1, 1
+						
+										NomePagina=url_prodotto_rs("NomePagina_en")
+										if Len(NomePagina)>0 then
+											NomePagina="/public/pagine/"&NomePagina
+											'NomePagina="/public/pagine/scheda_prodotto.asp?id="&id
+										else
+											NomePagina="#"
+										end if
+											
+										url_prodotto_rs.close
                                         %>					
     
-                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<strong><%=rs("titolo")%></strong><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Light:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
+                                        <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<a href="<%=NomePagina%>" title="Product description: <%=rs("titolo")%>"><strong><%=rs("titolo")%></strong></a><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Light:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
                                         <%
                                         quantita=rs("quantita")
                                         if quantita="" then quantita=1
@@ -278,16 +323,17 @@ Call Visualizzazione("",0,"carrello1.asp")
                                     <p><button type="submit" name="continua" style="float: left" class="button_link">&laquo; Click here to continue to buy</button>&nbsp;&nbsp;<button type="submit" name="continua" style="float: right" class="button_link_red">Click here to continue the order &raquo;</button></p>
                                     </form>
                                     <%end if%>
-                                    <br>
-                                    <h3 style="font-size:12px;">AVAIBILITY OF PRODUCTS</h3>
-                                    <p>Our catalog is made up of numerous products and producers, therefore some products may not be immediately available.  In the case that you urgently need the desired product, <strong>ask our staff directly if the product is available immediately or how long it will take for the merchandise to be in stock</strong>.<br>
-						Delivery will take place within a minimum of 2 days and a maximum of 30 days.<br>						<a href="contatti.asp">Contact to inquire about product availability</a></p>
+                                    
 								<%end if%>
 								<%
                                 ss.close
                                 rs.close
                                 %>
                             </div>
+                            <br>
+                            <h3 style="font-size:12px;">AVAIBILITY OF PRODUCTS</h3>
+                            <p>Our catalog is made up of numerous products and producers, therefore some products may not be immediately available.  In the case that you urgently need the desired product, <strong>ask our staff directly if the product is available immediately or how long it will take for the merchandise to be in stock</strong>.<br>Delivery will take place within a minimum of 2 days and a maximum of 30 days.</p>
+                            <p class="sfondo-giallo-chiaro">AVAIBILITY OF PRODUCTS: <a href="contatti.asp"><strong>Contact our staff to inquire about product availability.</strong></a></p>
                         </div>
                     </div>
                 </div>

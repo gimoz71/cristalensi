@@ -26,6 +26,37 @@
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -68,7 +99,8 @@
                                 <b>Cristalensi Snc</b> Di Lensi Massimiliano & C.<br />
                                 C.F. e Iscr. Reg. Impr. of Florence 05305820481 - R.E.A. Florence 536760<br /><br />
                                 <strong>Office and Showroom</strong>: 50056 Montelupo F.no (Florence - Italy) - Via arti e mestieri, 1<br /><br />
-                                <strong>Phone e Fax</strong>: 0571.911163<br /><br />
+                                <strong>Phone</strong>: 0571.911163<br /><br />
+                                <strong>Fax</strong>: 0571.073327<br /><br />
                                 <strong>Email</strong>: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a><br /><br />
                                 <strong>Email certified</strong>: <a href="mailto:info@pec.cristalensi.it">info@pec.cristalensi.it</a> <strong>
                                 <font color="#CC0000">(ONLY for those who have an email PEC)</font></strong><br />

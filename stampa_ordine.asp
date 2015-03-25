@@ -38,6 +38,17 @@
 		
 		DataAggiornamento=ss("DataAggiornamento")
 		
+		FkCliente=ss("FkCliente")
+		
+		Set cs = Server.CreateObject("ADODB.Recordset")
+		sql = "SELECT PkId, Email, Telefono FROM Clienti where pkid="&FkCliente
+		cs.Open sql, conn, 1, 1
+		if cs.recordcount>0 then
+			email_cliente=cs("Email")
+			telefono_cliente=cs("Telefono")
+		end if
+		cs.close
+		
 	end if
 	
 	ss.close
@@ -75,7 +86,7 @@
 							  <td align="left" valign="middle">
 							  <h2>Cristalensi Snc<br>
 							    Di Lensi Massimiliano & C.<br>
-							  P.I. 0530582048<br>50056 Montelupo F.no (FI)<br>Via arti e mestieri, 1
+							  P.I. 05305820481<br>50056 Montelupo F.no (FI)<br>Via arti e mestieri, 1
                               <br>
 							  <br>
 							  </h2>							  </td>
@@ -188,7 +199,7 @@ loop
                 <td colspan="2" align="left"><img src="immagini/spacer.gif" height="10"></td>
                 </tr>
 				<tr>
-                <td height="35" colspan="2" align="left"><b>Riferimenti per l'indirizzo di spedizione:</b><br><%=DatiSpedizione%></td>
+                <td height="35" colspan="2" align="left"><b>Riferimenti per l'indirizzo di spedizione:</b><br><%=DatiSpedizione%><br>Email: <%=Email_cliente%> - Telefono: <%=Telefono_cliente%></td>
                 </tr>
 				<tr>
                 <td colspan="2" align="left"><img src="immagini/spacer.gif" height="10"></td>

@@ -69,6 +69,37 @@ end if
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -103,6 +134,12 @@ end if
         
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
+        <%if cat>0 then%>
+        <link rel="canonical" href="http://www.cristalensi.it/en/prodotti.asp?cat=<%=cat%>"/>
+        <%end if%>
+        <%if FkProduttore>0 then%>
+        <link rel="canonical" href="http://www.cristalensi.it/en/prodotti.asp?FkProduttore=<%=FkProduttore%>"/>
+        <%end if%>
     </head>
     <body>
         <div id="wrap">
@@ -321,7 +358,7 @@ end if
                                             <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Cristalensi price? Click here to have an estimate from our staff</a></p>
                                             <%else%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>&#8364; &nbsp;&nbsp;<small><i>IVA/VAT included</i></small></span><%end if%><a href="<%=NomePagina%>" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a></p>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>&#8364;</span>&nbsp;&nbsp;<small><i>IVA/VAT included</i></small><%end if%><a href="<%=NomePagina%>" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a></p>
                                             <%end if%>
                                         </div>
                                         
@@ -389,7 +426,49 @@ end if
               Each product has its own description, to access it, simply click on the name or photo of the product.
                                     </i>
                                 </p>
-                                
+                                <SCRIPT LANGUAGE=javascript>
+                                    <!--
+                                        function invia_account() {
+                                            document.getElementById("form_prodotti").submit();
+                                        }
+                                    // End -->
+                                    </SCRIPT>
+                             		<div class="half_panel left_p">
+                                    <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
+                                      <p>
+                                      Haven't found what you're looking for? Choose a category: 
+                                        <%
+                                        Set cs=Server.CreateObject("ADODB.Recordset")
+                                        sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo_en as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo_en as Titolo_2 "
+                                        sql = sql + "FROM Categorie1 INNER JOIN Categorie2 ON Categorie1.PkId = Categorie2.Fkcategoria1 "
+                                        'sql = sql + "WHERE Categorie2.FkCategoria1 = "&cat_principale&" "
+                                        sql = sql + "ORDER BY Categorie1.Titolo_en ASC, Categorie2.Titolo_en ASC"
+                                        cs.Open sql, conn, 1, 1
+                                        %>
+                                        <select name="Cat" id="Cat" class="form" onChange="invia_account()" style="margin-top:10px;">
+                                            <option title="Choose a category" value="0">Choose a category</option>
+											<%
+                                            if cs.recordcount>0 then
+                                            Do While Not cs.EOF
+                                            %>
+                                            <option title="<%=cs("Titolo_2")%>" value=<%=cs("pkid_2")%>><%=cs("Titolo_2")%></option>
+                                            <%
+                                            cs.movenext
+                                            loop
+                                            end if
+                                            %>
+                                         </select>
+                                         <%cs.close%>
+                                        </p>
+                                       </form>
+                                       </div>
+                                       <div class="half_panel right_p">
+                                        <p>Or, for a more detailed search, use the<br>
+                                        <span><a href="ricerca_avanzata_modulo.asp" class="button_link_red" style="margin-top:7px;">ADVANCED SEARCH</a></span>
+                                        </p>
+                                        </div>
+                                    <div class="clear"></div>
+                                    <br /><br />
                                 <%
 								Set prod_rs = Server.CreateObject("ADODB.Recordset")
 								sql = "SELECT * FROM Prodotti WHERE (PrimoPiano=True And (Offerta=0 or Offerta=2)) ORDER BY PrezzoProdotto ASC"
@@ -507,9 +586,9 @@ end if
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>" style="font-size:9px;"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Product description&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Product description</span></a>
                                             <%if prezzoarticolo=0 then%>
-                                            <p class="cart clearfix"><span class="price">List price: <span><%=prezzolistino%>€</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Cristalensi price? Click here to have an estimate from our staff</a></p>
+                                            <p class="cart clearfix"><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Cristalensi price? Click here to have an estimate from our staff</a></p>
                                             <%else%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>€</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>€&nbsp;&nbsp;<small><i>IVA/VAT included</i></small></span><%end if%><a href="<%=NomePagina%>" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a></p>
+                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>&#8364;</span>&nbsp;&nbsp;<small><i>IVA/VAT included</i></small><%end if%><a href="<%=NomePagina%>" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a></p>
                                             <%end if%>
                                         </div>
                                     </li>

@@ -30,6 +30,28 @@ if prov="" then prov=0
 		password=request("password")
 		data=now()
 		ip=Request.ServerVariables("REMOTE_ADDR")
+		
+		lg1=InStr(email, "'")
+		if lg1>0 then
+			email=Replace(email, "'", " ")	
+			'response.End()
+		end if
+		lg2=InStr(email, "&")
+		if lg2>0 then
+			email=Replace(email, "&", " ")	
+			'response.End()
+		end if
+		lg3=InStr(email, "=")
+		if lg3>0 then
+			email=Replace(email, "=", " ")	
+			'response.End()
+		end if
+		lg4=InStr(email, " or ")
+		if lg4>0 then
+			email=Replace(email, " or ", " ")	
+			'response.End()
+		end if
+		email=Trim(email)
 	end if
 
 	if mode=1 then
@@ -107,15 +129,38 @@ if prov="" then prov=0
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -145,15 +190,38 @@ if prov="" then prov=0
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 			'fine invio email
@@ -162,20 +230,43 @@ if prov="" then prov=0
 			
 			
 			Mittente = "info@cristalensi.it"
-			Destinatario = "iurymazzoni@hotmail.com"
+			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Nuova iscrizione al sito Cristalensi.it"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-
+		
+			' Imposta le configurazioni
+			Set myConfig = Server.createObject("CDO.Configuration")
+			With myConfig 
+				'autentication
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
+				' Porta CDO 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
+				' Timeout 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
+				' Server SMTP di uscita 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
+				' Porta SMTP 
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
+				'Username
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
+				'Password
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
+				
+				.Fields.update 
+			End With 
+			Set eMail_cdo.Configuration = myConfig
+		
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-
+		
 			eMail_cdo.HTMLBody = Testo
-
+		
 			eMail_cdo.Send()
-
+		
+			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
 			
 		
@@ -221,6 +312,37 @@ if prov="" then prov=0
                 visibility: hidden;
             }
         </style>
+        <!--[if lt IE 9]>
+            <style>
+                #menu, #language {
+                    display: block !important;
+                    
+                }
+                #language li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 6px 17px !important;
+                    height: auto !important;
+                    
+                }
+                #menu li {
+                    display: inline-block !important;
+                    float: left !important; 
+                    text-align: center !important;
+                    padding: 11px 17px !important;
+                    height: auto !important;
+                    
+                }
+                ul.slides {height: 170px !important}
+                .button_link {
+                    background: #999 !important;
+                }
+                .button_link_red {
+                    background: #c00 !important;
+                }
+            </style>
+        <![endif]-->
         <!--[if lt IE 8]>
             <link href="/css/tipTip_ie7.css" media="all" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -243,6 +365,7 @@ if prov="" then prov=0
 			citta=document.newsform.citta.value;
 			telefono=document.newsform.telefono.value;
 			email=document.newsform.email.value;
+			conferma=document.newsform.conferma.value;
 			password=document.newsform.pw.value;	
 		
 			if (nome==""){
@@ -272,6 +395,10 @@ if prov="" then prov=0
 			if (email.indexOf("@")==-1 || email.indexOf(".")==-1){
 			alert("ATTENZIONE! \"e-mail\" non valida.");
 			return false; 
+			}
+			if (email!=conferma){
+				alert("\"Email\" e \"Conferma Email\" devono essere identiche.");
+				return false;
 			}
 			if (password==""){
 				alert("Non  e\' stato compilato il campo \"Password\".");
@@ -433,15 +560,18 @@ if prov="" then prov=0
                                             <input name="email" type="text" id="email"  size="30" maxlength="100" value="<% if pkid > 0 then %><%=rs("email")%><%else%><%if mode=3 then%><%=email%><%end if%><%end if%>" />
                                         </div>
                                         <div class="td">
-                                        <strong>Password</strong> (*)<br />
-                                            <input name="password" type="password" id="pw"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("password")%><%else%><%if mode=3 then%><%=password%><%end if%><%end if%>" />
+                                        <strong>Conferma E-mail</strong> (*)<br />
+                                            <input name="conferma" type="text" id="conferma"  size="30" maxlength="100" value="<% if pkid > 0 then %><%=rs("email")%><%else%><%if mode=3 then%><%=email%><%end if%><%end if%>" />
                                         </div>
                                     </div>
                                     <div class="tr">
-                                        <div>Autorizzazione a ricevere Email </div>
-                                    </div>
-                                    <div class="tr">
-                                        <div>
+                                        <div class="td">
+                                        <strong>Password</strong> (*)<br />
+                                            <input name="password" type="password" id="pw"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("password")%><%else%><%if mode=3 then%><%=password%><%end if%><%end if%>" />
+                                        </div>
+                                        
+                                        <div class="td">
+                                        	Autorizzazione a ricevere Email<br />
                                             <input type="radio" name="aut_email" value=True <% if pkid > 0 then %><%if rs("aut_email")=True then%> checked<%end if %><%else%> checked<%end if %> />
                                             &nbsp;Si&nbsp;&nbsp;
                                                     <input type="radio" name="aut_email" value=False <% if pkid > 0 then %><%if rs("aut_email")=False then%> checked<%end if %><%end if %> />

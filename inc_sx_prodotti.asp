@@ -84,10 +84,12 @@
                             R.E.A. Firenze 536760<br />
                             50056 Montelupo F.no (FI)<br />
                             Via arti e mestieri, 1<br />
-                            Tel. e Fax: 0571.911163<br />
+                            Tel.: 0571.911163<br />
+            				Fax: 0571.073327<br />
                             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
                         </p>
-                        <img class="telefono" src="/images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 30px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
+                        <img class="telefono" src="/images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 20px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
+                        <p>Per <strong>aperture e chiusure</strong> straordinarie controlla gli aggiornamenti su Facebook</p>
                         <h3>Seguici anche su</h3>
                         <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img class="fb" src="/images/facebook.png" align="absmiddle" border="0" alt="Collegati alla nostra pagina su Facebook" /></a>
                         <p>&nbsp;</p>
