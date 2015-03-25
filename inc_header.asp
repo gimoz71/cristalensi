@@ -7,14 +7,14 @@
 </div>
     <div id="menu">
         <ul>
-            <li class="class-green"><a href="http://www.cristalensi.it" title="Cristalensi vendita lampadari on line">home page</a></li>
-            <li class="class-darkorange"><a href="/chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta">chi siamo</a></li>
-            <li class="class-skyblue"><a href="/contatti.asp" title="Negozio illuminazione Firenze">contatti</a></li>
-            <li class="class-brown"><a href="/commenti_elenco.asp" title="Commenti prodotti illuminazione">commenti</a></li>
-            <li class="class-red"><a href="/prodotti.asp" title="Catalogo articoli illuminazione">prodotti</a></li>
-            <li class="class-blue"><a href="/offerte.asp" title="Offerte prodotti illuminazione">offerte</a></li>
-            <li class="class-yellowgreen"><a href="/carrello1.asp" title="Carrello E-commerce vendita lampadari">carrello</a></li>
-            <li class="class-magenta"><a href="/condizioni_di_vendita.asp" title="Condizioni di vendita ecommerce">condizioni di vendita</a></li>
+            <li class="class-Green"><a href="http://www.cristalensi.it" title="Cristalensi vendita lampadari on line">home page</a></li>
+            <li class="class-DarkOrange"><a href="/chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta">chi siamo</a></li>
+            <li class="class-SkyBlue"><a href="/contatti.asp" title="Negozio illuminazione Firenze">contatti</a></li>
+            <li class="class-Brown"><a href="/commenti_elenco.asp" title="Commenti prodotti illuminazione">commenti</a></li>
+            <li class="class-Red"><a href="/prodotti.asp" title="Catalogo articoli illuminazione">prodotti</a></li>
+            <li class="class-Blue"><a href="/offerte.asp" title="Offerte prodotti illuminazione">offerte</a></li>
+            <li class="class-YellowGreen"><a href="/carrello1.asp" title="Carrello E-commerce vendita lampadari">carrello</a></li>
+            <li class="class-Magenta"><a href="/condizioni_di_vendita.asp" title="Condizioni di vendita ecommerce">condizioni di vendita</a></li>
         </ul>
     </div>
     <div id="logo"><a href="http://www.cristalensi.it" title="Cristalensi vendita lampadari on line"><img src="/images/logo.png" alt="Cristalensi vendita lampadari on line"></a></div>
@@ -26,14 +26,14 @@
     </div>
     <div id="responsive-menu">
         <ul>
-            <li class="class-green"><a href="http://www.cristalensi.it" title="Cristalensi vendita lampadari on line">home page</a></li>
-            <li class="class-darkorange"><a href="/chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta">chi siamo</a></li>
-            <li class="class-skyblue"><a href="/contatti.asp" title="Negozio illuminazione Firenze">contatti</a></li>
-            <li class="class-brown"><a href="/commenti_elenco.asp" title="Commenti prodotti illuminazione">commenti</a></li>
-            <li class="class-red"><a href="/prodotti.asp" title="Catalogo articoli illuminazione">prodotti</a></li>
-            <li class="class-blue"><a href="/offerte.asp" title="Offerte prodotti illuminazione">offerte</a></li>
-            <li class="class-yellowgreen"><a href="/carrello1.asp" title="Carrello E-commerce vendita lampadari">carrello</a></li>
-            <li class="class-magenta"><a href="/condizioni_di_vendita.asp" title="Condizioni di vendita ecommerce">condizioni di vendita</a></li>
+            <li class="class-Green"><a href="http://www.cristalensi.it" title="Cristalensi vendita lampadari on line">home page</a></li>
+            <li class="class-DarkOrange"><a href="/chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta">chi siamo</a></li>
+            <li class="class-SkyBlue"><a href="/contatti.asp" title="Negozio illuminazione Firenze">contatti</a></li>
+            <li class="class-Brown"><a href="/commenti_elenco.asp" title="Commenti prodotti illuminazione">commenti</a></li>
+            <li class="class-Red"><a href="/prodotti.asp" title="Catalogo articoli illuminazione">prodotti</a></li>
+            <li class="class-Blue"><a href="/offerte.asp" title="Offerte prodotti illuminazione">offerte</a></li>
+            <li class="class-YellowGreen"><a href="/carrello1.asp" title="Carrello E-commerce vendita lampadari">carrello</a></li>
+            <li class="class-Magenta"><a href="/condizioni_di_vendita.asp" title="Condizioni di vendita ecommerce">condizioni di vendita</a></li>
         </ul>
     </div>
     <div id="widget-area" class="blueberry">
