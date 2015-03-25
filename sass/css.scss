@@ -205,9 +205,7 @@ input, button {
     }
 }
 
-$array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magenta;
-
-
+$array-filtri: Green, DarkOranges, SkyBlue, Red, Brown, Blue, YellowGreen, Magenta;
 
 #language {
     ul {
@@ -241,7 +239,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         //@include box-orient(horizontal);
         //@include box-align(stretch);
         @each $section in $array-filtri  {
-            li.#{$section}{
+            li.class-#{$section} {
                 display: table-cell;
                 padding: 0;
                 background: #{$section};
@@ -341,7 +339,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         width:100%;
         list-style: none;
         @each $section in $array-filtri  {
-            li.#{$section}{
+            li.class-#{$section} {
                 //float: left;
                 margin: 3px calc-em(20, 810);
                 position: relative;

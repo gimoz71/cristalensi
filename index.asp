@@ -12,12 +12,12 @@
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script src="http://www.viadeimedici.it/cristalensi/gimoz/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="http://www.viadeimedici.it/cristalensi/gimoz/js/jquery.blueberry.js"></script>
-        <script src="http://www.viadeimedici.it/cristalensi/gimoz/js/jquery.tipTip.js"></script>
         <link href="http://www.viadeimedici.it/cristalensi/gimoz/css/css.css" rel="stylesheet" type="text/css">
-        <link href="http://www.viadeimedici.it/cristalensi/gimoz/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="http://www.viadeimedici.it/cristalensi/gimoz/css/tipTip.css" rel="stylesheet" type="text/css">
+        <link href="http://www.viadeimedici.it/cristalensi/gimoz/css/blueberry.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://www.viadeimedici.it/cristalensi/gimoz/js/jquery.blueberry-min.js"></script>
+        <script src="http://www.viadeimedici.it/cristalensi/gimoz/js/jquery.tipTip.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
