@@ -1,22 +1,22 @@
 <!--#include file="inc_strConn.asp"-->
 <%
 Call Visualizzazione("",0,"carrello1.asp")
-	
+
 	mode=request("mode")
 	if mode="" then mode=0
-	
+
 	'se la session è già aperta sfrutto il pkid dell'ordine, altrimenti ne apro una
 	IdOrdine=session("ordine_shop")
 	if IdOrdine="" then IdOrdine=0
-	
+
 	id=request("id")
 	if id="" then id=0
-	
+
 		if IdOrdine=0 and id<>0 then
 			Set os1 = Server.CreateObject("ADODB.Recordset")
 			sql = "SELECT * FROM Ordini"
 			os1.Open sql, conn, 3, 3
-	
+
 			os1.addnew
 			os1("FkCliente")=idsession
 			os1("stato")=0
@@ -26,32 +26,32 @@ Call Visualizzazione("",0,"carrello1.asp")
 			os1("DataAggiornamento")=now()
 			os1("IpOrdine")=Request.ServerVariables("REMOTE_ADDR")
 			os1.update
-	
+
 			os1.close
-			
+
 			'Prendo l'id dell'ordine
 			Set os2 = Server.CreateObject("ADODB.Recordset")
 			sql = "Select @@Identity As pkid"
 			os2.Open sql, conn, 1, 1
 			IdOrdine=os2("pkid")
-	
+
 			os2.close
-		
+
 			'Creo una sessione con l'id dell'ordine
-			Session("ordine_shop")=IdOrdine		
-		
+			Session("ordine_shop")=IdOrdine
+
 		end if
-		
+
 		IdOrdine=cInt(IdOrdine)
-		
-	'modifica del carrello: eliminazione o modifica di un articolo nel carrello	
+
+	'modifica del carrello: eliminazione o modifica di un articolo nel carrello
 		if mode=2 then
 			cs = conn.Execute("Delete * FROM RigheOrdine Where FkOrdine="&IdOrdine)
 			mode=0
 		end if
-		
+
 		if mode=1 then
-		
+
 			eliminare=request("eliminare")
 		'parte per eliminare il prodotto dal carrello
 			if eliminare<>"" then
@@ -62,7 +62,7 @@ Call Visualizzazione("",0,"carrello1.asp")
 		'fine parte per eliminazione
 			else
 		'parte per la modifica delle quantita di un articolo nel carrello
-				
+
 			'modifica delle quantità
 				Set ts = Server.CreateObject("ADODB.Recordset")
 				sql = "SELECT * FROM RigheOrdine where FkOrdine="&idordine
@@ -81,24 +81,24 @@ Call Visualizzazione("",0,"carrello1.asp")
 				ts.close
 			end if
 		'fine della parte di modifica
-			
+
 		else
 	'inserimento di un prodotto per la prima volta scelto con il carrello già aperto
 			'Prendo il prezzo del prodotto
-			
-			
+
+
 			if id<>0 then
 				quantita=request("quantita")
 				if quantita="" then quantita=1
-				
+
 				colore=request("colore")
 				if colore="*****" then colore=""
-				
+
 				lampadina=request("lampadina")
 				if lampadina="*****" then lampadina=""
-				
+
 				'prendo le caretteristriche del prodotto
-				
+
 				Set prodotto_rs = Server.CreateObject("ADODB.Recordset")
 				sql = "SELECT * FROM Prodotti where PkId="&id&""
 				prodotto_rs.Open sql, conn, 1, 1
@@ -106,14 +106,14 @@ Call Visualizzazione("",0,"carrello1.asp")
 				PrezzoProdotto=prodotto_rs("PrezzoProdotto")
 				CodiceArticolo=prodotto_rs("CodiceArticolo")
 				TitoloProdotto=prodotto_rs("Titolo")
-				
+
 				prodotto_rs.close
-				
-				
+
+
 				Set riga_rs = Server.CreateObject("ADODB.Recordset")
 				sql = "SELECT * FROM RigheOrdine"
 				riga_rs.Open sql, conn, 3, 3
-	
+
 				riga_rs.addnew
 				riga_rs("FkOrdine")=IdOrdine
 				riga_rs("FkCliente")=idsession
@@ -131,21 +131,21 @@ Call Visualizzazione("",0,"carrello1.asp")
 
 				riga_rs.close
 			end if
-		end if		
-				
+		end if
+
 				'Calcolo la somma per l'ordine
 				Set rs2 = Server.CreateObject("ADODB.Recordset")
 				sql = "SELECT sum(TotaleRiga) as TotaleCarrello FROM RigheOrdine where FkOrdine="&IdOrdine
 				rs2.Open sql, conn, 3, 3
-				if rs2.recordcount>0 then	
+				if rs2.recordcount>0 then
 					TotaleCarrello=rs2("TotaleCarrello")
 					if TotaleCarrello="" then TotaleCarrello=0
 				else
 					TotaleCarrello=0
 				end if
 				rs2.close
-				
-				
+
+
 				'Aggiorno la tabella dell'ordine con la somma calcolata prima
 				Set ss = Server.CreateObject("ADODB.Recordset")
 				sql = "SELECT * FROM Ordini where PkId="&IdOrdine
@@ -172,12 +172,12 @@ Call Visualizzazione("",0,"carrello1.asp")
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
+				<link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -191,23 +191,23 @@ Call Visualizzazione("",0,"carrello1.asp")
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -232,17 +232,17 @@ Call Visualizzazione("",0,"carrello1.asp")
         <![endif]-->
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -257,11 +257,11 @@ Call Visualizzazione("",0,"carrello1.asp")
 	sql = "SELECT PkId, FkOrdine, FkProdotto, PrezzoProdotto, Quantita, TotaleRiga, Titolo, CodiceArticolo, Colore, Lampadina FROM RigheOrdine WHERE FkOrdine="&idOrdine&""
 	rs.Open sql, conn, 1, 1
 	num_prodotti_carrello=rs.recordcount
-	
+
 	Set ss = Server.CreateObject("ADODB.Recordset")
 	sql = "SELECT * FROM Ordini where pkid="&idOrdine
 	ss.Open sql, conn, 1, 1
-%>                
+%>
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
@@ -274,11 +274,11 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         <%conta=0%>
                                         <%
                                         Do while not rs.EOF
-										
+
 										Set url_prodotto_rs = Server.CreateObject("ADODB.Recordset")
 										sql = "SELECT PkId, NomePagina_en FROM Prodotti where PkId="&rs("FkProdotto")&""
 										url_prodotto_rs.Open sql, conn, 1, 1
-						
+
 										NomePagina=url_prodotto_rs("NomePagina_en")
 										if Len(NomePagina)>0 then
 											NomePagina="/public/pagine/"&NomePagina
@@ -286,10 +286,10 @@ Call Visualizzazione("",0,"carrello1.asp")
 										else
 											NomePagina="#"
 										end if
-											
+
 										url_prodotto_rs.close
-                                        %>					
-    
+                                        %>
+
                                         <p class="riga"><span class="colonna articolo">[<%=rs("codicearticolo")%>]&nbsp;<a href="<%=NomePagina%>" title="Product description: <%=rs("titolo")%>"><strong><%=rs("titolo")%></strong></a><%if Len(rs("colore"))>0 or Len(rs("lampadina"))>0 then%><br /><%if Len(rs("colore"))>0 then%>&nbsp;Col.:&nbsp;<%=rs("colore")%><%end if%><%if Len(rs("lampadina"))>0 then%>&nbsp;-&nbsp;Light:&nbsp;<%=rs("lampadina")%><%end if%><%end if%></span>
                                         <%
                                         quantita=rs("quantita")
@@ -305,7 +305,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                         </form>
 									<%else%>
                                     	<p class="riga">Cart is empty</p>
-                                    <%end if%>    
+                                    <%end if%>
                                 </div>
                                 <%if ss.recordcount>0 then%>
                                   <h4 class="cart clearfix"><span class="total_price">Total purchase: <%if ss("TotaleGenerale")<>0 then%>
@@ -323,7 +323,7 @@ Call Visualizzazione("",0,"carrello1.asp")
                                     <p><button type="submit" name="continua" style="float: left" class="button_link">&laquo; Click here to continue to buy</button>&nbsp;&nbsp;<button type="submit" name="continua" style="float: right" class="button_link_red">Click here to continue the order &raquo;</button></p>
                                     </form>
                                     <%end if%>
-                                    
+
 								<%end if%>
 								<%
                                 ss.close

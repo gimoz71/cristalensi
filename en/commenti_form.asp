@@ -2,11 +2,11 @@
 <%
 	mode=request("mode")
 	if mode="" then mode=0
-		
+
 	if idsession=0 then response.Redirect("iscrizione.asp?prov=2")
-		
+
 	Destinazione=request("Destinazione")
-	
+
 	if mode=1 then
 		testo=request("testo")
 		if Len(testo)=0 then mode=2
@@ -25,16 +25,16 @@
 			cli_rs("Risposta")=False
 		cli_rs.update
 		cli_rs.close
-		
+
 		Set rs=Server.CreateObject("ADODB.Recordset")
 		sql = "Select * From Clienti where pkid="&idsession
-		rs.Open sql, conn, 1, 1	
-		
+		rs.Open sql, conn, 1, 1
+
 		nominativo_email=rs("nome")&" "&rs("nominativo")
 		email=rs("email")
-		
+
 		rs.close
-			
+
 			HTML1 = ""
 			HTML1 = HTML1 & "<html>"
 			HTML1 = HTML1 & "<head>"
@@ -52,49 +52,49 @@
 			HTML1 = HTML1 & "</table>"
 			HTML1 = HTML1 & "</body>"
 			HTML1 = HTML1 & "</html>"
-		
+
 			Mittente = "info@cristalensi.it"
 			Destinatario = email
 			Oggetto = "Confirmation for a comment on Cristalensi.it"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-		
+
 			' Imposta le configurazioni
 			Set myConfig = Server.createObject("CDO.Configuration")
-			With myConfig 
+			With myConfig
 				'autentication
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-				' Porta CDO 
-				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
-				' Timeout 
+				' Porta CDO
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+				' Timeout
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
-				' Server SMTP di uscita 
+				' Server SMTP di uscita
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
-				' Porta SMTP 
+				' Porta SMTP
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
 				'Username
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
 				'Password
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
-				
-				.Fields.update 
-			End With 
+
+				.Fields.update
+			End With
 			Set eMail_cdo.Configuration = myConfig
-		
+
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-		
+
 			eMail_cdo.HTMLBody = Testo
-		
+
 			eMail_cdo.Send()
-		
+
 			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
-			
+
 			'fine invio email
-			
+
 			'invio l'email all'amministratore
 			HTML1 = ""
 			HTML1 = HTML1 & "<html>"
@@ -113,92 +113,92 @@
 			HTML1 = HTML1 & "</table>"
 			HTML1 = HTML1 & "</body>"
 			HTML1 = HTML1 & "</html>"
-		
+
 			Mittente = "info@cristalensi.it"
 			Destinatario = "info@cristalensi.it"
 			Oggetto = "Conferma invio commento a Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-		
+
 			' Imposta le configurazioni
 			Set myConfig = Server.createObject("CDO.Configuration")
-			With myConfig 
+			With myConfig
 				'autentication
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-				' Porta CDO 
-				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
-				' Timeout 
+				' Porta CDO
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+				' Timeout
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
-				' Server SMTP di uscita 
+				' Server SMTP di uscita
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
-				' Porta SMTP 
+				' Porta SMTP
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
 				'Username
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
 				'Password
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
-				
-				.Fields.update 
-			End With 
+
+				.Fields.update
+			End With
 			Set eMail_cdo.Configuration = myConfig
-		
+
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-		
+
 			eMail_cdo.HTMLBody = Testo
-		
+
 			eMail_cdo.Send()
-		
+
 			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
-			
+
 			'invio al webmaster
-			
+
 			Mittente = "info@cristalensi.it"
 			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Conferma invio commento a Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-		
+
 			' Imposta le configurazioni
 			Set myConfig = Server.createObject("CDO.Configuration")
-			With myConfig 
+			With myConfig
 				'autentication
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-				' Porta CDO 
-				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
-				' Timeout 
+				' Porta CDO
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+				' Timeout
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
-				' Server SMTP di uscita 
+				' Server SMTP di uscita
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
-				' Porta SMTP 
+				' Porta SMTP
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
 				'Username
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
 				'Password
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
-				
-				.Fields.update 
-			End With 
+
+				.Fields.update
+			End With
 			Set eMail_cdo.Configuration = myConfig
-		
+
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-		
+
 			eMail_cdo.HTMLBody = Testo
-		
+
 			eMail_cdo.Send()
-		
+
 			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
-			
-			'fine invio email	
+
+			'fine invio email
 	end if
-	
+
 %>
 <!doctype html>
 <html>
@@ -210,12 +210,12 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
+				<link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -229,23 +229,23 @@
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -270,17 +270,17 @@
         <![endif]-->
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -298,7 +298,7 @@
                                  	<p>
                                     Your comment has been inserted correctly, now our staff will evaluate and if approved, we will send you an email notification. <br /> Thank you for your cooperation with the staff of Cristalensi.<br /><br /><a href="commenti_elenco.asp" class="button_link_red" style="float:right">ALL COMMENTS AND REVIEWS</a>
                                     </p>
-								 <%else%>   
+								 <%else%>
                                     <form name="modulocarrello" id="modulocarrello" method="post" action="commenti_form.asp?mode=1">
                                     <p>Send a comment on the products purchased, whether you liked it or not, or a review on the website or the company and the staff. <br /> Comment will not be published immediately but will be subject to inspection by our staff to prevent them from being inserted content to be unlawful, offensive and terms not be published. <br /> Please do not insert html code, email and links to other websites: the comment will not be published. <br /> In every comments will also be published <strong> Name </ strong> and <strong> City </ strong> submitted at registration.</p>
                                     <%if mode=2 then%>

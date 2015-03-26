@@ -19,10 +19,10 @@ if id>0 then
 		PrezzoListino=prod_rs("PrezzoListino")
 		fkproduttore=prod_rs("fkproduttore")
 		if fkproduttore="" then fkproduttore=0
-		
+
 		offerta=prod_rs("offerta")
 		if offerta="" then offerta=0
-		
+
 		if fkproduttore>0 then
 			Set pr_rs = Server.CreateObject("ADODB.Recordset")
 			sql = "SELECT * FROM Produttori WHERE PkId="&fkproduttore&""
@@ -32,10 +32,10 @@ if id>0 then
 			end if
 			pr_rs.close
 		end if
-		
+
 		FkCategoria2 = prod_rs("FkCategoria2")
 		if FkCategoria2="" then FkCategoria2=0
-		
+
 		if FkCategoria2>0 then
 			Set cat_rs = Server.CreateObject("ADODB.Recordset")
 			sql = "SELECT Categorie1.PkId as Cat_Principale, Categorie1.Titolo_en as Titolo1, Categorie2.PkId, Categorie2.Titolo_en as Titolo2, Categorie2.Descrizione_en as Descrizione2 "
@@ -50,7 +50,7 @@ if id>0 then
 			end if
 			cat_rs.close
 		end if
-		
+
 		'aggiorno il contatore
 		visualizzazioni=prod_rs("visualizzazioni")
 		if visualizzazioni="" or IsNull(visualizzazioni) then visualizzazioni=0
@@ -58,8 +58,8 @@ if id>0 then
 		prod_rs.update
 	end if
 	prod_rs.close
-	
-	
+
+
 	'Call Visualizzazione("Prodotti",id,"scheda_prodotto.asp")
 end if
 %>
@@ -75,14 +75,14 @@ end if
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <script src="/js/jquery.fancybox.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
+				<link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
+        <script src="/js/jquery.fancybox.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -96,23 +96,23 @@ end if
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -140,30 +140,30 @@ end if
                 $('.fancybox').fancybox();
             });
 		function verifica_1() {
-				
+
 			quantita=document.newsform2.quantita.value;
 			num_colori=document.newsform2.num_colori.value;
 			colore=document.newsform2.colore.value;
 			num_lampadine=document.newsform2.num_lampadine.value;
 			lampadina=document.newsform2.lampadina.value;
-		
+
 			if (quantita=="0"){
 				alert("The quantity must be greater than 0");
 				return false;
 			}
-			
+
 			if (num_colori>1 && colore==""){
 				alert("You have to choose a color");
 				return false;
 			}
-			
+
 			if (num_lampadine>1 && lampadina==""){
 				alert("You have to choose a light");
 				return false;
 			}
-			
+
 			else
-				
+
 				document.newsform2.method = "post";
 				//document.newsform2.action = "/carrello1.asp";
 				document.newsform2.action = "carrello1.asp";
@@ -172,30 +172,30 @@ end if
 		</SCRIPT>
 		<SCRIPT language="JavaScript">
 		function verifica_2() {
-				
+
 			quantita=document.newsform2.quantita.value;
 			num_colori=document.newsform2.num_colori.value;
 			colore=document.newsform2.colore.value;
 			num_lampadine=document.newsform2.num_lampadine.value;
 			lampadina=document.newsform2.lampadina.value;
-		
+
 			if (quantita=="0"){
 				alert("The quantity must be greater than 0");
 				return false;
 			}
-			
+
 			if (num_colori>1 && colore==""){
 				alert("You have to choose a color");
 				return false;
 			}
-			
+
 			if (num_lampadine>1 && lampadina==""){
 				alert("You have to choose a light");
 				return false;
 			}
-			
+
 			else
-				
+
 				document.newsform2.method = "post";
 				//document.newsform2.action = "/carrello1.asp";
 				document.newsform2.action = "carrello1.asp";
@@ -204,17 +204,17 @@ end if
 		</SCRIPT>
     	<!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -233,7 +233,7 @@ end if
             <!--#include file="inc_header.asp"-->
 
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
@@ -278,7 +278,7 @@ end if
                                                     <input type="hidden" name="num_colori" id="num_colori" value="1">
                                                     <input type="hidden" name="colore" id="colore" value="*****">
                                                 <%end if%>
-                                                
+
                                                 <%
                                                 Set lam_rs = Server.CreateObject("ADODB.Recordset")
                                                 sql = "SELECT [Prodotto-Lampadina].FkProdotto, Lampadine.Titolo_en FROM [Prodotto-Lampadina] INNER JOIN Lampadine ON [Prodotto-Lampadina].FkLampadina = Lampadine.PkId WHERE ((([Prodotto-Lampadina].FkProdotto)="&id&")) ORDER BY Lampadine.Titolo_en ASC"
@@ -290,7 +290,7 @@ end if
                                                     <input type="hidden" name="num_lampadine" id="num_lampadine" value="1">
                                                     <input type="hidden" name="lampadina" id="lampadina" value="*****">
                                                 <%end if%>
-                                                
+
                                                 <p class="cart clearfix">
 
                                                     <%if col_rs.recordcount>1 then%>
@@ -309,7 +309,7 @@ end if
                                                     end if
                                                     col_rs.close
                                                     %>
-                                                    
+
                                                     <%if lam_rs.recordcount>1 then%>
                                                         &nbsp;&nbsp;
                                                         <select name="lampadina" id="lampadina" style="width:auto; float:left; margin-top:7px;">
@@ -327,11 +327,11 @@ end if
                                                     end if
                                                     lam_rs.close
                                                     %>
-                                                    
+
                                                     <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pieces&nbsp;&nbsp;</span>
                                                 </p>
                                             </form>
-                                            <%end if%>	
+                                            <%end if%>
                                         <%end if%>
                                     </div>
                                     <%
@@ -370,7 +370,7 @@ end if
                                               Else
                                                     'Response.Write "Name: " & .ImageName & "<br>"
                                                     'Response.Write "it isn't an image"
-                                              End If 
+                                              End If
 
                                             End With
                                             Set objImageSize = Nothing
@@ -391,15 +391,15 @@ end if
                                 <hr />
                                 <li class="clearfix">
                                     <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook"></a><span style="line-height:80px;">If you like this article, share it with your friends on FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
-                                    
+
                                 </li>
                                 <hr />
                                 <li class="clearfix">
                                     <strong>Contact us!</strong> Our staff is at your disposal for any clarification, information and advice on the article desired.<br /><br />
                                 </li>
-                                
+
                             </ul>
-                            
+
                         </div>
                     </div>
                 </div>

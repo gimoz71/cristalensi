@@ -6,7 +6,7 @@
 	if order=1 then ordine="Titolo_en ASC"
 	if order=2 then ordine="Titolo_en DESC"
 	if order=3 then ordine="prezzoprodotto ASC"
-	if order=4 then ordine="prezzoprodotto DESC"	
+	if order=4 then ordine="prezzoprodotto DESC"
 %>
 <!doctype html>
 <html>
@@ -20,12 +20,12 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
+				<link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -39,23 +39,23 @@
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -80,17 +80,17 @@
         <![endif]-->
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -98,7 +98,7 @@
         <div id="wrap">
             <!--#include file="inc_header.asp"-->
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
@@ -116,7 +116,7 @@
                              		<div class="half_panel left_p">
                                     <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
                                       <p>
-                                      Haven't found what you're looking for? Choose a category: 
+                                      Haven't found what you're looking for? Choose a category:
                                         <%
                                         Set cs=Server.CreateObject("ADODB.Recordset")
                                         sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo_en as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo_en as Titolo_2 "
@@ -148,17 +148,17 @@
                                         </p>
                                         </div>
                                     <div class="clear"></div>
-                                    
-                            <p class="area"> <strong>Arrange by price:</strong> 
+
+                            <p class="area"> <strong>Arrange by price:</strong>
                             <a href="offerte.asp?order=3"><img src="/images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by price from lowest to highest" title="arrange the products by price from lowest to highest" /></a>
                             <a href="offerte.asp?order=4"><img src="/images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by price from highest to lowest" title="arrange the products by price from highest to lowest" /></a>
                             &nbsp;-&nbsp;
                             <strong>Arrange by name:</strong>
                             <a href="offerte.asp?order=1"><img src="/images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  hspace="3" border="0" align="top" alt="arrange the products by name from A to Z" title="arrange the products by name from A to Z" /></a>&nbsp;
                             <a href="offerte.asp?order=2"><img src="/images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px"  border="0" align="top" alt="arrange the products by name from Z to A" title="arrange the products by name from Z to A" /></a></p>
-                         
+
                           <ul class="prodotti clearfix">
-                                
+
                             <%
                             Set prod_rs = Server.CreateObject("ADODB.Recordset")
                             sql = "SELECT * FROM Prodotti WHERE Offerta=1 or Offerta=2 ORDER BY "&ordine&""
@@ -170,7 +170,7 @@
                                             id=prod_rs("pkid")
                                             titolo_prodotto=prod_rs("titolo_en")
 
-                                            NomePagina=prod_rs("NomePagina_en")			
+                                            NomePagina=prod_rs("NomePagina_en")
                                             if NomePagina="" then NomePagina="#"
                                             if NomePagina<>"#" then NomePagina="/public/pagine/"&NomePagina
                                             'if NomePagina<>"#" then NomePagina="/public/pagine/scheda_prodotto_en.asp?pkid="&id
@@ -209,7 +209,7 @@
                                                     end if
                                                     cat_rs.close
                                             end if
-                                    %>                                
+                                    %>
 
                                     <li class="clearfix">
                                     <div class="thumb">
@@ -236,14 +236,14 @@
                                               Else
                                                     'Response.Write "Name: " & .ImageName & "<br>"
                                                     'Response.Write "it isn't an image"
-                                              End If 
+                                              End If
 
                                             End With
                                             Set objImageSize = Nothing
                                     %>
                                     		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" alt="no image for the product <%=titolo_prodotto%>"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" alt="no image for the product <%=titolo_prodotto%>"></a>
                                     <%
                                             end if
                                     else
@@ -252,7 +252,7 @@
                                             file_img=""
                                     %>
                                     		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" alt="no image for the product <%=titolo_prodotto%>"></a>
-                                    <%	
+                                    <%
                                     end if
                                     img_rs.close
                                     %>
@@ -269,7 +269,7 @@
                                             <%end if%>
                                     </div>
                                 </li>
-                                <% 
+                                <%
 									prod_rs.movenext
 									loop
 								end if

@@ -6,25 +6,25 @@
 
 	if mode=1 then
 		email=request("email")
-		
+
 		lg1=InStr(email, "'")
 		if lg1>0 then
-			email=Replace(email, "'", " ")	
+			email=Replace(email, "'", " ")
 			'response.End()
 		end if
 		lg2=InStr(email, "&")
 		if lg2>0 then
-			email=Replace(email, "&", " ")	
+			email=Replace(email, "&", " ")
 			'response.End()
 		end if
 		lg3=InStr(email, "=")
 		if lg3>0 then
-			email=Replace(email, "=", " ")	
+			email=Replace(email, "=", " ")
 			'response.End()
 		end if
 		lg4=InStr(email, " or ")
 		if lg4>0 then
-			email=Replace(email, " or ", " ")	
+			email=Replace(email, " or ", " ")
 			'response.End()
 		end if
 		email=Trim(email)
@@ -43,10 +43,10 @@
 		end if
 		rs.close
 	end if
-	
+
 	if mode = 1 then
-		
-			
+
+
 			'invio l'email di recupero pw al cliente
 			HTML1 = ""
 			HTML1 = HTML1 & "<html>"
@@ -65,49 +65,49 @@
 			HTML1 = HTML1 & "</table>"
 			HTML1 = HTML1 & "</body>"
 			HTML1 = HTML1 & "</html>"
-		
+
 			Mittente = "info@cristalensi.it"
 			Destinatario = email
 			Oggetto = "Retrieve your Cristalensi.it password"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-		
+
 			' Imposta le configurazioni
 			Set myConfig = Server.createObject("CDO.Configuration")
-			With myConfig 
+			With myConfig
 				'autentication
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-				' Porta CDO 
-				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
-				' Timeout 
+				' Porta CDO
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+				' Timeout
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
-				' Server SMTP di uscita 
+				' Server SMTP di uscita
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
-				' Porta SMTP 
+				' Porta SMTP
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
 				'Username
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
 				'Password
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
-				
-				.Fields.update 
-			End With 
+
+				.Fields.update
+			End With
 			Set eMail_cdo.Configuration = myConfig
-		
+
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-		
+
 			eMail_cdo.HTMLBody = Testo
-		
+
 			eMail_cdo.Send()
-		
+
 			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
-			
+
 			'fine invio email
-			
+
 			'invio l'email all'amministratore
 			HTML1 = ""
 			HTML1 = HTML1 & "<html>"
@@ -126,51 +126,51 @@
 			HTML1 = HTML1 & "</table>"
 			HTML1 = HTML1 & "</body>"
 			HTML1 = HTML1 & "</html>"
-		
+
 			Mittente = "info@cristalensi.it"
 			Destinatario = "info@cristalensi.it"
 			Oggetto = "Richiesta recupero password dal sito Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-		
+
 			' Imposta le configurazioni
 			Set myConfig = Server.createObject("CDO.Configuration")
-			With myConfig 
+			With myConfig
 				'autentication
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-				' Porta CDO 
-				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
-				' Timeout 
+				' Porta CDO
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+				' Timeout
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
-				' Server SMTP di uscita 
+				' Server SMTP di uscita
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
-				' Porta SMTP 
+				' Porta SMTP
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
 				'Username
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
 				'Password
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
-				
-				.Fields.update 
-			End With 
+
+				.Fields.update
+			End With
 			Set eMail_cdo.Configuration = myConfig
-		
+
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-		
+
 			eMail_cdo.HTMLBody = Testo
-		
+
 			eMail_cdo.Send()
-		
+
 			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
-			
+
 			'fine invio email
-			
+
 	end if
-	
+
 %>
 <!doctype html>
 <html>
@@ -182,12 +182,12 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
+				<link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -201,23 +201,23 @@
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -243,37 +243,37 @@
         <SCRIPT language="JavaScript">
 
 		function verifica() {
-				
+
 			email=document.newsform.email.value;
-		
+
 			if (email==""){
 				alert("It has not been filled in the field \"Email\".");
 				return false;
 			}
 			if (email.indexOf("@")==-1 || email.indexOf(".")==-1){
 			alert("ATTENZIONE! \"e-mail\" non valida.");
-			return false; 
+			return false;
 			}
-		
+
 			else
 		return true
-		
+
 		}
-		
+
 		</SCRIPT>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -281,11 +281,11 @@
         <div id="wrap">
             <!--#include file="inc_header.asp"-->
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                        <%if mode=0 or mode=2 then%>                        
+                        <%if mode=0 or mode=2 then%>
                         	<h3 style="font-size: 14px; display: inline; border: none;">Retrieval password client</h3>
                             <p>From this page you can obtain the <strong>password</strong> used at the moment of <strong>your registration</strong> with Cristalensi.<br>
 						<strong>Important information</strong>:  it is necessary that the <strong>e-mail</strong> you use be the same as that used at registration.<br>
@@ -295,7 +295,7 @@
                                 <div class="table">
                                     <div class="tr" style="text-align:center;">
                                             <strong>E-mail</strong> (compulsory)
-                                            
+
                                     </div>
                                     <div class="tr" style="text-align:center;">
                                     <input name="email" type="text" id="email" size="30" maxlength="30" value="<% if pkid > 0 then %><%=rs("email")%><%else%><%if mode=2 or mode=3 then%><%=email%><%end if%><%end if%>" />
@@ -312,7 +312,7 @@
                         <%else%>
                         	<h3 style="font-size: 14px; display: inline; border: none;">Retrieval password client</h3>
                             <p style="text-align:center; padding-top:20px">The  access password to Cristalensi.it has been successfully sent your e-mail address:  checking it you will be able to retrieve the access data for the internet site <br /><br /><a href="prodotti.asp">To return to the product gallery, click here.</a>
-                            </p>    
+                            </p>
                         <%end if%>
                         </div>
                     </div>

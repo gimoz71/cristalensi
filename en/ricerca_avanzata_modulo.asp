@@ -9,12 +9,12 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -28,23 +28,23 @@
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -70,37 +70,37 @@
         <SCRIPT language="JavaScript">
 
 		function verifica() {
-				
+
 			titolo=document.newsform.titolo.value;
 			cat=document.newsform.Cat.value;
 			FkProduttore=document.newsform.FkProduttore.value;
 			prezzo_da=document.newsform.prezzo_da.value;
 			prezzo_a=document.newsform.prezzo_a.value;
-		
+
 			if (titolo=="" && cat=="0" && FkProduttore=="0" && prezzo_da=="" && prezzo_a==""){
 				alert("Enter or select at least one value to search.");
 				return false;
 			}
-		
+
 			else
 		return true
-		
+
 		}
-		
+
 		</SCRIPT>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -108,16 +108,16 @@
         <div id="wrap">
             <!--#include file="inc_header.asp"-->
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
-                        	
-                        	
+
+
                             <h3 style="font-size: 14px; display: inline; border: none;">Advanced search for Lamps & Lights</h3>
                             <p>With advanced search you have the possibility to enter the lighthing product<strong> name</strong> or <strong>code</strong>, or select a <strong>category</strong> or <strong>manufacturer</strong>, or enter a <strong>price range</strong> but you can also combine the individual searches to get a filtered list of Lamps & Lights, and more tailored to your desires.
                             </p>
-                            <div class="iscrizione clearfix">                                
+                            <div class="iscrizione clearfix">
                                 <div class="table">
                                     <form method="post" action="ricerca_avanzata_elenco.asp" name="newsform" onSubmit="return verifica();">
                                     <p>&nbsp;</p>
@@ -184,7 +184,7 @@
                                             From <input name="prezzo_da" type="text" id="prezzo_da" style="width:100px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To <input name="prezzo_a" type="text" id="prezzo_a" style="width:100px;" />
                                         </div>
                                     </div>
-                                    
+
                                     <div class="tr text-center">
                                         <div class="td">
 

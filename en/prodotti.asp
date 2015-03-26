@@ -1,10 +1,10 @@
 <!--#include file="inc_strConn.asp"-->
 <!--#include file="inc_clsImageSize.asp"-->
 <%
-cat=request("cat")				  
+cat=request("cat")
 if cat="" then cat=0
 
-FkProduttore=request("FkProduttore")				  
+FkProduttore=request("FkProduttore")
 if FkProduttore="" then FkProduttore=0
 
 
@@ -24,7 +24,7 @@ if cat>0 then
 		nuovo_title_cat=cat_rs("Titolo1Cat2")
 	end if
 	cat_rs.close
-	
+
 	Call Visualizzazione("Categorie2",Cat,"prodotti.asp")
 elseif FkProduttore>0 then
 
@@ -35,7 +35,7 @@ elseif FkProduttore>0 then
 		titolo_produttore=az_rs("titolo")
 	end if
 	az_rs.close
-	
+
 	Call Visualizzazione("Produttori",FkProduttore,"prodotti.asp")
 else
 
@@ -54,12 +54,12 @@ end if
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
+				<link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -73,23 +73,23 @@ end if
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -121,17 +121,17 @@ end if
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
         <%if cat>0 then%>
@@ -145,7 +145,7 @@ end if
         <div id="wrap">
             <!--#include file="inc_header.asp"-->
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
@@ -161,11 +161,11 @@ end if
                                 </p>
                                 <%else%>
                                 <p>&nbsp;</p>
-                                
+
 								<%end if%>
-                                
+
 								<%if cat>0 then%>
-									
+
 									<SCRIPT LANGUAGE=javascript>
                                     <!--
                                         function invia_account() {
@@ -176,7 +176,7 @@ end if
                              		<div class="half_panel left_p">
                                     <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
                                       <p>
-                                      Haven't found what you're looking for? Change the category: 
+                                      Haven't found what you're looking for? Change the category:
                                         <%
                                         Set cs=Server.CreateObject("ADODB.Recordset")
                                         sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo_en as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo_en as Titolo_2 "
@@ -211,19 +211,19 @@ end if
                                 <%
 									p=request("p")
 									if p="" then p=1
-									
+
 									order=request("order")
 									if order="" then order=1
 									if FkProduttore>0 and order=1 then order=5
 								%>
-                                
+
                                 <p class="area"> <strong>Arrange by price:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=3"><img src="/images/01_new<%if order=3 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by price from lowest to highest" title="arrange the products by price from lowest to highest" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=4"><img src="/images/10_new<%if order=4 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by price from highest to lowest" title="arrange the products by price from highest to lowest" /></a>
                               <%if FkProduttore>0 then%>
                                   &nbsp;-&nbsp;<strong>Arrange by code:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=5"><img src="/images/az_new<%if order=5 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by article code from A to Z" title="arrange the products by article code from A to Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=6"><img src="/images/za_new<%if order=6 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by article code from Z to A" title="arrange the products by article code from Z to A" /></a>
                               <%else%>
                                   &nbsp;-&nbsp;<strong>Arrange by name:</strong> <a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=1"><img src="/images/az_new<%if order=1 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" hspace="3" border="0" align="top" alt="arrange the products by name from A to Z" title="arrange the products by name from A to Z" /></a>&nbsp;<a href="prodotti.asp?cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=2"><img src="/images/za_new<%if order=2 then%>_sott<%end if%>.gif" style="float: none;width: 22px; height: 15px" border="0" align="top" alt="arrange the products by name from Z to A" title="arrange the products by name from Z to A" /></a>
                               <%end if%>
-                              
+
                               <%
 									if order=1 then ordine="Titolo_en ASC"
 									if order=2 then ordine="Titolo_en DESC"
@@ -231,25 +231,25 @@ end if
 									if order=4 then ordine="PrezzoProdotto DESC, PrezzoListino DESC"
 									if order=5 then ordine="CodiceArticolo ASC"
 									if order=6 then ordine="CodiceArticolo DESC"
-								
+
 									Set prod_rs = Server.CreateObject("ADODB.Recordset")
 									if cat>0 then sql = "SELECT * FROM Prodotti WHERE (FkCategoria2="&cat&" and (Offerta=0 or Offerta=2)) ORDER BY "&ordine&""
 									if FkProduttore>0 then sql = "SELECT * FROM Prodotti WHERE (FkProduttore="&FkProduttore&" and (Offerta=0 or Offerta=2)) ORDER BY "&ordine&""
 									prod_rs.open sql,conn, 1, 1
 									if prod_rs.recordcount>0 then
-								
+
 									prod_rs.PageSize = 10
-									if prod_rs.recordcount > 0 then 
-										prod_rs.AbSolutePage = p 
-										maxPage = prod_rs.PageCount 
+									if prod_rs.recordcount > 0 then
+										prod_rs.AbSolutePage = p
+										maxPage = prod_rs.PageCount
 									End if
 								%>
                                 <ul class="prodotti clearfix">
-                                <% 
-										
+                                <%
+
 										Do while not prod_rs.EOF and rowCount < prod_rs.PageSize
 										RowCount = RowCount + 1
-										
+
 											id=prod_rs("pkid")
 											titolo_prodotto=prod_rs("titolo_en")
 											NomePagina=prod_rs("NomePagina_en")
@@ -264,11 +264,11 @@ end if
 											allegato_prodotto=prod_rs("allegato")
 											prezzoarticolo=prod_rs("PrezzoProdotto")
 											prezzolistino=prod_rs("PrezzoListino")
-											
+
 											if fkproduttore=0 then
 												fkproduttore_pr=prod_rs("fkproduttore")
 												if fkproduttore_pr="" then fkproduttore_pr=0
-												
+
 												if fkproduttore_pr>0 then
 													Set pr_rs = Server.CreateObject("ADODB.Recordset")
 													sql = "SELECT * FROM Produttori WHERE PkId="&fkproduttore_pr&""
@@ -279,11 +279,11 @@ end if
 													pr_rs.close
 												end if
 											end if
-											
+
 											if cat=0 then
 												FkCategoria2=prod_rs("FkCategoria2")
 												if FkCategoria2="" then FkCategoria2=0
-												
+
 												if FkCategoria2>0 then
 													Set cat_rs = Server.CreateObject("ADODB.Recordset")
 													sql = "SELECT Categorie1.PkId as Cat_Principale, Categorie1.Titolo_en as Titolo1, Categorie2.PkId, Categorie2.Titolo_en as Titolo2, Categorie2.Descrizione_en as Descrizione2 "
@@ -299,7 +299,7 @@ end if
 												end if
 											end if
 								%>
-                              
+
                                     <li class="clearfix">
                                         <div class="thumb">
 										<%
@@ -312,13 +312,13 @@ end if
 											titolo_img=img_rs("titolo")
 											file_img=img_rs("file")
 											if file_img<>"" then
-											
+
 											'calcolo misure immagini
 											Set objImageSize = New ImageSize
 											With objImageSize
 											  .ImageFile = server.mappath("/public/"&file_img&"")
 											  '.ImageFile = path_img&file_img
-											  
+
 											  If .IsImage Then
 												W=.ImageWidth
 												H=.ImageHeight
@@ -326,15 +326,15 @@ end if
 											  Else
 												'Response.Write "Name: " & .ImageName & "<br>"
 												'Response.Write "it isn't an image"
-											  End If 
-											  
+											  End If
+
 											End With
 											Set objImageSize = Nothing
 										%>
-                                        
+
                                         	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="max-width:<%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height:<%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
 										<%
                                             end if
                                         else
@@ -343,40 +343,40 @@ end if
                                             file_img=""
                                         %>
                                     		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
-										<%	
+										<%
                                         end if
                                         img_rs.close
                                         %>
                                         <%if tot_img>0 then%><span>[<%if tot_img=1 then%>1 Image<%else%><%=tot_img%> Images<%end if%>]</span><%end if%>
                                         </div>
-                                        
+
                                         <div class="data">
                                             <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore_pr>0 then%><span class="produttore">Producers: <a href="prodotti.asp?FkProduttore=<%=fkproduttore_pr%>" title="List of products from the same producers: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Category:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="List of products from the same category: <%=titolo_cat%>" style="font-size:9px;"><%=titolo_cat%></a><%end if%></p>
                                             <a href="<%=NomePagina%>" title="Product description&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Product description</span></a>
-											
+
                                             <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Cristalensi price? Click here to have an estimate from our staff</a></p>
                                             <%else%>
                                             <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">List price: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Cristalensi price: <%=prezzoarticolo%>&#8364;</span>&nbsp;&nbsp;<small><i>IVA/VAT included</i></small><%end if%><a href="<%=NomePagina%>" title="Place in the shopping basket&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Add to cart</span></a></p>
                                             <%end if%>
                                         </div>
-                                        
+
                                     </li>
                                  <%
 									prod_rs.movenext
-									loop	
+									loop
 								%>
                                   <!--paginazione-->
 								  <%if prod_rs.recordcount>10 then%>
                                   <li>
-                                  Pag. <strong><%=p%></strong> of <%=prod_rs.PageCount%> - Go to Page: 
+                                  Pag. <strong><%=p%></strong> of <%=prod_rs.PageCount%> - Go to Page:
                                   <%if p > 2 then%>&nbsp;[<a href="prodotti.asp?p=1&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">first page</a>]<%end if%>
                                   <% if p >= 5 then %>
-                                  [<a href="prodotti.asp?p=<%=p-4%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">&lt;&lt; 5 prev</a>] 
+                                  [<a href="prodotti.asp?p=<%=p-4%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">&lt;&lt; 5 prev</a>]
                                   <% end if %>
                                   <% if p > 1 then %>
-                                  [<a href="prodotti.asp?p=<%=p-1%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">&lt; prev</a>] 
+                                  [<a href="prodotti.asp?p=<%=p-1%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">&lt; prev</a>]
                                   <% end if %>
                                   <% for page = p+1 to p+4 %>
                                   <%if not page>maxPage then%><a href="prodotti.asp?p=<%=Page%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>"><%=page%></a>&nbsp;<%end if%>
@@ -388,16 +388,16 @@ end if
                                   <% next %>
                                   <% 'if page-1 <= prod_rs.PageCount then %>
                                   <% if cInt(p) < maxPage then %>
-                                  [<a href="prodotti.asp?p=<%=p+1%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">next &gt;</a>] 
+                                  [<a href="prodotti.asp?p=<%=p+1%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">next &gt;</a>]
                                   <% end if %>
                                   <% if prod_rs.PageCount-page > 3 then %>
-                                  [<a href="prodotti.asp?p=<%=p+5%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">5 next &gt;&gt;</a>] 
+                                  [<a href="prodotti.asp?p=<%=p+5%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">5 next &gt;&gt;</a>]
                                   <% end if%>
-                                  <%if maxPage>5 and cInt(p)<>prod_rs.PageCount then%>[<a href="prodotti.asp?p=<%=prod_rs.PageCount%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">the last page</a>]<%end if%>	
+                                  <%if maxPage>5 and cInt(p)<>prod_rs.PageCount then%>[<a href="prodotti.asp?p=<%=prod_rs.PageCount%>&cat=<%=cat%>&FkProduttore=<%=FkProduttore%>&order=<%=order%>">the last page</a>]<%end if%>
                                     </li>
                                   <%end if%>
                                   <!--fine paginazione-->
-                                     
+
                                 </ul>
                                 <%else%>
                                 	<%if cat>0 then%>
@@ -410,7 +410,7 @@ end if
               <br />
               <a href="#" onClick="MM_openBrWindow('richiesta_informazioni_produttore.asp?produttore=<%=titolo_produttore%>&amp;id=<%=FkProduttore%>','','scrollbars=yes,width=650,height=650')">Click here to open the form to request information and estimate</a></p>
           							<%end if%>
-                               <%	
+                               <%
 								end if
 								prod_rs.close
 							   %>
@@ -436,7 +436,7 @@ end if
                              		<div class="half_panel left_p">
                                     <form method="post" action="prodotti.asp" name="form_prodotti" id="form_prodotti">
                                       <p>
-                                      Haven't found what you're looking for? Choose a category: 
+                                      Haven't found what you're looking for? Choose a category:
                                         <%
                                         Set cs=Server.CreateObject("ADODB.Recordset")
                                         sql = "SELECT Categorie1.PkId as PkId_1, Categorie1.Titolo_en as Titolo_1, Categorie2.PkId as PkId_2, Categorie2.Titolo_en as Titolo_2 "
@@ -473,10 +473,10 @@ end if
 								Set prod_rs = Server.CreateObject("ADODB.Recordset")
 								sql = "SELECT * FROM Prodotti WHERE (PrimoPiano=True And (Offerta=0 or Offerta=2)) ORDER BY PrezzoProdotto ASC"
 								prod_rs.open sql,conn, 1, 1
-								
+
 								Randomize()
 								constnum = 5
-								
+
 								if prod_rs.recordcount>0 then
 								%>
                                 <ul class="prodotti clearfix">
@@ -484,9 +484,9 @@ end if
 								IF NOT prod_rs.EOF THEN
 									rndArray = prod_rs.GetRows()
 									prod_rs.Close
-							
+
 									Lenarray =  UBOUND( rndArray, 2 ) + 1
-									skip =  Lenarray  / constnum 
+									skip =  Lenarray  / constnum
 									IF Lenarray <= constnum THEN skip = 1
 									FOR i = 0 TO Lenarray - 1 STEP skip
 											numero = RND * ( skip - 1 )
@@ -497,14 +497,14 @@ end if
 											allegato_prodotto = rndArray( 6, i + numero )
 											prezzoarticolo = rndArray( 7, i + numero )
 											prezzolistino = rndArray( 8, i+ numero )
-											
+
 											fkproduttore = rndArray( 11, i+ numero )
 											if fkproduttore="" then fkproduttore=0
-											
+
 											NomePagina = rndArray( 16, i+ numero )
 											if NomePagina="" then NomePagina="#"
 											if NomePagina<>"#" then NomePagina="/public/pagine/"&NomePagina
-										
+
 											if fkproduttore>0 then
 												Set pr_rs = Server.CreateObject("ADODB.Recordset")
 												sql = "SELECT * FROM Produttori WHERE PkId="&fkproduttore&""
@@ -514,10 +514,10 @@ end if
 												end if
 												pr_rs.close
 											end if
-											
+
 											FkCategoria2 = rndArray( 12, i+ numero )
 											if FkCategoria2="" then FkCategoria2=0
-											
+
 											if FkCategoria2>0 then
 												Set cat_rs = Server.CreateObject("ADODB.Recordset")
 												sql = "SELECT Categorie1.PkId as Cat_Principale, Categorie1.Titolo_en as Titolo1, Categorie2.PkId, Categorie2.Titolo_en as Titolo2, Categorie2.Descrizione_en as Descrizione2 "
@@ -544,13 +544,13 @@ end if
 											file_img=img_rs("file")
 											'file_img="logo_cristalensi_piccolo.jpg"
 											if file_img<>"" then
-											
+
 											'calcolo misure immagini
 											Set objImageSize = New ImageSize
 											With objImageSize
 											  .ImageFile = server.mappath("/public/"&file_img&"")
 											  '.ImageFile = path_img&file_img
-											  
+
 											  If .IsImage Then
 												W=.ImageWidth
 												H=.ImageHeight
@@ -558,15 +558,15 @@ end if
 											  Else
 												'Response.Write "Name: " & .ImageName & "<br>"
 												'Response.Write "it isn't an image"
-											  End If 
-											  
+											  End If
+
 											End With
 											Set objImageSize = Nothing
 										%>
-                                        
+
                                         	<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/<%=file_img%>" alt="<%if titolo_img<>"" then%><%=titolo_img%><%else%><%=titolo_prodotto%><%end if%>" style="width: <%if W>H then%><%if W<=160 then%><%=W%><%else%>160<%end if%><%else%><%if W<=90 then%><%=W%><%else%>90<%end if%><%end if%>px; height: <%if H<=120 then%><%=H%><%else%>120<%end if%>px;" border="0"></a>
 										<%else%>
-                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>	
+                                    		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
 										<%
                                             end if
                                         else
@@ -575,7 +575,7 @@ end if
                                             file_img=""
                                         %>
                                     		<a href="<%=NomePagina%>" style="display: block;" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>"><img src="/public/logo_cristalensi_piccolo.jpg" width="120" height="90" vspace="2" border="0" alt="no image for the product <%=titolo_prodotto%>"></a>
-										<%	
+										<%
                                         end if
                                         img_rs.close
                                         %>
@@ -592,13 +592,13 @@ end if
                                             <%end if%>
                                         </div>
                                     </li>
-                                    <% 
+                                    <%
 											NEXT
 											end if
 										else
 											prod_rs.close
 										end if
-										
+
 									%>
                                 </ul>
                              <%end if%>

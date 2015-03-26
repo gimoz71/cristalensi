@@ -5,9 +5,9 @@ if idsession=0 then response.Redirect("iscrizione.asp?prov=2")
 mode=request("mode")
 if mode="" then mode=0
 
-if mode=1 or mode=2 then 
+if mode=1 or mode=2 then
 	IdOrdine=request("IdOrdine")
-	
+
 	if IdOrdine>0 then
 		session("ordine_shop")=IdOrdine
 		if mode=1 then response.Redirect("carrello1.asp")
@@ -25,12 +25,12 @@ end if
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
+				<link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -44,23 +44,23 @@ end if
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -92,17 +92,17 @@ end if
 		</script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -125,18 +125,18 @@ end if
                                     <%
 									if rs.recordcount>0 then
 										Do while not rs.EOF
-										
+
 										InfoSpedizione=rs("InfoSpedizione")
 										NoteCri=rs("NoteCri")
 										stato=rs("Stato")
-										
+
 										if stato=0 then etichetta_stato="Cart started"
 										if stato=1 then etichetta_stato="Cart started"
 										if stato=2 then etichetta_stato="Shipping chosen"
 										if stato=12 then etichetta_stato="Shipping chosen"
 										if stato=3 then etichetta_stato="Payment to choose"
 										if stato=22 then etichetta_stato="Payment to choose"
-										
+
 										if stato=4 then etichetta_stato="Paid with PayPal"
 										if stato=5 then etichetta_stato="Payment Canceled"
 										if stato=6 then etichetta_stato="When payment"
@@ -146,9 +146,9 @@ end if
 											if InfoSpedizione<>"" then etichetta_stato=etichetta_stato&"<br>"&InfoSpedizione
 											if Left(NoteCri,4)="http" then etichetta_stato=etichetta_stato&"<br><a href="""&NoteCri&""" target=_blank>LINK</a>"
 										end if
-																				
-										%>	
-    
+
+										%>
+
                                         <p class="riga">
                                         <span class="colonna num_ordine">[<%=rs("PkId")%>]&nbsp;-&nbsp;<%=rs("DataAggiornamento")%></span>
                                         <span class="colonna totale_ordine">
@@ -176,10 +176,10 @@ end if
                                         rs.movenext
                                         loop
                                         %>
-                                        
+
 									<%else%>
                                     	<p class="riga">There are no orders</p>
-                                    <%end if%>    
+                                    <%end if%>
                                 </div>
 								<%
                                 rs.close

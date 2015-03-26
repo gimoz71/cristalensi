@@ -11,14 +11,14 @@
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <script src="/js/jquery.fancybox.js"></script>
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
-        <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
+        <script src="/js/jquery.fancybox.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -32,23 +32,23 @@
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -78,17 +78,17 @@
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -118,7 +118,7 @@ Cristalensi offers its' clients a <strong>complete service</strong>, offering <s
                             <a href="images/chi-siamo/grandi/2.jpg" class="fancybox" rel="gallery" title="Shop chandeliers in Florence - Overview"><img class="immagini" src="/images/chi-siamo/piccole/2.jpg"></a>
                             <a href="images/chi-siamo/grandi/3.jpg" class="fancybox" rel="gallery" title="Shop rustic lamps"><img class="immagini" src="/images/chi-siamo/piccole/3.jpg"></a>
                             <a href="images/chi-siamo/grandi/4.jpg" class="fancybox" rel="gallery" title="Shop crystal chandeliers"><img class="immagini" src="/images/chi-siamo/piccole/4.jpg"></a>
-                            <div class="clearfix" style="text-align: center;" >                           
+                            <div class="clearfix" style="text-align: center;" >
                                 <a href="images/chi-siamo/grandi/7.jpg" class="fancybox" rel="gallery" title="Shop Tiffany-style lamps"><img class="immagini-2" src="/images/chi-siamo/piccole/7.jpg"></a>
                                 <a href="images/chi-siamo/grandi/10.jpg" class="fancybox" rel="gallery" title="Shop modern chandeliers"><img class="immagini-2" src="/images/chi-siamo/piccole/10.jpg"></a>
                                 <a href="images/chi-siamo/grandi/11.jpg" class="fancybox" rel="gallery" title="Shop fans with lights"><img class="immagini-2" src="/images/chi-siamo/piccole/11.jpg"></a>

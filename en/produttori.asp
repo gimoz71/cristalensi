@@ -13,12 +13,12 @@ Call Visualizzazione("Produttori","0","produttori.asp")
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -32,23 +32,23 @@ Call Visualizzazione("Produttori","0","produttori.asp")
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -80,17 +80,17 @@ Call Visualizzazione("Produttori","0","produttori.asp")
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -99,7 +99,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
             <!--#include file="inc_header.asp"-->
 
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
@@ -113,18 +113,18 @@ Choosing a manufacturer will see a list of its products, from there you can acce
 							sql = "SELECT * FROM Produttori ORDER BY Prodotti DESC, Titolo ASC"
 							prod_rs.open sql,conn, 1, 1
 							if prod_rs.recordcount>0 then
-								
+
 							%>
                             <ul class="produttori clearfix">
                                 <%
 								Do while not prod_rs.EOF
-								
+
 								id=prod_rs("PkId")
 								titolo=prod_rs("titolo")
 								descrizione=prod_rs("descrizione")
 								file_img=prod_rs("logo")
 								link=prod_rs("prodotti")
-								
+
 								url="/en/prodotti.asp?FkProduttore="&id
 								%>
                                 <%if link=1 then%>
@@ -154,16 +154,16 @@ Choosing a manufacturer will see a list of its products, from there you can acce
                                 <%end if%>
                                 <%
 								prod_rs.movenext
-								loop	
+								loop
 								%>
                             </ul>
                             <%else%>
                                 <p><br /><br /><br />No producers</p>
-							<%	
+							<%
 							end if
 							prod_rs.close
 							%>
-                            
+
                         </div>
                     </div>
                 </div>

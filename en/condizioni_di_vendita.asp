@@ -11,12 +11,12 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -30,23 +30,23 @@
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -71,17 +71,17 @@
         <![endif]-->
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -104,7 +104,7 @@
 					  <p>
 						<strong>How to insert the chosen products in your shopping cart:<br>
 						</strong>o place an item in the cart you must first enter the description page.<br>
-						Once you have written the number of pieces desired, select the image of the cart, the product chosen will automatically appear in the virtual shopping basket.  You can in any moment see the shopping basket by clicking on "shopping cart"ù in the menu at the top of the page.<br>
+						Once you have written the number of pieces desired, select the image of the cart, the product chosen will automatically appear in the virtual shopping basket.  You can in any moment see the shopping basket by clicking on "shopping cart"ÔøΩ in the menu at the top of the page.<br>
 You can at any time eliminate an article or modify the quantity desired: the page will calculate the total in real time. <br>
 						<br></p>
 					  <p>
@@ -135,7 +135,7 @@ You can at any time eliminate an article or modify the quantity desired: the pag
 						  Indicatively, in Italy, the costs of shipping by courier will amount to 10 Euro, independently of the number of objects or their size.<br>
 						  Foreign customers will pay shipping costs based on the weight of the goods ordered:  an order cannot be concluded before the exact costs, including the shipping, have been calculated.  When clients are from abroad, the buying procedure will be interrupted at the moment when it is necessary to add the shipping costs, the client will send a request for the shipping costs to be calculated, our staff will reply and the procedure can resume. <br>
 						  <br>
-						  
+
 						  <em><strong>The merchandise may also be collected at our showroom with no shipping cost:<br>
 						  </strong></em><strong>Cristalensi Snc</strong> Di Lensi Massimiliano & C. (P.I. 05305820481)<br>
 50056 Montelupo F.no (FI) Via arti e mestieri, 1 - tel: 0571.911163 - fax: 0571.073327<br>
@@ -143,11 +143,11 @@ You can at any time eliminate an article or modify the quantity desired: the pag
 						  For clients from the province of Florence and certain areas of Tuscany, the delivery can be made our staff.<br>
 						  <br>
 						  <b>Important:</b><br>
-At the moment of delivery by the courier the client is obliged to check:<br> 
-- that the number of packages in the delivery corresponds to the number indicated in the travel documents;<br> 
-- that the packaging is whole, undamaged, not wet, nor in any way hampered with even with regards the sealing material (sealing tape, wrapping paper).<br> 
+At the moment of delivery by the courier the client is obliged to check:<br>
+- that the number of packages in the delivery corresponds to the number indicated in the travel documents;<br>
+- that the packaging is whole, undamaged, not wet, nor in any way hampered with even with regards the sealing material (sealing tape, wrapping paper).<br>
 Eventual damage to the wrapping and/or to the product or the non correspondence of the number of packages to that indicated in the delivery documents must be immediately contested, writing  &quot;WITH RESERVE, SUBJECT TO VERIFICATION OF THE CONTENTS&quot; on the courier's receipt, or you can refuse the pack writing &quot;REFUSED, PACK DAMAGED&quot;.<br>
-Once the courier's receipt has been signed the client no longer has a right to claim that the pack was damaged.<br> 
+Once the courier's receipt has been signed the client no longer has a right to claim that the pack was damaged.<br>
 If the articles are damaged please contact us immediately at info@cristalensi.it.<br>
 Express couriers are obliged to attempt delivery twice.  If you are absent at the second attempt the costs of the third delivery will be at your expence, alternatively the pack can be picked up at the local seat of the courier company.
 <br>
@@ -169,20 +169,20 @@ Express couriers are obliged to attempt delivery twice.  If you are absent at th
 					  <p>
 						<br><span class="sfondo-giallo"><strong>
 						Invoicing:</strong></span> <br>
-						Invoices are issued to those companies which expressely request them, and only for purchases over 150 &#8364;. 
+						Invoices are issued to those companies which expressely request them, and only for purchases over 150 &#8364;.
 <br>
 						<br></p>
 					  <p>
 						<br><span class="sfondo-giallo"><strong>
 						Garantee:</strong></span> <br>
-						All Cristalensi products are covered by a garantee from the Italian producer which lasts for two years and covers defects of conformity according to the sense of DL 24/2.  Damage produced by improper use of the goods is not covered and we will not be held responsible for damage direct or indirect resulting therefrom. 
+						All Cristalensi products are covered by a garantee from the Italian producer which lasts for two years and covers defects of conformity according to the sense of DL 24/2.  Damage produced by improper use of the goods is not covered and we will not be held responsible for damage direct or indirect resulting therefrom.
 <br>
 						<br></p>
 					  <p>
 						<br><span class="sfondo-giallo"><strong>
 						Acceptance of the sales conditions:</strong></span> <br>
 						The contract stipulated between Cristalensi and the Client should be considered concluded with the acceptance of the order on the part of Cristalensi, after the Client's payment of the order has been effected.  This acceptance is held as tacit, if not communicated by other means by the Client.  The Client effecting an order in one of the foreseen modes, declares to have seen all the indications furnished her/him during the procedure of acquisition, and to accept entirely the general conditions laid out in this page.<br>
-						The client, having concluded the online acquisition procedure  should save an electronic copy of the online procedure and payment, and should also conserve a copy of the present general conditions of sale, in respect of the Law Dlgs 206/2005 "Codice del Consumo"ù regarding the distance selling of goods.
+						The client, having concluded the online acquisition procedure  should save an electronic copy of the online procedure and payment, and should also conserve a copy of the present general conditions of sale, in respect of the Law Dlgs 206/2005 "Codice del Consumo"ÔøΩ regarding the distance selling of goods.
 <br>
 <br>
 <a href="condizioni_di_vendita.pdf" target="_blank">General conditions of sale on printable file (pdf)</a><br>
@@ -207,7 +207,7 @@ This right is reserved exclusively for physical persons (consumers), and cannot 
 						<strong><br>
 						Expiry of the right to return goods.<br>
 						</strong>The right to return goods is no longer valid where the goods returned are no longer integral, that is:<br>
-						n the absence of the original packaging or in the case of damage to the same; <br>in the absence of elements of the product (accessories, electrical cords, instruction manual etc.) and in the absence of anything which has been furnished without charge; <br>in the case of damage to the product for causes not related to transport; <br>damage to the product due to improper repacking suffered in its transportation back to us (for improper packaging is intended the wrong use of the original packaging); <br>in the case that following the recieving of the goods  a request has been made for the shipping of substitution goods (for example, it the product arrived damaged); <br>in the case that the product has not been assembled. 
+						n the absence of the original packaging or in the case of damage to the same; <br>in the absence of elements of the product (accessories, electrical cords, instruction manual etc.) and in the absence of anything which has been furnished without charge; <br>in the case of damage to the product for causes not related to transport; <br>damage to the product due to improper repacking suffered in its transportation back to us (for improper packaging is intended the wrong use of the original packaging); <br>in the case that following the recieving of the goods  a request has been made for the shipping of substitution goods (for example, it the product arrived damaged); <br>in the case that the product has not been assembled.
 <br>
 						<br>
 						<strong> Procedure for the execise othe right to return goods.</strong><br>
@@ -221,15 +221,15 @@ This right is reserved exclusively for physical persons (consumers), and cannot 
 Excluded are the costs sustained by the seller for the shipping of the goods, in the measure indicated on the bill of sale.<br>
 Cristalensi will proceed, through bank transfer, to riemburse the client within 30 days of receipt of the goods.<br>
 <br>
-<br> 
+<br>
 <span class="sfondo-giallo"><strong>Breakages deriving from transport</strong></span><br><strong>
-At the moment of receiving the goods, sign and write "SUBJECT TO CONTROL"ù both on the two courier's bills and on the courier's slip</strong>, this will simplify subsequent procedures in the case that the products have been damaged.<br>
+At the moment of receiving the goods, sign and write "SUBJECT TO CONTROL"ÔøΩ both on the two courier's bills and on the courier's slip</strong>, this will simplify subsequent procedures in the case that the products have been damaged.<br>
 After receipt check that all goods ordered are present and undamaged.<br>
 Eventual communications of anomalies or breakages must be sent by post along with photos of the damage <strong>within a period of not more than 8 days of receiving the goods</strong>.<br>
 After this period of 8 days after reception of the goods we decline all responsibility for breakages/anomalies/missing parts.<br>
 The photos of the lights must be taken while they are still in their original packaging.<br>
 No request regarding already installed lights will be accepted.<br>
-If an anomaly/breakage is found, a lamp or a component will be replaced depending on whether the problem regards the entire light or a part thereof. 
+If an anomaly/breakage is found, a lamp or a component will be replaced depending on whether the problem regards the entire light or a part thereof.
 <br>
 <br>
 <br>

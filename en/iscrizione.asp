@@ -30,25 +30,25 @@ if prov="" then prov=0
 		password=request("password")
 		data=now()
 		ip=Request.ServerVariables("REMOTE_ADDR")
-		
+
 		lg1=InStr(email, "'")
 		if lg1>0 then
-			email=Replace(email, "'", " ")	
+			email=Replace(email, "'", " ")
 			'response.End()
 		end if
 		lg2=InStr(email, "&")
 		if lg2>0 then
-			email=Replace(email, "&", " ")	
+			email=Replace(email, "&", " ")
 			'response.End()
 		end if
 		lg3=InStr(email, "=")
 		if lg3>0 then
-			email=Replace(email, "=", " ")	
+			email=Replace(email, "=", " ")
 			'response.End()
 		end if
 		lg4=InStr(email, " or ")
 		if lg4>0 then
-			email=Replace(email, " or ", " ")	
+			email=Replace(email, " or ", " ")
 			'response.End()
 		end if
 		email=Trim(email)
@@ -62,17 +62,17 @@ if prov="" then prov=0
 		if rs.recordcount>0 then mode=3
 		rs.close
 	end if
-	
-	
+
+
 	Set rs=Server.CreateObject("ADODB.Recordset")
 	sql = "Select * From Clienti"
 	if pkid > 0 then sql = "Select * From Clienti where pkid="&pkid
 	rs.Open sql, conn, 3, 3
-	
-	
+
+
 	if mode = 1 then
 		if pkid = 0 then rs.addnew
-		
+
 		rs("nome")=nome
 		rs("nominativo")=nominativo
 		rs("partitaIVA")=partitaIVA
@@ -92,18 +92,18 @@ if prov="" then prov=0
 		rs("data")=data
 		rs("ip")=ip
 		rs("aut_privacy")=True
-		
+
 		rs.update
 		rs.close
-		
+
 		if pkid=0 then
 			Set rs=Server.CreateObject("ADODB.Recordset")
 			sql = "Select @@Identity As pkid"
 			rs.Open sql, conn, 1, 1
 				pkid_iscritto=rs("pkid")
 			rs.close
-		
-			
+
+
 			'invio l'email di benvenuto al cliente
 			HTML1 = ""
 			HTML1 = HTML1 & "<html>"
@@ -122,7 +122,7 @@ if prov="" then prov=0
 			HTML1 = HTML1 & "</table>"
 			HTML1 = HTML1 & "</body>"
 			HTML1 = HTML1 & "</html>"
-		
+
 			Mittente = "info@cristalensi.it"
 			Destinatario = email
 			Oggetto = "Iscrizione al sito Cristalensi.it"
@@ -139,9 +139,9 @@ if prov="" then prov=0
 			eMail_cdo.Send()
 
 			Set eMail_cdo = Nothing
-			
+
 			'fine invio email
-			
+
 			'invio l'email all'amministratore
 			HTML1 = ""
 			HTML1 = HTML1 & "<html>"
@@ -160,94 +160,94 @@ if prov="" then prov=0
 			HTML1 = HTML1 & "</table>"
 			HTML1 = HTML1 & "</body>"
 			HTML1 = HTML1 & "</html>"
-		
+
 			Mittente = "info@cristalensi.it"
 			Destinatario = "info@cristalensi.it"
 			Oggetto = "Nuova iscrizione al sito Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-		
+
 			' Imposta le configurazioni
 			Set myConfig = Server.createObject("CDO.Configuration")
-			With myConfig 
+			With myConfig
 				'autentication
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-				' Porta CDO 
-				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
-				' Timeout 
+				' Porta CDO
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+				' Timeout
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
-				' Server SMTP di uscita 
+				' Server SMTP di uscita
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
-				' Porta SMTP 
+				' Porta SMTP
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
 				'Username
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
 				'Password
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
-				
-				.Fields.update 
-			End With 
+
+				.Fields.update
+			End With
 			Set eMail_cdo.Configuration = myConfig
-		
+
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-		
+
 			eMail_cdo.HTMLBody = Testo
-		
+
 			eMail_cdo.Send()
-		
+
 			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
-			
+
 			'fine invio email
-			
+
 			'invio al webmaster
-			
+
 			Set eMail_cdo = Nothing
-			
+
 			Mittente = "info@cristalensi.it"
 			Destinatario = "viadeimedici@gmail.com"
 			Oggetto = "Nuova iscrizione al sito Cristalensi.it (sito inglese)"
 			Testo = HTML1
 
 			Set eMail_cdo = CreateObject("CDO.Message")
-		
+
 			' Imposta le configurazioni
 			Set myConfig = Server.createObject("CDO.Configuration")
-			With myConfig 
+			With myConfig
 				'autentication
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-				' Porta CDO 
-				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 
-				' Timeout 
+				' Porta CDO
+				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+				' Timeout
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
-				' Server SMTP di uscita 
+				' Server SMTP di uscita
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "smtp.cristalensi.it"
-				' Porta SMTP 
+				' Porta SMTP
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
 				'Username
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "postmaster@cristalensi.it"
 				'Password
 				.Fields.item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "m0nt3lup0"
-				
-				.Fields.update 
-			End With 
+
+				.Fields.update
+			End With
 			Set eMail_cdo.Configuration = myConfig
-		
+
 			eMail_cdo.From = Mittente
 			eMail_cdo.To = Destinatario
 			eMail_cdo.Subject = Oggetto
-		
+
 			eMail_cdo.HTMLBody = Testo
-		
+
 			eMail_cdo.Send()
-		
+
 			Set myConfig = Nothing
 			Set eMail_cdo = Nothing
-			
-		
+
+
 
 		nome_log=nome&" "&nominativo
 		session("nome_log")=nome&" "&nominativo
@@ -255,14 +255,14 @@ if prov="" then prov=0
 		session("idCliente")=pkid_iscritto
 		italia_log=italia
 		if italia_log="" then italia_log="Si"
-		if italia_log="Sì" then italia_log="Si"
+		if italia_log="Sï¿½" then italia_log="Si"
 		if italia_log="S&igrave;" then italia_log="Si"
 		session("italia_log")=italia_log
-		
+
 		end if
-		
+
 	end if
-	
+
 	if mode=2 and pkid=0 then response.Redirect("iscrizione.asp")
 %>
 <!doctype html>
@@ -275,12 +275,12 @@ if prov="" then prov=0
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/js/media-queries-ie.js"></script>
         <![endif]-->
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="/js/jquery.blueberry.js"></script>
-        <script src="/js/jquery.tipTip.js"></script>
-        <link href="/css/css.css" rel="stylesheet" type="text/css">
+				<link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/js/jquery.blueberry-min.js"></script>
+        <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -294,23 +294,23 @@ if prov="" then prov=0
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -336,7 +336,7 @@ if prov="" then prov=0
         <SCRIPT language="JavaScript">
 
 		function verifica() {
-				
+
 			nome=document.newsform.nome.value;
 			nominativo=document.newsform.nominativo.value;
 			indirizzo=document.newsform.indirizzo.value;
@@ -344,8 +344,8 @@ if prov="" then prov=0
 			telefono=document.newsform.telefono.value;
 			email=document.newsform.email.value;
 			conferma=document.newsform.conferma.value;
-			password=document.newsform.pw.value;	
-		
+			password=document.newsform.pw.value;
+
 			if (nome==""){
 				alert("It has not been filled in the field \"Name\".");
 				return false;
@@ -372,7 +372,7 @@ if prov="" then prov=0
 			}
 			if (email.indexOf("@")==-1 || email.indexOf(".")==-1){
 			alert("ATTENTION! \"e-mail\" is not correct.");
-			return false; 
+			return false;
 			}
 			if (email!=conferma){
 				alert("\"Email\" and \"Repeat Email\" must be the same.");
@@ -382,12 +382,12 @@ if prov="" then prov=0
 				alert("It has not been filled in the field \"Password\".");
 				return false;
 			}
-		
+
 			else
 		return true
-		
+
 		}
-		
+
 		function accetta(el){
 		checkobj=el
 			if (document.all||document.getElementById){
@@ -401,17 +401,17 @@ if prov="" then prov=0
 		</SCRIPT>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 		<script type="text/javascript">
-        
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -419,20 +419,20 @@ if prov="" then prov=0
         <div id="wrap">
             <!--#include file="inc_header.asp"-->
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
                         <%if mode=0 or mode=3 then%>
-					  
+
 					  	<%if pkid>0 then%>
                         	<h3 style="font-size: 14px; display: inline; border: none;">Changing client data</h3>
                             <p>On this page you can edit the data that you used to sign up Cristalensi.<br>
 						Important intormation:  it is necessary that the <strong>Email address</strong> be in function and that it is one that you use frequently given that you will be sent information regarding the state of your order.<br>
 We remind you moreover that the <strong>Email address</strong> will be your <strong>Login</strong> to place future orders.</p>
-                        
+
                         <%else%>
-                        	
+
                         	<h3 style="font-size: 14px; display: inline; border: none;">Client Authentication</h3>
                             <p>If you have already signed in, and therefore already have a <strong>Login</strong> and <strong>Password</strong>, it is not necessary to sign on again,
 it is sufficient that you enter the access data here: <strong>Login (email)</strong> and <strong>Password</strong></p>
@@ -460,10 +460,10 @@ it is sufficient that you enter the access data here: <strong>Login (email)</str
 						Important intormation:  it is necessary that the <strong>Email address</strong> be in function and that it is one that you use frequently given that you will be sent information regarding the state of your order.<br>
 We remind you moreover that the <strong>Email address</strong> will be your <strong>Login</strong> to place future orders.
                             </p>
-                            
+
                           <%end if%>
                             <div class="iscrizione clearfix">
-                                
+
                                 <div class="table">
                                     <form method="post" action="iscrizione.asp?mode=1&amp;pkid=<%=pkid%>" name="newsform" onSubmit="return verifica();">
                                     <div class="tr">
@@ -512,7 +512,7 @@ We remind you moreover that the <strong>Email address</strong> will be your <str
                                     <div class="tr">
                                         Italy:&nbsp;&nbsp;Yes&nbsp;<input type="radio" name="italia" value="Si" <% if pkid > 0 then %><%if rs("italia")="Si" then%> checked<%end if %><%else%> checked<%end if %> />&nbsp;&nbsp;No&nbsp;<input type="radio" name="italia" value="No" <% if pkid > 0 then %><%if rs("italia")="No" then%> checked<%end if %><%end if %> />&nbsp;Other nation
                 <input name="nazionediversa" type="text" id="nazionediversa"  size="30" maxlength="50" value="<% if pkid > 0 then %><%=rs("nazionediversa")%><%else%><%if mode=3 then%><%=nazionediversa%><%end if%><%end if%>" />
-                                        
+
                                     </div>
                                     <div class="tr">
                                         <div class="td">
@@ -604,7 +604,7 @@ We remind you moreover that the <strong>Email address</strong> will be your <str
 										  <%if pkid=0 then%>
                                               <br /><br />Thank yuo for signing up to Cristalensi.it<br />
 						  					  From this moment you can complete and send your orders or post comments without having to enter all your information.
-                                              
+
                                               <br /><br /><br /><br />
                                               <a href="<%if italia_log="Si" then%>carrello2.asp<%end if%><%if italia_log="No" then%>carrello2extra.asp<%end if%>">clicking here will return directly to the order to complete:<br />your cart on-line &raquo;</a>
                                               <br /><br /><br /><br />
@@ -616,9 +616,9 @@ We remind you moreover that the <strong>Email address</strong> will be your <str
                                           <%end if%>
                               		  <%end if%>
                               		</div>
-                            	
-                            <%end if%>    
-                        	
+
+                            <%end if%>
+
                         </div>
                     </div>
                 </div>
