@@ -169,7 +169,7 @@ Express couriers are obliged to attempt delivery twice.  If you are absent at th
 					  <p>
 						<br><span class="sfondo-giallo"><strong>
 						Invoicing:</strong></span> <br>
-						Invoices are issued to those companies which expressely request them, and only for purchases over 150 &#8364;.
+						The invoice is issued on request for both companies and individuals.
 <br>
 						<br></p>
 					  <p>

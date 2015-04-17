@@ -7,14 +7,14 @@
 </div>
     <div id="menu">
         <ul>
-            <li class="class-Green"><a href="http://www.cristalensi.it" title="Cristalensi vendita lampadari on line">home page</a></li>
-            <li class="class-DarkOrange"><a href="/chi_siamo.asp" title="Showroom Negozio lampadari - Vendita diretta">chi siamo</a></li>
-            <li class="class-SkyBlue"><a href="/contatti.asp" title="Negozio illuminazione Firenze">contatti</a></li>
-            <li class="class-Brown"><a href="/commenti_elenco.asp" title="Commenti prodotti illuminazione">commenti</a></li>
-            <li class="class-Red"><a href="/prodotti.asp" title="Catalogo articoli illuminazione">prodotti</a></li>
-            <li class="class-Blue"><a href="/offerte.asp" title="Offerte prodotti illuminazione">offerte</a></li>
-            <li class="class-YellowGreen"><a href="/carrello1.asp" title="Carrello E-commerce vendita lampadari">carrello</a></li>
-            <li class="class-Magenta"><a href="/condizioni_di_vendita.asp" title="Condizioni di vendita ecommerce">condizioni di vendita</a></li>
+            <li class="class-Green"><a href="/en/index.asp" title="Cristalensi Home Page lights online store">home page</a></li>
+            <li class="class-DarkOrange"><a href="/en/chi_siamo.asp" title="Our showroom of lamps and lights">who we are</a></li>
+            <li class="class-SkyBlue"><a href="/en/contatti.asp" title="Contacts">contacts</a></li>
+            <li class="class-Brown"><a href="/en/commenti_elenco.asp" title="Comments about lights products">comments</a></li>
+            <li class="class-Red"><a href="/en/prodotti.asp" title="Products gallery">products</a></li>
+            <li class="class-Blue"><a href="/en/offerte.asp" title="Products on offer">offers</a></li>
+            <li class="class-YellowGreen"><a href="/en/carrello1.asp" title="Your cart">cart</a></li>
+            <li class="class-Magenta"><a href="/en/condizioni_di_vendita.asp" title="Conditions of sale">conditions of sale</a></li>
         </ul>
     </div>
     <div id="logo"><a href="http://www.cristalensi.it" title="Cristalensi vendita lampadari on line"><img src="/images/logo.png"></a></div>

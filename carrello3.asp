@@ -311,7 +311,7 @@
                                         %>
                                     <p>&nbsp;</p>
                                     <h3 style="font-size:12px;">Riferimenti per i dati di fatturazione:</h3>
-                                    <p>&egrave; possibile  indicare dati diversi da quelli indicati (i dati riportati sono gli stessi indicati al momento dell'iscrizione).<br>La fattura, alle aziende che espressamente la richiedono, &eacute; emessa per ordini superiori a 150&#8364;.</p>
+                                    <p>&egrave; possibile  indicare dati diversi da quelli indicati (i dati riportati sono gli stessi indicati al momento dell'iscrizione).<br>La fattura è emessa su richiesta sia per aziende che per privati.</p>
                                     
                                     <div class="iscrizione clearfix">
                                     <div class="table">

@@ -312,7 +312,7 @@
                                     <p>&nbsp;</p>
                                     <h3 style="font-size:12px;">Billing details:</h3>
                                     <p>it is possible to include data different than those already included (the data included are the same as those indicated in the registration).<br>
-                  The bill, for those companies who expressly request it, will only be  issued for totals superior to 150 Euros.</p>
+                  The invoice is issued on request for both companies and individuals.</p>
 
                                     <div class="iscrizione clearfix">
                                     <div class="table">
