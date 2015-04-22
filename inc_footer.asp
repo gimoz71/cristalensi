@@ -6,6 +6,7 @@
     src="/js/cookiebanner.js"
     data-height="20px"
     data-close-text="OK!"
-    data-message="Usiamo i cookies per migliorare la vostra esperienza online.">
+    data-message="Usiamo i cookies per migliorare la vostra esperienza online."
+    data-linkmsg="Scopri di pi&ugrave;">
 </script>
 
