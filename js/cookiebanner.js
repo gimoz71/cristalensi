@@ -236,10 +236,10 @@
                 position: 'top',
                 message: default_text,
                 linkmsg: default_link,
-                moreinfo: 'http://aboutcookies.org',
+                moreinfo: '/privacy.asp',
                 effect: null,
-                fontSize: '16px',
-                fontFamily: 'arial, sans-serif',
+                fontSize: '14px',
+                fontFamily: 'tahoma, sans-serif',
                 instance: global_instance_name,
                 textAlign: 'center'
             };

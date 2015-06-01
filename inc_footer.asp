@@ -5,8 +5,8 @@
 <script type="text/javascript" id="cookiebanner"
     src="/js/cookiebanner.js"
     data-height="20px"
-    data-close-text="OK!"
-    data-message="Usiamo i cookies per migliorare la vostra esperienza online."
-    data-linkmsg="Scopri di pi&ugrave;">
+    data-close-text="[ <u>Accetta le condizioni</u> ]"
+    data-message="Questo sito internet utilizza i cookies per migliorare la vostra esperienza online."
+    data-linkmsg="[ <u>Ulteriori informazioni: informativa estesa</u> ]">
 </script>
 
