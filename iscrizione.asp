@@ -587,15 +587,15 @@ if prov="" then prov=0
                                     <div class="tr">
                                         <div>
                                             <textarea name="privacy" style="width: 700px;" rows="5" readonly>INFORMAZIONI RELATIVE AL TRATTAMENTO DI DATI PERSONALI 
-Ai sensi dell'art. 10 della L. n&deg;675 del 31/12/1996, l'Azienda informa l'interessato che i dati che lo riguardano, forniti dall'interessato medesimo, formeranno oggetto di trattamento nel rispetto della normativa sopra richiamata. Tali dati verranno trattati per finalita' gestionali, commerciali, promozionali. Il conferimento dei dati alla nostra Azienda e' assolutamente facoltativo. 
-I dati acquisiti potranno essere comunicati e diffusi in osservanza di quanto disposto all'articolo 20 della legge 675/96 allo scopo di perseguire le finalita' sopra indicate. 
+Ai sensi del D.L. 196/2003, l'Azienda informa l'interessato che i dati che lo riguardano, forniti dall'interessato medesimo, formeranno oggetto di trattamento nel rispetto della normativa sopra richiamata. Tali dati verranno trattati per finalita' gestionali, commerciali, promozionali. Il conferimento dei dati alla nostra Azienda e' assolutamente facoltativo. 
+I dati acquisiti potranno essere comunicati e diffusi in osservanza di quanto disposto dal D.L. 196/2003 allo scopo di perseguire le finalita' sopra indicate. 
 
 Il titolare del trattamento e' Cristalensi s.n.c. 
  con sede in via arti e mestieri, 1  
 Montelupo F.no (FI)
 , ove e' altres&igrave; domiciliato il responsabile protempore del trattamento, i cui dati identificativi possono essere acquisiti presso il Registro pubblico tenuto dal Garante, o presso la sede legale dell'Azienda. 
 
-L'Azienda informa altres&igrave; l'Interessato che questi potra' esercitare i diritti previsti dall'articolo 13 della legge 675/96, ossia:
+L'Azienda informa altres&igrave; l'Interessato che questi potra' esercitare i diritti previsti dal D.L. 196/2003, ossia:
 Conoscere gratuitamente, mediante accesso al Registro Generale del Garante, l'esistenza di trattamenti di dati che possono riguardarlo; 
 Ottenere da Cristalensi s.n.c., - con un contributo spese solo in caso di risposta negativa - la conferma dell'esistenza o meno nei propri archivi di dati che lo riguardino, ed avere la loro comunicazione e l'indicazione della logica e delle finalita' su cui si basa il trattamento. La richiesta e' rinnovabile dopo novanta giorni; 
 Ottenere la cancellazione, la trasformazione in forma anonima ed il blocco dei dati trattati in violazione di legge; 
