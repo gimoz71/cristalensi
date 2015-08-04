@@ -400,9 +400,10 @@
                 el.style.bottom = 0;
             }
 
-            el.innerHTML = '<div class="cookiebanner-close" style="float:right;padding-left:5px;">' +
-                this.options.closeText + '</div>' +
-                '<span>' + this.options.message + ' <a>' + this.options.linkmsg + '</a></span>';
+            el.innerHTML = '<span>' + this.options.message + ' <a>' + this.options.linkmsg + '</a></span>' +
+              '<div class="cookiebanner-close" style="display: inline-block; padding-left:10px;">' +
+              this.options.closeText + '</div>';
+              ;
 
             this.element = el;
 
