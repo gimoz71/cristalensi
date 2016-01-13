@@ -57,6 +57,9 @@ end if
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        
+        <link href="/css/cookies-enabler.css" rel="stylesheet" type="text/css">
+        
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="/js/jquery.blueberry-min.js"></script>
         <script src="/js/jquery.tipTip-min.js"></script>
@@ -120,7 +123,7 @@ end if
             //-->
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
-		<script type="text/javascript">
+		<script type="text/plain" class="ce-script">
         
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
@@ -354,14 +357,14 @@ end if
                                         </div>
                                         
                                         <div class="data">
-                                            <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a> <%if fkproduttore_pr>0 then%><span class="produttore">Produttore: <a href="prodotti.asp?FkProduttore=<%=fkproduttore_pr%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
+                                            <a href="<%=NomePagina%>" title="<%=titolo_prodotto%>&nbsp;<%=codicearticolo%> - <%=titolo_cat%>"><strong><%=titolo_prodotto%></strong><%if codicearticolo<>"" then%>&nbsp;[<%=codicearticolo%>]<%end if%></a>
                                             <p><%=Left(descrizione_prodotto,150)%><%if Len(descrizione_prodotto)>150 then%>...<%end if%><%if FkCategoria2>0 then%></p><p><i>Categoria:</i> <a href="prodotti.asp?cat=<%=FkCategoria2%>" title="Elenco prodotti della stessa categoria: <%=titolo_cat%>" style="font-size:9px;"><%=titolo_cat%></a><%end if%></p>
-                                            <a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link scheda-link"><span>Scheda prodotto</span></a>
-											
+                                            <%if fkproduttore_pr>0 then%><span class="produttore left">Produttore: &nbsp; <a href="prodotti.asp?FkProduttore=<%=fkproduttore_pr%>" class="button_link scheda-link" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%>
+                                            <div class="clearfix"></div>
                                             <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span>&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Prezzo Cristalensi? clicca qui per un preventivo dal nostro staff</a></p>
                                             <%else%>
-                                            <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;</span>&nbsp;&nbsp;<small><i>Iva compresa</i></small><%end if%><a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a></p>
+                                                <p class="cart clearfix"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%>&nbsp;&nbsp;<%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;</span>&nbsp;&nbsp;<small><i>Iva compresa</i></small><%end if%><a href="<%=NomePagina%>" title="Scheda del prodotto&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="button_link right scheda-link button_link_blue"><span>Scheda prodotto</span></a><!--<a href="<%=NomePagina%>" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a>--></p>
                                             <%end if%>
                                         </div>
                                         

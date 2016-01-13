@@ -55,6 +55,7 @@ $wide-screens: 61.250em; // equivalente a 980px
     text-decoration: none;
     text-align: center;
 }
+
 @mixin buttonmobilered {
     border: none;
     @include effect-glass($border-radius: .3em);
@@ -70,6 +71,20 @@ $wide-screens: 61.250em; // equivalente a 980px
     text-align: center;
 }
 
+@mixin buttonmobileblue { 
+    border: none;
+    @include effect-glass($border-radius: .3em);
+    @include background(linear-gradient(lighten(#354989, 20), darken(#354989, 10)));
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    @include text-shadow(rgba(black, 0.4) 0px -1px 0);
+    @include box-shadow(rgba(black, 0.15) 0 2px 2px);
+    padding: 10px;
+    @include border-radius(2px);
+    display: inline-block;
+    color: #fff !important;
+    text-decoration: none;
+    text-align: center;
+}
 
 @function calc-em($target-px, $context) {
   @return ($target-px / $context) * 100%;

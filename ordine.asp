@@ -419,7 +419,7 @@
 			HTML1 = HTML1 & "<table width='553' border='0' cellspacing='0' cellpadding='0'>"
 			HTML1 = HTML1 & "<tr>"
 			HTML1 = HTML1 & "<td>"
-			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><strong>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></strong><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><br><strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023 6009 0886 7676</strong><br><br>Nella causale indicare: <strong>Ordine da sito internet n&deg; "&idordine&"</strong><br><br><br>Il nostro staff avr&agrave; cura di spedirti la merce appena ricever&agrave; la notifica del pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
+			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000>Grazie "&nominativo_email&" per aver scelto i nostri prodotti!<br>Questa è  un email di conferma per il completamento dell'ordine n° "&idordine&".<br><br><strong>TOTALE ORDINE: <u>"&TotaleGenerale&"&#8364;</u></strong><br><br> Per completare l'ordine è necessario effettuare il pagamento su Carta POSTEPAY con i seguenti dati:<br><br><strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>Numero carta: 4023600915402442</strong><br><br>Nella causale indicare: <strong>Ordine da sito internet n&deg; "&idordine&"</strong><br><br><br>Il nostro staff avr&agrave; cura di spedirti la merce appena ricever&agrave; la notifica del pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.</font><br>"
 			HTML1 = HTML1 & "<font face=Verdana size=3 color=#000000><br><br>Cordiali Saluti, lo staff di Cristalensi</font>"
 			HTML1 = HTML1 & "</td>"
 			HTML1 = HTML1 & "</tr>"
@@ -586,6 +586,9 @@
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        
+        <link href="/css/cookies-enabler.css" rel="stylesheet" type="text/css">
+        
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="/js/jquery.blueberry-min.js"></script>
         <script src="/js/jquery.tipTip-min.js"></script>
@@ -643,7 +646,7 @@
         <![endif]-->
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
 
-		<script type="text/javascript">
+		<script type="text/plain" class="ce-script">
         
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
@@ -735,7 +738,7 @@
                                     per completare l'ordine &egrave; necessario effettuare il versamente sulla Carta di POSTEPAY con i seguenti dati:<br>
                                     <br><br>
                                     <strong>Beneficiario: LENSI GIULIANO - c.f. LNS GLN 42A30 D403J<br>
-                                    Numero carta: 4023 6009 0886 7676</strong>
+                                    Numero carta: 4023600915402442</strong>
                                     <br><br>Nella causale indicare: "<strong>Ordine da sito internet n&deg; <%=idordine%></strong>"<br><br>
                                     
                                   La merce verr&agrave; spedita al momento che riceveremo il pagamento oppure, per velocizzare la spedizione, &egrave; possibile inviarci per email la ricevuta dell'avvenuto pagamento.<br>

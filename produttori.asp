@@ -17,6 +17,9 @@ Call Visualizzazione("Produttori","0","produttori.asp")
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+        
+        <link href="/css/cookies-enabler.css" rel="stylesheet" type="text/css">
+        
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="/js/jquery.blueberry-min.js"></script>
         <script src="/js/jquery.tipTip-min.js"></script>
@@ -80,7 +83,7 @@ Call Visualizzazione("Produttori","0","produttori.asp")
             //-->
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
-		<script type="text/javascript">
+		<script type="text/plain" class="ce-script">
         
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);

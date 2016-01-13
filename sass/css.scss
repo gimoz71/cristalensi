@@ -48,6 +48,14 @@ a:hover, a:active {
     }
     
 }
+.button_link_blue {
+    @include buttonmobileblue;
+    color: #fff;
+    img {
+        margin-bottom: 5px;
+    }
+
+}
 
 
 
@@ -96,7 +104,7 @@ select {
     background-color: #FFFFFF;
     border: 1px solid #333333;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     color: #333333;
     width: 100%;
 }
@@ -212,7 +220,7 @@ input, button {
     }
 }
 
-$array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magenta;
+$array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magenta; 
 
 #language {
     ul {
@@ -296,7 +304,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     }
    
     @include respond-to('medium-screens'){
-        display: none;
+        display: block;
         ul li {
             float: none;
         }
@@ -430,7 +438,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
     }
     .slogan {
         @include effect-glass($border-radius: .3em);
-        @include single-box-shadow;
+        //@include single-box-shadow;
         background: #900;
         @include background-image(linear-gradient(#c00, #900)); 
         text-align: center;
@@ -616,7 +624,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 float: none;
             }
             @include respond-to('medium-screens'){
-                @include buttonmobile;
+                //@include buttonmobile;
                 img {
                     margin-bottom: calc-em(10, 810);
                     height: auto;
@@ -624,13 +632,17 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             }
             &.button_link {
                 clear: both;
-                @include buttonmobile;
+                //@include buttonmobile;
                 img {
                     margin-bottom: calc-em(10, 810);
                 }
             }
             &.button_link_red {
                 @include buttonmobilered;
+                width: auto;
+            }
+            &.button_link_blu { 
+                @include buttonmobileblue;
                 width: auto;
             } 
         }
@@ -685,6 +697,10 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 }
                 &.button_link_red {
                     @include buttonmobilered;
+                    width: auto;
+                }
+                &.button_link_blue {
+                    @include buttonmobileblue;
                     width: auto;
                 } 
             }
@@ -790,7 +806,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         a {
             font-weight: bold;
             @include respond-to('medium-screens'){
-                @include buttonmobile;
+                // @include buttonmobile;
                 width: auto;
                 img {
                     margin-bottom: 5px;

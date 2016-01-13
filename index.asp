@@ -11,12 +11,15 @@
 		<meta name="keywords" content="vendita lampadari on line, prodotti illuminazione da interni, prodotti illuminazione da esterni, lampade da interno, lampade da esterno, piantane, plafoniere, ventilatori, lampade per bambini, lampade per il bagno, lampade moderne, lampade classiche, lampade rustiche, lampade tiffany, lampade in cristallo, lampade murano, faretti, lampade da incasso, lampade a led, lampade a risparmio energetico, lampade economiche, lampadari economici">
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script src="/js/media-queries-ie.js"></script>
+            <script src="js/media-queries-ie.js"></script>
         <![endif]-->
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
-        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        
+		<link href="/css/cookies-enabler.css" rel="stylesheet" type="text/css">
+		
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="/js/jquery.blueberry-min.js"></script>
         <script src="/js/jquery.tipTip-min.js"></script>
         <style type="text/css">
@@ -74,7 +77,7 @@
         
         <meta name="google-site-verification" content="4Pno_x3W_sfOLqaTpUk-z2OMJg8LPzzt-JiBFoMYZcQ" />
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
-		<script type="text/javascript">
+		<script type="text/plain" class="ce-script">
         
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);

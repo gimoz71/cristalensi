@@ -88,6 +88,7 @@
             				Fax: 0571.073327<br />
                             E-mail: <a href="mailto:info@cristalensi.it">info@cristalensi.it</a>
                         </p>
+                        <p><a href="/privacy.asp" class="info" title="Privacy policy e note legali Cristalensi">Privacy e note legali</a></p>
                         <img class="telefono" src="/images/telefono_cristalensi.png" align="absmiddle" style="padding:10px 0 20px 0;" alt="Numero per chiamare lo staff del negozio Cristalensi, orario negozio dal Lunedi al Sabato: 0571.911163" />
                         <p>Per <strong>aperture e chiusure</strong> straordinarie controlla gli aggiornamenti su Facebook</p>
                         <h3>Seguici anche su</h3>

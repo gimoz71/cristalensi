@@ -206,8 +206,11 @@ end if
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Cristalensi</title>
 <link href="stile_stampa.css" rel="stylesheet" type="text/css">
+
+<link href="/css/cookies-enabler.css" rel="stylesheet" type="text/css">
+
 <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
-<script type="text/javascript">
+<script type="text/plain" class="ce-script">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-320952-2']);
