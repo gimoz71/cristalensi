@@ -236,10 +236,10 @@
                 position: 'top',
                 message: default_text,
                 linkmsg: default_link,
-                moreinfo: 'http://aboutcookies.org',
+                moreinfo: '/privacy.asp',
                 effect: null,
-                fontSize: '16px',
-                fontFamily: 'arial, sans-serif',
+                fontSize: '14px',
+                fontFamily: 'tahoma, sans-serif',
                 instance: global_instance_name,
                 textAlign: 'center'
             };
@@ -400,9 +400,10 @@
                 el.style.bottom = 0;
             }
 
-            el.innerHTML = '<div class="cookiebanner-close" style="float:right;padding-left:5px;">' +
-                this.options.closeText + '</div>' +
-                '<span>' + this.options.message + ' <a>' + this.options.linkmsg + '</a></span>';
+            el.innerHTML = '<span>' + this.options.message + ' <a>' + this.options.linkmsg + '</a></span>' +
+              '<div class="cookiebanner-close" style="display: inline-block; padding-left:10px;">' +
+              this.options.closeText + '</div>';
+              ;
 
             this.element = el;
 
