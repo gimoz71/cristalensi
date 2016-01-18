@@ -19,10 +19,10 @@ if id>0 then
 		PrezzoListino=prod_rs("PrezzoListino")
 		fkproduttore=prod_rs("fkproduttore")
 		if fkproduttore="" then fkproduttore=0
-		
+
 		offerta=prod_rs("offerta")
 		if offerta="" then offerta=0
-		
+
 		if fkproduttore>0 then
 			Set pr_rs = Server.CreateObject("ADODB.Recordset")
 			sql = "SELECT * FROM Produttori WHERE PkId="&fkproduttore&""
@@ -32,10 +32,10 @@ if id>0 then
 			end if
 			pr_rs.close
 		end if
-		
+
 		FkCategoria2 = prod_rs("FkCategoria2")
 		if FkCategoria2="" then FkCategoria2=0
-		
+
 		if FkCategoria2>0 then
 			Set cat_rs = Server.CreateObject("ADODB.Recordset")
 			sql = "SELECT Categorie1.PkId as Cat_Principale, Categorie1.Titolo as Titolo1, Categorie2.PkId, Categorie2.Titolo as Titolo2, Categorie2.Descrizione as Descrizione2 "
@@ -50,7 +50,7 @@ if id>0 then
 			end if
 			cat_rs.close
 		end if
-		
+
 		'aggiorno il contatore
 		visualizzazioni=prod_rs("visualizzazioni")
 		if visualizzazioni="" or IsNull(visualizzazioni) then visualizzazioni=0
@@ -58,8 +58,8 @@ if id>0 then
 		prod_rs.update
 	end if
 	prod_rs.close
-	
-	
+
+
 	'Call Visualizzazione("Prodotti",id,"scheda_prodotto.asp")
 end if
 %>
@@ -83,6 +83,9 @@ end if
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+
+        <link href="/css/cookies-enabler.css" rel="stylesheet" type="text/css">
+
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -96,23 +99,23 @@ end if
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -140,30 +143,30 @@ end if
                 $('.fancybox').fancybox();
             });
 		function verifica_1() {
-				
+
 			quantita=document.newsform2.quantita.value;
 			num_colori=document.newsform2.num_colori.value;
 			colore=document.newsform2.colore.value;
 			num_lampadine=document.newsform2.num_lampadine.value;
 			lampadina=document.newsform2.lampadina.value;
-		
+
 			if (quantita=="0"){
 				alert("La quantita\' deve essere maggiore di 0");
 				return false;
 			}
-			
+
 			if (num_colori>1 && colore==""){
 				alert("Deve essere scelto un colore");
 				return false;
 			}
-			
+
 			if (num_lampadine>1 && lampadina==""){
 				alert("Deve essere scelta una lampadina");
 				return false;
 			}
-			
+
 			else
-				
+
 				document.newsform2.method = "post";
 				//document.newsform2.action = "../../carrello1.asp";
 				document.newsform2.action = "/carrello1.asp";
@@ -172,30 +175,30 @@ end if
 		</SCRIPT>
 		<SCRIPT language="JavaScript">
 		function verifica_2() {
-				
+
 			quantita=document.newsform2.quantita.value;
 			num_colori=document.newsform2.num_colori.value;
 			colore=document.newsform2.colore.value;
 			num_lampadine=document.newsform2.num_lampadine.value;
 			lampadina=document.newsform2.lampadina.value;
-		
+
 			if (quantita=="0"){
 				alert("La quantita\' deve essere maggiore di 0");
 				return false;
 			}
-			
+
 			if (num_colori>1 && colore==""){
 				alert("Deve essere scelto un colore");
 				return false;
 			}
-			
+
 			if (num_lampadine>1 && lampadina==""){
 				alert("Deve essere scelta una lampadina");
 				return false;
 			}
-			
+
 			else
-				
+
 				document.newsform2.method = "post";
 				//document.newsform2.action = "../../carrello1.asp";
 				document.newsform2.action = "/carrello1.asp";
@@ -203,18 +206,18 @@ end if
 		}
 		</SCRIPT>
     	<!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
-		<script type="text/javascript">
-        
+		<script type="text/plain" class="ce-script">
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -233,7 +236,7 @@ end if
             <!--#include file="../../inc_header.asp"-->
 
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
@@ -252,7 +255,7 @@ end if
                                            <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span></p><br /><br />
                                        <%else%>
                                            <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><%if prezzolistino<>0 then%><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span><%end if%><br><%if prezzoarticolo<>"" then%><span class="cristalprice">Prezzo Cristalensi: <%=prezzoarticolo%>&#8364;</span><%end if%><br><i>Iva compresa</i></p>
-                                          
+
                                        <%end if%>
                                         <p><%=descrizione_prodotto%></p>
                                         <%if FkCategoria2>0 then%>
@@ -261,9 +264,9 @@ end if
                                         <%if allegato_prodotto<>"" then%>
                                             <p><a href="/public/<%=allegato_prodotto%>" target="_blank" title="E' presente un allegato per il prodotto: <%=titolo_prodotto%>"><img src="/images/file.jpg" border="0" style="width:18px; height:18px;" hspace="3" align="absmiddle" alt="E' presente un allegato per il prodotto: <%=titolo_prodotto%>">Allegato</a></p>
                                         <%end if%>
-                                        
+
                                         <p class="sfondo-giallo-chiaro">DISPONIBILITA' DEL PRODOTTO: <a href="/contatti.asp">Contatta lo staff per avere informazioni sulla disponibilit&agrave;.</a></p>
-                                        
+
                                         <%if prezzoarticolo=0 then%>
                                             <p class="cart clearfix"><a href="#" onClick="MM_openBrWindow('../../richiesta_informazioni.asp?codice=<%=codicearticolo%>&titolo=<%=titolo_prodotto%>&amp;produttore=<%=produttore%>&amp;id=<%=id%>','','width=650,height=650,scrollbars=yes')" class="cart-link button_link_red">Vuoi sapere il prezzo Cristalensi? clicca qui per avere un preventivo dal nostro staff</a>
                                         <%else%>
@@ -284,7 +287,7 @@ end if
                                                     <input type="hidden" name="num_colori" id="num_colori" value="1">
                                                     <input type="hidden" name="colore" id="colore" value="*****">
                                                 <%end if%>
-                                                
+
                                                 <%
                                                 Set lam_rs = Server.CreateObject("ADODB.Recordset")
                                                 sql = "SELECT [Prodotto-Lampadina].FkProdotto, Lampadine.Titolo FROM [Prodotto-Lampadina] INNER JOIN Lampadine ON [Prodotto-Lampadina].FkLampadina = Lampadine.PkId WHERE ((([Prodotto-Lampadina].FkProdotto)="&id&")) ORDER BY Lampadine.Titolo ASC"
@@ -296,7 +299,7 @@ end if
                                                     <input type="hidden" name="num_lampadine" id="num_lampadine" value="1">
                                                     <input type="hidden" name="lampadina" id="lampadina" value="*****">
                                                 <%end if%>
-                                                
+
                                                 <p class="cart clearfix">
 
                                                     <%if col_rs.recordcount>1 then%>
@@ -315,7 +318,7 @@ end if
                                                     end if
                                                     col_rs.close
                                                     %>
-                                                    
+
                                                     <%if lam_rs.recordcount>1 then%>
                                                         &nbsp;&nbsp;
                                                         <select name="lampadina" id="lampadina" style="width:auto; float:left; margin-top:7px;">
@@ -333,11 +336,11 @@ end if
                                                     end if
                                                     lam_rs.close
                                                     %>
-                                                    
+
                                                     <a href="#" onClick="return verifica_1();" id="invia_qta_2" rel="nofollow" title="Inserisci&nbsp;nel&nbsp;carrello&nbsp;<%=titolo_prodotto%>&nbsp;<%=codicearticolo%>" class="cart-link button_link_red"><span>Inserisci nel carrello</span></a><span style="float:right; padding-top:7px;"><input type="text" name="quantita" id="quantita" value="0" size="2" style="width:20px; text-align:right; margin-left:5px;">&nbsp;pezzi&nbsp;&nbsp;</span>
                                                 </p>
                                             </form>
-                                            <%end if%>	
+                                            <%end if%>
                                         <%end if%>
                                     </div>
                                     <%
@@ -376,7 +379,7 @@ end if
                                               Else
                                                     'Response.Write "Name: " & .ImageName & "<br>"
                                                     'Response.Write "it isn't an image"
-                                              End If 
+                                              End If
 
                                             End With
                                             Set objImageSize = Nothing
@@ -397,15 +400,15 @@ end if
                                 <hr />
                                 <li class="clearfix">
                                     <a href="http://www.facebook.com/pages/Cristalensi-vendita-lampade-per-interni-ed-esterni/144109972402284" target="_blank" title="Pagina ufficiale Cristalensi"><img src="/images/facebook2.png" hspace="10" align="absmiddle" border="0" alt="Pagina Ufficiale Cristalensi" class="facebook-prod"></a><span><br />Se questo articolo ti piace, condividilo con i tuoi amici su FACEBOOK</span>&nbsp;&nbsp;<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="verdana"></div>
-                                    
+
                                 </li>
                                 <hr />
                                 <li class="clearfix">
-                                    <img src="/images/telefono_cristalensi.png" alt="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" title="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" style="height:260px; width:160px; float:left; padding-left: 10px; padding-right: 10px;" /><br /><br /><br /><strong>Contattaci!</strong><br />Il nostro personale sar&agrave; a tua disposizione per qualsiasi chiarimento, informazione e consiglio sull'articolo desiderato:<br /><br /><%=Titolo_prodotto%> <%=" "& produttore%> - codice: <%=codicearticolo%> <br />Categoria: <%=titolo_cat%>        
+                                    <img src="/images/telefono_cristalensi.png" alt="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" title="Contatta Cristalensi per il prodotto <%=Titolo_prodotto%> <%=titolo_cat%>" style="height:260px; width:160px; float:left; padding-left: 10px; padding-right: 10px;" /><br /><br /><br /><strong>Contattaci!</strong><br />Il nostro personale sar&agrave; a tua disposizione per qualsiasi chiarimento, informazione e consiglio sull'articolo desiderato:<br /><br /><%=Titolo_prodotto%> <%=" "& produttore%> - codice: <%=codicearticolo%> <br />Categoria: <%=titolo_cat%>
                                 </li>
-                                
+
                             </ul>
-                            
+
                         </div>
                     </div>
                 </div>

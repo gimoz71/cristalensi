@@ -1,6 +1,6 @@
 <!--#include file="../../inc_strConn.asp"-->
 <%
-'cat=request("pkid")				  
+'cat=request("pkid")
 if cat="" then cat=0
 
 if cat>0 then
@@ -11,13 +11,13 @@ if cat>0 then
 		titolo_cat=cat_rs("titolo")
 		descrizione_cat=cat_rs("descrizione")
 		NomePagina=cat_rs("NomePagina")
-		
+
 		title=cat_rs("testo1")
 		description=cat_rs("testo2")
 		kw=title + " " + description
 	end if
 	cat_rs.close
-	
+
 	Call Visualizzazione("Categorie1",Cat,NomePagina)
 else
 	'Call Visualizzazione("",0,"prodotti.asp")
@@ -42,6 +42,9 @@ end if
         <link href="/css/css.css" rel="stylesheet" type="text/css">
         <link href="/css/blueberry.css" rel="stylesheet" type="text/css">
         <link href="/css/tipTip.css" rel="stylesheet" type="text/css">
+
+        <link href="/css/cookies-enabler.css" rel="stylesheet" type="text/css">
+
         <style type="text/css">
             .clearfix:after {
                 content: ".";
@@ -55,23 +58,23 @@ end if
             <style>
                 #menu, #language {
                     display: block !important;
-                    
+
                 }
                 #language li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 6px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 #menu li {
                     display: inline-block !important;
-                    float: left !important; 
+                    float: left !important;
                     text-align: center !important;
                     padding: 11px 17px !important;
                     height: auto !important;
-                    
+
                 }
                 ul.slides {height: 170px !important}
                 .button_link {
@@ -95,18 +98,18 @@ end if
             </style>
         <![endif]-->
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
-		<script type="text/javascript">
-        
+		<script type="text/plain" class="ce-script">
+
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-320952-2']);
           _gaq.push(['_trackPageview']);
-        
+
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        
+
         </script>
         <!--Codice Statistiche Google Analytics Iury Mazzoni ## NON CANCELLARE!! ## -->
     </head>
@@ -115,7 +118,7 @@ end if
             <!--#include file="../../inc_header.asp"-->
 
             <div id="main-content">
-                
+
                 <div id="content-sidebar-wrap" >
                     <div id="content">
                         <div>
@@ -135,7 +138,7 @@ end if
                             <ul class="galleria clearfix">
                                 <%
 								Do while not prod_rs.EOF
-								
+
 								id=prod_rs("PkId")
 								url="/prodotti.asp?cat="&id
 								'url="prodotti.asp?cat="&id
@@ -156,16 +159,16 @@ end if
                                 </li>
                                 <%
 								prod_rs.movenext
-								loop	
+								loop
 								%>
                             </ul>
                             <%else%>
                                 <p><br /><br /><br />Nessuna sottocategoria presente</p>
-							<%	
+							<%
 							end if
 							prod_rs.close
 							%>
-                            
+
                         </div>
                     </div>
                 </div>
