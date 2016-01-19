@@ -249,7 +249,7 @@ end if
                                 <li class="clearfix">
                                     <a href="javascript:history.back()" class="cart-link button_link">Torna indietro</a>
                                     <h1><%=Titolo_prodotto%> - <%=codicearticolo%></h1>
-                                    <p class="area clearfix"><%if codicearticolo<>"" then%>Codice articolo <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
+                                        <p class="area clearfix"><%if codicearticolo<>"" then%>Codice articolo <strong>[<%=codicearticolo%>]</strong><%end if%><%if fkproduttore>0 then%><span class="produttore">produttore: <a href="/prodotti.asp?FkProduttore=<%=fkproduttore%>" class="button_link scheda-link" title="Elenco prodotti dello stesso produttore: <%=produttore%>"><strong><%=produttore%></strong></a></span><%end if%></p>
                                     <div class="data">
                                         <%if prezzoarticolo=0 then%>
                                            <p class="cart-panel clearfix" style="float: right; width: 30%;  text-align: center;"><br /><span class="price">Prezzo listino: <span><%=prezzolistino%>&#8364;</span></span></p><br /><br />

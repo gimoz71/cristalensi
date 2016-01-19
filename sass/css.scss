@@ -34,7 +34,7 @@ a:hover, a:active {
 }
 
 .button_link {
-    @include buttonmobile;
+    @include buttonmobileblue;
     color: #fff;
     img {
         margin-bottom: 5px;
@@ -565,7 +565,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 margin-bottom: 5px;
             }
             @include respond-to('medium-screens'){
-                @include buttonmobile;
+                @include buttonmobileblue;
                 img {
                     height: auto;
                 }
@@ -689,7 +689,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             @extend %font-base;
             font-weight: bold;
             @include respond-to('medium-screens'){
-                @include buttonmobile;
+                //@include buttonmobile;
                 width: auto;
                 img {
                     margin-bottom: 5px;
@@ -697,6 +697,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 }
                 &.button_link_red {
                     @include buttonmobilered;
+                    font-size: 16px;
                     width: auto;
                 }
                 &.button_link_blue {
@@ -741,13 +742,14 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             
         }
         .cristalprice {
+            margin-top: .4em;
             color: #C00;
             font-weight: bold;
             padding-top: 5px;
             display: inline-block;
 			font-size: 110%;
         }
-        .produttore, .cart-link {
+        /*.produttore,*/ .cart-link {
             float: right;
             font-size: 12px;
                 a {
@@ -756,7 +758,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         .cart-link {
             float: right;
-            font-size: 10px;
+            font-size: 12px;
             span {
                 padding-right: 25px;
                 background: url('../images/carrello-bianco.png') no-repeat right center;
@@ -773,6 +775,9 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             margin: calc-em(20, 810) 0;
             @include respond-to('medium-screens'){
                 text-align: center;
+            }
+            a {
+                font-size: 100%;
             }
         }
         .scheda-link {
@@ -859,11 +864,11 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
         .produttore, .cart-link {
             float: right;
-            font-size: 10px;
+            font-size: 12px;
         }
         .cart-link {
             float: right;
-            font-size: 10px;
+            font-size: 12px;
             span {
                 padding-right: 25px;
                 background: url('../images/carrello-bianco.png') no-repeat right center;
@@ -931,7 +936,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
 	a {
 		font-weight: bold;
 		@include respond-to('medium-screens'){
-			@include buttonmobile;
+			@include buttonmobileblue;
 			width: auto;
 			img {
 				margin-bottom: 5px;
