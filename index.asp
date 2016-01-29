@@ -332,6 +332,9 @@
             </div>
         </div>
         <!--#include file="inc_footer.asp"-->
+        <!-- Go To Top
+        ============================================= -->
+        
     </body>
 </html>
 <!--#include file="inc_strClose.asp"-->

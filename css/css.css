@@ -2160,3 +2160,32 @@ input[type=text], input[type=password], button[type=text], button[type=password]
 #footer .credits {
   padding: 10px;
 }
+
+/* go to top */
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 30px;
+  background: #FFD31C;
+  color: #444;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+  box-shadow: 0px 5px 10px #000;
+}
+
+#back-to-top:hover {
+  background: #e9ebec;
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
