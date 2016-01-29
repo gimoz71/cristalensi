@@ -545,6 +545,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
         }
     }
 }
+
 .listino, .catalogo {
     width: 100%;
     font-size: 90%;
@@ -565,7 +566,7 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
                 margin-bottom: 5px;
             }
             @include respond-to('medium-screens'){
-                @include buttonmobileblue;
+                //@include buttonmobileblue;
                 img {
                     height: auto;
                 }
@@ -775,10 +776,15 @@ $array-filtri: Green, DarkOrange, SkyBlue, Red, Brown, Blue, YellowGreen, Magent
             margin: calc-em(20, 810) 0;
             @include respond-to('medium-screens'){
                 text-align: center;
+                .scheda-link {
+                    margin: 10px;
+                    float: none;
+                }
             }
             a {
                 font-size: 100%;
             }
+            
         }
         .scheda-link {
             span {
